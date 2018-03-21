@@ -28,13 +28,13 @@ Install-Package Newtonsoft.Json
 Install-Package JsonSubTypes
 ```
 
-NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 <a name="installation"></a>
 ## Installation
 Run the following command to generate the DLL
-- [Mac/Linux] `/bin/sh build.sh`
 - [Windows] `build.bat`
+
+**NOTE**: Mac is not supported, yet.
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp

@@ -41,31 +41,31 @@ namespace Intrinio.Model
             /// <summary>
             /// Enum Daily for value: "daily"
             /// </summary>
-            [EnumMember(Value = ""daily"")]
+            [EnumMember(Value = "daily")]
             Daily = 1,
             
             /// <summary>
             /// Enum Weekly for value: "weekly"
             /// </summary>
-            [EnumMember(Value = ""weekly"")]
+            [EnumMember(Value = "weekly")]
             Weekly = 2,
             
             /// <summary>
             /// Enum Monthly for value: "monthly"
             /// </summary>
-            [EnumMember(Value = ""monthly"")]
+            [EnumMember(Value = "monthly")]
             Monthly = 3,
             
             /// <summary>
             /// Enum Quarterly for value: "quarterly"
             /// </summary>
-            [EnumMember(Value = ""quarterly"")]
+            [EnumMember(Value = "quarterly")]
             Quarterly = 4,
             
             /// <summary>
             /// Enum Yearly for value: "yearly"
             /// </summary>
-            [EnumMember(Value = ""yearly"")]
+            [EnumMember(Value = "yearly")]
             Yearly = 5
         }
 

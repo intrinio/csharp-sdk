@@ -12,7 +12,7 @@ OpenAPI spec version: 2.0.0
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E98D92B6-AA39-4F74-8A3D-779890E37C53}</ProjectGuid>
+    <ProjectGuid>{CA507F77-21D6-4F0C-B9E7-0770B6B58A0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Intrinio</RootNamespace>

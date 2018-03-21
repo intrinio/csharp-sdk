@@ -41,19 +41,19 @@ namespace Intrinio.Model
             /// <summary>
             /// Enum Reported for value: "reported"
             /// </summary>
-            [EnumMember(Value = ""reported"")]
+            [EnumMember(Value = "reported")]
             Reported = 1,
             
             /// <summary>
             /// Enum Restated for value: "restated"
             /// </summary>
-            [EnumMember(Value = ""restated"")]
+            [EnumMember(Value = "restated")]
             Restated = 2,
             
             /// <summary>
             /// Enum Calculated for value: "calculated"
             /// </summary>
-            [EnumMember(Value = ""calculated"")]
+            [EnumMember(Value = "calculated")]
             Calculated = 3
         }
 

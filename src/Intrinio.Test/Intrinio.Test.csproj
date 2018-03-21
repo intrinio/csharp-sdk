@@ -81,7 +81,7 @@ OpenAPI spec version: 2.0.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Intrinio\Intrinio.csproj">
-          <Project>{E98D92B6-AA39-4F74-8A3D-779890E37C53}</Project>
+          <Project>{CA507F77-21D6-4F0C-B9E7-0770B6B58A0A}</Project>
           <Name>Intrinio</Name>
       </ProjectReference>
   </ItemGroup>

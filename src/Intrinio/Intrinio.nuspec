@@ -2,24 +2,26 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <!-- The identifier that must be unique within the hosting gallery -->
-        <id>$id$</id>
-        <title>Swagger Library</title>
+        <id>Intrinio.SDK</id>
+        <title>Intrinio</title>
 
         <!-- The package version number that is used when resolving dependencies -->
-        <version>$version$</version>
+        <version>0.0.1</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
-        <authors>$author$</authors>
+        <authors>Intrinio</authors>
 
         <!-- Owners are typically nuget.org identities that allow gallery
              users to earily find other packages by the same owners.  -->
-        <owners>$author$</owners>
+        <owners>Intrinio</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <developmentDependency>false</developmentDependency>
 
         <!-- The description can be used in package manager UI. Note that the
              nuget.org gallery uses information you add in the portal. -->
-        <description>A library generated from a Swagger doc</description>
+        <description>Access the Intrinio API (official).</description>
+        <copyright>2018 © Intrinio</copyright>
+        <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
 
         <!-- Dependencies are automatically installed when the package is installed -->
         <dependencies>

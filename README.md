@@ -45,7 +45,7 @@ using Intrinio.Model;
 <a name="packaging"></a>
 ## Packaging
 
-A `.nuspec` is included with the project. You can follow the Nuget quickstart to [create](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#create-the-package) and [publish](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#publish-the-package) packages.
+A `.nuspec` is included with the project.
 
 This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
 

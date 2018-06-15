@@ -308,7 +308,7 @@ namespace Example
             var securityApi = new SecurityApi();
             var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
             var startDate = 2013-10-20;  // DateTime? | Return prices on or after the date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Return prices on or beore the date (optional) 
+            var endDate = 2013-10-20;  // DateTime? | Return prices on or before the date (optional) 
             var frequency = frequency_example;  // string | Return stock prices in the given frequency (optional)  (default to daily)
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **startDate** | **DateTime?**| Return prices on or after the date | [optional] 
- **endDate** | **DateTime?**| Return prices on or beore the date | [optional] 
+ **endDate** | **DateTime?**| Return prices on or before the date | [optional] 
  **frequency** | **string**| Return stock prices in the given frequency | [optional] [default to daily]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 

@@ -6,7 +6,7 @@ To request a beta access key, [sign up here](https://intrinio.com/api-v2-beta).
 
 Welcome to the Intrinio API! Through our Marketplace, we offer a wide selection of financial data feeds sourced by our own proprietary processes as well as from many data vendors. The primary application of the Intrinio API is for use in third-party applications and integrations or for end-users utilizing the Excel add-in and Google Sheets add-on. The Intrinio API uses HTTPS verbs and a RESTful endpoint structure, which makes it easy to request data from Intrinio. Responses are delivered in JSON format. If you need additional help in using the API, go to our home page (https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.0.0
+- API version: 2.0.1
 - Package version: 0.0.1
 
 
@@ -138,6 +138,10 @@ Class | Method | HTTP request | Description
 *IndexApi* | [**SearchEconomicIndices**](docs/IndexApi.md#searcheconomicindices) | **GET** /indices/economic/search | Search Economic Indices
 *IndexApi* | [**SearchSicIndices**](docs/IndexApi.md#searchsicindices) | **GET** /indices/sic/search | Search SIC Indices
 *IndexApi* | [**SearchStockMarketsIndices**](docs/IndexApi.md#searchstockmarketsindices) | **GET** /indices/stock_market/search | Search Stock Market Indices
+*MutualFundApi* | [**GetAllMutualFunds**](docs/MutualFundApi.md#getallmutualfunds) | **GET** /mutual_funds | Get All Mutual Funds
+*MutualFundApi* | [**GetMutualFundById**](docs/MutualFundApi.md#getmutualfundbyid) | **GET** /mutual_funds/{identifier} | Get a Mutual Fund by ID
+*MutualFundApi* | [**GetMutualFundStats**](docs/MutualFundApi.md#getmutualfundstats) | **GET** /mutual_funds/{identifier}/stats | Get Stats for a Mutual Fund
+*MutualFundApi* | [**SearchMutualFunds**](docs/MutualFundApi.md#searchmutualfunds) | **GET** /mutual_funds/search | Search Mutual Funds
 *SecurityApi* | [**GetAllSecurities**](docs/SecurityApi.md#getallsecurities) | **GET** /securities | Get All Securiites
 *SecurityApi* | [**GetSecurityById**](docs/SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Get a Security by ID
 *SecurityApi* | [**GetSecurityDataPointNumber**](docs/SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{item}/number | Get Security Data Point (Number)
@@ -175,6 +179,8 @@ Class | Method | HTTP request | Description
  - [Model.Fundamental](docs/Fundamental.md)
  - [Model.FundamentalSummary](docs/FundamentalSummary.md)
  - [Model.HistoricalData](docs/HistoricalData.md)
+ - [Model.MutualFund](docs/MutualFund.md)
+ - [Model.MutualFundStat](docs/MutualFundStat.md)
  - [Model.ReportedFinancial](docs/ReportedFinancial.md)
  - [Model.ReportedTag](docs/ReportedTag.md)
  - [Model.SICIndex](docs/SICIndex.md)

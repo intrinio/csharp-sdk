@@ -617,11 +617,6 @@ namespace Intrinio.Api
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
             }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -690,11 +685,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -767,11 +757,6 @@ namespace Intrinio.Api
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
             }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -843,11 +828,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -925,11 +905,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1009,11 +984,6 @@ namespace Intrinio.Api
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
             }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1090,11 +1060,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1173,11 +1138,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1270,11 +1230,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1369,11 +1324,6 @@ namespace Intrinio.Api
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
             }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1453,11 +1403,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1539,11 +1484,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1627,11 +1567,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1717,11 +1652,6 @@ namespace Intrinio.Api
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
             }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1806,11 +1736,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -1898,11 +1823,6 @@ namespace Intrinio.Api
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
             }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1973,11 +1893,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request
@@ -2050,11 +1965,6 @@ namespace Intrinio.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
             {
                 localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (HttpHeaderApiKey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api-key")))
-            {
-                localVarHeaderParams["api-key"] = Configuration.GetApiKeyWithPrefix("api-key");
             }
 
             // make the HTTP request

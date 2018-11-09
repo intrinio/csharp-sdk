@@ -45,7 +45,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -95,7 +94,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -145,7 +143,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -195,7 +192,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -247,7 +243,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -301,7 +296,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -355,7 +349,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -417,7 +410,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -469,7 +461,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -523,7 +514,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -577,7 +567,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -639,7 +628,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -691,7 +679,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -745,7 +732,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -799,7 +785,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
@@ -863,7 +848,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var query = query_example;  // string | Search query
@@ -915,7 +899,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var query = query_example;  // string | Search query
@@ -967,7 +950,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
             var query = query_example;  // string | Search query

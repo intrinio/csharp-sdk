@@ -43,7 +43,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var lastFilingDate = 2013-10-20;  // DateTime? | Last filing date (optional) 
@@ -107,7 +106,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -175,7 +173,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -227,7 +224,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -277,7 +273,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -329,7 +324,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -383,7 +377,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -437,7 +430,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -491,7 +483,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -545,7 +536,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -609,7 +599,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -663,7 +652,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -717,7 +705,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
@@ -775,7 +762,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
             var query = query_example;  // string | Search parameters

@@ -32,7 +32,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
             var company = company_example;  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
@@ -92,7 +91,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -144,7 +142,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
             var id = id_example;  // string | The Intrinio ID of the Filing

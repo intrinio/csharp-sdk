@@ -35,7 +35,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
             var city = city_example;  // string | Filter by city (optional) 
@@ -91,7 +90,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
 
@@ -137,7 +135,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
             var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
@@ -189,7 +186,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
             var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
@@ -245,7 +241,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
             var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
@@ -301,7 +296,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
             var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)

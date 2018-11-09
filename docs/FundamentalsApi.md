@@ -33,7 +33,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
             var id = id_example;  // string | The Intrinio ID for the Fundamental
@@ -85,7 +84,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
             var id = id_example;  // string | The Intrinio ID for the Fundamental
@@ -137,7 +135,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
             var id = id_example;  // string | The Intrinio ID for the Fundamental
@@ -189,7 +186,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)

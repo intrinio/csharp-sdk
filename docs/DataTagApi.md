@@ -33,7 +33,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
             var tag = tag_example;  // string | Tag (optional) 
@@ -95,7 +94,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -147,7 +145,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
             var identifier = identifier_example;  // string | The Intrinio ID or the code-name of the Data Tag
@@ -199,7 +196,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
             var query = query_example;  // string | 

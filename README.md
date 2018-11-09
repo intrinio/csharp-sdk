@@ -7,7 +7,7 @@ To request a beta access key, [sign up here](https://intrinio.com/api-v2-beta).
 Welcome to the Intrinio API! Through our Marketplace, we offer a wide selection of financial data feeds sourced by our own proprietary processes as well as from many data vendors. The primary application of the Intrinio API is for use in third-party applications and integrations or for end-users utilizing the Excel add-in and Google Sheets add-on. The Intrinio API uses HTTPS verbs and a RESTful endpoint structure, which makes it easy to request data from Intrinio. Responses are delivered in JSON format. If you need additional help in using the API, go to our home page (https://intrinio.com) and click on the chat icon in the lower right corner.
 
 - API version: 2.0.2
-- Package version: 0.0.1
+- Package version: 0.9.0
 
 
 <a name="frameworks-supported"></a>
@@ -78,7 +78,7 @@ namespace Example
 
             try
             {
-                List<CompanySummary> result = companyApi.GetAllCompanies(null);
+                InlineResponse200 result = companyApi.GetAllCompanies(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

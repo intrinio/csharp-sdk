@@ -36,7 +36,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
@@ -86,7 +85,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -138,7 +136,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -192,7 +189,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -246,7 +242,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -310,7 +305,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -368,7 +362,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -428,7 +421,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var logic = new SecurityScreenGroup(); // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups (optional) 
@@ -486,7 +478,6 @@ namespace Example
         public void main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-            Configuration.Default.AddApiKey("api-key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
             var query = query_example;  // string | 

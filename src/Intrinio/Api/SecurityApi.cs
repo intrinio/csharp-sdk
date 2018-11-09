@@ -24,8 +24,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20023</returns>
-        InlineResponse20023 GetAllSecurities (string nextPage = null);
+        /// <returns>ApiResponseSecurities</returns>
+        ApiResponseSecurities GetAllSecurities (string nextPage = null);
 
         /// <summary>
         /// Get All Securiites
@@ -35,8 +35,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20023</returns>
-        ApiResponse<InlineResponse20023> GetAllSecuritiesWithHttpInfo (string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseSecurities</returns>
+        ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get a Security by ID
         /// </summary>
@@ -118,8 +118,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20025</returns>
-        InlineResponse20025 GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponseSecurityHistoricalData</returns>
+        ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Security Historical Data
@@ -135,8 +135,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20025</returns>
-        ApiResponse<InlineResponse20025> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
+        ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get Stock Price Adjustments for Security
         /// </summary>
@@ -148,8 +148,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20027</returns>
-        InlineResponse20027 GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>ApiResponseSecurityStockPriceAdjustments</returns>
+        ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
 
         /// <summary>
         /// Get Stock Price Adjustments for Security
@@ -162,8 +162,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20027</returns>
-        ApiResponse<InlineResponse20027> GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseSecurityStockPriceAdjustments</returns>
+        ApiResponse<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
         /// Get Stock Prices for Security
         /// </summary>
@@ -176,8 +176,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20026</returns>
-        InlineResponse20026 GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        /// <returns>ApiResponseSecurityStockPrices</returns>
+        ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
 
         /// <summary>
         /// Get Stock Prices for Security
@@ -191,8 +191,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20026</returns>
-        ApiResponse<InlineResponse20026> GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseSecurityStockPrices</returns>
+        ApiResponse<ApiResponseSecurityStockPrices> GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
         /// <summary>
         /// Screen Securities
         /// </summary>
@@ -228,8 +228,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>InlineResponse20024</returns>
-        InlineResponse20024 SearchSecurities (string query);
+        /// <returns>ApiResponseSecurities</returns>
+        ApiResponseSecurities SearchSecurities (string query);
 
         /// <summary>
         /// Search Securities
@@ -239,8 +239,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponse of InlineResponse20024</returns>
-        ApiResponse<InlineResponse20024> SearchSecuritiesWithHttpInfo (string query);
+        /// <returns>ApiResponse of ApiResponseSecurities</returns>
+        ApiResponse<ApiResponseSecurities> SearchSecuritiesWithHttpInfo (string query);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -251,8 +251,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20023</returns>
-        System.Threading.Tasks.Task<InlineResponse20023> GetAllSecuritiesAsync (string nextPage = null);
+        /// <returns>Task of ApiResponseSecurities</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (string nextPage = null);
 
         /// <summary>
         /// Get All Securiites
@@ -262,8 +262,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20023)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20023>> GetAllSecuritiesAsyncWithHttpInfo (string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get a Security by ID
         /// </summary>
@@ -345,8 +345,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20025</returns>
-        System.Threading.Tasks.Task<InlineResponse20025> GetSecurityHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Security Historical Data
@@ -362,8 +362,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20025)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20025>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get Stock Price Adjustments for Security
         /// </summary>
@@ -375,8 +375,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20027</returns>
-        System.Threading.Tasks.Task<InlineResponse20027> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>Task of ApiResponseSecurityStockPriceAdjustments</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
 
         /// <summary>
         /// Get Stock Price Adjustments for Security
@@ -389,8 +389,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20027)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20027>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseSecurityStockPriceAdjustments)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
         /// Get Stock Prices for Security
         /// </summary>
@@ -403,8 +403,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20026</returns>
-        System.Threading.Tasks.Task<InlineResponse20026> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        /// <returns>Task of ApiResponseSecurityStockPrices</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
 
         /// <summary>
         /// Get Stock Prices for Security
@@ -418,8 +418,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20026)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20026>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseSecurityStockPrices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
         /// <summary>
         /// Screen Securities
         /// </summary>
@@ -455,8 +455,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of InlineResponse20024</returns>
-        System.Threading.Tasks.Task<InlineResponse20024> SearchSecuritiesAsync (string query);
+        /// <returns>Task of ApiResponseSecurities</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurities> SearchSecuritiesAsync (string query);
 
         /// <summary>
         /// Search Securities
@@ -466,8 +466,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponse (InlineResponse20024)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20024>> SearchSecuritiesAsyncWithHttpInfo (string query);
+        /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> SearchSecuritiesAsyncWithHttpInfo (string query);
         #endregion Asynchronous Operations
     }
 
@@ -573,10 +573,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20023</returns>
-        public InlineResponse20023 GetAllSecurities (string nextPage = null)
+        /// <returns>ApiResponseSecurities</returns>
+        public ApiResponseSecurities GetAllSecurities (string nextPage = null)
         {
-             ApiResponse<InlineResponse20023> localVarResponse = GetAllSecuritiesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSecurities> localVarResponse = GetAllSecuritiesWithHttpInfo(nextPage);
              return localVarResponse.Data;
         }
 
@@ -585,8 +585,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20023</returns>
-        public ApiResponse< InlineResponse20023 > GetAllSecuritiesWithHttpInfo (string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseSecurities</returns>
+        public ApiResponse< ApiResponseSecurities > GetAllSecuritiesWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -631,9 +631,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20023>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20023) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20023)));
+                (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
         }
 
         /// <summary>
@@ -641,10 +641,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20023</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20023> GetAllSecuritiesAsync (string nextPage = null)
+        /// <returns>Task of ApiResponseSecurities</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (string nextPage = null)
         {
-             ApiResponse<InlineResponse20023> localVarResponse = await GetAllSecuritiesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSecurities> localVarResponse = await GetAllSecuritiesAsyncWithHttpInfo(nextPage);
              return localVarResponse.Data;
 
         }
@@ -654,8 +654,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20023)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20023>> GetAllSecuritiesAsyncWithHttpInfo (string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -700,9 +700,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20023>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20023) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20023)));
+                (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
         }
 
         /// <summary>
@@ -1169,10 +1169,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20025</returns>
-        public InlineResponse20025 GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponseSecurityHistoricalData</returns>
+        public ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20025> localVarResponse = GetSecurityHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = GetSecurityHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1187,8 +1187,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20025</returns>
-        public ApiResponse< InlineResponse20025 > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
+        public ApiResponse< ApiResponseSecurityHistoricalData > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1245,9 +1245,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20025>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurityHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20025) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20025)));
+                (ApiResponseSecurityHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityHistoricalData)));
         }
 
         /// <summary>
@@ -1261,10 +1261,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20025</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20025> GetSecurityHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20025> localVarResponse = await GetSecurityHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = await GetSecurityHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1280,8 +1280,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20025)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20025>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1338,9 +1338,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20025>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurityHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20025) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20025)));
+                (ApiResponseSecurityHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityHistoricalData)));
         }
 
         /// <summary>
@@ -1351,10 +1351,10 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20027</returns>
-        public InlineResponse20027 GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>ApiResponseSecurityStockPriceAdjustments</returns>
+        public ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20027> localVarResponse = GetSecurityStockPriceAdjustmentsWithHttpInfo(identifier, startDate, endDate, nextPage);
+             ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = GetSecurityStockPriceAdjustmentsWithHttpInfo(identifier, startDate, endDate, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1366,8 +1366,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20027</returns>
-        public ApiResponse< InlineResponse20027 > GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseSecurityStockPriceAdjustments</returns>
+        public ApiResponse< ApiResponseSecurityStockPriceAdjustments > GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1418,9 +1418,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20027>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurityStockPriceAdjustments>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20027) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20027)));
+                (ApiResponseSecurityStockPriceAdjustments) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityStockPriceAdjustments)));
         }
 
         /// <summary>
@@ -1431,10 +1431,10 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20027</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20027> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>Task of ApiResponseSecurityStockPriceAdjustments</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20027> localVarResponse = await GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo(identifier, startDate, endDate, nextPage);
+             ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = await GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo(identifier, startDate, endDate, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1447,8 +1447,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20027)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20027>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseSecurityStockPriceAdjustments)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1499,9 +1499,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20027>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurityStockPriceAdjustments>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20027) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20027)));
+                (ApiResponseSecurityStockPriceAdjustments) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityStockPriceAdjustments)));
         }
 
         /// <summary>
@@ -1513,10 +1513,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20026</returns>
-        public InlineResponse20026 GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        /// <returns>ApiResponseSecurityStockPrices</returns>
+        public ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20026> localVarResponse = GetSecurityStockPricesWithHttpInfo(identifier, startDate, endDate, frequency, nextPage);
+             ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = GetSecurityStockPricesWithHttpInfo(identifier, startDate, endDate, frequency, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1529,8 +1529,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20026</returns>
-        public ApiResponse< InlineResponse20026 > GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseSecurityStockPrices</returns>
+        public ApiResponse< ApiResponseSecurityStockPrices > GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1582,9 +1582,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20026>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurityStockPrices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20026) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20026)));
+                (ApiResponseSecurityStockPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityStockPrices)));
         }
 
         /// <summary>
@@ -1596,10 +1596,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20026</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20026> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        /// <returns>Task of ApiResponseSecurityStockPrices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20026> localVarResponse = await GetSecurityStockPricesAsyncWithHttpInfo(identifier, startDate, endDate, frequency, nextPage);
+             ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = await GetSecurityStockPricesAsyncWithHttpInfo(identifier, startDate, endDate, frequency, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1613,8 +1613,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20026)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20026>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseSecurityStockPrices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1666,9 +1666,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20026>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurityStockPrices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20026) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20026)));
+                (ApiResponseSecurityStockPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityStockPrices)));
         }
 
         /// <summary>
@@ -1847,10 +1847,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>InlineResponse20024</returns>
-        public InlineResponse20024 SearchSecurities (string query)
+        /// <returns>ApiResponseSecurities</returns>
+        public ApiResponseSecurities SearchSecurities (string query)
         {
-             ApiResponse<InlineResponse20024> localVarResponse = SearchSecuritiesWithHttpInfo(query);
+             ApiResponse<ApiResponseSecurities> localVarResponse = SearchSecuritiesWithHttpInfo(query);
              return localVarResponse.Data;
         }
 
@@ -1859,8 +1859,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponse of InlineResponse20024</returns>
-        public ApiResponse< InlineResponse20024 > SearchSecuritiesWithHttpInfo (string query)
+        /// <returns>ApiResponse of ApiResponseSecurities</returns>
+        public ApiResponse< ApiResponseSecurities > SearchSecuritiesWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1908,9 +1908,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20024>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20024) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20024)));
+                (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
         }
 
         /// <summary>
@@ -1918,10 +1918,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of InlineResponse20024</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20024> SearchSecuritiesAsync (string query)
+        /// <returns>Task of ApiResponseSecurities</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurities> SearchSecuritiesAsync (string query)
         {
-             ApiResponse<InlineResponse20024> localVarResponse = await SearchSecuritiesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseSecurities> localVarResponse = await SearchSecuritiesAsyncWithHttpInfo(query);
              return localVarResponse.Data;
 
         }
@@ -1931,8 +1931,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponse (InlineResponse20024)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20024>> SearchSecuritiesAsyncWithHttpInfo (string query)
+        /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> SearchSecuritiesAsyncWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1980,9 +1980,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20024>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20024) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20024)));
+                (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
         }
 
     }

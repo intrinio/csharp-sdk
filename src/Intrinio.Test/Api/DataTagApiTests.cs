@@ -66,7 +66,7 @@ namespace Intrinio.Test
             //string fsTemplate = null;
             //string nextPage = null;
             //var response = instance.FilterDataTags(tag, type, parent, statementCode, fsTemplate, nextPage);
-            //Assert.IsInstanceOf<InlineResponse2008> (response, "response is InlineResponse2008");
+            //Assert.IsInstanceOf<ApiResponseDataTags> (response, "response is ApiResponseDataTags");
         }
         
         /// <summary>
@@ -78,7 +78,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string nextPage = null;
             //var response = instance.GetAllDataTags(nextPage);
-            //Assert.IsInstanceOf<InlineResponse2008> (response, "response is InlineResponse2008");
+            //Assert.IsInstanceOf<ApiResponseDataTags> (response, "response is ApiResponseDataTags");
         }
         
         /// <summary>
@@ -102,7 +102,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
             //var response = instance.SearchDataTags(query);
-            //Assert.IsInstanceOf<InlineResponse2009> (response, "response is InlineResponse2009");
+            //Assert.IsInstanceOf<ApiResponseDataTags> (response, "response is ApiResponseDataTags");
         }
         
     }

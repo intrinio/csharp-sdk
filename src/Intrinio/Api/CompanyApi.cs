@@ -30,8 +30,8 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        InlineResponse200 FilterCompanies (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
+        /// <returns>ApiResponseCompanies</returns>
+        ApiResponseCompanies FilterCompanies (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
 
         /// <summary>
         /// Filter Companies
@@ -47,8 +47,8 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> FilterCompaniesWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanies</returns>
+        ApiResponse<ApiResponseCompanies> FilterCompaniesWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
         /// <summary>
         /// Filter Fundamentals for a Company
         /// </summary>
@@ -66,8 +66,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>ApiResponseCompanyFundamentals</returns>
+        ApiResponseCompanyFundamentals FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
 
         /// <summary>
         /// Filter Fundamentals for a Company
@@ -86,8 +86,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> FilterCompanyFundamentalsWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanyFundamentals</returns>
+        ApiResponse<ApiResponseCompanyFundamentals> FilterCompanyFundamentalsWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
         /// Get All Companies
         /// </summary>
@@ -96,8 +96,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        InlineResponse200 GetAllCompanies (string nextPage = null);
+        /// <returns>ApiResponseCompanies</returns>
+        ApiResponseCompanies GetAllCompanies (string nextPage = null);
 
         /// <summary>
         /// Get All Companies
@@ -107,8 +107,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> GetAllCompaniesWithHttpInfo (string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanies</returns>
+        ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get All Company News
         /// </summary>
@@ -117,8 +117,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 GetAllCompanyNews (string nextPage = null);
+        /// <returns>ApiResponseNews</returns>
+        ApiResponseNews GetAllCompanyNews (string nextPage = null);
 
         /// <summary>
         /// Get All Company News
@@ -128,8 +128,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> GetAllCompanyNewsWithHttpInfo (string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseNews</returns>
+        ApiResponse<ApiResponseNews> GetAllCompanyNewsWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get a Company by ID
         /// </summary>
@@ -206,8 +206,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 GetCompanyFilings (string identifier, string nextPage = null);
+        /// <returns>ApiResponseCompanyFilings</returns>
+        ApiResponseCompanyFilings GetCompanyFilings (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get Filings for a Company
@@ -218,8 +218,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> GetCompanyFilingsWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanyFilings</returns>
+        ApiResponse<ApiResponseCompanyFilings> GetCompanyFilingsWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Get All Fundamentals for a Company
         /// </summary>
@@ -229,8 +229,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 GetCompanyFundamentals (string identifier, string nextPage = null);
+        /// <returns>ApiResponseCompanyFundamentals</returns>
+        ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get All Fundamentals for a Company
@@ -241,8 +241,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> GetCompanyFundamentalsWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanyFundamentals</returns>
+        ApiResponse<ApiResponseCompanyFundamentals> GetCompanyFundamentalsWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Get Company Historical Data
         /// </summary>
@@ -257,8 +257,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2005</returns>
-        InlineResponse2005 GetCompanyHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponseCompanyHistoricalData</returns>
+        ApiResponseCompanyHistoricalData GetCompanyHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Company Historical Data
@@ -274,8 +274,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        ApiResponse<InlineResponse2005> GetCompanyHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanyHistoricalData</returns>
+        ApiResponse<ApiResponseCompanyHistoricalData> GetCompanyHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get News for a Company
         /// </summary>
@@ -285,8 +285,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2006</returns>
-        InlineResponse2006 GetCompanyNews (string identifier, string nextPage = null);
+        /// <returns>ApiResponseCompanyNews</returns>
+        ApiResponseCompanyNews GetCompanyNews (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get News for a Company
@@ -297,8 +297,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        ApiResponse<InlineResponse2006> GetCompanyNewsWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
+        ApiResponse<ApiResponseCompanyNews> GetCompanyNewsWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Get Securities by Company
         /// </summary>
@@ -308,8 +308,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2007</returns>
-        InlineResponse2007 GetCompanySecurities (string identifier, string nextPage = null);
+        /// <returns>ApiResponseCompanySecurities</returns>
+        ApiResponseCompanySecurities GetCompanySecurities (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get Securities by Company
@@ -320,8 +320,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2007</returns>
-        ApiResponse<InlineResponse2007> GetCompanySecuritiesWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseCompanySecurities</returns>
+        ApiResponse<ApiResponseCompanySecurities> GetCompanySecuritiesWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Lookup a Fundamental for a Company
         /// </summary>
@@ -357,8 +357,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 SearchCompanies (string query);
+        /// <returns>ApiResponseCompanies</returns>
+        ApiResponseCompanies SearchCompanies (string query);
 
         /// <summary>
         /// Search Companies
@@ -368,8 +368,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> SearchCompaniesWithHttpInfo (string query);
+        /// <returns>ApiResponse of ApiResponseCompanies</returns>
+        ApiResponse<ApiResponseCompanies> SearchCompaniesWithHttpInfo (string query);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -386,8 +386,8 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> FilterCompaniesAsync (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
+        /// <returns>Task of ApiResponseCompanies</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanies> FilterCompaniesAsync (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
 
         /// <summary>
         /// Filter Companies
@@ -403,8 +403,8 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> FilterCompaniesAsyncWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> FilterCompaniesAsyncWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null);
         /// <summary>
         /// Filter Fundamentals for a Company
         /// </summary>
@@ -422,8 +422,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> FilterCompanyFundamentalsAsync (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>Task of ApiResponseCompanyFundamentals</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyFundamentals> FilterCompanyFundamentalsAsync (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
 
         /// <summary>
         /// Filter Fundamentals for a Company
@@ -442,8 +442,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> FilterCompanyFundamentalsAsyncWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanyFundamentals)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFundamentals>> FilterCompanyFundamentalsAsyncWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
         /// Get All Companies
         /// </summary>
@@ -452,8 +452,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> GetAllCompaniesAsync (string nextPage = null);
+        /// <returns>Task of ApiResponseCompanies</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (string nextPage = null);
 
         /// <summary>
         /// Get All Companies
@@ -463,8 +463,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetAllCompaniesAsyncWithHttpInfo (string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get All Company News
         /// </summary>
@@ -473,8 +473,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> GetAllCompanyNewsAsync (string nextPage = null);
+        /// <returns>Task of ApiResponseNews</returns>
+        System.Threading.Tasks.Task<ApiResponseNews> GetAllCompanyNewsAsync (string nextPage = null);
 
         /// <summary>
         /// Get All Company News
@@ -484,8 +484,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> GetAllCompanyNewsAsyncWithHttpInfo (string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseNews)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseNews>> GetAllCompanyNewsAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get a Company by ID
         /// </summary>
@@ -562,8 +562,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> GetCompanyFilingsAsync (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponseCompanyFilings</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyFilings> GetCompanyFilingsAsync (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get Filings for a Company
@@ -574,8 +574,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanyFilings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFilings>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Get All Fundamentals for a Company
         /// </summary>
@@ -585,8 +585,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> GetCompanyFundamentalsAsync (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponseCompanyFundamentals</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyFundamentals> GetCompanyFundamentalsAsync (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get All Fundamentals for a Company
@@ -597,8 +597,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> GetCompanyFundamentalsAsyncWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanyFundamentals)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFundamentals>> GetCompanyFundamentalsAsyncWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Get Company Historical Data
         /// </summary>
@@ -613,8 +613,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2005</returns>
-        System.Threading.Tasks.Task<InlineResponse2005> GetCompanyHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponseCompanyHistoricalData</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyHistoricalData> GetCompanyHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Company Historical Data
@@ -630,8 +630,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> GetCompanyHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanyHistoricalData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyHistoricalData>> GetCompanyHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get News for a Company
         /// </summary>
@@ -641,8 +641,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        System.Threading.Tasks.Task<InlineResponse2006> GetCompanyNewsAsync (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponseCompanyNews</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyNews> GetCompanyNewsAsync (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get News for a Company
@@ -653,8 +653,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanyNews)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Get Securities by Company
         /// </summary>
@@ -664,8 +664,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2007</returns>
-        System.Threading.Tasks.Task<InlineResponse2007> GetCompanySecuritiesAsync (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponseCompanySecurities</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanySecurities> GetCompanySecuritiesAsync (string identifier, string nextPage = null);
 
         /// <summary>
         /// Get Securities by Company
@@ -676,8 +676,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> GetCompanySecuritiesAsyncWithHttpInfo (string identifier, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseCompanySecurities)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySecurities>> GetCompanySecuritiesAsyncWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Lookup a Fundamental for a Company
         /// </summary>
@@ -713,8 +713,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> SearchCompaniesAsync (string query);
+        /// <returns>Task of ApiResponseCompanies</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanies> SearchCompaniesAsync (string query);
 
         /// <summary>
         /// Search Companies
@@ -724,8 +724,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> SearchCompaniesAsyncWithHttpInfo (string query);
+        /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> SearchCompaniesAsyncWithHttpInfo (string query);
         #endregion Asynchronous Operations
     }
 
@@ -837,10 +837,10 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        public InlineResponse200 FilterCompanies (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
+        /// <returns>ApiResponseCompanies</returns>
+        public ApiResponseCompanies FilterCompanies (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = FilterCompaniesWithHttpInfo(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = FilterCompaniesWithHttpInfo(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
              return localVarResponse.Data;
         }
 
@@ -855,8 +855,8 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > FilterCompaniesWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanies</returns>
+        public ApiResponse< ApiResponseCompanies > FilterCompaniesWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
         {
 
             var localVarPath = "/companies/filter";
@@ -907,9 +907,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanies>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (ApiResponseCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanies)));
         }
 
         /// <summary>
@@ -923,10 +923,10 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> FilterCompaniesAsync (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
+        /// <returns>Task of ApiResponseCompanies</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanies> FilterCompaniesAsync (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = await FilterCompaniesAsyncWithHttpInfo(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = await FilterCompaniesAsyncWithHttpInfo(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
              return localVarResponse.Data;
 
         }
@@ -942,8 +942,8 @@ namespace Intrinio.Api
         /// <param name="industryCategory">Industry category (optional)</param>
         /// <param name="industryGroup">Industry group (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> FilterCompaniesAsyncWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> FilterCompaniesAsyncWithHttpInfo (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
         {
 
             var localVarPath = "/companies/filter";
@@ -994,9 +994,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanies>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (ApiResponseCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanies)));
         }
 
         /// <summary>
@@ -1013,10 +1013,10 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>ApiResponseCompanyFundamentals</returns>
+        public ApiResponseCompanyFundamentals FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = FilterCompanyFundamentalsWithHttpInfo(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
+             ApiResponse<ApiResponseCompanyFundamentals> localVarResponse = FilterCompanyFundamentalsWithHttpInfo(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1034,8 +1034,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > FilterCompanyFundamentalsWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanyFundamentals</returns>
+        public ApiResponse< ApiResponseCompanyFundamentals > FilterCompanyFundamentalsWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1092,9 +1092,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyFundamentals>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (ApiResponseCompanyFundamentals) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyFundamentals)));
         }
 
         /// <summary>
@@ -1111,10 +1111,10 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> FilterCompanyFundamentalsAsync (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>Task of ApiResponseCompanyFundamentals</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyFundamentals> FilterCompanyFundamentalsAsync (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await FilterCompanyFundamentalsAsyncWithHttpInfo(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
+             ApiResponse<ApiResponseCompanyFundamentals> localVarResponse = await FilterCompanyFundamentalsAsyncWithHttpInfo(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1133,8 +1133,8 @@ namespace Intrinio.Api
         /// <param name="startDate">Only on or after the given date (optional)</param>
         /// <param name="endDate">Only on or after the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> FilterCompanyFundamentalsAsyncWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanyFundamentals)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFundamentals>> FilterCompanyFundamentalsAsyncWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1191,9 +1191,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyFundamentals>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (ApiResponseCompanyFundamentals) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyFundamentals)));
         }
 
         /// <summary>
@@ -1201,10 +1201,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        public InlineResponse200 GetAllCompanies (string nextPage = null)
+        /// <returns>ApiResponseCompanies</returns>
+        public ApiResponseCompanies GetAllCompanies (string nextPage = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = GetAllCompaniesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = GetAllCompaniesWithHttpInfo(nextPage);
              return localVarResponse.Data;
         }
 
@@ -1213,8 +1213,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > GetAllCompaniesWithHttpInfo (string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanies</returns>
+        public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -1259,9 +1259,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanies>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (ApiResponseCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanies)));
         }
 
         /// <summary>
@@ -1269,10 +1269,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> GetAllCompaniesAsync (string nextPage = null)
+        /// <returns>Task of ApiResponseCompanies</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (string nextPage = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(nextPage);
              return localVarResponse.Data;
 
         }
@@ -1282,8 +1282,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetAllCompaniesAsyncWithHttpInfo (string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -1328,9 +1328,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanies>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (ApiResponseCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanies)));
         }
 
         /// <summary>
@@ -1338,10 +1338,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 GetAllCompanyNews (string nextPage = null)
+        /// <returns>ApiResponseNews</returns>
+        public ApiResponseNews GetAllCompanyNews (string nextPage = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = GetAllCompanyNewsWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseNews> localVarResponse = GetAllCompanyNewsWithHttpInfo(nextPage);
              return localVarResponse.Data;
         }
 
@@ -1350,8 +1350,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > GetAllCompanyNewsWithHttpInfo (string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseNews</returns>
+        public ApiResponse< ApiResponseNews > GetAllCompanyNewsWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/companies/news";
@@ -1396,9 +1396,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ApiResponseNews>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ApiResponseNews) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseNews)));
         }
 
         /// <summary>
@@ -1406,10 +1406,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> GetAllCompanyNewsAsync (string nextPage = null)
+        /// <returns>Task of ApiResponseNews</returns>
+        public async System.Threading.Tasks.Task<ApiResponseNews> GetAllCompanyNewsAsync (string nextPage = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await GetAllCompanyNewsAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseNews> localVarResponse = await GetAllCompanyNewsAsyncWithHttpInfo(nextPage);
              return localVarResponse.Data;
 
         }
@@ -1419,8 +1419,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> GetAllCompanyNewsAsyncWithHttpInfo (string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseNews)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseNews>> GetAllCompanyNewsAsyncWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/companies/news";
@@ -1465,9 +1465,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ApiResponseNews>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ApiResponseNews) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseNews)));
         }
 
         /// <summary>
@@ -1929,10 +1929,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 GetCompanyFilings (string identifier, string nextPage = null)
+        /// <returns>ApiResponseCompanyFilings</returns>
+        public ApiResponseCompanyFilings GetCompanyFilings (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = GetCompanyFilingsWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanyFilings> localVarResponse = GetCompanyFilingsWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1942,8 +1942,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > GetCompanyFilingsWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanyFilings</returns>
+        public ApiResponse< ApiResponseCompanyFilings > GetCompanyFilingsWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1992,9 +1992,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyFilings>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (ApiResponseCompanyFilings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyFilings)));
         }
 
         /// <summary>
@@ -2003,10 +2003,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> GetCompanyFilingsAsync (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponseCompanyFilings</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyFilings> GetCompanyFilingsAsync (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await GetCompanyFilingsAsyncWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanyFilings> localVarResponse = await GetCompanyFilingsAsyncWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2017,8 +2017,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanyFilings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFilings>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2067,9 +2067,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyFilings>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (ApiResponseCompanyFilings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyFilings)));
         }
 
         /// <summary>
@@ -2078,10 +2078,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 GetCompanyFundamentals (string identifier, string nextPage = null)
+        /// <returns>ApiResponseCompanyFundamentals</returns>
+        public ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = GetCompanyFundamentalsWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanyFundamentals> localVarResponse = GetCompanyFundamentalsWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2091,8 +2091,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > GetCompanyFundamentalsWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanyFundamentals</returns>
+        public ApiResponse< ApiResponseCompanyFundamentals > GetCompanyFundamentalsWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2141,9 +2141,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyFundamentals>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (ApiResponseCompanyFundamentals) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyFundamentals)));
         }
 
         /// <summary>
@@ -2152,10 +2152,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> GetCompanyFundamentalsAsync (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponseCompanyFundamentals</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyFundamentals> GetCompanyFundamentalsAsync (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await GetCompanyFundamentalsAsyncWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanyFundamentals> localVarResponse = await GetCompanyFundamentalsAsyncWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2166,8 +2166,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> GetCompanyFundamentalsAsyncWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanyFundamentals)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFundamentals>> GetCompanyFundamentalsAsyncWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2216,9 +2216,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyFundamentals>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (ApiResponseCompanyFundamentals) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyFundamentals)));
         }
 
         /// <summary>
@@ -2232,10 +2232,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2005</returns>
-        public InlineResponse2005 GetCompanyHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponseCompanyHistoricalData</returns>
+        public ApiResponseCompanyHistoricalData GetCompanyHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse2005> localVarResponse = GetCompanyHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseCompanyHistoricalData> localVarResponse = GetCompanyHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2250,8 +2250,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        public ApiResponse< InlineResponse2005 > GetCompanyHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanyHistoricalData</returns>
+        public ApiResponse< ApiResponseCompanyHistoricalData > GetCompanyHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2308,9 +2308,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2005) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (ApiResponseCompanyHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyHistoricalData)));
         }
 
         /// <summary>
@@ -2324,10 +2324,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2005</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2005> GetCompanyHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponseCompanyHistoricalData</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyHistoricalData> GetCompanyHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse2005> localVarResponse = await GetCompanyHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseCompanyHistoricalData> localVarResponse = await GetCompanyHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2343,8 +2343,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> GetCompanyHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanyHistoricalData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyHistoricalData>> GetCompanyHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2401,9 +2401,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2005) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (ApiResponseCompanyHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyHistoricalData)));
         }
 
         /// <summary>
@@ -2412,10 +2412,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2006</returns>
-        public InlineResponse2006 GetCompanyNews (string identifier, string nextPage = null)
+        /// <returns>ApiResponseCompanyNews</returns>
+        public ApiResponseCompanyNews GetCompanyNews (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = GetCompanyNewsWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanyNews> localVarResponse = GetCompanyNewsWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2425,8 +2425,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        public ApiResponse< InlineResponse2006 > GetCompanyNewsWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
+        public ApiResponse< ApiResponseCompanyNews > GetCompanyNewsWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2475,9 +2475,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyNews>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (ApiResponseCompanyNews) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyNews)));
         }
 
         /// <summary>
@@ -2486,10 +2486,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2006> GetCompanyNewsAsync (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponseCompanyNews</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyNews> GetCompanyNewsAsync (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = await GetCompanyNewsAsyncWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanyNews> localVarResponse = await GetCompanyNewsAsyncWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2500,8 +2500,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanyNews)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2550,9 +2550,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanyNews>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (ApiResponseCompanyNews) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyNews)));
         }
 
         /// <summary>
@@ -2561,10 +2561,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse2007</returns>
-        public InlineResponse2007 GetCompanySecurities (string identifier, string nextPage = null)
+        /// <returns>ApiResponseCompanySecurities</returns>
+        public ApiResponseCompanySecurities GetCompanySecurities (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2007> localVarResponse = GetCompanySecuritiesWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanySecurities> localVarResponse = GetCompanySecuritiesWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2574,8 +2574,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2007</returns>
-        public ApiResponse< InlineResponse2007 > GetCompanySecuritiesWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseCompanySecurities</returns>
+        public ApiResponse< ApiResponseCompanySecurities > GetCompanySecuritiesWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2624,9 +2624,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2007>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanySecurities>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2007) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2007)));
+                (ApiResponseCompanySecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanySecurities)));
         }
 
         /// <summary>
@@ -2635,10 +2635,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse2007</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2007> GetCompanySecuritiesAsync (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponseCompanySecurities</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanySecurities> GetCompanySecuritiesAsync (string identifier, string nextPage = null)
         {
-             ApiResponse<InlineResponse2007> localVarResponse = await GetCompanySecuritiesAsyncWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseCompanySecurities> localVarResponse = await GetCompanySecuritiesAsyncWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2649,8 +2649,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> GetCompanySecuritiesAsyncWithHttpInfo (string identifier, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseCompanySecurities)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySecurities>> GetCompanySecuritiesAsyncWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2699,9 +2699,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2007>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanySecurities>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2007) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2007)));
+                (ApiResponseCompanySecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanySecurities)));
         }
 
         /// <summary>
@@ -2888,10 +2888,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 SearchCompanies (string query)
+        /// <returns>ApiResponseCompanies</returns>
+        public ApiResponseCompanies SearchCompanies (string query)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = SearchCompaniesWithHttpInfo(query);
+             ApiResponse<ApiResponseCompanies> localVarResponse = SearchCompaniesWithHttpInfo(query);
              return localVarResponse.Data;
         }
 
@@ -2900,8 +2900,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > SearchCompaniesWithHttpInfo (string query)
+        /// <returns>ApiResponse of ApiResponseCompanies</returns>
+        public ApiResponse< ApiResponseCompanies > SearchCompaniesWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -2949,9 +2949,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanies>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (ApiResponseCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanies)));
         }
 
         /// <summary>
@@ -2959,10 +2959,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> SearchCompaniesAsync (string query)
+        /// <returns>Task of ApiResponseCompanies</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanies> SearchCompaniesAsync (string query)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await SearchCompaniesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseCompanies> localVarResponse = await SearchCompaniesAsyncWithHttpInfo(query);
              return localVarResponse.Data;
 
         }
@@ -2972,8 +2972,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> SearchCompaniesAsyncWithHttpInfo (string query)
+        /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> SearchCompaniesAsyncWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3021,9 +3021,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<ApiResponseCompanies>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (ApiResponseCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanies)));
         }
 
     }

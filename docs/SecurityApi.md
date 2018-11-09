@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getallsecurities"></a>
 # **GetAllSecurities**
-> InlineResponse20023 GetAllSecurities (string nextPage = null)
+> ApiResponseSecurities GetAllSecurities (string nextPage = null)
 
 Get All Securiites
 
@@ -42,7 +42,7 @@ namespace Example
 
             try
             {
-                InlineResponse20023 result = securityApi.GetAllSecurities(nextPage);
+                ApiResponseSecurities result = securityApi.GetAllSecurities(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**ApiResponseSecurities**](ApiResponseSecurities.md)
 
 <a name="getsecuritybyid"></a>
 # **GetSecurityById**
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 <a name="getsecurityhistoricaldata"></a>
 # **GetSecurityHistoricalData**
-> InlineResponse20025 GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
 Get Security Historical Data
 
@@ -254,7 +254,7 @@ namespace Example
 
             try
             {
-                InlineResponse20025 result = securityApi.GetSecurityHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseSecurityHistoricalData result = securityApi.GetSecurityHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -280,11 +280,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
 
 <a name="getsecuritystockpriceadjustments"></a>
 # **GetSecurityStockPriceAdjustments**
-> InlineResponse20027 GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+> ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
 
 Get Stock Price Adjustments for Security
 
@@ -314,7 +314,7 @@ namespace Example
 
             try
             {
-                InlineResponse20027 result = securityApi.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, nextPage);
+                ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -337,11 +337,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
 
 <a name="getsecuritystockprices"></a>
 # **GetSecurityStockPrices**
-> InlineResponse20026 GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+> ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
 
 Get Stock Prices for Security
 
@@ -372,7 +372,7 @@ namespace Example
 
             try
             {
-                InlineResponse20026 result = securityApi.GetSecurityStockPrices(identifier, startDate, endDate, frequency, nextPage);
+                ApiResponseSecurityStockPrices result = securityApi.GetSecurityStockPrices(identifier, startDate, endDate, frequency, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**ApiResponseSecurityStockPrices**](ApiResponseSecurityStockPrices.md)
 
 <a name="screensecurities"></a>
 # **ScreenSecurities**
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 
 <a name="searchsecurities"></a>
 # **SearchSecurities**
-> InlineResponse20024 SearchSecurities (string query)
+> ApiResponseSecurities SearchSecurities (string query)
 
 Search Securities
 
@@ -484,7 +484,7 @@ namespace Example
 
             try
             {
-                InlineResponse20024 result = securityApi.SearchSecurities(query);
+                ApiResponseSecurities result = securityApi.SearchSecurities(query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -504,5 +504,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**ApiResponseSecurities**](ApiResponseSecurities.md)
 

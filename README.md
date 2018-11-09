@@ -71,21 +71,25 @@ namespace Example
     {
         public void main()
         {
-
             Configuration.Default.ApiKey.Add("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
+            String nextPage = null;
 
             try
             {
-                InlineResponse200 result = companyApi.GetAllCompanies(nextPage);
-                Debug.WriteLine(result);
+                ApiResponseCompanies response = companyApi.GetAllCompanies(nextPage);
+                response.Companies.ForEach(delegate (CompanySummary company)
+                {
+                    Console.WriteLine(company.Ticker + " - " + company.Name);
+                });
             }
             catch (Exception e)
             {
                 Debug.Print("Exception when calling CompanyApi.FilterCompanies: " + e.Message );
             }
-
+            
+            Console.ReadLine();
         }
     }
 }
@@ -164,6 +168,31 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.ApiResponseCompanies](docs/ApiResponseCompanies.md)
+ - [Model.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
+ - [Model.ApiResponseCompanyFundamentals](docs/ApiResponseCompanyFundamentals.md)
+ - [Model.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
+ - [Model.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
+ - [Model.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)
+ - [Model.ApiResponseDataTags](docs/ApiResponseDataTags.md)
+ - [Model.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
+ - [Model.ApiResponseEconomicIndices](docs/ApiResponseEconomicIndices.md)
+ - [Model.ApiResponseFilings](docs/ApiResponseFilings.md)
+ - [Model.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
+ - [Model.ApiResponseNews](docs/ApiResponseNews.md)
+ - [Model.ApiResponseReportedFinancials](docs/ApiResponseReportedFinancials.md)
+ - [Model.ApiResponseSICIndexHistoricalData](docs/ApiResponseSICIndexHistoricalData.md)
+ - [Model.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
+ - [Model.ApiResponseSecurities](docs/ApiResponseSecurities.md)
+ - [Model.ApiResponseSecurityHistoricalData](docs/ApiResponseSecurityHistoricalData.md)
+ - [Model.ApiResponseSecurityStockPriceAdjustments](docs/ApiResponseSecurityStockPriceAdjustments.md)
+ - [Model.ApiResponseSecurityStockPrices](docs/ApiResponseSecurityStockPrices.md)
+ - [Model.ApiResponseStandardizedFinancials](docs/ApiResponseStandardizedFinancials.md)
+ - [Model.ApiResponseStockExchangeSecurities](docs/ApiResponseStockExchangeSecurities.md)
+ - [Model.ApiResponseStockExchangeStockPriceAdjustments](docs/ApiResponseStockExchangeStockPriceAdjustments.md)
+ - [Model.ApiResponseStockExchangeStockPrices](docs/ApiResponseStockExchangeStockPrices.md)
+ - [Model.ApiResponseStockMarketIndexHistoricalData](docs/ApiResponseStockMarketIndexHistoricalData.md)
+ - [Model.ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
  - [Model.Company](docs/Company.md)
  - [Model.CompanyFiling](docs/CompanyFiling.md)
  - [Model.CompanyNews](docs/CompanyNews.md)
@@ -180,38 +209,6 @@ Class | Method | HTTP request | Description
  - [Model.Fundamental](docs/Fundamental.md)
  - [Model.FundamentalSummary](docs/FundamentalSummary.md)
  - [Model.HistoricalData](docs/HistoricalData.md)
- - [Model.InlineResponse200](docs/InlineResponse200.md)
- - [Model.InlineResponse2001](docs/InlineResponse2001.md)
- - [Model.InlineResponse20010](docs/InlineResponse20010.md)
- - [Model.InlineResponse20011](docs/InlineResponse20011.md)
- - [Model.InlineResponse20012](docs/InlineResponse20012.md)
- - [Model.InlineResponse20013](docs/InlineResponse20013.md)
- - [Model.InlineResponse20014](docs/InlineResponse20014.md)
- - [Model.InlineResponse20015](docs/InlineResponse20015.md)
- - [Model.InlineResponse20016](docs/InlineResponse20016.md)
- - [Model.InlineResponse20017](docs/InlineResponse20017.md)
- - [Model.InlineResponse20018](docs/InlineResponse20018.md)
- - [Model.InlineResponse20019](docs/InlineResponse20019.md)
- - [Model.InlineResponse2002](docs/InlineResponse2002.md)
- - [Model.InlineResponse20020](docs/InlineResponse20020.md)
- - [Model.InlineResponse20021](docs/InlineResponse20021.md)
- - [Model.InlineResponse20022](docs/InlineResponse20022.md)
- - [Model.InlineResponse20023](docs/InlineResponse20023.md)
- - [Model.InlineResponse20024](docs/InlineResponse20024.md)
- - [Model.InlineResponse20025](docs/InlineResponse20025.md)
- - [Model.InlineResponse20026](docs/InlineResponse20026.md)
- - [Model.InlineResponse20027](docs/InlineResponse20027.md)
- - [Model.InlineResponse20028](docs/InlineResponse20028.md)
- - [Model.InlineResponse20029](docs/InlineResponse20029.md)
- - [Model.InlineResponse2003](docs/InlineResponse2003.md)
- - [Model.InlineResponse20030](docs/InlineResponse20030.md)
- - [Model.InlineResponse20031](docs/InlineResponse20031.md)
- - [Model.InlineResponse2004](docs/InlineResponse2004.md)
- - [Model.InlineResponse2005](docs/InlineResponse2005.md)
- - [Model.InlineResponse2006](docs/InlineResponse2006.md)
- - [Model.InlineResponse2007](docs/InlineResponse2007.md)
- - [Model.InlineResponse2008](docs/InlineResponse2008.md)
- - [Model.InlineResponse2009](docs/InlineResponse2009.md)
  - [Model.ReportedFinancial](docs/ReportedFinancial.md)
  - [Model.ReportedTag](docs/ReportedTag.md)
  - [Model.SICIndex](docs/SICIndex.md)
@@ -229,3 +226,4 @@ Class | Method | HTTP request | Description
  - [Model.StockPriceAdjustment](docs/StockPriceAdjustment.md)
  - [Model.StockPriceAdjustmentSummary](docs/StockPriceAdjustmentSummary.md)
  - [Model.StockPriceSummary](docs/StockPriceSummary.md)
+

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="filterdatatags"></a>
 # **FilterDataTags**
-> InlineResponse2008 FilterDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null)
+> ApiResponseDataTags FilterDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null)
 
 Filter Data Tags
 
@@ -44,7 +44,7 @@ namespace Example
 
             try
             {
-                InlineResponse2008 result = dataTagApi.FilterDataTags(tag, type, parent, statementCode, fsTemplate, nextPage);
+                ApiResponseDataTags result = dataTagApi.FilterDataTags(tag, type, parent, statementCode, fsTemplate, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -69,11 +69,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**ApiResponseDataTags**](ApiResponseDataTags.md)
 
 <a name="getalldatatags"></a>
 # **GetAllDataTags**
-> InlineResponse2008 GetAllDataTags (string nextPage = null)
+> ApiResponseDataTags GetAllDataTags (string nextPage = null)
 
 Get All Data Tags
 
@@ -100,7 +100,7 @@ namespace Example
 
             try
             {
-                InlineResponse2008 result = dataTagApi.GetAllDataTags(nextPage);
+                ApiResponseDataTags result = dataTagApi.GetAllDataTags(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**ApiResponseDataTags**](ApiResponseDataTags.md)
 
 <a name="getdatatagbyid"></a>
 # **GetDataTagById**
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 <a name="searchdatatags"></a>
 # **SearchDataTags**
-> InlineResponse2009 SearchDataTags (string query)
+> ApiResponseDataTags SearchDataTags (string query)
 
 Search Data Tags
 
@@ -202,7 +202,7 @@ namespace Example
 
             try
             {
-                InlineResponse2009 result = dataTagApi.SearchDataTags(query);
+                ApiResponseDataTags result = dataTagApi.SearchDataTags(query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -222,5 +222,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**ApiResponseDataTags**](ApiResponseDataTags.md)
 

@@ -30,8 +30,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20013</returns>
-        InlineResponse20013 GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponseHistoricalData</returns>
+        ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Historical Data
@@ -47,8 +47,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20013</returns>
-        ApiResponse<InlineResponse20013> GetHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseHistoricalData</returns>
+        ApiResponse<ApiResponseHistoricalData> GetHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -65,8 +65,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20013</returns>
-        System.Threading.Tasks.Task<InlineResponse20013> GetHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponseHistoricalData</returns>
+        System.Threading.Tasks.Task<ApiResponseHistoricalData> GetHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Historical Data
@@ -82,8 +82,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20013)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20013>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseHistoricalData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseHistoricalData>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -195,10 +195,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20013</returns>
-        public InlineResponse20013 GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponseHistoricalData</returns>
+        public ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20013> localVarResponse = GetHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseHistoricalData> localVarResponse = GetHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
@@ -213,8 +213,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20013</returns>
-        public ApiResponse< InlineResponse20013 > GetHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseHistoricalData</returns>
+        public ApiResponse< ApiResponseHistoricalData > GetHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -271,9 +271,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20013>(localVarStatusCode,
+            return new ApiResponse<ApiResponseHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20013) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20013)));
+                (ApiResponseHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseHistoricalData)));
         }
 
         /// <summary>
@@ -287,10 +287,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20013</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20013> GetHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponseHistoricalData</returns>
+        public async System.Threading.Tasks.Task<ApiResponseHistoricalData> GetHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20013> localVarResponse = await GetHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseHistoricalData> localVarResponse = await GetHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
@@ -306,8 +306,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20013)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20013>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseHistoricalData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseHistoricalData>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -364,9 +364,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20013>(localVarStatusCode,
+            return new ApiResponse<ApiResponseHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20013) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20013)));
+                (ApiResponseHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseHistoricalData)));
         }
 
     }

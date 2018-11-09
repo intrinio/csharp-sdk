@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="getfundamentalreportedfinancials"></a>
 # **GetFundamentalReportedFinancials**
-> InlineResponse20011 GetFundamentalReportedFinancials (string id)
+> ApiResponseReportedFinancials GetFundamentalReportedFinancials (string id)
 
 Get Reported Financials for a Fundamental
 
@@ -90,7 +90,7 @@ namespace Example
 
             try
             {
-                InlineResponse20011 result = fundamentalsApi.GetFundamentalReportedFinancials(id);
+                ApiResponseReportedFinancials result = fundamentalsApi.GetFundamentalReportedFinancials(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -110,11 +110,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**ApiResponseReportedFinancials**](ApiResponseReportedFinancials.md)
 
 <a name="getfundamentalstandardizedfinancials"></a>
 # **GetFundamentalStandardizedFinancials**
-> InlineResponse20012 GetFundamentalStandardizedFinancials (string id)
+> ApiResponseStandardizedFinancials GetFundamentalStandardizedFinancials (string id)
 
 Get Standardized Financials for a Fundamental
 
@@ -141,7 +141,7 @@ namespace Example
 
             try
             {
-                InlineResponse20012 result = fundamentalsApi.GetFundamentalStandardizedFinancials(id);
+                ApiResponseStandardizedFinancials result = fundamentalsApi.GetFundamentalStandardizedFinancials(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
 
 <a name="lookupfundamental"></a>
 # **LookupFundamental**

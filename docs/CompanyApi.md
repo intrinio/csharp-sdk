@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 <a name="filtercompanies"></a>
 # **FilterCompanies**
-> InlineResponse200 FilterCompanies (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
+> ApiResponseCompanies FilterCompanies (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
 
 Filter Companies
 
@@ -55,7 +55,7 @@ namespace Example
 
             try
             {
-                InlineResponse200 result = companyApi.FilterCompanies(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
+                ApiResponseCompanies result = companyApi.FilterCompanies(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -81,11 +81,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ApiResponseCompanies**](ApiResponseCompanies.md)
 
 <a name="filtercompanyfundamentals"></a>
 # **FilterCompanyFundamentals**
-> InlineResponse2004 FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+> ApiResponseCompanyFundamentals FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
 
 Filter Fundamentals for a Company
 
@@ -121,7 +121,7 @@ namespace Example
 
             try
             {
-                InlineResponse2004 result = companyApi.FilterCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
+                ApiResponseCompanyFundamentals result = companyApi.FilterCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -150,11 +150,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
 
 <a name="getallcompanies"></a>
 # **GetAllCompanies**
-> InlineResponse200 GetAllCompanies (string nextPage = null)
+> ApiResponseCompanies GetAllCompanies (string nextPage = null)
 
 Get All Companies
 
@@ -179,7 +179,7 @@ namespace Example
 
             try
             {
-                InlineResponse200 result = companyApi.GetAllCompanies(nextPage);
+                ApiResponseCompanies result = companyApi.GetAllCompanies(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -199,11 +199,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ApiResponseCompanies**](ApiResponseCompanies.md)
 
 <a name="getallcompanynews"></a>
 # **GetAllCompanyNews**
-> InlineResponse2001 GetAllCompanyNews (string nextPage = null)
+> ApiResponseNews GetAllCompanyNews (string nextPage = null)
 
 Get All Company News
 
@@ -230,7 +230,7 @@ namespace Example
 
             try
             {
-                InlineResponse2001 result = companyApi.GetAllCompanyNews(nextPage);
+                ApiResponseNews result = companyApi.GetAllCompanyNews(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**ApiResponseNews**](ApiResponseNews.md)
 
 <a name="getcompany"></a>
 # **GetCompany**
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 <a name="getcompanyfilings"></a>
 # **GetCompanyFilings**
-> InlineResponse2003 GetCompanyFilings (string identifier, string nextPage = null)
+> ApiResponseCompanyFilings GetCompanyFilings (string identifier, string nextPage = null)
 
 Get Filings for a Company
 
@@ -437,7 +437,7 @@ namespace Example
 
             try
             {
-                InlineResponse2003 result = companyApi.GetCompanyFilings(identifier, nextPage);
+                ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -458,11 +458,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**ApiResponseCompanyFilings**](ApiResponseCompanyFilings.md)
 
 <a name="getcompanyfundamentals"></a>
 # **GetCompanyFundamentals**
-> InlineResponse2004 GetCompanyFundamentals (string identifier, string nextPage = null)
+> ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, string nextPage = null)
 
 Get All Fundamentals for a Company
 
@@ -490,7 +490,7 @@ namespace Example
 
             try
             {
-                InlineResponse2004 result = companyApi.GetCompanyFundamentals(identifier, nextPage);
+                ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -511,11 +511,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
 
 <a name="getcompanyhistoricaldata"></a>
 # **GetCompanyHistoricalData**
-> InlineResponse2005 GetCompanyHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseCompanyHistoricalData GetCompanyHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
 Get Company Historical Data
 
@@ -548,7 +548,7 @@ namespace Example
 
             try
             {
-                InlineResponse2005 result = companyApi.GetCompanyHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -574,11 +574,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**ApiResponseCompanyHistoricalData**](ApiResponseCompanyHistoricalData.md)
 
 <a name="getcompanynews"></a>
 # **GetCompanyNews**
-> InlineResponse2006 GetCompanyNews (string identifier, string nextPage = null)
+> ApiResponseCompanyNews GetCompanyNews (string identifier, string nextPage = null)
 
 Get News for a Company
 
@@ -606,7 +606,7 @@ namespace Example
 
             try
             {
-                InlineResponse2006 result = companyApi.GetCompanyNews(identifier, nextPage);
+                ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -627,11 +627,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
 
 <a name="getcompanysecurities"></a>
 # **GetCompanySecurities**
-> InlineResponse2007 GetCompanySecurities (string identifier, string nextPage = null)
+> ApiResponseCompanySecurities GetCompanySecurities (string identifier, string nextPage = null)
 
 Get Securities by Company
 
@@ -659,7 +659,7 @@ namespace Example
 
             try
             {
-                InlineResponse2007 result = companyApi.GetCompanySecurities(identifier, nextPage);
+                ApiResponseCompanySecurities result = companyApi.GetCompanySecurities(identifier, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**ApiResponseCompanySecurities**](ApiResponseCompanySecurities.md)
 
 <a name="lookupcompanyfundamental"></a>
 # **LookupCompanyFundamental**
@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 
 <a name="searchcompanies"></a>
 # **SearchCompanies**
-> InlineResponse2002 SearchCompanies (string query)
+> ApiResponseCompanies SearchCompanies (string query)
 
 Search Companies
 
@@ -768,7 +768,7 @@ namespace Example
 
             try
             {
-                InlineResponse2002 result = companyApi.SearchCompanies(query);
+                ApiResponseCompanies result = companyApi.SearchCompanies(query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -788,5 +788,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**ApiResponseCompanies**](ApiResponseCompanies.md)
 

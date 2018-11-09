@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="filterstockexchanges"></a>
 # **FilterStockExchanges**
-> InlineResponse20028 FilterStockExchanges (string city = null, string country = null, string countryCode = null)
+> List<StockExchange> FilterStockExchanges (string city = null, string country = null, string countryCode = null)
 
 Filter Stock Exchanges
 
@@ -43,7 +43,7 @@ namespace Example
 
             try
             {
-                InlineResponse20028 result = stockExchangeApi.FilterStockExchanges(city, country, countryCode);
+                List&lt;StockExchange&gt; result = stockExchangeApi.FilterStockExchanges(city, country, countryCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**List<StockExchange>**](StockExchange.md)
 
 <a name="getallstockexchanges"></a>
 # **GetAllStockExchanges**
-> InlineResponse20028 GetAllStockExchanges ()
+> List<StockExchange> GetAllStockExchanges ()
 
 Get All Stock Exchanges
 
@@ -95,7 +95,7 @@ namespace Example
 
             try
             {
-                InlineResponse20028 result = stockExchangeApi.GetAllStockExchanges();
+                List&lt;StockExchange&gt; result = stockExchangeApi.GetAllStockExchanges();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -112,7 +112,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**List<StockExchange>**](StockExchange.md)
 
 <a name="getstockexchangebyid"></a>
 # **GetStockExchangeById**
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockexchangepriceadjustments"></a>
 # **GetStockExchangePriceAdjustments**
-> InlineResponse20030 GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, string nextPage = null)
+> ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, string nextPage = null)
 
 Get Stock Price Adjustments by Exchange
 
@@ -194,7 +194,7 @@ namespace Example
 
             try
             {
-                InlineResponse20030 result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, nextPage);
+                ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -216,11 +216,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**ApiResponseStockExchangeStockPriceAdjustments**](ApiResponseStockExchangeStockPriceAdjustments.md)
 
 <a name="getstockexchangeprices"></a>
 # **GetStockExchangePrices**
-> InlineResponse20029 GetStockExchangePrices (string identifier, DateTime? date = null, string nextPage = null)
+> ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, string nextPage = null)
 
 Get Stock Prices by Exchange
 
@@ -249,7 +249,7 @@ namespace Example
 
             try
             {
-                InlineResponse20029 result = stockExchangeApi.GetStockExchangePrices(identifier, date, nextPage);
+                ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -271,11 +271,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**ApiResponseStockExchangeStockPrices**](ApiResponseStockExchangeStockPrices.md)
 
 <a name="getstockexchangesecurities"></a>
 # **GetStockExchangeSecurities**
-> InlineResponse20031 GetStockExchangeSecurities (string identifier, string nextPage = null)
+> ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, string nextPage = null)
 
 Get Securities by Exchange
 
@@ -303,7 +303,7 @@ namespace Example
 
             try
             {
-                InlineResponse20031 result = stockExchangeApi.GetStockExchangeSecurities(identifier, nextPage);
+                ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -324,5 +324,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**ApiResponseStockExchangeSecurities**](ApiResponseStockExchangeSecurities.md)
 

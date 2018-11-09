@@ -24,8 +24,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20014</returns>
-        InlineResponse20014 GetAllEconomicIndices (string nextPage = null);
+        /// <returns>ApiResponseEconomicIndices</returns>
+        ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null);
 
         /// <summary>
         /// Get All Economic Indices
@@ -35,8 +35,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20014</returns>
-        ApiResponse<InlineResponse20014> GetAllEconomicIndicesWithHttpInfo (string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
+        ApiResponse<ApiResponseEconomicIndices> GetAllEconomicIndicesWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get All SIC Indices
         /// </summary>
@@ -45,8 +45,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20017</returns>
-        InlineResponse20017 GetAllSicIndices (string nextPage = null);
+        /// <returns>ApiResponseSICIndices</returns>
+        ApiResponseSICIndices GetAllSicIndices (string nextPage = null);
 
         /// <summary>
         /// Get All SIC Indices
@@ -56,8 +56,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20017</returns>
-        ApiResponse<InlineResponse20017> GetAllSicIndicesWithHttpInfo (string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseSICIndices</returns>
+        ApiResponse<ApiResponseSICIndices> GetAllSicIndicesWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get All Stock Market Indices
         /// </summary>
@@ -66,8 +66,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20020</returns>
-        InlineResponse20020 GetAllStockMarketIndices (string nextPage = null);
+        /// <returns>ApiResponseStockMarketIndices</returns>
+        ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null);
 
         /// <summary>
         /// Get All Stock Market Indices
@@ -77,8 +77,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20020</returns>
-        ApiResponse<InlineResponse20020> GetAllStockMarketIndicesWithHttpInfo (string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
+        ApiResponse<ApiResponseStockMarketIndices> GetAllStockMarketIndicesWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get an Economic Index by ID
         /// </summary>
@@ -160,8 +160,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20016</returns>
-        InlineResponse20016 GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Object</returns>
+        Object GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Economic Index Historical Data
@@ -177,8 +177,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20016</returns>
-        ApiResponse<InlineResponse20016> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get an SIC Index by ID
         /// </summary>
@@ -260,8 +260,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20019</returns>
-        InlineResponse20019 GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponseSICIndexHistoricalData</returns>
+        ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get SIC Index Historical Data
@@ -277,8 +277,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20019</returns>
-        ApiResponse<InlineResponse20019> GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseSICIndexHistoricalData</returns>
+        ApiResponse<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get a Stock Market Index by ID
         /// </summary>
@@ -360,8 +360,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20022</returns>
-        InlineResponse20022 GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponseStockMarketIndexHistoricalData</returns>
+        ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Stock Market Index Historical Data
@@ -377,8 +377,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20022</returns>
-        ApiResponse<InlineResponse20022> GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseStockMarketIndexHistoricalData</returns>
+        ApiResponse<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Search Economic Indices
         /// </summary>
@@ -387,8 +387,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>InlineResponse20015</returns>
-        InlineResponse20015 SearchEconomicIndices (string query);
+        /// <returns>ApiResponseEconomicIndices</returns>
+        ApiResponseEconomicIndices SearchEconomicIndices (string query);
 
         /// <summary>
         /// Search Economic Indices
@@ -398,8 +398,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of InlineResponse20015</returns>
-        ApiResponse<InlineResponse20015> SearchEconomicIndicesWithHttpInfo (string query);
+        /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
+        ApiResponse<ApiResponseEconomicIndices> SearchEconomicIndicesWithHttpInfo (string query);
         /// <summary>
         /// Search SIC Indices
         /// </summary>
@@ -408,8 +408,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>InlineResponse20018</returns>
-        InlineResponse20018 SearchSicIndices (string query);
+        /// <returns>ApiResponseSICIndices</returns>
+        ApiResponseSICIndices SearchSicIndices (string query);
 
         /// <summary>
         /// Search SIC Indices
@@ -419,8 +419,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of InlineResponse20018</returns>
-        ApiResponse<InlineResponse20018> SearchSicIndicesWithHttpInfo (string query);
+        /// <returns>ApiResponse of ApiResponseSICIndices</returns>
+        ApiResponse<ApiResponseSICIndices> SearchSicIndicesWithHttpInfo (string query);
         /// <summary>
         /// Search Stock Market Indices
         /// </summary>
@@ -429,8 +429,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>InlineResponse20021</returns>
-        InlineResponse20021 SearchStockMarketsIndices (string query);
+        /// <returns>ApiResponseStockMarketIndices</returns>
+        ApiResponseStockMarketIndices SearchStockMarketsIndices (string query);
 
         /// <summary>
         /// Search Stock Market Indices
@@ -440,8 +440,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of InlineResponse20021</returns>
-        ApiResponse<InlineResponse20021> SearchStockMarketsIndicesWithHttpInfo (string query);
+        /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
+        ApiResponse<ApiResponseStockMarketIndices> SearchStockMarketsIndicesWithHttpInfo (string query);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -452,8 +452,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20014</returns>
-        System.Threading.Tasks.Task<InlineResponse20014> GetAllEconomicIndicesAsync (string nextPage = null);
+        /// <returns>Task of ApiResponseEconomicIndices</returns>
+        System.Threading.Tasks.Task<ApiResponseEconomicIndices> GetAllEconomicIndicesAsync (string nextPage = null);
 
         /// <summary>
         /// Get All Economic Indices
@@ -463,8 +463,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> GetAllEconomicIndicesAsyncWithHttpInfo (string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get All SIC Indices
         /// </summary>
@@ -473,8 +473,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20017</returns>
-        System.Threading.Tasks.Task<InlineResponse20017> GetAllSicIndicesAsync (string nextPage = null);
+        /// <returns>Task of ApiResponseSICIndices</returns>
+        System.Threading.Tasks.Task<ApiResponseSICIndices> GetAllSicIndicesAsync (string nextPage = null);
 
         /// <summary>
         /// Get All SIC Indices
@@ -484,8 +484,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20017)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20017>> GetAllSicIndicesAsyncWithHttpInfo (string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> GetAllSicIndicesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get All Stock Market Indices
         /// </summary>
@@ -494,8 +494,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20020</returns>
-        System.Threading.Tasks.Task<InlineResponse20020> GetAllStockMarketIndicesAsync (string nextPage = null);
+        /// <returns>Task of ApiResponseStockMarketIndices</returns>
+        System.Threading.Tasks.Task<ApiResponseStockMarketIndices> GetAllStockMarketIndicesAsync (string nextPage = null);
 
         /// <summary>
         /// Get All Stock Market Indices
@@ -505,8 +505,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20020)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20020>> GetAllStockMarketIndicesAsyncWithHttpInfo (string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> GetAllStockMarketIndicesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Get an Economic Index by ID
         /// </summary>
@@ -588,8 +588,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20016</returns>
-        System.Threading.Tasks.Task<InlineResponse20016> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Economic Index Historical Data
@@ -605,8 +605,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20016)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20016>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get an SIC Index by ID
         /// </summary>
@@ -688,8 +688,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20019</returns>
-        System.Threading.Tasks.Task<InlineResponse20019> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponseSICIndexHistoricalData</returns>
+        System.Threading.Tasks.Task<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get SIC Index Historical Data
@@ -705,8 +705,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20019)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20019>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseSICIndexHistoricalData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndexHistoricalData>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get a Stock Market Index by ID
         /// </summary>
@@ -788,8 +788,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20022</returns>
-        System.Threading.Tasks.Task<InlineResponse20022> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponseStockMarketIndexHistoricalData</returns>
+        System.Threading.Tasks.Task<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Stock Market Index Historical Data
@@ -805,8 +805,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20022)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20022>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndexHistoricalData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndexHistoricalData>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Search Economic Indices
         /// </summary>
@@ -815,8 +815,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of InlineResponse20015</returns>
-        System.Threading.Tasks.Task<InlineResponse20015> SearchEconomicIndicesAsync (string query);
+        /// <returns>Task of ApiResponseEconomicIndices</returns>
+        System.Threading.Tasks.Task<ApiResponseEconomicIndices> SearchEconomicIndicesAsync (string query);
 
         /// <summary>
         /// Search Economic Indices
@@ -826,8 +826,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (InlineResponse20015)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20015>> SearchEconomicIndicesAsyncWithHttpInfo (string query);
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> SearchEconomicIndicesAsyncWithHttpInfo (string query);
         /// <summary>
         /// Search SIC Indices
         /// </summary>
@@ -836,8 +836,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of InlineResponse20018</returns>
-        System.Threading.Tasks.Task<InlineResponse20018> SearchSicIndicesAsync (string query);
+        /// <returns>Task of ApiResponseSICIndices</returns>
+        System.Threading.Tasks.Task<ApiResponseSICIndices> SearchSicIndicesAsync (string query);
 
         /// <summary>
         /// Search SIC Indices
@@ -847,8 +847,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (InlineResponse20018)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20018>> SearchSicIndicesAsyncWithHttpInfo (string query);
+        /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> SearchSicIndicesAsyncWithHttpInfo (string query);
         /// <summary>
         /// Search Stock Market Indices
         /// </summary>
@@ -857,8 +857,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of InlineResponse20021</returns>
-        System.Threading.Tasks.Task<InlineResponse20021> SearchStockMarketsIndicesAsync (string query);
+        /// <returns>Task of ApiResponseStockMarketIndices</returns>
+        System.Threading.Tasks.Task<ApiResponseStockMarketIndices> SearchStockMarketsIndicesAsync (string query);
 
         /// <summary>
         /// Search Stock Market Indices
@@ -868,8 +868,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (InlineResponse20021)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20021>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query);
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query);
         #endregion Asynchronous Operations
     }
 
@@ -975,10 +975,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20014</returns>
-        public InlineResponse20014 GetAllEconomicIndices (string nextPage = null)
+        /// <returns>ApiResponseEconomicIndices</returns>
+        public ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null)
         {
-             ApiResponse<InlineResponse20014> localVarResponse = GetAllEconomicIndicesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseEconomicIndices> localVarResponse = GetAllEconomicIndicesWithHttpInfo(nextPage);
              return localVarResponse.Data;
         }
 
@@ -987,8 +987,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20014</returns>
-        public ApiResponse< InlineResponse20014 > GetAllEconomicIndicesWithHttpInfo (string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
+        public ApiResponse< ApiResponseEconomicIndices > GetAllEconomicIndicesWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/indices/economic";
@@ -1033,9 +1033,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20014) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
+                (ApiResponseEconomicIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndices)));
         }
 
         /// <summary>
@@ -1043,10 +1043,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20014</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20014> GetAllEconomicIndicesAsync (string nextPage = null)
+        /// <returns>Task of ApiResponseEconomicIndices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseEconomicIndices> GetAllEconomicIndicesAsync (string nextPage = null)
         {
-             ApiResponse<InlineResponse20014> localVarResponse = await GetAllEconomicIndicesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseEconomicIndices> localVarResponse = await GetAllEconomicIndicesAsyncWithHttpInfo(nextPage);
              return localVarResponse.Data;
 
         }
@@ -1056,8 +1056,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> GetAllEconomicIndicesAsyncWithHttpInfo (string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/indices/economic";
@@ -1102,9 +1102,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20014) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
+                (ApiResponseEconomicIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndices)));
         }
 
         /// <summary>
@@ -1112,10 +1112,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20017</returns>
-        public InlineResponse20017 GetAllSicIndices (string nextPage = null)
+        /// <returns>ApiResponseSICIndices</returns>
+        public ApiResponseSICIndices GetAllSicIndices (string nextPage = null)
         {
-             ApiResponse<InlineResponse20017> localVarResponse = GetAllSicIndicesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSICIndices> localVarResponse = GetAllSicIndicesWithHttpInfo(nextPage);
              return localVarResponse.Data;
         }
 
@@ -1124,8 +1124,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20017</returns>
-        public ApiResponse< InlineResponse20017 > GetAllSicIndicesWithHttpInfo (string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseSICIndices</returns>
+        public ApiResponse< ApiResponseSICIndices > GetAllSicIndicesWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/indices/sic";
@@ -1170,9 +1170,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20017>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20017) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20017)));
+                (ApiResponseSICIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndices)));
         }
 
         /// <summary>
@@ -1180,10 +1180,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20017</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20017> GetAllSicIndicesAsync (string nextPage = null)
+        /// <returns>Task of ApiResponseSICIndices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSICIndices> GetAllSicIndicesAsync (string nextPage = null)
         {
-             ApiResponse<InlineResponse20017> localVarResponse = await GetAllSicIndicesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSICIndices> localVarResponse = await GetAllSicIndicesAsyncWithHttpInfo(nextPage);
              return localVarResponse.Data;
 
         }
@@ -1193,8 +1193,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20017)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20017>> GetAllSicIndicesAsyncWithHttpInfo (string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> GetAllSicIndicesAsyncWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/indices/sic";
@@ -1239,9 +1239,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20017>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20017) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20017)));
+                (ApiResponseSICIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndices)));
         }
 
         /// <summary>
@@ -1249,10 +1249,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20020</returns>
-        public InlineResponse20020 GetAllStockMarketIndices (string nextPage = null)
+        /// <returns>ApiResponseStockMarketIndices</returns>
+        public ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null)
         {
-             ApiResponse<InlineResponse20020> localVarResponse = GetAllStockMarketIndicesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = GetAllStockMarketIndicesWithHttpInfo(nextPage);
              return localVarResponse.Data;
         }
 
@@ -1261,8 +1261,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20020</returns>
-        public ApiResponse< InlineResponse20020 > GetAllStockMarketIndicesWithHttpInfo (string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
+        public ApiResponse< ApiResponseStockMarketIndices > GetAllStockMarketIndicesWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/indices/stock_market";
@@ -1307,9 +1307,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20020>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20020) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20020)));
+                (ApiResponseStockMarketIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndices)));
         }
 
         /// <summary>
@@ -1317,10 +1317,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20020</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20020> GetAllStockMarketIndicesAsync (string nextPage = null)
+        /// <returns>Task of ApiResponseStockMarketIndices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndices> GetAllStockMarketIndicesAsync (string nextPage = null)
         {
-             ApiResponse<InlineResponse20020> localVarResponse = await GetAllStockMarketIndicesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = await GetAllStockMarketIndicesAsyncWithHttpInfo(nextPage);
              return localVarResponse.Data;
 
         }
@@ -1330,8 +1330,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20020)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20020>> GetAllStockMarketIndicesAsyncWithHttpInfo (string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> GetAllStockMarketIndicesAsyncWithHttpInfo (string nextPage = null)
         {
 
             var localVarPath = "/indices/stock_market";
@@ -1376,9 +1376,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20020>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20020) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20020)));
+                (ApiResponseStockMarketIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndices)));
         }
 
         /// <summary>
@@ -1845,10 +1845,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20016</returns>
-        public InlineResponse20016 GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Object</returns>
+        public Object GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20016> localVarResponse = GetEconomicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<Object> localVarResponse = GetEconomicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1863,8 +1863,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20016</returns>
-        public ApiResponse< InlineResponse20016 > GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1921,9 +1921,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20016>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20016) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20016)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1937,10 +1937,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20016</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20016> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20016> localVarResponse = await GetEconomicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<Object> localVarResponse = await GetEconomicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1956,8 +1956,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20016)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20016>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2014,9 +2014,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20016>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20016) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20016)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -2483,10 +2483,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20019</returns>
-        public InlineResponse20019 GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponseSICIndexHistoricalData</returns>
+        public ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20019> localVarResponse = GetSicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSICIndexHistoricalData> localVarResponse = GetSicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2501,8 +2501,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20019</returns>
-        public ApiResponse< InlineResponse20019 > GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseSICIndexHistoricalData</returns>
+        public ApiResponse< ApiResponseSICIndexHistoricalData > GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2559,9 +2559,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20019>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndexHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20019) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20019)));
+                (ApiResponseSICIndexHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndexHistoricalData)));
         }
 
         /// <summary>
@@ -2575,10 +2575,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20019</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20019> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponseSICIndexHistoricalData</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20019> localVarResponse = await GetSicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSICIndexHistoricalData> localVarResponse = await GetSicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2594,8 +2594,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20019)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20019>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseSICIndexHistoricalData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndexHistoricalData>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2652,9 +2652,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20019>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndexHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20019) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20019)));
+                (ApiResponseSICIndexHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndexHistoricalData)));
         }
 
         /// <summary>
@@ -3121,10 +3121,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>InlineResponse20022</returns>
-        public InlineResponse20022 GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponseStockMarketIndexHistoricalData</returns>
+        public ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20022> localVarResponse = GetStockMarketIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseStockMarketIndexHistoricalData> localVarResponse = GetStockMarketIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
@@ -3139,8 +3139,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20022</returns>
-        public ApiResponse< InlineResponse20022 > GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseStockMarketIndexHistoricalData</returns>
+        public ApiResponse< ApiResponseStockMarketIndexHistoricalData > GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3197,9 +3197,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20022>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndexHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20022) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20022)));
+                (ApiResponseStockMarketIndexHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndexHistoricalData)));
         }
 
         /// <summary>
@@ -3213,10 +3213,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of InlineResponse20022</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20022> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponseStockMarketIndexHistoricalData</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<InlineResponse20022> localVarResponse = await GetStockMarketIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseStockMarketIndexHistoricalData> localVarResponse = await GetStockMarketIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
@@ -3232,8 +3232,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20022)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20022>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndexHistoricalData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndexHistoricalData>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3290,9 +3290,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20022>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndexHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20022) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20022)));
+                (ApiResponseStockMarketIndexHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndexHistoricalData)));
         }
 
         /// <summary>
@@ -3300,10 +3300,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>InlineResponse20015</returns>
-        public InlineResponse20015 SearchEconomicIndices (string query)
+        /// <returns>ApiResponseEconomicIndices</returns>
+        public ApiResponseEconomicIndices SearchEconomicIndices (string query)
         {
-             ApiResponse<InlineResponse20015> localVarResponse = SearchEconomicIndicesWithHttpInfo(query);
+             ApiResponse<ApiResponseEconomicIndices> localVarResponse = SearchEconomicIndicesWithHttpInfo(query);
              return localVarResponse.Data;
         }
 
@@ -3312,8 +3312,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of InlineResponse20015</returns>
-        public ApiResponse< InlineResponse20015 > SearchEconomicIndicesWithHttpInfo (string query)
+        /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
+        public ApiResponse< ApiResponseEconomicIndices > SearchEconomicIndicesWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3361,9 +3361,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20015>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20015) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20015)));
+                (ApiResponseEconomicIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndices)));
         }
 
         /// <summary>
@@ -3371,10 +3371,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of InlineResponse20015</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20015> SearchEconomicIndicesAsync (string query)
+        /// <returns>Task of ApiResponseEconomicIndices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseEconomicIndices> SearchEconomicIndicesAsync (string query)
         {
-             ApiResponse<InlineResponse20015> localVarResponse = await SearchEconomicIndicesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseEconomicIndices> localVarResponse = await SearchEconomicIndicesAsyncWithHttpInfo(query);
              return localVarResponse.Data;
 
         }
@@ -3384,8 +3384,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (InlineResponse20015)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20015>> SearchEconomicIndicesAsyncWithHttpInfo (string query)
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> SearchEconomicIndicesAsyncWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3433,9 +3433,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20015>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20015) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20015)));
+                (ApiResponseEconomicIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndices)));
         }
 
         /// <summary>
@@ -3443,10 +3443,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>InlineResponse20018</returns>
-        public InlineResponse20018 SearchSicIndices (string query)
+        /// <returns>ApiResponseSICIndices</returns>
+        public ApiResponseSICIndices SearchSicIndices (string query)
         {
-             ApiResponse<InlineResponse20018> localVarResponse = SearchSicIndicesWithHttpInfo(query);
+             ApiResponse<ApiResponseSICIndices> localVarResponse = SearchSicIndicesWithHttpInfo(query);
              return localVarResponse.Data;
         }
 
@@ -3455,8 +3455,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of InlineResponse20018</returns>
-        public ApiResponse< InlineResponse20018 > SearchSicIndicesWithHttpInfo (string query)
+        /// <returns>ApiResponse of ApiResponseSICIndices</returns>
+        public ApiResponse< ApiResponseSICIndices > SearchSicIndicesWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3504,9 +3504,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20018>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20018) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20018)));
+                (ApiResponseSICIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndices)));
         }
 
         /// <summary>
@@ -3514,10 +3514,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of InlineResponse20018</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20018> SearchSicIndicesAsync (string query)
+        /// <returns>Task of ApiResponseSICIndices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSICIndices> SearchSicIndicesAsync (string query)
         {
-             ApiResponse<InlineResponse20018> localVarResponse = await SearchSicIndicesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseSICIndices> localVarResponse = await SearchSicIndicesAsyncWithHttpInfo(query);
              return localVarResponse.Data;
 
         }
@@ -3527,8 +3527,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (InlineResponse20018)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20018>> SearchSicIndicesAsyncWithHttpInfo (string query)
+        /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> SearchSicIndicesAsyncWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3576,9 +3576,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20018>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20018) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20018)));
+                (ApiResponseSICIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndices)));
         }
 
         /// <summary>
@@ -3586,10 +3586,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>InlineResponse20021</returns>
-        public InlineResponse20021 SearchStockMarketsIndices (string query)
+        /// <returns>ApiResponseStockMarketIndices</returns>
+        public ApiResponseStockMarketIndices SearchStockMarketsIndices (string query)
         {
-             ApiResponse<InlineResponse20021> localVarResponse = SearchStockMarketsIndicesWithHttpInfo(query);
+             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = SearchStockMarketsIndicesWithHttpInfo(query);
              return localVarResponse.Data;
         }
 
@@ -3598,8 +3598,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of InlineResponse20021</returns>
-        public ApiResponse< InlineResponse20021 > SearchStockMarketsIndicesWithHttpInfo (string query)
+        /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
+        public ApiResponse< ApiResponseStockMarketIndices > SearchStockMarketsIndicesWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3647,9 +3647,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20021>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20021) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20021)));
+                (ApiResponseStockMarketIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndices)));
         }
 
         /// <summary>
@@ -3657,10 +3657,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of InlineResponse20021</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20021> SearchStockMarketsIndicesAsync (string query)
+        /// <returns>Task of ApiResponseStockMarketIndices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndices> SearchStockMarketsIndicesAsync (string query)
         {
-             ApiResponse<InlineResponse20021> localVarResponse = await SearchStockMarketsIndicesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = await SearchStockMarketsIndicesAsyncWithHttpInfo(query);
              return localVarResponse.Data;
 
         }
@@ -3670,8 +3670,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (InlineResponse20021)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20021>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query)
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3719,9 +3719,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20021>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20021) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20021)));
+                (ApiResponseStockMarketIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndices)));
         }
 
     }

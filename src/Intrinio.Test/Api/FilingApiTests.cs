@@ -65,7 +65,7 @@ namespace Intrinio.Test
             //DateTime? endDate = null;
             //string nextPage = null;
             //var response = instance.FilterFilings(company, reportType, startDate, endDate, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20010> (response, "response is InlineResponse20010");
+            //Assert.IsInstanceOf<ApiResponseFilings> (response, "response is ApiResponseFilings");
         }
         
         /// <summary>
@@ -77,7 +77,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string nextPage = null;
             //var response = instance.GetAllFilings(nextPage);
-            //Assert.IsInstanceOf<InlineResponse20010> (response, "response is InlineResponse20010");
+            //Assert.IsInstanceOf<ApiResponseFilings> (response, "response is ApiResponseFilings");
         }
         
         /// <summary>

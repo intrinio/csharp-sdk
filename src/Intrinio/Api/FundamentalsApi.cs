@@ -45,8 +45,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>InlineResponse20011</returns>
-        InlineResponse20011 GetFundamentalReportedFinancials (string id);
+        /// <returns>ApiResponseReportedFinancials</returns>
+        ApiResponseReportedFinancials GetFundamentalReportedFinancials (string id);
 
         /// <summary>
         /// Get Reported Financials for a Fundamental
@@ -56,8 +56,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>ApiResponse of InlineResponse20011</returns>
-        ApiResponse<InlineResponse20011> GetFundamentalReportedFinancialsWithHttpInfo (string id);
+        /// <returns>ApiResponse of ApiResponseReportedFinancials</returns>
+        ApiResponse<ApiResponseReportedFinancials> GetFundamentalReportedFinancialsWithHttpInfo (string id);
         /// <summary>
         /// Get Standardized Financials for a Fundamental
         /// </summary>
@@ -66,8 +66,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>InlineResponse20012</returns>
-        InlineResponse20012 GetFundamentalStandardizedFinancials (string id);
+        /// <returns>ApiResponseStandardizedFinancials</returns>
+        ApiResponseStandardizedFinancials GetFundamentalStandardizedFinancials (string id);
 
         /// <summary>
         /// Get Standardized Financials for a Fundamental
@@ -77,8 +77,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>ApiResponse of InlineResponse20012</returns>
-        ApiResponse<InlineResponse20012> GetFundamentalStandardizedFinancialsWithHttpInfo (string id);
+        /// <returns>ApiResponse of ApiResponseStandardizedFinancials</returns>
+        ApiResponse<ApiResponseStandardizedFinancials> GetFundamentalStandardizedFinancialsWithHttpInfo (string id);
         /// <summary>
         /// Lookup a Fundamental
         /// </summary>
@@ -137,8 +137,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of InlineResponse20011</returns>
-        System.Threading.Tasks.Task<InlineResponse20011> GetFundamentalReportedFinancialsAsync (string id);
+        /// <returns>Task of ApiResponseReportedFinancials</returns>
+        System.Threading.Tasks.Task<ApiResponseReportedFinancials> GetFundamentalReportedFinancialsAsync (string id);
 
         /// <summary>
         /// Get Reported Financials for a Fundamental
@@ -148,8 +148,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> GetFundamentalReportedFinancialsAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (ApiResponseReportedFinancials)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseReportedFinancials>> GetFundamentalReportedFinancialsAsyncWithHttpInfo (string id);
         /// <summary>
         /// Get Standardized Financials for a Fundamental
         /// </summary>
@@ -158,8 +158,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of InlineResponse20012</returns>
-        System.Threading.Tasks.Task<InlineResponse20012> GetFundamentalStandardizedFinancialsAsync (string id);
+        /// <returns>Task of ApiResponseStandardizedFinancials</returns>
+        System.Threading.Tasks.Task<ApiResponseStandardizedFinancials> GetFundamentalStandardizedFinancialsAsync (string id);
 
         /// <summary>
         /// Get Standardized Financials for a Fundamental
@@ -169,8 +169,8 @@ namespace Intrinio.Api
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of ApiResponse (InlineResponse20012)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20012>> GetFundamentalStandardizedFinancialsAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancials)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancials>> GetFundamentalStandardizedFinancialsAsyncWithHttpInfo (string id);
         /// <summary>
         /// Lookup a Fundamental
         /// </summary>
@@ -446,10 +446,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>InlineResponse20011</returns>
-        public InlineResponse20011 GetFundamentalReportedFinancials (string id)
+        /// <returns>ApiResponseReportedFinancials</returns>
+        public ApiResponseReportedFinancials GetFundamentalReportedFinancials (string id)
         {
-             ApiResponse<InlineResponse20011> localVarResponse = GetFundamentalReportedFinancialsWithHttpInfo(id);
+             ApiResponse<ApiResponseReportedFinancials> localVarResponse = GetFundamentalReportedFinancialsWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -458,8 +458,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>ApiResponse of InlineResponse20011</returns>
-        public ApiResponse< InlineResponse20011 > GetFundamentalReportedFinancialsWithHttpInfo (string id)
+        /// <returns>ApiResponse of ApiResponseReportedFinancials</returns>
+        public ApiResponse< ApiResponseReportedFinancials > GetFundamentalReportedFinancialsWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -507,9 +507,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<ApiResponseReportedFinancials>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20011) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (ApiResponseReportedFinancials) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseReportedFinancials)));
         }
 
         /// <summary>
@@ -517,10 +517,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of InlineResponse20011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20011> GetFundamentalReportedFinancialsAsync (string id)
+        /// <returns>Task of ApiResponseReportedFinancials</returns>
+        public async System.Threading.Tasks.Task<ApiResponseReportedFinancials> GetFundamentalReportedFinancialsAsync (string id)
         {
-             ApiResponse<InlineResponse20011> localVarResponse = await GetFundamentalReportedFinancialsAsyncWithHttpInfo(id);
+             ApiResponse<ApiResponseReportedFinancials> localVarResponse = await GetFundamentalReportedFinancialsAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -530,8 +530,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> GetFundamentalReportedFinancialsAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (ApiResponseReportedFinancials)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseReportedFinancials>> GetFundamentalReportedFinancialsAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -579,9 +579,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<ApiResponseReportedFinancials>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20011) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (ApiResponseReportedFinancials) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseReportedFinancials)));
         }
 
         /// <summary>
@@ -589,10 +589,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>InlineResponse20012</returns>
-        public InlineResponse20012 GetFundamentalStandardizedFinancials (string id)
+        /// <returns>ApiResponseStandardizedFinancials</returns>
+        public ApiResponseStandardizedFinancials GetFundamentalStandardizedFinancials (string id)
         {
-             ApiResponse<InlineResponse20012> localVarResponse = GetFundamentalStandardizedFinancialsWithHttpInfo(id);
+             ApiResponse<ApiResponseStandardizedFinancials> localVarResponse = GetFundamentalStandardizedFinancialsWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -601,8 +601,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>ApiResponse of InlineResponse20012</returns>
-        public ApiResponse< InlineResponse20012 > GetFundamentalStandardizedFinancialsWithHttpInfo (string id)
+        /// <returns>ApiResponse of ApiResponseStandardizedFinancials</returns>
+        public ApiResponse< ApiResponseStandardizedFinancials > GetFundamentalStandardizedFinancialsWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -650,9 +650,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20012>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStandardizedFinancials>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20012) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20012)));
+                (ApiResponseStandardizedFinancials) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStandardizedFinancials)));
         }
 
         /// <summary>
@@ -660,10 +660,10 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of InlineResponse20012</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20012> GetFundamentalStandardizedFinancialsAsync (string id)
+        /// <returns>Task of ApiResponseStandardizedFinancials</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStandardizedFinancials> GetFundamentalStandardizedFinancialsAsync (string id)
         {
-             ApiResponse<InlineResponse20012> localVarResponse = await GetFundamentalStandardizedFinancialsAsyncWithHttpInfo(id);
+             ApiResponse<ApiResponseStandardizedFinancials> localVarResponse = await GetFundamentalStandardizedFinancialsAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -673,8 +673,8 @@ namespace Intrinio.Api
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
-        /// <returns>Task of ApiResponse (InlineResponse20012)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20012>> GetFundamentalStandardizedFinancialsAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancials)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancials>> GetFundamentalStandardizedFinancialsAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -722,9 +722,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20012>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStandardizedFinancials>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse20012) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20012)));
+                (ApiResponseStandardizedFinancials) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStandardizedFinancials)));
         }
 
         /// <summary>

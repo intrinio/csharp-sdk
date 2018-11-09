@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="filterfilings"></a>
 # **FilterFilings**
-> InlineResponse20010 FilterFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+> ApiResponseFilings FilterFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
 
 Filter Filings
 
@@ -42,7 +42,7 @@ namespace Example
 
             try
             {
-                InlineResponse20010 result = filingApi.FilterFilings(company, reportType, startDate, endDate, nextPage);
+                ApiResponseFilings result = filingApi.FilterFilings(company, reportType, startDate, endDate, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -66,11 +66,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**ApiResponseFilings**](ApiResponseFilings.md)
 
 <a name="getallfilings"></a>
 # **GetAllFilings**
-> InlineResponse20010 GetAllFilings (string nextPage = null)
+> ApiResponseFilings GetAllFilings (string nextPage = null)
 
 Get All Filings
 
@@ -97,7 +97,7 @@ namespace Example
 
             try
             {
-                InlineResponse20010 result = filingApi.GetAllFilings(nextPage);
+                ApiResponseFilings result = filingApi.GetAllFilings(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**ApiResponseFilings**](ApiResponseFilings.md)
 
 <a name="getfilingbyid"></a>
 # **GetFilingById**

@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 <a name="getalleconomicindices"></a>
 # **GetAllEconomicIndices**
-> InlineResponse20014 GetAllEconomicIndices (string nextPage = null)
+> ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null)
 
 Get All Economic Indices
 
@@ -51,7 +51,7 @@ namespace Example
 
             try
             {
-                InlineResponse20014 result = indexApi.GetAllEconomicIndices(nextPage);
+                ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -71,11 +71,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
 
 <a name="getallsicindices"></a>
 # **GetAllSicIndices**
-> InlineResponse20017 GetAllSicIndices (string nextPage = null)
+> ApiResponseSICIndices GetAllSicIndices (string nextPage = null)
 
 Get All SIC Indices
 
@@ -100,7 +100,7 @@ namespace Example
 
             try
             {
-                InlineResponse20017 result = indexApi.GetAllSicIndices(nextPage);
+                ApiResponseSICIndices result = indexApi.GetAllSicIndices(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -120,11 +120,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**ApiResponseSICIndices**](ApiResponseSICIndices.md)
 
 <a name="getallstockmarketindices"></a>
 # **GetAllStockMarketIndices**
-> InlineResponse20020 GetAllStockMarketIndices (string nextPage = null)
+> ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null)
 
 Get All Stock Market Indices
 
@@ -149,7 +149,7 @@ namespace Example
 
             try
             {
-                InlineResponse20020 result = indexApi.GetAllStockMarketIndices(nextPage);
+                ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
 
 <a name="geteconomicindexbyid"></a>
 # **GetEconomicIndexById**
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 <a name="geteconomicindexhistoricaldata"></a>
 # **GetEconomicIndexHistoricalData**
-> InlineResponse20016 GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> Object GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
 Get Economic Index Historical Data
 
@@ -361,7 +361,7 @@ namespace Example
 
             try
             {
-                InlineResponse20016 result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                Object result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+**Object**
 
 <a name="getsicindexbyid"></a>
 # **GetSicIndexById**
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 <a name="getsicindexhistoricaldata"></a>
 # **GetSicIndexHistoricalData**
-> InlineResponse20019 GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
 Get SIC Index Historical Data
 
@@ -579,7 +579,7 @@ namespace Example
 
             try
             {
-                InlineResponse20019 result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**ApiResponseSICIndexHistoricalData**](ApiResponseSICIndexHistoricalData.md)
 
 <a name="getstockmarketindexbyid"></a>
 # **GetStockMarketIndexById**
@@ -764,7 +764,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockmarketindexhistoricaldata"></a>
 # **GetStockMarketIndexHistoricalData**
-> InlineResponse20022 GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
 Get Stock Market Index Historical Data
 
@@ -797,7 +797,7 @@ namespace Example
 
             try
             {
-                InlineResponse20022 result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -823,11 +823,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**ApiResponseStockMarketIndexHistoricalData**](ApiResponseStockMarketIndexHistoricalData.md)
 
 <a name="searcheconomicindices"></a>
 # **SearchEconomicIndices**
-> InlineResponse20015 SearchEconomicIndices (string query)
+> ApiResponseEconomicIndices SearchEconomicIndices (string query)
 
 Search Economic Indices
 
@@ -854,7 +854,7 @@ namespace Example
 
             try
             {
-                InlineResponse20015 result = indexApi.SearchEconomicIndices(query);
+                ApiResponseEconomicIndices result = indexApi.SearchEconomicIndices(query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -874,11 +874,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
 
 <a name="searchsicindices"></a>
 # **SearchSicIndices**
-> InlineResponse20018 SearchSicIndices (string query)
+> ApiResponseSICIndices SearchSicIndices (string query)
 
 Search SIC Indices
 
@@ -905,7 +905,7 @@ namespace Example
 
             try
             {
-                InlineResponse20018 result = indexApi.SearchSicIndices(query);
+                ApiResponseSICIndices result = indexApi.SearchSicIndices(query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -925,11 +925,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**ApiResponseSICIndices**](ApiResponseSICIndices.md)
 
 <a name="searchstockmarketsindices"></a>
 # **SearchStockMarketsIndices**
-> InlineResponse20021 SearchStockMarketsIndices (string query)
+> ApiResponseStockMarketIndices SearchStockMarketsIndices (string query)
 
 Search Stock Market Indices
 
@@ -956,7 +956,7 @@ namespace Example
 
             try
             {
-                InlineResponse20021 result = indexApi.SearchStockMarketsIndices(query);
+                ApiResponseStockMarketIndices result = indexApi.SearchStockMarketsIndices(query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -976,5 +976,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
 

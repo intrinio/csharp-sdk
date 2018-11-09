@@ -67,7 +67,7 @@ namespace Intrinio.Test
             //string industryGroup = null;
             //string nextPage = null;
             //var response = instance.FilterCompanies(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
-            //Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200");
+            //Assert.IsInstanceOf<ApiResponseCompanies> (response, "response is ApiResponseCompanies");
         }
         
         /// <summary>
@@ -88,7 +88,7 @@ namespace Intrinio.Test
             //DateTime? endDate = null;
             //string nextPage = null;
             //var response = instance.FilterCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
-            //Assert.IsInstanceOf<InlineResponse2004> (response, "response is InlineResponse2004");
+            //Assert.IsInstanceOf<ApiResponseCompanyFundamentals> (response, "response is ApiResponseCompanyFundamentals");
         }
         
         /// <summary>
@@ -100,7 +100,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string nextPage = null;
             //var response = instance.GetAllCompanies(nextPage);
-            //Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200");
+            //Assert.IsInstanceOf<ApiResponseCompanies> (response, "response is ApiResponseCompanies");
         }
         
         /// <summary>
@@ -112,7 +112,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string nextPage = null;
             //var response = instance.GetAllCompanyNews(nextPage);
-            //Assert.IsInstanceOf<InlineResponse2001> (response, "response is InlineResponse2001");
+            //Assert.IsInstanceOf<ApiResponseNews> (response, "response is ApiResponseNews");
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string nextPage = null;
             //var response = instance.GetCompanyFilings(identifier, nextPage);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<ApiResponseCompanyFilings> (response, "response is ApiResponseCompanyFilings");
         }
         
         /// <summary>
@@ -176,7 +176,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string nextPage = null;
             //var response = instance.GetCompanyFundamentals(identifier, nextPage);
-            //Assert.IsInstanceOf<InlineResponse2004> (response, "response is InlineResponse2004");
+            //Assert.IsInstanceOf<ApiResponseCompanyFundamentals> (response, "response is ApiResponseCompanyFundamentals");
         }
         
         /// <summary>
@@ -194,7 +194,7 @@ namespace Intrinio.Test
             //string sortOrder = null;
             //string nextPage = null;
             //var response = instance.GetCompanyHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
-            //Assert.IsInstanceOf<InlineResponse2005> (response, "response is InlineResponse2005");
+            //Assert.IsInstanceOf<ApiResponseCompanyHistoricalData> (response, "response is ApiResponseCompanyHistoricalData");
         }
         
         /// <summary>
@@ -207,7 +207,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string nextPage = null;
             //var response = instance.GetCompanyNews(identifier, nextPage);
-            //Assert.IsInstanceOf<InlineResponse2006> (response, "response is InlineResponse2006");
+            //Assert.IsInstanceOf<ApiResponseCompanyNews> (response, "response is ApiResponseCompanyNews");
         }
         
         /// <summary>
@@ -220,7 +220,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string nextPage = null;
             //var response = instance.GetCompanySecurities(identifier, nextPage);
-            //Assert.IsInstanceOf<InlineResponse2007> (response, "response is InlineResponse2007");
+            //Assert.IsInstanceOf<ApiResponseCompanySecurities> (response, "response is ApiResponseCompanySecurities");
         }
         
         /// <summary>
@@ -247,7 +247,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
             //var response = instance.SearchCompanies(query);
-            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
+            //Assert.IsInstanceOf<ApiResponseCompanies> (response, "response is ApiResponseCompanies");
         }
         
     }

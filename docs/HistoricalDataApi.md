@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="gethistoricaldata"></a>
 # **GetHistoricalData**
-> InlineResponse20013 GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
 Get Historical Data
 
@@ -42,7 +42,7 @@ namespace Example
 
             try
             {
-                InlineResponse20013 result = historicalDataApi.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -68,5 +68,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**ApiResponseHistoricalData**](ApiResponseHistoricalData.md)
 

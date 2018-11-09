@@ -73,7 +73,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //var response = instance.GetFundamentalReportedFinancials(id);
-            //Assert.IsInstanceOf<InlineResponse20011> (response, "response is InlineResponse20011");
+            //Assert.IsInstanceOf<ApiResponseReportedFinancials> (response, "response is ApiResponseReportedFinancials");
         }
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //var response = instance.GetFundamentalStandardizedFinancials(id);
-            //Assert.IsInstanceOf<InlineResponse20012> (response, "response is InlineResponse20012");
+            //Assert.IsInstanceOf<ApiResponseStandardizedFinancials> (response, "response is ApiResponseStandardizedFinancials");
         }
         
         /// <summary>

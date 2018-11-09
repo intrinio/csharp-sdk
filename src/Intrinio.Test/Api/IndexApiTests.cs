@@ -61,7 +61,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string nextPage = null;
             //var response = instance.GetAllEconomicIndices(nextPage);
-            //Assert.IsInstanceOf<InlineResponse20014> (response, "response is InlineResponse20014");
+            //Assert.IsInstanceOf<ApiResponseEconomicIndices> (response, "response is ApiResponseEconomicIndices");
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string nextPage = null;
             //var response = instance.GetAllSicIndices(nextPage);
-            //Assert.IsInstanceOf<InlineResponse20017> (response, "response is InlineResponse20017");
+            //Assert.IsInstanceOf<ApiResponseSICIndices> (response, "response is ApiResponseSICIndices");
         }
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string nextPage = null;
             //var response = instance.GetAllStockMarketIndices(nextPage);
-            //Assert.IsInstanceOf<InlineResponse20020> (response, "response is InlineResponse20020");
+            //Assert.IsInstanceOf<ApiResponseStockMarketIndices> (response, "response is ApiResponseStockMarketIndices");
         }
         
         /// <summary>
@@ -141,7 +141,7 @@ namespace Intrinio.Test
             //string sortOrder = null;
             //string nextPage = null;
             //var response = instance.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20016> (response, "response is InlineResponse20016");
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
         /// <summary>
@@ -197,7 +197,7 @@ namespace Intrinio.Test
             //string sortOrder = null;
             //string nextPage = null;
             //var response = instance.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20019> (response, "response is InlineResponse20019");
+            //Assert.IsInstanceOf<ApiResponseSICIndexHistoricalData> (response, "response is ApiResponseSICIndexHistoricalData");
         }
         
         /// <summary>
@@ -253,7 +253,7 @@ namespace Intrinio.Test
             //string sortOrder = null;
             //string nextPage = null;
             //var response = instance.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20022> (response, "response is InlineResponse20022");
+            //Assert.IsInstanceOf<ApiResponseStockMarketIndexHistoricalData> (response, "response is ApiResponseStockMarketIndexHistoricalData");
         }
         
         /// <summary>
@@ -265,7 +265,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
             //var response = instance.SearchEconomicIndices(query);
-            //Assert.IsInstanceOf<InlineResponse20015> (response, "response is InlineResponse20015");
+            //Assert.IsInstanceOf<ApiResponseEconomicIndices> (response, "response is ApiResponseEconomicIndices");
         }
         
         /// <summary>
@@ -277,7 +277,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
             //var response = instance.SearchSicIndices(query);
-            //Assert.IsInstanceOf<InlineResponse20018> (response, "response is InlineResponse20018");
+            //Assert.IsInstanceOf<ApiResponseSICIndices> (response, "response is ApiResponseSICIndices");
         }
         
         /// <summary>
@@ -289,7 +289,7 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
             //var response = instance.SearchStockMarketsIndices(query);
-            //Assert.IsInstanceOf<InlineResponse20021> (response, "response is InlineResponse20021");
+            //Assert.IsInstanceOf<ApiResponseStockMarketIndices> (response, "response is ApiResponseStockMarketIndices");
         }
         
     }

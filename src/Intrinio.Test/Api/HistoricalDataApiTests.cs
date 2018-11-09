@@ -67,7 +67,7 @@ namespace Intrinio.Test
             //string sortOrder = null;
             //string nextPage = null;
             //var response = instance.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20013> (response, "response is InlineResponse20013");
+            //Assert.IsInstanceOf<ApiResponseHistoricalData> (response, "response is ApiResponseHistoricalData");
         }
         
     }

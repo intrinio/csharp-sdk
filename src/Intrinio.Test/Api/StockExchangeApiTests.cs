@@ -63,7 +63,7 @@ namespace Intrinio.Test
             //string country = null;
             //string countryCode = null;
             //var response = instance.FilterStockExchanges(city, country, countryCode);
-            //Assert.IsInstanceOf<InlineResponse20028> (response, "response is InlineResponse20028");
+            //Assert.IsInstanceOf<List<StockExchange>> (response, "response is List<StockExchange>");
         }
         
         /// <summary>
@@ -74,7 +74,7 @@ namespace Intrinio.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetAllStockExchanges();
-            //Assert.IsInstanceOf<InlineResponse20028> (response, "response is InlineResponse20028");
+            //Assert.IsInstanceOf<List<StockExchange>> (response, "response is List<StockExchange>");
         }
         
         /// <summary>
@@ -100,7 +100,7 @@ namespace Intrinio.Test
             //DateTime? date = null;
             //string nextPage = null;
             //var response = instance.GetStockExchangePriceAdjustments(identifier, date, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20030> (response, "response is InlineResponse20030");
+            //Assert.IsInstanceOf<ApiResponseStockExchangeStockPriceAdjustments> (response, "response is ApiResponseStockExchangeStockPriceAdjustments");
         }
         
         /// <summary>
@@ -114,7 +114,7 @@ namespace Intrinio.Test
             //DateTime? date = null;
             //string nextPage = null;
             //var response = instance.GetStockExchangePrices(identifier, date, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20029> (response, "response is InlineResponse20029");
+            //Assert.IsInstanceOf<ApiResponseStockExchangeStockPrices> (response, "response is ApiResponseStockExchangeStockPrices");
         }
         
         /// <summary>
@@ -127,7 +127,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string nextPage = null;
             //var response = instance.GetStockExchangeSecurities(identifier, nextPage);
-            //Assert.IsInstanceOf<InlineResponse20031> (response, "response is InlineResponse20031");
+            //Assert.IsInstanceOf<ApiResponseStockExchangeSecurities> (response, "response is ApiResponseStockExchangeSecurities");
         }
         
     }

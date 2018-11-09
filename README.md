@@ -72,7 +72,7 @@ namespace Example
         public void main()
         {
 
-            Configuration.Default.ApiKey.Add("api-key", "YOUR_API_KEY");
+            Configuration.Default.ApiKey.Add("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
 
@@ -229,4 +229,3 @@ Class | Method | HTTP request | Description
  - [Model.StockPriceAdjustment](docs/StockPriceAdjustment.md)
  - [Model.StockPriceAdjustmentSummary](docs/StockPriceAdjustmentSummary.md)
  - [Model.StockPriceSummary](docs/StockPriceSummary.md)
-

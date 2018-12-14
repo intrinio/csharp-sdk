@@ -34,10 +34,10 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
-            var company = company_example;  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-            var reportType = reportType_example;  // string | Filter by report type (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Filed on or after the given date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Filed before or after the given date (optional) 
+            var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
+            var reportType = "";  // string | Filter by report type (optional) 
+            var startDate = "2015-01-01";  // DateTime? | Filed on or after the given date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Filed before or after the given date (optional) 
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -144,7 +144,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
-            var id = id_example;  // string | The Intrinio ID of the Filing
+            var id = "fil_7Kn2P6";  // string | The Intrinio ID of the Filing
 
             try
             {

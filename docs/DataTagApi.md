@@ -35,11 +35,11 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
-            var tag = tag_example;  // string | Tag (optional) 
-            var type = type_example;  // string | Type (optional) 
-            var parent = parent_example;  // string | ID of tag parent (optional) 
-            var statementCode = statementCode_example;  // string | Statement Code (optional) 
-            var fsTemplate = fsTemplate_example;  // string | Template (optional)  (default to industrial)
+            var tag = "";  // string | Tag (optional) 
+            var type = "";  // string | Type (optional) 
+            var parent = "";  // string | ID of tag parent (optional) 
+            var statementCode = "income_statement";  // string | Statement Code (optional) 
+            var fsTemplate = "";  // string | Template (optional)  (default to industrial)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -147,7 +147,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
-            var identifier = identifier_example;  // string | The Intrinio ID or the code-name of the Data Tag
+            var identifier = "marketcap";  // string | The Intrinio ID or the code-name of the Data Tag
 
             try
             {
@@ -198,7 +198,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
-            var query = query_example;  // string | 
+            var query = "revenue";  // string | 
 
             try
             {

@@ -247,8 +247,8 @@ namespace Example
             var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
             var tag = "volume";  // string | An Intrinio data tag ID or code-name
             var type = "";  // string | Filter by type, when applicable (optional) 
-            var startDate = "";  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = "";  // DateTime? | Get historical date on or before this date (optional) 
+            var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
             var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 

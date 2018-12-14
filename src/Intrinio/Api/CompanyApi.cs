@@ -64,7 +64,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyFundamentals</returns>
         ApiResponseCompanyFundamentals FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
@@ -84,7 +84,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyFundamentals</returns>
         ApiResponse<ApiResponseCompanyFundamentals> FilterCompanyFundamentalsWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
@@ -420,7 +420,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyFundamentals</returns>
         System.Threading.Tasks.Task<ApiResponseCompanyFundamentals> FilterCompanyFundamentalsAsync (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
@@ -440,7 +440,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyFundamentals)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFundamentals>> FilterCompanyFundamentalsAsyncWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
@@ -1011,7 +1011,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyFundamentals</returns>
         public ApiResponseCompanyFundamentals FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
@@ -1032,7 +1032,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyFundamentals</returns>
         public ApiResponse< ApiResponseCompanyFundamentals > FilterCompanyFundamentalsWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
@@ -1109,7 +1109,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyFundamentals</returns>
         public async System.Threading.Tasks.Task<ApiResponseCompanyFundamentals> FilterCompanyFundamentalsAsync (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
@@ -1131,7 +1131,7 @@ namespace Intrinio.Api
         /// <param name="statementCode">Only of the given statement code (optional)</param>
         /// <param name="type">Only of the given type (optional)</param>
         /// <param name="startDate">Only on or after the given date (optional)</param>
-        /// <param name="endDate">Only on or after the given date (optional)</param>
+        /// <param name="endDate">Only on or before the given date (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyFundamentals)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFundamentals>> FilterCompanyFundamentalsAsyncWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)

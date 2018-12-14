@@ -38,7 +38,7 @@ namespace Example
 
             var stockExchangeApi = new StockExchangeApi();
             var city = city_example;  // string | Filter by city (optional) 
-            var country = country_example;  // string | Filter by country (optional) 
+            var country = "CHINA";  // string | Filter by country (optional) 
             var countryCode = countryCode_example;  // string | Filter by ISO country code (optional) 
 
             try
@@ -137,7 +137,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var identifier = "XSHG";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
 
             try
             {
@@ -188,8 +188,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-            var date = 2013-10-20;  // DateTime? | The date for which to return price adjustments (optional) 
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var date = "2018-08-14";  // DateTime? | The date for which to return price adjustments (optional) 
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -243,8 +243,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-            var date = 2013-10-20;  // DateTime? | The date for which to return prices (optional) 
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var date = "2018-08-14";  // DateTime? | The date for which to return prices (optional) 
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -298,7 +298,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try

@@ -35,7 +35,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
-            var id = id_example;  // string | The Intrinio ID for the Fundamental
+            var id = "fun_ge9LlE";  // string | The Intrinio ID for the Fundamental
 
             try
             {
@@ -86,7 +86,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
-            var id = id_example;  // string | The Intrinio ID for the Fundamental
+            var id = "fun_ge9LlE";  // string | The Intrinio ID for the Fundamental
 
             try
             {
@@ -137,7 +137,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
-            var id = id_example;  // string | The Intrinio ID for the Fundamental
+            var id = "fun_ge9LlE";  // string | The Intrinio ID for the Fundamental
 
             try
             {
@@ -188,10 +188,10 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var statementCode = statementCode_example;  // string | The statement code
-            var fiscalYear = 56;  // int? | The fiscal year
-            var fiscalPeriod = fiscalPeriod_example;  // string | The fiscal period
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var statementCode = "income_statement";  // string | The statement code
+            var fiscalYear = 2017;  // int? | The fiscal year
+            var fiscalPeriod = "FY";  // string | The fiscal period
 
             try
             {

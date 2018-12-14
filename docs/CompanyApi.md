@@ -45,12 +45,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var lastFilingDate = 2013-10-20;  // DateTime? | Last filing date (optional) 
-            var sic = sic_example;  // string | Standard Industrial Classification code (optional) 
-            var template = template_example;  // string | Template (optional) 
-            var sector = sector_example;  // string | Industry sector (optional) 
-            var industryCategory = industryCategory_example;  // string | Industry category (optional) 
-            var industryGroup = industryGroup_example;  // string | Industry group (optional) 
+            var lastFilingDate = "2011-07-15";  // DateTime? | Last filing date (optional) 
+            var sic = 3350;  // string | Standard Industrial Classification code (optional) 
+            var template = "industrial";  // string | Template (optional) 
+            var sector = "Basic Materials";  // string | Industry sector (optional) 
+            var industryCategory = "Metals & Mining";  // string | Industry category (optional) 
+            var industryGroup = "Aluminum";  // string | Industry group (optional) 
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -108,15 +108,15 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var filedAfter = 2013-10-20;  // DateTime? | Filed on or after this date (optional) 
-            var filedBefore = 2013-10-20;  // DateTime? | Filed on or before this date (optional) 
-            var reportedOnly = true;  // bool? | Only as-reported fundamentals (optional) 
-            var fiscalYear = 56;  // int? | Only for the given fiscal year (optional) 
-            var statementCode = statementCode_example;  // string | Only of the given statement code (optional) 
-            var type = type_example;  // string | Only of the given type (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Only on or after the given date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Only on or after the given date (optional) 
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var filedAfter = "2017-01-01";  // DateTime? | Filed on or after this date (optional) 
+            var filedBefore = "2018-01-01";  // DateTime? | Filed on or before this date (optional) 
+            var reportedOnly = false;  // bool? | Only as-reported fundamentals (optional) 
+            var fiscalYear = 2017;  // int? | Only for the given fiscal year (optional) 
+            var statementCode = "";  // string | Only of the given statement code (optional) 
+            var type = "";  // string | Only of the given type (optional) 
+            var startDate = "2017-01-01";  // DateTime? | Only on or after the given date (optional) 
+            var endDate = "2018-01-01";  // DateTime? | Only on or before the given date (optional) 
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
  **statementCode** | **string**| Only of the given statement code | [optional] 
  **type** | **string**| Only of the given type | [optional] 
  **startDate** | **DateTime?**| Only on or after the given date | [optional] 
- **endDate** | **DateTime?**| Only on or after the given date | [optional] 
+ **endDate** | **DateTime?**| Only on or before the given date | [optional] 
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -275,7 +275,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
             try
             {
@@ -326,8 +326,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var tag = "marketcap";  // string | An Intrinio data tag
 
             try
             {
@@ -379,8 +379,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var tag = "marketcap";  // string | An Intrinio data tag
 
             try
             {
@@ -432,7 +432,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -485,7 +485,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -538,12 +538,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var tag = tag_example;  // string | Item
-            var type = type_example;  // string | Filter by type, when applicable (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var tag = "marketcap";  // string | Item
+            var type = "";  // string | Filter by type, when applicable (optional) 
+            var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
+            var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -601,7 +601,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -654,7 +654,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -707,10 +707,10 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var statementCode = statementCode_example;  // string | The statement code
-            var fiscalPeriod = fiscalPeriod_example;  // string | The fiscal period
-            var fiscalYear = 56;  // int? | The fiscal year
+            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var statementCode = "income_statement";  // string | The statement code
+            var fiscalPeriod = "FY";  // string | The fiscal period
+            var fiscalYear = 2017;  // int? | The fiscal year
 
             try
             {
@@ -764,7 +764,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var query = query_example;  // string | Search parameters
+            var query = "Apple";  // string | Search parameters
 
             try
             {

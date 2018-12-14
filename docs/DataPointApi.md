@@ -33,8 +33,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataPointApi = new DataPointApi();
-            var identifier = identifier_example;  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+            var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
 
             try
             {
@@ -86,8 +86,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataPointApi = new DataPointApi();
-            var identifier = identifier_example;  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+            var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
 
             try
             {

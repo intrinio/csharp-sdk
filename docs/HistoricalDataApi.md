@@ -32,12 +32,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var historicalDataApi = new HistoricalDataApi();
-            var identifier = identifier_example;  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
-            var type = type_example;  // string | Filter by type, when applicable (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Get historical date on or before this date (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+            var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
+            var type = "";  // string | Filter by type, when applicable (optional) 
+            var startDate = "2015-01-01";  // DateTime? | Get historical data on or after this date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
+            var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try

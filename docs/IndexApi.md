@@ -194,7 +194,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
+            var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
 
             try
             {
@@ -245,8 +245,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
 
             try
             {
@@ -298,8 +298,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
 
             try
             {
@@ -351,12 +351,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
-            var type = type_example;  // string | Filter by type, when applicable (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
+            var type = "";  // string | Filter by type, when applicable (optional) 
+            var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
+            var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -412,7 +412,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
+            var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
 
             try
             {
@@ -463,8 +463,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
 
             try
             {
@@ -516,8 +516,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
 
             try
             {
@@ -569,12 +569,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
-            var type = type_example;  // string | Filter by type, when applicable (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
+            var type = "";  // string | Filter by type, when applicable (optional) 
+            var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
+            var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -630,7 +630,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
+            var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
 
             try
             {
@@ -681,8 +681,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
 
             try
             {
@@ -734,8 +734,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
 
             try
             {
@@ -787,12 +787,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var identifier = identifier_example;  // string | An Index Identifier (symbol, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
-            var type = type_example;  // string | Filter by type, when applicable (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
+            var tag = "level";  // string | An Intrinio data tag ID or code-name
+            var type = "";  // string | Filter by type, when applicable (optional) 
+            var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
+            var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -850,7 +850,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var query = query_example;  // string | Search query
+            var query = "GDP";  // string | Search query
 
             try
             {
@@ -901,7 +901,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var query = query_example;  // string | Search query
+            var query = "agriculture";  // string | Search query
 
             try
             {
@@ -952,7 +952,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var query = query_example;  // string | Search query
+            var query = "dow";  // string | Search query
 
             try
             {

@@ -45,7 +45,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var lastFilingDate = "2011-07-15";  // DateTime? | Last filing date (optional) 
+            var lastFilingDate = "";  // DateTime? | Last filing date (optional) 
             var sic = 3350;  // string | Standard Industrial Classification code (optional) 
             var template = "industrial";  // string | Template (optional) 
             var sector = "Basic Materials";  // string | Industry sector (optional) 
@@ -109,14 +109,14 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var filedAfter = "2017-01-01";  // DateTime? | Filed on or after this date (optional) 
-            var filedBefore = "2018-01-01";  // DateTime? | Filed on or before this date (optional) 
+            var filedAfter = "";  // DateTime? | Filed on or after this date (optional) 
+            var filedBefore = "";  // DateTime? | Filed on or before this date (optional) 
             var reportedOnly = false;  // bool? | Only as-reported fundamentals (optional) 
             var fiscalYear = 2017;  // int? | Only for the given fiscal year (optional) 
             var statementCode = "";  // string | Only of the given statement code (optional) 
             var type = "";  // string | Only of the given type (optional) 
-            var startDate = "2017-01-01";  // DateTime? | Only on or after the given date (optional) 
-            var endDate = "2018-01-01";  // DateTime? | Only on or before the given date (optional) 
+            var startDate = "";  // DateTime? | Only on or after the given date (optional) 
+            var endDate = "";  // DateTime? | Only on or before the given date (optional) 
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try

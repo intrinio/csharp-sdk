@@ -67,8 +67,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        DataPointNumber GetSecurityDataPointNumber (string identifier, string tag);
+        /// <returns>decimal?</returns>
+        decimal? GetSecurityDataPointNumber (string identifier, string tag);
 
         /// <summary>
         /// Get Security Data Point (Number)
@@ -79,8 +79,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        ApiResponse<DataPointNumber> GetSecurityDataPointNumberWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of decimal?</returns>
+        ApiResponse<decimal?> GetSecurityDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Security Data Point (Text)
         /// </summary>
@@ -90,8 +90,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        DataPointText GetSecurityDataPointText (string identifier, string tag);
+        /// <returns>string</returns>
+        string GetSecurityDataPointText (string identifier, string tag);
 
         /// <summary>
         /// Get Security Data Point (Text)
@@ -102,8 +102,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        ApiResponse<DataPointText> GetSecurityDataPointTextWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetSecurityDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Security Historical Data
         /// </summary>
@@ -200,7 +200,7 @@ namespace Intrinio.Api
         /// Screen securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -214,7 +214,7 @@ namespace Intrinio.Api
         /// Screen securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -294,8 +294,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        System.Threading.Tasks.Task<DataPointNumber> GetSecurityDataPointNumberAsync (string identifier, string tag);
+        /// <returns>Task of decimal?</returns>
+        System.Threading.Tasks.Task<decimal?> GetSecurityDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Security Data Point (Number)
@@ -306,8 +306,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetSecurityDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSecurityDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Security Data Point (Text)
         /// </summary>
@@ -317,8 +317,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        System.Threading.Tasks.Task<DataPointText> GetSecurityDataPointTextAsync (string identifier, string tag);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetSecurityDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Security Data Point (Text)
@@ -329,8 +329,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetSecurityDataPointTextAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetSecurityDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Security Historical Data
         /// </summary>
@@ -427,7 +427,7 @@ namespace Intrinio.Api
         /// Screen securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -441,7 +441,7 @@ namespace Intrinio.Api
         /// Screen securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -854,10 +854,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        public DataPointNumber GetSecurityDataPointNumber (string identifier, string tag)
+        /// <returns>decimal?</returns>
+        public decimal? GetSecurityDataPointNumber (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = GetSecurityDataPointNumberWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = GetSecurityDataPointNumberWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -867,8 +867,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        public ApiResponse< DataPointNumber > GetSecurityDataPointNumberWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of decimal?</returns>
+        public ApiResponse< decimal? > GetSecurityDataPointNumberWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -892,7 +892,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -920,9 +920,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -931,10 +931,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        public async System.Threading.Tasks.Task<DataPointNumber> GetSecurityDataPointNumberAsync (string identifier, string tag)
+        /// <returns>Task of decimal?</returns>
+        public async System.Threading.Tasks.Task<decimal?> GetSecurityDataPointNumberAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = await GetSecurityDataPointNumberAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = await GetSecurityDataPointNumberAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -945,8 +945,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetSecurityDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSecurityDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -970,7 +970,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -998,9 +998,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -1009,10 +1009,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        public DataPointText GetSecurityDataPointText (string identifier, string tag)
+        /// <returns>string</returns>
+        public string GetSecurityDataPointText (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = GetSecurityDataPointTextWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = GetSecurityDataPointTextWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -1022,8 +1022,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        public ApiResponse< DataPointText > GetSecurityDataPointTextWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetSecurityDataPointTextWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1047,7 +1047,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1075,9 +1075,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1086,10 +1086,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        public async System.Threading.Tasks.Task<DataPointText> GetSecurityDataPointTextAsync (string identifier, string tag)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetSecurityDataPointTextAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = await GetSecurityDataPointTextAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = await GetSecurityDataPointTextAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -1100,8 +1100,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetSecurityDataPointTextAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetSecurityDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1125,7 +1125,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1153,9 +1153,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1675,7 +1675,7 @@ namespace Intrinio.Api
         /// Screen Securities Screen securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -1690,7 +1690,7 @@ namespace Intrinio.Api
         /// Screen Securities Screen securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -1760,7 +1760,7 @@ namespace Intrinio.Api
         /// Screen Securities Screen securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -1776,7 +1776,7 @@ namespace Intrinio.Api
         /// Screen Securities Screen securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>

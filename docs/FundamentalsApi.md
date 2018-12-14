@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 <a name="lookupfundamental"></a>
 # **LookupFundamental**
-> List<Fundamental> LookupFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+> Fundamental LookupFundamental (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod)
 
 Lookup a Fundamental
 
@@ -190,12 +190,12 @@ namespace Example
             var fundamentalsApi = new FundamentalsApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
             var statementCode = statementCode_example;  // string | The statement code
-            var fiscalPeriod = fiscalPeriod_example;  // string | The fiscal period
             var fiscalYear = 56;  // int? | The fiscal year
+            var fiscalPeriod = fiscalPeriod_example;  // string | The fiscal period
 
             try
             {
-                List&lt;Fundamental&gt; result = fundamentalsApi.LookupFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
+                Fundamental result = fundamentalsApi.LookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,10 +213,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **statementCode** | **string**| The statement code | 
- **fiscalPeriod** | **string**| The fiscal period | 
  **fiscalYear** | **int?**| The fiscal year | 
+ **fiscalPeriod** | **string**| The fiscal period | 
 
 ### Return type
 
-[**List<Fundamental>**](Fundamental.md)
+[**Fundamental**](Fundamental.md)
 

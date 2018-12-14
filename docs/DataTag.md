@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **StatementType** | **string** | The format of the financial statment to which this Data Tag belongs | [optional] 
 **Parent** | **string** | The parent Data Tag forming the statement relationship with the factor | [optional] 
 **Factor** | **string** | The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag | [optional] 
-**Balance** | **decimal?** | Whether the Data Tag represents a credit or debit | [optional] 
+**Balance** | **string** | Whether the Data Tag represents a credit or debit | [optional] 
 **Type** | **string** | The nature of the Data Tag, operating or nonoperating | [optional] 
 **Unit** | **string** | The unit of the Data Tag | [optional] 
 

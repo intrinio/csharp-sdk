@@ -38,7 +38,7 @@ namespace Example
             var reportType = reportType_example;  // string | Filter by report type (optional) 
             var startDate = 2013-10-20;  // DateTime? | Filed on or after the given date (optional) 
             var endDate = 2013-10-20;  // DateTime? | Filed before or after the given date (optional) 
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -93,7 +93,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {

@@ -17,27 +17,27 @@ using SwaggerDateConverter = Intrinio.Client.SwaggerDateConverter;
 namespace Intrinio.Model
 {
     /// <summary>
-    /// ApiResponseDataTags
+    /// ApiResponseStockExchanges
     /// </summary>
     [DataContract]
-    public partial class ApiResponseDataTags :  IEquatable<ApiResponseDataTags>, IValidatableObject
+    public partial class ApiResponseStockExchanges :  IEquatable<ApiResponseStockExchanges>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponseDataTags" /> class.
+        /// Initializes a new instance of the <see cref="ApiResponseStockExchanges" /> class.
         /// </summary>
-        /// <param name="Tags">Tags.</param>
+        /// <param name="StockExchanges">StockExchanges.</param>
         /// <param name="NextPage">The token required to request the next page of the data.</param>
-        public ApiResponseDataTags(List<DataTag> Tags = default(List<DataTag>), string NextPage = default(string))
+        public ApiResponseStockExchanges(List<StockExchange> StockExchanges = default(List<StockExchange>), string NextPage = default(string))
         {
-            this.Tags = Tags;
+            this.StockExchanges = StockExchanges;
             this.NextPage = NextPage;
         }
         
         /// <summary>
-        /// Gets or Sets Tags
+        /// Gets or Sets StockExchanges
         /// </summary>
-        [DataMember(Name="tags", EmitDefaultValue=false)]
-        public List<DataTag> Tags { get; set; }
+        [DataMember(Name="stock_exchanges", EmitDefaultValue=false)]
+        public List<StockExchange> StockExchanges { get; set; }
 
         /// <summary>
         /// The token required to request the next page of the data
@@ -53,8 +53,8 @@ namespace Intrinio.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiResponseDataTags {\n");
-            sb.Append("  Tags: ").Append(Tags).Append("\n");
+            sb.Append("class ApiResponseStockExchanges {\n");
+            sb.Append("  StockExchanges: ").Append(StockExchanges).Append("\n");
             sb.Append("  NextPage: ").Append(NextPage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -76,24 +76,24 @@ namespace Intrinio.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiResponseDataTags);
+            return this.Equals(input as ApiResponseStockExchanges);
         }
 
         /// <summary>
-        /// Returns true if ApiResponseDataTags instances are equal
+        /// Returns true if ApiResponseStockExchanges instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiResponseDataTags to be compared</param>
+        /// <param name="input">Instance of ApiResponseStockExchanges to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiResponseDataTags input)
+        public bool Equals(ApiResponseStockExchanges input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Tags == input.Tags ||
-                    this.Tags != null &&
-                    this.Tags.SequenceEqual(input.Tags)
+                    this.StockExchanges == input.StockExchanges ||
+                    this.StockExchanges != null &&
+                    this.StockExchanges.SequenceEqual(input.StockExchanges)
                 ) && 
                 (
                     this.NextPage == input.NextPage ||
@@ -111,8 +111,8 @@ namespace Intrinio.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Tags != null)
-                    hashCode = hashCode * 59 + this.Tags.GetHashCode();
+                if (this.StockExchanges != null)
+                    hashCode = hashCode * 59 + this.StockExchanges.GetHashCode();
                 if (this.NextPage != null)
                     hashCode = hashCode * 59 + this.NextPage.GetHashCode();
                 return hashCode;

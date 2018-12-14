@@ -160,8 +160,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>DataPointNumber</returns>
-        DataPointNumber GetCompanyDataPointNumber (string identifier, string tag);
+        /// <returns>decimal?</returns>
+        decimal? GetCompanyDataPointNumber (string identifier, string tag);
 
         /// <summary>
         /// Get Company Data Point (Number)
@@ -172,8 +172,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        ApiResponse<DataPointNumber> GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of decimal?</returns>
+        ApiResponse<decimal?> GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Company Data Point (Text)
         /// </summary>
@@ -183,8 +183,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>DataPointText</returns>
-        DataPointText GetCompanyDataPointText (string identifier, string tag);
+        /// <returns>string</returns>
+        string GetCompanyDataPointText (string identifier, string tag);
 
         /// <summary>
         /// Get Company Data Point (Text)
@@ -195,8 +195,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        ApiResponse<DataPointText> GetCompanyDataPointTextWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetCompanyDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Filings for a Company
         /// </summary>
@@ -333,8 +333,8 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>List&lt;Fundamental&gt;</returns>
-        List<Fundamental> LookupCompanyFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <returns>Fundamental</returns>
+        Fundamental LookupCompanyFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
 
         /// <summary>
         /// Lookup a Fundamental for a Company
@@ -347,8 +347,8 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>ApiResponse of List&lt;Fundamental&gt;</returns>
-        ApiResponse<List<Fundamental>> LookupCompanyFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <returns>ApiResponse of Fundamental</returns>
+        ApiResponse<Fundamental> LookupCompanyFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
         /// <summary>
         /// Search Companies
         /// </summary>
@@ -516,8 +516,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of DataPointNumber</returns>
-        System.Threading.Tasks.Task<DataPointNumber> GetCompanyDataPointNumberAsync (string identifier, string tag);
+        /// <returns>Task of decimal?</returns>
+        System.Threading.Tasks.Task<decimal?> GetCompanyDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Company Data Point (Number)
@@ -528,8 +528,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<decimal?>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Company Data Point (Text)
         /// </summary>
@@ -539,8 +539,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of DataPointText</returns>
-        System.Threading.Tasks.Task<DataPointText> GetCompanyDataPointTextAsync (string identifier, string tag);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetCompanyDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Company Data Point (Text)
@@ -551,8 +551,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Filings for a Company
         /// </summary>
@@ -689,8 +689,8 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of List&lt;Fundamental&gt;</returns>
-        System.Threading.Tasks.Task<List<Fundamental>> LookupCompanyFundamentalAsync (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <returns>Task of Fundamental</returns>
+        System.Threading.Tasks.Task<Fundamental> LookupCompanyFundamentalAsync (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
 
         /// <summary>
         /// Lookup a Fundamental for a Company
@@ -703,8 +703,8 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of ApiResponse (List&lt;Fundamental&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Fundamental>>> LookupCompanyFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <returns>Task of ApiResponse (Fundamental)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Fundamental>> LookupCompanyFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
         /// <summary>
         /// Search Companies
         /// </summary>
@@ -1619,10 +1619,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>DataPointNumber</returns>
-        public DataPointNumber GetCompanyDataPointNumber (string identifier, string tag)
+        /// <returns>decimal?</returns>
+        public decimal? GetCompanyDataPointNumber (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = GetCompanyDataPointNumberWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = GetCompanyDataPointNumberWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -1632,8 +1632,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        public ApiResponse< DataPointNumber > GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of decimal?</returns>
+        public ApiResponse< decimal? > GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1657,7 +1657,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1685,9 +1685,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -1696,10 +1696,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of DataPointNumber</returns>
-        public async System.Threading.Tasks.Task<DataPointNumber> GetCompanyDataPointNumberAsync (string identifier, string tag)
+        /// <returns>Task of decimal?</returns>
+        public async System.Threading.Tasks.Task<decimal?> GetCompanyDataPointNumberAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = await GetCompanyDataPointNumberAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = await GetCompanyDataPointNumberAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -1710,8 +1710,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1735,7 +1735,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1763,9 +1763,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -1774,10 +1774,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>DataPointText</returns>
-        public DataPointText GetCompanyDataPointText (string identifier, string tag)
+        /// <returns>string</returns>
+        public string GetCompanyDataPointText (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = GetCompanyDataPointTextWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = GetCompanyDataPointTextWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -1787,8 +1787,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        public ApiResponse< DataPointText > GetCompanyDataPointTextWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetCompanyDataPointTextWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1812,7 +1812,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1840,9 +1840,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1851,10 +1851,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of DataPointText</returns>
-        public async System.Threading.Tasks.Task<DataPointText> GetCompanyDataPointTextAsync (string identifier, string tag)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetCompanyDataPointTextAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = await GetCompanyDataPointTextAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = await GetCompanyDataPointTextAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -1865,8 +1865,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1890,7 +1890,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1918,9 +1918,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -2712,10 +2712,10 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>List&lt;Fundamental&gt;</returns>
-        public List<Fundamental> LookupCompanyFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <returns>Fundamental</returns>
+        public Fundamental LookupCompanyFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
         {
-             ApiResponse<List<Fundamental>> localVarResponse = LookupCompanyFundamentalWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear);
+             ApiResponse<Fundamental> localVarResponse = LookupCompanyFundamentalWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear);
              return localVarResponse.Data;
         }
 
@@ -2727,8 +2727,8 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>ApiResponse of List&lt;Fundamental&gt;</returns>
-        public ApiResponse< List<Fundamental> > LookupCompanyFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <returns>ApiResponse of Fundamental</returns>
+        public ApiResponse< Fundamental > LookupCompanyFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2788,9 +2788,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<Fundamental>>(localVarStatusCode,
+            return new ApiResponse<Fundamental>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Fundamental>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Fundamental>)));
+                (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
         }
 
         /// <summary>
@@ -2801,10 +2801,10 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of List&lt;Fundamental&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Fundamental>> LookupCompanyFundamentalAsync (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <returns>Task of Fundamental</returns>
+        public async System.Threading.Tasks.Task<Fundamental> LookupCompanyFundamentalAsync (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
         {
-             ApiResponse<List<Fundamental>> localVarResponse = await LookupCompanyFundamentalAsyncWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear);
+             ApiResponse<Fundamental> localVarResponse = await LookupCompanyFundamentalAsyncWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear);
              return localVarResponse.Data;
 
         }
@@ -2817,8 +2817,8 @@ namespace Intrinio.Api
         /// <param name="statementCode">The statement code</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of ApiResponse (List&lt;Fundamental&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Fundamental>>> LookupCompanyFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <returns>Task of ApiResponse (Fundamental)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Fundamental>> LookupCompanyFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2878,9 +2878,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<Fundamental>>(localVarStatusCode,
+            return new ApiResponse<Fundamental>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Fundamental>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Fundamental>)));
+                (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
         }
 
         /// <summary>

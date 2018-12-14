@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="filterstockexchanges"></a>
 # **FilterStockExchanges**
-> List<StockExchange> FilterStockExchanges (string city = null, string country = null, string countryCode = null)
+> ApiResponseStockExchanges FilterStockExchanges (string city = null, string country = null, string countryCode = null)
 
 Filter Stock Exchanges
 
@@ -43,7 +43,7 @@ namespace Example
 
             try
             {
-                List&lt;StockExchange&gt; result = stockExchangeApi.FilterStockExchanges(city, country, countryCode);
+                ApiResponseStockExchanges result = stockExchangeApi.FilterStockExchanges(city, country, countryCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<StockExchange>**](StockExchange.md)
+[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
 
 <a name="getallstockexchanges"></a>
 # **GetAllStockExchanges**
-> List<StockExchange> GetAllStockExchanges ()
+> ApiResponseStockExchanges GetAllStockExchanges ()
 
 Get All Stock Exchanges
 
@@ -95,7 +95,7 @@ namespace Example
 
             try
             {
-                List&lt;StockExchange&gt; result = stockExchangeApi.GetAllStockExchanges();
+                ApiResponseStockExchanges result = stockExchangeApi.GetAllStockExchanges();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -112,7 +112,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List<StockExchange>**](StockExchange.md)
+[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
 
 <a name="getstockexchangebyid"></a>
 # **GetStockExchangeById**
@@ -190,7 +190,7 @@ namespace Example
             var stockExchangeApi = new StockExchangeApi();
             var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var date = 2013-10-20;  // DateTime? | The date for which to return price adjustments (optional) 
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -245,7 +245,7 @@ namespace Example
             var stockExchangeApi = new StockExchangeApi();
             var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var date = 2013-10-20;  // DateTime? | The date for which to return prices (optional) 
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -299,7 +299,7 @@ namespace Example
 
             var stockExchangeApi = new StockExchangeApi();
             var identifier = identifier_example;  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {

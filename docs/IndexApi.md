@@ -47,7 +47,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -96,7 +96,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -145,7 +145,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 <a name="geteconomicindexdatapointnumber"></a>
 # **GetEconomicIndexDataPointNumber**
-> DataPointNumber GetEconomicIndexDataPointNumber (string identifier, string tag)
+> decimal? GetEconomicIndexDataPointNumber (string identifier, string tag)
 
 Get Economic Index Data Point (Number)
 
@@ -250,7 +250,7 @@ namespace Example
 
             try
             {
-                DataPointNumber result = indexApi.GetEconomicIndexDataPointNumber(identifier, tag);
+                decimal? result = indexApi.GetEconomicIndexDataPointNumber(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -271,11 +271,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**decimal?**
 
 <a name="geteconomicindexdatapointtext"></a>
 # **GetEconomicIndexDataPointText**
-> DataPointText GetEconomicIndexDataPointText (string identifier, string tag)
+> string GetEconomicIndexDataPointText (string identifier, string tag)
 
 Get Economic Index Data Point (Text)
 
@@ -303,7 +303,7 @@ namespace Example
 
             try
             {
-                DataPointText result = indexApi.GetEconomicIndexDataPointText(identifier, tag);
+                string result = indexApi.GetEconomicIndexDataPointText(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -324,11 +324,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**string**
 
 <a name="geteconomicindexhistoricaldata"></a>
 # **GetEconomicIndexHistoricalData**
-> Object GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
 Get Economic Index Historical Data
 
@@ -357,11 +357,11 @@ namespace Example
             var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                Object result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
 
 <a name="getsicindexbyid"></a>
 # **GetSicIndexById**
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 <a name="getsicindexdatapointnumber"></a>
 # **GetSicIndexDataPointNumber**
-> DataPointNumber GetSicIndexDataPointNumber (string identifier, string tag)
+> decimal? GetSicIndexDataPointNumber (string identifier, string tag)
 
 Get SIC Index Data Point (Number)
 
@@ -468,7 +468,7 @@ namespace Example
 
             try
             {
-                DataPointNumber result = indexApi.GetSicIndexDataPointNumber(identifier, tag);
+                decimal? result = indexApi.GetSicIndexDataPointNumber(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -489,11 +489,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**decimal?**
 
 <a name="getsicindexdatapointtext"></a>
 # **GetSicIndexDataPointText**
-> DataPointText GetSicIndexDataPointText (string identifier, string tag)
+> string GetSicIndexDataPointText (string identifier, string tag)
 
 Get SIC Index Data Point (Text)
 
@@ -521,7 +521,7 @@ namespace Example
 
             try
             {
-                DataPointText result = indexApi.GetSicIndexDataPointText(identifier, tag);
+                string result = indexApi.GetSicIndexDataPointText(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**string**
 
 <a name="getsicindexhistoricaldata"></a>
 # **GetSicIndexHistoricalData**
@@ -575,7 +575,7 @@ namespace Example
             var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockmarketindexdatapointnumber"></a>
 # **GetStockMarketIndexDataPointNumber**
-> DataPointNumber GetStockMarketIndexDataPointNumber (string identifier, string tag)
+> decimal? GetStockMarketIndexDataPointNumber (string identifier, string tag)
 
 Get Stock Market Index Data Point (Number)
 
@@ -686,7 +686,7 @@ namespace Example
 
             try
             {
-                DataPointNumber result = indexApi.GetStockMarketIndexDataPointNumber(identifier, tag);
+                decimal? result = indexApi.GetStockMarketIndexDataPointNumber(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -707,11 +707,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**decimal?**
 
 <a name="getstockmarketindexdatapointtext"></a>
 # **GetStockMarketIndexDataPointText**
-> DataPointText GetStockMarketIndexDataPointText (string identifier, string tag)
+> string GetStockMarketIndexDataPointText (string identifier, string tag)
 
 Get Stock Market Index Data Point (Text)
 
@@ -739,7 +739,7 @@ namespace Example
 
             try
             {
-                DataPointText result = indexApi.GetStockMarketIndexDataPointText(identifier, tag);
+                string result = indexApi.GetStockMarketIndexDataPointText(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -760,7 +760,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**string**
 
 <a name="getstockmarketindexhistoricaldata"></a>
 # **GetStockMarketIndexHistoricalData**
@@ -793,7 +793,7 @@ namespace Example
             var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {

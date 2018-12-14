@@ -30,7 +30,7 @@ namespace Intrinio.Model
         /// <param name="PublicationDate">The publication date of the news article.</param>
         /// <param name="Url">The url of the news article.</param>
         /// <param name="Summary">A summary of the news article.</param>
-        public CompanyNewsSummary(string Id = default(string), string Title = default(string), DateTime? PublicationDate = default(DateTime?), string Url = default(string), string Summary = default(string))
+        public CompanyNewsSummary(string Id = default(string), string Title = default(string), string PublicationDate = default(string), string Url = default(string), string Summary = default(string))
         {
             this.Id = Id;
             this.Title = Title;
@@ -58,8 +58,7 @@ namespace Intrinio.Model
         /// </summary>
         /// <value>The publication date of the news article</value>
         [DataMember(Name="publication_date", EmitDefaultValue=false)]
-        [JsonConverter(typeof(SwaggerDateConverter))]
-        public DateTime? PublicationDate { get; set; }
+        public string PublicationDate { get; set; }
 
         /// <summary>
         /// The url of the news article

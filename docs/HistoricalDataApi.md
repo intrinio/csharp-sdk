@@ -38,7 +38,7 @@ namespace Example
             var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = 2013-10-20;  // DateTime? | Get historical date on or before this date (optional) 
             var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {

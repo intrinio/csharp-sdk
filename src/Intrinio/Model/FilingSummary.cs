@@ -34,7 +34,7 @@ namespace Intrinio.Model
         /// <param name="FilingUrl">The URL to the filing page on the SEC site.</param>
         /// <param name="ReportUrl">The URL to the actual report on the SEC site.</param>
         /// <param name="InstanceUrl">The URL for the XBRL filing for the report.</param>
-        public FilingSummary(string Id = default(string), DateTime? FilingDate = default(DateTime?), string AcceptedDate = default(string), DateTime? PeriodEndDate = default(DateTime?), string ReportType = default(string), string SecUniqueId = default(string), string FilingUrl = default(string), string ReportUrl = default(string), string InstanceUrl = default(string))
+        public FilingSummary(string Id = default(string), DateTime? FilingDate = default(DateTime?), DateTime? AcceptedDate = default(DateTime?), DateTime? PeriodEndDate = default(DateTime?), string ReportType = default(string), string SecUniqueId = default(string), string FilingUrl = default(string), string ReportUrl = default(string), string InstanceUrl = default(string))
         {
             this.Id = Id;
             this.FilingDate = FilingDate;
@@ -67,7 +67,7 @@ namespace Intrinio.Model
         /// </summary>
         /// <value>The date and time when the filing was accepted by SEC</value>
         [DataMember(Name="accepted_date", EmitDefaultValue=false)]
-        public string AcceptedDate { get; set; }
+        public DateTime? AcceptedDate { get; set; }
 
         /// <summary>
         /// The ending date of the fiscal period for the filing

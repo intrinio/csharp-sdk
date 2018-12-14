@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 
 namespace Intrinio.Client
@@ -311,6 +312,15 @@ namespace Intrinio.Client
             // at this point, it must be a model (json)
             try
             {
+                if (type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableFrom(typeof(List<>)))
+                {
+                    Type baseGenericType = type.GetGenericArguments()[0];
+                    serializerSettings.Converters = new List<JsonConverter>
+                    {
+                        (JsonConverter) Activator.CreateInstance(typeof(SingleOrArrayConverter<>).MakeGenericType(baseGenericType))
+                    };
+                }
+                
                 return JsonConvert.DeserializeObject(response.Content, type, serializerSettings);
             }
             catch (Exception e)
@@ -517,6 +527,38 @@ namespace Intrinio.Client
         private static bool IsCollection(object value)
         {
             return value is IList || value is ICollection;
+        }
+    }
+
+    /// <summary>
+    /// SingleOrArrayConverter enables typed JSON deserialization of List generics
+    /// when the API response may be an array of single object.
+    /// </summary>
+    public class SingleOrArrayConverter<T> : JsonConverter
+    {
+        public override bool CanConvert(Type objectType)
+        {
+            return (objectType == typeof(List<T>));
+        }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            JToken token = JToken.Load(reader);
+            if (token.Type == JTokenType.Array)
+            {
+                return token.ToObject<List<T>>();
+            }
+            return new List<T> { token.ToObject<T>() };
+        }
+
+        public override bool CanWrite
+        {
+            get { return false; }
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

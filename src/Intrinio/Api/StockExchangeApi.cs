@@ -26,8 +26,8 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>List&lt;StockExchange&gt;</returns>
-        List<StockExchange> FilterStockExchanges (string city = null, string country = null, string countryCode = null);
+        /// <returns>ApiResponseStockExchanges</returns>
+        ApiResponseStockExchanges FilterStockExchanges (string city = null, string country = null, string countryCode = null);
 
         /// <summary>
         /// Filter Stock Exchanges
@@ -39,8 +39,8 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>ApiResponse of List&lt;StockExchange&gt;</returns>
-        ApiResponse<List<StockExchange>> FilterStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null);
+        /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
+        ApiResponse<ApiResponseStockExchanges> FilterStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null);
         /// <summary>
         /// Get All Stock Exchanges
         /// </summary>
@@ -48,8 +48,8 @@ namespace Intrinio.Api
         /// Return All Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;StockExchange&gt;</returns>
-        List<StockExchange> GetAllStockExchanges ();
+        /// <returns>ApiResponseStockExchanges</returns>
+        ApiResponseStockExchanges GetAllStockExchanges ();
 
         /// <summary>
         /// Get All Stock Exchanges
@@ -58,8 +58,8 @@ namespace Intrinio.Api
         /// Return All Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;StockExchange&gt;</returns>
-        ApiResponse<List<StockExchange>> GetAllStockExchangesWithHttpInfo ();
+        /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
+        ApiResponse<ApiResponseStockExchanges> GetAllStockExchangesWithHttpInfo ();
         /// <summary>
         /// Get Stock Exchange by ID
         /// </summary>
@@ -166,8 +166,8 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>Task of List&lt;StockExchange&gt;</returns>
-        System.Threading.Tasks.Task<List<StockExchange>> FilterStockExchangesAsync (string city = null, string country = null, string countryCode = null);
+        /// <returns>Task of ApiResponseStockExchanges</returns>
+        System.Threading.Tasks.Task<ApiResponseStockExchanges> FilterStockExchangesAsync (string city = null, string country = null, string countryCode = null);
 
         /// <summary>
         /// Filter Stock Exchanges
@@ -179,8 +179,8 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;StockExchange&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<StockExchange>>> FilterStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null);
+        /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> FilterStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null);
         /// <summary>
         /// Get All Stock Exchanges
         /// </summary>
@@ -188,8 +188,8 @@ namespace Intrinio.Api
         /// Return All Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;StockExchange&gt;</returns>
-        System.Threading.Tasks.Task<List<StockExchange>> GetAllStockExchangesAsync ();
+        /// <returns>Task of ApiResponseStockExchanges</returns>
+        System.Threading.Tasks.Task<ApiResponseStockExchanges> GetAllStockExchangesAsync ();
 
         /// <summary>
         /// Get All Stock Exchanges
@@ -198,8 +198,8 @@ namespace Intrinio.Api
         /// Return All Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;StockExchange&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<StockExchange>>> GetAllStockExchangesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo ();
         /// <summary>
         /// Get Stock Exchange by ID
         /// </summary>
@@ -401,10 +401,10 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>List&lt;StockExchange&gt;</returns>
-        public List<StockExchange> FilterStockExchanges (string city = null, string country = null, string countryCode = null)
+        /// <returns>ApiResponseStockExchanges</returns>
+        public ApiResponseStockExchanges FilterStockExchanges (string city = null, string country = null, string countryCode = null)
         {
-             ApiResponse<List<StockExchange>> localVarResponse = FilterStockExchangesWithHttpInfo(city, country, countryCode);
+             ApiResponse<ApiResponseStockExchanges> localVarResponse = FilterStockExchangesWithHttpInfo(city, country, countryCode);
              return localVarResponse.Data;
         }
 
@@ -415,8 +415,8 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>ApiResponse of List&lt;StockExchange&gt;</returns>
-        public ApiResponse< List<StockExchange> > FilterStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null)
+        /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
+        public ApiResponse< ApiResponseStockExchanges > FilterStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null)
         {
 
             var localVarPath = "/stock_exchanges/filter";
@@ -463,9 +463,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<StockExchange>>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockExchanges>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<StockExchange>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<StockExchange>)));
+                (ApiResponseStockExchanges) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchanges)));
         }
 
         /// <summary>
@@ -475,10 +475,10 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>Task of List&lt;StockExchange&gt;</returns>
-        public async System.Threading.Tasks.Task<List<StockExchange>> FilterStockExchangesAsync (string city = null, string country = null, string countryCode = null)
+        /// <returns>Task of ApiResponseStockExchanges</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockExchanges> FilterStockExchangesAsync (string city = null, string country = null, string countryCode = null)
         {
-             ApiResponse<List<StockExchange>> localVarResponse = await FilterStockExchangesAsyncWithHttpInfo(city, country, countryCode);
+             ApiResponse<ApiResponseStockExchanges> localVarResponse = await FilterStockExchangesAsyncWithHttpInfo(city, country, countryCode);
              return localVarResponse.Data;
 
         }
@@ -490,8 +490,8 @@ namespace Intrinio.Api
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;StockExchange&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<StockExchange>>> FilterStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null)
+        /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> FilterStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null)
         {
 
             var localVarPath = "/stock_exchanges/filter";
@@ -538,19 +538,19 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<StockExchange>>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockExchanges>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<StockExchange>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<StockExchange>)));
+                (ApiResponseStockExchanges) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchanges)));
         }
 
         /// <summary>
         /// Get All Stock Exchanges Return All Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;StockExchange&gt;</returns>
-        public List<StockExchange> GetAllStockExchanges ()
+        /// <returns>ApiResponseStockExchanges</returns>
+        public ApiResponseStockExchanges GetAllStockExchanges ()
         {
-             ApiResponse<List<StockExchange>> localVarResponse = GetAllStockExchangesWithHttpInfo();
+             ApiResponse<ApiResponseStockExchanges> localVarResponse = GetAllStockExchangesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -558,8 +558,8 @@ namespace Intrinio.Api
         /// Get All Stock Exchanges Return All Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;StockExchange&gt;</returns>
-        public ApiResponse< List<StockExchange> > GetAllStockExchangesWithHttpInfo ()
+        /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
+        public ApiResponse< ApiResponseStockExchanges > GetAllStockExchangesWithHttpInfo ()
         {
 
             var localVarPath = "/stock_exchanges";
@@ -603,19 +603,19 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<StockExchange>>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockExchanges>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<StockExchange>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<StockExchange>)));
+                (ApiResponseStockExchanges) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchanges)));
         }
 
         /// <summary>
         /// Get All Stock Exchanges Return All Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;StockExchange&gt;</returns>
-        public async System.Threading.Tasks.Task<List<StockExchange>> GetAllStockExchangesAsync ()
+        /// <returns>Task of ApiResponseStockExchanges</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockExchanges> GetAllStockExchangesAsync ()
         {
-             ApiResponse<List<StockExchange>> localVarResponse = await GetAllStockExchangesAsyncWithHttpInfo();
+             ApiResponse<ApiResponseStockExchanges> localVarResponse = await GetAllStockExchangesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -624,8 +624,8 @@ namespace Intrinio.Api
         /// Get All Stock Exchanges Return All Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;StockExchange&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<StockExchange>>> GetAllStockExchangesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/stock_exchanges";
@@ -669,9 +669,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<StockExchange>>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockExchanges>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<StockExchange>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<StockExchange>)));
+                (ApiResponseStockExchanges) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchanges)));
         }
 
         /// <summary>

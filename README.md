@@ -1,7 +1,5 @@
 # Intrinio C# SDK
 
-WARNING: THIS IS IS A BETA - DO NOT USE IN PRODUCTION.
-
 To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Marketplace, we offer a wide selection of financial data feeds sourced by our own proprietary processes as well as from many data vendors. The primary application of the Intrinio API is for use in third-party applications and integrations or for end-users utilizing the Excel add-in and Google Sheets add-on. The Intrinio API uses HTTPS verbs and a RESTful endpoint structure, which makes it easy to request data from Intrinio. Responses are delivered in JSON format. If you need additional help in using the API, go to our home page (https://intrinio.com) and click on the chat icon in the lower right corner.
@@ -191,6 +189,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseStockExchangeSecurities](docs/ApiResponseStockExchangeSecurities.md)
  - [Model.ApiResponseStockExchangeStockPriceAdjustments](docs/ApiResponseStockExchangeStockPriceAdjustments.md)
  - [Model.ApiResponseStockExchangeStockPrices](docs/ApiResponseStockExchangeStockPrices.md)
+ - [Model.ApiResponseStockExchanges](docs/ApiResponseStockExchanges.md)
  - [Model.ApiResponseStockMarketIndexHistoricalData](docs/ApiResponseStockMarketIndexHistoricalData.md)
  - [Model.ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
  - [Model.Company](docs/Company.md)
@@ -198,8 +197,6 @@ Class | Method | HTTP request | Description
  - [Model.CompanyNews](docs/CompanyNews.md)
  - [Model.CompanyNewsSummary](docs/CompanyNewsSummary.md)
  - [Model.CompanySummary](docs/CompanySummary.md)
- - [Model.DataPointNumber](docs/DataPointNumber.md)
- - [Model.DataPointText](docs/DataPointText.md)
  - [Model.DataTag](docs/DataTag.md)
  - [Model.DataTagSummary](docs/DataTagSummary.md)
  - [Model.EconomicIndex](docs/EconomicIndex.md)

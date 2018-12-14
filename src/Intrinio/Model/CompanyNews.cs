@@ -60,7 +60,6 @@ namespace Intrinio.Model
         /// </summary>
         /// <value>The publication date of the news article</value>
         [DataMember(Name="publication_date", EmitDefaultValue=false)]
-        [JsonConverter(typeof(SwaggerDateConverter))]
         public DateTime? PublicationDate { get; set; }
 
         /// <summary>

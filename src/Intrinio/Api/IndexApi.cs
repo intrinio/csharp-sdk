@@ -109,8 +109,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        DataPointNumber GetEconomicIndexDataPointNumber (string identifier, string tag);
+        /// <returns>decimal?</returns>
+        decimal? GetEconomicIndexDataPointNumber (string identifier, string tag);
 
         /// <summary>
         /// Get Economic Index Data Point (Number)
@@ -121,8 +121,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        ApiResponse<DataPointNumber> GetEconomicIndexDataPointNumberWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of decimal?</returns>
+        ApiResponse<decimal?> GetEconomicIndexDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Economic Index Data Point (Text)
         /// </summary>
@@ -132,8 +132,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        DataPointText GetEconomicIndexDataPointText (string identifier, string tag);
+        /// <returns>string</returns>
+        string GetEconomicIndexDataPointText (string identifier, string tag);
 
         /// <summary>
         /// Get Economic Index Data Point (Text)
@@ -144,8 +144,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        ApiResponse<DataPointText> GetEconomicIndexDataPointTextWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetEconomicIndexDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Economic Index Historical Data
         /// </summary>
@@ -160,8 +160,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Object</returns>
-        Object GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponseEconomicIndexHistoricalData</returns>
+        ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Economic Index Historical Data
@@ -177,8 +177,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>ApiResponse of ApiResponseEconomicIndexHistoricalData</returns>
+        ApiResponse<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get an SIC Index by ID
         /// </summary>
@@ -209,8 +209,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        DataPointNumber GetSicIndexDataPointNumber (string identifier, string tag);
+        /// <returns>decimal?</returns>
+        decimal? GetSicIndexDataPointNumber (string identifier, string tag);
 
         /// <summary>
         /// Get SIC Index Data Point (Number)
@@ -221,8 +221,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        ApiResponse<DataPointNumber> GetSicIndexDataPointNumberWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of decimal?</returns>
+        ApiResponse<decimal?> GetSicIndexDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get SIC Index Data Point (Text)
         /// </summary>
@@ -232,8 +232,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        DataPointText GetSicIndexDataPointText (string identifier, string tag);
+        /// <returns>string</returns>
+        string GetSicIndexDataPointText (string identifier, string tag);
 
         /// <summary>
         /// Get SIC Index Data Point (Text)
@@ -244,8 +244,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        ApiResponse<DataPointText> GetSicIndexDataPointTextWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetSicIndexDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get SIC Index Historical Data
         /// </summary>
@@ -309,8 +309,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        DataPointNumber GetStockMarketIndexDataPointNumber (string identifier, string tag);
+        /// <returns>decimal?</returns>
+        decimal? GetStockMarketIndexDataPointNumber (string identifier, string tag);
 
         /// <summary>
         /// Get Stock Market Index Data Point (Number)
@@ -321,8 +321,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        ApiResponse<DataPointNumber> GetStockMarketIndexDataPointNumberWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of decimal?</returns>
+        ApiResponse<decimal?> GetStockMarketIndexDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Stock Market Index Data Point (Text)
         /// </summary>
@@ -332,8 +332,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        DataPointText GetStockMarketIndexDataPointText (string identifier, string tag);
+        /// <returns>string</returns>
+        string GetStockMarketIndexDataPointText (string identifier, string tag);
 
         /// <summary>
         /// Get Stock Market Index Data Point (Text)
@@ -344,8 +344,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        ApiResponse<DataPointText> GetStockMarketIndexDataPointTextWithHttpInfo (string identifier, string tag);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetStockMarketIndexDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Stock Market Index Historical Data
         /// </summary>
@@ -537,8 +537,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        System.Threading.Tasks.Task<DataPointNumber> GetEconomicIndexDataPointNumberAsync (string identifier, string tag);
+        /// <returns>Task of decimal?</returns>
+        System.Threading.Tasks.Task<decimal?> GetEconomicIndexDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Economic Index Data Point (Number)
@@ -549,8 +549,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetEconomicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<decimal?>> GetEconomicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Economic Index Data Point (Text)
         /// </summary>
@@ -560,8 +560,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        System.Threading.Tasks.Task<DataPointText> GetEconomicIndexDataPointTextAsync (string identifier, string tag);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetEconomicIndexDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Economic Index Data Point (Text)
@@ -572,8 +572,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetEconomicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetEconomicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Economic Index Historical Data
         /// </summary>
@@ -588,8 +588,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponseEconomicIndexHistoricalData</returns>
+        System.Threading.Tasks.Task<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
         /// Get Economic Index Historical Data
@@ -605,8 +605,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndexHistoricalData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
         /// Get an SIC Index by ID
         /// </summary>
@@ -637,8 +637,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        System.Threading.Tasks.Task<DataPointNumber> GetSicIndexDataPointNumberAsync (string identifier, string tag);
+        /// <returns>Task of decimal?</returns>
+        System.Threading.Tasks.Task<decimal?> GetSicIndexDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
         /// Get SIC Index Data Point (Number)
@@ -649,8 +649,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetSicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get SIC Index Data Point (Text)
         /// </summary>
@@ -660,8 +660,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        System.Threading.Tasks.Task<DataPointText> GetSicIndexDataPointTextAsync (string identifier, string tag);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetSicIndexDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
         /// Get SIC Index Data Point (Text)
@@ -672,8 +672,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetSicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetSicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get SIC Index Historical Data
         /// </summary>
@@ -737,8 +737,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        System.Threading.Tasks.Task<DataPointNumber> GetStockMarketIndexDataPointNumberAsync (string identifier, string tag);
+        /// <returns>Task of decimal?</returns>
+        System.Threading.Tasks.Task<decimal?> GetStockMarketIndexDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Stock Market Index Data Point (Number)
@@ -749,8 +749,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetStockMarketIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<decimal?>> GetStockMarketIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Stock Market Index Data Point (Text)
         /// </summary>
@@ -760,8 +760,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        System.Threading.Tasks.Task<DataPointText> GetStockMarketIndexDataPointTextAsync (string identifier, string tag);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetStockMarketIndexDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
         /// Get Stock Market Index Data Point (Text)
@@ -772,8 +772,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetStockMarketIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetStockMarketIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Get Stock Market Index Historical Data
         /// </summary>
@@ -1530,10 +1530,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        public DataPointNumber GetEconomicIndexDataPointNumber (string identifier, string tag)
+        /// <returns>decimal?</returns>
+        public decimal? GetEconomicIndexDataPointNumber (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = GetEconomicIndexDataPointNumberWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = GetEconomicIndexDataPointNumberWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -1543,8 +1543,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        public ApiResponse< DataPointNumber > GetEconomicIndexDataPointNumberWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of decimal?</returns>
+        public ApiResponse< decimal? > GetEconomicIndexDataPointNumberWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1568,7 +1568,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1596,9 +1596,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -1607,10 +1607,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        public async System.Threading.Tasks.Task<DataPointNumber> GetEconomicIndexDataPointNumberAsync (string identifier, string tag)
+        /// <returns>Task of decimal?</returns>
+        public async System.Threading.Tasks.Task<decimal?> GetEconomicIndexDataPointNumberAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = await GetEconomicIndexDataPointNumberAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = await GetEconomicIndexDataPointNumberAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -1621,8 +1621,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetEconomicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetEconomicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1646,7 +1646,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1674,9 +1674,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -1685,10 +1685,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        public DataPointText GetEconomicIndexDataPointText (string identifier, string tag)
+        /// <returns>string</returns>
+        public string GetEconomicIndexDataPointText (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = GetEconomicIndexDataPointTextWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = GetEconomicIndexDataPointTextWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -1698,8 +1698,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        public ApiResponse< DataPointText > GetEconomicIndexDataPointTextWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetEconomicIndexDataPointTextWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1723,7 +1723,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1751,9 +1751,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1762,10 +1762,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        public async System.Threading.Tasks.Task<DataPointText> GetEconomicIndexDataPointTextAsync (string identifier, string tag)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetEconomicIndexDataPointTextAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = await GetEconomicIndexDataPointTextAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = await GetEconomicIndexDataPointTextAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -1776,8 +1776,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetEconomicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetEconomicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1801,7 +1801,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1829,9 +1829,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1845,10 +1845,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Object</returns>
-        public Object GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponseEconomicIndexHistoricalData</returns>
+        public ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<Object> localVarResponse = GetEconomicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseEconomicIndexHistoricalData> localVarResponse = GetEconomicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1863,8 +1863,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>ApiResponse of ApiResponseEconomicIndexHistoricalData</returns>
+        public ApiResponse< ApiResponseEconomicIndexHistoricalData > GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1921,9 +1921,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndexHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (ApiResponseEconomicIndexHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndexHistoricalData)));
         }
 
         /// <summary>
@@ -1937,10 +1937,10 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponseEconomicIndexHistoricalData</returns>
+        public async System.Threading.Tasks.Task<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<Object> localVarResponse = await GetEconomicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseEconomicIndexHistoricalData> localVarResponse = await GetEconomicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1956,8 +1956,8 @@ namespace Intrinio.Api
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndexHistoricalData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2014,9 +2014,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndexHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (ApiResponseEconomicIndexHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndexHistoricalData)));
         }
 
         /// <summary>
@@ -2168,10 +2168,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        public DataPointNumber GetSicIndexDataPointNumber (string identifier, string tag)
+        /// <returns>decimal?</returns>
+        public decimal? GetSicIndexDataPointNumber (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = GetSicIndexDataPointNumberWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = GetSicIndexDataPointNumberWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -2181,8 +2181,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        public ApiResponse< DataPointNumber > GetSicIndexDataPointNumberWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of decimal?</returns>
+        public ApiResponse< decimal? > GetSicIndexDataPointNumberWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2206,7 +2206,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2234,9 +2234,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -2245,10 +2245,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        public async System.Threading.Tasks.Task<DataPointNumber> GetSicIndexDataPointNumberAsync (string identifier, string tag)
+        /// <returns>Task of decimal?</returns>
+        public async System.Threading.Tasks.Task<decimal?> GetSicIndexDataPointNumberAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = await GetSicIndexDataPointNumberAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = await GetSicIndexDataPointNumberAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -2259,8 +2259,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetSicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2284,7 +2284,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2312,9 +2312,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -2323,10 +2323,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        public DataPointText GetSicIndexDataPointText (string identifier, string tag)
+        /// <returns>string</returns>
+        public string GetSicIndexDataPointText (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = GetSicIndexDataPointTextWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = GetSicIndexDataPointTextWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -2336,8 +2336,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        public ApiResponse< DataPointText > GetSicIndexDataPointTextWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetSicIndexDataPointTextWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2361,7 +2361,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2389,9 +2389,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -2400,10 +2400,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        public async System.Threading.Tasks.Task<DataPointText> GetSicIndexDataPointTextAsync (string identifier, string tag)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetSicIndexDataPointTextAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = await GetSicIndexDataPointTextAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = await GetSicIndexDataPointTextAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -2414,8 +2414,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetSicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetSicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2439,7 +2439,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2467,9 +2467,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -2806,10 +2806,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointNumber</returns>
-        public DataPointNumber GetStockMarketIndexDataPointNumber (string identifier, string tag)
+        /// <returns>decimal?</returns>
+        public decimal? GetStockMarketIndexDataPointNumber (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = GetStockMarketIndexDataPointNumberWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = GetStockMarketIndexDataPointNumberWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -2819,8 +2819,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointNumber</returns>
-        public ApiResponse< DataPointNumber > GetStockMarketIndexDataPointNumberWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of decimal?</returns>
+        public ApiResponse< decimal? > GetStockMarketIndexDataPointNumberWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2844,7 +2844,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2872,9 +2872,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -2883,10 +2883,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointNumber</returns>
-        public async System.Threading.Tasks.Task<DataPointNumber> GetStockMarketIndexDataPointNumberAsync (string identifier, string tag)
+        /// <returns>Task of decimal?</returns>
+        public async System.Threading.Tasks.Task<decimal?> GetStockMarketIndexDataPointNumberAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointNumber> localVarResponse = await GetStockMarketIndexDataPointNumberAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<decimal?> localVarResponse = await GetStockMarketIndexDataPointNumberAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -2897,8 +2897,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointNumber>> GetStockMarketIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (decimal?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetStockMarketIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2922,7 +2922,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2950,9 +2950,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointNumber>(localVarStatusCode,
+            return new ApiResponse<decimal?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointNumber) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointNumber)));
+                (decimal?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(decimal?)));
         }
 
         /// <summary>
@@ -2961,10 +2961,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>DataPointText</returns>
-        public DataPointText GetStockMarketIndexDataPointText (string identifier, string tag)
+        /// <returns>string</returns>
+        public string GetStockMarketIndexDataPointText (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = GetStockMarketIndexDataPointTextWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = GetStockMarketIndexDataPointTextWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
         }
 
@@ -2974,8 +2974,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>ApiResponse of DataPointText</returns>
-        public ApiResponse< DataPointText > GetStockMarketIndexDataPointTextWithHttpInfo (string identifier, string tag)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetStockMarketIndexDataPointTextWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2999,7 +2999,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3027,9 +3027,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -3038,10 +3038,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of DataPointText</returns>
-        public async System.Threading.Tasks.Task<DataPointText> GetStockMarketIndexDataPointTextAsync (string identifier, string tag)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetStockMarketIndexDataPointTextAsync (string identifier, string tag)
         {
-             ApiResponse<DataPointText> localVarResponse = await GetStockMarketIndexDataPointTextAsyncWithHttpInfo(identifier, tag);
+             ApiResponse<string> localVarResponse = await GetStockMarketIndexDataPointTextAsyncWithHttpInfo(identifier, tag);
              return localVarResponse.Data;
 
         }
@@ -3052,8 +3052,8 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
-        /// <returns>Task of ApiResponse (DataPointText)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DataPointText>> GetStockMarketIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetStockMarketIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3077,7 +3077,7 @@ namespace Intrinio.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "text/plain; charset=utf-8"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3105,9 +3105,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DataPointText>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DataPointText) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataPointText)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>

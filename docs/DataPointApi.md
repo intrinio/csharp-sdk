@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getdatapointnumber"></a>
 # **GetDataPointNumber**
-> DataPointNumber GetDataPointNumber (string identifier, string tag)
+> decimal? GetDataPointNumber (string identifier, string tag)
 
 Get a Data Point (Number)
 
@@ -38,7 +38,7 @@ namespace Example
 
             try
             {
-                DataPointNumber result = dataPointApi.GetDataPointNumber(identifier, tag);
+                decimal? result = dataPointApi.GetDataPointNumber(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,11 +59,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**decimal?**
 
 <a name="getdatapointtext"></a>
 # **GetDataPointText**
-> DataPointText GetDataPointText (string identifier, string tag)
+> string GetDataPointText (string identifier, string tag)
 
 Get a Data Point (Text)
 
@@ -91,7 +91,7 @@ namespace Example
 
             try
             {
-                DataPointText result = dataPointApi.GetDataPointText(identifier, tag);
+                string result = dataPointApi.GetDataPointText(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -112,5 +112,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**string**
 

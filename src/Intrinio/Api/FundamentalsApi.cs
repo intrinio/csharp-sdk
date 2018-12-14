@@ -88,10 +88,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>List&lt;Fundamental&gt;</returns>
-        List<Fundamental> LookupFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>Fundamental</returns>
+        Fundamental LookupFundamental (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod);
 
         /// <summary>
         /// Lookup a Fundamental
@@ -102,10 +102,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>ApiResponse of List&lt;Fundamental&gt;</returns>
-        ApiResponse<List<Fundamental>> LookupFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>ApiResponse of Fundamental</returns>
+        ApiResponse<Fundamental> LookupFundamentalWithHttpInfo (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -180,10 +180,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of List&lt;Fundamental&gt;</returns>
-        System.Threading.Tasks.Task<List<Fundamental>> LookupFundamentalAsync (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>Task of Fundamental</returns>
+        System.Threading.Tasks.Task<Fundamental> LookupFundamentalAsync (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod);
 
         /// <summary>
         /// Lookup a Fundamental
@@ -194,10 +194,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of ApiResponse (List&lt;Fundamental&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Fundamental>>> LookupFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>Task of ApiResponse (Fundamental)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Fundamental>> LookupFundamentalAsyncWithHttpInfo (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod);
         #endregion Asynchronous Operations
     }
 
@@ -733,12 +733,12 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>List&lt;Fundamental&gt;</returns>
-        public List<Fundamental> LookupFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>Fundamental</returns>
+        public Fundamental LookupFundamental (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod)
         {
-             ApiResponse<List<Fundamental>> localVarResponse = LookupFundamentalWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear);
+             ApiResponse<Fundamental> localVarResponse = LookupFundamentalWithHttpInfo(identifier, statementCode, fiscalYear, fiscalPeriod);
              return localVarResponse.Data;
         }
 
@@ -748,10 +748,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>ApiResponse of List&lt;Fundamental&gt;</returns>
-        public ApiResponse< List<Fundamental> > LookupFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>ApiResponse of Fundamental</returns>
+        public ApiResponse< Fundamental > LookupFundamentalWithHttpInfo (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -759,12 +759,12 @@ namespace Intrinio.Api
             // verify the required parameter 'statementCode' is set
             if (statementCode == null)
                 throw new ApiException(400, "Missing required parameter 'statementCode' when calling FundamentalsApi->LookupFundamental");
-            // verify the required parameter 'fiscalPeriod' is set
-            if (fiscalPeriod == null)
-                throw new ApiException(400, "Missing required parameter 'fiscalPeriod' when calling FundamentalsApi->LookupFundamental");
             // verify the required parameter 'fiscalYear' is set
             if (fiscalYear == null)
                 throw new ApiException(400, "Missing required parameter 'fiscalYear' when calling FundamentalsApi->LookupFundamental");
+            // verify the required parameter 'fiscalPeriod' is set
+            if (fiscalPeriod == null)
+                throw new ApiException(400, "Missing required parameter 'fiscalPeriod' when calling FundamentalsApi->LookupFundamental");
 
             var localVarPath = "/fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -789,8 +789,8 @@ namespace Intrinio.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (statementCode != null) localVarPathParams.Add("statement_code", Configuration.ApiClient.ParameterToString(statementCode)); // path parameter
-            if (fiscalPeriod != null) localVarPathParams.Add("fiscal_period", Configuration.ApiClient.ParameterToString(fiscalPeriod)); // path parameter
             if (fiscalYear != null) localVarPathParams.Add("fiscal_year", Configuration.ApiClient.ParameterToString(fiscalYear)); // path parameter
+            if (fiscalPeriod != null) localVarPathParams.Add("fiscal_period", Configuration.ApiClient.ParameterToString(fiscalPeriod)); // path parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -811,9 +811,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<Fundamental>>(localVarStatusCode,
+            return new ApiResponse<Fundamental>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Fundamental>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Fundamental>)));
+                (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
         }
 
         /// <summary>
@@ -822,12 +822,12 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of List&lt;Fundamental&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Fundamental>> LookupFundamentalAsync (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>Task of Fundamental</returns>
+        public async System.Threading.Tasks.Task<Fundamental> LookupFundamentalAsync (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod)
         {
-             ApiResponse<List<Fundamental>> localVarResponse = await LookupFundamentalAsyncWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear);
+             ApiResponse<Fundamental> localVarResponse = await LookupFundamentalAsyncWithHttpInfo(identifier, statementCode, fiscalYear, fiscalPeriod);
              return localVarResponse.Data;
 
         }
@@ -838,10 +838,10 @@ namespace Intrinio.Api
         /// <exception cref="Intrinio.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="statementCode">The statement code</param>
-        /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
-        /// <returns>Task of ApiResponse (List&lt;Fundamental&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Fundamental>>> LookupFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+        /// <param name="fiscalPeriod">The fiscal period</param>
+        /// <returns>Task of ApiResponse (Fundamental)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Fundamental>> LookupFundamentalAsyncWithHttpInfo (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -849,12 +849,12 @@ namespace Intrinio.Api
             // verify the required parameter 'statementCode' is set
             if (statementCode == null)
                 throw new ApiException(400, "Missing required parameter 'statementCode' when calling FundamentalsApi->LookupFundamental");
-            // verify the required parameter 'fiscalPeriod' is set
-            if (fiscalPeriod == null)
-                throw new ApiException(400, "Missing required parameter 'fiscalPeriod' when calling FundamentalsApi->LookupFundamental");
             // verify the required parameter 'fiscalYear' is set
             if (fiscalYear == null)
                 throw new ApiException(400, "Missing required parameter 'fiscalYear' when calling FundamentalsApi->LookupFundamental");
+            // verify the required parameter 'fiscalPeriod' is set
+            if (fiscalPeriod == null)
+                throw new ApiException(400, "Missing required parameter 'fiscalPeriod' when calling FundamentalsApi->LookupFundamental");
 
             var localVarPath = "/fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -879,8 +879,8 @@ namespace Intrinio.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (statementCode != null) localVarPathParams.Add("statement_code", Configuration.ApiClient.ParameterToString(statementCode)); // path parameter
-            if (fiscalPeriod != null) localVarPathParams.Add("fiscal_period", Configuration.ApiClient.ParameterToString(fiscalPeriod)); // path parameter
             if (fiscalYear != null) localVarPathParams.Add("fiscal_year", Configuration.ApiClient.ParameterToString(fiscalYear)); // path parameter
+            if (fiscalPeriod != null) localVarPathParams.Add("fiscal_period", Configuration.ApiClient.ParameterToString(fiscalPeriod)); // path parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -901,9 +901,9 @@ namespace Intrinio.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<Fundamental>>(localVarStatusCode,
+            return new ApiResponse<Fundamental>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Fundamental>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Fundamental>)));
+                (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
         }
 
     }

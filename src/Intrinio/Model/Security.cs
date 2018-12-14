@@ -38,6 +38,7 @@ namespace Intrinio.Model
         /// <param name="CompositeTicker">The country-composite ticker.</param>
         /// <param name="AlternateTickers">Alternate formats of the common ticker.</param>
         /// <param name="Figi">The exchange-level OpenFIGI identifier.</param>
+        /// <param name="Cik">Central Index Key issued by the SEC, which is the unique identifier for all owner filings.</param>
         /// <param name="CompositeFigi">The country-composite OpenFIGI identifier.</param>
         /// <param name="ShareClassFigi">The global-composite OpenFIGI identifier.</param>
         /// <param name="FigiUniqueid">The OpenFIGI unique ID.</param>
@@ -51,7 +52,7 @@ namespace Intrinio.Model
         /// <param name="LastStockPriceAdjustment">The date of the last stock price adjustment (dividend, split, etc).</param>
         /// <param name="LastCorporateAction">The date of the last corporate action.</param>
         /// <param name="PreviousTickers">Previous tickers used by this security.</param>
-        public Security(string Id = default(string), string CompanyId = default(string), string Name = default(string), string Type = default(string), string Code = default(string), string ShareClass = default(string), string Currency = default(string), decimal? RoundLotSize = default(decimal?), string Ticker = default(string), string ExchangeTicker = default(string), string CompositeTicker = default(string), List<string> AlternateTickers = default(List<string>), string Figi = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), string FigiUniqueid = default(string), bool? Active = default(bool?), bool? Etf = default(bool?), bool? Delisted = default(bool?), bool? PrimaryListing = default(bool?), bool? PrimarySecurity = default(bool?), DateTime? FirstStockPrice = default(DateTime?), DateTime? LastStockPrice = default(DateTime?), DateTime? LastStockPriceAdjustment = default(DateTime?), DateTime? LastCorporateAction = default(DateTime?), List<string> PreviousTickers = default(List<string>))
+        public Security(string Id = default(string), string CompanyId = default(string), string Name = default(string), string Type = default(string), string Code = default(string), string ShareClass = default(string), string Currency = default(string), decimal? RoundLotSize = default(decimal?), string Ticker = default(string), string ExchangeTicker = default(string), string CompositeTicker = default(string), List<string> AlternateTickers = default(List<string>), string Figi = default(string), string Cik = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), string FigiUniqueid = default(string), bool? Active = default(bool?), bool? Etf = default(bool?), bool? Delisted = default(bool?), bool? PrimaryListing = default(bool?), bool? PrimarySecurity = default(bool?), DateTime? FirstStockPrice = default(DateTime?), DateTime? LastStockPrice = default(DateTime?), DateTime? LastStockPriceAdjustment = default(DateTime?), DateTime? LastCorporateAction = default(DateTime?), List<string> PreviousTickers = default(List<string>))
         {
             this.Id = Id;
             this.CompanyId = CompanyId;
@@ -66,6 +67,7 @@ namespace Intrinio.Model
             this.CompositeTicker = CompositeTicker;
             this.AlternateTickers = AlternateTickers;
             this.Figi = Figi;
+            this.Cik = Cik;
             this.CompositeFigi = CompositeFigi;
             this.ShareClassFigi = ShareClassFigi;
             this.FigiUniqueid = FigiUniqueid;
@@ -171,6 +173,13 @@ namespace Intrinio.Model
         /// <value>The exchange-level OpenFIGI identifier</value>
         [DataMember(Name="figi", EmitDefaultValue=false)]
         public string Figi { get; set; }
+
+        /// <summary>
+        /// Central Index Key issued by the SEC, which is the unique identifier for all owner filings
+        /// </summary>
+        /// <value>Central Index Key issued by the SEC, which is the unique identifier for all owner filings</value>
+        [DataMember(Name="cik", EmitDefaultValue=false)]
+        public string Cik { get; set; }
 
         /// <summary>
         /// The country-composite OpenFIGI identifier
@@ -288,6 +297,7 @@ namespace Intrinio.Model
             sb.Append("  CompositeTicker: ").Append(CompositeTicker).Append("\n");
             sb.Append("  AlternateTickers: ").Append(AlternateTickers).Append("\n");
             sb.Append("  Figi: ").Append(Figi).Append("\n");
+            sb.Append("  Cik: ").Append(Cik).Append("\n");
             sb.Append("  CompositeFigi: ").Append(CompositeFigi).Append("\n");
             sb.Append("  ShareClassFigi: ").Append(ShareClassFigi).Append("\n");
             sb.Append("  FigiUniqueid: ").Append(FigiUniqueid).Append("\n");
@@ -401,6 +411,11 @@ namespace Intrinio.Model
                     this.Figi.Equals(input.Figi))
                 ) && 
                 (
+                    this.Cik == input.Cik ||
+                    (this.Cik != null &&
+                    this.Cik.Equals(input.Cik))
+                ) && 
+                (
                     this.CompositeFigi == input.CompositeFigi ||
                     (this.CompositeFigi != null &&
                     this.CompositeFigi.Equals(input.CompositeFigi))
@@ -502,6 +517,8 @@ namespace Intrinio.Model
                     hashCode = hashCode * 59 + this.AlternateTickers.GetHashCode();
                 if (this.Figi != null)
                     hashCode = hashCode * 59 + this.Figi.GetHashCode();
+                if (this.Cik != null)
+                    hashCode = hashCode * 59 + this.Cik.GetHashCode();
                 if (this.CompositeFigi != null)
                     hashCode = hashCode * 59 + this.CompositeFigi.GetHashCode();
                 if (this.ShareClassFigi != null)

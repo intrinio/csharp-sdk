@@ -51,7 +51,7 @@ namespace Example
             var sector = sector_example;  // string | Industry sector (optional) 
             var industryCategory = industryCategory_example;  // string | Industry category (optional) 
             var industryGroup = industryGroup_example;  // string | Industry group (optional) 
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -117,7 +117,7 @@ namespace Example
             var type = type_example;  // string | Only of the given type (optional) 
             var startDate = 2013-10-20;  // DateTime? | Only on or after the given date (optional) 
             var endDate = 2013-10-20;  // DateTime? | Only on or after the given date (optional) 
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -175,7 +175,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -226,7 +226,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 <a name="getcompanydatapointnumber"></a>
 # **GetCompanyDataPointNumber**
-> DataPointNumber GetCompanyDataPointNumber (string identifier, string tag)
+> decimal? GetCompanyDataPointNumber (string identifier, string tag)
 
 Get Company Data Point (Number)
 
@@ -331,7 +331,7 @@ namespace Example
 
             try
             {
-                DataPointNumber result = companyApi.GetCompanyDataPointNumber(identifier, tag);
+                decimal? result = companyApi.GetCompanyDataPointNumber(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -352,11 +352,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**decimal?**
 
 <a name="getcompanydatapointtext"></a>
 # **GetCompanyDataPointText**
-> DataPointText GetCompanyDataPointText (string identifier, string tag)
+> string GetCompanyDataPointText (string identifier, string tag)
 
 Get Company Data Point (Text)
 
@@ -384,7 +384,7 @@ namespace Example
 
             try
             {
-                DataPointText result = companyApi.GetCompanyDataPointText(identifier, tag);
+                string result = companyApi.GetCompanyDataPointText(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**string**
 
 <a name="getcompanyfilings"></a>
 # **GetCompanyFilings**
@@ -433,7 +433,7 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -486,7 +486,7 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -544,7 +544,7 @@ namespace Example
             var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = 2013-10-20;  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -602,7 +602,7 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -655,7 +655,7 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = identifier_example;  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 
 <a name="lookupcompanyfundamental"></a>
 # **LookupCompanyFundamental**
-> List<Fundamental> LookupCompanyFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
+> Fundamental LookupCompanyFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
 
 Lookup a Fundamental for a Company
 
@@ -714,7 +714,7 @@ namespace Example
 
             try
             {
-                List&lt;Fundamental&gt; result = companyApi.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
+                Fundamental result = companyApi.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<Fundamental>**](Fundamental.md)
+[**Fundamental**](Fundamental.md)
 
 <a name="searchcompanies"></a>
 # **SearchCompanies**

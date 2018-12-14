@@ -38,7 +38,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -87,7 +87,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
             try
             {
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 <a name="getsecuritydatapointnumber"></a>
 # **GetSecurityDataPointNumber**
-> DataPointNumber GetSecurityDataPointNumber (string identifier, string tag)
+> decimal? GetSecurityDataPointNumber (string identifier, string tag)
 
 Get Security Data Point (Number)
 
@@ -138,12 +138,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var tag = "52_week_high";  // string | An Intrinio data tag ID or code-name
 
             try
             {
-                DataPointNumber result = securityApi.GetSecurityDataPointNumber(identifier, tag);
+                decimal? result = securityApi.GetSecurityDataPointNumber(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -164,11 +164,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**decimal?**
 
 <a name="getsecuritydatapointtext"></a>
 # **GetSecurityDataPointText**
-> DataPointText GetSecurityDataPointText (string identifier, string tag)
+> string GetSecurityDataPointText (string identifier, string tag)
 
 Get Security Data Point (Text)
 
@@ -191,12 +191,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var tag = "figi";  // string | An Intrinio data tag ID or code-name
 
             try
             {
-                DataPointText result = securityApi.GetSecurityDataPointText(identifier, tag);
+                string result = securityApi.GetSecurityDataPointText(identifier, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**string**
 
 <a name="getsecurityhistoricaldata"></a>
 # **GetSecurityHistoricalData**
@@ -244,13 +244,13 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-            var tag = tag_example;  // string | An Intrinio data tag ID or code-name
-            var type = type_example;  // string | Filter by type, when applicable (optional) 
-            var startDate = 2013-10-20;  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Get historical date on or before this date (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var tag = "volume";  // string | An Intrinio data tag ID or code-name
+            var type = "";  // string | Filter by type, when applicable (optional) 
+            var startDate = "";  // DateTime? | Get historical data on or after this date (optional) 
+            var endDate = "";  // DateTime? | Get historical date on or before this date (optional) 
+            var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -307,10 +307,10 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-            var startDate = 2013-10-20;  // DateTime? | Return price adjustments on or after the date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Return price adjustments on or before the date (optional) 
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var startDate = "2018-01-01";  // DateTime? | Return price adjustments on or after the date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Return price adjustments on or before the date (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -364,11 +364,11 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var identifier = identifier_example;  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-            var startDate = 2013-10-20;  // DateTime? | Return prices on or after the date (optional) 
-            var endDate = 2013-10-20;  // DateTime? | Return prices on or before the date (optional) 
-            var frequency = frequency_example;  // string | Return stock prices in the given frequency (optional)  (default to daily)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var startDate = "2018-01-01";  // DateTime? | Return prices on or after the date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Return prices on or before the date (optional) 
+            var frequency = "daily";  // string | Return stock prices in the given frequency (optional)  (default to daily)
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -423,7 +423,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var logic = new SecurityScreenGroup(); // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups (optional) 
+            var logic = new SecurityScreenGroup(); // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions. (optional) 
             var orderColumn = orderColumn_example;  // string | Results returned sorted by this column (optional) 
             var orderDirection = orderDirection_example;  // string | Sort order to use with the order_column (optional)  (default to asc)
             var primaryOnly = true;  // bool? | Return only primary securities (optional)  (default to false)
@@ -446,7 +446,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups | [optional] 
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional] 
  **orderColumn** | **string**| Results returned sorted by this column | [optional] 
  **orderDirection** | **string**| Sort order to use with the order_column | [optional] [default to asc]
  **primaryOnly** | **bool?**| Return only primary securities | [optional] [default to false]
@@ -480,7 +480,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var query = query_example;  // string | 
+            var query = "Apple";  // string | 
 
             try
             {

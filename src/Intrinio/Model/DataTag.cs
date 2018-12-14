@@ -62,7 +62,7 @@ namespace Intrinio.Model
         /// <param name="Balance">Whether the Data Tag represents a credit or debit.</param>
         /// <param name="Type">The nature of the Data Tag, operating or nonoperating.</param>
         /// <param name="Unit">The unit of the Data Tag.</param>
-        public DataTag(string Id = default(string), string Name = default(string), string Tag = default(string), string StatementCode = default(string), StatementTypeEnum? StatementType = default(StatementTypeEnum?), string Parent = default(string), string Factor = default(string), decimal? Balance = default(decimal?), string Type = default(string), string Unit = default(string))
+        public DataTag(string Id = default(string), string Name = default(string), string Tag = default(string), string StatementCode = default(string), StatementTypeEnum? StatementType = default(StatementTypeEnum?), string Parent = default(string), string Factor = default(string), string Balance = default(string), string Type = default(string), string Unit = default(string))
         {
             this.Id = Id;
             this.Name = Name;
@@ -124,7 +124,7 @@ namespace Intrinio.Model
         /// </summary>
         /// <value>Whether the Data Tag represents a credit or debit</value>
         [DataMember(Name="balance", EmitDefaultValue=false)]
-        public decimal? Balance { get; set; }
+        public string Balance { get; set; }
 
         /// <summary>
         /// The nature of the Data Tag, operating or nonoperating

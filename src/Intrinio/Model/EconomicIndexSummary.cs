@@ -98,7 +98,6 @@ namespace Intrinio.Model
         /// </summary>
         /// <value>When the Index was updated last</value>
         [DataMember(Name="last_updated", EmitDefaultValue=false)]
-        [JsonConverter(typeof(SwaggerDateConverter))]
         public DateTime? LastUpdated { get; set; }
 
         /// <summary>

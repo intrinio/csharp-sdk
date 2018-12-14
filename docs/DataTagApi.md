@@ -40,7 +40,7 @@ namespace Example
             var parent = parent_example;  // string | ID of tag parent (optional) 
             var statementCode = statementCode_example;  // string | Statement Code (optional) 
             var fsTemplate = fsTemplate_example;  // string | Template (optional)  (default to industrial)
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
@@ -96,7 +96,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataTagApi = new DataTagApi();
-            var nextPage = nextPage_example;  // string | Gets the next page of data from a previous API call (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {

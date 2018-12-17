@@ -86,7 +86,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetSecurityDataPointNumber(identifier, tag);
-            //Assert.IsInstanceOf<DataPointNumber> (response, "response is DataPointNumber");
+            //Assert.IsInstanceOf<decimal?> (response, "response is decimal?");
         }
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetSecurityDataPointText(identifier, tag);
-            //Assert.IsInstanceOf<DataPointText> (response, "response is DataPointText");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>

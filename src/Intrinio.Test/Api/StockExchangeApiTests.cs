@@ -63,7 +63,7 @@ namespace Intrinio.Test
             //string country = null;
             //string countryCode = null;
             //var response = instance.FilterStockExchanges(city, country, countryCode);
-            //Assert.IsInstanceOf<List<StockExchange>> (response, "response is List<StockExchange>");
+            //Assert.IsInstanceOf<ApiResponseStockExchanges> (response, "response is ApiResponseStockExchanges");
         }
         
         /// <summary>
@@ -74,7 +74,7 @@ namespace Intrinio.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetAllStockExchanges();
-            //Assert.IsInstanceOf<List<StockExchange>> (response, "response is List<StockExchange>");
+            //Assert.IsInstanceOf<ApiResponseStockExchanges> (response, "response is ApiResponseStockExchanges");
         }
         
         /// <summary>

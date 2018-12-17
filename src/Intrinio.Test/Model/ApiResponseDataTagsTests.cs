@@ -59,12 +59,12 @@ namespace Intrinio.Test
 
 
         /// <summary>
-        /// Test the property 'DataTags'
+        /// Test the property 'Tags'
         /// </summary>
         [Test]
-        public void DataTagsTest()
+        public void TagsTest()
         {
-            // TODO unit test for the property 'DataTags'
+            // TODO unit test for the property 'Tags'
         }
         /// <summary>
         /// Test the property 'NextPage'

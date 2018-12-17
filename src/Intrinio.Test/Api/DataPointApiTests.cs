@@ -11,7 +11,6 @@ using NUnit.Framework;
 
 using Intrinio.Client;
 using Intrinio.Api;
-using Intrinio.Model;
 
 namespace Intrinio.Test
 {
@@ -62,7 +61,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetDataPointNumber(identifier, tag);
-            //Assert.IsInstanceOf<DataPointNumber> (response, "response is DataPointNumber");
+            //Assert.IsInstanceOf<decimal?> (response, "response is decimal?");
         }
         
         /// <summary>
@@ -75,7 +74,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetDataPointText(identifier, tag);
-            //Assert.IsInstanceOf<DataPointText> (response, "response is DataPointText");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
     }

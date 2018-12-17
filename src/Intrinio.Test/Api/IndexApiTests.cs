@@ -110,7 +110,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetEconomicIndexDataPointNumber(identifier, tag);
-            //Assert.IsInstanceOf<DataPointNumber> (response, "response is DataPointNumber");
+            //Assert.IsInstanceOf<decimal?> (response, "response is decimal?");
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetEconomicIndexDataPointText(identifier, tag);
-            //Assert.IsInstanceOf<DataPointText> (response, "response is DataPointText");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -141,7 +141,7 @@ namespace Intrinio.Test
             //string sortOrder = null;
             //string nextPage = null;
             //var response = instance.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<ApiResponseEconomicIndexHistoricalData> (response, "response is ApiResponseEconomicIndexHistoricalData");
         }
         
         /// <summary>
@@ -166,7 +166,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetSicIndexDataPointNumber(identifier, tag);
-            //Assert.IsInstanceOf<DataPointNumber> (response, "response is DataPointNumber");
+            //Assert.IsInstanceOf<decimal?> (response, "response is decimal?");
         }
         
         /// <summary>
@@ -179,7 +179,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetSicIndexDataPointText(identifier, tag);
-            //Assert.IsInstanceOf<DataPointText> (response, "response is DataPointText");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -222,7 +222,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetStockMarketIndexDataPointNumber(identifier, tag);
-            //Assert.IsInstanceOf<DataPointNumber> (response, "response is DataPointNumber");
+            //Assert.IsInstanceOf<decimal?> (response, "response is decimal?");
         }
         
         /// <summary>
@@ -235,7 +235,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetStockMarketIndexDataPointText(identifier, tag);
-            //Assert.IsInstanceOf<DataPointText> (response, "response is DataPointText");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>

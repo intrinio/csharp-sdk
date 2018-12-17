@@ -97,10 +97,10 @@ namespace Intrinio.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string statementCode = null;
-            //string fiscalPeriod = null;
             //int? fiscalYear = null;
-            //var response = instance.LookupFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
-            //Assert.IsInstanceOf<List<Fundamental>> (response, "response is List<Fundamental>");
+            //string fiscalPeriod = null;
+            //var response = instance.LookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod);
+            //Assert.IsInstanceOf<Fundamental> (response, "response is Fundamental");
         }
         
     }

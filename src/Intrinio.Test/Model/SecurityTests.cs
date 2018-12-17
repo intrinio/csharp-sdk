@@ -163,6 +163,14 @@ namespace Intrinio.Test
             // TODO unit test for the property 'Figi'
         }
         /// <summary>
+        /// Test the property 'Cik'
+        /// </summary>
+        [Test]
+        public void CikTest()
+        {
+            // TODO unit test for the property 'Cik'
+        }
+        /// <summary>
         /// Test the property 'CompositeFigi'
         /// </summary>
         [Test]

@@ -137,7 +137,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetCompanyDataPointNumber(identifier, tag);
-            //Assert.IsInstanceOf<DataPointNumber> (response, "response is DataPointNumber");
+            //Assert.IsInstanceOf<decimal?> (response, "response is decimal?");
         }
         
         /// <summary>
@@ -150,7 +150,7 @@ namespace Intrinio.Test
             //string identifier = null;
             //string tag = null;
             //var response = instance.GetCompanyDataPointText(identifier, tag);
-            //Assert.IsInstanceOf<DataPointText> (response, "response is DataPointText");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -235,7 +235,7 @@ namespace Intrinio.Test
             //string fiscalPeriod = null;
             //int? fiscalYear = null;
             //var response = instance.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
-            //Assert.IsInstanceOf<List<Fundamental>> (response, "response is List<Fundamental>");
+            //Assert.IsInstanceOf<Fundamental> (response, "response is Fundamental");
         }
         
         /// <summary>

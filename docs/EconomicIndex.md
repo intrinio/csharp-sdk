@@ -1,4 +1,4 @@
-# Intrinio.Model.EconomicIndex
+# Intrinio.SDK.Model.EconomicIndex
 ## Properties
 
 Name | Type | Description | Notes

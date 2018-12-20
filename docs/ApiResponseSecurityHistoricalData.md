@@ -1,4 +1,4 @@
-# Intrinio.Model.ApiResponseSecurityHistoricalData
+# Intrinio.SDK.Model.ApiResponseSecurityHistoricalData
 ## Properties
 
 Name | Type | Description | Notes

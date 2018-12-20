@@ -1,4 +1,4 @@
-# Intrinio.Model.StandardizedFinancial
+# Intrinio.SDK.Model.StandardizedFinancial
 ## Properties
 
 Name | Type | Description | Notes

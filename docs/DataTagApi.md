@@ -1,4 +1,4 @@
-# Intrinio.Api.DataTagApi
+# Intrinio.SDK.Api.DataTagApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -22,15 +22,15 @@ Returns Data Tags that match the given filters
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class FilterDataTagsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -83,15 +83,15 @@ Returns All Data Tags
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetAllDataTagsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -134,15 +134,15 @@ Returns a Data Tag with the specified `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetDataTagByIdExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -185,15 +185,15 @@ Searches for Data Tags matching the text `query`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class SearchDataTagsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 

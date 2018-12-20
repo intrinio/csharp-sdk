@@ -1,4 +1,4 @@
-# Intrinio.Model.ReportedFinancial
+# Intrinio.SDK.Model.ReportedFinancial
 ## Properties
 
 Name | Type | Description | Notes

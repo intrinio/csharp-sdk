@@ -1,4 +1,4 @@
-# Intrinio.Api.FundamentalsApi
+# Intrinio.SDK.Api.FundamentalsApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -22,15 +22,15 @@ Retrieves detailed fundamental data for the given `fundamental_id`.
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetFundamentalByIdExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -73,15 +73,15 @@ Returns the As-Reported Financials directly from the financial statements of the
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetFundamentalReportedFinancialsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -124,15 +124,15 @@ Returns professional-grade historical financial data. This data is standardized,
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetFundamentalStandardizedFinancialsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -175,15 +175,15 @@ Returns the Fundamental for the Company with the given `identifier` and with the
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class LookupFundamentalExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 

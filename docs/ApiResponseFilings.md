@@ -1,4 +1,4 @@
-# Intrinio.Model.ApiResponseFilings
+# Intrinio.SDK.Model.ApiResponseFilings
 ## Properties
 
 Name | Type | Description | Notes

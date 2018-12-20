@@ -1,4 +1,4 @@
-# Intrinio.Api.FilingApi
+# Intrinio.SDK.Api.FilingApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -21,15 +21,15 @@ Returns filings that match the specified filters
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class FilterFilingsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -80,15 +80,15 @@ Returns all filings
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetAllFilingsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -131,15 +131,15 @@ Return the filing with the given ID
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetFilingByIdExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 

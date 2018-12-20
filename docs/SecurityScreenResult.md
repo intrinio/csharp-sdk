@@ -1,4 +1,4 @@
-# Intrinio.Model.SecurityScreenResult
+# Intrinio.SDK.Model.SecurityScreenResult
 ## Properties
 
 Name | Type | Description | Notes

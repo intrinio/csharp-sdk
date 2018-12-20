@@ -1,4 +1,4 @@
-# Intrinio.Model.ApiResponseStockMarketIndices
+# Intrinio.SDK.Model.ApiResponseStockMarketIndices
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Intrinio.Api.CompanyApi
+# Intrinio.SDK.Api.CompanyApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -32,15 +32,15 @@ Returns Companies matching the specified filters
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class FilterCompaniesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -95,15 +95,15 @@ Returns Fundamentals for the Company with the given `identifier` and matching th
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class FilterCompanyFundamentalsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -162,15 +162,15 @@ Get All Companies
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetAllCompaniesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -213,15 +213,15 @@ Returns all news for all companies
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetAllCompanyNewsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -262,15 +262,15 @@ Get a Company by ID
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanyExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -313,15 +313,15 @@ Returns a numeric value for the given `tag` for the Company with the given `iden
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanyDataPointNumberExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -366,15 +366,15 @@ Returns a text value for the given `tag` for the Company with the given `identif
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanyDataPointTextExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -419,15 +419,15 @@ Returns a complete list of SEC filings for the Company with the given `identifie
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanyFilingsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -472,15 +472,15 @@ Returns all Fundamentals for the Company with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanyFundamentalsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -525,15 +525,15 @@ Returns historical values for the given `tag` and the Company with the given `id
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanyHistoricalDataExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -588,15 +588,15 @@ Returns news for the Company with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanyNewsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -641,15 +641,15 @@ Return Securities for the Company with `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetCompanySecuritiesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -694,15 +694,15 @@ Returns the Fundamental for the Company with the given `identifier` and with the
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class LookupCompanyFundamentalExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -751,15 +751,15 @@ Searches for Companies matching the text `query`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class SearchCompaniesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 

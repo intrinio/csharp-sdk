@@ -1,4 +1,4 @@
-# Intrinio.Api.StockExchangeApi
+# Intrinio.SDK.Api.StockExchangeApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -24,15 +24,15 @@ Return Stock Exchanges matching the given filters
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class FilterStockExchangesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -79,15 +79,15 @@ Return All Stock Exchanges
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetAllStockExchangesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -124,15 +124,15 @@ Get Stock Exchange by ID
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetStockExchangeByIdExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -175,15 +175,15 @@ Return stock price adjustments for the Stock Exchange with the given `identifier
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetStockExchangePriceAdjustmentsExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -230,15 +230,15 @@ Return daily Stock Prices for Securities on the Stock Exchange with `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetStockExchangePricesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -285,15 +285,15 @@ Return Securities traded on the Stock Exchange with `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetStockExchangeSecuritiesExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 

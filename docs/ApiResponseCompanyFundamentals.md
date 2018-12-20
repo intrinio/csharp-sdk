@@ -1,4 +1,4 @@
-# Intrinio.Model.ApiResponseCompanyFundamentals
+# Intrinio.SDK.Model.ApiResponseCompanyFundamentals
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Intrinio.Model.ApiResponseStockExchanges
+# Intrinio.SDK.Model.ApiResponseStockExchanges
 ## Properties
 
 Name | Type | Description | Notes

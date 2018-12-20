@@ -1,4 +1,4 @@
-# Intrinio.Model.ApiResponseEconomicIndices
+# Intrinio.SDK.Model.ApiResponseEconomicIndices
 ## Properties
 
 Name | Type | Description | Notes

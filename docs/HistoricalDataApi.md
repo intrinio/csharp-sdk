@@ -1,4 +1,4 @@
-# Intrinio.Api.HistoricalDataApi
+# Intrinio.SDK.Api.HistoricalDataApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -19,15 +19,15 @@ Returns historical values for the given `tag` and the entity represented by the 
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetHistoricalDataExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 

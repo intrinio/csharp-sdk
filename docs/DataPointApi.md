@@ -1,4 +1,4 @@
-# Intrinio.Api.DataPointApi
+# Intrinio.SDK.Api.DataPointApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -20,15 +20,15 @@ Returns a numeric value for the given `tag` and the entity with the given `ident
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetDataPointNumberExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
@@ -73,15 +73,15 @@ Returns a text value for the given `tag` and the entity with the given `identifi
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class GetDataPointTextExample
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 

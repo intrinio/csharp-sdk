@@ -35,9 +35,9 @@ Run the following command to generate the DLL
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 ```
 <a name="packaging"></a>
 ## Packaging
@@ -47,7 +47,7 @@ A `.nuspec` is included with the project.
 This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
 
 ```
-nuget pack -Build -OutputDirectory out Intrinio.csproj
+nuget pack -Build -OutputDirectory out Intrinio.SDK.csproj
 ```
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
@@ -63,15 +63,15 @@ Code examples for Intrinio SDKs are available at https://github.com/intrinio/sdk
 ```csharp
 using System;
 using System.Diagnostics;
-using Intrinio.Api;
-using Intrinio.Client;
-using Intrinio.Model;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
 
 namespace Example
 {
     public class Example
     {
-        public void main()
+        public static void Main()
         {
             Configuration.Default.ApiKey.Add("api_key", "YOUR_API_KEY");
 

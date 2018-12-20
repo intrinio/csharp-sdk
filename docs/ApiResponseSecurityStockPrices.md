@@ -1,4 +1,4 @@
-# Intrinio.Model.ApiResponseSecurityStockPrices
+# Intrinio.SDK.Model.ApiResponseSecurityStockPrices
 ## Properties
 
 Name | Type | Description | Notes

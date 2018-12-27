@@ -17,7 +17,7 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get All Economic Indices
+        /// All Economic Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -28,7 +28,7 @@ namespace Intrinio.SDK.Api
         ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null);
 
         /// <summary>
-        /// Get All Economic Indices
+        /// All Economic Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -38,7 +38,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
         ApiResponse<ApiResponseEconomicIndices> GetAllEconomicIndicesWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get All SIC Indices
+        /// All SIC Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -49,7 +49,7 @@ namespace Intrinio.SDK.Api
         ApiResponseSICIndices GetAllSicIndices (string nextPage = null);
 
         /// <summary>
-        /// Get All SIC Indices
+        /// All SIC Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -59,7 +59,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSICIndices</returns>
         ApiResponse<ApiResponseSICIndices> GetAllSicIndicesWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get All Stock Market Indices
+        /// All Stock Market Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -70,7 +70,7 @@ namespace Intrinio.SDK.Api
         ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null);
 
         /// <summary>
-        /// Get All Stock Market Indices
+        /// All Stock Market Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -80,7 +80,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
         ApiResponse<ApiResponseStockMarketIndices> GetAllStockMarketIndicesWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get an Economic Index by ID
+        /// Lookup Economic Index
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +91,7 @@ namespace Intrinio.SDK.Api
         EconomicIndex GetEconomicIndexById (string identifier);
 
         /// <summary>
-        /// Get an Economic Index by ID
+        /// Lookup Economic Index
         /// </summary>
         /// <remarks>
         /// 
@@ -101,7 +101,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of EconomicIndex</returns>
         ApiResponse<EconomicIndex> GetEconomicIndexByIdWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Economic Index Data Point (Number)
+        /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -113,7 +113,7 @@ namespace Intrinio.SDK.Api
         decimal? GetEconomicIndexDataPointNumber (string identifier, string tag);
 
         /// <summary>
-        /// Get Economic Index Data Point (Number)
+        /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -124,7 +124,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetEconomicIndexDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Economic Index Data Point (Text)
+        /// Data Point (Text) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -136,7 +136,7 @@ namespace Intrinio.SDK.Api
         string GetEconomicIndexDataPointText (string identifier, string tag);
 
         /// <summary>
-        /// Get Economic Index Data Point (Text)
+        /// Data Point (Text) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -147,7 +147,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetEconomicIndexDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Economic Index Historical Data
+        /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
@@ -164,7 +164,7 @@ namespace Intrinio.SDK.Api
         ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Economic Index Historical Data
+        /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
@@ -180,7 +180,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseEconomicIndexHistoricalData</returns>
         ApiResponse<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
-        /// Get an SIC Index by ID
+        /// Lookup SIC Index
         /// </summary>
         /// <remarks>
         /// 
@@ -191,7 +191,7 @@ namespace Intrinio.SDK.Api
         SICIndex GetSicIndexById (string identifier);
 
         /// <summary>
-        /// Get an SIC Index by ID
+        /// Lookup SIC Index
         /// </summary>
         /// <remarks>
         /// 
@@ -201,7 +201,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of SICIndex</returns>
         ApiResponse<SICIndex> GetSicIndexByIdWithHttpInfo (string identifier);
         /// <summary>
-        /// Get SIC Index Data Point (Number)
+        /// Data Point (Number) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -213,7 +213,7 @@ namespace Intrinio.SDK.Api
         decimal? GetSicIndexDataPointNumber (string identifier, string tag);
 
         /// <summary>
-        /// Get SIC Index Data Point (Number)
+        /// Data Point (Number) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -224,7 +224,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetSicIndexDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get SIC Index Data Point (Text)
+        /// Data Point (Text) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -236,7 +236,7 @@ namespace Intrinio.SDK.Api
         string GetSicIndexDataPointText (string identifier, string tag);
 
         /// <summary>
-        /// Get SIC Index Data Point (Text)
+        /// Data Point (Text) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -247,7 +247,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetSicIndexDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get SIC Index Historical Data
+        /// Historical Data for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
@@ -264,7 +264,7 @@ namespace Intrinio.SDK.Api
         ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get SIC Index Historical Data
+        /// Historical Data for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
@@ -280,7 +280,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSICIndexHistoricalData</returns>
         ApiResponse<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
-        /// Get a Stock Market Index by ID
+        /// Lookup Stock Market Index
         /// </summary>
         /// <remarks>
         /// 
@@ -291,7 +291,7 @@ namespace Intrinio.SDK.Api
         StockMarketIndex GetStockMarketIndexById (string identifier);
 
         /// <summary>
-        /// Get a Stock Market Index by ID
+        /// Lookup Stock Market Index
         /// </summary>
         /// <remarks>
         /// 
@@ -301,7 +301,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of StockMarketIndex</returns>
         ApiResponse<StockMarketIndex> GetStockMarketIndexByIdWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Stock Market Index Data Point (Number)
+        /// Data Point (Number) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -313,7 +313,7 @@ namespace Intrinio.SDK.Api
         decimal? GetStockMarketIndexDataPointNumber (string identifier, string tag);
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Number)
+        /// Data Point (Number) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -324,7 +324,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetStockMarketIndexDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Stock Market Index Data Point (Text)
+        /// Data Point (Text) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -336,7 +336,7 @@ namespace Intrinio.SDK.Api
         string GetStockMarketIndexDataPointText (string identifier, string tag);
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Text)
+        /// Data Point (Text) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -347,7 +347,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetStockMarketIndexDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Stock Market Index Historical Data
+        /// Historical Data for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
@@ -364,7 +364,7 @@ namespace Intrinio.SDK.Api
         ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Market Index Historical Data
+        /// Historical Data for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
@@ -445,7 +445,7 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get All Economic Indices
+        /// All Economic Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -456,7 +456,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseEconomicIndices> GetAllEconomicIndicesAsync (string nextPage = null);
 
         /// <summary>
-        /// Get All Economic Indices
+        /// All Economic Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -466,7 +466,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get All SIC Indices
+        /// All SIC Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -477,7 +477,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseSICIndices> GetAllSicIndicesAsync (string nextPage = null);
 
         /// <summary>
-        /// Get All SIC Indices
+        /// All SIC Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -487,7 +487,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> GetAllSicIndicesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get All Stock Market Indices
+        /// All Stock Market Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -498,7 +498,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseStockMarketIndices> GetAllStockMarketIndicesAsync (string nextPage = null);
 
         /// <summary>
-        /// Get All Stock Market Indices
+        /// All Stock Market Indices
         /// </summary>
         /// <remarks>
         /// 
@@ -508,7 +508,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> GetAllStockMarketIndicesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get an Economic Index by ID
+        /// Lookup Economic Index
         /// </summary>
         /// <remarks>
         /// 
@@ -519,7 +519,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<EconomicIndex> GetEconomicIndexByIdAsync (string identifier);
 
         /// <summary>
-        /// Get an Economic Index by ID
+        /// Lookup Economic Index
         /// </summary>
         /// <remarks>
         /// 
@@ -529,7 +529,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (EconomicIndex)</returns>
         System.Threading.Tasks.Task<ApiResponse<EconomicIndex>> GetEconomicIndexByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Economic Index Data Point (Number)
+        /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -541,7 +541,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<decimal?> GetEconomicIndexDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get Economic Index Data Point (Number)
+        /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -552,7 +552,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetEconomicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Economic Index Data Point (Text)
+        /// Data Point (Text) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -564,7 +564,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<string> GetEconomicIndexDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get Economic Index Data Point (Text)
+        /// Data Point (Text) for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
@@ -575,7 +575,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetEconomicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Economic Index Historical Data
+        /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
@@ -592,7 +592,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Economic Index Historical Data
+        /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
@@ -608,7 +608,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndexHistoricalData)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
-        /// Get an SIC Index by ID
+        /// Lookup SIC Index
         /// </summary>
         /// <remarks>
         /// 
@@ -619,7 +619,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<SICIndex> GetSicIndexByIdAsync (string identifier);
 
         /// <summary>
-        /// Get an SIC Index by ID
+        /// Lookup SIC Index
         /// </summary>
         /// <remarks>
         /// 
@@ -629,7 +629,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (SICIndex)</returns>
         System.Threading.Tasks.Task<ApiResponse<SICIndex>> GetSicIndexByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Get SIC Index Data Point (Number)
+        /// Data Point (Number) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -641,7 +641,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<decimal?> GetSicIndexDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get SIC Index Data Point (Number)
+        /// Data Point (Number) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -652,7 +652,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSicIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get SIC Index Data Point (Text)
+        /// Data Point (Text) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -664,7 +664,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<string> GetSicIndexDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get SIC Index Data Point (Text)
+        /// Data Point (Text) for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
@@ -675,7 +675,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetSicIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get SIC Index Historical Data
+        /// Historical Data for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
@@ -692,7 +692,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get SIC Index Historical Data
+        /// Historical Data for an SIC Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
@@ -708,7 +708,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseSICIndexHistoricalData)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndexHistoricalData>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
-        /// Get a Stock Market Index by ID
+        /// Lookup Stock Market Index
         /// </summary>
         /// <remarks>
         /// 
@@ -719,7 +719,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<StockMarketIndex> GetStockMarketIndexByIdAsync (string identifier);
 
         /// <summary>
-        /// Get a Stock Market Index by ID
+        /// Lookup Stock Market Index
         /// </summary>
         /// <remarks>
         /// 
@@ -729,7 +729,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (StockMarketIndex)</returns>
         System.Threading.Tasks.Task<ApiResponse<StockMarketIndex>> GetStockMarketIndexByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Stock Market Index Data Point (Number)
+        /// Data Point (Number) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -741,7 +741,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<decimal?> GetStockMarketIndexDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Number)
+        /// Data Point (Number) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -752,7 +752,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetStockMarketIndexDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Stock Market Index Data Point (Text)
+        /// Data Point (Text) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -764,7 +764,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<string> GetStockMarketIndexDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Text)
+        /// Data Point (Text) for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
@@ -775,7 +775,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetStockMarketIndexDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Stock Market Index Historical Data
+        /// Historical Data for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
@@ -792,7 +792,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Market Index Historical Data
+        /// Historical Data for Stock Market Index
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
@@ -971,7 +971,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Economic Indices 
+        /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -983,7 +983,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Economic Indices 
+        /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1039,7 +1039,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Economic Indices 
+        /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1052,7 +1052,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Economic Indices 
+        /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1108,7 +1108,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SIC Indices 
+        /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1120,7 +1120,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SIC Indices 
+        /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1176,7 +1176,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SIC Indices 
+        /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1189,7 +1189,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SIC Indices 
+        /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1245,7 +1245,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Market Indices 
+        /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1257,7 +1257,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Market Indices 
+        /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1313,7 +1313,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Market Indices 
+        /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1326,7 +1326,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Market Indices 
+        /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1382,7 +1382,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an Economic Index by ID 
+        /// Lookup Economic Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1394,7 +1394,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an Economic Index by ID 
+        /// Lookup Economic Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1453,7 +1453,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an Economic Index by ID 
+        /// Lookup Economic Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1466,7 +1466,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an Economic Index by ID 
+        /// Lookup Economic Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1525,7 +1525,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1538,7 +1538,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1602,7 +1602,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1616,7 +1616,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1680,7 +1680,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an Economic Index Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1693,7 +1693,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an Economic Index Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1757,7 +1757,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an Economic Index Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1771,7 +1771,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an Economic Index Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1835,7 +1835,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1853,7 +1853,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1927,7 +1927,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1946,7 +1946,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Economic Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2020,7 +2020,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SIC Index by ID 
+        /// Lookup SIC Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2032,7 +2032,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SIC Index by ID 
+        /// Lookup SIC Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2091,7 +2091,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SIC Index by ID 
+        /// Lookup SIC Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2104,7 +2104,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SIC Index by ID 
+        /// Lookup SIC Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2163,7 +2163,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an SIC Index Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2176,7 +2176,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an SIC Index Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2240,7 +2240,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an SIC Index Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2254,7 +2254,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an SIC Index Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2318,7 +2318,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an SIC Index Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2331,7 +2331,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an SIC Index Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2395,7 +2395,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an SIC Index Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2409,7 +2409,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for an SIC Index Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2473,7 +2473,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an SIC Index Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2491,7 +2491,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an SIC Index Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2565,7 +2565,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an SIC Index Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2584,7 +2584,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get SIC Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an SIC Index Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2658,7 +2658,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Stock Market Index by ID 
+        /// Lookup Stock Market Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2670,7 +2670,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Stock Market Index by ID 
+        /// Lookup Stock Market Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2729,7 +2729,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Stock Market Index by ID 
+        /// Lookup Stock Market Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2742,7 +2742,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Stock Market Index by ID 
+        /// Lookup Stock Market Index 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2801,7 +2801,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Stock Market Index Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2814,7 +2814,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Stock Market Index Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2878,7 +2878,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Stock Market Index Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2892,7 +2892,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Stock Market Index Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2956,7 +2956,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Stock Market Index Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2969,7 +2969,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Stock Market Index Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -3033,7 +3033,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Stock Market Index Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -3047,7 +3047,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Stock Market Index Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -3111,7 +3111,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Historical Data for Stock Market Index Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -3129,7 +3129,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Historical Data for Stock Market Index Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -3203,7 +3203,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Historical Data for Stock Market Index Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -3222,7 +3222,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Market Index Historical Data Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
+        /// Historical Data for Stock Market Index Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>

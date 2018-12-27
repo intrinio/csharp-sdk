@@ -5,18 +5,18 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**FilterCompanies**](CompanyApi.md#filtercompanies) | **GET** /companies/filter | Filter Companies
-[**FilterCompanyFundamentals**](CompanyApi.md#filtercompanyfundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals for a Company
-[**GetAllCompanies**](CompanyApi.md#getallcompanies) | **GET** /companies | Get All Companies
-[**GetAllCompanyNews**](CompanyApi.md#getallcompanynews) | **GET** /companies/news | Get All Company News
-[**GetCompany**](CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Get a Company by ID
-[**GetCompanyDataPointNumber**](CompanyApi.md#getcompanydatapointnumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Get Company Data Point (Number)
-[**GetCompanyDataPointText**](CompanyApi.md#getcompanydatapointtext) | **GET** /companies/{identifier}/data_point/{tag}/text | Get Company Data Point (Text)
-[**GetCompanyFilings**](CompanyApi.md#getcompanyfilings) | **GET** /companies/{identifier}/filings | Get Filings for a Company
-[**GetCompanyFundamentals**](CompanyApi.md#getcompanyfundamentals) | **GET** /companies/{identifier}/fundamentals | Get All Fundamentals for a Company
-[**GetCompanyHistoricalData**](CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Get Company Historical Data
-[**GetCompanyNews**](CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | Get News for a Company
-[**GetCompanySecurities**](CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | Get Securities by Company
-[**LookupCompanyFundamental**](CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup a Fundamental for a Company
+[**FilterCompanyFundamentals**](CompanyApi.md#filtercompanyfundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals by Company
+[**GetAllCompanies**](CompanyApi.md#getallcompanies) | **GET** /companies | All Companies
+[**GetAllCompanyNews**](CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
+[**GetCompany**](CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
+[**GetCompanyDataPointNumber**](CompanyApi.md#getcompanydatapointnumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
+[**GetCompanyDataPointText**](CompanyApi.md#getcompanydatapointtext) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
+[**GetCompanyFilings**](CompanyApi.md#getcompanyfilings) | **GET** /companies/{identifier}/filings | All Filings by Company
+[**GetCompanyFundamentals**](CompanyApi.md#getcompanyfundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
+[**GetCompanyHistoricalData**](CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+[**GetCompanyNews**](CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
+[**GetCompanySecurities**](CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
+[**LookupCompanyFundamental**](CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 [**SearchCompanies**](CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 # **FilterCompanyFundamentals**
 > ApiResponseCompanyFundamentals FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
 
-Filter Fundamentals for a Company
+Filter Fundamentals by Company
 
 Returns Fundamentals for the Company with the given `identifier` and matching the specified filters
 
@@ -156,7 +156,9 @@ Name | Type | Description  | Notes
 # **GetAllCompanies**
 > ApiResponseCompanies GetAllCompanies (string nextPage = null)
 
-Get All Companies
+All Companies
+
+Returns all Companies
 
 ### Example
 ```csharp
@@ -205,9 +207,9 @@ Name | Type | Description  | Notes
 # **GetAllCompanyNews**
 > ApiResponseNews GetAllCompanyNews (string nextPage = null)
 
-Get All Company News
+All News
 
-Returns all news for all companies
+Returns all News for all Companies
 
 ### Example
 ```csharp
@@ -256,7 +258,9 @@ Name | Type | Description  | Notes
 # **GetCompany**
 > Company GetCompany (string identifier)
 
-Get a Company by ID
+Lookup Company
+
+Returns the Company with the given `identifier`
 
 ### Example
 ```csharp
@@ -305,7 +309,7 @@ Name | Type | Description  | Notes
 # **GetCompanyDataPointNumber**
 > decimal? GetCompanyDataPointNumber (string identifier, string tag)
 
-Get Company Data Point (Number)
+Data Point (Number) for Company
 
 Returns a numeric value for the given `tag` for the Company with the given `identifier`
 
@@ -358,7 +362,7 @@ Name | Type | Description  | Notes
 # **GetCompanyDataPointText**
 > string GetCompanyDataPointText (string identifier, string tag)
 
-Get Company Data Point (Text)
+Data Point (Text) for Company
 
 Returns a text value for the given `tag` for the Company with the given `identifier`
 
@@ -411,7 +415,7 @@ Name | Type | Description  | Notes
 # **GetCompanyFilings**
 > ApiResponseCompanyFilings GetCompanyFilings (string identifier, string nextPage = null)
 
-Get Filings for a Company
+All Filings by Company
 
 Returns a complete list of SEC filings for the Company with the given `identifier`
 
@@ -464,7 +468,7 @@ Name | Type | Description  | Notes
 # **GetCompanyFundamentals**
 > ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, string nextPage = null)
 
-Get All Fundamentals for a Company
+All Fundamentals by Company
 
 Returns all Fundamentals for the Company with the given `identifier`
 
@@ -515,9 +519,9 @@ Name | Type | Description  | Notes
 
 <a name="getcompanyhistoricaldata"></a>
 # **GetCompanyHistoricalData**
-> ApiResponseCompanyHistoricalData GetCompanyHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseCompanyHistoricalData GetCompanyHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
-Get Company Historical Data
+Historical Data for Company
 
 Returns historical values for the given `tag` and the Company with the given `identifier`
 
@@ -539,7 +543,8 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var tag = "marketcap";  // string | Item
+            var tag = "marketcap";  // string | An Intrinio data-tag
+            var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
             var type = "";  // string | Filter by type, when applicable (optional) 
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
@@ -548,7 +553,7 @@ namespace Example
 
             try
             {
-                ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -565,7 +570,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| Item | 
+ **tag** | **string**| An Intrinio data-tag | 
+ **frequency** | **string**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **string**| Filter by type, when applicable | [optional] 
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
@@ -580,7 +586,7 @@ Name | Type | Description  | Notes
 # **GetCompanyNews**
 > ApiResponseCompanyNews GetCompanyNews (string identifier, string nextPage = null)
 
-Get News for a Company
+All News by Company
 
 Returns news for the Company with the given `identifier`
 
@@ -633,9 +639,9 @@ Name | Type | Description  | Notes
 # **GetCompanySecurities**
 > ApiResponseCompanySecurities GetCompanySecurities (string identifier, string nextPage = null)
 
-Get Securities by Company
+All Securities by Company
 
-Return Securities for the Company with `identifier`
+Returns Securities for the Company with the given `identifier`
 
 ### Example
 ```csharp
@@ -686,7 +692,7 @@ Name | Type | Description  | Notes
 # **LookupCompanyFundamental**
 > Fundamental LookupCompanyFundamental (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
 
-Lookup a Fundamental for a Company
+Lookup Fundamental by Company
 
 Returns the Fundamental for the Company with the given `identifier` and with the given parameters
 

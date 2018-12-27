@@ -20,7 +20,7 @@ namespace Intrinio.SDK.Api
         /// Filter Filings
         /// </summary>
         /// <remarks>
-        /// Returns filings that match the specified filters
+        /// Returns Filings that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -35,7 +35,7 @@ namespace Intrinio.SDK.Api
         /// Filter Filings
         /// </summary>
         /// <remarks>
-        /// Returns filings that match the specified filters
+        /// Returns Filings that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -46,10 +46,43 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseFilings</returns>
         ApiResponse<ApiResponseFilings> FilterFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
-        /// Get All Filings
+        /// Filter SEC filing notes
         /// </summary>
         /// <remarks>
-        /// Returns all filings
+        /// Returns SEC filing notes matching the supplied criteria
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseFilingNotes</returns>
+        ApiResponseFilingNotes FilterNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
+
+        /// <summary>
+        /// Filter SEC filing notes
+        /// </summary>
+        /// <remarks>
+        /// Returns SEC filing notes matching the supplied criteria
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
+        ApiResponse<ApiResponseFilingNotes> FilterNotesWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
+        /// <summary>
+        /// All Filings
+        /// </summary>
+        /// <remarks>
+        /// Returns all Filings
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -57,20 +90,41 @@ namespace Intrinio.SDK.Api
         ApiResponseFilings GetAllFilings (string nextPage = null);
 
         /// <summary>
-        /// Get All Filings
+        /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns all filings
+        /// Returns all Filings
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilings</returns>
         ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get a Filing by ID
+        /// Get All SEC filing notes
         /// </summary>
         /// <remarks>
-        /// Return the filing with the given ID
+        /// Return All notes from SEC Filings, most-recent first
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseFilingNotes</returns>
+        ApiResponseFilingNotes GetAllNotes (string nextPage = null);
+
+        /// <summary>
+        /// Get All SEC filing notes
+        /// </summary>
+        /// <remarks>
+        /// Return All notes from SEC Filings, most-recent first
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
+        ApiResponse<ApiResponseFilingNotes> GetAllNotesWithHttpInfo (string nextPage = null);
+        /// <summary>
+        /// Lookup Filing
+        /// </summary>
+        /// <remarks>
+        /// Returns the Filing with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
@@ -78,22 +132,114 @@ namespace Intrinio.SDK.Api
         Filing GetFilingById (string id);
 
         /// <summary>
-        /// Get a Filing by ID
+        /// Lookup Filing
         /// </summary>
         /// <remarks>
-        /// Return the filing with the given ID
+        /// Returns the Filing with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
         /// <returns>ApiResponse of Filing</returns>
         ApiResponse<Filing> GetFilingByIdWithHttpInfo (string id);
+        /// <summary>
+        /// Get an SEC filing note by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>FilingNote</returns>
+        FilingNote GetNote (string identifier, string contentFormat = null);
+
+        /// <summary>
+        /// Get an SEC filing note by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>ApiResponse of FilingNote</returns>
+        ApiResponse<FilingNote> GetNoteWithHttpInfo (string identifier, string contentFormat = null);
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>string</returns>
+        string GetNoteHtml (string identifier);
+
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetNoteHtmlWithHttpInfo (string identifier);
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>string</returns>
+        string GetNoteText (string identifier);
+
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetNoteTextWithHttpInfo (string identifier);
+        /// <summary>
+        /// Search Filing Notes
+        /// </summary>
+        /// <remarks>
+        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseFilingNotesSearch</returns>
+        ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
+
+        /// <summary>
+        /// Search Filing Notes
+        /// </summary>
+        /// <remarks>
+        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseFilingNotesSearch</returns>
+        ApiResponse<ApiResponseFilingNotesSearch> SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
         /// Filter Filings
         /// </summary>
         /// <remarks>
-        /// Returns filings that match the specified filters
+        /// Returns Filings that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -108,7 +254,7 @@ namespace Intrinio.SDK.Api
         /// Filter Filings
         /// </summary>
         /// <remarks>
-        /// Returns filings that match the specified filters
+        /// Returns Filings that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -119,10 +265,43 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> FilterFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
-        /// Get All Filings
+        /// Filter SEC filing notes
         /// </summary>
         /// <remarks>
-        /// Returns all filings
+        /// Returns SEC filing notes matching the supplied criteria
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseFilingNotes</returns>
+        System.Threading.Tasks.Task<ApiResponseFilingNotes> FilterNotesAsync (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
+
+        /// <summary>
+        /// Filter SEC filing notes
+        /// </summary>
+        /// <remarks>
+        /// Returns SEC filing notes matching the supplied criteria
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> FilterNotesAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
+        /// <summary>
+        /// All Filings
+        /// </summary>
+        /// <remarks>
+        /// Returns all Filings
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -130,20 +309,41 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string nextPage = null);
 
         /// <summary>
-        /// Get All Filings
+        /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns all filings
+        /// Returns all Filings
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get a Filing by ID
+        /// Get All SEC filing notes
         /// </summary>
         /// <remarks>
-        /// Return the filing with the given ID
+        /// Return All notes from SEC Filings, most-recent first
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseFilingNotes</returns>
+        System.Threading.Tasks.Task<ApiResponseFilingNotes> GetAllNotesAsync (string nextPage = null);
+
+        /// <summary>
+        /// Get All SEC filing notes
+        /// </summary>
+        /// <remarks>
+        /// Return All notes from SEC Filings, most-recent first
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> GetAllNotesAsyncWithHttpInfo (string nextPage = null);
+        /// <summary>
+        /// Lookup Filing
+        /// </summary>
+        /// <remarks>
+        /// Returns the Filing with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
@@ -151,15 +351,107 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<Filing> GetFilingByIdAsync (string id);
 
         /// <summary>
-        /// Get a Filing by ID
+        /// Lookup Filing
         /// </summary>
         /// <remarks>
-        /// Return the filing with the given ID
+        /// Returns the Filing with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
         /// <returns>Task of ApiResponse (Filing)</returns>
         System.Threading.Tasks.Task<ApiResponse<Filing>> GetFilingByIdAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Get an SEC filing note by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>Task of FilingNote</returns>
+        System.Threading.Tasks.Task<FilingNote> GetNoteAsync (string identifier, string contentFormat = null);
+
+        /// <summary>
+        /// Get an SEC filing note by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>Task of ApiResponse (FilingNote)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FilingNote>> GetNoteAsyncWithHttpInfo (string identifier, string contentFormat = null);
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetNoteHtmlAsync (string identifier);
+
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetNoteHtmlAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetNoteTextAsync (string identifier);
+
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetNoteTextAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Search Filing Notes
+        /// </summary>
+        /// <remarks>
+        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseFilingNotesSearch</returns>
+        System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
+
+        /// <summary>
+        /// Search Filing Notes
+        /// </summary>
+        /// <remarks>
+        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingNotesSearch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -261,7 +553,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Filings Returns filings that match the specified filters
+        /// Filter Filings Returns Filings that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -277,7 +569,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Filings Returns filings that match the specified filters
+        /// Filter Filings Returns Filings that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -344,7 +636,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Filings Returns filings that match the specified filters
+        /// Filter Filings Returns Filings that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -361,7 +653,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Filings Returns filings that match the specified filters
+        /// Filter Filings Returns Filings that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
@@ -428,7 +720,180 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Filings Returns all filings
+        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseFilingNotes</returns>
+        public ApiResponseFilingNotes FilterNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseFilingNotes> localVarResponse = FilterNotesWithHttpInfo(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
+        public ApiResponse< ApiResponseFilingNotes > FilterNotesWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
+        {
+
+            var localVarPath = "/filings/notes/filter";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
+            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
+            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
+            if (periodEndedStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_start_date", periodEndedStartDate)); // query parameter
+            if (periodEndedEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_end_date", periodEndedEndDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FilterNotes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingNotes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingNotes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotes)));
+        }
+
+        /// <summary>
+        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseFilingNotes</returns>
+        public async System.Threading.Tasks.Task<ApiResponseFilingNotes> FilterNotesAsync (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseFilingNotes> localVarResponse = await FilterNotesAsyncWithHttpInfo(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> FilterNotesAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
+        {
+
+            var localVarPath = "/filings/notes/filter";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
+            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
+            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
+            if (periodEndedStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_start_date", periodEndedStartDate)); // query parameter
+            if (periodEndedEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_end_date", periodEndedEndDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FilterNotes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingNotes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingNotes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotes)));
+        }
+
+        /// <summary>
+        /// All Filings Returns all Filings
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -440,7 +905,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Filings Returns all filings
+        /// All Filings Returns all Filings
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -496,7 +961,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Filings Returns all filings
+        /// All Filings Returns all Filings
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -509,7 +974,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Filings Returns all filings
+        /// All Filings Returns all Filings
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -565,7 +1030,144 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Filing by ID Return the filing with the given ID
+        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseFilingNotes</returns>
+        public ApiResponseFilingNotes GetAllNotes (string nextPage = null)
+        {
+             ApiResponse<ApiResponseFilingNotes> localVarResponse = GetAllNotesWithHttpInfo(nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
+        public ApiResponse< ApiResponseFilingNotes > GetAllNotesWithHttpInfo (string nextPage = null)
+        {
+
+            var localVarPath = "/filings/notes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllNotes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingNotes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingNotes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotes)));
+        }
+
+        /// <summary>
+        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseFilingNotes</returns>
+        public async System.Threading.Tasks.Task<ApiResponseFilingNotes> GetAllNotesAsync (string nextPage = null)
+        {
+             ApiResponse<ApiResponseFilingNotes> localVarResponse = await GetAllNotesAsyncWithHttpInfo(nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> GetAllNotesAsyncWithHttpInfo (string nextPage = null)
+        {
+
+            var localVarPath = "/filings/notes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllNotes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingNotes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingNotes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotes)));
+        }
+
+        /// <summary>
+        /// Lookup Filing Returns the Filing with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
@@ -577,7 +1179,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Filing by ID Return the filing with the given ID
+        /// Lookup Filing Returns the Filing with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
@@ -636,7 +1238,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Filing by ID Return the filing with the given ID
+        /// Lookup Filing Returns the Filing with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
@@ -649,7 +1251,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Filing by ID Return the filing with the given ID
+        /// Lookup Filing Returns the Filing with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID of the Filing</param>
@@ -705,6 +1307,602 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<Filing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Filing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Filing)));
+        }
+
+        /// <summary>
+        /// Get an SEC filing note by ID 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>FilingNote</returns>
+        public FilingNote GetNote (string identifier, string contentFormat = null)
+        {
+             ApiResponse<FilingNote> localVarResponse = GetNoteWithHttpInfo(identifier, contentFormat);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an SEC filing note by ID 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>ApiResponse of FilingNote</returns>
+        public ApiResponse< FilingNote > GetNoteWithHttpInfo (string identifier, string contentFormat = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetNote");
+
+            var localVarPath = "/filings/notes/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (contentFormat != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "content_format", contentFormat)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FilingNote>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FilingNote) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilingNote)));
+        }
+
+        /// <summary>
+        /// Get an SEC filing note by ID 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>Task of FilingNote</returns>
+        public async System.Threading.Tasks.Task<FilingNote> GetNoteAsync (string identifier, string contentFormat = null)
+        {
+             ApiResponse<FilingNote> localVarResponse = await GetNoteAsyncWithHttpInfo(identifier, contentFormat);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an SEC filing note by ID 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <param name="contentFormat">Returns content in html (as filed) or plain text (optional, default to text)</param>
+        /// <returns>Task of ApiResponse (FilingNote)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FilingNote>> GetNoteAsyncWithHttpInfo (string identifier, string contentFormat = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetNote");
+
+            var localVarPath = "/filings/notes/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (contentFormat != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "content_format", contentFormat)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FilingNote>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FilingNote) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilingNote)));
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>string</returns>
+        public string GetNoteHtml (string identifier)
+        {
+             ApiResponse<string> localVarResponse = GetNoteHtmlWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetNoteHtmlWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetNoteHtml");
+
+            var localVarPath = "/filings/notes/{identifier}/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain; charset=utf-8"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNoteHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetNoteHtmlAsync (string identifier)
+        {
+             ApiResponse<string> localVarResponse = await GetNoteHtmlAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note as originally filed 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetNoteHtmlAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetNoteHtml");
+
+            var localVarPath = "/filings/notes/{identifier}/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain; charset=utf-8"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNoteHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>string</returns>
+        public string GetNoteText (string identifier)
+        {
+             ApiResponse<string> localVarResponse = GetNoteTextWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetNoteTextWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetNoteText");
+
+            var localVarPath = "/filings/notes/{identifier}/text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain; charset=utf-8"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNoteText", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetNoteTextAsync (string identifier)
+        {
+             ApiResponse<string> localVarResponse = await GetNoteTextAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the content of an SEC filing note stripped of HTML 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID of the filing note</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetNoteTextAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetNoteText");
+
+            var localVarPath = "/filings/notes/{identifier}/text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain; charset=utf-8"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetNoteText", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseFilingNotesSearch</returns>
+        public ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        {
+             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = SearchNotesWithHttpInfo(query, filingStartDate, filingEndDate, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseFilingNotesSearch</returns>
+        public ApiResponse< ApiResponseFilingNotesSearch > SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        {
+            // verify the required parameter 'query' is set
+            if (query == null)
+                throw new ApiException(400, "Missing required parameter 'query' when calling FilingApi->SearchNotes");
+
+            var localVarPath = "/filings/notes/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
+            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SearchNotes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingNotesSearch>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingNotesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotesSearch)));
+        }
+
+        /// <summary>
+        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseFilingNotesSearch</returns>
+        public async System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        {
+             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = await SearchNotesAsyncWithHttpInfo(query, filingStartDate, filingEndDate, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="query">Search for notes that contain all or parts of this text</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingNotesSearch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        {
+            // verify the required parameter 'query' is set
+            if (query == null)
+                throw new ApiException(400, "Missing required parameter 'query' when calling FilingApi->SearchNotes");
+
+            var localVarPath = "/filings/notes/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
+            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SearchNotes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingNotesSearch>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingNotesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotesSearch)));
         }
 
     }

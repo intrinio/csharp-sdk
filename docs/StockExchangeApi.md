@@ -5,11 +5,12 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**FilterStockExchanges**](StockExchangeApi.md#filterstockexchanges) | **GET** /stock_exchanges/filter | Filter Stock Exchanges
-[**GetAllStockExchanges**](StockExchangeApi.md#getallstockexchanges) | **GET** /stock_exchanges | Get All Stock Exchanges
-[**GetStockExchangeById**](StockExchangeApi.md#getstockexchangebyid) | **GET** /stock_exchanges/{identifier} | Get Stock Exchange by ID
-[**GetStockExchangePriceAdjustments**](StockExchangeApi.md#getstockexchangepriceadjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Get Stock Price Adjustments by Exchange
-[**GetStockExchangePrices**](StockExchangeApi.md#getstockexchangeprices) | **GET** /stock_exchanges/{identifier}/prices | Get Stock Prices by Exchange
-[**GetStockExchangeSecurities**](StockExchangeApi.md#getstockexchangesecurities) | **GET** /stock_exchanges/{identifier}/securities | Get Securities by Exchange
+[**GetAllStockExchanges**](StockExchangeApi.md#getallstockexchanges) | **GET** /stock_exchanges | All Stock Exchanges
+[**GetStockExchangeById**](StockExchangeApi.md#getstockexchangebyid) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
+[**GetStockExchangePriceAdjustments**](StockExchangeApi.md#getstockexchangepriceadjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
+[**GetStockExchangePrices**](StockExchangeApi.md#getstockexchangeprices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
+[**GetStockExchangeRealtimePrices**](StockExchangeApi.md#getstockexchangerealtimeprices) | **GET** /stock_exchanges/{identifier}/prices/realtime | Realtime Stock Prices by Exchange
+[**GetStockExchangeSecurities**](StockExchangeApi.md#getstockexchangesecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 
 
 <a name="filterstockexchanges"></a>
@@ -18,7 +19,7 @@ Method | HTTP request | Description
 
 Filter Stock Exchanges
 
-Return Stock Exchanges matching the given filters
+Returns Stock Exchanges matching the given filters
 
 ### Example
 ```csharp
@@ -71,9 +72,9 @@ Name | Type | Description  | Notes
 # **GetAllStockExchanges**
 > ApiResponseStockExchanges GetAllStockExchanges ()
 
-Get All Stock Exchanges
+All Stock Exchanges
 
-Return All Stock Exchanges
+Returns all Stock Exchanges
 
 ### Example
 ```csharp
@@ -118,7 +119,9 @@ This endpoint does not need any parameter.
 # **GetStockExchangeById**
 > StockExchange GetStockExchangeById (string identifier)
 
-Get Stock Exchange by ID
+Lookup Stock Exchange
+
+Returns the Stock Exchange with the given `identifier`
 
 ### Example
 ```csharp
@@ -167,9 +170,9 @@ Name | Type | Description  | Notes
 # **GetStockExchangePriceAdjustments**
 > ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, string nextPage = null)
 
-Get Stock Price Adjustments by Exchange
+Stock Price Adjustments by Exchange
 
-Return stock price adjustments for the Stock Exchange with the given `identifier`
+Returns stock price adjustments for the Stock Exchange with the given `identifier`
 
 ### Example
 ```csharp
@@ -222,9 +225,9 @@ Name | Type | Description  | Notes
 # **GetStockExchangePrices**
 > ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, string nextPage = null)
 
-Get Stock Prices by Exchange
+Stock Prices by Exchange
 
-Return daily Stock Prices for Securities on the Stock Exchange with `identifier` and on the `price_date` (or the latest date that prices are available)
+Returns end-of-day stock prices for Securities on the Stock Exchange with `identifier` and on the `price_date` (or the latest date that prices are available)
 
 ### Example
 ```csharp
@@ -273,13 +276,68 @@ Name | Type | Description  | Notes
 
 [**ApiResponseStockExchangeStockPrices**](ApiResponseStockExchangeStockPrices.md)
 
+<a name="getstockexchangerealtimeprices"></a>
+# **GetStockExchangeRealtimePrices**
+> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, string nextPage = null)
+
+Realtime Stock Prices by Exchange
+
+Returns realtime stock prices for the Stock Exchange with the given `identifier`
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetStockExchangeRealtimePricesExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var stockExchangeApi = new StockExchangeApi();
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var source = "";  // string | Return realtime prices from the specified data source (optional) 
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+            try
+            {
+                ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, nextPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StockExchangeApi.GetStockExchangeRealtimePrices: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Stock Exchange identifier (MIC or Intrinio ID) | 
+ **source** | **string**| Return realtime prices from the specified data source | [optional] 
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseStockExchangeRealtimeStockPrices**](ApiResponseStockExchangeRealtimeStockPrices.md)
+
 <a name="getstockexchangesecurities"></a>
 # **GetStockExchangeSecurities**
 > ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, string nextPage = null)
 
-Get Securities by Exchange
+Securities by Exchange
 
-Return Securities traded on the Stock Exchange with `identifier`
+Returns Securities traded on the Stock Exchange with `identifier`
 
 ### Example
 ```csharp

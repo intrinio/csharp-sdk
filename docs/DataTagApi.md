@@ -5,8 +5,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**FilterDataTags**](DataTagApi.md#filterdatatags) | **GET** /data_tags/filter | Filter Data Tags
-[**GetAllDataTags**](DataTagApi.md#getalldatatags) | **GET** /data_tags | Get All Data Tags
-[**GetDataTagById**](DataTagApi.md#getdatatagbyid) | **GET** /data_tags/{identifier} | Get a Data Tag by ID
+[**GetAllDataTags**](DataTagApi.md#getalldatatags) | **GET** /data_tags | All Data Tags
+[**GetDataTagById**](DataTagApi.md#getdatatagbyid) | **GET** /data_tags/{identifier} | Lookup Data Tag
 [**SearchDataTags**](DataTagApi.md#searchdatatags) | **GET** /data_tags/search | Search Data Tags
 
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **GetAllDataTags**
 > ApiResponseDataTags GetAllDataTags (string nextPage = null)
 
-Get All Data Tags
+All Data Tags
 
 Returns All Data Tags
 
@@ -126,9 +126,9 @@ Name | Type | Description  | Notes
 # **GetDataTagById**
 > DataTag GetDataTagById (string identifier)
 
-Get a Data Tag by ID
+Lookup Data Tag
 
-Returns a Data Tag with the specified `identifier`
+Returns the Data Tag with the given `identifier`
 
 ### Example
 ```csharp

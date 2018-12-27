@@ -4,13 +4,16 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAllSecurities**](SecurityApi.md#getallsecurities) | **GET** /securities | Get All Securiites
-[**GetSecurityById**](SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Get a Security by ID
-[**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Get Security Data Point (Number)
-[**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Get Security Data Point (Text)
-[**GetSecurityHistoricalData**](SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Get Security Historical Data
-[**GetSecurityStockPriceAdjustments**](SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Get Stock Price Adjustments for Security
-[**GetSecurityStockPrices**](SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Get Stock Prices for Security
+[**GetAllSecurities**](SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
+[**GetSecurityById**](SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Lookup Security
+[**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
+[**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
+[**GetSecurityHistoricalData**](SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**GetSecurityLatestDividendRecord**](SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
+[**GetSecurityLatestEarningsRecord**](SecurityApi.md#getsecuritylatestearningsrecord) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
+[**GetSecurityRealtimePrice**](SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+[**GetSecurityStockPriceAdjustments**](SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
+[**GetSecurityStockPrices**](SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**ScreenSecurities**](SecurityApi.md#screensecurities) | **POST** /securities/screen | Screen Securities
 [**SearchSecurities**](SecurityApi.md#searchsecurities) | **GET** /securities/search | Search Securities
 
@@ -19,7 +22,7 @@ Method | HTTP request | Description
 # **GetAllSecurities**
 > ApiResponseSecurities GetAllSecurities (string nextPage = null)
 
-Get All Securiites
+All Securities
 
 ### Example
 ```csharp
@@ -68,7 +71,9 @@ Name | Type | Description  | Notes
 # **GetSecurityById**
 > Security GetSecurityById (string identifier)
 
-Get a Security by ID
+Lookup Security
+
+Returns the Security with the given `identifier`
 
 ### Example
 ```csharp
@@ -117,7 +122,7 @@ Name | Type | Description  | Notes
 # **GetSecurityDataPointNumber**
 > decimal? GetSecurityDataPointNumber (string identifier, string tag)
 
-Get Security Data Point (Number)
+Data Point (Number) for Security
 
 Returns a numeric value for the given `tag` for the Security with the given `identifier`
 
@@ -170,7 +175,7 @@ Name | Type | Description  | Notes
 # **GetSecurityDataPointText**
 > string GetSecurityDataPointText (string identifier, string tag)
 
-Get Security Data Point (Text)
+Data Point (Text) for Security
 
 Returns a text value for the given `tag` for the Security with the given `identifier`
 
@@ -221,9 +226,9 @@ Name | Type | Description  | Notes
 
 <a name="getsecurityhistoricaldata"></a>
 # **GetSecurityHistoricalData**
-> ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
-Get Security Historical Data
+Historical Data for Security
 
 Returns historical values for the given `tag` and the Security with the given `identifier`
 
@@ -246,6 +251,7 @@ namespace Example
             var securityApi = new SecurityApi();
             var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
             var tag = "volume";  // string | An Intrinio data tag ID or code-name
+            var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
             var type = "";  // string | Filter by type, when applicable (optional) 
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
@@ -254,7 +260,7 @@ namespace Example
 
             try
             {
-                ApiResponseSecurityHistoricalData result = securityApi.GetSecurityHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseSecurityHistoricalData result = securityApi.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -272,6 +278,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **frequency** | **string**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **string**| Filter by type, when applicable | [optional] 
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical date on or before this date | [optional] 
@@ -282,13 +289,168 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
 
+<a name="getsecuritylatestdividendrecord"></a>
+# **GetSecurityLatestDividendRecord**
+> DividendRecord GetSecurityLatestDividendRecord (string identifier)
+
+Lastest Dividend Record for Security
+
+Returns the latest available dividend information for the Security with the given `identifier`
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityLatestDividendRecordExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+            try
+            {
+                DividendRecord result = securityApi.GetSecurityLatestDividendRecord(identifier);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityLatestDividendRecord: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+
+### Return type
+
+[**DividendRecord**](DividendRecord.md)
+
+<a name="getsecuritylatestearningsrecord"></a>
+# **GetSecurityLatestEarningsRecord**
+> EarningsRecord GetSecurityLatestEarningsRecord (string identifier)
+
+Lastest Earnings Record for Security
+
+Returns latest available earnings information for the Security with the given `identifier`
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityLatestEarningsRecordExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+            try
+            {
+                EarningsRecord result = securityApi.GetSecurityLatestEarningsRecord(identifier);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityLatestEarningsRecord: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+
+### Return type
+
+[**EarningsRecord**](EarningsRecord.md)
+
+<a name="getsecurityrealtimeprice"></a>
+# **GetSecurityRealtimePrice**
+> RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null)
+
+Realtime Stock Price for Security
+
+Return the realtime stock price for the Security with the given `identifier`
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityRealtimePriceExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var source = "";  // string | Return the realtime price from the specified data source (optional) 
+
+            try
+            {
+                RealtimeStockPrice result = securityApi.GetSecurityRealtimePrice(identifier, source);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityRealtimePrice: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **source** | **string**| Return the realtime price from the specified data source | [optional] 
+
+### Return type
+
+[**RealtimeStockPrice**](RealtimeStockPrice.md)
+
 <a name="getsecuritystockpriceadjustments"></a>
 # **GetSecurityStockPriceAdjustments**
 > ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
 
-Get Stock Price Adjustments for Security
+Stock Price Adjustments by Security
 
-Return stock price adjustments for the Security with the given `identifier`
+Returns stock price adjustments for the Security with the given `identifier`
 
 ### Example
 ```csharp
@@ -343,9 +505,9 @@ Name | Type | Description  | Notes
 # **GetSecurityStockPrices**
 > ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
 
-Get Stock Prices for Security
+Stock Prices by Security
 
-Return stock prices for the Security with the given `identifier`
+Return end-of-day stock prices for the Security with the given `identifier`
 
 ### Example
 ```csharp
@@ -404,7 +566,7 @@ Name | Type | Description  | Notes
 
 Screen Securities
 
-Screen securities using complex logic
+Screen Securities using complex logic
 
 ### Example
 ```csharp

@@ -17,7 +17,7 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get All Securiites
+        /// All Securities
         /// </summary>
         /// <remarks>
         /// 
@@ -28,7 +28,7 @@ namespace Intrinio.SDK.Api
         ApiResponseSecurities GetAllSecurities (string nextPage = null);
 
         /// <summary>
-        /// Get All Securiites
+        /// All Securities
         /// </summary>
         /// <remarks>
         /// 
@@ -38,10 +38,10 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
         ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get a Security by ID
+        /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -49,17 +49,17 @@ namespace Intrinio.SDK.Api
         Security GetSecurityById (string identifier);
 
         /// <summary>
-        /// Get a Security by ID
+        /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <returns>ApiResponse of Security</returns>
         ApiResponse<Security> GetSecurityByIdWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Security Data Point (Number)
+        /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -71,7 +71,7 @@ namespace Intrinio.SDK.Api
         decimal? GetSecurityDataPointNumber (string identifier, string tag);
 
         /// <summary>
-        /// Get Security Data Point (Number)
+        /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -82,7 +82,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetSecurityDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Security Data Point (Text)
+        /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -94,7 +94,7 @@ namespace Intrinio.SDK.Api
         string GetSecurityDataPointText (string identifier, string tag);
 
         /// <summary>
-        /// Get Security Data Point (Text)
+        /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -105,7 +105,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetSecurityDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Security Historical Data
+        /// Historical Data for Security
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
@@ -113,16 +113,17 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityHistoricalData</returns>
-        ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Security Historical Data
+        /// Historical Data for Security
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
@@ -130,18 +131,84 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
-        ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
-        /// Get Stock Price Adjustments for Security
+        /// Lastest Dividend Record for Security
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>DividendRecord</returns>
+        DividendRecord GetSecurityLatestDividendRecord (string identifier);
+
+        /// <summary>
+        /// Lastest Dividend Record for Security
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>ApiResponse of DividendRecord</returns>
+        ApiResponse<DividendRecord> GetSecurityLatestDividendRecordWithHttpInfo (string identifier);
+        /// <summary>
+        /// Lastest Earnings Record for Security
+        /// </summary>
+        /// <remarks>
+        /// Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>EarningsRecord</returns>
+        EarningsRecord GetSecurityLatestEarningsRecord (string identifier);
+
+        /// <summary>
+        /// Lastest Earnings Record for Security
+        /// </summary>
+        /// <remarks>
+        /// Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>ApiResponse of EarningsRecord</returns>
+        ApiResponse<EarningsRecord> GetSecurityLatestEarningsRecordWithHttpInfo (string identifier);
+        /// <summary>
+        /// Realtime Stock Price for Security
+        /// </summary>
+        /// <remarks>
+        /// Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>RealtimeStockPrice</returns>
+        RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null);
+
+        /// <summary>
+        /// Realtime Stock Price for Security
+        /// </summary>
+        /// <remarks>
+        /// Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>ApiResponse of RealtimeStockPrice</returns>
+        ApiResponse<RealtimeStockPrice> GetSecurityRealtimePriceWithHttpInfo (string identifier, string source = null);
+        /// <summary>
+        /// Stock Price Adjustments by Security
+        /// </summary>
+        /// <remarks>
+        /// Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -152,10 +219,10 @@ namespace Intrinio.SDK.Api
         ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Price Adjustments for Security
+        /// Stock Price Adjustments by Security
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -165,10 +232,10 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurityStockPriceAdjustments</returns>
         ApiResponse<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
-        /// Get Stock Prices for Security
+        /// Stock Prices by Security
         /// </summary>
         /// <remarks>
-        /// Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -180,10 +247,10 @@ namespace Intrinio.SDK.Api
         ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Prices for Security
+        /// Stock Prices by Security
         /// </summary>
         /// <remarks>
-        /// Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -197,7 +264,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen securities using complex logic
+        /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
@@ -211,7 +278,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen securities using complex logic
+        /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
@@ -244,7 +311,7 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get All Securiites
+        /// All Securities
         /// </summary>
         /// <remarks>
         /// 
@@ -255,7 +322,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (string nextPage = null);
 
         /// <summary>
-        /// Get All Securiites
+        /// All Securities
         /// </summary>
         /// <remarks>
         /// 
@@ -265,10 +332,10 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get a Security by ID
+        /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -276,17 +343,17 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<Security> GetSecurityByIdAsync (string identifier);
 
         /// <summary>
-        /// Get a Security by ID
+        /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <returns>Task of ApiResponse (Security)</returns>
         System.Threading.Tasks.Task<ApiResponse<Security>> GetSecurityByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Security Data Point (Number)
+        /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -298,7 +365,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<decimal?> GetSecurityDataPointNumberAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get Security Data Point (Number)
+        /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
         /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -309,7 +376,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSecurityDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Security Data Point (Text)
+        /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -321,7 +388,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<string> GetSecurityDataPointTextAsync (string identifier, string tag);
 
         /// <summary>
-        /// Get Security Data Point (Text)
+        /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
         /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
@@ -332,7 +399,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetSecurityDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
-        /// Get Security Historical Data
+        /// Historical Data for Security
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
@@ -340,16 +407,17 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Security Historical Data
+        /// Historical Data for Security
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
@@ -357,18 +425,84 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
         /// <summary>
-        /// Get Stock Price Adjustments for Security
+        /// Lastest Dividend Record for Security
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of DividendRecord</returns>
+        System.Threading.Tasks.Task<DividendRecord> GetSecurityLatestDividendRecordAsync (string identifier);
+
+        /// <summary>
+        /// Lastest Dividend Record for Security
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (DividendRecord)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DividendRecord>> GetSecurityLatestDividendRecordAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Lastest Earnings Record for Security
+        /// </summary>
+        /// <remarks>
+        /// Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of EarningsRecord</returns>
+        System.Threading.Tasks.Task<EarningsRecord> GetSecurityLatestEarningsRecordAsync (string identifier);
+
+        /// <summary>
+        /// Lastest Earnings Record for Security
+        /// </summary>
+        /// <remarks>
+        /// Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (EarningsRecord)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EarningsRecord>> GetSecurityLatestEarningsRecordAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Realtime Stock Price for Security
+        /// </summary>
+        /// <remarks>
+        /// Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>Task of RealtimeStockPrice</returns>
+        System.Threading.Tasks.Task<RealtimeStockPrice> GetSecurityRealtimePriceAsync (string identifier, string source = null);
+
+        /// <summary>
+        /// Realtime Stock Price for Security
+        /// </summary>
+        /// <remarks>
+        /// Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>Task of ApiResponse (RealtimeStockPrice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RealtimeStockPrice>> GetSecurityRealtimePriceAsyncWithHttpInfo (string identifier, string source = null);
+        /// <summary>
+        /// Stock Price Adjustments by Security
+        /// </summary>
+        /// <remarks>
+        /// Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -379,10 +513,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Price Adjustments for Security
+        /// Stock Price Adjustments by Security
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -392,10 +526,10 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPriceAdjustments)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
-        /// Get Stock Prices for Security
+        /// Stock Prices by Security
         /// </summary>
         /// <remarks>
-        /// Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -407,10 +541,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Prices for Security
+        /// Stock Prices by Security
         /// </summary>
         /// <remarks>
-        /// Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -424,7 +558,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen securities using complex logic
+        /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
@@ -438,7 +572,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen securities using complex logic
+        /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
@@ -569,7 +703,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Securiites 
+        /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -581,7 +715,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Securiites 
+        /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -637,7 +771,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Securiites 
+        /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -650,7 +784,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Securiites 
+        /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -706,7 +840,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Security by ID 
+        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -718,7 +852,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Security by ID 
+        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -777,7 +911,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Security by ID 
+        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -790,7 +924,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Security by ID 
+        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -849,7 +983,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -862,7 +996,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -926,7 +1060,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -940,7 +1074,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1004,7 +1138,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1017,7 +1151,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1081,7 +1215,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1095,7 +1229,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1159,36 +1293,38 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Historical Data Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityHistoricalData</returns>
-        public ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = GetSecurityHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = GetSecurityHistoricalDataWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Security Historical Data Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
-        public ApiResponse< ApiResponseSecurityHistoricalData > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityHistoricalData > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1220,6 +1356,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (tag != null) localVarPathParams.Add("tag", Configuration.ApiClient.ParameterToString(tag)); // path parameter
+            if (frequency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "frequency", frequency)); // query parameter
             if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
@@ -1251,37 +1388,39 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Security Historical Data Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = await GetSecurityHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = await GetSecurityHistoricalDataAsyncWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get Security Historical Data Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1313,6 +1452,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (tag != null) localVarPathParams.Add("tag", Configuration.ApiClient.ParameterToString(tag)); // path parameter
+            if (frequency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "frequency", frequency)); // query parameter
             if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
@@ -1344,7 +1484,442 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments for Security Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Lastest Dividend Record for Security Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>DividendRecord</returns>
+        public DividendRecord GetSecurityLatestDividendRecord (string identifier)
+        {
+             ApiResponse<DividendRecord> localVarResponse = GetSecurityLatestDividendRecordWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lastest Dividend Record for Security Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>ApiResponse of DividendRecord</returns>
+        public ApiResponse< DividendRecord > GetSecurityLatestDividendRecordWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityLatestDividendRecord");
+
+            var localVarPath = "/securities/{identifier}/dividends/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityLatestDividendRecord", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DividendRecord>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DividendRecord) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DividendRecord)));
+        }
+
+        /// <summary>
+        /// Lastest Dividend Record for Security Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of DividendRecord</returns>
+        public async System.Threading.Tasks.Task<DividendRecord> GetSecurityLatestDividendRecordAsync (string identifier)
+        {
+             ApiResponse<DividendRecord> localVarResponse = await GetSecurityLatestDividendRecordAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lastest Dividend Record for Security Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (DividendRecord)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DividendRecord>> GetSecurityLatestDividendRecordAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityLatestDividendRecord");
+
+            var localVarPath = "/securities/{identifier}/dividends/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityLatestDividendRecord", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DividendRecord>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DividendRecord) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DividendRecord)));
+        }
+
+        /// <summary>
+        /// Lastest Earnings Record for Security Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>EarningsRecord</returns>
+        public EarningsRecord GetSecurityLatestEarningsRecord (string identifier)
+        {
+             ApiResponse<EarningsRecord> localVarResponse = GetSecurityLatestEarningsRecordWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lastest Earnings Record for Security Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>ApiResponse of EarningsRecord</returns>
+        public ApiResponse< EarningsRecord > GetSecurityLatestEarningsRecordWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityLatestEarningsRecord");
+
+            var localVarPath = "/securities/{identifier}/earnings/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityLatestEarningsRecord", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EarningsRecord>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EarningsRecord) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EarningsRecord)));
+        }
+
+        /// <summary>
+        /// Lastest Earnings Record for Security Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of EarningsRecord</returns>
+        public async System.Threading.Tasks.Task<EarningsRecord> GetSecurityLatestEarningsRecordAsync (string identifier)
+        {
+             ApiResponse<EarningsRecord> localVarResponse = await GetSecurityLatestEarningsRecordAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lastest Earnings Record for Security Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (EarningsRecord)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EarningsRecord>> GetSecurityLatestEarningsRecordAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityLatestEarningsRecord");
+
+            var localVarPath = "/securities/{identifier}/earnings/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityLatestEarningsRecord", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EarningsRecord>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EarningsRecord) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EarningsRecord)));
+        }
+
+        /// <summary>
+        /// Realtime Stock Price for Security Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>RealtimeStockPrice</returns>
+        public RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null)
+        {
+             ApiResponse<RealtimeStockPrice> localVarResponse = GetSecurityRealtimePriceWithHttpInfo(identifier, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realtime Stock Price for Security Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>ApiResponse of RealtimeStockPrice</returns>
+        public ApiResponse< RealtimeStockPrice > GetSecurityRealtimePriceWithHttpInfo (string identifier, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityRealtimePrice");
+
+            var localVarPath = "/securities/{identifier}/prices/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityRealtimePrice", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RealtimeStockPrice>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RealtimeStockPrice) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RealtimeStockPrice)));
+        }
+
+        /// <summary>
+        /// Realtime Stock Price for Security Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>Task of RealtimeStockPrice</returns>
+        public async System.Threading.Tasks.Task<RealtimeStockPrice> GetSecurityRealtimePriceAsync (string identifier, string source = null)
+        {
+             ApiResponse<RealtimeStockPrice> localVarResponse = await GetSecurityRealtimePriceAsyncWithHttpInfo(identifier, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realtime Stock Price for Security Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <returns>Task of ApiResponse (RealtimeStockPrice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RealtimeStockPrice>> GetSecurityRealtimePriceAsyncWithHttpInfo (string identifier, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityRealtimePrice");
+
+            var localVarPath = "/securities/{identifier}/prices/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityRealtimePrice", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RealtimeStockPrice>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RealtimeStockPrice) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RealtimeStockPrice)));
+        }
+
+        /// <summary>
+        /// Stock Price Adjustments by Security Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1359,7 +1934,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments for Security Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Stock Price Adjustments by Security Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1424,7 +1999,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments for Security Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Stock Price Adjustments by Security Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1440,7 +2015,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments for Security Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+        /// Stock Price Adjustments by Security Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1505,7 +2080,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices for Security Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Stock Prices by Security Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1521,7 +2096,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices for Security Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Stock Prices by Security Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1588,7 +2163,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices for Security Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Stock Prices by Security Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1605,7 +2180,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices for Security Return stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Stock Prices by Security Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1672,7 +2247,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen securities using complex logic
+        /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
@@ -1687,7 +2262,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen securities using complex logic
+        /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
@@ -1757,7 +2332,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen securities using complex logic
+        /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
@@ -1773,7 +2348,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen securities using complex logic
+        /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>

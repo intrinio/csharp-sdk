@@ -188,12 +188,13 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string tag = null;
+            //string frequency = null;
             //string type = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
             //string nextPage = null;
-            //var response = instance.GetCompanyHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+            //var response = instance.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyHistoricalData> (response, "response is ApiResponseCompanyHistoricalData");
         }
         

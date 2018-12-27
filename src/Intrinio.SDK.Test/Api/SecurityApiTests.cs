@@ -111,13 +111,51 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string tag = null;
+            //string frequency = null;
             //string type = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+            //var response = instance.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityHistoricalData> (response, "response is ApiResponseSecurityHistoricalData");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityLatestDividendRecord
+        /// </summary>
+        [Test]
+        public void GetSecurityLatestDividendRecordTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetSecurityLatestDividendRecord(identifier);
+            //Assert.IsInstanceOf<DividendRecord> (response, "response is DividendRecord");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityLatestEarningsRecord
+        /// </summary>
+        [Test]
+        public void GetSecurityLatestEarningsRecordTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetSecurityLatestEarningsRecord(identifier);
+            //Assert.IsInstanceOf<EarningsRecord> (response, "response is EarningsRecord");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityRealtimePrice
+        /// </summary>
+        [Test]
+        public void GetSecurityRealtimePriceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //var response = instance.GetSecurityRealtimePrice(identifier, source);
+            //Assert.IsInstanceOf<RealtimeStockPrice> (response, "response is RealtimeStockPrice");
         }
         
         /// <summary>

@@ -48,7 +48,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseDataTags</returns>
         ApiResponse<ApiResponseDataTags> FilterDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null);
         /// <summary>
-        /// Get All Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
         /// Returns All Data Tags
@@ -59,7 +59,7 @@ namespace Intrinio.SDK.Api
         ApiResponseDataTags GetAllDataTags (string nextPage = null);
 
         /// <summary>
-        /// Get All Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
         /// Returns All Data Tags
@@ -69,10 +69,10 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseDataTags</returns>
         ApiResponse<ApiResponseDataTags> GetAllDataTagsWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get a Data Tag by ID
+        /// Lookup Data Tag
         /// </summary>
         /// <remarks>
-        /// Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>
@@ -80,10 +80,10 @@ namespace Intrinio.SDK.Api
         DataTag GetDataTagById (string identifier);
 
         /// <summary>
-        /// Get a Data Tag by ID
+        /// Lookup Data Tag
         /// </summary>
         /// <remarks>
-        /// Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>
@@ -144,7 +144,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> FilterDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null);
         /// <summary>
-        /// Get All Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
         /// Returns All Data Tags
@@ -155,7 +155,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string nextPage = null);
 
         /// <summary>
-        /// Get All Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
         /// Returns All Data Tags
@@ -165,10 +165,10 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get a Data Tag by ID
+        /// Lookup Data Tag
         /// </summary>
         /// <remarks>
-        /// Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>
@@ -176,10 +176,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<DataTag> GetDataTagByIdAsync (string identifier);
 
         /// <summary>
-        /// Get a Data Tag by ID
+        /// Lookup Data Tag
         /// </summary>
         /// <remarks>
-        /// Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>
@@ -474,7 +474,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Data Tags Returns All Data Tags
+        /// All Data Tags Returns All Data Tags
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -486,7 +486,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Data Tags Returns All Data Tags
+        /// All Data Tags Returns All Data Tags
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -542,7 +542,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Data Tags Returns All Data Tags
+        /// All Data Tags Returns All Data Tags
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -555,7 +555,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Data Tags Returns All Data Tags
+        /// All Data Tags Returns All Data Tags
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -611,7 +611,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Data Tag by ID Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Lookup Data Tag Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>
@@ -623,7 +623,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Data Tag by ID Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Lookup Data Tag Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>
@@ -682,7 +682,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Data Tag by ID Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Lookup Data Tag Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>
@@ -695,7 +695,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Data Tag by ID Returns a Data Tag with the specified &#x60;identifier&#x60;
+        /// Lookup Data Tag Returns the Data Tag with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or the code-name of the Data Tag</param>

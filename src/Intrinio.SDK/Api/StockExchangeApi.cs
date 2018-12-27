@@ -20,7 +20,7 @@ namespace Intrinio.SDK.Api
         /// Filter Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return Stock Exchanges matching the given filters
+        /// Returns Stock Exchanges matching the given filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -33,7 +33,7 @@ namespace Intrinio.SDK.Api
         /// Filter Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return Stock Exchanges matching the given filters
+        /// Returns Stock Exchanges matching the given filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -42,29 +42,29 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
         ApiResponse<ApiResponseStockExchanges> FilterStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null);
         /// <summary>
-        /// Get All Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return All Stock Exchanges
+        /// Returns all Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponseStockExchanges</returns>
         ApiResponseStockExchanges GetAllStockExchanges ();
 
         /// <summary>
-        /// Get All Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return All Stock Exchanges
+        /// Returns all Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
         ApiResponse<ApiResponseStockExchanges> GetAllStockExchangesWithHttpInfo ();
         /// <summary>
-        /// Get Stock Exchange by ID
+        /// Lookup Stock Exchange
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -72,20 +72,20 @@ namespace Intrinio.SDK.Api
         StockExchange GetStockExchangeById (string identifier);
 
         /// <summary>
-        /// Get Stock Exchange by ID
+        /// Lookup Stock Exchange
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <returns>ApiResponse of StockExchange</returns>
         ApiResponse<StockExchange> GetStockExchangeByIdWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange
+        /// Stock Price Adjustments by Exchange
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -95,10 +95,10 @@ namespace Intrinio.SDK.Api
         ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange
+        /// Stock Price Adjustments by Exchange
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -107,10 +107,10 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPriceAdjustments</returns>
         ApiResponse<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
         /// <summary>
-        /// Get Stock Prices by Exchange
+        /// Stock Prices by Exchange
         /// </summary>
         /// <remarks>
-        /// Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -120,10 +120,10 @@ namespace Intrinio.SDK.Api
         ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Prices by Exchange
+        /// Stock Prices by Exchange
         /// </summary>
         /// <remarks>
-        /// Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -132,10 +132,35 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
         ApiResponse<ApiResponseStockExchangeStockPrices> GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
         /// <summary>
-        /// Get Securities by Exchange
+        /// Realtime Stock Prices by Exchange
         /// </summary>
         /// <remarks>
-        /// Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
+        ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, string nextPage = null);
+
+        /// <summary>
+        /// Realtime Stock Prices by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
+        ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, string nextPage = null);
+        /// <summary>
+        /// Securities by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -144,10 +169,10 @@ namespace Intrinio.SDK.Api
         ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, string nextPage = null);
 
         /// <summary>
-        /// Get Securities by Exchange
+        /// Securities by Exchange
         /// </summary>
         /// <remarks>
-        /// Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -160,7 +185,7 @@ namespace Intrinio.SDK.Api
         /// Filter Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return Stock Exchanges matching the given filters
+        /// Returns Stock Exchanges matching the given filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -173,7 +198,7 @@ namespace Intrinio.SDK.Api
         /// Filter Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return Stock Exchanges matching the given filters
+        /// Returns Stock Exchanges matching the given filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -182,29 +207,29 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> FilterStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null);
         /// <summary>
-        /// Get All Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return All Stock Exchanges
+        /// Returns all Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponseStockExchanges</returns>
         System.Threading.Tasks.Task<ApiResponseStockExchanges> GetAllStockExchangesAsync ();
 
         /// <summary>
-        /// Get All Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Return All Stock Exchanges
+        /// Returns all Stock Exchanges
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo ();
         /// <summary>
-        /// Get Stock Exchange by ID
+        /// Lookup Stock Exchange
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -212,20 +237,20 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<StockExchange> GetStockExchangeByIdAsync (string identifier);
 
         /// <summary>
-        /// Get Stock Exchange by ID
+        /// Lookup Stock Exchange
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <returns>Task of ApiResponse (StockExchange)</returns>
         System.Threading.Tasks.Task<ApiResponse<StockExchange>> GetStockExchangeByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange
+        /// Stock Price Adjustments by Exchange
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -235,10 +260,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsAsync (string identifier, DateTime? date = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange
+        /// Stock Price Adjustments by Exchange
         /// </summary>
         /// <remarks>
-        /// Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -247,10 +272,10 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPriceAdjustments)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPriceAdjustments>> GetStockExchangePriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
         /// <summary>
-        /// Get Stock Prices by Exchange
+        /// Stock Prices by Exchange
         /// </summary>
         /// <remarks>
-        /// Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -260,10 +285,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, string nextPage = null);
 
         /// <summary>
-        /// Get Stock Prices by Exchange
+        /// Stock Prices by Exchange
         /// </summary>
         /// <remarks>
-        /// Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -272,10 +297,35 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
         /// <summary>
-        /// Get Securities by Exchange
+        /// Realtime Stock Prices by Exchange
         /// </summary>
         /// <remarks>
-        /// Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
+        System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, string nextPage = null);
+
+        /// <summary>
+        /// Realtime Stock Prices by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, string nextPage = null);
+        /// <summary>
+        /// Securities by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -284,10 +334,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseStockExchangeSecurities> GetStockExchangeSecuritiesAsync (string identifier, string nextPage = null);
 
         /// <summary>
-        /// Get Securities by Exchange
+        /// Securities by Exchange
         /// </summary>
         /// <remarks>
-        /// Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -395,7 +445,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Stock Exchanges Return Stock Exchanges matching the given filters
+        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -409,7 +459,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Stock Exchanges Return Stock Exchanges matching the given filters
+        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -469,7 +519,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Stock Exchanges Return Stock Exchanges matching the given filters
+        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -484,7 +534,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Stock Exchanges Return Stock Exchanges matching the given filters
+        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -544,7 +594,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Exchanges Return All Stock Exchanges
+        /// All Stock Exchanges Returns all Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponseStockExchanges</returns>
@@ -555,7 +605,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Exchanges Return All Stock Exchanges
+        /// All Stock Exchanges Returns all Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
@@ -609,7 +659,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Exchanges Return All Stock Exchanges
+        /// All Stock Exchanges Returns all Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponseStockExchanges</returns>
@@ -621,7 +671,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All Stock Exchanges Return All Stock Exchanges
+        /// All Stock Exchanges Returns all Stock Exchanges
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
@@ -675,7 +725,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Exchange by ID 
+        /// Lookup Stock Exchange Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -687,7 +737,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Exchange by ID 
+        /// Lookup Stock Exchange Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -746,7 +796,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Exchange by ID 
+        /// Lookup Stock Exchange Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -759,7 +809,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Exchange by ID 
+        /// Lookup Stock Exchange Returns the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -818,7 +868,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Stock Price Adjustments by Exchange Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -832,7 +882,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Stock Price Adjustments by Exchange Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -895,7 +945,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Stock Price Adjustments by Exchange Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -910,7 +960,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Price Adjustments by Exchange Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// Stock Price Adjustments by Exchange Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -973,7 +1023,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices by Exchange Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Stock Prices by Exchange Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -987,7 +1037,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices by Exchange Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Stock Prices by Exchange Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -1050,7 +1100,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices by Exchange Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Stock Prices by Exchange Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -1065,7 +1115,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Stock Prices by Exchange Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
+        /// Stock Prices by Exchange Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -1128,7 +1178,162 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Securities by Exchange Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Realtime Stock Prices by Exchange Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
+        public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = GetStockExchangeRealtimePricesWithHttpInfo(identifier, source, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realtime Stock Prices by Exchange Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
+        public ApiResponse< ApiResponseStockExchangeRealtimeStockPrices > GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeRealtimePrices");
+
+            var localVarPath = "/stock_exchanges/{identifier}/prices/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeRealtimePrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseStockExchangeRealtimeStockPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeRealtimeStockPrices)));
+        }
+
+        /// <summary>
+        /// Realtime Stock Prices by Exchange Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = await GetStockExchangeRealtimePricesAsyncWithHttpInfo(identifier, source, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realtime Stock Prices by Exchange Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeRealtimePrices");
+
+            var localVarPath = "/stock_exchanges/{identifier}/prices/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeRealtimePrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseStockExchangeRealtimeStockPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeRealtimeStockPrices)));
+        }
+
+        /// <summary>
+        /// Securities by Exchange Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -1141,7 +1346,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Securities by Exchange Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Securities by Exchange Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -1202,7 +1407,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Securities by Exchange Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Securities by Exchange Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
@@ -1216,7 +1421,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Securities by Exchange Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
+        /// Securities by Exchange Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>

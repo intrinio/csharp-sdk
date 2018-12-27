@@ -4,21 +4,21 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAllEconomicIndices**](IndexApi.md#getalleconomicindices) | **GET** /indices/economic | Get All Economic Indices
-[**GetAllSicIndices**](IndexApi.md#getallsicindices) | **GET** /indices/sic | Get All SIC Indices
-[**GetAllStockMarketIndices**](IndexApi.md#getallstockmarketindices) | **GET** /indices/stock_market | Get All Stock Market Indices
-[**GetEconomicIndexById**](IndexApi.md#geteconomicindexbyid) | **GET** /indices/economic/{identifier} | Get an Economic Index by ID
-[**GetEconomicIndexDataPointNumber**](IndexApi.md#geteconomicindexdatapointnumber) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Get Economic Index Data Point (Number)
-[**GetEconomicIndexDataPointText**](IndexApi.md#geteconomicindexdatapointtext) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Get Economic Index Data Point (Text)
-[**GetEconomicIndexHistoricalData**](IndexApi.md#geteconomicindexhistoricaldata) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Get Economic Index Historical Data
-[**GetSicIndexById**](IndexApi.md#getsicindexbyid) | **GET** /indices/sic/{identifier} | Get an SIC Index by ID
-[**GetSicIndexDataPointNumber**](IndexApi.md#getsicindexdatapointnumber) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Get SIC Index Data Point (Number)
-[**GetSicIndexDataPointText**](IndexApi.md#getsicindexdatapointtext) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Get SIC Index Data Point (Text)
-[**GetSicIndexHistoricalData**](IndexApi.md#getsicindexhistoricaldata) | **GET** /indices/sic/{identifier}/historical_data/{tag} | Get SIC Index Historical Data
-[**GetStockMarketIndexById**](IndexApi.md#getstockmarketindexbyid) | **GET** /indices/stock_market/{identifier} | Get a Stock Market Index by ID
-[**GetStockMarketIndexDataPointNumber**](IndexApi.md#getstockmarketindexdatapointnumber) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/number | Get Stock Market Index Data Point (Number)
-[**GetStockMarketIndexDataPointText**](IndexApi.md#getstockmarketindexdatapointtext) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/text | Get Stock Market Index Data Point (Text)
-[**GetStockMarketIndexHistoricalData**](IndexApi.md#getstockmarketindexhistoricaldata) | **GET** /indices/stock_market/{identifier}/historical_data/{tag} | Get Stock Market Index Historical Data
+[**GetAllEconomicIndices**](IndexApi.md#getalleconomicindices) | **GET** /indices/economic | All Economic Indices
+[**GetAllSicIndices**](IndexApi.md#getallsicindices) | **GET** /indices/sic | All SIC Indices
+[**GetAllStockMarketIndices**](IndexApi.md#getallstockmarketindices) | **GET** /indices/stock_market | All Stock Market Indices
+[**GetEconomicIndexById**](IndexApi.md#geteconomicindexbyid) | **GET** /indices/economic/{identifier} | Lookup Economic Index
+[**GetEconomicIndexDataPointNumber**](IndexApi.md#geteconomicindexdatapointnumber) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
+[**GetEconomicIndexDataPointText**](IndexApi.md#geteconomicindexdatapointtext) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
+[**GetEconomicIndexHistoricalData**](IndexApi.md#geteconomicindexhistoricaldata) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
+[**GetSicIndexById**](IndexApi.md#getsicindexbyid) | **GET** /indices/sic/{identifier} | Lookup SIC Index
+[**GetSicIndexDataPointNumber**](IndexApi.md#getsicindexdatapointnumber) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
+[**GetSicIndexDataPointText**](IndexApi.md#getsicindexdatapointtext) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
+[**GetSicIndexHistoricalData**](IndexApi.md#getsicindexhistoricaldata) | **GET** /indices/sic/{identifier}/historical_data/{tag} | Historical Data for an SIC Index
+[**GetStockMarketIndexById**](IndexApi.md#getstockmarketindexbyid) | **GET** /indices/stock_market/{identifier} | Lookup Stock Market Index
+[**GetStockMarketIndexDataPointNumber**](IndexApi.md#getstockmarketindexdatapointnumber) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/number | Data Point (Number) for Stock Market Index
+[**GetStockMarketIndexDataPointText**](IndexApi.md#getstockmarketindexdatapointtext) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/text | Data Point (Text) for Stock Market Index
+[**GetStockMarketIndexHistoricalData**](IndexApi.md#getstockmarketindexhistoricaldata) | **GET** /indices/stock_market/{identifier}/historical_data/{tag} | Historical Data for Stock Market Index
 [**SearchEconomicIndices**](IndexApi.md#searcheconomicindices) | **GET** /indices/economic/search | Search Economic Indices
 [**SearchSicIndices**](IndexApi.md#searchsicindices) | **GET** /indices/sic/search | Search SIC Indices
 [**SearchStockMarketsIndices**](IndexApi.md#searchstockmarketsindices) | **GET** /indices/stock_market/search | Search Stock Market Indices
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 # **GetAllEconomicIndices**
 > ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null)
 
-Get All Economic Indices
+All Economic Indices
 
 ### Example
 ```csharp
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 # **GetAllSicIndices**
 > ApiResponseSICIndices GetAllSicIndices (string nextPage = null)
 
-Get All SIC Indices
+All SIC Indices
 
 ### Example
 ```csharp
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 # **GetAllStockMarketIndices**
 > ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null)
 
-Get All Stock Market Indices
+All Stock Market Indices
 
 ### Example
 ```csharp
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 # **GetEconomicIndexById**
 > EconomicIndex GetEconomicIndexById (string identifier)
 
-Get an Economic Index by ID
+Lookup Economic Index
 
 ### Example
 ```csharp
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 # **GetEconomicIndexDataPointNumber**
 > decimal? GetEconomicIndexDataPointNumber (string identifier, string tag)
 
-Get Economic Index Data Point (Number)
+Data Point (Number) for an Economic Index
 
 Returns a numeric value for the given `tag` for the Economic Index with the given `identifier`
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 # **GetEconomicIndexDataPointText**
 > string GetEconomicIndexDataPointText (string identifier, string tag)
 
-Get Economic Index Data Point (Text)
+Data Point (Text) for an Economic Index
 
 Returns a text value for the given `tag` for the Economic Index with the given `identifier`
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 # **GetEconomicIndexHistoricalData**
 > ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
-Get Economic Index Historical Data
+Historical Data for an Economic Index
 
 Returns historical values for the given `tag` and the Economic Index with the given `identifier`
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 # **GetSicIndexById**
 > SICIndex GetSicIndexById (string identifier)
 
-Get an SIC Index by ID
+Lookup SIC Index
 
 ### Example
 ```csharp
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 # **GetSicIndexDataPointNumber**
 > decimal? GetSicIndexDataPointNumber (string identifier, string tag)
 
-Get SIC Index Data Point (Number)
+Data Point (Number) for an SIC Index
 
 Returns a numeric value for the given `tag` for the SIC Index with the given `identifier`
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 # **GetSicIndexDataPointText**
 > string GetSicIndexDataPointText (string identifier, string tag)
 
-Get SIC Index Data Point (Text)
+Data Point (Text) for an SIC Index
 
 Returns a text value for the given `tag` for the SIC Index with the given `identifier`
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 # **GetSicIndexHistoricalData**
 > ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
-Get SIC Index Historical Data
+Historical Data for an SIC Index
 
 Returns historical values for the given `tag` and the SIC Index with the given `identifier`
 
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 # **GetStockMarketIndexById**
 > StockMarketIndex GetStockMarketIndexById (string identifier)
 
-Get a Stock Market Index by ID
+Lookup Stock Market Index
 
 ### Example
 ```csharp
@@ -660,7 +660,7 @@ Name | Type | Description  | Notes
 # **GetStockMarketIndexDataPointNumber**
 > decimal? GetStockMarketIndexDataPointNumber (string identifier, string tag)
 
-Get Stock Market Index Data Point (Number)
+Data Point (Number) for Stock Market Index
 
 Returns a numeric value for the given `tag` for the Stock Market Index with the given `identifier`
 
@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 # **GetStockMarketIndexDataPointText**
 > string GetStockMarketIndexDataPointText (string identifier, string tag)
 
-Get Stock Market Index Data Point (Text)
+Data Point (Text) for Stock Market Index
 
 Returns a text value for the given `tag` for the Stock Market Index with the given `identifier`
 
@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 # **GetStockMarketIndexHistoricalData**
 > ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
 
-Get Stock Market Index Historical Data
+Historical Data for Stock Market Index
 
 Returns historical values for the given `tag` and the Stock Market Index with the given `identifier`
 

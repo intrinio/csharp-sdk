@@ -17,10 +17,10 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get a Fundamental by ID
+        /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -28,17 +28,17 @@ namespace Intrinio.SDK.Api
         Fundamental GetFundamentalById (string id);
 
         /// <summary>
-        /// Get a Fundamental by ID
+        /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
         /// <returns>ApiResponse of Fundamental</returns>
         ApiResponse<Fundamental> GetFundamentalByIdWithHttpInfo (string id);
         /// <summary>
-        /// Get Reported Financials for a Fundamental
+        /// Reported Financials
         /// </summary>
         /// <remarks>
         /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
@@ -49,7 +49,7 @@ namespace Intrinio.SDK.Api
         ApiResponseReportedFinancials GetFundamentalReportedFinancials (string id);
 
         /// <summary>
-        /// Get Reported Financials for a Fundamental
+        /// Reported Financials
         /// </summary>
         /// <remarks>
         /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
@@ -59,7 +59,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseReportedFinancials</returns>
         ApiResponse<ApiResponseReportedFinancials> GetFundamentalReportedFinancialsWithHttpInfo (string id);
         /// <summary>
-        /// Get Standardized Financials for a Fundamental
+        /// Standardized Financials
         /// </summary>
         /// <remarks>
         /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
@@ -70,7 +70,7 @@ namespace Intrinio.SDK.Api
         ApiResponseStandardizedFinancials GetFundamentalStandardizedFinancials (string id);
 
         /// <summary>
-        /// Get Standardized Financials for a Fundamental
+        /// Standardized Financials
         /// </summary>
         /// <remarks>
         /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
@@ -80,7 +80,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStandardizedFinancials</returns>
         ApiResponse<ApiResponseStandardizedFinancials> GetFundamentalStandardizedFinancialsWithHttpInfo (string id);
         /// <summary>
-        /// Lookup a Fundamental
+        /// Lookup Fundamental
         /// </summary>
         /// <remarks>
         /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
@@ -94,7 +94,7 @@ namespace Intrinio.SDK.Api
         Fundamental LookupFundamental (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod);
 
         /// <summary>
-        /// Lookup a Fundamental
+        /// Lookup Fundamental
         /// </summary>
         /// <remarks>
         /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
@@ -109,10 +109,10 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get a Fundamental by ID
+        /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -120,17 +120,17 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<Fundamental> GetFundamentalByIdAsync (string id);
 
         /// <summary>
-        /// Get a Fundamental by ID
+        /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
         /// <returns>Task of ApiResponse (Fundamental)</returns>
         System.Threading.Tasks.Task<ApiResponse<Fundamental>> GetFundamentalByIdAsyncWithHttpInfo (string id);
         /// <summary>
-        /// Get Reported Financials for a Fundamental
+        /// Reported Financials
         /// </summary>
         /// <remarks>
         /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
@@ -141,7 +141,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseReportedFinancials> GetFundamentalReportedFinancialsAsync (string id);
 
         /// <summary>
-        /// Get Reported Financials for a Fundamental
+        /// Reported Financials
         /// </summary>
         /// <remarks>
         /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
@@ -151,7 +151,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseReportedFinancials)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseReportedFinancials>> GetFundamentalReportedFinancialsAsyncWithHttpInfo (string id);
         /// <summary>
-        /// Get Standardized Financials for a Fundamental
+        /// Standardized Financials
         /// </summary>
         /// <remarks>
         /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
@@ -162,7 +162,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseStandardizedFinancials> GetFundamentalStandardizedFinancialsAsync (string id);
 
         /// <summary>
-        /// Get Standardized Financials for a Fundamental
+        /// Standardized Financials
         /// </summary>
         /// <remarks>
         /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
@@ -172,7 +172,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancials)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancials>> GetFundamentalStandardizedFinancialsAsyncWithHttpInfo (string id);
         /// <summary>
-        /// Lookup a Fundamental
+        /// Lookup Fundamental
         /// </summary>
         /// <remarks>
         /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
@@ -186,7 +186,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<Fundamental> LookupFundamentalAsync (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod);
 
         /// <summary>
-        /// Lookup a Fundamental
+        /// Lookup Fundamental
         /// </summary>
         /// <remarks>
         /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
@@ -299,7 +299,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Fundamental by ID Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -311,7 +311,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Fundamental by ID Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -370,7 +370,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Fundamental by ID Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -383,7 +383,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get a Fundamental by ID Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -442,7 +442,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Reported Financials for a Fundamental Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -454,7 +454,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Reported Financials for a Fundamental Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -513,7 +513,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Reported Financials for a Fundamental Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -526,7 +526,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Reported Financials for a Fundamental Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -585,7 +585,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Standardized Financials for a Fundamental Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -597,7 +597,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Standardized Financials for a Fundamental Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -656,7 +656,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Standardized Financials for a Fundamental Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -669,7 +669,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Standardized Financials for a Fundamental Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -728,7 +728,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup a Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -743,7 +743,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup a Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -817,7 +817,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup a Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -833,7 +833,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup a Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>

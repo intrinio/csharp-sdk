@@ -17,7 +17,7 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get Historical Data
+        /// Historical Data
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
@@ -34,7 +34,7 @@ namespace Intrinio.SDK.Api
         ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Historical Data
+        /// Historical Data
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
@@ -52,7 +52,7 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get Historical Data
+        /// Historical Data
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
@@ -69,7 +69,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseHistoricalData> GetHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
 
         /// <summary>
-        /// Get Historical Data
+        /// Historical Data
         /// </summary>
         /// <remarks>
         /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
@@ -185,7 +185,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -203,7 +203,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -277,7 +277,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -296,7 +296,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>

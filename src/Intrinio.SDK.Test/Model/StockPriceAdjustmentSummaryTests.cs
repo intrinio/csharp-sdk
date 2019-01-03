@@ -98,14 +98,6 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'SplitRatio'
         }
-        /// <summary>
-        /// Test the property 'Security'
-        /// </summary>
-        [Test]
-        public void SecurityTest()
-        {
-            // TODO unit test for the property 'Security'
-        }
 
     }
 

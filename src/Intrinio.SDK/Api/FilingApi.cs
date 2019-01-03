@@ -46,10 +46,10 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseFilings</returns>
         ApiResponse<ApiResponseFilings> FilterFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
-        /// Filter SEC filing notes
+        /// Filter Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns SEC filing notes matching the supplied criteria
+        /// Returns Filing Notes that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -63,10 +63,10 @@ namespace Intrinio.SDK.Api
         ApiResponseFilingNotes FilterNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
 
         /// <summary>
-        /// Filter SEC filing notes
+        /// Filter Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns SEC filing notes matching the supplied criteria
+        /// Returns Filing Notes that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -100,10 +100,10 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseFilings</returns>
         ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get All SEC filing notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return All notes from SEC Filings, most-recent first
+        /// Return all Notes from all Filings, most-recent first
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -111,10 +111,10 @@ namespace Intrinio.SDK.Api
         ApiResponseFilingNotes GetAllNotes (string nextPage = null);
 
         /// <summary>
-        /// Get All SEC filing notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return All notes from SEC Filings, most-recent first
+        /// Return all Notes from all Filings, most-recent first
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -142,7 +142,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of Filing</returns>
         ApiResponse<Filing> GetFilingByIdWithHttpInfo (string id);
         /// <summary>
-        /// Get an SEC filing note by ID
+        /// Filing Note by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -154,7 +154,7 @@ namespace Intrinio.SDK.Api
         FilingNote GetNote (string identifier, string contentFormat = null);
 
         /// <summary>
-        /// Get an SEC filing note by ID
+        /// Filing Note by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -165,7 +165,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of FilingNote</returns>
         ApiResponse<FilingNote> GetNoteWithHttpInfo (string identifier, string contentFormat = null);
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed
+        /// Filing Note HTML
         /// </summary>
         /// <remarks>
         /// 
@@ -176,7 +176,7 @@ namespace Intrinio.SDK.Api
         string GetNoteHtml (string identifier);
 
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed
+        /// Filing Note HTML
         /// </summary>
         /// <remarks>
         /// 
@@ -186,7 +186,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetNoteHtmlWithHttpInfo (string identifier);
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML
+        /// Filing Note Text
         /// </summary>
         /// <remarks>
         /// 
@@ -197,7 +197,7 @@ namespace Intrinio.SDK.Api
         string GetNoteText (string identifier);
 
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML
+        /// Filing Note Text
         /// </summary>
         /// <remarks>
         /// 
@@ -210,7 +210,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Searches for Filing Notes using the &#x60;query&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -224,7 +224,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Searches for Filing Notes using the &#x60;query&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -265,10 +265,10 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> FilterFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
-        /// Filter SEC filing notes
+        /// Filter Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns SEC filing notes matching the supplied criteria
+        /// Returns Filing Notes that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -282,10 +282,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseFilingNotes> FilterNotesAsync (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
 
         /// <summary>
-        /// Filter SEC filing notes
+        /// Filter Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns SEC filing notes matching the supplied criteria
+        /// Returns Filing Notes that match the specified filters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -319,10 +319,10 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
-        /// Get All SEC filing notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return All notes from SEC Filings, most-recent first
+        /// Return all Notes from all Filings, most-recent first
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -330,10 +330,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseFilingNotes> GetAllNotesAsync (string nextPage = null);
 
         /// <summary>
-        /// Get All SEC filing notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return All notes from SEC Filings, most-recent first
+        /// Return all Notes from all Filings, most-recent first
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -361,7 +361,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (Filing)</returns>
         System.Threading.Tasks.Task<ApiResponse<Filing>> GetFilingByIdAsyncWithHttpInfo (string id);
         /// <summary>
-        /// Get an SEC filing note by ID
+        /// Filing Note by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -373,7 +373,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<FilingNote> GetNoteAsync (string identifier, string contentFormat = null);
 
         /// <summary>
-        /// Get an SEC filing note by ID
+        /// Filing Note by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -384,7 +384,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (FilingNote)</returns>
         System.Threading.Tasks.Task<ApiResponse<FilingNote>> GetNoteAsyncWithHttpInfo (string identifier, string contentFormat = null);
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed
+        /// Filing Note HTML
         /// </summary>
         /// <remarks>
         /// 
@@ -395,7 +395,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<string> GetNoteHtmlAsync (string identifier);
 
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed
+        /// Filing Note HTML
         /// </summary>
         /// <remarks>
         /// 
@@ -405,7 +405,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetNoteHtmlAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML
+        /// Filing Note Text
         /// </summary>
         /// <remarks>
         /// 
@@ -416,7 +416,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<string> GetNoteTextAsync (string identifier);
 
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML
+        /// Filing Note Text
         /// </summary>
         /// <remarks>
         /// 
@@ -429,7 +429,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Searches for Filing Notes using the &#x60;query&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -443,7 +443,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Searches for Filing Notes using the &#x60;query&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -720,7 +720,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// Filter Filing Notes Returns Filing Notes that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -738,7 +738,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// Filter Filing Notes Returns Filing Notes that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -806,7 +806,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// Filter Filing Notes Returns Filing Notes that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -825,7 +825,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter SEC filing notes Returns SEC filing notes matching the supplied criteria
+        /// Filter Filing Notes Returns Filing Notes that match the specified filters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1030,7 +1030,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1042,7 +1042,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1098,7 +1098,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1111,7 +1111,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get All SEC filing notes Return All notes from SEC Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1310,7 +1310,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SEC filing note by ID 
+        /// Filing Note by ID 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1323,7 +1323,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SEC filing note by ID 
+        /// Filing Note by ID 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1384,7 +1384,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SEC filing note by ID 
+        /// Filing Note by ID 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1398,7 +1398,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get an SEC filing note by ID 
+        /// Filing Note by ID 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1459,7 +1459,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed 
+        /// Filing Note HTML 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1471,7 +1471,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed 
+        /// Filing Note HTML 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1530,7 +1530,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed 
+        /// Filing Note HTML 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1543,7 +1543,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note as originally filed 
+        /// Filing Note HTML 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1602,7 +1602,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML 
+        /// Filing Note Text 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1614,7 +1614,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML 
+        /// Filing Note Text 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1673,7 +1673,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML 
+        /// Filing Note Text 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1686,7 +1686,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Returns the content of an SEC filing note stripped of HTML 
+        /// Filing Note Text 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1745,7 +1745,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -1760,7 +1760,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -1825,7 +1825,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -1841,7 +1841,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches SEC filing notes using the text in &#x60;query&#x60;
+        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>

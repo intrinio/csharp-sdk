@@ -28,7 +28,7 @@ namespace Intrinio.SDK.Model
         /// <param name="StockPriceAdjustments">The stock price adjustments for the Security.</param>
         /// <param name="Security">The Security resolved from the given identifier.</param>
         /// <param name="NextPage">The token required to request the next page of the data.</param>
-        public ApiResponseSecurityStockPriceAdjustments(List<StockPriceAdjustment> StockPriceAdjustments = default(List<StockPriceAdjustment>), SecuritySummary Security = default(SecuritySummary), string NextPage = default(string))
+        public ApiResponseSecurityStockPriceAdjustments(List<StockPriceAdjustmentSummary> StockPriceAdjustments = default(List<StockPriceAdjustmentSummary>), SecuritySummary Security = default(SecuritySummary), string NextPage = default(string))
         {
             this.StockPriceAdjustments = StockPriceAdjustments;
             this.Security = Security;
@@ -40,7 +40,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The stock price adjustments for the Security</value>
         [DataMember(Name="stock_price_adjustments", EmitDefaultValue=false)]
-        public List<StockPriceAdjustment> StockPriceAdjustments { get; set; }
+        public List<StockPriceAdjustmentSummary> StockPriceAdjustments { get; set; }
 
         /// <summary>
         /// The Security resolved from the given identifier

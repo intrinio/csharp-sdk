@@ -30,15 +30,13 @@ namespace Intrinio.SDK.Model
         /// <param name="Dividend">The dividend amount, if a dividend was paid..</param>
         /// <param name="DividendCurrency">The currency of the dividend, if known..</param>
         /// <param name="SplitRatio">The ratio of the stock split, if a stock split occurred..</param>
-        /// <param name="Security">The Security of the stock price.</param>
-        public StockPriceAdjustmentSummary(DateTime? Date = default(DateTime?), decimal? Factor = default(decimal?), decimal? Dividend = default(decimal?), string DividendCurrency = default(string), decimal? SplitRatio = default(decimal?), SecuritySummary Security = default(SecuritySummary))
+        public StockPriceAdjustmentSummary(DateTime? Date = default(DateTime?), decimal? Factor = default(decimal?), decimal? Dividend = default(decimal?), string DividendCurrency = default(string), decimal? SplitRatio = default(decimal?))
         {
             this.Date = Date;
             this.Factor = Factor;
             this.Dividend = Dividend;
             this.DividendCurrency = DividendCurrency;
             this.SplitRatio = SplitRatio;
-            this.Security = Security;
         }
         
         /// <summary>
@@ -78,13 +76,6 @@ namespace Intrinio.SDK.Model
         public decimal? SplitRatio { get; set; }
 
         /// <summary>
-        /// The Security of the stock price
-        /// </summary>
-        /// <value>The Security of the stock price</value>
-        [DataMember(Name="security", EmitDefaultValue=false)]
-        public SecuritySummary Security { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -97,7 +88,6 @@ namespace Intrinio.SDK.Model
             sb.Append("  Dividend: ").Append(Dividend).Append("\n");
             sb.Append("  DividendCurrency: ").Append(DividendCurrency).Append("\n");
             sb.Append("  SplitRatio: ").Append(SplitRatio).Append("\n");
-            sb.Append("  Security: ").Append(Security).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -156,11 +146,6 @@ namespace Intrinio.SDK.Model
                     this.SplitRatio == input.SplitRatio ||
                     (this.SplitRatio != null &&
                     this.SplitRatio.Equals(input.SplitRatio))
-                ) && 
-                (
-                    this.Security == input.Security ||
-                    (this.Security != null &&
-                    this.Security.Equals(input.Security))
                 );
         }
 
@@ -183,8 +168,6 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.DividendCurrency.GetHashCode();
                 if (this.SplitRatio != null)
                     hashCode = hashCode * 59 + this.SplitRatio.GetHashCode();
-                if (this.Security != null)
-                    hashCode = hashCode * 59 + this.Security.GetHashCode();
                 return hashCode;
             }
         }

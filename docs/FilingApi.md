@@ -5,13 +5,13 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**FilterFilings**](FilingApi.md#filterfilings) | **GET** /filings/filter | Filter Filings
-[**FilterNotes**](FilingApi.md#filternotes) | **GET** /filings/notes/filter | Filter SEC filing notes
+[**FilterNotes**](FilingApi.md#filternotes) | **GET** /filings/notes/filter | Filter Filing Notes
 [**GetAllFilings**](FilingApi.md#getallfilings) | **GET** /filings | All Filings
-[**GetAllNotes**](FilingApi.md#getallnotes) | **GET** /filings/notes | Get All SEC filing notes
+[**GetAllNotes**](FilingApi.md#getallnotes) | **GET** /filings/notes | All Filing Notes
 [**GetFilingById**](FilingApi.md#getfilingbyid) | **GET** /filings/{id} | Lookup Filing
-[**GetNote**](FilingApi.md#getnote) | **GET** /filings/notes/{identifier} | Get an SEC filing note by ID
-[**GetNoteHtml**](FilingApi.md#getnotehtml) | **GET** /filings/notes/{identifier}/html | Returns the content of an SEC filing note as originally filed
-[**GetNoteText**](FilingApi.md#getnotetext) | **GET** /filings/notes/{identifier}/text | Returns the content of an SEC filing note stripped of HTML
+[**GetNote**](FilingApi.md#getnote) | **GET** /filings/notes/{identifier} | Filing Note by ID
+[**GetNoteHtml**](FilingApi.md#getnotehtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
+[**GetNoteText**](FilingApi.md#getnotetext) | **GET** /filings/notes/{identifier}/text | Filing Note Text
 [**SearchNotes**](FilingApi.md#searchnotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
@@ -78,9 +78,9 @@ Name | Type | Description  | Notes
 # **FilterNotes**
 > ApiResponseFilingNotes FilterNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
 
-Filter SEC filing notes
+Filter Filing Notes
 
-Returns SEC filing notes matching the supplied criteria
+Returns Filing Notes that match the specified filters
 
 ### Example
 ```csharp
@@ -192,9 +192,9 @@ Name | Type | Description  | Notes
 # **GetAllNotes**
 > ApiResponseFilingNotes GetAllNotes (string nextPage = null)
 
-Get All SEC filing notes
+All Filing Notes
 
-Return All notes from SEC Filings, most-recent first
+Return all Notes from all Filings, most-recent first
 
 ### Example
 ```csharp
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 # **GetNote**
 > FilingNote GetNote (string identifier, string contentFormat = null)
 
-Get an SEC filing note by ID
+Filing Note by ID
 
 ### Example
 ```csharp
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 # **GetNoteHtml**
 > string GetNoteHtml (string identifier)
 
-Returns the content of an SEC filing note as originally filed
+Filing Note HTML
 
 ### Example
 ```csharp
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 # **GetNoteText**
 > string GetNoteText (string identifier)
 
-Returns the content of an SEC filing note stripped of HTML
+Filing Note Text
 
 ### Example
 ```csharp
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 Search Filing Notes
 
-Searches SEC filing notes using the text in `query`
+Searches for Filing Notes using the `query`
 
 ### Example
 ```csharp

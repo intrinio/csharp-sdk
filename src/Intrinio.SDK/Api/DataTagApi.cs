@@ -17,10 +17,10 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Filter Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
-        /// Returns Data Tags that match the given filters
+        /// Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Tag (optional)</param>
@@ -28,15 +28,16 @@ namespace Intrinio.SDK.Api
         /// <param name="parent">ID of tag parent (optional)</param>
         /// <param name="statementCode">Statement Code (optional)</param>
         /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseDataTags</returns>
-        ApiResponseDataTags FilterDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null);
+        ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
-        /// Filter Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
-        /// Returns Data Tags that match the given filters
+        /// Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Tag (optional)</param>
@@ -44,30 +45,10 @@ namespace Intrinio.SDK.Api
         /// <param name="parent">ID of tag parent (optional)</param>
         /// <param name="statementCode">Statement Code (optional)</param>
         /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        ApiResponse<ApiResponseDataTags> FilterDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null);
-        /// <summary>
-        /// All Data Tags
-        /// </summary>
-        /// <remarks>
-        /// Returns All Data Tags
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponseDataTags</returns>
-        ApiResponseDataTags GetAllDataTags (string nextPage = null);
-
-        /// <summary>
-        /// All Data Tags
-        /// </summary>
-        /// <remarks>
-        /// Returns All Data Tags
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        ApiResponse<ApiResponseDataTags> GetAllDataTagsWithHttpInfo (string nextPage = null);
+        ApiResponse<ApiResponseDataTags> GetAllDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Data Tag
         /// </summary>
@@ -97,8 +78,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponseDataTags</returns>
-        ApiResponseDataTags SearchDataTags (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseDataTagsSearch</returns>
+        ApiResponseDataTagsSearch SearchDataTags (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Data Tags
@@ -108,15 +90,16 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        ApiResponse<ApiResponseDataTags> SearchDataTagsWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseDataTagsSearch</returns>
+        ApiResponse<ApiResponseDataTagsSearch> SearchDataTagsWithHttpInfo (string query, decimal? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Filter Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
-        /// Returns Data Tags that match the given filters
+        /// Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Tag (optional)</param>
@@ -124,15 +107,16 @@ namespace Intrinio.SDK.Api
         /// <param name="parent">ID of tag parent (optional)</param>
         /// <param name="statementCode">Statement Code (optional)</param>
         /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseDataTags</returns>
-        System.Threading.Tasks.Task<ApiResponseDataTags> FilterDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
-        /// Filter Data Tags
+        /// All Data Tags
         /// </summary>
         /// <remarks>
-        /// Returns Data Tags that match the given filters
+        /// Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Tag (optional)</param>
@@ -140,30 +124,10 @@ namespace Intrinio.SDK.Api
         /// <param name="parent">ID of tag parent (optional)</param>
         /// <param name="statementCode">Statement Code (optional)</param>
         /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> FilterDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null);
-        /// <summary>
-        /// All Data Tags
-        /// </summary>
-        /// <remarks>
-        /// Returns All Data Tags
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponseDataTags</returns>
-        System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string nextPage = null);
-
-        /// <summary>
-        /// All Data Tags
-        /// </summary>
-        /// <remarks>
-        /// Returns All Data Tags
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Data Tag
         /// </summary>
@@ -193,8 +157,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponseDataTags</returns>
-        System.Threading.Tasks.Task<ApiResponseDataTags> SearchDataTagsAsync (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseDataTagsSearch</returns>
+        System.Threading.Tasks.Task<ApiResponseDataTagsSearch> SearchDataTagsAsync (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Data Tags
@@ -204,8 +169,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> SearchDataTagsAsyncWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseDataTagsSearch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTagsSearch>> SearchDataTagsAsyncWithHttpInfo (string query, decimal? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -307,7 +273,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Data Tags Returns Data Tags that match the given filters
+        /// All Data Tags Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Tag (optional)</param>
@@ -315,16 +281,17 @@ namespace Intrinio.SDK.Api
         /// <param name="parent">ID of tag parent (optional)</param>
         /// <param name="statementCode">Statement Code (optional)</param>
         /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseDataTags</returns>
-        public ApiResponseDataTags FilterDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null)
+        public ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseDataTags> localVarResponse = FilterDataTagsWithHttpInfo(tag, type, parent, statementCode, fsTemplate, nextPage);
+             ApiResponse<ApiResponseDataTags> localVarResponse = GetAllDataTagsWithHttpInfo(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Filter Data Tags Returns Data Tags that match the given filters
+        /// All Data Tags Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Tag (optional)</param>
@@ -332,166 +299,10 @@ namespace Intrinio.SDK.Api
         /// <param name="parent">ID of tag parent (optional)</param>
         /// <param name="statementCode">Statement Code (optional)</param>
         /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        public ApiResponse< ApiResponseDataTags > FilterDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null)
-        {
-
-            var localVarPath = "/data_tags/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (tag != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tag", tag)); // query parameter
-            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
-            if (parent != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "parent", parent)); // query parameter
-            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
-            if (fsTemplate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fs_template", fsTemplate)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterDataTags", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseDataTags>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseDataTags) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseDataTags)));
-        }
-
-        /// <summary>
-        /// Filter Data Tags Returns Data Tags that match the given filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tag">Tag (optional)</param>
-        /// <param name="type">Type (optional)</param>
-        /// <param name="parent">ID of tag parent (optional)</param>
-        /// <param name="statementCode">Statement Code (optional)</param>
-        /// <param name="fsTemplate">Template (optional, default to industrial)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponseDataTags</returns>
-        public async System.Threading.Tasks.Task<ApiResponseDataTags> FilterDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null)
-        {
-             ApiResponse<ApiResponseDataTags> localVarResponse = await FilterDataTagsAsyncWithHttpInfo(tag, type, parent, statementCode, fsTemplate, nextPage);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Filter Data Tags Returns Data Tags that match the given filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tag">Tag (optional)</param>
-        /// <param name="type">Type (optional)</param>
-        /// <param name="parent">ID of tag parent (optional)</param>
-        /// <param name="statementCode">Statement Code (optional)</param>
-        /// <param name="fsTemplate">Template (optional, default to industrial)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> FilterDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, string nextPage = null)
-        {
-
-            var localVarPath = "/data_tags/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (tag != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tag", tag)); // query parameter
-            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
-            if (parent != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "parent", parent)); // query parameter
-            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
-            if (fsTemplate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fs_template", fsTemplate)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterDataTags", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseDataTags>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseDataTags) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseDataTags)));
-        }
-
-        /// <summary>
-        /// All Data Tags Returns All Data Tags
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponseDataTags</returns>
-        public ApiResponseDataTags GetAllDataTags (string nextPage = null)
-        {
-             ApiResponse<ApiResponseDataTags> localVarResponse = GetAllDataTagsWithHttpInfo(nextPage);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// All Data Tags Returns All Data Tags
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        public ApiResponse< ApiResponseDataTags > GetAllDataTagsWithHttpInfo (string nextPage = null)
+        public ApiResponse< ApiResponseDataTags > GetAllDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/data_tags";
@@ -515,6 +326,12 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (tag != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tag", tag)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (parent != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "parent", parent)); // query parameter
+            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
+            if (fsTemplate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fs_template", fsTemplate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -542,25 +359,37 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Data Tags Returns All Data Tags
+        /// All Data Tags Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tag">Tag (optional)</param>
+        /// <param name="type">Type (optional)</param>
+        /// <param name="parent">ID of tag parent (optional)</param>
+        /// <param name="statementCode">Statement Code (optional)</param>
+        /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseDataTags</returns>
-        public async System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseDataTags> localVarResponse = await GetAllDataTagsAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseDataTags> localVarResponse = await GetAllDataTagsAsyncWithHttpInfo(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// All Data Tags Returns All Data Tags
+        /// All Data Tags Returns all Data Tags. Returns Data Tags matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tag">Tag (optional)</param>
+        /// <param name="type">Type (optional)</param>
+        /// <param name="parent">ID of tag parent (optional)</param>
+        /// <param name="statementCode">Statement Code (optional)</param>
+        /// <param name="fsTemplate">Template (optional, default to industrial)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/data_tags";
@@ -584,6 +413,12 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (tag != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tag", tag)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (parent != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "parent", parent)); // query parameter
+            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
+            if (fsTemplate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fs_template", fsTemplate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -758,10 +593,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponseDataTags</returns>
-        public ApiResponseDataTags SearchDataTags (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseDataTagsSearch</returns>
+        public ApiResponseDataTagsSearch SearchDataTags (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseDataTags> localVarResponse = SearchDataTagsWithHttpInfo(query);
+             ApiResponse<ApiResponseDataTagsSearch> localVarResponse = SearchDataTagsWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
         }
 
@@ -770,8 +606,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        public ApiResponse< ApiResponseDataTags > SearchDataTagsWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseDataTagsSearch</returns>
+        public ApiResponse< ApiResponseDataTagsSearch > SearchDataTagsWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -799,6 +636,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -819,9 +657,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseDataTags>(localVarStatusCode,
+            return new ApiResponse<ApiResponseDataTagsSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseDataTags) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseDataTags)));
+                (ApiResponseDataTagsSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseDataTagsSearch)));
         }
 
         /// <summary>
@@ -829,10 +667,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponseDataTags</returns>
-        public async System.Threading.Tasks.Task<ApiResponseDataTags> SearchDataTagsAsync (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseDataTagsSearch</returns>
+        public async System.Threading.Tasks.Task<ApiResponseDataTagsSearch> SearchDataTagsAsync (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseDataTags> localVarResponse = await SearchDataTagsAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseDataTagsSearch> localVarResponse = await SearchDataTagsAsyncWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
 
         }
@@ -842,8 +681,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> SearchDataTagsAsyncWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseDataTagsSearch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTagsSearch>> SearchDataTagsAsyncWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -871,6 +711,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -891,9 +732,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseDataTags>(localVarStatusCode,
+            return new ApiResponse<ApiResponseDataTagsSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseDataTags) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseDataTags)));
+                (ApiResponseDataTagsSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseDataTagsSearch)));
         }
 
     }

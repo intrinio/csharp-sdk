@@ -4,7 +4,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FilterStockExchanges**](StockExchangeApi.md#filterstockexchanges) | **GET** /stock_exchanges/filter | Filter Stock Exchanges
 [**GetAllStockExchanges**](StockExchangeApi.md#getallstockexchanges) | **GET** /stock_exchanges | All Stock Exchanges
 [**GetStockExchangeById**](StockExchangeApi.md#getstockexchangebyid) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 [**GetStockExchangePriceAdjustments**](StockExchangeApi.md#getstockexchangepriceadjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
@@ -13,68 +12,13 @@ Method | HTTP request | Description
 [**GetStockExchangeSecurities**](StockExchangeApi.md#getstockexchangesecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 
 
-<a name="filterstockexchanges"></a>
-# **FilterStockExchanges**
-> ApiResponseStockExchanges FilterStockExchanges (string city = null, string country = null, string countryCode = null)
-
-Filter Stock Exchanges
-
-Returns Stock Exchanges matching the given filters
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Intrinio.SDK.Api;
-using Intrinio.SDK.Client;
-using Intrinio.SDK.Model;
-
-namespace Example
-{
-    public class FilterStockExchangesExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
-            var stockExchangeApi = new StockExchangeApi();
-            var city = city_example;  // string | Filter by city (optional) 
-            var country = "CHINA";  // string | Filter by country (optional) 
-            var countryCode = countryCode_example;  // string | Filter by ISO country code (optional) 
-
-            try
-            {
-                ApiResponseStockExchanges result = stockExchangeApi.FilterStockExchanges(city, country, countryCode);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling StockExchangeApi.FilterStockExchanges: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **city** | **string**| Filter by city | [optional] 
- **country** | **string**| Filter by country | [optional] 
- **countryCode** | **string**| Filter by ISO country code | [optional] 
-
-### Return type
-
-[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
-
 <a name="getallstockexchanges"></a>
 # **GetAllStockExchanges**
-> ApiResponseStockExchanges GetAllStockExchanges ()
+> ApiResponseStockExchanges GetAllStockExchanges (string city = null, string country = null, string countryCode = null, decimal? pageSize = null)
 
 All Stock Exchanges
 
-Returns all Stock Exchanges
+Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
 
 ### Example
 ```csharp
@@ -93,10 +37,14 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
+            var city = city_example;  // string | Filter by city (optional) 
+            var country = "CHINA";  // string | Filter by country (optional) 
+            var countryCode = countryCode_example;  // string | Filter by ISO country code (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                ApiResponseStockExchanges result = stockExchangeApi.GetAllStockExchanges();
+                ApiResponseStockExchanges result = stockExchangeApi.GetAllStockExchanges(city, country, countryCode, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -109,7 +57,13 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **city** | **string**| Filter by city | [optional] 
+ **country** | **string**| Filter by country | [optional] 
+ **countryCode** | **string**| Filter by ISO country code | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
@@ -168,7 +122,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockexchangepriceadjustments"></a>
 # **GetStockExchangePriceAdjustments**
-> ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, string nextPage = null)
+> ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
 
 Stock Price Adjustments by Exchange
 
@@ -193,11 +147,12 @@ namespace Example
             var stockExchangeApi = new StockExchangeApi();
             var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var date = "2018-08-14";  // DateTime? | The date for which to return price adjustments (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, nextPage);
+                ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -215,6 +170,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **date** | **DateTime?**| The date for which to return price adjustments | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -223,7 +179,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockexchangeprices"></a>
 # **GetStockExchangePrices**
-> ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, string nextPage = null)
+> ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
 
 Stock Prices by Exchange
 
@@ -248,11 +204,12 @@ namespace Example
             var stockExchangeApi = new StockExchangeApi();
             var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var date = "2018-08-14";  // DateTime? | The date for which to return prices (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, nextPage);
+                ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -270,6 +227,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **date** | **DateTime?**| The date for which to return prices | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -278,7 +236,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockexchangerealtimeprices"></a>
 # **GetStockExchangeRealtimePrices**
-> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, string nextPage = null)
+> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, decimal? pageSize = null, string nextPage = null)
 
 Realtime Stock Prices by Exchange
 
@@ -303,11 +261,12 @@ namespace Example
             var stockExchangeApi = new StockExchangeApi();
             var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var source = "";  // string | Return realtime prices from the specified data source (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, nextPage);
+                ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -325,6 +284,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **source** | **string**| Return realtime prices from the specified data source | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -333,7 +293,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockexchangesecurities"></a>
 # **GetStockExchangeSecurities**
-> ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, string nextPage = null)
+> ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, decimal? pageSize = null, string nextPage = null)
 
 Securities by Exchange
 
@@ -357,11 +317,12 @@ namespace Example
 
             var stockExchangeApi = new StockExchangeApi();
             var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, nextPage);
+                ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -378,6 +339,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Stock Exchange identifier (MIC or Intrinio ID) | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type

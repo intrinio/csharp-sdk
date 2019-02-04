@@ -59,8 +59,9 @@ namespace Intrinio.SDK.Test
         public void GetAllEconomicIndicesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllEconomicIndices(nextPage);
+            //var response = instance.GetAllEconomicIndices(pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseEconomicIndices> (response, "response is ApiResponseEconomicIndices");
         }
         
@@ -71,8 +72,9 @@ namespace Intrinio.SDK.Test
         public void GetAllSicIndicesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllSicIndices(nextPage);
+            //var response = instance.GetAllSicIndices(pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSICIndices> (response, "response is ApiResponseSICIndices");
         }
         
@@ -83,8 +85,9 @@ namespace Intrinio.SDK.Test
         public void GetAllStockMarketIndicesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllStockMarketIndices(nextPage);
+            //var response = instance.GetAllStockMarketIndices(pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockMarketIndices> (response, "response is ApiResponseStockMarketIndices");
         }
         
@@ -139,8 +142,9 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+            //var response = instance.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseEconomicIndexHistoricalData> (response, "response is ApiResponseEconomicIndexHistoricalData");
         }
         
@@ -195,8 +199,9 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+            //var response = instance.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSICIndexHistoricalData> (response, "response is ApiResponseSICIndexHistoricalData");
         }
         
@@ -251,8 +256,9 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+            //var response = instance.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockMarketIndexHistoricalData> (response, "response is ApiResponseStockMarketIndexHistoricalData");
         }
         
@@ -264,8 +270,9 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //var response = instance.SearchEconomicIndices(query);
-            //Assert.IsInstanceOf<ApiResponseEconomicIndices> (response, "response is ApiResponseEconomicIndices");
+            //decimal? pageSize = null;
+            //var response = instance.SearchEconomicIndices(query, pageSize);
+            //Assert.IsInstanceOf<ApiResponseEconomicIndicesSearch> (response, "response is ApiResponseEconomicIndicesSearch");
         }
         
         /// <summary>
@@ -276,8 +283,9 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //var response = instance.SearchSicIndices(query);
-            //Assert.IsInstanceOf<ApiResponseSICIndices> (response, "response is ApiResponseSICIndices");
+            //decimal? pageSize = null;
+            //var response = instance.SearchSicIndices(query, pageSize);
+            //Assert.IsInstanceOf<ApiResponseSICIndicesSearch> (response, "response is ApiResponseSICIndicesSearch");
         }
         
         /// <summary>
@@ -288,8 +296,9 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //var response = instance.SearchStockMarketsIndices(query);
-            //Assert.IsInstanceOf<ApiResponseStockMarketIndices> (response, "response is ApiResponseStockMarketIndices");
+            //decimal? pageSize = null;
+            //var response = instance.SearchStockMarketsIndices(query, pageSize);
+            //Assert.IsInstanceOf<ApiResponseStockMarketIndicesSearch> (response, "response is ApiResponseStockMarketIndicesSearch");
         }
         
     }

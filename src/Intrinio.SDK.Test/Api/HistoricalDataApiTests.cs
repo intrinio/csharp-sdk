@@ -65,8 +65,9 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+            //var response = instance.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseHistoricalData> (response, "response is ApiResponseHistoricalData");
         }
         

@@ -4,8 +4,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FilterCompanies**](CompanyApi.md#filtercompanies) | **GET** /companies/filter | Filter Companies
-[**FilterCompanyFundamentals**](CompanyApi.md#filtercompanyfundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals by Company
 [**GetAllCompanies**](CompanyApi.md#getallcompanies) | **GET** /companies | All Companies
 [**GetAllCompanyNews**](CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
 [**GetCompany**](CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
@@ -20,145 +18,13 @@ Method | HTTP request | Description
 [**SearchCompanies**](CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 
 
-<a name="filtercompanies"></a>
-# **FilterCompanies**
-> ApiResponseCompanies FilterCompanies (DateTime? lastFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, string nextPage = null)
-
-Filter Companies
-
-Returns Companies matching the specified filters
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Intrinio.SDK.Api;
-using Intrinio.SDK.Client;
-using Intrinio.SDK.Model;
-
-namespace Example
-{
-    public class FilterCompaniesExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
-            var companyApi = new CompanyApi();
-            var lastFilingDate = "";  // DateTime? | Last filing date (optional) 
-            var sic = 3350;  // string | Standard Industrial Classification code (optional) 
-            var template = "industrial";  // string | Template (optional) 
-            var sector = "Basic Materials";  // string | Industry sector (optional) 
-            var industryCategory = "Metals & Mining";  // string | Industry category (optional) 
-            var industryGroup = "Aluminum";  // string | Industry group (optional) 
-            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
-
-            try
-            {
-                ApiResponseCompanies result = companyApi.FilterCompanies(lastFilingDate, sic, template, sector, industryCategory, industryGroup, nextPage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling CompanyApi.FilterCompanies: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **lastFilingDate** | **DateTime?**| Last filing date | [optional] 
- **sic** | **string**| Standard Industrial Classification code | [optional] 
- **template** | **string**| Template | [optional] 
- **sector** | **string**| Industry sector | [optional] 
- **industryCategory** | **string**| Industry category | [optional] 
- **industryGroup** | **string**| Industry group | [optional] 
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseCompanies**](ApiResponseCompanies.md)
-
-<a name="filtercompanyfundamentals"></a>
-# **FilterCompanyFundamentals**
-> ApiResponseCompanyFundamentals FilterCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
-
-Filter Fundamentals by Company
-
-Returns Fundamentals for the Company with the given `identifier` and matching the specified filters
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Intrinio.SDK.Api;
-using Intrinio.SDK.Client;
-using Intrinio.SDK.Model;
-
-namespace Example
-{
-    public class FilterCompanyFundamentalsExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
-            var companyApi = new CompanyApi();
-            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var filedAfter = "";  // DateTime? | Filed on or after this date (optional) 
-            var filedBefore = "";  // DateTime? | Filed on or before this date (optional) 
-            var reportedOnly = false;  // bool? | Only as-reported fundamentals (optional) 
-            var fiscalYear = 2017;  // int? | Only for the given fiscal year (optional) 
-            var statementCode = "";  // string | Only of the given statement code (optional) 
-            var type = "";  // string | Only of the given type (optional) 
-            var startDate = "";  // DateTime? | Only on or after the given date (optional) 
-            var endDate = "";  // DateTime? | Only on or before the given date (optional) 
-            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
-
-            try
-            {
-                ApiResponseCompanyFundamentals result = companyApi.FilterCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, nextPage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling CompanyApi.FilterCompanyFundamentals: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **filedAfter** | **DateTime?**| Filed on or after this date | [optional] 
- **filedBefore** | **DateTime?**| Filed on or before this date | [optional] 
- **reportedOnly** | **bool?**| Only as-reported fundamentals | [optional] 
- **fiscalYear** | **int?**| Only for the given fiscal year | [optional] 
- **statementCode** | **string**| Only of the given statement code | [optional] 
- **type** | **string**| Only of the given type | [optional] 
- **startDate** | **DateTime?**| Only on or after the given date | [optional] 
- **endDate** | **DateTime?**| Only on or before the given date | [optional] 
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
-
 <a name="getallcompanies"></a>
 # **GetAllCompanies**
-> ApiResponseCompanies GetAllCompanies (string nextPage = null)
+> ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, decimal? pageSize = null, string nextPage = null)
 
 All Companies
 
-Returns all Companies
+Returns all Companies. When parameters are specified, returns matching companies.
 
 ### Example
 ```csharp
@@ -177,11 +43,18 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
+            var latestFilingDate = "";  // DateTime? | Last filing date (optional) 
+            var sic = 3350;  // string | Standard Industrial Classification code (optional) 
+            var template = "industrial";  // string | Template (optional) 
+            var sector = "Basic Materials";  // string | Industry sector (optional) 
+            var industryCategory = "Metals & Mining";  // string | Industry category (optional) 
+            var industryGroup = "Aluminum";  // string | Industry group (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseCompanies result = companyApi.GetAllCompanies(nextPage);
+                ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -197,6 +70,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **latestFilingDate** | **DateTime?**| Last filing date | [optional] 
+ **sic** | **string**| Standard Industrial Classification code | [optional] 
+ **template** | **string**| Template | [optional] 
+ **sector** | **string**| Industry sector | [optional] 
+ **industryCategory** | **string**| Industry category | [optional] 
+ **industryGroup** | **string**| Industry group | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -205,7 +85,7 @@ Name | Type | Description  | Notes
 
 <a name="getallcompanynews"></a>
 # **GetAllCompanyNews**
-> ApiResponseNews GetAllCompanyNews (string nextPage = null)
+> ApiResponseNews GetAllCompanyNews (decimal? pageSize = null, string nextPage = null)
 
 All News
 
@@ -228,11 +108,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseNews result = companyApi.GetAllCompanyNews(nextPage);
+                ApiResponseNews result = companyApi.GetAllCompanyNews(pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -248,6 +129,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -413,7 +295,7 @@ Name | Type | Description  | Notes
 
 <a name="getcompanyfilings"></a>
 # **GetCompanyFilings**
-> ApiResponseCompanyFilings GetCompanyFilings (string identifier, string nextPage = null)
+> ApiResponseCompanyFilings GetCompanyFilings (string identifier, decimal? pageSize = null, string nextPage = null)
 
 All Filings by Company
 
@@ -437,11 +319,12 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, nextPage);
+                ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -458,6 +341,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -466,11 +350,11 @@ Name | Type | Description  | Notes
 
 <a name="getcompanyfundamentals"></a>
 # **GetCompanyFundamentals**
-> ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, string nextPage = null)
+> ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
 
 All Fundamentals by Company
 
-Returns all Fundamentals for the Company with the given `identifier`
+Returns all Fundamentals for the Company with the given `identifier`. Returns Fundamentals matching parameters when supplied.
 
 ### Example
 ```csharp
@@ -490,11 +374,20 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var filedAfter = "";  // DateTime? | Filed on or after this date (optional) 
+            var filedBefore = "";  // DateTime? | Filed on or before this date (optional) 
+            var reportedOnly = false;  // bool? | Only as-reported fundamentals (optional) 
+            var fiscalYear = 2017;  // int? | Only for the given fiscal year (optional) 
+            var statementCode = "";  // string | Only of the given statement code (optional) 
+            var type = "";  // string | Only of the given type (optional) 
+            var startDate = "";  // DateTime? | Only on or after the given date (optional) 
+            var endDate = "";  // DateTime? | Only on or before the given date (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, nextPage);
+                ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -511,6 +404,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **filedAfter** | **DateTime?**| Filed on or after this date | [optional] 
+ **filedBefore** | **DateTime?**| Filed on or before this date | [optional] 
+ **reportedOnly** | **bool?**| Only as-reported fundamentals | [optional] 
+ **fiscalYear** | **int?**| Only for the given fiscal year | [optional] 
+ **statementCode** | **string**| Only of the given statement code | [optional] 
+ **type** | **string**| Only of the given type | [optional] 
+ **startDate** | **DateTime?**| Only on or after the given date | [optional] 
+ **endDate** | **DateTime?**| Only on or before the given date | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -519,7 +421,7 @@ Name | Type | Description  | Notes
 
 <a name="getcompanyhistoricaldata"></a>
 # **GetCompanyHistoricalData**
-> ApiResponseCompanyHistoricalData GetCompanyHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseCompanyHistoricalData GetCompanyHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
 
 Historical Data for Company
 
@@ -549,11 +451,12 @@ namespace Example
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -576,6 +479,7 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -584,7 +488,7 @@ Name | Type | Description  | Notes
 
 <a name="getcompanynews"></a>
 # **GetCompanyNews**
-> ApiResponseCompanyNews GetCompanyNews (string identifier, string nextPage = null)
+> ApiResponseCompanyNews GetCompanyNews (string identifier, decimal? pageSize = null, string nextPage = null)
 
 All News by Company
 
@@ -608,11 +512,12 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, nextPage);
+                ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -629,6 +534,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -747,7 +653,7 @@ Name | Type | Description  | Notes
 
 <a name="searchcompanies"></a>
 # **SearchCompanies**
-> ApiResponseCompanies SearchCompanies (string query)
+> ApiResponseCompaniesSearch SearchCompanies (string query, decimal? pageSize = null)
 
 Search Companies
 
@@ -771,10 +677,11 @@ namespace Example
 
             var companyApi = new CompanyApi();
             var query = "Apple";  // string | Search parameters
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                ApiResponseCompanies result = companyApi.SearchCompanies(query);
+                ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -791,8 +698,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**| Search parameters | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseCompanies**](ApiResponseCompanies.md)
+[**ApiResponseCompaniesSearch**](ApiResponseCompaniesSearch.md)
 

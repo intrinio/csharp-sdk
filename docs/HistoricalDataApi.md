@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="gethistoricaldata"></a>
 # **GetHistoricalData**
-> ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
 
 Historical Data
 
@@ -38,11 +38,12 @@ namespace Example
             var startDate = "2015-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
             var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -64,6 +65,7 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical date on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type

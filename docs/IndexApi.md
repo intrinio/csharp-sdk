@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 <a name="getalleconomicindices"></a>
 # **GetAllEconomicIndices**
-> ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null)
+> ApiResponseEconomicIndices GetAllEconomicIndices (decimal? pageSize = null, string nextPage = null)
 
 All Economic Indices
 
@@ -47,11 +47,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(nextPage);
+                ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -67,6 +68,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -75,7 +77,7 @@ Name | Type | Description  | Notes
 
 <a name="getallsicindices"></a>
 # **GetAllSicIndices**
-> ApiResponseSICIndices GetAllSicIndices (string nextPage = null)
+> ApiResponseSICIndices GetAllSicIndices (decimal? pageSize = null, string nextPage = null)
 
 All SIC Indices
 
@@ -96,11 +98,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseSICIndices result = indexApi.GetAllSicIndices(nextPage);
+                ApiResponseSICIndices result = indexApi.GetAllSicIndices(pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -116,6 +119,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -124,7 +128,7 @@ Name | Type | Description  | Notes
 
 <a name="getallstockmarketindices"></a>
 # **GetAllStockMarketIndices**
-> ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null)
+> ApiResponseStockMarketIndices GetAllStockMarketIndices (decimal? pageSize = null, string nextPage = null)
 
 All Stock Market Indices
 
@@ -145,11 +149,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var indexApi = new IndexApi();
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(nextPage);
+                ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -165,6 +170,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -328,7 +334,7 @@ Name | Type | Description  | Notes
 
 <a name="geteconomicindexhistoricaldata"></a>
 # **GetEconomicIndexHistoricalData**
-> ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
 
 Historical Data for an Economic Index
 
@@ -357,11 +363,12 @@ namespace Example
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -383,6 +390,7 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -546,7 +554,7 @@ Name | Type | Description  | Notes
 
 <a name="getsicindexhistoricaldata"></a>
 # **GetSicIndexHistoricalData**
-> ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
 
 Historical Data for an SIC Index
 
@@ -575,11 +583,12 @@ namespace Example
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -601,6 +610,7 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -764,7 +774,7 @@ Name | Type | Description  | Notes
 
 <a name="getstockmarketindexhistoricaldata"></a>
 # **GetStockMarketIndexHistoricalData**
-> ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
 
 Historical Data for Stock Market Index
 
@@ -793,11 +803,12 @@ namespace Example
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical data on or before this date (optional) 
             var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -819,6 +830,7 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -827,7 +839,7 @@ Name | Type | Description  | Notes
 
 <a name="searcheconomicindices"></a>
 # **SearchEconomicIndices**
-> ApiResponseEconomicIndices SearchEconomicIndices (string query)
+> ApiResponseEconomicIndicesSearch SearchEconomicIndices (string query, decimal? pageSize = null)
 
 Search Economic Indices
 
@@ -851,10 +863,11 @@ namespace Example
 
             var indexApi = new IndexApi();
             var query = "GDP";  // string | Search query
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                ApiResponseEconomicIndices result = indexApi.SearchEconomicIndices(query);
+                ApiResponseEconomicIndicesSearch result = indexApi.SearchEconomicIndices(query, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -871,14 +884,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**| Search query | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
+[**ApiResponseEconomicIndicesSearch**](ApiResponseEconomicIndicesSearch.md)
 
 <a name="searchsicindices"></a>
 # **SearchSicIndices**
-> ApiResponseSICIndices SearchSicIndices (string query)
+> ApiResponseSICIndicesSearch SearchSicIndices (string query, decimal? pageSize = null)
 
 Search SIC Indices
 
@@ -902,10 +916,11 @@ namespace Example
 
             var indexApi = new IndexApi();
             var query = "agriculture";  // string | Search query
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                ApiResponseSICIndices result = indexApi.SearchSicIndices(query);
+                ApiResponseSICIndicesSearch result = indexApi.SearchSicIndices(query, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -922,14 +937,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**| Search query | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseSICIndices**](ApiResponseSICIndices.md)
+[**ApiResponseSICIndicesSearch**](ApiResponseSICIndicesSearch.md)
 
 <a name="searchstockmarketsindices"></a>
 # **SearchStockMarketsIndices**
-> ApiResponseStockMarketIndices SearchStockMarketsIndices (string query)
+> ApiResponseStockMarketIndicesSearch SearchStockMarketsIndices (string query, decimal? pageSize = null)
 
 Search Stock Market Indices
 
@@ -953,10 +969,11 @@ namespace Example
 
             var indexApi = new IndexApi();
             var query = "dow";  // string | Search query
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                ApiResponseStockMarketIndices result = indexApi.SearchStockMarketsIndices(query);
+                ApiResponseStockMarketIndicesSearch result = indexApi.SearchStockMarketsIndices(query, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -973,8 +990,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**| Search query | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
+[**ApiResponseStockMarketIndicesSearch**](ApiResponseStockMarketIndicesSearch.md)
 

@@ -53,10 +53,10 @@ namespace Intrinio.SDK.Test
 
         
         /// <summary>
-        /// Test FilterDataTags
+        /// Test GetAllDataTags
         /// </summary>
         [Test]
-        public void FilterDataTagsTest()
+        public void GetAllDataTagsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string tag = null;
@@ -64,20 +64,9 @@ namespace Intrinio.SDK.Test
             //string parent = null;
             //string statementCode = null;
             //string fsTemplate = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.FilterDataTags(tag, type, parent, statementCode, fsTemplate, nextPage);
-            //Assert.IsInstanceOf<ApiResponseDataTags> (response, "response is ApiResponseDataTags");
-        }
-        
-        /// <summary>
-        /// Test GetAllDataTags
-        /// </summary>
-        [Test]
-        public void GetAllDataTagsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string nextPage = null;
-            //var response = instance.GetAllDataTags(nextPage);
+            //var response = instance.GetAllDataTags(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseDataTags> (response, "response is ApiResponseDataTags");
         }
         
@@ -101,8 +90,9 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //var response = instance.SearchDataTags(query);
-            //Assert.IsInstanceOf<ApiResponseDataTags> (response, "response is ApiResponseDataTags");
+            //decimal? pageSize = null;
+            //var response = instance.SearchDataTags(query, pageSize);
+            //Assert.IsInstanceOf<ApiResponseDataTagsSearch> (response, "response is ApiResponseDataTagsSearch");
         }
         
     }

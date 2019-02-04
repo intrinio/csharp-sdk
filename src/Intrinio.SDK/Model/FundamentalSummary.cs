@@ -128,7 +128,6 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The date and time when the Fundamental was filed with the SEC</value>
         [DataMember(Name="filing_date", EmitDefaultValue=false)]
-        [JsonConverter(typeof(SwaggerDateConverter))]
         public DateTime? FilingDate { get; set; }
 
         /// <summary>

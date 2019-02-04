@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **ExchangeVolume** | **decimal?** | The number of shares exchanged during the trading day on the exchange. | [optional] 
 **MarketVolume** | **decimal?** | The number of shares exchanged during the trading day for the whole market. | [optional] 
 **UpdatedOn** | **DateTime?** | The date and time when the data was last updated. | [optional] 
-**Source** | **string** | Source of the realtime quote. | [optional] 
+**Source** | **string** | The source of the data. | [optional] 
 **Security** | [**RealtimeStockPriceSecurity**](RealtimeStockPriceSecurity.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

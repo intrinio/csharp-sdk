@@ -17,39 +17,41 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Filter Filings
+        /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns Filings that match the specified filters
+        /// Returns all Filings. Returns Filings matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="reportType">Filter by report type (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilings</returns>
-        ApiResponseFilings FilterFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
-        /// Filter Filings
+        /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns Filings that match the specified filters
+        /// Returns all Filings. Returns Filings matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="reportType">Filter by report type (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilings</returns>
-        ApiResponse<ApiResponseFilings> FilterFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Filter Filing Notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns Filing Notes that match the specified filters
+        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -58,15 +60,16 @@ namespace Intrinio.SDK.Api
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
         /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilingNotes</returns>
-        ApiResponseFilingNotes FilterNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
+        ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
-        /// Filter Filing Notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns Filing Notes that match the specified filters
+        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -75,51 +78,10 @@ namespace Intrinio.SDK.Api
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
         /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
-        ApiResponse<ApiResponseFilingNotes> FilterNotesWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
-        /// <summary>
-        /// All Filings
-        /// </summary>
-        /// <remarks>
-        /// Returns all Filings
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponseFilings</returns>
-        ApiResponseFilings GetAllFilings (string nextPage = null);
-
-        /// <summary>
-        /// All Filings
-        /// </summary>
-        /// <remarks>
-        /// Returns all Filings
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of ApiResponseFilings</returns>
-        ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string nextPage = null);
-        /// <summary>
-        /// All Filing Notes
-        /// </summary>
-        /// <remarks>
-        /// Return all Notes from all Filings, most-recent first
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponseFilingNotes</returns>
-        ApiResponseFilingNotes GetAllNotes (string nextPage = null);
-
-        /// <summary>
-        /// All Filing Notes
-        /// </summary>
-        /// <remarks>
-        /// Return all Notes from all Filings, most-recent first
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
-        ApiResponse<ApiResponseFilingNotes> GetAllNotesWithHttpInfo (string nextPage = null);
+        ApiResponse<ApiResponseFilingNotes> GetAllNotesWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Filing
         /// </summary>
@@ -217,8 +179,9 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseFilingNotesSearch</returns>
-        ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
+        ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null);
 
         /// <summary>
         /// Search Filing Notes
@@ -231,44 +194,47 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseFilingNotesSearch</returns>
-        ApiResponse<ApiResponseFilingNotesSearch> SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
+        ApiResponse<ApiResponseFilingNotesSearch> SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Filter Filings
+        /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns Filings that match the specified filters
+        /// Returns all Filings. Returns Filings matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="reportType">Filter by report type (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilings</returns>
-        System.Threading.Tasks.Task<ApiResponseFilings> FilterFilingsAsync (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
-        /// Filter Filings
+        /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns Filings that match the specified filters
+        /// Returns all Filings. Returns Filings matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="reportType">Filter by report type (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> FilterFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Filter Filing Notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns Filing Notes that match the specified filters
+        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -277,15 +243,16 @@ namespace Intrinio.SDK.Api
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
         /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilingNotes</returns>
-        System.Threading.Tasks.Task<ApiResponseFilingNotes> FilterNotesAsync (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseFilingNotes> GetAllNotesAsync (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
-        /// Filter Filing Notes
+        /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Returns Filing Notes that match the specified filters
+        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -294,51 +261,10 @@ namespace Intrinio.SDK.Api
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
         /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> FilterNotesAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null);
-        /// <summary>
-        /// All Filings
-        /// </summary>
-        /// <remarks>
-        /// Returns all Filings
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponseFilings</returns>
-        System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string nextPage = null);
-
-        /// <summary>
-        /// All Filings
-        /// </summary>
-        /// <remarks>
-        /// Returns all Filings
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string nextPage = null);
-        /// <summary>
-        /// All Filing Notes
-        /// </summary>
-        /// <remarks>
-        /// Return all Notes from all Filings, most-recent first
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponseFilingNotes</returns>
-        System.Threading.Tasks.Task<ApiResponseFilingNotes> GetAllNotesAsync (string nextPage = null);
-
-        /// <summary>
-        /// All Filing Notes
-        /// </summary>
-        /// <remarks>
-        /// Return all Notes from all Filings, most-recent first
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> GetAllNotesAsyncWithHttpInfo (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> GetAllNotesAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Filing
         /// </summary>
@@ -436,8 +362,9 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseFilingNotesSearch</returns>
-        System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null);
 
         /// <summary>
         /// Search Filing Notes
@@ -450,8 +377,9 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilingNotesSearch)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null);
         #endregion Asynchronous Operations
     }
 
@@ -553,365 +481,38 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Filings Returns Filings that match the specified filters
+        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="reportType">Filter by report type (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilings</returns>
-        public ApiResponseFilings FilterFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseFilings> localVarResponse = FilterFilingsWithHttpInfo(company, reportType, startDate, endDate, nextPage);
+             ApiResponse<ApiResponseFilings> localVarResponse = GetAllFilingsWithHttpInfo(company, reportType, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Filter Filings Returns Filings that match the specified filters
+        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="reportType">Filter by report type (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilings</returns>
-        public ApiResponse< ApiResponseFilings > FilterFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public ApiResponse< ApiResponseFilings > GetAllFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'company' is set
             if (company == null)
-                throw new ApiException(400, "Missing required parameter 'company' when calling FilingApi->FilterFilings");
-
-            var localVarPath = "/filings/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
-            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
-            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterFilings", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseFilings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseFilings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilings)));
-        }
-
-        /// <summary>
-        /// Filter Filings Returns Filings that match the specified filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
-        /// <param name="startDate">Filed on or after the given date (optional)</param>
-        /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponseFilings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilings> FilterFilingsAsync (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
-        {
-             ApiResponse<ApiResponseFilings> localVarResponse = await FilterFilingsAsyncWithHttpInfo(company, reportType, startDate, endDate, nextPage);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Filter Filings Returns Filings that match the specified filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
-        /// <param name="startDate">Filed on or after the given date (optional)</param>
-        /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> FilterFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
-        {
-            // verify the required parameter 'company' is set
-            if (company == null)
-                throw new ApiException(400, "Missing required parameter 'company' when calling FilingApi->FilterFilings");
-
-            var localVarPath = "/filings/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
-            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
-            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterFilings", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseFilings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseFilings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilings)));
-        }
-
-        /// <summary>
-        /// Filter Filing Notes Returns Filing Notes that match the specified filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
-        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
-        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
-        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
-        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponseFilingNotes</returns>
-        public ApiResponseFilingNotes FilterNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
-        {
-             ApiResponse<ApiResponseFilingNotes> localVarResponse = FilterNotesWithHttpInfo(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, nextPage);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Filter Filing Notes Returns Filing Notes that match the specified filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
-        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
-        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
-        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
-        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
-        public ApiResponse< ApiResponseFilingNotes > FilterNotesWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
-        {
-
-            var localVarPath = "/filings/notes/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
-            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
-            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
-            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
-            if (periodEndedStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_start_date", periodEndedStartDate)); // query parameter
-            if (periodEndedEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_end_date", periodEndedEndDate)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterNotes", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseFilingNotes>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseFilingNotes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotes)));
-        }
-
-        /// <summary>
-        /// Filter Filing Notes Returns Filing Notes that match the specified filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
-        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
-        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
-        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
-        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponseFilingNotes</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilingNotes> FilterNotesAsync (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
-        {
-             ApiResponse<ApiResponseFilingNotes> localVarResponse = await FilterNotesAsyncWithHttpInfo(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, nextPage);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Filter Filing Notes Returns Filing Notes that match the specified filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
-        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
-        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
-        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
-        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> FilterNotesAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
-        {
-
-            var localVarPath = "/filings/notes/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
-            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
-            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
-            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
-            if (periodEndedStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_start_date", periodEndedStartDate)); // query parameter
-            if (periodEndedEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_end_date", periodEndedEndDate)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterNotes", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseFilingNotes>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseFilingNotes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingNotes)));
-        }
-
-        /// <summary>
-        /// All Filings Returns all Filings
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponseFilings</returns>
-        public ApiResponseFilings GetAllFilings (string nextPage = null)
-        {
-             ApiResponse<ApiResponseFilings> localVarResponse = GetAllFilingsWithHttpInfo(nextPage);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// All Filings Returns all Filings
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponse of ApiResponseFilings</returns>
-        public ApiResponse< ApiResponseFilings > GetAllFilingsWithHttpInfo (string nextPage = null)
-        {
+                throw new ApiException(400, "Missing required parameter 'company' when calling FilingApi->GetAllFilings");
 
             var localVarPath = "/filings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -934,6 +535,11 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -961,26 +567,39 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filings Returns all Filings
+        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="startDate">Filed on or after the given date (optional)</param>
+        /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseFilings> localVarResponse = await GetAllFilingsAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseFilings> localVarResponse = await GetAllFilingsAsyncWithHttpInfo(company, reportType, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// All Filings Returns all Filings
+        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="startDate">Filed on or after the given date (optional)</param>
+        /// <param name="endDate">Filed before or after the given date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
+            // verify the required parameter 'company' is set
+            if (company == null)
+                throw new ApiException(400, "Missing required parameter 'company' when calling FilingApi->GetAllFilings");
 
             var localVarPath = "/filings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1003,6 +622,11 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1030,24 +654,38 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilingNotes</returns>
-        public ApiResponseFilingNotes GetAllNotes (string nextPage = null)
+        public ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseFilingNotes> localVarResponse = GetAllNotesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseFilingNotes> localVarResponse = GetAllNotesWithHttpInfo(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilingNotes</returns>
-        public ApiResponse< ApiResponseFilingNotes > GetAllNotesWithHttpInfo (string nextPage = null)
+        public ApiResponse< ApiResponseFilingNotes > GetAllNotesWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/filings/notes";
@@ -1071,6 +709,13 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
+            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
+            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
+            if (periodEndedStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_start_date", periodEndedStartDate)); // query parameter
+            if (periodEndedEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_end_date", periodEndedEndDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1098,25 +743,39 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilingNotes</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilingNotes> GetAllNotesAsync (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseFilingNotes> GetAllNotesAsync (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseFilingNotes> localVarResponse = await GetAllNotesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseFilingNotes> localVarResponse = await GetAllNotesAsyncWithHttpInfo(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first
+        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
+        /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
+        /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
+        /// <param name="periodEndedEndDate">Limit search to filings with a period end date on or before this date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilingNotes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> GetAllNotesAsyncWithHttpInfo (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotes>> GetAllNotesAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/filings/notes";
@@ -1140,6 +799,13 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
+            if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
+            if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
+            if (periodEndedStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_start_date", periodEndedStartDate)); // query parameter
+            if (periodEndedEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period_ended_end_date", periodEndedEndDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1752,10 +1418,11 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseFilingNotesSearch</returns>
-        public ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        public ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null)
         {
-             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = SearchNotesWithHttpInfo(query, filingStartDate, filingEndDate, pageSize);
+             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = SearchNotesWithHttpInfo(query, filingStartDate, filingEndDate, pageSize, pageSize2);
              return localVarResponse.Data;
         }
 
@@ -1767,8 +1434,9 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseFilingNotesSearch</returns>
-        public ApiResponse< ApiResponseFilingNotesSearch > SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        public ApiResponse< ApiResponseFilingNotesSearch > SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1799,6 +1467,7 @@ namespace Intrinio.SDK.Api
             if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
             if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (pageSize2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -1832,10 +1501,11 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseFilingNotesSearch</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null)
         {
-             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = await SearchNotesAsyncWithHttpInfo(query, filingStartDate, filingEndDate, pageSize);
+             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = await SearchNotesAsyncWithHttpInfo(query, filingStartDate, filingEndDate, pageSize, pageSize2);
              return localVarResponse.Data;
 
         }
@@ -1848,8 +1518,9 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilingNotesSearch)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1880,6 +1551,7 @@ namespace Intrinio.SDK.Api
             if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
             if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (pageSize2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

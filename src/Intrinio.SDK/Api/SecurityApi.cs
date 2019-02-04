@@ -23,9 +23,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
-        ApiResponseSecurities GetAllSecurities (string nextPage = null);
+        ApiResponseSecurities GetAllSecurities (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Securities
@@ -34,9 +35,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (string nextPage = null);
+        ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Security
         /// </summary>
@@ -118,9 +120,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityHistoricalData</returns>
-        ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for Security
@@ -136,9 +139,41 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
-        ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Intraday Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>ApiResponseSecurityIntradayPrices</returns>
+        ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
+
+        /// <summary>
+        /// Intraday Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityIntradayPrices</returns>
+        ApiResponse<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
         /// <summary>
         /// Lastest Dividend Record for Security
         /// </summary>
@@ -214,9 +249,10 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPriceAdjustments</returns>
-        ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Price Adjustments by Security
@@ -228,9 +264,10 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPriceAdjustments</returns>
-        ApiResponse<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Stock Prices by Security
         /// </summary>
@@ -242,9 +279,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPrices</returns>
-        ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Prices by Security
@@ -257,9 +295,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPrices</returns>
-        ApiResponse<ApiResponseSecurityStockPrices> GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityStockPrices> GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Screen Securities
         /// </summary>
@@ -271,8 +310,9 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>List&lt;SecurityScreenResult&gt;</returns>
-        List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null);
+        List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
 
         /// <summary>
         /// Screen Securities
@@ -285,8 +325,9 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of List&lt;SecurityScreenResult&gt;</returns>
-        ApiResponse<List<SecurityScreenResult>> ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null);
+        ApiResponse<List<SecurityScreenResult>> ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
         /// <summary>
         /// Search Securities
         /// </summary>
@@ -295,8 +336,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponseSecurities</returns>
-        ApiResponseSecurities SearchSecurities (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseSecuritiesSearch</returns>
+        ApiResponseSecuritiesSearch SearchSecurities (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Securities
@@ -306,8 +348,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        ApiResponse<ApiResponseSecurities> SearchSecuritiesWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesSearch</returns>
+        ApiResponse<ApiResponseSecuritiesSearch> SearchSecuritiesWithHttpInfo (string query, decimal? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -317,9 +360,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Securities
@@ -328,9 +372,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Security
         /// </summary>
@@ -412,9 +457,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for Security
@@ -430,9 +476,41 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Intraday Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>Task of ApiResponseSecurityIntradayPrices</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
+
+        /// <summary>
+        /// Intraday Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityIntradayPrices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
         /// <summary>
         /// Lastest Dividend Record for Security
         /// </summary>
@@ -508,9 +586,10 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPriceAdjustments</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Price Adjustments by Security
@@ -522,9 +601,10 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPriceAdjustments)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Stock Prices by Security
         /// </summary>
@@ -536,9 +616,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Prices by Security
@@ -551,9 +632,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Screen Securities
         /// </summary>
@@ -565,8 +647,9 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of List&lt;SecurityScreenResult&gt;</returns>
-        System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null);
+        System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
 
         /// <summary>
         /// Screen Securities
@@ -579,8 +662,9 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (List&lt;SecurityScreenResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null);
+        System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
         /// <summary>
         /// Search Securities
         /// </summary>
@@ -589,8 +673,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponseSecurities</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurities> SearchSecuritiesAsync (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseSecuritiesSearch</returns>
+        System.Threading.Tasks.Task<ApiResponseSecuritiesSearch> SearchSecuritiesAsync (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Securities
@@ -600,8 +685,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> SearchSecuritiesAsyncWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesSearch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesSearch>> SearchSecuritiesAsyncWithHttpInfo (string query, decimal? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -706,11 +792,12 @@ namespace Intrinio.SDK.Api
         /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
-        public ApiResponseSecurities GetAllSecurities (string nextPage = null)
+        public ApiResponseSecurities GetAllSecurities (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurities> localVarResponse = GetAllSecuritiesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSecurities> localVarResponse = GetAllSecuritiesWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -718,9 +805,10 @@ namespace Intrinio.SDK.Api
         /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        public ApiResponse< ApiResponseSecurities > GetAllSecuritiesWithHttpInfo (string nextPage = null)
+        public ApiResponse< ApiResponseSecurities > GetAllSecuritiesWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -744,6 +832,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -774,11 +863,12 @@ namespace Intrinio.SDK.Api
         /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurities> localVarResponse = await GetAllSecuritiesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSecurities> localVarResponse = await GetAllSecuritiesAsyncWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -787,9 +877,10 @@ namespace Intrinio.SDK.Api
         /// All Securities 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -813,6 +904,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1303,11 +1395,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityHistoricalData</returns>
-        public ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = GetSecurityHistoricalDataWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = GetSecurityHistoricalDataWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1322,9 +1415,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
-        public ApiResponse< ApiResponseSecurityHistoricalData > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityHistoricalData > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1361,6 +1455,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1398,11 +1493,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = await GetSecurityHistoricalDataAsyncWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = await GetSecurityHistoricalDataAsyncWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1418,9 +1514,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1457,6 +1554,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1481,6 +1579,179 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurityHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseSecurityHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityHistoricalData)));
+        }
+
+        /// <summary>
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>ApiResponseSecurityIntradayPrices</returns>
+        public ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        {
+             ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = GetSecurityIntradayPricesWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityIntradayPrices</returns>
+        public ApiResponse< ApiResponseSecurityIntradayPrices > GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityIntradayPrices");
+
+            var localVarPath = "/securities/{identifier}/prices/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntradayPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityIntradayPrices>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityIntradayPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityIntradayPrices)));
+        }
+
+        /// <summary>
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>Task of ApiResponseSecurityIntradayPrices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        {
+             ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = await GetSecurityIntradayPricesAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intraday prices from the specified data source (optional)</param>
+        /// <param name="startDate">Return intraday prices starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityIntradayPrices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityIntradayPrices");
+
+            var localVarPath = "/securities/{identifier}/prices/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntradayPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityIntradayPrices>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityIntradayPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityIntradayPrices)));
         }
 
         /// <summary>
@@ -1925,11 +2196,12 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPriceAdjustments</returns>
-        public ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = GetSecurityStockPriceAdjustmentsWithHttpInfo(identifier, startDate, endDate, nextPage);
+             ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = GetSecurityStockPriceAdjustmentsWithHttpInfo(identifier, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1940,9 +2212,10 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPriceAdjustments</returns>
-        public ApiResponse< ApiResponseSecurityStockPriceAdjustments > GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityStockPriceAdjustments > GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1972,6 +2245,7 @@ namespace Intrinio.SDK.Api
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -2005,11 +2279,12 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPriceAdjustments</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = await GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo(identifier, startDate, endDate, nextPage);
+             ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = await GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo(identifier, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2021,9 +2296,10 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="startDate">Return price adjustments on or after the date (optional)</param>
         /// <param name="endDate">Return price adjustments on or before the date (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPriceAdjustments)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2053,6 +2329,7 @@ namespace Intrinio.SDK.Api
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -2087,11 +2364,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPrices</returns>
-        public ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        public ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = GetSecurityStockPricesWithHttpInfo(identifier, startDate, endDate, frequency, nextPage);
+             ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = GetSecurityStockPricesWithHttpInfo(identifier, startDate, endDate, frequency, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2103,9 +2381,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPrices</returns>
-        public ApiResponse< ApiResponseSecurityStockPrices > GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityStockPrices > GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2136,6 +2415,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (frequency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "frequency", frequency)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -2170,11 +2450,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = await GetSecurityStockPricesAsyncWithHttpInfo(identifier, startDate, endDate, frequency, nextPage);
+             ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = await GetSecurityStockPricesAsyncWithHttpInfo(identifier, startDate, endDate, frequency, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2187,9 +2468,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return prices on or after the date (optional)</param>
         /// <param name="endDate">Return prices on or before the date (optional)</param>
         /// <param name="frequency">Return stock prices in the given frequency (optional, default to daily)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2220,6 +2502,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (frequency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "frequency", frequency)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -2254,10 +2537,11 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>List&lt;SecurityScreenResult&gt;</returns>
-        public List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null)
+        public List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
         {
-             ApiResponse<List<SecurityScreenResult>> localVarResponse = ScreenSecuritiesWithHttpInfo(logic, orderColumn, orderDirection, primaryOnly);
+             ApiResponse<List<SecurityScreenResult>> localVarResponse = ScreenSecuritiesWithHttpInfo(logic, orderColumn, orderDirection, primaryOnly, pageSize);
              return localVarResponse.Data;
         }
 
@@ -2269,8 +2553,9 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of List&lt;SecurityScreenResult&gt;</returns>
-        public ApiResponse< List<SecurityScreenResult> > ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null)
+        public ApiResponse< List<SecurityScreenResult> > ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
         {
 
             var localVarPath = "/securities/screen";
@@ -2298,6 +2583,7 @@ namespace Intrinio.SDK.Api
             if (orderColumn != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order_column", orderColumn)); // query parameter
             if (orderDirection != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order_direction", orderDirection)); // query parameter
             if (primaryOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "primary_only", primaryOnly)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (logic != null && logic.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(logic); // http body (model) parameter
@@ -2339,10 +2625,11 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of List&lt;SecurityScreenResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null)
+        public async System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
         {
-             ApiResponse<List<SecurityScreenResult>> localVarResponse = await ScreenSecuritiesAsyncWithHttpInfo(logic, orderColumn, orderDirection, primaryOnly);
+             ApiResponse<List<SecurityScreenResult>> localVarResponse = await ScreenSecuritiesAsyncWithHttpInfo(logic, orderColumn, orderDirection, primaryOnly, pageSize);
              return localVarResponse.Data;
 
         }
@@ -2355,8 +2642,9 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (List&lt;SecurityScreenResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
         {
 
             var localVarPath = "/securities/screen";
@@ -2384,6 +2672,7 @@ namespace Intrinio.SDK.Api
             if (orderColumn != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order_column", orderColumn)); // query parameter
             if (orderDirection != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order_direction", orderDirection)); // query parameter
             if (primaryOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "primary_only", primaryOnly)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (logic != null && logic.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(logic); // http body (model) parameter
@@ -2422,10 +2711,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponseSecurities</returns>
-        public ApiResponseSecurities SearchSecurities (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseSecuritiesSearch</returns>
+        public ApiResponseSecuritiesSearch SearchSecurities (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseSecurities> localVarResponse = SearchSecuritiesWithHttpInfo(query);
+             ApiResponse<ApiResponseSecuritiesSearch> localVarResponse = SearchSecuritiesWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
         }
 
@@ -2434,8 +2724,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        public ApiResponse< ApiResponseSecurities > SearchSecuritiesWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesSearch</returns>
+        public ApiResponse< ApiResponseSecuritiesSearch > SearchSecuritiesWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -2463,6 +2754,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2483,9 +2775,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecuritiesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
+                (ApiResponseSecuritiesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesSearch)));
         }
 
         /// <summary>
@@ -2493,10 +2785,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponseSecurities</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurities> SearchSecuritiesAsync (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseSecuritiesSearch</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecuritiesSearch> SearchSecuritiesAsync (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseSecurities> localVarResponse = await SearchSecuritiesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseSecuritiesSearch> localVarResponse = await SearchSecuritiesAsyncWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
 
         }
@@ -2506,8 +2799,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
-        /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> SearchSecuritiesAsyncWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesSearch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesSearch>> SearchSecuritiesAsyncWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -2535,6 +2829,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2555,9 +2850,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSecuritiesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
+                (ApiResponseSecuritiesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesSearch)));
         }
 
     }

@@ -4,8 +4,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FilterFilings**](FilingApi.md#filterfilings) | **GET** /filings/filter | Filter Filings
-[**FilterNotes**](FilingApi.md#filternotes) | **GET** /filings/notes/filter | Filter Filing Notes
 [**GetAllFilings**](FilingApi.md#getallfilings) | **GET** /filings | All Filings
 [**GetAllNotes**](FilingApi.md#getallnotes) | **GET** /filings/notes | All Filing Notes
 [**GetFilingById**](FilingApi.md#getfilingbyid) | **GET** /filings/{id} | Lookup Filing
@@ -15,135 +13,13 @@ Method | HTTP request | Description
 [**SearchNotes**](FilingApi.md#searchnotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
-<a name="filterfilings"></a>
-# **FilterFilings**
-> ApiResponseFilings FilterFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
-
-Filter Filings
-
-Returns Filings that match the specified filters
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Intrinio.SDK.Api;
-using Intrinio.SDK.Client;
-using Intrinio.SDK.Model;
-
-namespace Example
-{
-    public class FilterFilingsExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
-            var filingApi = new FilingApi();
-            var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-            var reportType = "";  // string | Filter by report type (optional) 
-            var startDate = "2015-01-01";  // DateTime? | Filed on or after the given date (optional) 
-            var endDate = "2019-01-01";  // DateTime? | Filed before or after the given date (optional) 
-            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
-
-            try
-            {
-                ApiResponseFilings result = filingApi.FilterFilings(company, reportType, startDate, endDate, nextPage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FilingApi.FilterFilings: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company** | **string**| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | 
- **reportType** | **string**| Filter by report type | [optional] 
- **startDate** | **DateTime?**| Filed on or after the given date | [optional] 
- **endDate** | **DateTime?**| Filed before or after the given date | [optional] 
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseFilings**](ApiResponseFilings.md)
-
-<a name="filternotes"></a>
-# **FilterNotes**
-> ApiResponseFilingNotes FilterNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, string nextPage = null)
-
-Filter Filing Notes
-
-Returns Filing Notes that match the specified filters
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Intrinio.SDK.Api;
-using Intrinio.SDK.Client;
-using Intrinio.SDK.Model;
-
-namespace Example
-{
-    public class FilterNotesExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
-            var filingApi = new FilingApi();
-            var company = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional) 
-            var reportType = "10-Q";  // string | Notes contained in filings that match the given report type (optional) 
-            var filingStartDate = "2018-07-15";  // DateTime? | Limit search to filings on or after this date (optional) 
-            var filingEndDate = "2018-11-15";  // DateTime? | Limit search to filings on or before this date (optional) 
-            var periodEndedStartDate = "2018-07-15";  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
-            var periodEndedEndDate = "2018-11-15";  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
-            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
-
-            try
-            {
-                ApiResponseFilingNotes result = filingApi.FilterNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, nextPage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FilingApi.FilterNotes: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional] 
- **reportType** | **string**| Notes contained in filings that match the given report type | [optional] 
- **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
- **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
- **periodEndedStartDate** | **DateTime?**| Limit search to filings with a period end date on or after this date | [optional] 
- **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional] 
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
-
 <a name="getallfilings"></a>
 # **GetAllFilings**
-> ApiResponseFilings GetAllFilings (string nextPage = null)
+> ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
 
 All Filings
 
-Returns all Filings
+Returns all Filings. Returns Filings matching parameters when supplied.
 
 ### Example
 ```csharp
@@ -162,11 +38,16 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
+            var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
+            var reportType = "";  // string | Filter by report type (optional) 
+            var startDate = "2015-01-01";  // DateTime? | Filed on or after the given date (optional) 
+            var endDate = "2019-01-01";  // DateTime? | Filed before or after the given date (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseFilings result = filingApi.GetAllFilings(nextPage);
+                ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -182,6 +63,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **company** | **string**| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | 
+ **reportType** | **string**| Filter by report type | [optional] 
+ **startDate** | **DateTime?**| Filed on or after the given date | [optional] 
+ **endDate** | **DateTime?**| Filed before or after the given date | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -190,11 +76,11 @@ Name | Type | Description  | Notes
 
 <a name="getallnotes"></a>
 # **GetAllNotes**
-> ApiResponseFilingNotes GetAllNotes (string nextPage = null)
+> ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null)
 
 All Filing Notes
 
-Return all Notes from all Filings, most-recent first
+Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
 
 ### Example
 ```csharp
@@ -213,11 +99,18 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var filingApi = new FilingApi();
+            var company = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional) 
+            var reportType = "10-Q";  // string | Notes contained in filings that match the given report type (optional) 
+            var filingStartDate = "2018-07-15";  // DateTime? | Limit search to filings on or after this date (optional) 
+            var filingEndDate = "2018-11-15";  // DateTime? | Limit search to filings on or before this date (optional) 
+            var periodEndedStartDate = "2018-07-15";  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
+            var periodEndedEndDate = "2018-11-15";  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseFilingNotes result = filingApi.GetAllNotes(nextPage);
+                ApiResponseFilingNotes result = filingApi.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -233,6 +126,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **company** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional] 
+ **reportType** | **string**| Notes contained in filings that match the given report type | [optional] 
+ **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
+ **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
+ **periodEndedStartDate** | **DateTime?**| Limit search to filings with a period end date on or after this date | [optional] 
+ **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -441,7 +341,7 @@ Name | Type | Description  | Notes
 
 <a name="searchnotes"></a>
 # **SearchNotes**
-> ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null)
+> ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null)
 
 Search Filing Notes
 
@@ -468,10 +368,11 @@ namespace Example
             var filingStartDate = "2018-07-15";  // DateTime? | Limit search to filings on or after this date (optional) 
             var filingEndDate = "2018-11-30";  // DateTime? | Limit search to filings on or before this date (optional) 
             var pageSize = 50;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize2 = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize);
+                ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize, pageSize2);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -491,6 +392,7 @@ Name | Type | Description  | Notes
  **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
  **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
  **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize2** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 

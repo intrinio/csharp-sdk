@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**GetSecurityHistoricalData**](SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**GetSecurityIntradayPrices**](SecurityApi.md#getsecurityintradayprices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 [**GetSecurityLatestDividendRecord**](SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
 [**GetSecurityLatestEarningsRecord**](SecurityApi.md#getsecuritylatestearningsrecord) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
 [**GetSecurityRealtimePrice**](SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
@@ -20,7 +21,7 @@ Method | HTTP request | Description
 
 <a name="getallsecurities"></a>
 # **GetAllSecurities**
-> ApiResponseSecurities GetAllSecurities (string nextPage = null)
+> ApiResponseSecurities GetAllSecurities (decimal? pageSize = null, string nextPage = null)
 
 All Securities
 
@@ -41,11 +42,12 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseSecurities result = securityApi.GetAllSecurities(nextPage);
+                ApiResponseSecurities result = securityApi.GetAllSecurities(pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,6 +63,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -226,7 +229,7 @@ Name | Type | Description  | Notes
 
 <a name="getsecurityhistoricaldata"></a>
 # **GetSecurityHistoricalData**
-> ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+> ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
 
 Historical Data for Security
 
@@ -256,11 +259,12 @@ namespace Example
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
             var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseSecurityHistoricalData result = securityApi.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
+                ApiResponseSecurityHistoricalData result = securityApi.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -283,11 +287,73 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical date on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
+
+<a name="getsecurityintradayprices"></a>
+# **GetSecurityIntradayPrices**
+> ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+
+Intraday Stock Prices for Security
+
+Return intraday stock prices for the Security with the given `identifier`
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityIntradayPricesExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var source = "";  // string | Return intraday prices from the specified data source (optional) 
+            var startDate = "2018-01-01";  // DateTime? | Return intraday prices starting at the specified date (optional) 
+            var startTime = 4200;  // string | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC) (optional) 
+            var endDate = "2018-01-01";  // DateTime? | Return intraday prices stopping at the specified date (optional) 
+            var endTime = 4200;  // string | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC) (optional) 
+
+            try
+            {
+                ApiResponseSecurityIntradayPrices result = securityApi.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityIntradayPrices: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **source** | **string**| Return intraday prices from the specified data source | [optional] 
+ **startDate** | **DateTime?**| Return intraday prices starting at the specified date | [optional] 
+ **startTime** | **string**| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional] 
+ **endDate** | **DateTime?**| Return intraday prices stopping at the specified date | [optional] 
+ **endTime** | **string**| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityIntradayPrices**](ApiResponseSecurityIntradayPrices.md)
 
 <a name="getsecuritylatestdividendrecord"></a>
 # **GetSecurityLatestDividendRecord**
@@ -446,7 +512,7 @@ Name | Type | Description  | Notes
 
 <a name="getsecuritystockpriceadjustments"></a>
 # **GetSecurityStockPriceAdjustments**
-> ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+> ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
 
 Stock Price Adjustments by Security
 
@@ -472,11 +538,12 @@ namespace Example
             var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
             var startDate = "2018-01-01";  // DateTime? | Return price adjustments on or after the date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Return price adjustments on or before the date (optional) 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, nextPage);
+                ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -495,6 +562,7 @@ Name | Type | Description  | Notes
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **startDate** | **DateTime?**| Return price adjustments on or after the date | [optional] 
  **endDate** | **DateTime?**| Return price adjustments on or before the date | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -503,7 +571,7 @@ Name | Type | Description  | Notes
 
 <a name="getsecuritystockprices"></a>
 # **GetSecurityStockPrices**
-> ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, string nextPage = null)
+> ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
 
 Stock Prices by Security
 
@@ -530,11 +598,12 @@ namespace Example
             var startDate = "2018-01-01";  // DateTime? | Return prices on or after the date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Return prices on or before the date (optional) 
             var frequency = "daily";  // string | Return stock prices in the given frequency (optional)  (default to daily)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
             {
-                ApiResponseSecurityStockPrices result = securityApi.GetSecurityStockPrices(identifier, startDate, endDate, frequency, nextPage);
+                ApiResponseSecurityStockPrices result = securityApi.GetSecurityStockPrices(identifier, startDate, endDate, frequency, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -554,6 +623,7 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Return prices on or after the date | [optional] 
  **endDate** | **DateTime?**| Return prices on or before the date | [optional] 
  **frequency** | **string**| Return stock prices in the given frequency | [optional] [default to daily]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -562,7 +632,7 @@ Name | Type | Description  | Notes
 
 <a name="screensecurities"></a>
 # **ScreenSecurities**
-> List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null)
+> List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
 
 Screen Securities
 
@@ -589,10 +659,11 @@ namespace Example
             var orderColumn = orderColumn_example;  // string | Results returned sorted by this column (optional) 
             var orderDirection = orderDirection_example;  // string | Sort order to use with the order_column (optional)  (default to asc)
             var primaryOnly = true;  // bool? | Return only primary securities (optional)  (default to false)
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                List&lt;SecurityScreenResult&gt; result = securityApi.ScreenSecurities(logic, orderColumn, orderDirection, primaryOnly);
+                List&lt;SecurityScreenResult&gt; result = securityApi.ScreenSecurities(logic, orderColumn, orderDirection, primaryOnly, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -612,6 +683,7 @@ Name | Type | Description  | Notes
  **orderColumn** | **string**| Results returned sorted by this column | [optional] 
  **orderDirection** | **string**| Sort order to use with the order_column | [optional] [default to asc]
  **primaryOnly** | **bool?**| Return only primary securities | [optional] [default to false]
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
@@ -619,7 +691,7 @@ Name | Type | Description  | Notes
 
 <a name="searchsecurities"></a>
 # **SearchSecurities**
-> ApiResponseSecurities SearchSecurities (string query)
+> ApiResponseSecuritiesSearch SearchSecurities (string query, decimal? pageSize = null)
 
 Search Securities
 
@@ -643,10 +715,11 @@ namespace Example
 
             var securityApi = new SecurityApi();
             var query = "Apple";  // string | 
+            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
 
             try
             {
-                ApiResponseSecurities result = securityApi.SearchSecurities(query);
+                ApiResponseSecuritiesSearch result = securityApi.SearchSecurities(query, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -663,8 +736,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**|  | 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseSecurities**](ApiResponseSecurities.md)
+[**ApiResponseSecuritiesSearch**](ApiResponseSecuritiesSearch.md)
 

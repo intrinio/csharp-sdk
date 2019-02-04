@@ -17,49 +17,32 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Filter Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns Stock Exchanges matching the given filters
+        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseStockExchanges</returns>
-        ApiResponseStockExchanges FilterStockExchanges (string city = null, string country = null, string countryCode = null);
+        ApiResponseStockExchanges GetAllStockExchanges (string city = null, string country = null, string countryCode = null, decimal? pageSize = null);
 
         /// <summary>
-        /// Filter Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns Stock Exchanges matching the given filters
+        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
-        ApiResponse<ApiResponseStockExchanges> FilterStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null);
-        /// <summary>
-        /// All Stock Exchanges
-        /// </summary>
-        /// <remarks>
-        /// Returns all Stock Exchanges
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponseStockExchanges</returns>
-        ApiResponseStockExchanges GetAllStockExchanges ();
-
-        /// <summary>
-        /// All Stock Exchanges
-        /// </summary>
-        /// <remarks>
-        /// Returns all Stock Exchanges
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
-        ApiResponse<ApiResponseStockExchanges> GetAllStockExchangesWithHttpInfo ();
+        ApiResponse<ApiResponseStockExchanges> GetAllStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null, decimal? pageSize = null);
         /// <summary>
         /// Lookup Stock Exchange
         /// </summary>
@@ -90,9 +73,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPriceAdjustments</returns>
-        ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, string nextPage = null);
+        ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Price Adjustments by Exchange
@@ -103,9 +87,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPriceAdjustments</returns>
-        ApiResponse<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
+        ApiResponse<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Stock Prices by Exchange
         /// </summary>
@@ -115,9 +100,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPrices</returns>
-        ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, string nextPage = null);
+        ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Prices by Exchange
@@ -128,9 +114,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
-        ApiResponse<ApiResponseStockExchangeStockPrices> GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
+        ApiResponse<ApiResponseStockExchangeStockPrices> GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Realtime Stock Prices by Exchange
         /// </summary>
@@ -140,9 +127,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
-        ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, string nextPage = null);
+        ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Realtime Stock Prices by Exchange
@@ -153,9 +141,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, string nextPage = null);
+        ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Securities by Exchange
         /// </summary>
@@ -164,9 +153,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeSecurities</returns>
-        ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, string nextPage = null);
+        ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Securities by Exchange
@@ -176,55 +166,39 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeSecurities</returns>
-        ApiResponse<ApiResponseStockExchangeSecurities> GetStockExchangeSecuritiesWithHttpInfo (string identifier, string nextPage = null);
+        ApiResponse<ApiResponseStockExchangeSecurities> GetStockExchangeSecuritiesWithHttpInfo (string identifier, decimal? pageSize = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Filter Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns Stock Exchanges matching the given filters
+        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseStockExchanges</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchanges> FilterStockExchangesAsync (string city = null, string country = null, string countryCode = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchanges> GetAllStockExchangesAsync (string city = null, string country = null, string countryCode = null, decimal? pageSize = null);
 
         /// <summary>
-        /// Filter Stock Exchanges
+        /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns Stock Exchanges matching the given filters
+        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> FilterStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null);
-        /// <summary>
-        /// All Stock Exchanges
-        /// </summary>
-        /// <remarks>
-        /// Returns all Stock Exchanges
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponseStockExchanges</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchanges> GetAllStockExchangesAsync ();
-
-        /// <summary>
-        /// All Stock Exchanges
-        /// </summary>
-        /// <remarks>
-        /// Returns all Stock Exchanges
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null, decimal? pageSize = null);
         /// <summary>
         /// Lookup Stock Exchange
         /// </summary>
@@ -255,9 +229,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPriceAdjustments</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsAsync (string identifier, DateTime? date = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsAsync (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Price Adjustments by Exchange
@@ -268,9 +243,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPriceAdjustments)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPriceAdjustments>> GetStockExchangePriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPriceAdjustments>> GetStockExchangePriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Stock Prices by Exchange
         /// </summary>
@@ -280,9 +256,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Prices by Exchange
@@ -293,9 +270,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Realtime Stock Prices by Exchange
         /// </summary>
@@ -305,9 +283,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Realtime Stock Prices by Exchange
@@ -318,9 +297,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Securities by Exchange
         /// </summary>
@@ -329,9 +309,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeSecurities</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchangeSecurities> GetStockExchangeSecuritiesAsync (string identifier, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchangeSecurities> GetStockExchangeSecuritiesAsync (string identifier, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Securities by Exchange
@@ -341,9 +322,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeSecurities)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeSecurities>> GetStockExchangeSecuritiesAsyncWithHttpInfo (string identifier, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeSecurities>> GetStockExchangeSecuritiesAsyncWithHttpInfo (string identifier, decimal? pageSize = null, string nextPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -445,171 +427,30 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
+        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseStockExchanges</returns>
-        public ApiResponseStockExchanges FilterStockExchanges (string city = null, string country = null, string countryCode = null)
+        public ApiResponseStockExchanges GetAllStockExchanges (string city = null, string country = null, string countryCode = null, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseStockExchanges> localVarResponse = FilterStockExchangesWithHttpInfo(city, country, countryCode);
+             ApiResponse<ApiResponseStockExchanges> localVarResponse = GetAllStockExchangesWithHttpInfo(city, country, countryCode, pageSize);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
+        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
         /// <param name="country">Filter by country (optional)</param>
         /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
-        public ApiResponse< ApiResponseStockExchanges > FilterStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null)
-        {
-
-            var localVarPath = "/stock_exchanges/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (city != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "city", city)); // query parameter
-            if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
-            if (countryCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country_code", countryCode)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterStockExchanges", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseStockExchanges>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseStockExchanges) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchanges)));
-        }
-
-        /// <summary>
-        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="city">Filter by city (optional)</param>
-        /// <param name="country">Filter by country (optional)</param>
-        /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>Task of ApiResponseStockExchanges</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchanges> FilterStockExchangesAsync (string city = null, string country = null, string countryCode = null)
-        {
-             ApiResponse<ApiResponseStockExchanges> localVarResponse = await FilterStockExchangesAsyncWithHttpInfo(city, country, countryCode);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Filter Stock Exchanges Returns Stock Exchanges matching the given filters
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="city">Filter by city (optional)</param>
-        /// <param name="country">Filter by country (optional)</param>
-        /// <param name="countryCode">Filter by ISO country code (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> FilterStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null)
-        {
-
-            var localVarPath = "/stock_exchanges/filter";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (city != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "city", city)); // query parameter
-            if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
-            if (countryCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country_code", countryCode)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilterStockExchanges", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseStockExchanges>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseStockExchanges) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchanges)));
-        }
-
-        /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponseStockExchanges</returns>
-        public ApiResponseStockExchanges GetAllStockExchanges ()
-        {
-             ApiResponse<ApiResponseStockExchanges> localVarResponse = GetAllStockExchangesWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
-        public ApiResponse< ApiResponseStockExchanges > GetAllStockExchangesWithHttpInfo ()
+        public ApiResponse< ApiResponseStockExchanges > GetAllStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null, decimal? pageSize = null)
         {
 
             var localVarPath = "/stock_exchanges";
@@ -633,6 +474,10 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (city != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "city", city)); // query parameter
+            if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
+            if (countryCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country_code", countryCode)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -659,23 +504,31 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges
+        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="city">Filter by city (optional)</param>
+        /// <param name="country">Filter by country (optional)</param>
+        /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseStockExchanges</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchanges> GetAllStockExchangesAsync ()
+        public async System.Threading.Tasks.Task<ApiResponseStockExchanges> GetAllStockExchangesAsync (string city = null, string country = null, string countryCode = null, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseStockExchanges> localVarResponse = await GetAllStockExchangesAsyncWithHttpInfo();
+             ApiResponse<ApiResponseStockExchanges> localVarResponse = await GetAllStockExchangesAsyncWithHttpInfo(city, country, countryCode, pageSize);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges
+        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="city">Filter by city (optional)</param>
+        /// <param name="country">Filter by country (optional)</param>
+        /// <param name="countryCode">Filter by ISO country code (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null, decimal? pageSize = null)
         {
 
             var localVarPath = "/stock_exchanges";
@@ -699,6 +552,10 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (city != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "city", city)); // query parameter
+            if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
+            if (countryCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country_code", countryCode)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -873,11 +730,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPriceAdjustments</returns>
-        public ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, string nextPage = null)
+        public ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustments (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeStockPriceAdjustments> localVarResponse = GetStockExchangePriceAdjustmentsWithHttpInfo(identifier, date, nextPage);
+             ApiResponse<ApiResponseStockExchangeStockPriceAdjustments> localVarResponse = GetStockExchangePriceAdjustmentsWithHttpInfo(identifier, date, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -887,9 +745,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPriceAdjustments</returns>
-        public ApiResponse< ApiResponseStockExchangeStockPriceAdjustments > GetStockExchangePriceAdjustmentsWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null)
+        public ApiResponse< ApiResponseStockExchangeStockPriceAdjustments > GetStockExchangePriceAdjustmentsWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -918,6 +777,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -950,11 +810,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPriceAdjustments</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsAsync (string identifier, DateTime? date = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeStockPriceAdjustments> GetStockExchangePriceAdjustmentsAsync (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeStockPriceAdjustments> localVarResponse = await GetStockExchangePriceAdjustmentsAsyncWithHttpInfo(identifier, date, nextPage);
+             ApiResponse<ApiResponseStockExchangeStockPriceAdjustments> localVarResponse = await GetStockExchangePriceAdjustmentsAsyncWithHttpInfo(identifier, date, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -965,9 +826,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return price adjustments (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPriceAdjustments)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPriceAdjustments>> GetStockExchangePriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPriceAdjustments>> GetStockExchangePriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -996,6 +858,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1028,11 +891,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPrices</returns>
-        public ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, string nextPage = null)
+        public ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = GetStockExchangePricesWithHttpInfo(identifier, date, nextPage);
+             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = GetStockExchangePricesWithHttpInfo(identifier, date, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1042,9 +906,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
-        public ApiResponse< ApiResponseStockExchangeStockPrices > GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null)
+        public ApiResponse< ApiResponseStockExchangeStockPrices > GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1073,6 +938,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1105,11 +971,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = await GetStockExchangePricesAsyncWithHttpInfo(identifier, date, nextPage);
+             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = await GetStockExchangePricesAsyncWithHttpInfo(identifier, date, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1120,9 +987,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1151,6 +1019,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1183,11 +1052,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
-        public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, string nextPage = null)
+        public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = GetStockExchangeRealtimePricesWithHttpInfo(identifier, source, nextPage);
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = GetStockExchangeRealtimePricesWithHttpInfo(identifier, source, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1197,9 +1067,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        public ApiResponse< ApiResponseStockExchangeRealtimeStockPrices > GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, string nextPage = null)
+        public ApiResponse< ApiResponseStockExchangeRealtimeStockPrices > GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1228,6 +1099,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1260,11 +1132,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = await GetStockExchangeRealtimePricesAsyncWithHttpInfo(identifier, source, nextPage);
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = await GetStockExchangeRealtimePricesAsyncWithHttpInfo(identifier, source, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1275,9 +1148,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified data source (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1306,6 +1180,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1337,11 +1212,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeSecurities</returns>
-        public ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, string nextPage = null)
+        public ApiResponseStockExchangeSecurities GetStockExchangeSecurities (string identifier, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeSecurities> localVarResponse = GetStockExchangeSecuritiesWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseStockExchangeSecurities> localVarResponse = GetStockExchangeSecuritiesWithHttpInfo(identifier, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1350,9 +1226,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeSecurities</returns>
-        public ApiResponse< ApiResponseStockExchangeSecurities > GetStockExchangeSecuritiesWithHttpInfo (string identifier, string nextPage = null)
+        public ApiResponse< ApiResponseStockExchangeSecurities > GetStockExchangeSecuritiesWithHttpInfo (string identifier, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1380,6 +1257,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1411,11 +1289,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeSecurities</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchangeSecurities> GetStockExchangeSecuritiesAsync (string identifier, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeSecurities> GetStockExchangeSecuritiesAsync (string identifier, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeSecurities> localVarResponse = await GetStockExchangeSecuritiesAsyncWithHttpInfo(identifier, nextPage);
+             ApiResponse<ApiResponseStockExchangeSecurities> localVarResponse = await GetStockExchangeSecuritiesAsyncWithHttpInfo(identifier, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1425,9 +1304,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeSecurities)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeSecurities>> GetStockExchangeSecuritiesAsyncWithHttpInfo (string identifier, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeSecurities>> GetStockExchangeSecuritiesAsyncWithHttpInfo (string identifier, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1455,6 +1335,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

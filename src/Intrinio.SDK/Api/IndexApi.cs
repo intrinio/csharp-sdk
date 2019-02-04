@@ -23,9 +23,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseEconomicIndices</returns>
-        ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null);
+        ApiResponseEconomicIndices GetAllEconomicIndices (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Economic Indices
@@ -34,9 +35,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
-        ApiResponse<ApiResponseEconomicIndices> GetAllEconomicIndicesWithHttpInfo (string nextPage = null);
+        ApiResponse<ApiResponseEconomicIndices> GetAllEconomicIndicesWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// All SIC Indices
         /// </summary>
@@ -44,9 +46,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSICIndices</returns>
-        ApiResponseSICIndices GetAllSicIndices (string nextPage = null);
+        ApiResponseSICIndices GetAllSicIndices (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All SIC Indices
@@ -55,9 +58,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSICIndices</returns>
-        ApiResponse<ApiResponseSICIndices> GetAllSicIndicesWithHttpInfo (string nextPage = null);
+        ApiResponse<ApiResponseSICIndices> GetAllSicIndicesWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Stock Market Indices
         /// </summary>
@@ -65,9 +69,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockMarketIndices</returns>
-        ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null);
+        ApiResponseStockMarketIndices GetAllStockMarketIndices (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Stock Market Indices
@@ -76,9 +81,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
-        ApiResponse<ApiResponseStockMarketIndices> GetAllStockMarketIndicesWithHttpInfo (string nextPage = null);
+        ApiResponse<ApiResponseStockMarketIndices> GetAllStockMarketIndicesWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Economic Index
         /// </summary>
@@ -159,9 +165,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseEconomicIndexHistoricalData</returns>
-        ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for an Economic Index
@@ -176,9 +183,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseEconomicIndexHistoricalData</returns>
-        ApiResponse<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponse<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup SIC Index
         /// </summary>
@@ -259,9 +267,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSICIndexHistoricalData</returns>
-        ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for an SIC Index
@@ -276,9 +285,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSICIndexHistoricalData</returns>
-        ApiResponse<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponse<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Stock Market Index
         /// </summary>
@@ -359,9 +369,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockMarketIndexHistoricalData</returns>
-        ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for Stock Market Index
@@ -376,9 +387,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockMarketIndexHistoricalData</returns>
-        ApiResponse<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        ApiResponse<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Search Economic Indices
         /// </summary>
@@ -387,8 +399,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponseEconomicIndices</returns>
-        ApiResponseEconomicIndices SearchEconomicIndices (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseEconomicIndicesSearch</returns>
+        ApiResponseEconomicIndicesSearch SearchEconomicIndices (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Economic Indices
@@ -398,8 +411,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
-        ApiResponse<ApiResponseEconomicIndices> SearchEconomicIndicesWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseEconomicIndicesSearch</returns>
+        ApiResponse<ApiResponseEconomicIndicesSearch> SearchEconomicIndicesWithHttpInfo (string query, decimal? pageSize = null);
         /// <summary>
         /// Search SIC Indices
         /// </summary>
@@ -408,8 +422,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponseSICIndices</returns>
-        ApiResponseSICIndices SearchSicIndices (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseSICIndicesSearch</returns>
+        ApiResponseSICIndicesSearch SearchSicIndices (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search SIC Indices
@@ -419,8 +434,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of ApiResponseSICIndices</returns>
-        ApiResponse<ApiResponseSICIndices> SearchSicIndicesWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseSICIndicesSearch</returns>
+        ApiResponse<ApiResponseSICIndicesSearch> SearchSicIndicesWithHttpInfo (string query, decimal? pageSize = null);
         /// <summary>
         /// Search Stock Market Indices
         /// </summary>
@@ -429,8 +445,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponseStockMarketIndices</returns>
-        ApiResponseStockMarketIndices SearchStockMarketsIndices (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseStockMarketIndicesSearch</returns>
+        ApiResponseStockMarketIndicesSearch SearchStockMarketsIndices (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Stock Market Indices
@@ -440,8 +457,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
-        ApiResponse<ApiResponseStockMarketIndices> SearchStockMarketsIndicesWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseStockMarketIndicesSearch</returns>
+        ApiResponse<ApiResponseStockMarketIndicesSearch> SearchStockMarketsIndicesWithHttpInfo (string query, decimal? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -451,9 +469,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseEconomicIndices</returns>
-        System.Threading.Tasks.Task<ApiResponseEconomicIndices> GetAllEconomicIndicesAsync (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseEconomicIndices> GetAllEconomicIndicesAsync (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Economic Indices
@@ -462,9 +481,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// All SIC Indices
         /// </summary>
@@ -472,9 +492,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSICIndices</returns>
-        System.Threading.Tasks.Task<ApiResponseSICIndices> GetAllSicIndicesAsync (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSICIndices> GetAllSicIndicesAsync (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All SIC Indices
@@ -483,9 +504,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> GetAllSicIndicesAsyncWithHttpInfo (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> GetAllSicIndicesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Stock Market Indices
         /// </summary>
@@ -493,9 +515,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockMarketIndices</returns>
-        System.Threading.Tasks.Task<ApiResponseStockMarketIndices> GetAllStockMarketIndicesAsync (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockMarketIndices> GetAllStockMarketIndicesAsync (decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Stock Market Indices
@@ -504,9 +527,10 @@ namespace Intrinio.SDK.Api
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> GetAllStockMarketIndicesAsyncWithHttpInfo (string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> GetAllStockMarketIndicesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Economic Index
         /// </summary>
@@ -587,9 +611,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseEconomicIndexHistoricalData</returns>
-        System.Threading.Tasks.Task<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for an Economic Index
@@ -604,9 +629,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndexHistoricalData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup SIC Index
         /// </summary>
@@ -687,9 +713,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSICIndexHistoricalData</returns>
-        System.Threading.Tasks.Task<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for an SIC Index
@@ -704,9 +731,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSICIndexHistoricalData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndexHistoricalData>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndexHistoricalData>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Stock Market Index
         /// </summary>
@@ -787,9 +815,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockMarketIndexHistoricalData</returns>
-        System.Threading.Tasks.Task<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for Stock Market Index
@@ -804,9 +833,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockMarketIndexHistoricalData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndexHistoricalData>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndexHistoricalData>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
         /// Search Economic Indices
         /// </summary>
@@ -815,8 +845,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponseEconomicIndices</returns>
-        System.Threading.Tasks.Task<ApiResponseEconomicIndices> SearchEconomicIndicesAsync (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseEconomicIndicesSearch</returns>
+        System.Threading.Tasks.Task<ApiResponseEconomicIndicesSearch> SearchEconomicIndicesAsync (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Economic Indices
@@ -826,8 +857,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> SearchEconomicIndicesAsyncWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndicesSearch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndicesSearch>> SearchEconomicIndicesAsyncWithHttpInfo (string query, decimal? pageSize = null);
         /// <summary>
         /// Search SIC Indices
         /// </summary>
@@ -836,8 +868,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponseSICIndices</returns>
-        System.Threading.Tasks.Task<ApiResponseSICIndices> SearchSicIndicesAsync (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseSICIndicesSearch</returns>
+        System.Threading.Tasks.Task<ApiResponseSICIndicesSearch> SearchSicIndicesAsync (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search SIC Indices
@@ -847,8 +880,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> SearchSicIndicesAsyncWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSICIndicesSearch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndicesSearch>> SearchSicIndicesAsyncWithHttpInfo (string query, decimal? pageSize = null);
         /// <summary>
         /// Search Stock Market Indices
         /// </summary>
@@ -857,8 +891,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponseStockMarketIndices</returns>
-        System.Threading.Tasks.Task<ApiResponseStockMarketIndices> SearchStockMarketsIndicesAsync (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseStockMarketIndicesSearch</returns>
+        System.Threading.Tasks.Task<ApiResponseStockMarketIndicesSearch> SearchStockMarketsIndicesAsync (string query, decimal? pageSize = null);
 
         /// <summary>
         /// Search Stock Market Indices
@@ -868,8 +903,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query);
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndicesSearch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndicesSearch>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query, decimal? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -974,11 +1010,12 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseEconomicIndices</returns>
-        public ApiResponseEconomicIndices GetAllEconomicIndices (string nextPage = null)
+        public ApiResponseEconomicIndices GetAllEconomicIndices (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseEconomicIndices> localVarResponse = GetAllEconomicIndicesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseEconomicIndices> localVarResponse = GetAllEconomicIndicesWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -986,9 +1023,10 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
-        public ApiResponse< ApiResponseEconomicIndices > GetAllEconomicIndicesWithHttpInfo (string nextPage = null)
+        public ApiResponse< ApiResponseEconomicIndices > GetAllEconomicIndicesWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/indices/economic";
@@ -1012,6 +1050,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1042,11 +1081,12 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseEconomicIndices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseEconomicIndices> GetAllEconomicIndicesAsync (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseEconomicIndices> GetAllEconomicIndicesAsync (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseEconomicIndices> localVarResponse = await GetAllEconomicIndicesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseEconomicIndices> localVarResponse = await GetAllEconomicIndicesAsyncWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1055,9 +1095,10 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/indices/economic";
@@ -1081,6 +1122,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1111,11 +1153,12 @@ namespace Intrinio.SDK.Api
         /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSICIndices</returns>
-        public ApiResponseSICIndices GetAllSicIndices (string nextPage = null)
+        public ApiResponseSICIndices GetAllSicIndices (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSICIndices> localVarResponse = GetAllSicIndicesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSICIndices> localVarResponse = GetAllSicIndicesWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1123,9 +1166,10 @@ namespace Intrinio.SDK.Api
         /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSICIndices</returns>
-        public ApiResponse< ApiResponseSICIndices > GetAllSicIndicesWithHttpInfo (string nextPage = null)
+        public ApiResponse< ApiResponseSICIndices > GetAllSicIndicesWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/indices/sic";
@@ -1149,6 +1193,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1179,11 +1224,12 @@ namespace Intrinio.SDK.Api
         /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSICIndices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSICIndices> GetAllSicIndicesAsync (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSICIndices> GetAllSicIndicesAsync (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSICIndices> localVarResponse = await GetAllSicIndicesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseSICIndices> localVarResponse = await GetAllSicIndicesAsyncWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1192,9 +1238,10 @@ namespace Intrinio.SDK.Api
         /// All SIC Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> GetAllSicIndicesAsyncWithHttpInfo (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> GetAllSicIndicesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/indices/sic";
@@ -1218,6 +1265,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1248,11 +1296,12 @@ namespace Intrinio.SDK.Api
         /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockMarketIndices</returns>
-        public ApiResponseStockMarketIndices GetAllStockMarketIndices (string nextPage = null)
+        public ApiResponseStockMarketIndices GetAllStockMarketIndices (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = GetAllStockMarketIndicesWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = GetAllStockMarketIndicesWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1260,9 +1309,10 @@ namespace Intrinio.SDK.Api
         /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
-        public ApiResponse< ApiResponseStockMarketIndices > GetAllStockMarketIndicesWithHttpInfo (string nextPage = null)
+        public ApiResponse< ApiResponseStockMarketIndices > GetAllStockMarketIndicesWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/indices/stock_market";
@@ -1286,6 +1336,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1316,11 +1367,12 @@ namespace Intrinio.SDK.Api
         /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockMarketIndices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndices> GetAllStockMarketIndicesAsync (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndices> GetAllStockMarketIndicesAsync (decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = await GetAllStockMarketIndicesAsyncWithHttpInfo(nextPage);
+             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = await GetAllStockMarketIndicesAsyncWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1329,9 +1381,10 @@ namespace Intrinio.SDK.Api
         /// All Stock Market Indices 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> GetAllStockMarketIndicesAsyncWithHttpInfo (string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> GetAllStockMarketIndicesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/indices/stock_market";
@@ -1355,6 +1408,7 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1844,11 +1898,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseEconomicIndexHistoricalData</returns>
-        public ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseEconomicIndexHistoricalData> localVarResponse = GetEconomicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseEconomicIndexHistoricalData> localVarResponse = GetEconomicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1862,9 +1917,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseEconomicIndexHistoricalData</returns>
-        public ApiResponse< ApiResponseEconomicIndexHistoricalData > GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponse< ApiResponseEconomicIndexHistoricalData > GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1900,6 +1956,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1936,11 +1993,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseEconomicIndexHistoricalData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseEconomicIndexHistoricalData> localVarResponse = await GetEconomicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseEconomicIndexHistoricalData> localVarResponse = await GetEconomicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1955,9 +2013,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndexHistoricalData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1993,6 +2052,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -2482,11 +2542,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSICIndexHistoricalData</returns>
-        public ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSICIndexHistoricalData> localVarResponse = GetSicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSICIndexHistoricalData> localVarResponse = GetSicIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2500,9 +2561,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSICIndexHistoricalData</returns>
-        public ApiResponse< ApiResponseSICIndexHistoricalData > GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponse< ApiResponseSICIndexHistoricalData > GetSicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2538,6 +2600,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -2574,11 +2637,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSICIndexHistoricalData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSICIndexHistoricalData> GetSicIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSICIndexHistoricalData> localVarResponse = await GetSicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseSICIndexHistoricalData> localVarResponse = await GetSicIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2593,9 +2657,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSICIndexHistoricalData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndexHistoricalData>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndexHistoricalData>> GetSicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2631,6 +2696,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -3120,11 +3186,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockMarketIndexHistoricalData</returns>
-        public ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockMarketIndexHistoricalData> localVarResponse = GetStockMarketIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseStockMarketIndexHistoricalData> localVarResponse = GetStockMarketIndexHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -3138,9 +3205,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockMarketIndexHistoricalData</returns>
-        public ApiResponse< ApiResponseStockMarketIndexHistoricalData > GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public ApiResponse< ApiResponseStockMarketIndexHistoricalData > GetStockMarketIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3176,6 +3244,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -3212,11 +3281,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockMarketIndexHistoricalData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndexHistoricalData> GetStockMarketIndexHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockMarketIndexHistoricalData> localVarResponse = await GetStockMarketIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, nextPage);
+             ApiResponse<ApiResponseStockMarketIndexHistoricalData> localVarResponse = await GetStockMarketIndexHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -3231,9 +3301,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockMarketIndexHistoricalData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndexHistoricalData>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndexHistoricalData>> GetStockMarketIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3269,6 +3340,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (sortOrder != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_order", sortOrder)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -3300,10 +3372,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponseEconomicIndices</returns>
-        public ApiResponseEconomicIndices SearchEconomicIndices (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseEconomicIndicesSearch</returns>
+        public ApiResponseEconomicIndicesSearch SearchEconomicIndices (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseEconomicIndices> localVarResponse = SearchEconomicIndicesWithHttpInfo(query);
+             ApiResponse<ApiResponseEconomicIndicesSearch> localVarResponse = SearchEconomicIndicesWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
         }
 
@@ -3312,8 +3385,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
-        public ApiResponse< ApiResponseEconomicIndices > SearchEconomicIndicesWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseEconomicIndicesSearch</returns>
+        public ApiResponse< ApiResponseEconomicIndicesSearch > SearchEconomicIndicesWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3341,6 +3415,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3361,9 +3436,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseEconomicIndices>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndicesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseEconomicIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndices)));
+                (ApiResponseEconomicIndicesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndicesSearch)));
         }
 
         /// <summary>
@@ -3371,10 +3446,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponseEconomicIndices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseEconomicIndices> SearchEconomicIndicesAsync (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseEconomicIndicesSearch</returns>
+        public async System.Threading.Tasks.Task<ApiResponseEconomicIndicesSearch> SearchEconomicIndicesAsync (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseEconomicIndices> localVarResponse = await SearchEconomicIndicesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseEconomicIndicesSearch> localVarResponse = await SearchEconomicIndicesAsyncWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
 
         }
@@ -3384,8 +3460,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> SearchEconomicIndicesAsyncWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseEconomicIndicesSearch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndicesSearch>> SearchEconomicIndicesAsyncWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3413,6 +3490,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3433,9 +3511,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseEconomicIndices>(localVarStatusCode,
+            return new ApiResponse<ApiResponseEconomicIndicesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseEconomicIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndices)));
+                (ApiResponseEconomicIndicesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndicesSearch)));
         }
 
         /// <summary>
@@ -3443,10 +3521,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponseSICIndices</returns>
-        public ApiResponseSICIndices SearchSicIndices (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseSICIndicesSearch</returns>
+        public ApiResponseSICIndicesSearch SearchSicIndices (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseSICIndices> localVarResponse = SearchSicIndicesWithHttpInfo(query);
+             ApiResponse<ApiResponseSICIndicesSearch> localVarResponse = SearchSicIndicesWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
         }
 
@@ -3455,8 +3534,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of ApiResponseSICIndices</returns>
-        public ApiResponse< ApiResponseSICIndices > SearchSicIndicesWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseSICIndicesSearch</returns>
+        public ApiResponse< ApiResponseSICIndicesSearch > SearchSicIndicesWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3484,6 +3564,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3504,9 +3585,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseSICIndices>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndicesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseSICIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndices)));
+                (ApiResponseSICIndicesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndicesSearch)));
         }
 
         /// <summary>
@@ -3514,10 +3595,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponseSICIndices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSICIndices> SearchSicIndicesAsync (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseSICIndicesSearch</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSICIndicesSearch> SearchSicIndicesAsync (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseSICIndices> localVarResponse = await SearchSicIndicesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseSICIndicesSearch> localVarResponse = await SearchSicIndicesAsyncWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
 
         }
@@ -3527,8 +3609,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (ApiResponseSICIndices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndices>> SearchSicIndicesAsyncWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSICIndicesSearch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSICIndicesSearch>> SearchSicIndicesAsyncWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3556,6 +3639,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3576,9 +3660,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseSICIndices>(localVarStatusCode,
+            return new ApiResponse<ApiResponseSICIndicesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseSICIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndices)));
+                (ApiResponseSICIndicesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSICIndicesSearch)));
         }
 
         /// <summary>
@@ -3586,10 +3670,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponseStockMarketIndices</returns>
-        public ApiResponseStockMarketIndices SearchStockMarketsIndices (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseStockMarketIndicesSearch</returns>
+        public ApiResponseStockMarketIndicesSearch SearchStockMarketsIndices (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = SearchStockMarketsIndicesWithHttpInfo(query);
+             ApiResponse<ApiResponseStockMarketIndicesSearch> localVarResponse = SearchStockMarketsIndicesWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
         }
 
@@ -3598,8 +3683,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>ApiResponse of ApiResponseStockMarketIndices</returns>
-        public ApiResponse< ApiResponseStockMarketIndices > SearchStockMarketsIndicesWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseStockMarketIndicesSearch</returns>
+        public ApiResponse< ApiResponseStockMarketIndicesSearch > SearchStockMarketsIndicesWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3627,6 +3713,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3647,9 +3734,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseStockMarketIndices>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndicesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseStockMarketIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndices)));
+                (ApiResponseStockMarketIndicesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndicesSearch)));
         }
 
         /// <summary>
@@ -3657,10 +3744,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponseStockMarketIndices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndices> SearchStockMarketsIndicesAsync (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseStockMarketIndicesSearch</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockMarketIndicesSearch> SearchStockMarketsIndicesAsync (string query, decimal? pageSize = null)
         {
-             ApiResponse<ApiResponseStockMarketIndices> localVarResponse = await SearchStockMarketsIndicesAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseStockMarketIndicesSearch> localVarResponse = await SearchStockMarketsIndicesAsyncWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
 
         }
@@ -3670,8 +3758,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
-        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndices>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query)
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockMarketIndicesSearch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockMarketIndicesSearch>> SearchStockMarketsIndicesAsyncWithHttpInfo (string query, decimal? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3699,6 +3788,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3719,9 +3809,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseStockMarketIndices>(localVarStatusCode,
+            return new ApiResponse<ApiResponseStockMarketIndicesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseStockMarketIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndices)));
+                (ApiResponseStockMarketIndicesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockMarketIndicesSearch)));
         }
 
     }

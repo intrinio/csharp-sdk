@@ -59,8 +59,9 @@ namespace Intrinio.SDK.Test
         public void GetAllSecuritiesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllSecurities(nextPage);
+            //var response = instance.GetAllSecurities(pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurities> (response, "response is ApiResponseSecurities");
         }
         
@@ -116,9 +117,27 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, nextPage);
+            //var response = instance.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityHistoricalData> (response, "response is ApiResponseSecurityHistoricalData");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityIntradayPrices
+        /// </summary>
+        [Test]
+        public void GetSecurityIntradayPricesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //DateTime? startDate = null;
+            //string startTime = null;
+            //DateTime? endDate = null;
+            //string endTime = null;
+            //var response = instance.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime);
+            //Assert.IsInstanceOf<ApiResponseSecurityIntradayPrices> (response, "response is ApiResponseSecurityIntradayPrices");
         }
         
         /// <summary>
@@ -168,8 +187,9 @@ namespace Intrinio.SDK.Test
             //string identifier = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, nextPage);
+            //var response = instance.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityStockPriceAdjustments> (response, "response is ApiResponseSecurityStockPriceAdjustments");
         }
         
@@ -184,8 +204,9 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string frequency = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityStockPrices(identifier, startDate, endDate, frequency, nextPage);
+            //var response = instance.GetSecurityStockPrices(identifier, startDate, endDate, frequency, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityStockPrices> (response, "response is ApiResponseSecurityStockPrices");
         }
         
@@ -200,7 +221,8 @@ namespace Intrinio.SDK.Test
             //string orderColumn = null;
             //string orderDirection = null;
             //bool? primaryOnly = null;
-            //var response = instance.ScreenSecurities(logic, orderColumn, orderDirection, primaryOnly);
+            //decimal? pageSize = null;
+            //var response = instance.ScreenSecurities(logic, orderColumn, orderDirection, primaryOnly, pageSize);
             //Assert.IsInstanceOf<List<SecurityScreenResult>> (response, "response is List<SecurityScreenResult>");
         }
         
@@ -212,8 +234,9 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //var response = instance.SearchSecurities(query);
-            //Assert.IsInstanceOf<ApiResponseSecurities> (response, "response is ApiResponseSecurities");
+            //decimal? pageSize = null;
+            //var response = instance.SearchSecurities(query, pageSize);
+            //Assert.IsInstanceOf<ApiResponseSecuritiesSearch> (response, "response is ApiResponseSecuritiesSearch");
         }
         
     }

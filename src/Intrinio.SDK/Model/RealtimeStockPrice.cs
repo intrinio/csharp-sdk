@@ -37,7 +37,7 @@ namespace Intrinio.SDK.Model
         /// <param name="ExchangeVolume">The number of shares exchanged during the trading day on the exchange..</param>
         /// <param name="MarketVolume">The number of shares exchanged during the trading day for the whole market..</param>
         /// <param name="UpdatedOn">The date and time when the data was last updated..</param>
-        /// <param name="Source">Source of the realtime quote..</param>
+        /// <param name="Source">The source of the data..</param>
         /// <param name="Security">Security.</param>
         public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), decimal? OpenPrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
         {
@@ -142,9 +142,9 @@ namespace Intrinio.SDK.Model
         public DateTime? UpdatedOn { get; set; }
 
         /// <summary>
-        /// Source of the realtime quote.
+        /// The source of the data.
         /// </summary>
-        /// <value>Source of the realtime quote.</value>
+        /// <value>The source of the data.</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
 

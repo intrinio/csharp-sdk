@@ -53,48 +53,19 @@ namespace Intrinio.SDK.Test
 
         
         /// <summary>
-        /// Test FilterFilings
-        /// </summary>
-        [Test]
-        public void FilterFilingsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string company = null;
-            //string reportType = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string nextPage = null;
-            //var response = instance.FilterFilings(company, reportType, startDate, endDate, nextPage);
-            //Assert.IsInstanceOf<ApiResponseFilings> (response, "response is ApiResponseFilings");
-        }
-        
-        /// <summary>
-        /// Test FilterNotes
-        /// </summary>
-        [Test]
-        public void FilterNotesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string company = null;
-            //string reportType = null;
-            //DateTime? filingStartDate = null;
-            //DateTime? filingEndDate = null;
-            //DateTime? periodEndedStartDate = null;
-            //DateTime? periodEndedEndDate = null;
-            //string nextPage = null;
-            //var response = instance.FilterNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, nextPage);
-            //Assert.IsInstanceOf<ApiResponseFilingNotes> (response, "response is ApiResponseFilingNotes");
-        }
-        
-        /// <summary>
         /// Test GetAllFilings
         /// </summary>
         [Test]
         public void GetAllFilingsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string company = null;
+            //string reportType = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllFilings(nextPage);
+            //var response = instance.GetAllFilings(company, reportType, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseFilings> (response, "response is ApiResponseFilings");
         }
         
@@ -105,8 +76,15 @@ namespace Intrinio.SDK.Test
         public void GetAllNotesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string company = null;
+            //string reportType = null;
+            //DateTime? filingStartDate = null;
+            //DateTime? filingEndDate = null;
+            //DateTime? periodEndedStartDate = null;
+            //DateTime? periodEndedEndDate = null;
+            //decimal? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllNotes(nextPage);
+            //var response = instance.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseFilingNotes> (response, "response is ApiResponseFilingNotes");
         }
         
@@ -170,7 +148,8 @@ namespace Intrinio.SDK.Test
             //DateTime? filingStartDate = null;
             //DateTime? filingEndDate = null;
             //decimal? pageSize = null;
-            //var response = instance.SearchNotes(query, filingStartDate, filingEndDate, pageSize);
+            //decimal? pageSize2 = null;
+            //var response = instance.SearchNotes(query, filingStartDate, filingEndDate, pageSize, pageSize2);
             //Assert.IsInstanceOf<ApiResponseFilingNotesSearch> (response, "response is ApiResponseFilingNotesSearch");
         }
         

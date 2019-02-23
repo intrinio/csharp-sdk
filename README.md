@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.1.1
-- Package version: 2.0.0
+- API version: 2.2.0
+- Package version: 2.0.1
 
 
 <a name="frameworks-supported"></a>
@@ -138,6 +138,9 @@ Class | Method | HTTP request | Description
 *FilingApi* | [**GetNoteHtml**](docs/FilingApi.md#getnotehtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
 *FilingApi* | [**GetNoteText**](docs/FilingApi.md#getnotetext) | **GET** /filings/notes/{identifier}/text | Filing Note Text
 *FilingApi* | [**SearchNotes**](docs/FilingApi.md#searchnotes) | **GET** /filings/notes/search | Search Filing Notes
+*ForexApi* | [**GetForexCurrencies**](docs/ForexApi.md#getforexcurrencies) | **GET** /forex/currencies | Forex Currencies
+*ForexApi* | [**GetForexPairs**](docs/ForexApi.md#getforexpairs) | **GET** /forex/pairs | Forex Currency Pairs
+*ForexApi* | [**GetForexPrices**](docs/ForexApi.md#getforexprices) | **GET** /forex/prices/{pair}/{timeframe} | Forex Currency Prices
 *FundamentalsApi* | [**GetFundamentalById**](docs/FundamentalsApi.md#getfundamentalbyid) | **GET** /fundamentals/{id} | Fundamental by ID
 *FundamentalsApi* | [**GetFundamentalReportedFinancials**](docs/FundamentalsApi.md#getfundamentalreportedfinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 *FundamentalsApi* | [**GetFundamentalStandardizedFinancials**](docs/FundamentalsApi.md#getfundamentalstandardizedfinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
@@ -203,6 +206,9 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [Model.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
  - [Model.ApiResponseFilings](docs/ApiResponseFilings.md)
+ - [Model.ApiResponseForexCurrencies](docs/ApiResponseForexCurrencies.md)
+ - [Model.ApiResponseForexPairs](docs/ApiResponseForexPairs.md)
+ - [Model.ApiResponseForexPrices](docs/ApiResponseForexPrices.md)
  - [Model.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
  - [Model.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
  - [Model.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
@@ -242,6 +248,9 @@ Class | Method | HTTP request | Description
  - [Model.FilingNoteFiling](docs/FilingNoteFiling.md)
  - [Model.FilingNoteSummary](docs/FilingNoteSummary.md)
  - [Model.FilingSummary](docs/FilingSummary.md)
+ - [Model.ForexCurrency](docs/ForexCurrency.md)
+ - [Model.ForexPair](docs/ForexPair.md)
+ - [Model.ForexPrice](docs/ForexPrice.md)
  - [Model.Fundamental](docs/Fundamental.md)
  - [Model.FundamentalSummary](docs/FundamentalSummary.md)
  - [Model.HistoricalData](docs/HistoricalData.md)

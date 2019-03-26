@@ -20,11 +20,12 @@ namespace Intrinio.SDK.Api
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -32,17 +33,18 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseHistoricalData</returns>
-        ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -50,18 +52,19 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseHistoricalData</returns>
-        ApiResponse<ApiResponseHistoricalData> GetHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseHistoricalData> GetHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -69,17 +72,18 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseHistoricalData</returns>
-        System.Threading.Tasks.Task<ApiResponseHistoricalData> GetHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseHistoricalData> GetHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -87,7 +91,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseHistoricalData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseHistoricalData>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseHistoricalData>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -189,11 +193,12 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -201,18 +206,19 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseHistoricalData</returns>
-        public ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseHistoricalData> localVarResponse = GetHistoricalDataWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
+             ApiResponse<ApiResponseHistoricalData> localVarResponse = GetHistoricalDataWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -220,7 +226,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseHistoricalData</returns>
-        public ApiResponse< ApiResponseHistoricalData > GetHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseHistoricalData > GetHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -252,6 +258,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (tag != null) localVarPathParams.Add("tag", Configuration.ApiClient.ParameterToString(tag)); // path parameter
+            if (frequency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "frequency", frequency)); // query parameter
             if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
@@ -284,11 +291,12 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -296,19 +304,20 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseHistoricalData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseHistoricalData> GetHistoricalDataAsync (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseHistoricalData> GetHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseHistoricalData> localVarResponse = await GetHistoricalDataAsyncWithHttpInfo(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
+             ApiResponse<ApiResponseHistoricalData> localVarResponse = await GetHistoricalDataAsyncWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code-name</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
+        /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
         /// <param name="endDate">Get historical date on or before this date (optional)</param>
@@ -316,7 +325,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseHistoricalData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseHistoricalData>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseHistoricalData>> GetHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -348,6 +357,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (tag != null) localVarPathParams.Add("tag", Configuration.ApiClient.ParameterToString(tag)); // path parameter
+            if (frequency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "frequency", frequency)); // query parameter
             if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter

@@ -20,7 +20,7 @@ namespace Intrinio.SDK.Api
         /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// Returns all Stock Exchanges matching the specified parameters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -34,7 +34,7 @@ namespace Intrinio.SDK.Api
         /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// Returns all Stock Exchanges matching the specified parameters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -176,7 +176,7 @@ namespace Intrinio.SDK.Api
         /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// Returns all Stock Exchanges matching the specified parameters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -190,7 +190,7 @@ namespace Intrinio.SDK.Api
         /// All Stock Exchanges
         /// </summary>
         /// <remarks>
-        /// Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// Returns all Stock Exchanges matching the specified parameters
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -427,7 +427,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// All Stock Exchanges Returns all Stock Exchanges matching the specified parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -442,7 +442,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// All Stock Exchanges Returns all Stock Exchanges matching the specified parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -504,7 +504,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// All Stock Exchanges Returns all Stock Exchanges matching the specified parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>
@@ -520,7 +520,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Stock Exchanges Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+        /// All Stock Exchanges Returns all Stock Exchanges matching the specified parameters
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="city">Filter by city (optional)</param>

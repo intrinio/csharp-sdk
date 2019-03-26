@@ -52,7 +52,8 @@ namespace Intrinio.SDK.Model
         /// <param name="LastStockPriceAdjustment">The date of the last stock price adjustment (dividend, split, etc).</param>
         /// <param name="LastCorporateAction">The date of the last corporate action.</param>
         /// <param name="PreviousTickers">Previous tickers used by this security.</param>
-        public Security(string Id = default(string), string CompanyId = default(string), string Name = default(string), string Type = default(string), string Code = default(string), string ShareClass = default(string), string Currency = default(string), decimal? RoundLotSize = default(decimal?), string Ticker = default(string), string ExchangeTicker = default(string), string CompositeTicker = default(string), List<string> AlternateTickers = default(List<string>), string Figi = default(string), string Cik = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), string FigiUniqueid = default(string), bool? Active = default(bool?), bool? Etf = default(bool?), bool? Delisted = default(bool?), bool? PrimaryListing = default(bool?), bool? PrimarySecurity = default(bool?), DateTime? FirstStockPrice = default(DateTime?), DateTime? LastStockPrice = default(DateTime?), DateTime? LastStockPriceAdjustment = default(DateTime?), DateTime? LastCorporateAction = default(DateTime?), List<string> PreviousTickers = default(List<string>))
+        /// <param name="ListingExchangeMic">The MIC code of the exchange on which this security primarily trades.</param>
+        public Security(string Id = default(string), string CompanyId = default(string), string Name = default(string), string Type = default(string), string Code = default(string), string ShareClass = default(string), string Currency = default(string), decimal? RoundLotSize = default(decimal?), string Ticker = default(string), string ExchangeTicker = default(string), string CompositeTicker = default(string), List<string> AlternateTickers = default(List<string>), string Figi = default(string), string Cik = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), string FigiUniqueid = default(string), bool? Active = default(bool?), bool? Etf = default(bool?), bool? Delisted = default(bool?), bool? PrimaryListing = default(bool?), bool? PrimarySecurity = default(bool?), DateTime? FirstStockPrice = default(DateTime?), DateTime? LastStockPrice = default(DateTime?), DateTime? LastStockPriceAdjustment = default(DateTime?), DateTime? LastCorporateAction = default(DateTime?), List<string> PreviousTickers = default(List<string>), string ListingExchangeMic = default(string))
         {
             this.Id = Id;
             this.CompanyId = CompanyId;
@@ -81,6 +82,7 @@ namespace Intrinio.SDK.Model
             this.LastStockPriceAdjustment = LastStockPriceAdjustment;
             this.LastCorporateAction = LastCorporateAction;
             this.PreviousTickers = PreviousTickers;
+            this.ListingExchangeMic = ListingExchangeMic;
         }
         
         /// <summary>
@@ -277,6 +279,13 @@ namespace Intrinio.SDK.Model
         public List<string> PreviousTickers { get; set; }
 
         /// <summary>
+        /// The MIC code of the exchange on which this security primarily trades
+        /// </summary>
+        /// <value>The MIC code of the exchange on which this security primarily trades</value>
+        [DataMember(Name="listing_exchange_mic", EmitDefaultValue=false)]
+        public string ListingExchangeMic { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -311,6 +320,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  LastStockPriceAdjustment: ").Append(LastStockPriceAdjustment).Append("\n");
             sb.Append("  LastCorporateAction: ").Append(LastCorporateAction).Append("\n");
             sb.Append("  PreviousTickers: ").Append(PreviousTickers).Append("\n");
+            sb.Append("  ListingExchangeMic: ").Append(ListingExchangeMic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -479,6 +489,11 @@ namespace Intrinio.SDK.Model
                     this.PreviousTickers == input.PreviousTickers ||
                     this.PreviousTickers != null &&
                     this.PreviousTickers.SequenceEqual(input.PreviousTickers)
+                ) && 
+                (
+                    this.ListingExchangeMic == input.ListingExchangeMic ||
+                    (this.ListingExchangeMic != null &&
+                    this.ListingExchangeMic.Equals(input.ListingExchangeMic))
                 );
         }
 
@@ -545,6 +560,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.LastCorporateAction.GetHashCode();
                 if (this.PreviousTickers != null)
                     hashCode = hashCode * 59 + this.PreviousTickers.GetHashCode();
+                if (this.ListingExchangeMic != null)
+                    hashCode = hashCode * 59 + this.ListingExchangeMic.GetHashCode();
                 return hashCode;
             }
         }

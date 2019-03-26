@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Data Point (Number)
 
-Returns a numeric value for the given `tag` and the entity with the given `identifier`
+$$v2_data_point_number_description$$
 
 ### Example
 ```csharp
@@ -33,8 +33,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataPointApi = new DataPointApi();
-            var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-            var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
+            var identifier = "$$v2_data_point_identifier_default$$";  // string | $$v2_data_point_identifier_description$$
+            var tag = "$$v2_data_point_item_number_default$$";  // string | $$v2_data_point_item_description$$
 
             try
             {
@@ -54,8 +54,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| $$v2_data_point_identifier_description$$ | 
+ **tag** | **string**| $$v2_data_point_item_description$$ | 
 
 ### Return type
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 Data Point (Text)
 
-Returns a text value for the given `tag` and the entity with the given `identifier`
+$$v2_data_point_text_description$$
 
 ### Example
 ```csharp
@@ -86,8 +86,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var dataPointApi = new DataPointApi();
-            var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-            var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
+            var identifier = "$$v2_data_point_identifier_default$$";  // string | $$v2_data_point_identifier_description$$
+            var tag = "$$v2_data_point_item_text_default$$";  // string | $$v2_data_point_item_description$$
 
             try
             {
@@ -107,8 +107,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| $$v2_data_point_identifier_description$$ | 
+ **tag** | **string**| $$v2_data_point_item_description$$ | 
 
 ### Return type
 

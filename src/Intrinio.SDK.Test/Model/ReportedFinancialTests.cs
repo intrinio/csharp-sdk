@@ -74,6 +74,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Value'
         }
+        /// <summary>
+        /// Test the property 'Dimensions'
+        /// </summary>
+        [Test]
+        public void DimensionsTest()
+        {
+            // TODO unit test for the property 'Dimensions'
+        }
 
     }
 

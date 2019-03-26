@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 Data Point (Number) for Company
 
-Returns a numeric value for the given `tag` for the Company with the given `identifier`
+$$v2_company_data_point_number_description$$
 
 ### Example
 ```csharp
@@ -212,8 +212,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var tag = "marketcap";  // string | An Intrinio data tag
+            var identifier = "$$v2_company_data_point_identifier_default$$";  // string | $$v2_company_data_point_identifier_description$$
+            var tag = "$$v2_company_data_point_item_number_default$$";  // string | $$v2_company_data_point_item_description$$
 
             try
             {
@@ -233,8 +233,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag | 
+ **identifier** | **string**| $$v2_company_data_point_identifier_description$$ | 
+ **tag** | **string**| $$v2_company_data_point_item_description$$ | 
 
 ### Return type
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 Data Point (Text) for Company
 
-Returns a text value for the given `tag` for the Company with the given `identifier`
+$$v2_company_data_point_text_description$$
 
 ### Example
 ```csharp
@@ -265,8 +265,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var tag = "marketcap";  // string | An Intrinio data tag
+            var identifier = "$$v2_company_data_point_identifier_default$$";  // string | $$v2_company_data_point_identifier_description$$
+            var tag = "$$v2_company_data_point_item_text_default$$";  // string | $$v2_company_data_point_item_description$$
 
             try
             {
@@ -286,8 +286,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag | 
+ **identifier** | **string**| $$v2_company_data_point_identifier_description$$ | 
+ **tag** | **string**| $$v2_company_data_point_item_description$$ | 
 
 ### Return type
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 Historical Data for Company
 
-Returns historical values for the given `tag` and the Company with the given `identifier`
+$$v2_company_historical_data_description$$
 
 ### Example
 ```csharp
@@ -444,8 +444,8 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var companyApi = new CompanyApi();
-            var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-            var tag = "marketcap";  // string | An Intrinio data-tag
+            var identifier = "$$v2_company_historical_data_identifier_default$$";  // string | $$v2_company_historical_data_identifier_description$$
+            var tag = "$$v2_company_historical_data_item_default$$";  // string | $$v2_company_historical_data_item_description$$
             var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
             var type = "";  // string | Filter by type, when applicable (optional) 
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
@@ -472,8 +472,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data-tag | 
+ **identifier** | **string**| $$v2_company_historical_data_identifier_description$$ | 
+ **tag** | **string**| $$v2_company_historical_data_item_description$$ | 
  **frequency** | **string**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **string**| Filter by type, when applicable | [optional] 
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 

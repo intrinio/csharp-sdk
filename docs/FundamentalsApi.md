@@ -86,7 +86,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
-            var id = "fun_ge9LlE";  // string | The Intrinio ID for the Fundamental
+            var id = "AAPL-income_statement-2018-Q1";  // string | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
 
             try
             {
@@ -106,7 +106,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Intrinio ID for the Fundamental | 
+ **id** | **string**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
 
 ### Return type
 
@@ -137,7 +137,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var fundamentalsApi = new FundamentalsApi();
-            var id = "fun_ge9LlE";  // string | The Intrinio ID for the Fundamental
+            var id = "AAPL-income_statement-2018-Q1";  // string | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
 
             try
             {
@@ -157,7 +157,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Intrinio ID for the Fundamental | 
+ **id** | **string**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
 
 ### Return type
 

@@ -9,11 +9,11 @@ Method | HTTP request | Description
 
 <a name="gethistoricaldata"></a>
 # **GetHistoricalData**
-> ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+> ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
 
 Historical Data
 
-Returns historical values for the given `tag` and the entity represented by the given `identifier`
+$$v2_historical_data_description$$
 
 ### Example
 ```csharp
@@ -32,8 +32,9 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var historicalDataApi = new HistoricalDataApi();
-            var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-            var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
+            var identifier = "$$v2_historical_data_identifier_default$$";  // string | $$v2_historical_data_identifier_description$$
+            var tag = "$$v2_historical_data_item_default$$";  // string | $$v2_historical_data_item_description$$
+            var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
             var type = "";  // string | Filter by type, when applicable (optional) 
             var startDate = "2015-01-01";  // DateTime? | Get historical data on or after this date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
@@ -43,7 +44,7 @@ namespace Example
 
             try
             {
-                ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
+                ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,8 +60,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| $$v2_historical_data_identifier_description$$ | 
+ **tag** | **string**| $$v2_historical_data_item_description$$ | 
+ **frequency** | **string**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **string**| Filter by type, when applicable | [optional] 
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical date on or before this date | [optional] 

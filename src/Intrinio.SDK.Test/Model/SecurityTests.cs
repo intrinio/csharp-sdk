@@ -274,6 +274,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'PreviousTickers'
         }
+        /// <summary>
+        /// Test the property 'ListingExchangeMic'
+        /// </summary>
+        [Test]
+        public void ListingExchangeMicTest()
+        {
+            // TODO unit test for the property 'ListingExchangeMic'
+        }
 
     }
 

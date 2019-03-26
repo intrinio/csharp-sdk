@@ -17,7 +17,7 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// A financial statement as-reported, directly from the financial statements of the XBRL filings from the company.
+    /// A financial statement fact as-reported, directly from the financial statements of the XBRL filings from the company.
     /// </summary>
     [DataContract]
     public partial class ReportedFinancial :  IEquatable<ReportedFinancial>, IValidatableObject
@@ -27,10 +27,12 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="XbrlTag">XbrlTag.</param>
         /// <param name="Value">The value reported for the XBRL Tag within the scope of the Fundamental.</param>
-        public ReportedFinancial(ReportedTag XbrlTag = default(ReportedTag), decimal? Value = default(decimal?))
+        /// <param name="Dimensions">The combination of XBRL axis and members that defines the dimensionalization of this fact (if any).</param>
+        public ReportedFinancial(ReportedTag XbrlTag = default(ReportedTag), decimal? Value = default(decimal?), List<ReportedFinancialDimension> Dimensions = default(List<ReportedFinancialDimension>))
         {
             this.XbrlTag = XbrlTag;
             this.Value = Value;
+            this.Dimensions = Dimensions;
         }
         
         /// <summary>
@@ -47,6 +49,13 @@ namespace Intrinio.SDK.Model
         public decimal? Value { get; set; }
 
         /// <summary>
+        /// The combination of XBRL axis and members that defines the dimensionalization of this fact (if any)
+        /// </summary>
+        /// <value>The combination of XBRL axis and members that defines the dimensionalization of this fact (if any)</value>
+        [DataMember(Name="dimensions", EmitDefaultValue=false)]
+        public List<ReportedFinancialDimension> Dimensions { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +65,7 @@ namespace Intrinio.SDK.Model
             sb.Append("class ReportedFinancial {\n");
             sb.Append("  XbrlTag: ").Append(XbrlTag).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,6 +109,11 @@ namespace Intrinio.SDK.Model
                     this.Value == input.Value ||
                     (this.Value != null &&
                     this.Value.Equals(input.Value))
+                ) && 
+                (
+                    this.Dimensions == input.Dimensions ||
+                    this.Dimensions != null &&
+                    this.Dimensions.SequenceEqual(input.Dimensions)
                 );
         }
 
@@ -115,6 +130,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.XbrlTag.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
+                if (this.Dimensions != null)
+                    hashCode = hashCode * 59 + this.Dimensions.GetHashCode();
                 return hashCode;
             }
         }

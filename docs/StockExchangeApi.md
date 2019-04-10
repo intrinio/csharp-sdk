@@ -94,7 +94,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = "$$v2_mic_default$$";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
 
             try
             {
@@ -145,7 +145,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = "$$v2_mic_default$$";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var date = "2018-08-14";  // DateTime? | The date for which to return price adjustments (optional) 
             var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -202,7 +202,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = "$$v2_mic_default$$";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var date = "2018-08-14";  // DateTime? | The date for which to return prices (optional) 
             var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -259,7 +259,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = "$$v2_mic_default$$";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var source = "";  // string | Return realtime prices from the specified data source (optional) 
             var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -316,7 +316,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var stockExchangeApi = new StockExchangeApi();
-            var identifier = "$$v2_mic_default$$";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+            var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
             var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 

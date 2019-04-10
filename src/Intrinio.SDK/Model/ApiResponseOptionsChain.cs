@@ -25,18 +25,18 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiResponseOptionsChain" /> class.
         /// </summary>
-        /// <param name="Chains">A list of options for the provided expiration date their respective option prices..</param>
-        public ApiResponseOptionsChain(List<OptionChain> Chains = default(List<OptionChain>))
+        /// <param name="Chain">A list of options for the provided expiration date their respective option prices..</param>
+        public ApiResponseOptionsChain(List<OptionChain> Chain = default(List<OptionChain>))
         {
-            this.Chains = Chains;
+            this.Chain = Chain;
         }
         
         /// <summary>
         /// A list of options for the provided expiration date their respective option prices.
         /// </summary>
         /// <value>A list of options for the provided expiration date their respective option prices.</value>
-        [DataMember(Name="chains", EmitDefaultValue=false)]
-        public List<OptionChain> Chains { get; set; }
+        [DataMember(Name="chain", EmitDefaultValue=false)]
+        public List<OptionChain> Chain { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -46,7 +46,7 @@ namespace Intrinio.SDK.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ApiResponseOptionsChain {\n");
-            sb.Append("  Chains: ").Append(Chains).Append("\n");
+            sb.Append("  Chain: ").Append(Chain).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,9 +82,9 @@ namespace Intrinio.SDK.Model
 
             return 
                 (
-                    this.Chains == input.Chains ||
-                    this.Chains != null &&
-                    this.Chains.SequenceEqual(input.Chains)
+                    this.Chain == input.Chain ||
+                    this.Chain != null &&
+                    this.Chain.SequenceEqual(input.Chain)
                 );
         }
 
@@ -97,8 +97,8 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Chains != null)
-                    hashCode = hashCode * 59 + this.Chains.GetHashCode();
+                if (this.Chain != null)
+                    hashCode = hashCode * 59 + this.Chain.GetHashCode();
                 return hashCode;
             }
         }

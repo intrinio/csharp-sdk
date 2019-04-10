@@ -472,9 +472,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -485,7 +484,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityKnowSureThing</returns>
-        ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
+        ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Know Sure Thing
@@ -497,9 +496,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -510,7 +508,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityKnowSureThing</returns>
-        ApiResponse<ApiResponseSecurityKnowSureThing> GetSecurityPriceTechnicalsKstWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityKnowSureThing> GetSecurityPriceTechnicalsKstWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Moving Average Convergence Divergence
         /// </summary>
@@ -1485,9 +1483,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -1498,7 +1495,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityKnowSureThing</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityKnowSureThing> GetSecurityPriceTechnicalsKstAsync (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityKnowSureThing> GetSecurityPriceTechnicalsKstAsync (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Know Sure Thing
@@ -1510,9 +1507,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -1523,7 +1519,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityKnowSureThing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityKnowSureThing>> GetSecurityPriceTechnicalsKstAsyncWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityKnowSureThing>> GetSecurityPriceTechnicalsKstAsyncWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Moving Average Convergence Divergence
         /// </summary>
@@ -4605,9 +4601,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -4618,9 +4613,9 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityKnowSureThing</returns>
-        public ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityKnowSureThing> localVarResponse = GetSecurityPriceTechnicalsKstWithHttpInfo(identifier, roc1, roc2, roc3, roc4, roc5, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
+             ApiResponse<ApiResponseSecurityKnowSureThing> localVarResponse = GetSecurityPriceTechnicalsKstWithHttpInfo(identifier, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -4631,9 +4626,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -4644,7 +4638,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityKnowSureThing</returns>
-        public ApiResponse< ApiResponseSecurityKnowSureThing > GetSecurityPriceTechnicalsKstWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityKnowSureThing > GetSecurityPriceTechnicalsKstWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4674,9 +4668,8 @@ namespace Intrinio.SDK.Api
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (roc1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc1", roc1)); // query parameter
             if (roc2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc2", roc2)); // query parameter
-            if (roc3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc2", roc3)); // query parameter
-            if (roc4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc3", roc4)); // query parameter
-            if (roc5 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc4", roc5)); // query parameter
+            if (roc3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc3", roc3)); // query parameter
+            if (roc4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc4", roc4)); // query parameter
             if (sma1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma1", sma1)); // query parameter
             if (sma2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma2", sma2)); // query parameter
             if (sma3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma3", sma3)); // query parameter
@@ -4718,9 +4711,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -4731,9 +4723,9 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityKnowSureThing</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityKnowSureThing> GetSecurityPriceTechnicalsKstAsync (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityKnowSureThing> GetSecurityPriceTechnicalsKstAsync (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityKnowSureThing> localVarResponse = await GetSecurityPriceTechnicalsKstAsyncWithHttpInfo(identifier, roc1, roc2, roc3, roc4, roc5, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
+             ApiResponse<ApiResponseSecurityKnowSureThing> localVarResponse = await GetSecurityPriceTechnicalsKstAsyncWithHttpInfo(identifier, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -4745,9 +4737,8 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional, default to 15)</param>
-        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
-        /// <param name="roc5">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional, default to 30)</param>
         /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional, default to 10)</param>
         /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional, default to 10)</param>
         /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional, default to 10)</param>
@@ -4758,7 +4749,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityKnowSureThing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityKnowSureThing>> GetSecurityPriceTechnicalsKstAsyncWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? roc5 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityKnowSureThing>> GetSecurityPriceTechnicalsKstAsyncWithHttpInfo (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4788,9 +4779,8 @@ namespace Intrinio.SDK.Api
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (roc1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc1", roc1)); // query parameter
             if (roc2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc2", roc2)); // query parameter
-            if (roc3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc2", roc3)); // query parameter
-            if (roc4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc3", roc4)); // query parameter
-            if (roc5 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc4", roc5)); // query parameter
+            if (roc3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc3", roc3)); // query parameter
+            if (roc4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc4", roc4)); // query parameter
             if (sma1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma1", sma1)); // query parameter
             if (sma2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma2", sma2)); // query parameter
             if (sma3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma3", sma3)); // query parameter

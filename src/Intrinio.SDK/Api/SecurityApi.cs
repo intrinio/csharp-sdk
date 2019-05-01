@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
-        ApiResponseSecurities GetAllSecurities (decimal? pageSize = null, string nextPage = null);
+        ApiResponseSecurities GetAllSecurities (int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Securities
@@ -38,7 +38,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Security
         /// </summary>
@@ -123,7 +123,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityHistoricalData</returns>
-        ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for Security
@@ -142,7 +142,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
-        ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -1261,7 +1261,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPriceAdjustments</returns>
-        ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Price Adjustments by Security
@@ -1276,7 +1276,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPriceAdjustments</returns>
-        ApiResponse<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Stock Prices by Security
         /// </summary>
@@ -1291,7 +1291,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPrices</returns>
-        ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Prices by Security
@@ -1307,7 +1307,135 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPrices</returns>
-        ApiResponse<ApiResponseSecurityStockPrices> GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityStockPrices> GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Analyst Ratings
+        /// </summary>
+        /// <remarks>
+        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseSecurityZacksAnalystRatings</returns>
+        ApiResponseSecurityZacksAnalystRatings GetSecurityZacksAnalystRatings (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null);
+
+        /// <summary>
+        /// Zacks Analyst Ratings
+        /// </summary>
+        /// <remarks>
+        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksAnalystRatings</returns>
+        ApiResponse<ApiResponseSecurityZacksAnalystRatings> GetSecurityZacksAnalystRatingsWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null);
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot
+        /// </summary>
+        /// <remarks>
+        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>ApiResponseSecurityZacksAnalystRatingsSnapshot</returns>
+        ApiResponseSecurityZacksAnalystRatingsSnapshot GetSecurityZacksAnalystRatingsSnapshot (string identifier, string date = null);
+
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot
+        /// </summary>
+        /// <remarks>
+        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksAnalystRatingsSnapshot</returns>
+        ApiResponse<ApiResponseSecurityZacksAnalystRatingsSnapshot> GetSecurityZacksAnalystRatingsSnapshotWithHttpInfo (string identifier, string date = null);
+        /// <summary>
+        /// Zacks EPS Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityZacksEPSSurprises</returns>
+        ApiResponseSecurityZacksEPSSurprises GetSecurityZacksEpsSurprises (string identifier, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks EPS Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksEPSSurprises</returns>
+        ApiResponse<ApiResponseSecurityZacksEPSSurprises> GetSecurityZacksEpsSurprisesWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Sales Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityZacksSalesSurprises</returns>
+        ApiResponseSecurityZacksSalesSurprises GetSecurityZacksSalesSurprises (string identifier, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Sales Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksSalesSurprises</returns>
+        ApiResponse<ApiResponseSecurityZacksSalesSurprises> GetSecurityZacksSalesSurprisesWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Screen Securities
         /// </summary>
@@ -1321,7 +1449,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>List&lt;SecurityScreenResult&gt;</returns>
-        List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
+        List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
 
         /// <summary>
         /// Screen Securities
@@ -1336,7 +1464,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of List&lt;SecurityScreenResult&gt;</returns>
-        ApiResponse<List<SecurityScreenResult>> ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
+        ApiResponse<List<SecurityScreenResult>> ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
         /// <summary>
         /// Search Securities
         /// </summary>
@@ -1347,7 +1475,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseSecuritiesSearch</returns>
-        ApiResponseSecuritiesSearch SearchSecurities (string query, decimal? pageSize = null);
+        ApiResponseSecuritiesSearch SearchSecurities (string query, int? pageSize = null);
 
         /// <summary>
         /// Search Securities
@@ -1359,7 +1487,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseSecuritiesSearch</returns>
-        ApiResponse<ApiResponseSecuritiesSearch> SearchSecuritiesWithHttpInfo (string query, decimal? pageSize = null);
+        ApiResponse<ApiResponseSecuritiesSearch> SearchSecuritiesWithHttpInfo (string query, int? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -1372,7 +1500,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Securities
@@ -1384,7 +1512,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Security
         /// </summary>
@@ -1469,7 +1597,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Historical Data for Security
@@ -1488,7 +1616,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -2607,7 +2735,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPriceAdjustments</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Price Adjustments by Security
@@ -2622,7 +2750,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPriceAdjustments)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Stock Prices by Security
         /// </summary>
@@ -2637,7 +2765,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Stock Prices by Security
@@ -2653,7 +2781,135 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Analyst Ratings
+        /// </summary>
+        /// <remarks>
+        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseSecurityZacksAnalystRatings</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityZacksAnalystRatings> GetSecurityZacksAnalystRatingsAsync (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null);
+
+        /// <summary>
+        /// Zacks Analyst Ratings
+        /// </summary>
+        /// <remarks>
+        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksAnalystRatings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksAnalystRatings>> GetSecurityZacksAnalystRatingsAsyncWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null);
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot
+        /// </summary>
+        /// <remarks>
+        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>Task of ApiResponseSecurityZacksAnalystRatingsSnapshot</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityZacksAnalystRatingsSnapshot> GetSecurityZacksAnalystRatingsSnapshotAsync (string identifier, string date = null);
+
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot
+        /// </summary>
+        /// <remarks>
+        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksAnalystRatingsSnapshot)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksAnalystRatingsSnapshot>> GetSecurityZacksAnalystRatingsSnapshotAsyncWithHttpInfo (string identifier, string date = null);
+        /// <summary>
+        /// Zacks EPS Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityZacksEPSSurprises</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityZacksEPSSurprises> GetSecurityZacksEpsSurprisesAsync (string identifier, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks EPS Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksEPSSurprises)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksEPSSurprises>> GetSecurityZacksEpsSurprisesAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Sales Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityZacksSalesSurprises</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityZacksSalesSurprises> GetSecurityZacksSalesSurprisesAsync (string identifier, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Sales Surprises for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksSalesSurprises)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksSalesSurprises>> GetSecurityZacksSalesSurprisesAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Screen Securities
         /// </summary>
@@ -2667,7 +2923,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of List&lt;SecurityScreenResult&gt;</returns>
-        System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
+        System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
 
         /// <summary>
         /// Screen Securities
@@ -2682,7 +2938,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (List&lt;SecurityScreenResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
         /// <summary>
         /// Search Securities
         /// </summary>
@@ -2693,7 +2949,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseSecuritiesSearch</returns>
-        System.Threading.Tasks.Task<ApiResponseSecuritiesSearch> SearchSecuritiesAsync (string query, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponseSecuritiesSearch> SearchSecuritiesAsync (string query, int? pageSize = null);
 
         /// <summary>
         /// Search Securities
@@ -2705,7 +2961,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecuritiesSearch)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesSearch>> SearchSecuritiesAsyncWithHttpInfo (string query, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesSearch>> SearchSecuritiesAsyncWithHttpInfo (string query, int? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -2813,7 +3069,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
-        public ApiResponseSecurities GetAllSecurities (decimal? pageSize = null, string nextPage = null)
+        public ApiResponseSecurities GetAllSecurities (int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurities> localVarResponse = GetAllSecuritiesWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
@@ -2826,7 +3082,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        public ApiResponse< ApiResponseSecurities > GetAllSecuritiesWithHttpInfo (decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurities > GetAllSecuritiesWithHttpInfo (int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -2884,7 +3140,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurities> localVarResponse = await GetAllSecuritiesAsyncWithHttpInfo(pageSize, nextPage);
              return localVarResponse.Data;
@@ -2898,7 +3154,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -3416,7 +3672,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityHistoricalData</returns>
-        public ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = GetSecurityHistoricalDataWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
@@ -3436,7 +3692,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
-        public ApiResponse< ApiResponseSecurityHistoricalData > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityHistoricalData > GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3514,7 +3770,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityHistoricalData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataAsync (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityHistoricalData> localVarResponse = await GetSecurityHistoricalDataAsyncWithHttpInfo(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
              return localVarResponse.Data;
@@ -3535,7 +3791,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -9724,7 +9980,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPriceAdjustments</returns>
-        public ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = GetSecurityStockPriceAdjustmentsWithHttpInfo(identifier, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
@@ -9740,7 +9996,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPriceAdjustments</returns>
-        public ApiResponse< ApiResponseSecurityStockPriceAdjustments > GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityStockPriceAdjustments > GetSecurityStockPriceAdjustmentsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -9807,7 +10063,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPriceAdjustments</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPriceAdjustments> GetSecurityStockPriceAdjustmentsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityStockPriceAdjustments> localVarResponse = await GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo(identifier, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
@@ -9824,7 +10080,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPriceAdjustments)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPriceAdjustments>> GetSecurityStockPriceAdjustmentsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -9892,7 +10148,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityStockPrices</returns>
-        public ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = GetSecurityStockPricesWithHttpInfo(identifier, startDate, endDate, frequency, pageSize, nextPage);
              return localVarResponse.Data;
@@ -9909,7 +10165,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPrices</returns>
-        public ApiResponse< ApiResponseSecurityStockPrices > GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityStockPrices > GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -9978,7 +10234,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityStockPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityStockPrices> GetSecurityStockPricesAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityStockPrices> localVarResponse = await GetSecurityStockPricesAsyncWithHttpInfo(identifier, startDate, endDate, frequency, pageSize, nextPage);
              return localVarResponse.Data;
@@ -9996,7 +10252,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -10055,6 +10311,710 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseSecurityZacksAnalystRatings</returns>
+        public ApiResponseSecurityZacksAnalystRatings GetSecurityZacksAnalystRatings (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksAnalystRatings> localVarResponse = GetSecurityZacksAnalystRatingsWithHttpInfo(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksAnalystRatings</returns>
+        public ApiResponse< ApiResponseSecurityZacksAnalystRatings > GetSecurityZacksAnalystRatingsWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksAnalystRatings");
+
+            var localVarPath = "/securities/{identifier}/zacks/analyst_ratings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (meanGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mean_greater", meanGreater)); // query parameter
+            if (meanLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mean_less", meanLess)); // query parameter
+            if (strongBuysGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_buys_greater", strongBuysGreater)); // query parameter
+            if (strongBuysLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_buys_less", strongBuysLess)); // query parameter
+            if (buysGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "buys_greater", buysGreater)); // query parameter
+            if (buysLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "buys_less", buysLess)); // query parameter
+            if (holdsGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "holds_greater", holdsGreater)); // query parameter
+            if (holdsLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "holds_less", holdsLess)); // query parameter
+            if (sellsGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sells_greater", sellsGreater)); // query parameter
+            if (sellsLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sells_less", sellsLess)); // query parameter
+            if (strongSellsGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_sells_greater", strongSellsGreater)); // query parameter
+            if (strongSellsLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_sells_less", strongSellsLess)); // query parameter
+            if (totalGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "total_greater", totalGreater)); // query parameter
+            if (totalLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "total_less", totalLess)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksAnalystRatings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksAnalystRatings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksAnalystRatings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksAnalystRatings)));
+        }
+
+        /// <summary>
+        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseSecurityZacksAnalystRatings</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityZacksAnalystRatings> GetSecurityZacksAnalystRatingsAsync (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksAnalystRatings> localVarResponse = await GetSecurityZacksAnalystRatingsAsyncWithHttpInfo(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="startDate">Limit ratings to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit ratings to those on or before this date (optional)</param>
+        /// <param name="meanGreater">Return only records with a mean (average) higher than this value (optional)</param>
+        /// <param name="meanLess">Return only records with a mean (average) lower than this value (optional)</param>
+        /// <param name="strongBuysGreater">Return only records with more than this many Strong Buy recommendations (optional)</param>
+        /// <param name="strongBuysLess">Return only records with fewer than this many Strong Buy recommendations (optional)</param>
+        /// <param name="buysGreater">Return only records with more than this many Buy recommendations (optional)</param>
+        /// <param name="buysLess">Return only records with fewer than this many Buy recommendations (optional)</param>
+        /// <param name="holdsGreater">Return only records with more than this many Hold recommendations (optional)</param>
+        /// <param name="holdsLess">Return only records with fewer than this many Hold recommendations (optional)</param>
+        /// <param name="sellsGreater">Return only records with more than this many Sell recommendations (optional)</param>
+        /// <param name="sellsLess">Return only records with fewer than this many Sell recommendations (optional)</param>
+        /// <param name="strongSellsGreater">Return only records with more than this many Strong Sell recommendations (optional)</param>
+        /// <param name="strongSellsLess">Return only records with fewer than this many Strong Sell recommendations (optional)</param>
+        /// <param name="totalGreater">Return only records with more than this many recommendations, regardless of type (optional)</param>
+        /// <param name="totalLess">Return only records with fewer than this many recommendations, regardless of type (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksAnalystRatings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksAnalystRatings>> GetSecurityZacksAnalystRatingsAsyncWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksAnalystRatings");
+
+            var localVarPath = "/securities/{identifier}/zacks/analyst_ratings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (meanGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mean_greater", meanGreater)); // query parameter
+            if (meanLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mean_less", meanLess)); // query parameter
+            if (strongBuysGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_buys_greater", strongBuysGreater)); // query parameter
+            if (strongBuysLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_buys_less", strongBuysLess)); // query parameter
+            if (buysGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "buys_greater", buysGreater)); // query parameter
+            if (buysLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "buys_less", buysLess)); // query parameter
+            if (holdsGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "holds_greater", holdsGreater)); // query parameter
+            if (holdsLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "holds_less", holdsLess)); // query parameter
+            if (sellsGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sells_greater", sellsGreater)); // query parameter
+            if (sellsLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sells_less", sellsLess)); // query parameter
+            if (strongSellsGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_sells_greater", strongSellsGreater)); // query parameter
+            if (strongSellsLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strong_sells_less", strongSellsLess)); // query parameter
+            if (totalGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "total_greater", totalGreater)); // query parameter
+            if (totalLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "total_less", totalLess)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksAnalystRatings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksAnalystRatings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksAnalystRatings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksAnalystRatings)));
+        }
+
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>ApiResponseSecurityZacksAnalystRatingsSnapshot</returns>
+        public ApiResponseSecurityZacksAnalystRatingsSnapshot GetSecurityZacksAnalystRatingsSnapshot (string identifier, string date = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksAnalystRatingsSnapshot> localVarResponse = GetSecurityZacksAnalystRatingsSnapshotWithHttpInfo(identifier, date);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksAnalystRatingsSnapshot</returns>
+        public ApiResponse< ApiResponseSecurityZacksAnalystRatingsSnapshot > GetSecurityZacksAnalystRatingsSnapshotWithHttpInfo (string identifier, string date = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksAnalystRatingsSnapshot");
+
+            var localVarPath = "/securities/{identifier}/zacks/analyst_ratings/snapshot";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksAnalystRatingsSnapshot", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksAnalystRatingsSnapshot>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksAnalystRatingsSnapshot) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksAnalystRatingsSnapshot)));
+        }
+
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>Task of ApiResponseSecurityZacksAnalystRatingsSnapshot</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityZacksAnalystRatingsSnapshot> GetSecurityZacksAnalystRatingsSnapshotAsync (string identifier, string date = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksAnalystRatingsSnapshot> localVarResponse = await GetSecurityZacksAnalystRatingsSnapshotAsyncWithHttpInfo(identifier, date);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="date">Lookup a historical snapshot on the given date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksAnalystRatingsSnapshot)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksAnalystRatingsSnapshot>> GetSecurityZacksAnalystRatingsSnapshotAsyncWithHttpInfo (string identifier, string date = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksAnalystRatingsSnapshot");
+
+            var localVarPath = "/securities/{identifier}/zacks/analyst_ratings/snapshot";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksAnalystRatingsSnapshot", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksAnalystRatingsSnapshot>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksAnalystRatingsSnapshot) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksAnalystRatingsSnapshot)));
+        }
+
+        /// <summary>
+        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityZacksEPSSurprises</returns>
+        public ApiResponseSecurityZacksEPSSurprises GetSecurityZacksEpsSurprises (string identifier, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksEPSSurprises> localVarResponse = GetSecurityZacksEpsSurprisesWithHttpInfo(identifier, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksEPSSurprises</returns>
+        public ApiResponse< ApiResponseSecurityZacksEPSSurprises > GetSecurityZacksEpsSurprisesWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksEpsSurprises");
+
+            var localVarPath = "/securities/{identifier}/zacks/eps_surprises";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksEpsSurprises", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksEPSSurprises>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksEPSSurprises) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksEPSSurprises)));
+        }
+
+        /// <summary>
+        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityZacksEPSSurprises</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityZacksEPSSurprises> GetSecurityZacksEpsSurprisesAsync (string identifier, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksEPSSurprises> localVarResponse = await GetSecurityZacksEpsSurprisesAsyncWithHttpInfo(identifier, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksEPSSurprises)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksEPSSurprises>> GetSecurityZacksEpsSurprisesAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksEpsSurprises");
+
+            var localVarPath = "/securities/{identifier}/zacks/eps_surprises";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksEpsSurprises", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksEPSSurprises>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksEPSSurprises) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksEPSSurprises)));
+        }
+
+        /// <summary>
+        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityZacksSalesSurprises</returns>
+        public ApiResponseSecurityZacksSalesSurprises GetSecurityZacksSalesSurprises (string identifier, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksSalesSurprises> localVarResponse = GetSecurityZacksSalesSurprisesWithHttpInfo(identifier, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityZacksSalesSurprises</returns>
+        public ApiResponse< ApiResponseSecurityZacksSalesSurprises > GetSecurityZacksSalesSurprisesWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksSalesSurprises");
+
+            var localVarPath = "/securities/{identifier}/zacks/sales_surprises";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksSalesSurprises", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksSalesSurprises>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksSalesSurprises) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksSalesSurprises)));
+        }
+
+        /// <summary>
+        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityZacksSalesSurprises</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityZacksSalesSurprises> GetSecurityZacksSalesSurprisesAsync (string identifier, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityZacksSalesSurprises> localVarResponse = await GetSecurityZacksSalesSurprisesAsyncWithHttpInfo(identifier, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityZacksSalesSurprises)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityZacksSalesSurprises>> GetSecurityZacksSalesSurprisesAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityZacksSalesSurprises");
+
+            var localVarPath = "/securities/{identifier}/zacks/sales_surprises";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityZacksSalesSurprises", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityZacksSalesSurprises>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityZacksSalesSurprises) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityZacksSalesSurprises)));
+        }
+
+        /// <summary>
         /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10064,7 +11024,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>List&lt;SecurityScreenResult&gt;</returns>
-        public List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
+        public List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {
              ApiResponse<List<SecurityScreenResult>> localVarResponse = ScreenSecuritiesWithHttpInfo(logic, orderColumn, orderDirection, primaryOnly, pageSize);
              return localVarResponse.Data;
@@ -10080,7 +11040,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of List&lt;SecurityScreenResult&gt;</returns>
-        public ApiResponse< List<SecurityScreenResult> > ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
+        public ApiResponse< List<SecurityScreenResult> > ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {
 
             var localVarPath = "/securities/screen";
@@ -10152,7 +11112,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of List&lt;SecurityScreenResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {
              ApiResponse<List<SecurityScreenResult>> localVarResponse = await ScreenSecuritiesAsyncWithHttpInfo(logic, orderColumn, orderDirection, primaryOnly, pageSize);
              return localVarResponse.Data;
@@ -10169,7 +11129,7 @@ namespace Intrinio.SDK.Api
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (List&lt;SecurityScreenResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {
 
             var localVarPath = "/securities/screen";
@@ -10238,7 +11198,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseSecuritiesSearch</returns>
-        public ApiResponseSecuritiesSearch SearchSecurities (string query, decimal? pageSize = null)
+        public ApiResponseSecuritiesSearch SearchSecurities (string query, int? pageSize = null)
         {
              ApiResponse<ApiResponseSecuritiesSearch> localVarResponse = SearchSecuritiesWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
@@ -10251,7 +11211,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseSecuritiesSearch</returns>
-        public ApiResponse< ApiResponseSecuritiesSearch > SearchSecuritiesWithHttpInfo (string query, decimal? pageSize = null)
+        public ApiResponse< ApiResponseSecuritiesSearch > SearchSecuritiesWithHttpInfo (string query, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -10312,7 +11272,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseSecuritiesSearch</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecuritiesSearch> SearchSecuritiesAsync (string query, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecuritiesSearch> SearchSecuritiesAsync (string query, int? pageSize = null)
         {
              ApiResponse<ApiResponseSecuritiesSearch> localVarResponse = await SearchSecuritiesAsyncWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
@@ -10326,7 +11286,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecuritiesSearch)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesSearch>> SearchSecuritiesAsyncWithHttpInfo (string query, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesSearch>> SearchSecuritiesAsyncWithHttpInfo (string query, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)

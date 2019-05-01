@@ -9,15 +9,28 @@ Method | HTTP request | Description
 [**SearchDataTags**](DataTagApi.md#searchdatatags) | **GET** /data_tags/search | Search Data Tags
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags)
+
+[//]: # (DOC_LINK:DataTagApi.md#getalldatatags)
+
 <a name="getalldatatags"></a>
 # **GetAllDataTags**
-> ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllDataTags_v2)
+
+> ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null)
 
 All Data Tags
 
 Returns all Data Tags. Returns Data Tags matching parameters when specified.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -39,7 +52,7 @@ namespace Example
             var parent = "";  // string | ID of tag parent (optional) 
             var statementCode = "income_statement";  // string | Statement Code (optional) 
             var fsTemplate = "";  // string | Template (optional)  (default to industrial)
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -56,6 +69,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -65,15 +80,27 @@ Name | Type | Description  | Notes
  **parent** | **string**| ID of tag parent | [optional] 
  **statementCode** | **string**| Statement Code | [optional] 
  **fsTemplate** | **string**| Template | [optional] [default to industrial]
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseDataTags**](ApiResponseDataTags.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags/{identifier})
+
+[//]: # (DOC_LINK:DataTagApi.md#getdatatagbyid)
+
 <a name="getdatatagbyid"></a>
 # **GetDataTagById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataTagById_v2)
+
 > DataTag GetDataTagById (string identifier)
 
 Lookup Data Tag
@@ -81,6 +108,9 @@ Lookup Data Tag
 Returns the Data Tag with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -113,6 +143,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -123,15 +155,30 @@ Name | Type | Description  | Notes
 
 [**DataTag**](DataTag.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags/search)
+
+[//]: # (DOC_LINK:DataTagApi.md#searchdatatags)
+
 <a name="searchdatatags"></a>
 # **SearchDataTags**
-> ApiResponseDataTagsSearch SearchDataTags (string query, decimal? pageSize = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchDataTags_v2)
+
+> ApiResponseDataTagsSearch SearchDataTags (string query, int? pageSize = null)
 
 Search Data Tags
 
 Searches for Data Tags matching the text `query`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -149,7 +196,7 @@ namespace Example
 
             var dataTagApi = new DataTagApi();
             var query = "revenue";  // string | 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
 
             try
             {
@@ -165,14 +212,18 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**|  | 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseDataTagsSearch**](ApiResponseDataTagsSearch.md)
+
+[//]: # (END_OPERATION)
 

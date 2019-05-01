@@ -13,15 +13,28 @@ Method | HTTP request | Description
 [**SearchNotes**](FilingApi.md#searchnotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings)
+
+[//]: # (DOC_LINK:FilingApi.md#getallfilings)
+
 <a name="getallfilings"></a>
 # **GetAllFilings**
-> ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllFilings_v2)
+
+> ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
 All Filings
 
 Returns all Filings. Returns Filings matching parameters when supplied.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -41,8 +54,8 @@ namespace Example
             var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
             var reportType = "";  // string | Filter by report type (optional) 
             var startDate = "2015-01-01";  // DateTime? | Filed on or after the given date (optional) 
-            var endDate = "2019-01-01";  // DateTime? | Filed before or after the given date (optional) 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var endDate = "";  // DateTime? | Filed before or after the given date (optional) 
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -59,6 +72,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -67,22 +82,37 @@ Name | Type | Description  | Notes
  **reportType** | **string**| Filter by report type | [optional] 
  **startDate** | **DateTime?**| Filed on or after the given date | [optional] 
  **endDate** | **DateTime?**| Filed before or after the given date | [optional] 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseFilings**](ApiResponseFilings.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes)
+
+[//]: # (DOC_LINK:FilingApi.md#getallnotes)
+
 <a name="getallnotes"></a>
 # **GetAllNotes**
-> ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllNotes_v2)
+
+> ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, int? pageSize = null, string nextPage = null)
 
 All Filing Notes
 
 Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -105,7 +135,7 @@ namespace Example
             var filingEndDate = "2018-11-15";  // DateTime? | Limit search to filings on or before this date (optional) 
             var periodEndedStartDate = "2018-07-15";  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
             var periodEndedEndDate = "2018-11-15";  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -122,6 +152,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -132,15 +164,27 @@ Name | Type | Description  | Notes
  **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
  **periodEndedStartDate** | **DateTime?**| Limit search to filings with a period end date on or after this date | [optional] 
  **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional] 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/{id})
+
+[//]: # (DOC_LINK:FilingApi.md#getfilingbyid)
+
 <a name="getfilingbyid"></a>
 # **GetFilingById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFilingById_v2)
+
 > Filing GetFilingById (string id)
 
 Lookup Filing
@@ -148,6 +192,9 @@ Lookup Filing
 Returns the Filing with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -180,6 +227,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -190,13 +239,28 @@ Name | Type | Description  | Notes
 
 [**Filing**](Filing.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier})
+
+[//]: # (DOC_LINK:FilingApi.md#getnote)
+
 <a name="getnote"></a>
 # **GetNote**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNote_v2)
+
 > FilingNote GetNote (string identifier, string contentFormat = null)
 
 Filing Note by ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -230,6 +294,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -241,13 +307,28 @@ Name | Type | Description  | Notes
 
 [**FilingNote**](FilingNote.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier}/html)
+
+[//]: # (DOC_LINK:FilingApi.md#getnotehtml)
+
 <a name="getnotehtml"></a>
 # **GetNoteHtml**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteHtml_v2)
+
 > string GetNoteHtml (string identifier)
 
 Filing Note HTML
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -280,6 +361,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -290,13 +373,28 @@ Name | Type | Description  | Notes
 
 **string**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier}/text)
+
+[//]: # (DOC_LINK:FilingApi.md#getnotetext)
+
 <a name="getnotetext"></a>
 # **GetNoteText**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteText_v2)
+
 > string GetNoteText (string identifier)
 
 Filing Note Text
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -329,6 +427,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -339,15 +439,30 @@ Name | Type | Description  | Notes
 
 **string**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/search)
+
+[//]: # (DOC_LINK:FilingApi.md#searchnotes)
+
 <a name="searchnotes"></a>
 # **SearchNotes**
-> ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, decimal? pageSize = null, decimal? pageSize2 = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchNotes_v2)
+
+> ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
 
 Search Filing Notes
 
 Searches for Filing Notes using the `query`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -367,8 +482,8 @@ namespace Example
             var query = "inflation";  // string | Search for notes that contain all or parts of this text
             var filingStartDate = "2018-07-15";  // DateTime? | Limit search to filings on or after this date (optional) 
             var filingEndDate = "2018-11-30";  // DateTime? | Limit search to filings on or before this date (optional) 
-            var pageSize = 50;  // decimal? | The number of results to return (optional)  (default to 100)
-            var pageSize2 = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 50;  // int? | The number of results to return (optional)  (default to 100)
+            var pageSize2 = 100;  // int? | The number of results to return (optional)  (default to 100)
 
             try
             {
@@ -384,6 +499,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -391,10 +508,12 @@ Name | Type | Description  | Notes
  **query** | **string**| Search for notes that contain all or parts of this text | 
  **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
  **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
- **pageSize2** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **pageSize2** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseFilingNotesSearch**](ApiResponseFilingNotesSearch.md)
+
+[//]: # (END_OPERATION)
 

@@ -314,6 +314,38 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'StandardizedActive'
         }
+        /// <summary>
+        /// Test the property 'FirstFundamentalDate'
+        /// </summary>
+        [Test]
+        public void FirstFundamentalDateTest()
+        {
+            // TODO unit test for the property 'FirstFundamentalDate'
+        }
+        /// <summary>
+        /// Test the property 'LastFundamentalDate'
+        /// </summary>
+        [Test]
+        public void LastFundamentalDateTest()
+        {
+            // TODO unit test for the property 'LastFundamentalDate'
+        }
+        /// <summary>
+        /// Test the property 'FirstStockPriceDate'
+        /// </summary>
+        [Test]
+        public void FirstStockPriceDateTest()
+        {
+            // TODO unit test for the property 'FirstStockPriceDate'
+        }
+        /// <summary>
+        /// Test the property 'LastStockPriceDate'
+        /// </summary>
+        [Test]
+        public void LastStockPriceDateTest()
+        {
+            // TODO unit test for the property 'LastStockPriceDate'
+        }
 
     }
 

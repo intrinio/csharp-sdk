@@ -59,12 +59,12 @@ namespace Intrinio.SDK.Test
 
 
         /// <summary>
-        /// Test the property 'Chains'
+        /// Test the property 'Chain'
         /// </summary>
         [Test]
-        public void ChainsTest()
+        public void ChainTest()
         {
-            // TODO unit test for the property 'Chains'
+            // TODO unit test for the property 'Chain'
         }
 
     }

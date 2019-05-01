@@ -62,7 +62,7 @@ namespace Intrinio.SDK.Test
             //string city = null;
             //string country = null;
             //string countryCode = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //var response = instance.GetAllStockExchanges(city, country, countryCode, pageSize);
             //Assert.IsInstanceOf<ApiResponseStockExchanges> (response, "response is ApiResponseStockExchanges");
         }
@@ -88,7 +88,7 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //DateTime? date = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetStockExchangePriceAdjustments(identifier, date, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockExchangeStockPriceAdjustments> (response, "response is ApiResponseStockExchangeStockPriceAdjustments");
@@ -103,7 +103,7 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //DateTime? date = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetStockExchangePrices(identifier, date, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockExchangeStockPrices> (response, "response is ApiResponseStockExchangeStockPrices");
@@ -118,7 +118,7 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string source = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetStockExchangeRealtimePrices(identifier, source, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockExchangeRealtimeStockPrices> (response, "response is ApiResponseStockExchangeRealtimeStockPrices");
@@ -132,7 +132,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetStockExchangeSecurities(identifier, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockExchangeSecurities> (response, "response is ApiResponseStockExchangeSecurities");

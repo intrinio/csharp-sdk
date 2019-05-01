@@ -31,7 +31,7 @@ namespace Intrinio.SDK.Model
         /// <param name="Low">The low price of the timeframe..</param>
         /// <param name="Close">The closing price of the timeframe..</param>
         /// <param name="Volume">The volume during the timeframe..</param>
-        public CryptoPrice(string Time = default(string), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Close = default(decimal?), decimal? Volume = default(decimal?))
+        public CryptoPrice(DateTime? Time = default(DateTime?), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Close = default(decimal?), decimal? Volume = default(decimal?))
         {
             this.Time = Time;
             this.Open = Open;
@@ -46,7 +46,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The date and time of the beginning of the timeframe (in UTC). The open prices would be at this time, while close prices would be at this time plus the timeframe.</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
-        public string Time { get; set; }
+        public DateTime? Time { get; set; }
 
         /// <summary>
         /// The opening price of the timeframe.

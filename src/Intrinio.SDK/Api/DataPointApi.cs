@@ -19,7 +19,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -31,7 +31,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -67,7 +67,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -79,7 +79,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -210,7 +210,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -223,7 +223,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -287,7 +287,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
@@ -301,7 +301,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>

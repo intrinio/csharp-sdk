@@ -71,7 +71,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseForexPrices</returns>
-        ApiResponseForexPrices GetForexPrices (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        ApiResponseForexPrices GetForexPrices (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Forex Currency Prices
@@ -90,7 +90,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseForexPrices</returns>
-        ApiResponse<ApiResponseForexPrices> GetForexPricesWithHttpInfo (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseForexPrices> GetForexPricesWithHttpInfo (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -148,7 +148,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseForexPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseForexPrices> GetForexPricesAsync (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseForexPrices> GetForexPricesAsync (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Forex Currency Prices
@@ -167,7 +167,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseForexPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForexPrices>> GetForexPricesAsyncWithHttpInfo (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForexPrices>> GetForexPricesAsyncWithHttpInfo (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -544,7 +544,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseForexPrices</returns>
-        public ApiResponseForexPrices GetForexPrices (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseForexPrices GetForexPrices (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseForexPrices> localVarResponse = GetForexPricesWithHttpInfo(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
              return localVarResponse.Data;
@@ -564,7 +564,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseForexPrices</returns>
-        public ApiResponse< ApiResponseForexPrices > GetForexPricesWithHttpInfo (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseForexPrices > GetForexPricesWithHttpInfo (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'pair' is set
             if (pair == null)
@@ -595,7 +595,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (pair != null) localVarPathParams.Add("pair", Configuration.ApiClient.ParameterToString(pair)); // path parameter
-            if (timeframe != null) localVarPathParams.Add("timeframe", Configuration.ApiClient.ParameterToString(timeframe)); // path parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
@@ -642,7 +642,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseForexPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForexPrices> GetForexPricesAsync (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseForexPrices> GetForexPricesAsync (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseForexPrices> localVarResponse = await GetForexPricesAsyncWithHttpInfo(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
              return localVarResponse.Data;
@@ -663,7 +663,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseForexPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForexPrices>> GetForexPricesAsyncWithHttpInfo (string pair, string timeframe, string timezone = null, string startDate = null, string startTime = null, string endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForexPrices>> GetForexPricesAsyncWithHttpInfo (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'pair' is set
             if (pair == null)
@@ -694,7 +694,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (pair != null) localVarPathParams.Add("pair", Configuration.ApiClient.ParameterToString(pair)); // path parameter
-            if (timeframe != null) localVarPathParams.Add("timeframe", Configuration.ApiClient.ParameterToString(timeframe)); // path parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter

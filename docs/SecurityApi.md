@@ -46,19 +46,36 @@ Method | HTTP request | Description
 [**GetSecurityRealtimePrice**](SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 [**GetSecurityStockPriceAdjustments**](SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**GetSecurityStockPrices**](SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
+[**GetSecurityZacksAnalystRatings**](SecurityApi.md#getsecurityzacksanalystratings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings
+[**GetSecurityZacksAnalystRatingsSnapshot**](SecurityApi.md#getsecurityzacksanalystratingssnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
+[**GetSecurityZacksEpsSurprises**](SecurityApi.md#getsecurityzacksepssurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
+[**GetSecurityZacksSalesSurprises**](SecurityApi.md#getsecurityzackssalessurprises) | **GET** /securities/{identifier}/zacks/sales_surprises | Zacks Sales Surprises for Security
 [**ScreenSecurities**](SecurityApi.md#screensecurities) | **POST** /securities/screen | Screen Securities
 [**SearchSecurities**](SecurityApi.md#searchsecurities) | **GET** /securities/search | Search Securities
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities)
+
+[//]: # (DOC_LINK:SecurityApi.md#getallsecurities)
+
 <a name="getallsecurities"></a>
 # **GetAllSecurities**
-> ApiResponseSecurities GetAllSecurities (decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllSecurities_v2)
+
+> ApiResponseSecurities GetAllSecurities (int? pageSize = null, string nextPage = null)
 
 All Securities
 
 Returns all Securities to which you have access.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -75,7 +92,7 @@ namespace Example
             Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
             var securityApi = new SecurityApi();
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -92,19 +109,33 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier})
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritybyid)
+
 <a name="getsecuritybyid"></a>
 # **GetSecurityById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityById_v2)
+
 > Security GetSecurityById (string identifier)
 
 Lookup Security
@@ -112,6 +143,9 @@ Lookup Security
 Returns the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -144,6 +178,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -154,8 +190,20 @@ Name | Type | Description  | Notes
 
 [**Security**](Security.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/number)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritydatapointnumber)
+
 <a name="getsecuritydatapointnumber"></a>
 # **GetSecurityDataPointNumber**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityDataPointNumber_v2)
+
 > decimal? GetSecurityDataPointNumber (string identifier, string tag)
 
 Data Point (Number) for Security
@@ -163,6 +211,9 @@ Data Point (Number) for Security
 Returns a numeric value for the given `tag` for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -196,6 +247,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -207,8 +260,20 @@ Name | Type | Description  | Notes
 
 **decimal?**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/text)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritydatapointtext)
+
 <a name="getsecuritydatapointtext"></a>
 # **GetSecurityDataPointText**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityDataPointText_v2)
+
 > string GetSecurityDataPointText (string identifier, string tag)
 
 Data Point (Text) for Security
@@ -216,6 +281,9 @@ Data Point (Text) for Security
 Returns a text value for the given `tag` for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -249,6 +317,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -260,15 +330,30 @@ Name | Type | Description  | Notes
 
 **string**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/historical_data/{tag})
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecurityhistoricaldata)
+
 <a name="getsecurityhistoricaldata"></a>
 # **GetSecurityHistoricalData**
-> ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityHistoricalData_v2)
+
+> ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
 Historical Data for Security
 
 Returns historical values for the given `tag` and the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -290,9 +375,9 @@ namespace Example
             var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
             var type = "";  // string | Filter by type, when applicable (optional) 
             var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
+            var endDate = "";  // DateTime? | Get historical date on or before this date (optional) 
             var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -309,6 +394,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -320,15 +407,27 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical date on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/intraday)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecurityintradayprices)
+
 <a name="getsecurityintradayprices"></a>
 # **GetSecurityIntradayPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityIntradayPrices_v2)
+
 > ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
 
 Intraday Stock Prices for Security
@@ -336,6 +435,9 @@ Intraday Stock Prices for Security
 Return intraday stock prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -373,6 +475,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -388,8 +492,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityIntradayPrices**](ApiResponseSecurityIntradayPrices.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/dividends/latest)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritylatestdividendrecord)
+
 <a name="getsecuritylatestdividendrecord"></a>
 # **GetSecurityLatestDividendRecord**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityLatestDividendRecord_v2)
+
 > DividendRecord GetSecurityLatestDividendRecord (string identifier)
 
 Lastest Dividend Record for Security
@@ -397,6 +513,9 @@ Lastest Dividend Record for Security
 Returns the latest available dividend information for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -429,6 +548,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -439,8 +560,20 @@ Name | Type | Description  | Notes
 
 [**DividendRecord**](DividendRecord.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/earnings/latest)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritylatestearningsrecord)
+
 <a name="getsecuritylatestearningsrecord"></a>
 # **GetSecurityLatestEarningsRecord**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityLatestEarningsRecord_v2)
+
 > EarningsRecord GetSecurityLatestEarningsRecord (string identifier)
 
 Lastest Earnings Record for Security
@@ -448,6 +581,9 @@ Lastest Earnings Record for Security
 Returns latest available earnings information for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -480,6 +616,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -490,8 +628,20 @@ Name | Type | Description  | Notes
 
 [**EarningsRecord**](EarningsRecord.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsadi)
+
 <a name="getsecuritypricetechnicalsadi"></a>
 # **GetSecurityPriceTechnicalsAdi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdi_v2)
+
 > ApiResponseSecurityAccumulationDistributionIndex GetSecurityPriceTechnicalsAdi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Accumulation/Distribution Index
@@ -499,6 +649,9 @@ Accumulation/Distribution Index
 Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -535,6 +688,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -549,8 +704,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAccumulationDistributionIndex**](ApiResponseSecurityAccumulationDistributionIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adtv)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsadtv)
+
 <a name="getsecuritypricetechnicalsadtv"></a>
 # **GetSecurityPriceTechnicalsAdtv**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdtv_v2)
+
 > ApiResponseSecurityAverageDailyTradingVolume GetSecurityPriceTechnicalsAdtv (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Average Daily Trading Volume
@@ -558,6 +725,9 @@ Average Daily Trading Volume
 Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -595,6 +765,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -610,8 +782,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAverageDailyTradingVolume**](ApiResponseSecurityAverageDailyTradingVolume.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adx)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsadx)
+
 <a name="getsecuritypricetechnicalsadx"></a>
 # **GetSecurityPriceTechnicalsAdx**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdx_v2)
+
 > ApiResponseSecurityAverageDirectionalIndex GetSecurityPriceTechnicalsAdx (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Average Directional Index
@@ -619,6 +803,9 @@ Average Directional Index
 Returns the Average Directional Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -656,6 +843,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -671,8 +860,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAverageDirectionalIndex**](ApiResponseSecurityAverageDirectionalIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ao)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsao)
+
 <a name="getsecuritypricetechnicalsao"></a>
 # **GetSecurityPriceTechnicalsAo**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAo_v2)
+
 > ApiResponseSecurityAwesomeOscillator GetSecurityPriceTechnicalsAo (string identifier, int? shortPeriod = null, int? longPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Awesome Oscillator
@@ -680,6 +881,9 @@ Awesome Oscillator
 Returns the Awesome Oscillator values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -718,6 +922,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -734,8 +940,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAwesomeOscillator**](ApiResponseSecurityAwesomeOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/atr)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsatr)
+
 <a name="getsecuritypricetechnicalsatr"></a>
 # **GetSecurityPriceTechnicalsAtr**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAtr_v2)
+
 > ApiResponseSecurityAverageTrueRange GetSecurityPriceTechnicalsAtr (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Average True Range
@@ -743,6 +961,9 @@ Average True Range
 Returns the Average True Range values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -780,6 +1001,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -795,8 +1018,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAverageTrueRange**](ApiResponseSecurityAverageTrueRange.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/bb)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsbb)
+
 <a name="getsecuritypricetechnicalsbb"></a>
 # **GetSecurityPriceTechnicalsBb**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsBb_v2)
+
 > ApiResponseSecurityBollingerBands GetSecurityPriceTechnicalsBb (string identifier, int? period = null, float? standardDeviations = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Bollinger Bands
@@ -804,6 +1039,9 @@ Bollinger Bands
 Returns the Bollinger Bands values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -843,6 +1081,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -860,8 +1100,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityBollingerBands**](ApiResponseSecurityBollingerBands.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cci)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalscci)
+
 <a name="getsecuritypricetechnicalscci"></a>
 # **GetSecurityPriceTechnicalsCci**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCci_v2)
+
 > ApiResponseSecurityCommodityChannelIndex GetSecurityPriceTechnicalsCci (string identifier, int? period = null, float? constant = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Commodity Channel Index
@@ -869,6 +1121,9 @@ Commodity Channel Index
 Returns the Commodity Channel Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -907,6 +1162,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -923,8 +1180,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityCommodityChannelIndex**](ApiResponseSecurityCommodityChannelIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cmf)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalscmf)
+
 <a name="getsecuritypricetechnicalscmf"></a>
 # **GetSecurityPriceTechnicalsCmf**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCmf_v2)
+
 > ApiResponseSecurityChaikinMoneyFlow GetSecurityPriceTechnicalsCmf (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Chaikin Money Flow
@@ -932,6 +1201,9 @@ Chaikin Money Flow
 Returns the Chaikin Money Flow values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -969,6 +1241,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -984,8 +1258,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityChaikinMoneyFlow**](ApiResponseSecurityChaikinMoneyFlow.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dc)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsdc)
+
 <a name="getsecuritypricetechnicalsdc"></a>
 # **GetSecurityPriceTechnicalsDc**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDc_v2)
+
 > ApiResponseSecurityDonchianChannel GetSecurityPriceTechnicalsDc (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Donchian Channel
@@ -993,6 +1279,9 @@ Donchian Channel
 Returns the Donchian Channel values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1031,6 +1320,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1047,8 +1338,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityDonchianChannel**](ApiResponseSecurityDonchianChannel.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dpo)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsdpo)
+
 <a name="getsecuritypricetechnicalsdpo"></a>
 # **GetSecurityPriceTechnicalsDpo**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDpo_v2)
+
 > ApiResponseSecurityDetrendedPriceOscillator GetSecurityPriceTechnicalsDpo (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Detrended Price Oscillator
@@ -1056,6 +1359,9 @@ Detrended Price Oscillator
 Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1094,6 +1400,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1110,8 +1418,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityDetrendedPriceOscillator**](ApiResponseSecurityDetrendedPriceOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/eom)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalseom)
+
 <a name="getsecuritypricetechnicalseom"></a>
 # **GetSecurityPriceTechnicalsEom**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsEom_v2)
+
 > ApiResponseSecurityEaseOfMovement GetSecurityPriceTechnicalsEom (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Ease of Movement
@@ -1119,6 +1439,9 @@ Ease of Movement
 Returns the Ease of Movement values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1156,6 +1479,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1171,8 +1496,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityEaseOfMovement**](ApiResponseSecurityEaseOfMovement.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/fi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsfi)
+
 <a name="getsecuritypricetechnicalsfi"></a>
 # **GetSecurityPriceTechnicalsFi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsFi_v2)
+
 > ApiResponseSecurityForceIndex GetSecurityPriceTechnicalsFi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Force Index
@@ -1180,6 +1517,9 @@ Force Index
 Returns the Force Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1216,6 +1556,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1230,8 +1572,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityForceIndex**](ApiResponseSecurityForceIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ichimoku)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsichimoku)
+
 <a name="getsecuritypricetechnicalsichimoku"></a>
 # **GetSecurityPriceTechnicalsIchimoku**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsIchimoku_v2)
+
 > ApiResponseSecurityIchimokuKinkoHyo GetSecurityPriceTechnicalsIchimoku (string identifier, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Ichimoku Kinko Hyo
@@ -1239,6 +1593,9 @@ Ichimoku Kinko Hyo
 Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1278,6 +1635,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1295,8 +1654,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityIchimokuKinkoHyo**](ApiResponseSecurityIchimokuKinkoHyo.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kc)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalskc)
+
 <a name="getsecuritypricetechnicalskc"></a>
 # **GetSecurityPriceTechnicalsKc**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKc_v2)
+
 > ApiResponseSecurityKeltnerChannel GetSecurityPriceTechnicalsKc (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Keltner Channel
@@ -1304,6 +1675,9 @@ Keltner Channel
 Returns the Keltner Channel values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1341,6 +1715,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1356,8 +1732,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityKeltnerChannel**](ApiResponseSecurityKeltnerChannel.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kst)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalskst)
+
 <a name="getsecuritypricetechnicalskst"></a>
 # **GetSecurityPriceTechnicalsKst**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKst_v2)
+
 > ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Know Sure Thing
@@ -1365,6 +1753,9 @@ Know Sure Thing
 Returns the Know Sure Thing values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1410,6 +1801,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1433,8 +1826,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityKnowSureThing**](ApiResponseSecurityKnowSureThing.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/macd)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsmacd)
+
 <a name="getsecuritypricetechnicalsmacd"></a>
 # **GetSecurityPriceTechnicalsMacd**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMacd_v2)
+
 > ApiResponseSecurityMovingAverageConvergenceDivergence GetSecurityPriceTechnicalsMacd (string identifier, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Moving Average Convergence Divergence
@@ -1442,6 +1847,9 @@ Moving Average Convergence Divergence
 Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1482,6 +1890,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1500,8 +1910,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityMovingAverageConvergenceDivergence**](ApiResponseSecurityMovingAverageConvergenceDivergence.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mfi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsmfi)
+
 <a name="getsecuritypricetechnicalsmfi"></a>
 # **GetSecurityPriceTechnicalsMfi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMfi_v2)
+
 > ApiResponseSecurityMoneyFlowIndex GetSecurityPriceTechnicalsMfi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Money Flow Index
@@ -1509,6 +1931,9 @@ Money Flow Index
 Returns the Money Flow Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1546,6 +1971,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1561,8 +1988,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityMoneyFlowIndex**](ApiResponseSecurityMoneyFlowIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsmi)
+
 <a name="getsecuritypricetechnicalsmi"></a>
 # **GetSecurityPriceTechnicalsMi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMi_v2)
+
 > ApiResponseSecurityMassIndex GetSecurityPriceTechnicalsMi (string identifier, int? emaPeriod = null, int? sumPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Mass Index
@@ -1570,6 +2009,9 @@ Mass Index
 Returns the Mass Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1608,6 +2050,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1624,8 +2068,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityMassIndex**](ApiResponseSecurityMassIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/nvi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsnvi)
+
 <a name="getsecuritypricetechnicalsnvi"></a>
 # **GetSecurityPriceTechnicalsNvi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsNvi_v2)
+
 > ApiResponseSecurityNegativeVolumeIndex GetSecurityPriceTechnicalsNvi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Negative Volume Index
@@ -1633,6 +2089,9 @@ Negative Volume Index
 Returns the Negative Volume Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1669,6 +2128,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1683,8 +2144,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityNegativeVolumeIndex**](ApiResponseSecurityNegativeVolumeIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsobv)
+
 <a name="getsecuritypricetechnicalsobv"></a>
 # **GetSecurityPriceTechnicalsObv**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObv_v2)
+
 > ApiResponseSecurityOnBalanceVolume GetSecurityPriceTechnicalsObv (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 On-balance Volume
@@ -1692,6 +2165,9 @@ On-balance Volume
 Returns the On-balance Volume values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1728,6 +2204,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1742,8 +2220,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityOnBalanceVolume**](ApiResponseSecurityOnBalanceVolume.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv_mean)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsobvmean)
+
 <a name="getsecuritypricetechnicalsobvmean"></a>
 # **GetSecurityPriceTechnicalsObvMean**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObvMean_v2)
+
 > ApiResponseSecurityOnBalanceVolumeMean GetSecurityPriceTechnicalsObvMean (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 On-balance Volume Mean
@@ -1751,6 +2241,9 @@ On-balance Volume Mean
 Returns the On-balance Volume Mean values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1788,6 +2281,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1803,8 +2298,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityOnBalanceVolumeMean**](ApiResponseSecurityOnBalanceVolumeMean.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/rsi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsrsi)
+
 <a name="getsecuritypricetechnicalsrsi"></a>
 # **GetSecurityPriceTechnicalsRsi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsRsi_v2)
+
 > ApiResponseSecurityRelativeStrengthIndex GetSecurityPriceTechnicalsRsi (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Relative Strength Index
@@ -1812,6 +2319,9 @@ Relative Strength Index
 Returns the Relative Strength Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1850,6 +2360,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1866,8 +2378,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityRelativeStrengthIndex**](ApiResponseSecurityRelativeStrengthIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sma)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalssma)
+
 <a name="getsecuritypricetechnicalssma"></a>
 # **GetSecurityPriceTechnicalsSma**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSma_v2)
+
 > ApiResponseSecuritySimpleMovingAverage GetSecurityPriceTechnicalsSma (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Simple Moving Average
@@ -1875,6 +2399,9 @@ Simple Moving Average
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1913,6 +2440,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1929,8 +2458,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecuritySimpleMovingAverage**](ApiResponseSecuritySimpleMovingAverage.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sr)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalssr)
+
 <a name="getsecuritypricetechnicalssr"></a>
 # **GetSecurityPriceTechnicalsSr**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSr_v2)
+
 > ApiResponseSecurityStochasticOscillator GetSecurityPriceTechnicalsSr (string identifier, int? period = null, int? signalPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Stochastic Oscillator
@@ -1938,6 +2479,9 @@ Stochastic Oscillator
 Returns the Stochastic Oscillator values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1976,6 +2520,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1992,8 +2538,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityStochasticOscillator**](ApiResponseSecurityStochasticOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/trix)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalstrix)
+
 <a name="getsecuritypricetechnicalstrix"></a>
 # **GetSecurityPriceTechnicalsTrix**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTrix_v2)
+
 > ApiResponseSecurityTripleExponentialAverage GetSecurityPriceTechnicalsTrix (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Triple Exponential Average
@@ -2001,6 +2559,9 @@ Triple Exponential Average
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2038,6 +2599,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2053,8 +2616,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityTripleExponentialAverage**](ApiResponseSecurityTripleExponentialAverage.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/tsi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalstsi)
+
 <a name="getsecuritypricetechnicalstsi"></a>
 # **GetSecurityPriceTechnicalsTsi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTsi_v2)
+
 > ApiResponseSecurityTrueStrengthIndex GetSecurityPriceTechnicalsTsi (string identifier, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 True Strength Index
@@ -2062,6 +2637,9 @@ True Strength Index
 Returns the True Strength Index values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2101,6 +2679,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2118,8 +2698,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityTrueStrengthIndex**](ApiResponseSecurityTrueStrengthIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/uo)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsuo)
+
 <a name="getsecuritypricetechnicalsuo"></a>
 # **GetSecurityPriceTechnicalsUo**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsUo_v2)
+
 > ApiResponseSecurityUltimateOscillator GetSecurityPriceTechnicalsUo (string identifier, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Ultimate Oscillator
@@ -2127,6 +2719,9 @@ Ultimate Oscillator
 Returns the Ultimate Oscillator values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2169,6 +2764,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2189,8 +2786,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityUltimateOscillator**](ApiResponseSecurityUltimateOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsvi)
+
 <a name="getsecuritypricetechnicalsvi"></a>
 # **GetSecurityPriceTechnicalsVi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVi_v2)
+
 > ApiResponseSecurityVortexIndicator GetSecurityPriceTechnicalsVi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Vortex Indicator
@@ -2198,6 +2807,9 @@ Vortex Indicator
 Returns the Vortex Indicator values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2235,6 +2847,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2250,8 +2864,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityVortexIndicator**](ApiResponseSecurityVortexIndicator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vpt)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsvpt)
+
 <a name="getsecuritypricetechnicalsvpt"></a>
 # **GetSecurityPriceTechnicalsVpt**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVpt_v2)
+
 > ApiResponseSecurityVolumePriceTrend GetSecurityPriceTechnicalsVpt (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Volume-price Trend
@@ -2259,6 +2885,9 @@ Volume-price Trend
 Returns the Volume-price Trend values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2295,6 +2924,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2309,8 +2940,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityVolumePriceTrend**](ApiResponseSecurityVolumePriceTrend.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vwap)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsvwap)
+
 <a name="getsecuritypricetechnicalsvwap"></a>
 # **GetSecurityPriceTechnicalsVwap**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVwap_v2)
+
 > ApiResponseSecurityVolumeWeightedAveragePrice GetSecurityPriceTechnicalsVwap (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Volume Weighted Average Price
@@ -2318,6 +2961,9 @@ Volume Weighted Average Price
 Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2354,6 +3000,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2368,8 +3016,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityVolumeWeightedAveragePrice**](ApiResponseSecurityVolumeWeightedAveragePrice.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/wr)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalswr)
+
 <a name="getsecuritypricetechnicalswr"></a>
 # **GetSecurityPriceTechnicalsWr**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsWr_v2)
+
 > ApiResponseSecurityWilliamsR GetSecurityPriceTechnicalsWr (string identifier, int? period = null, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
 
 Williams %R
@@ -2377,6 +3037,9 @@ Williams %R
 Returns the Williams %R values of Stock Prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2414,6 +3077,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2429,8 +3094,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityWilliamsR**](ApiResponseSecurityWilliamsR.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/realtime)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecurityrealtimeprice)
+
 <a name="getsecurityrealtimeprice"></a>
 # **GetSecurityRealtimePrice**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityRealtimePrice_v2)
+
 > RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null)
 
 Realtime Stock Price for Security
@@ -2438,6 +3115,9 @@ Realtime Stock Price for Security
 Return the realtime stock price for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2471,6 +3151,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2482,15 +3164,30 @@ Name | Type | Description  | Notes
 
 [**RealtimeStockPrice**](RealtimeStockPrice.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritystockpriceadjustments)
+
 <a name="getsecuritystockpriceadjustments"></a>
 # **GetSecurityStockPriceAdjustments**
-> ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityStockPriceAdjustments_v2)
+
+> ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
 Stock Price Adjustments by Security
 
 Returns stock price adjustments for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2510,7 +3207,7 @@ namespace Example
             var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
             var startDate = "2018-01-01";  // DateTime? | Return price adjustments on or after the date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Return price adjustments on or before the date (optional) 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -2527,6 +3224,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2534,22 +3233,37 @@ Name | Type | Description  | Notes
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **startDate** | **DateTime?**| Return price adjustments on or after the date | [optional] 
  **endDate** | **DateTime?**| Return price adjustments on or before the date | [optional] 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecuritystockprices)
+
 <a name="getsecuritystockprices"></a>
 # **GetSecurityStockPrices**
-> ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityStockPrices_v2)
+
+> ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null)
 
 Stock Prices by Security
 
 Return end-of-day stock prices for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2570,7 +3284,7 @@ namespace Example
             var startDate = "2018-01-01";  // DateTime? | Return prices on or after the date (optional) 
             var endDate = "2019-01-01";  // DateTime? | Return prices on or before the date (optional) 
             var frequency = "daily";  // string | Return stock prices in the given frequency (optional)  (default to daily)
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -2587,6 +3301,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2595,22 +3311,353 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Return prices on or after the date | [optional] 
  **endDate** | **DateTime?**| Return prices on or before the date | [optional] 
  **frequency** | **string**| Return stock prices in the given frequency | [optional] [default to daily]
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityStockPrices**](ApiResponseSecurityStockPrices.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecurityzacksanalystratings)
+
+<a name="getsecurityzacksanalystratings"></a>
+# **GetSecurityZacksAnalystRatings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksAnalystRatings_v2)
+
+> ApiResponseSecurityZacksAnalystRatings GetSecurityZacksAnalystRatings (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null)
+
+Zacks Analyst Ratings
+
+Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given `identifier`. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityZacksAnalystRatingsExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var startDate = "";  // string | Limit ratings to those on or after this date (optional) 
+            var endDate = "";  // string | Limit ratings to those on or before this date (optional) 
+            var meanGreater = "";  // decimal? | Return only records with a mean (average) higher than this value (optional) 
+            var meanLess = "";  // decimal? | Return only records with a mean (average) lower than this value (optional) 
+            var strongBuysGreater = "";  // int? | Return only records with more than this many Strong Buy recommendations (optional) 
+            var strongBuysLess = "";  // int? | Return only records with fewer than this many Strong Buy recommendations (optional) 
+            var buysGreater = "";  // int? | Return only records with more than this many Buy recommendations (optional) 
+            var buysLess = "";  // int? | Return only records with fewer than this many Buy recommendations (optional) 
+            var holdsGreater = "";  // int? | Return only records with more than this many Hold recommendations (optional) 
+            var holdsLess = "";  // int? | Return only records with fewer than this many Hold recommendations (optional) 
+            var sellsGreater = "";  // int? | Return only records with more than this many Sell recommendations (optional) 
+            var sellsLess = "";  // int? | Return only records with fewer than this many Sell recommendations (optional) 
+            var strongSellsGreater = "";  // int? | Return only records with more than this many Strong Sell recommendations (optional) 
+            var strongSellsLess = "";  // int? | Return only records with fewer than this many Strong Sell recommendations (optional) 
+            var totalGreater = "";  // int? | Return only records with more than this many recommendations, regardless of type (optional) 
+            var totalLess = "";  // int? | Return only records with fewer than this many recommendations, regardless of type (optional) 
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+
+            try
+            {
+                ApiResponseSecurityZacksAnalystRatings result = securityApi.GetSecurityZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityZacksAnalystRatings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Limit ratings to those on or after this date | [optional] 
+ **endDate** | **string**| Limit ratings to those on or before this date | [optional] 
+ **meanGreater** | **decimal?**| Return only records with a mean (average) higher than this value | [optional] 
+ **meanLess** | **decimal?**| Return only records with a mean (average) lower than this value | [optional] 
+ **strongBuysGreater** | **int?**| Return only records with more than this many Strong Buy recommendations | [optional] 
+ **strongBuysLess** | **int?**| Return only records with fewer than this many Strong Buy recommendations | [optional] 
+ **buysGreater** | **int?**| Return only records with more than this many Buy recommendations | [optional] 
+ **buysLess** | **int?**| Return only records with fewer than this many Buy recommendations | [optional] 
+ **holdsGreater** | **int?**| Return only records with more than this many Hold recommendations | [optional] 
+ **holdsLess** | **int?**| Return only records with fewer than this many Hold recommendations | [optional] 
+ **sellsGreater** | **int?**| Return only records with more than this many Sell recommendations | [optional] 
+ **sellsLess** | **int?**| Return only records with fewer than this many Sell recommendations | [optional] 
+ **strongSellsGreater** | **int?**| Return only records with more than this many Strong Sell recommendations | [optional] 
+ **strongSellsLess** | **int?**| Return only records with fewer than this many Strong Sell recommendations | [optional] 
+ **totalGreater** | **int?**| Return only records with more than this many recommendations, regardless of type | [optional] 
+ **totalLess** | **int?**| Return only records with fewer than this many recommendations, regardless of type | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+
+### Return type
+
+[**ApiResponseSecurityZacksAnalystRatings**](ApiResponseSecurityZacksAnalystRatings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings/snapshot)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecurityzacksanalystratingssnapshot)
+
+<a name="getsecurityzacksanalystratingssnapshot"></a>
+# **GetSecurityZacksAnalystRatingsSnapshot**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksAnalystRatingsSnapshot_v2)
+
+> ApiResponseSecurityZacksAnalystRatingsSnapshot GetSecurityZacksAnalystRatingsSnapshot (string identifier, string date = null)
+
+Zacks Analyst Ratings Snapshot
+
+Returns a snapshot of ratings data compared with previous timeframes for the Security with the given `identifier`. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityZacksAnalystRatingsSnapshotExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var date = "";  // string | Lookup a historical snapshot on the given date (optional) 
+
+            try
+            {
+                ApiResponseSecurityZacksAnalystRatingsSnapshot result = securityApi.GetSecurityZacksAnalystRatingsSnapshot(identifier, date);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityZacksAnalystRatingsSnapshot: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **date** | **string**| Lookup a historical snapshot on the given date | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityZacksAnalystRatingsSnapshot**](ApiResponseSecurityZacksAnalystRatingsSnapshot.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/eps_surprises)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecurityzacksepssurprises)
+
+<a name="getsecurityzacksepssurprises"></a>
+# **GetSecurityZacksEpsSurprises**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksEpsSurprises_v2)
+
+> ApiResponseSecurityZacksEPSSurprises GetSecurityZacksEpsSurprises (string identifier, int? pageSize = null, string nextPage = null)
+
+Zacks EPS Surprises for Security
+
+Return Zacks EPS surprises for the Security with the given `identifier`.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityZacksEpsSurprisesExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+            try
+            {
+                ApiResponseSecurityZacksEPSSurprises result = securityApi.GetSecurityZacksEpsSurprises(identifier, pageSize, nextPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityZacksEpsSurprises: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityZacksEPSSurprises**](ApiResponseSecurityZacksEPSSurprises.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/sales_surprises)
+
+[//]: # (DOC_LINK:SecurityApi.md#getsecurityzackssalessurprises)
+
+<a name="getsecurityzackssalessurprises"></a>
+# **GetSecurityZacksSalesSurprises**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksSalesSurprises_v2)
+
+> ApiResponseSecurityZacksSalesSurprises GetSecurityZacksSalesSurprises (string identifier, int? pageSize = null, string nextPage = null)
+
+Zacks Sales Surprises for Security
+
+Return Zacks sales surprises for the Security with the given `identifier`.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+    public class GetSecurityZacksSalesSurprisesExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+            var securityApi = new SecurityApi();
+            var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+            var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+            try
+            {
+                ApiResponseSecurityZacksSalesSurprises result = securityApi.GetSecurityZacksSalesSurprises(identifier, pageSize, nextPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SecurityApi.GetSecurityZacksSalesSurprises: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityZacksSalesSurprises**](ApiResponseSecurityZacksSalesSurprises.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/screen)
+
+[//]: # (DOC_LINK:SecurityApi.md#screensecurities)
+
 <a name="screensecurities"></a>
 # **ScreenSecurities**
-> List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, decimal? pageSize = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/ScreenSecurities_v2)
+
+> List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
 
 Screen Securities
 
 Screen Securities using complex logic
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2631,7 +3678,7 @@ namespace Example
             var orderColumn = orderColumn_example;  // string | Results returned sorted by this column (optional) 
             var orderDirection = orderDirection_example;  // string | Sort order to use with the order_column (optional)  (default to asc)
             var primaryOnly = true;  // bool? | Return only primary securities (optional)  (default to false)
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
 
             try
             {
@@ -2647,6 +3694,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2655,21 +3704,36 @@ Name | Type | Description  | Notes
  **orderColumn** | **string**| Results returned sorted by this column | [optional] 
  **orderDirection** | **string**| Sort order to use with the order_column | [optional] [default to asc]
  **primaryOnly** | **bool?**| Return only primary securities | [optional] [default to false]
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**List<SecurityScreenResult>**](SecurityScreenResult.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/search)
+
+[//]: # (DOC_LINK:SecurityApi.md#searchsecurities)
+
 <a name="searchsecurities"></a>
 # **SearchSecurities**
-> ApiResponseSecuritiesSearch SearchSecurities (string query, decimal? pageSize = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchSecurities_v2)
+
+> ApiResponseSecuritiesSearch SearchSecurities (string query, int? pageSize = null)
 
 Search Securities
 
 Searches for Securities matching the text `query`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2687,7 +3751,7 @@ namespace Example
 
             var securityApi = new SecurityApi();
             var query = "Apple";  // string | 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
 
             try
             {
@@ -2703,14 +3767,18 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**|  | 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseSecuritiesSearch**](ApiResponseSecuritiesSearch.md)
+
+[//]: # (END_OPERATION)
 

@@ -34,7 +34,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptions</returns>
-        ApiResponseOptions GetOptions (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponseOptions GetOptions (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Options
@@ -54,7 +54,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptions</returns>
-        ApiResponse<ApiResponseOptions> GetOptionsWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseOptions> GetOptionsWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Options Chain
         /// </summary>
@@ -71,7 +71,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseOptionsChain</returns>
-        ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null);
+        ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null);
 
         /// <summary>
         /// Options Chain
@@ -89,7 +89,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChain</returns>
-        ApiResponse<ApiResponseOptionsChain> GetOptionsChainWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null);
+        ApiResponse<ApiResponseOptionsChain> GetOptionsChainWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null);
         /// <summary>
         /// Options Expirations
         /// </summary>
@@ -128,7 +128,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionPrices</returns>
-        ApiResponseOptionPrices GetOptionsPrices (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponseOptionPrices GetOptionsPrices (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Option Prices
@@ -143,7 +143,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionPrices</returns>
-        ApiResponse<ApiResponseOptionPrices> GetOptionsPricesWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseOptionPrices> GetOptionsPricesWithHttpInfo (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -164,7 +164,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptions</returns>
-        System.Threading.Tasks.Task<ApiResponseOptions> GetOptionsAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseOptions> GetOptionsAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Options
@@ -184,7 +184,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptions>> GetOptionsAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptions>> GetOptionsAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Options Chain
         /// </summary>
@@ -201,7 +201,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseOptionsChain</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsChain> GetOptionsChainAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsChain> GetOptionsChainAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null);
 
         /// <summary>
         /// Options Chain
@@ -219,7 +219,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChain>> GetOptionsChainAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChain>> GetOptionsChainAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null);
         /// <summary>
         /// Options Expirations
         /// </summary>
@@ -258,7 +258,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionPrices> GetOptionsPricesAsync (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseOptionPrices> GetOptionsPricesAsync (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Option Prices
@@ -273,7 +273,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionPrices>> GetOptionsPricesAsyncWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionPrices>> GetOptionsPricesAsyncWithHttpInfo (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -389,7 +389,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptions</returns>
-        public ApiResponseOptions GetOptions (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponseOptions GetOptions (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseOptions> localVarResponse = GetOptionsWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
              return localVarResponse.Data;
@@ -410,7 +410,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptions</returns>
-        public ApiResponse< ApiResponseOptions > GetOptionsWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseOptions > GetOptionsWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -487,7 +487,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptions</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptions> GetOptionsAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptions> GetOptionsAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseOptions> localVarResponse = await GetOptionsAsyncWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
              return localVarResponse.Data;
@@ -509,7 +509,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptions>> GetOptionsAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptions>> GetOptionsAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -584,7 +584,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseOptionsChain</returns>
-        public ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null)
+        public ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
         {
              ApiResponse<ApiResponseOptionsChain> localVarResponse = GetOptionsChainWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
              return localVarResponse.Data;
@@ -603,7 +603,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChain</returns>
-        public ApiResponse< ApiResponseOptionsChain > GetOptionsChainWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null)
+        public ApiResponse< ApiResponseOptionsChain > GetOptionsChainWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -679,7 +679,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseOptionsChain</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsChain> GetOptionsChainAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsChain> GetOptionsChainAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
         {
              ApiResponse<ApiResponseOptionsChain> localVarResponse = await GetOptionsChainAsyncWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
              return localVarResponse.Data;
@@ -699,7 +699,7 @@ namespace Intrinio.SDK.Api
         /// <param name="moneyness">The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChain)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChain>> GetOptionsChainAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChain>> GetOptionsChainAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -927,7 +927,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionPrices</returns>
-        public ApiResponseOptionPrices GetOptionsPrices (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponseOptionPrices GetOptionsPrices (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseOptionPrices> localVarResponse = GetOptionsPricesWithHttpInfo(identifier, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
@@ -943,7 +943,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionPrices</returns>
-        public ApiResponse< ApiResponseOptionPrices > GetOptionsPricesWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseOptionPrices > GetOptionsPricesWithHttpInfo (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1010,7 +1010,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionPrices> GetOptionsPricesAsync (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionPrices> GetOptionsPricesAsync (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseOptionPrices> localVarResponse = await GetOptionsPricesAsyncWithHttpInfo(identifier, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
@@ -1027,7 +1027,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionPrices>> GetOptionsPricesAsyncWithHttpInfo (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionPrices>> GetOptionsPricesAsyncWithHttpInfo (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)

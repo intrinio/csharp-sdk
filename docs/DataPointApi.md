@@ -8,15 +8,28 @@ Method | HTTP request | Description
 [**GetDataPointText**](DataPointApi.md#getdatapointtext) | **GET** /data_point/{identifier}/{tag}/text | Data Point (Text)
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_point/{identifier}/{tag}/number)
+
+[//]: # (DOC_LINK:DataPointApi.md#getdatapointnumber)
+
 <a name="getdatapointnumber"></a>
 # **GetDataPointNumber**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataPointNumber_v2)
+
 > decimal? GetDataPointNumber (string identifier, string tag)
 
 Data Point (Number)
 
-Returns a numeric value for the given `tag` and the entity with the given `identifier``
+Returns a numeric value for the given `tag` and the entity with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -50,6 +63,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -61,8 +76,20 @@ Name | Type | Description  | Notes
 
 **decimal?**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_point/{identifier}/{tag}/text)
+
+[//]: # (DOC_LINK:DataPointApi.md#getdatapointtext)
+
 <a name="getdatapointtext"></a>
 # **GetDataPointText**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataPointText_v2)
+
 > string GetDataPointText (string identifier, string tag)
 
 Data Point (Text)
@@ -70,6 +97,9 @@ Data Point (Text)
 Returns a text value for the given `tag` for the Security with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -103,6 +133,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -113,4 +145,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **string**
+
+[//]: # (END_OPERATION)
 

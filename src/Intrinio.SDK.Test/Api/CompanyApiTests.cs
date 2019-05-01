@@ -65,7 +65,7 @@ namespace Intrinio.SDK.Test
             //string sector = null;
             //string industryCategory = null;
             //string industryGroup = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanies> (response, "response is ApiResponseCompanies");
@@ -78,7 +78,7 @@ namespace Intrinio.SDK.Test
         public void GetAllCompanyNewsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetAllCompanyNews(pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseNews> (response, "response is ApiResponseNews");
@@ -130,7 +130,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetCompanyFilings(identifier, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyFilings> (response, "response is ApiResponseCompanyFilings");
@@ -152,7 +152,7 @@ namespace Intrinio.SDK.Test
             //string type = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyFundamentals> (response, "response is ApiResponseCompanyFundamentals");
@@ -172,7 +172,7 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyHistoricalData> (response, "response is ApiResponseCompanyHistoricalData");
@@ -186,7 +186,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetCompanyNews(identifier, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyNews> (response, "response is ApiResponseCompanyNews");
@@ -228,7 +228,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //var response = instance.SearchCompanies(query, pageSize);
             //Assert.IsInstanceOf<ApiResponseCompaniesSearch> (response, "response is ApiResponseCompaniesSearch");
         }

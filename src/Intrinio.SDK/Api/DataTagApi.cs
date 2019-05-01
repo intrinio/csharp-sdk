@@ -31,7 +31,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseDataTags</returns>
-        ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Data Tags
@@ -48,7 +48,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        ApiResponse<ApiResponseDataTags> GetAllDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseDataTags> GetAllDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Data Tag
         /// </summary>
@@ -80,7 +80,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseDataTagsSearch</returns>
-        ApiResponseDataTagsSearch SearchDataTags (string query, decimal? pageSize = null);
+        ApiResponseDataTagsSearch SearchDataTags (string query, int? pageSize = null);
 
         /// <summary>
         /// Search Data Tags
@@ -92,7 +92,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseDataTagsSearch</returns>
-        ApiResponse<ApiResponseDataTagsSearch> SearchDataTagsWithHttpInfo (string query, decimal? pageSize = null);
+        ApiResponse<ApiResponseDataTagsSearch> SearchDataTagsWithHttpInfo (string query, int? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -110,7 +110,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseDataTags</returns>
-        System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Data Tags
@@ -127,7 +127,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Data Tag
         /// </summary>
@@ -159,7 +159,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseDataTagsSearch</returns>
-        System.Threading.Tasks.Task<ApiResponseDataTagsSearch> SearchDataTagsAsync (string query, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponseDataTagsSearch> SearchDataTagsAsync (string query, int? pageSize = null);
 
         /// <summary>
         /// Search Data Tags
@@ -171,7 +171,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseDataTagsSearch)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTagsSearch>> SearchDataTagsAsyncWithHttpInfo (string query, decimal? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTagsSearch>> SearchDataTagsAsyncWithHttpInfo (string query, int? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -284,7 +284,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseDataTags</returns>
-        public ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseDataTags> localVarResponse = GetAllDataTagsWithHttpInfo(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
              return localVarResponse.Data;
@@ -302,7 +302,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseDataTags</returns>
-        public ApiResponse< ApiResponseDataTags > GetAllDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseDataTags > GetAllDataTagsWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/data_tags";
@@ -370,7 +370,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseDataTags</returns>
-        public async System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseDataTags> GetAllDataTagsAsync (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseDataTags> localVarResponse = await GetAllDataTagsAsyncWithHttpInfo(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
              return localVarResponse.Data;
@@ -389,7 +389,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseDataTags)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, decimal? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTags>> GetAllDataTagsAsyncWithHttpInfo (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/data_tags";
@@ -595,7 +595,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseDataTagsSearch</returns>
-        public ApiResponseDataTagsSearch SearchDataTags (string query, decimal? pageSize = null)
+        public ApiResponseDataTagsSearch SearchDataTags (string query, int? pageSize = null)
         {
              ApiResponse<ApiResponseDataTagsSearch> localVarResponse = SearchDataTagsWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
@@ -608,7 +608,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseDataTagsSearch</returns>
-        public ApiResponse< ApiResponseDataTagsSearch > SearchDataTagsWithHttpInfo (string query, decimal? pageSize = null)
+        public ApiResponse< ApiResponseDataTagsSearch > SearchDataTagsWithHttpInfo (string query, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -669,7 +669,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseDataTagsSearch</returns>
-        public async System.Threading.Tasks.Task<ApiResponseDataTagsSearch> SearchDataTagsAsync (string query, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponseDataTagsSearch> SearchDataTagsAsync (string query, int? pageSize = null)
         {
              ApiResponse<ApiResponseDataTagsSearch> localVarResponse = await SearchDataTagsAsyncWithHttpInfo(query, pageSize);
              return localVarResponse.Data;
@@ -683,7 +683,7 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseDataTagsSearch)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTagsSearch>> SearchDataTagsAsyncWithHttpInfo (string query, decimal? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDataTagsSearch>> SearchDataTagsAsyncWithHttpInfo (string query, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)

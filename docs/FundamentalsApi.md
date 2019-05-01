@@ -10,8 +10,18 @@ Method | HTTP request | Description
 [**LookupFundamental**](FundamentalsApi.md#lookupfundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/fundamentals/{id})
+
+[//]: # (DOC_LINK:FundamentalsApi.md#getfundamentalbyid)
+
 <a name="getfundamentalbyid"></a>
 # **GetFundamentalById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFundamentalById_v2)
+
 > Fundamental GetFundamentalById (string id)
 
 Fundamental by ID
@@ -19,6 +29,9 @@ Fundamental by ID
 Returns detailed fundamental data for the given `id`.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -51,6 +64,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -61,8 +76,20 @@ Name | Type | Description  | Notes
 
 [**Fundamental**](Fundamental.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/fundamentals/{id}/reported_financials)
+
+[//]: # (DOC_LINK:FundamentalsApi.md#getfundamentalreportedfinancials)
+
 <a name="getfundamentalreportedfinancials"></a>
 # **GetFundamentalReportedFinancials**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFundamentalReportedFinancials_v2)
+
 > ApiResponseReportedFinancials GetFundamentalReportedFinancials (string id)
 
 Reported Financials
@@ -70,6 +97,9 @@ Reported Financials
 Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -102,6 +132,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -112,8 +144,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseReportedFinancials**](ApiResponseReportedFinancials.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/fundamentals/{id}/standardized_financials)
+
+[//]: # (DOC_LINK:FundamentalsApi.md#getfundamentalstandardizedfinancials)
+
 <a name="getfundamentalstandardizedfinancials"></a>
 # **GetFundamentalStandardizedFinancials**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFundamentalStandardizedFinancials_v2)
+
 > ApiResponseStandardizedFinancials GetFundamentalStandardizedFinancials (string id)
 
 Standardized Financials
@@ -121,6 +165,9 @@ Standardized Financials
 Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -153,6 +200,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -163,8 +212,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period})
+
+[//]: # (DOC_LINK:FundamentalsApi.md#lookupfundamental)
+
 <a name="lookupfundamental"></a>
 # **LookupFundamental**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/LookupFundamental_v2)
+
 > Fundamental LookupFundamental (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod)
 
 Lookup Fundamental
@@ -172,6 +233,9 @@ Lookup Fundamental
 Returns the Fundamental for the Company with the given `identifier` and with the given parameters
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -207,6 +271,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -219,4 +285,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Fundamental**](Fundamental.md)
+
+[//]: # (END_OPERATION)
 

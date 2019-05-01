@@ -7,15 +7,28 @@ Method | HTTP request | Description
 [**GetHistoricalData**](HistoricalDataApi.md#gethistoricaldata) | **GET** /historical_data/{identifier}/{tag} | Historical Data
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/historical_data/{identifier}/{tag})
+
+[//]: # (DOC_LINK:HistoricalDataApi.md#gethistoricaldata)
+
 <a name="gethistoricaldata"></a>
 # **GetHistoricalData**
-> ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetHistoricalData_v2)
+
+> ApiResponseHistoricalData GetHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
 Historical Data
 
 Returns historical values for the given `tag` and the entity represented by the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -37,9 +50,9 @@ namespace Example
             var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
             var type = "";  // string | Filter by type, when applicable (optional) 
             var startDate = "2015-01-01";  // DateTime? | Get historical data on or after this date (optional) 
-            var endDate = "2019-01-01";  // DateTime? | Get historical date on or before this date (optional) 
+            var endDate = "";  // DateTime? | Get historical date on or before this date (optional) 
             var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -56,6 +69,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -67,10 +82,12 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
  **endDate** | **DateTime?**| Get historical date on or before this date | [optional] 
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseHistoricalData**](ApiResponseHistoricalData.md)
+
+[//]: # (END_OPERATION)
 

@@ -59,7 +59,7 @@ namespace Intrinio.SDK.Test
         public void GetAllSecuritiesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetAllSecurities(pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurities> (response, "response is ApiResponseSecurities");
@@ -117,7 +117,7 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string sortOrder = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityHistoricalData> (response, "response is ApiResponseSecurityHistoricalData");
@@ -420,7 +420,6 @@ namespace Intrinio.SDK.Test
             //int? roc2 = null;
             //int? roc3 = null;
             //int? roc4 = null;
-            //int? roc5 = null;
             //int? sma1 = null;
             //int? sma2 = null;
             //int? sma3 = null;
@@ -430,7 +429,7 @@ namespace Intrinio.SDK.Test
             //string endDate = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityPriceTechnicalsKst(identifier, roc1, roc2, roc3, roc4, roc5, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
+            //var response = instance.GetSecurityPriceTechnicalsKst(identifier, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityKnowSureThing> (response, "response is ApiResponseSecurityKnowSureThing");
         }
         
@@ -739,7 +738,7 @@ namespace Intrinio.SDK.Test
             //string identifier = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityStockPriceAdjustments> (response, "response is ApiResponseSecurityStockPriceAdjustments");
@@ -756,10 +755,80 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string frequency = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetSecurityStockPrices(identifier, startDate, endDate, frequency, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityStockPrices> (response, "response is ApiResponseSecurityStockPrices");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityZacksAnalystRatings
+        /// </summary>
+        [Test]
+        public void GetSecurityZacksAnalystRatingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string startDate = null;
+            //string endDate = null;
+            //decimal? meanGreater = null;
+            //decimal? meanLess = null;
+            //int? strongBuysGreater = null;
+            //int? strongBuysLess = null;
+            //int? buysGreater = null;
+            //int? buysLess = null;
+            //int? holdsGreater = null;
+            //int? holdsLess = null;
+            //int? sellsGreater = null;
+            //int? sellsLess = null;
+            //int? strongSellsGreater = null;
+            //int? strongSellsLess = null;
+            //int? totalGreater = null;
+            //int? totalLess = null;
+            //int? pageSize = null;
+            //var response = instance.GetSecurityZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize);
+            //Assert.IsInstanceOf<ApiResponseSecurityZacksAnalystRatings> (response, "response is ApiResponseSecurityZacksAnalystRatings");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityZacksAnalystRatingsSnapshot
+        /// </summary>
+        [Test]
+        public void GetSecurityZacksAnalystRatingsSnapshotTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string date = null;
+            //var response = instance.GetSecurityZacksAnalystRatingsSnapshot(identifier, date);
+            //Assert.IsInstanceOf<ApiResponseSecurityZacksAnalystRatingsSnapshot> (response, "response is ApiResponseSecurityZacksAnalystRatingsSnapshot");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityZacksEpsSurprises
+        /// </summary>
+        [Test]
+        public void GetSecurityZacksEpsSurprisesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityZacksEpsSurprises(identifier, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityZacksEPSSurprises> (response, "response is ApiResponseSecurityZacksEPSSurprises");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityZacksSalesSurprises
+        /// </summary>
+        [Test]
+        public void GetSecurityZacksSalesSurprisesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityZacksSalesSurprises(identifier, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityZacksSalesSurprises> (response, "response is ApiResponseSecurityZacksSalesSurprises");
         }
         
         /// <summary>
@@ -773,7 +842,7 @@ namespace Intrinio.SDK.Test
             //string orderColumn = null;
             //string orderDirection = null;
             //bool? primaryOnly = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //var response = instance.ScreenSecurities(logic, orderColumn, orderDirection, primaryOnly, pageSize);
             //Assert.IsInstanceOf<List<SecurityScreenResult>> (response, "response is List<SecurityScreenResult>");
         }
@@ -786,7 +855,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //var response = instance.SearchSecurities(query, pageSize);
             //Assert.IsInstanceOf<ApiResponseSecuritiesSearch> (response, "response is ApiResponseSecuritiesSearch");
         }

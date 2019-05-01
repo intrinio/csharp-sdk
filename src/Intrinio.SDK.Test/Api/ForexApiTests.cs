@@ -84,9 +84,9 @@ namespace Intrinio.SDK.Test
             //string pair = null;
             //string timeframe = null;
             //string timezone = null;
-            //string startDate = null;
+            //DateTime? startDate = null;
             //string startTime = null;
-            //string endDate = null;
+            //DateTime? endDate = null;
             //string endTime = null;
             //int? pageSize = null;
             //string nextPage = null;

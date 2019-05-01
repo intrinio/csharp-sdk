@@ -10,15 +10,28 @@ Method | HTTP request | Description
 [**GetOptionsPrices**](OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/{symbol})
+
+[//]: # (DOC_LINK:OptionsApi.md#getoptions)
+
 <a name="getoptions"></a>
 # **GetOptions**
-> ApiResponseOptions GetOptions (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptions_v2)
+
+> ApiResponseOptions GetOptions (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null)
 
 Options
 
 Returns the master list of option contracts for a given symbol.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -43,7 +56,7 @@ namespace Example
             var expiration = "2019-03-01";  // string | The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional) 
             var expirationAfter = "2019-01-01";  // string | The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional) 
             var expirationBefore = "2019-12-31";  // string | The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional) 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -60,6 +73,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -72,22 +87,37 @@ Name | Type | Description  | Notes
  **expiration** | **string**| The expiration date of the option contract. This will return options contracts with expiration dates on this date. | [optional] 
  **expirationAfter** | **string**| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional] 
  **expirationBefore** | **string**| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional] 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseOptions**](ApiResponseOptions.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/chain/{symbol}/{expiration})
+
+[//]: # (DOC_LINK:OptionsApi.md#getoptionschain)
+
 <a name="getoptionschain"></a>
 # **GetOptionsChain**
-> ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, decimal? pageSize = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsChain_v2)
+
+> ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
 
 Options Chain
 
 Returns all options contracts and their prices for the given symbol and expiration date.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -111,7 +141,7 @@ namespace Example
             var strikeGreaterThan = 190.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional) 
             var strikeLessThan = 150.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional) 
             var moneyness = "in_the_money";  // string | The moneyness of the options contracts to return. 'all' will return all options contracts. 'in_the_money' will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). 'out_of_they_money' will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). 'near_the_money' will return options contracts that are $0.50 or less away from being in the money. (optional) 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
 
             try
             {
@@ -127,6 +157,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -138,14 +170,26 @@ Name | Type | Description  | Notes
  **strikeGreaterThan** | **decimal?**| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional] 
  **strikeLessThan** | **decimal?**| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional] 
  **moneyness** | **string**| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. | [optional] 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseOptionsChain**](ApiResponseOptionsChain.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/expirations/{symbol})
+
+[//]: # (DOC_LINK:OptionsApi.md#getoptionsexpirations)
+
 <a name="getoptionsexpirations"></a>
 # **GetOptionsExpirations**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsExpirations_v2)
+
 > ApiResponseOptionsExpirations GetOptionsExpirations (string symbol, string after = null, string before = null)
 
 Options Expirations
@@ -153,6 +197,9 @@ Options Expirations
 Returns all option contract expiration dates for a given symbol.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -187,6 +234,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -199,15 +248,30 @@ Name | Type | Description  | Notes
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/prices/{identifier})
+
+[//]: # (DOC_LINK:OptionsApi.md#getoptionsprices)
+
 <a name="getoptionsprices"></a>
 # **GetOptionsPrices**
-> ApiResponseOptionPrices GetOptionsPrices (string identifier, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsPrices_v2)
+
+> ApiResponseOptionPrices GetOptionsPrices (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
 Option Prices
 
 Returns all option prices for a given option contract identifier.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -227,7 +291,7 @@ namespace Example
             var identifier = null;  // string | The Intrinio ID or code of the options contract to request prices for.
             var startDate = "2019-01-01";  // string | Return option contract prices on or after this date. (optional) 
             var endDate = "2019-12-31";  // string | Return option contract prices on or before this date. (optional) 
-            var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
+            var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
             var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
             try
@@ -244,6 +308,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -251,10 +317,12 @@ Name | Type | Description  | Notes
  **identifier** | **string**| The Intrinio ID or code of the options contract to request prices for. | 
  **startDate** | **string**| Return option contract prices on or after this date. | [optional] 
  **endDate** | **string**| Return option contract prices on or before this date. | [optional] 
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseOptionPrices**](ApiResponseOptionPrices.md)
+
+[//]: # (END_OPERATION)
 

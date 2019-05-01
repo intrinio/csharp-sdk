@@ -9,13 +9,26 @@ Method | HTTP request | Description
 [**GetMunicipalityFinancials**](MunicipalityApi.md#getmunicipalityfinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities)
+
+[//]: # (DOC_LINK:MunicipalityApi.md#getallmunicipalities)
+
 <a name="getallmunicipalities"></a>
 # **GetAllMunicipalities**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllMunicipalities_v2)
+
 > ApiResponseMunicipalities GetAllMunicipalities (bool? hasFinancials = null, string governmentName = null, string governmentType = null, string areaName = null, string areaType = null, string city = null, string state = null, decimal? zipcode = null, decimal? populationGreaterThan = null, decimal? populationLessThan = null, decimal? enrollmentGreaterThan = null, decimal? enrollmentLessThan = null, string nextPage = null)
 
 All Municipalities
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -60,6 +73,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -82,8 +97,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseMunicipalities**](ApiResponseMunicipalities.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities/{id})
+
+[//]: # (DOC_LINK:MunicipalityApi.md#getmunicipalitybyid)
+
 <a name="getmunicipalitybyid"></a>
 # **GetMunicipalityById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityById_v2)
+
 > Municipality GetMunicipalityById (string id)
 
 Municipality by ID
@@ -91,6 +118,9 @@ Municipality by ID
 Returns the Municipality with the given ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -123,6 +153,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -133,8 +165,20 @@ Name | Type | Description  | Notes
 
 [**Municipality**](Municipality.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities/{id}/financials)
+
+[//]: # (DOC_LINK:MunicipalityApi.md#getmunicipalityfinancials)
+
 <a name="getmunicipalityfinancials"></a>
 # **GetMunicipalityFinancials**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityFinancials_v2)
+
 > ApiResponseMunicipalitiyFinancials GetMunicipalityFinancials (string id, decimal? fiscalYear = null)
 
 Financials for a Municipality
@@ -142,6 +186,9 @@ Financials for a Municipality
 Returns financial statement data for the Municipality with the given ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -175,6 +222,8 @@ namespace Example
 }
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -185,4 +234,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseMunicipalitiyFinancials**](ApiResponseMunicipalitiyFinancials.md)
+
+[//]: # (END_OPERATION)
 

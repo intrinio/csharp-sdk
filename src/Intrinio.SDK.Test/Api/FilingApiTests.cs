@@ -63,7 +63,7 @@ namespace Intrinio.SDK.Test
             //string reportType = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetAllFilings(company, reportType, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseFilings> (response, "response is ApiResponseFilings");
@@ -82,7 +82,7 @@ namespace Intrinio.SDK.Test
             //DateTime? filingEndDate = null;
             //DateTime? periodEndedStartDate = null;
             //DateTime? periodEndedEndDate = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseFilingNotes> (response, "response is ApiResponseFilingNotes");
@@ -147,8 +147,8 @@ namespace Intrinio.SDK.Test
             //string query = null;
             //DateTime? filingStartDate = null;
             //DateTime? filingEndDate = null;
-            //decimal? pageSize = null;
-            //decimal? pageSize2 = null;
+            //int? pageSize = null;
+            //int? pageSize2 = null;
             //var response = instance.SearchNotes(query, filingStartDate, filingEndDate, pageSize, pageSize2);
             //Assert.IsInstanceOf<ApiResponseFilingNotesSearch> (response, "response is ApiResponseFilingNotesSearch");
         }

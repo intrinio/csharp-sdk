@@ -67,7 +67,7 @@ namespace Intrinio.SDK.Test
             //string expiration = null;
             //string expirationAfter = null;
             //string expirationBefore = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetOptions(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseOptions> (response, "response is ApiResponseOptions");
@@ -87,7 +87,7 @@ namespace Intrinio.SDK.Test
             //decimal? strikeGreaterThan = null;
             //decimal? strikeLessThan = null;
             //string moneyness = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //var response = instance.GetOptionsChain(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
             //Assert.IsInstanceOf<ApiResponseOptionsChain> (response, "response is ApiResponseOptionsChain");
         }
@@ -116,7 +116,7 @@ namespace Intrinio.SDK.Test
             //string identifier = null;
             //string startDate = null;
             //string endDate = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetOptionsPrices(identifier, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseOptionPrices> (response, "response is ApiResponseOptionPrices");

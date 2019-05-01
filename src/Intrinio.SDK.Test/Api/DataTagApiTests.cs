@@ -64,7 +64,7 @@ namespace Intrinio.SDK.Test
             //string parent = null;
             //string statementCode = null;
             //string fsTemplate = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetAllDataTags(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseDataTags> (response, "response is ApiResponseDataTags");
@@ -90,7 +90,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //decimal? pageSize = null;
+            //int? pageSize = null;
             //var response = instance.SearchDataTags(query, pageSize);
             //Assert.IsInstanceOf<ApiResponseDataTagsSearch> (response, "response is ApiResponseDataTagsSearch");
         }

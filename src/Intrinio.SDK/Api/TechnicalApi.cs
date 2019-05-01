@@ -20,6 +20,1387 @@ namespace Intrinio.SDK.Api
         /// Accumulation/Distribution Index
         /// </summary>
         /// <remarks>
+        /// Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAccumulationDistributionIndex</returns>
+        ApiResponseCryptoAccumulationDistributionIndex GetCryptoPriceTechnicalsAdi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Accumulation/Distribution Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAccumulationDistributionIndex</returns>
+        ApiResponse<ApiResponseCryptoAccumulationDistributionIndex> GetCryptoPriceTechnicalsAdiWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Average Daily Trading Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAverageDailyTradingVolume</returns>
+        ApiResponseCryptoAverageDailyTradingVolume GetCryptoPriceTechnicalsAdtv (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Average Daily Trading Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAverageDailyTradingVolume</returns>
+        ApiResponse<ApiResponseCryptoAverageDailyTradingVolume> GetCryptoPriceTechnicalsAdtvWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Average Directional Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAverageDirectionalIndex</returns>
+        ApiResponseCryptoAverageDirectionalIndex GetCryptoPriceTechnicalsAdx (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Average Directional Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAverageDirectionalIndex</returns>
+        ApiResponse<ApiResponseCryptoAverageDirectionalIndex> GetCryptoPriceTechnicalsAdxWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Awesome Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAwesomeOscillator</returns>
+        ApiResponseCryptoAwesomeOscillator GetCryptoPriceTechnicalsAo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Awesome Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAwesomeOscillator</returns>
+        ApiResponse<ApiResponseCryptoAwesomeOscillator> GetCryptoPriceTechnicalsAoWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Average True Range
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAverageTrueRange</returns>
+        ApiResponseCryptoAverageTrueRange GetCryptoPriceTechnicalsAtr (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Average True Range
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAverageTrueRange</returns>
+        ApiResponse<ApiResponseCryptoAverageTrueRange> GetCryptoPriceTechnicalsAtrWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Bollinger Bands
+        /// </summary>
+        /// <remarks>
+        /// Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoBollingerBands</returns>
+        ApiResponseCryptoBollingerBands GetCryptoPriceTechnicalsBb (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Bollinger Bands
+        /// </summary>
+        /// <remarks>
+        /// Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoBollingerBands</returns>
+        ApiResponse<ApiResponseCryptoBollingerBands> GetCryptoPriceTechnicalsBbWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Commodity Channel Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoCommodityChannelIndex</returns>
+        ApiResponseCryptoCommodityChannelIndex GetCryptoPriceTechnicalsCci (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Commodity Channel Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoCommodityChannelIndex</returns>
+        ApiResponse<ApiResponseCryptoCommodityChannelIndex> GetCryptoPriceTechnicalsCciWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Chaikin Money Flow
+        /// </summary>
+        /// <remarks>
+        /// Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoChaikinMoneyFlow</returns>
+        ApiResponseCryptoChaikinMoneyFlow GetCryptoPriceTechnicalsCmf (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Chaikin Money Flow
+        /// </summary>
+        /// <remarks>
+        /// Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoChaikinMoneyFlow</returns>
+        ApiResponse<ApiResponseCryptoChaikinMoneyFlow> GetCryptoPriceTechnicalsCmfWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Donchian Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoDonchianChannel</returns>
+        ApiResponseCryptoDonchianChannel GetCryptoPriceTechnicalsDc (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Donchian Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoDonchianChannel</returns>
+        ApiResponse<ApiResponseCryptoDonchianChannel> GetCryptoPriceTechnicalsDcWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Detrended Price Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoDetrendedPriceOscillator</returns>
+        ApiResponseCryptoDetrendedPriceOscillator GetCryptoPriceTechnicalsDpo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Detrended Price Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoDetrendedPriceOscillator</returns>
+        ApiResponse<ApiResponseCryptoDetrendedPriceOscillator> GetCryptoPriceTechnicalsDpoWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Ease of Movement
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoEaseOfMovement</returns>
+        ApiResponseCryptoEaseOfMovement GetCryptoPriceTechnicalsEom (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Ease of Movement
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoEaseOfMovement</returns>
+        ApiResponse<ApiResponseCryptoEaseOfMovement> GetCryptoPriceTechnicalsEomWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Force Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoForceIndex</returns>
+        ApiResponseCryptoForceIndex GetCryptoPriceTechnicalsFi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Force Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoForceIndex</returns>
+        ApiResponse<ApiResponseCryptoForceIndex> GetCryptoPriceTechnicalsFiWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Ichimoku Kinko Hyo
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoIchimokuKinkoHyo</returns>
+        ApiResponseCryptoIchimokuKinkoHyo GetCryptoPriceTechnicalsIchimoku (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Ichimoku Kinko Hyo
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoIchimokuKinkoHyo</returns>
+        ApiResponse<ApiResponseCryptoIchimokuKinkoHyo> GetCryptoPriceTechnicalsIchimokuWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Keltner Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoKeltnerChannel</returns>
+        ApiResponseCryptoKeltnerChannel GetCryptoPriceTechnicalsKc (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Keltner Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoKeltnerChannel</returns>
+        ApiResponse<ApiResponseCryptoKeltnerChannel> GetCryptoPriceTechnicalsKcWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Know Sure Thing
+        /// </summary>
+        /// <remarks>
+        /// Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoKnowSureThing</returns>
+        ApiResponseCryptoKnowSureThing GetCryptoPriceTechnicalsKst (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Know Sure Thing
+        /// </summary>
+        /// <remarks>
+        /// Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoKnowSureThing</returns>
+        ApiResponse<ApiResponseCryptoKnowSureThing> GetCryptoPriceTechnicalsKstWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Moving Average Convergence Divergence
+        /// </summary>
+        /// <remarks>
+        /// Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoMovingAverageConvergenceDivergence</returns>
+        ApiResponseCryptoMovingAverageConvergenceDivergence GetCryptoPriceTechnicalsMacd (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Moving Average Convergence Divergence
+        /// </summary>
+        /// <remarks>
+        /// Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoMovingAverageConvergenceDivergence</returns>
+        ApiResponse<ApiResponseCryptoMovingAverageConvergenceDivergence> GetCryptoPriceTechnicalsMacdWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Money Flow Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoMoneyFlowIndex</returns>
+        ApiResponseCryptoMoneyFlowIndex GetCryptoPriceTechnicalsMfi (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Money Flow Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoMoneyFlowIndex</returns>
+        ApiResponse<ApiResponseCryptoMoneyFlowIndex> GetCryptoPriceTechnicalsMfiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Mass Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoMassIndex</returns>
+        ApiResponseCryptoMassIndex GetCryptoPriceTechnicalsMi (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Mass Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoMassIndex</returns>
+        ApiResponse<ApiResponseCryptoMassIndex> GetCryptoPriceTechnicalsMiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Negative Volume Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoNegativeVolumeIndex</returns>
+        ApiResponseCryptoNegativeVolumeIndex GetCryptoPriceTechnicalsNvi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Negative Volume Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoNegativeVolumeIndex</returns>
+        ApiResponse<ApiResponseCryptoNegativeVolumeIndex> GetCryptoPriceTechnicalsNviWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// On-balance Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoOnBalanceVolume</returns>
+        ApiResponseCryptoOnBalanceVolume GetCryptoPriceTechnicalsObv (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// On-balance Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoOnBalanceVolume</returns>
+        ApiResponse<ApiResponseCryptoOnBalanceVolume> GetCryptoPriceTechnicalsObvWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// On-balance Volume Mean
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoOnBalanceVolumeMean</returns>
+        ApiResponseCryptoOnBalanceVolumeMean GetCryptoPriceTechnicalsObvMean (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// On-balance Volume Mean
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoOnBalanceVolumeMean</returns>
+        ApiResponse<ApiResponseCryptoOnBalanceVolumeMean> GetCryptoPriceTechnicalsObvMeanWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Relative Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoRelativeStrengthIndex</returns>
+        ApiResponseCryptoRelativeStrengthIndex GetCryptoPriceTechnicalsRsi (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Relative Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoRelativeStrengthIndex</returns>
+        ApiResponse<ApiResponseCryptoRelativeStrengthIndex> GetCryptoPriceTechnicalsRsiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Simple Moving Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoSimpleMovingAverage</returns>
+        ApiResponseCryptoSimpleMovingAverage GetCryptoPriceTechnicalsSma (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Simple Moving Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoSimpleMovingAverage</returns>
+        ApiResponse<ApiResponseCryptoSimpleMovingAverage> GetCryptoPriceTechnicalsSmaWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Stochastic Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoStochasticOscillator</returns>
+        ApiResponseCryptoStochasticOscillator GetCryptoPriceTechnicalsSr (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Stochastic Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoStochasticOscillator</returns>
+        ApiResponse<ApiResponseCryptoStochasticOscillator> GetCryptoPriceTechnicalsSrWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Triple Exponential Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoTripleExponentialAverage</returns>
+        ApiResponseCryptoTripleExponentialAverage GetCryptoPriceTechnicalsTrix (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Triple Exponential Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoTripleExponentialAverage</returns>
+        ApiResponse<ApiResponseCryptoTripleExponentialAverage> GetCryptoPriceTechnicalsTrixWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// True Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoTrueStrengthIndex</returns>
+        ApiResponseCryptoTrueStrengthIndex GetCryptoPriceTechnicalsTsi (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// True Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoTrueStrengthIndex</returns>
+        ApiResponse<ApiResponseCryptoTrueStrengthIndex> GetCryptoPriceTechnicalsTsiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Ultimate Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoUltimateOscillator</returns>
+        ApiResponseCryptoUltimateOscillator GetCryptoPriceTechnicalsUo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Ultimate Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoUltimateOscillator</returns>
+        ApiResponse<ApiResponseCryptoUltimateOscillator> GetCryptoPriceTechnicalsUoWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Vortex Indicator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoVortexIndicator</returns>
+        ApiResponseCryptoVortexIndicator GetCryptoPriceTechnicalsVi (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Vortex Indicator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoVortexIndicator</returns>
+        ApiResponse<ApiResponseCryptoVortexIndicator> GetCryptoPriceTechnicalsViWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Volume-price Trend
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoVolumePriceTrend</returns>
+        ApiResponseCryptoVolumePriceTrend GetCryptoPriceTechnicalsVpt (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Volume-price Trend
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoVolumePriceTrend</returns>
+        ApiResponse<ApiResponseCryptoVolumePriceTrend> GetCryptoPriceTechnicalsVptWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Volume Weighted Average Price
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoVolumeWeightedAveragePrice</returns>
+        ApiResponseCryptoVolumeWeightedAveragePrice GetCryptoPriceTechnicalsVwap (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Volume Weighted Average Price
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoVolumeWeightedAveragePrice</returns>
+        ApiResponse<ApiResponseCryptoVolumeWeightedAveragePrice> GetCryptoPriceTechnicalsVwapWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Williams %R
+        /// </summary>
+        /// <remarks>
+        /// Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoWilliamsR</returns>
+        ApiResponseCryptoWilliamsR GetCryptoPriceTechnicalsWr (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Williams %R
+        /// </summary>
+        /// <remarks>
+        /// Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoWilliamsR</returns>
+        ApiResponse<ApiResponseCryptoWilliamsR> GetCryptoPriceTechnicalsWrWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Accumulation/Distribution Index
+        /// </summary>
+        /// <remarks>
         /// Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1027,6 +2408,1387 @@ namespace Intrinio.SDK.Api
         ApiResponse<ApiResponseSecurityWilliamsR> GetSecurityPriceTechnicalsWrWithHttpInfo (string identifier, int? period = null, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Accumulation/Distribution Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAccumulationDistributionIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoAccumulationDistributionIndex> GetCryptoPriceTechnicalsAdiAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Accumulation/Distribution Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAccumulationDistributionIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAccumulationDistributionIndex>> GetCryptoPriceTechnicalsAdiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Average Daily Trading Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAverageDailyTradingVolume</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoAverageDailyTradingVolume> GetCryptoPriceTechnicalsAdtvAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Average Daily Trading Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAverageDailyTradingVolume)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAverageDailyTradingVolume>> GetCryptoPriceTechnicalsAdtvAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Average Directional Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAverageDirectionalIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoAverageDirectionalIndex> GetCryptoPriceTechnicalsAdxAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Average Directional Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAverageDirectionalIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAverageDirectionalIndex>> GetCryptoPriceTechnicalsAdxAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Awesome Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAwesomeOscillator</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoAwesomeOscillator> GetCryptoPriceTechnicalsAoAsync (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Awesome Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAwesomeOscillator)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAwesomeOscillator>> GetCryptoPriceTechnicalsAoAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Average True Range
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAverageTrueRange</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoAverageTrueRange> GetCryptoPriceTechnicalsAtrAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Average True Range
+        /// </summary>
+        /// <remarks>
+        /// Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAverageTrueRange)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAverageTrueRange>> GetCryptoPriceTechnicalsAtrAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Bollinger Bands
+        /// </summary>
+        /// <remarks>
+        /// Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoBollingerBands</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoBollingerBands> GetCryptoPriceTechnicalsBbAsync (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Bollinger Bands
+        /// </summary>
+        /// <remarks>
+        /// Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoBollingerBands)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoBollingerBands>> GetCryptoPriceTechnicalsBbAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Commodity Channel Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoCommodityChannelIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoCommodityChannelIndex> GetCryptoPriceTechnicalsCciAsync (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Commodity Channel Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoCommodityChannelIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoCommodityChannelIndex>> GetCryptoPriceTechnicalsCciAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Chaikin Money Flow
+        /// </summary>
+        /// <remarks>
+        /// Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoChaikinMoneyFlow</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoChaikinMoneyFlow> GetCryptoPriceTechnicalsCmfAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Chaikin Money Flow
+        /// </summary>
+        /// <remarks>
+        /// Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoChaikinMoneyFlow)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoChaikinMoneyFlow>> GetCryptoPriceTechnicalsCmfAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Donchian Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoDonchianChannel</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoDonchianChannel> GetCryptoPriceTechnicalsDcAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Donchian Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoDonchianChannel)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoDonchianChannel>> GetCryptoPriceTechnicalsDcAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Detrended Price Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoDetrendedPriceOscillator</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoDetrendedPriceOscillator> GetCryptoPriceTechnicalsDpoAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Detrended Price Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoDetrendedPriceOscillator)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoDetrendedPriceOscillator>> GetCryptoPriceTechnicalsDpoAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Ease of Movement
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoEaseOfMovement</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoEaseOfMovement> GetCryptoPriceTechnicalsEomAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Ease of Movement
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoEaseOfMovement)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoEaseOfMovement>> GetCryptoPriceTechnicalsEomAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Force Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoForceIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoForceIndex> GetCryptoPriceTechnicalsFiAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Force Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoForceIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoForceIndex>> GetCryptoPriceTechnicalsFiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Ichimoku Kinko Hyo
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoIchimokuKinkoHyo</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoIchimokuKinkoHyo> GetCryptoPriceTechnicalsIchimokuAsync (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Ichimoku Kinko Hyo
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoIchimokuKinkoHyo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoIchimokuKinkoHyo>> GetCryptoPriceTechnicalsIchimokuAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Keltner Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoKeltnerChannel</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoKeltnerChannel> GetCryptoPriceTechnicalsKcAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Keltner Channel
+        /// </summary>
+        /// <remarks>
+        /// Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoKeltnerChannel)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoKeltnerChannel>> GetCryptoPriceTechnicalsKcAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Know Sure Thing
+        /// </summary>
+        /// <remarks>
+        /// Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoKnowSureThing</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoKnowSureThing> GetCryptoPriceTechnicalsKstAsync (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Know Sure Thing
+        /// </summary>
+        /// <remarks>
+        /// Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoKnowSureThing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoKnowSureThing>> GetCryptoPriceTechnicalsKstAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Moving Average Convergence Divergence
+        /// </summary>
+        /// <remarks>
+        /// Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoMovingAverageConvergenceDivergence</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoMovingAverageConvergenceDivergence> GetCryptoPriceTechnicalsMacdAsync (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Moving Average Convergence Divergence
+        /// </summary>
+        /// <remarks>
+        /// Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoMovingAverageConvergenceDivergence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoMovingAverageConvergenceDivergence>> GetCryptoPriceTechnicalsMacdAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Money Flow Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoMoneyFlowIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoMoneyFlowIndex> GetCryptoPriceTechnicalsMfiAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Money Flow Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoMoneyFlowIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoMoneyFlowIndex>> GetCryptoPriceTechnicalsMfiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Mass Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoMassIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoMassIndex> GetCryptoPriceTechnicalsMiAsync (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Mass Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoMassIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoMassIndex>> GetCryptoPriceTechnicalsMiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Negative Volume Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoNegativeVolumeIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoNegativeVolumeIndex> GetCryptoPriceTechnicalsNviAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Negative Volume Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoNegativeVolumeIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoNegativeVolumeIndex>> GetCryptoPriceTechnicalsNviAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// On-balance Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoOnBalanceVolume</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoOnBalanceVolume> GetCryptoPriceTechnicalsObvAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// On-balance Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoOnBalanceVolume)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoOnBalanceVolume>> GetCryptoPriceTechnicalsObvAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// On-balance Volume Mean
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoOnBalanceVolumeMean</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoOnBalanceVolumeMean> GetCryptoPriceTechnicalsObvMeanAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// On-balance Volume Mean
+        /// </summary>
+        /// <remarks>
+        /// Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoOnBalanceVolumeMean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoOnBalanceVolumeMean>> GetCryptoPriceTechnicalsObvMeanAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Relative Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoRelativeStrengthIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoRelativeStrengthIndex> GetCryptoPriceTechnicalsRsiAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Relative Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoRelativeStrengthIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoRelativeStrengthIndex>> GetCryptoPriceTechnicalsRsiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Simple Moving Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoSimpleMovingAverage</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoSimpleMovingAverage> GetCryptoPriceTechnicalsSmaAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Simple Moving Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoSimpleMovingAverage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoSimpleMovingAverage>> GetCryptoPriceTechnicalsSmaAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Stochastic Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoStochasticOscillator</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoStochasticOscillator> GetCryptoPriceTechnicalsSrAsync (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Stochastic Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoStochasticOscillator)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoStochasticOscillator>> GetCryptoPriceTechnicalsSrAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Triple Exponential Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoTripleExponentialAverage</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoTripleExponentialAverage> GetCryptoPriceTechnicalsTrixAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Triple Exponential Average
+        /// </summary>
+        /// <remarks>
+        /// Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoTripleExponentialAverage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoTripleExponentialAverage>> GetCryptoPriceTechnicalsTrixAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// True Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoTrueStrengthIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoTrueStrengthIndex> GetCryptoPriceTechnicalsTsiAsync (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// True Strength Index
+        /// </summary>
+        /// <remarks>
+        /// Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoTrueStrengthIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoTrueStrengthIndex>> GetCryptoPriceTechnicalsTsiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Ultimate Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoUltimateOscillator</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoUltimateOscillator> GetCryptoPriceTechnicalsUoAsync (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Ultimate Oscillator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoUltimateOscillator)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoUltimateOscillator>> GetCryptoPriceTechnicalsUoAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Vortex Indicator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoVortexIndicator</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoVortexIndicator> GetCryptoPriceTechnicalsViAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Vortex Indicator
+        /// </summary>
+        /// <remarks>
+        /// Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoVortexIndicator)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoVortexIndicator>> GetCryptoPriceTechnicalsViAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Volume-price Trend
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoVolumePriceTrend</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoVolumePriceTrend> GetCryptoPriceTechnicalsVptAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Volume-price Trend
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoVolumePriceTrend)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoVolumePriceTrend>> GetCryptoPriceTechnicalsVptAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Volume Weighted Average Price
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoVolumeWeightedAveragePrice</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoVolumeWeightedAveragePrice> GetCryptoPriceTechnicalsVwapAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Volume Weighted Average Price
+        /// </summary>
+        /// <remarks>
+        /// Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoVolumeWeightedAveragePrice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoVolumeWeightedAveragePrice>> GetCryptoPriceTechnicalsVwapAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Williams %R
+        /// </summary>
+        /// <remarks>
+        /// Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoWilliamsR</returns>
+        System.Threading.Tasks.Task<ApiResponseCryptoWilliamsR> GetCryptoPriceTechnicalsWrAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Williams %R
+        /// </summary>
+        /// <remarks>
+        /// Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoWilliamsR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoWilliamsR>> GetCryptoPriceTechnicalsWrAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Accumulation/Distribution Index
         /// </summary>
@@ -2134,6 +4896,6443 @@ namespace Intrinio.SDK.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAccumulationDistributionIndex</returns>
+        public ApiResponseCryptoAccumulationDistributionIndex GetCryptoPriceTechnicalsAdi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAccumulationDistributionIndex> localVarResponse = GetCryptoPriceTechnicalsAdiWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAccumulationDistributionIndex</returns>
+        public ApiResponse< ApiResponseCryptoAccumulationDistributionIndex > GetCryptoPriceTechnicalsAdiWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/adi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAdi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAccumulationDistributionIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAccumulationDistributionIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAccumulationDistributionIndex)));
+        }
+
+        /// <summary>
+        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAccumulationDistributionIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoAccumulationDistributionIndex> GetCryptoPriceTechnicalsAdiAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAccumulationDistributionIndex> localVarResponse = await GetCryptoPriceTechnicalsAdiAsyncWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAccumulationDistributionIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAccumulationDistributionIndex>> GetCryptoPriceTechnicalsAdiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/adi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAdi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAccumulationDistributionIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAccumulationDistributionIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAccumulationDistributionIndex)));
+        }
+
+        /// <summary>
+        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAverageDailyTradingVolume</returns>
+        public ApiResponseCryptoAverageDailyTradingVolume GetCryptoPriceTechnicalsAdtv (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAverageDailyTradingVolume> localVarResponse = GetCryptoPriceTechnicalsAdtvWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAverageDailyTradingVolume</returns>
+        public ApiResponse< ApiResponseCryptoAverageDailyTradingVolume > GetCryptoPriceTechnicalsAdtvWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/adtv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAdtv", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAverageDailyTradingVolume>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAverageDailyTradingVolume) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAverageDailyTradingVolume)));
+        }
+
+        /// <summary>
+        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAverageDailyTradingVolume</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoAverageDailyTradingVolume> GetCryptoPriceTechnicalsAdtvAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAverageDailyTradingVolume> localVarResponse = await GetCryptoPriceTechnicalsAdtvAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Daily Trading Volume. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAverageDailyTradingVolume)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAverageDailyTradingVolume>> GetCryptoPriceTechnicalsAdtvAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/adtv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAdtv", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAverageDailyTradingVolume>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAverageDailyTradingVolume) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAverageDailyTradingVolume)));
+        }
+
+        /// <summary>
+        /// Average Directional Index Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAverageDirectionalIndex</returns>
+        public ApiResponseCryptoAverageDirectionalIndex GetCryptoPriceTechnicalsAdx (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAverageDirectionalIndex> localVarResponse = GetCryptoPriceTechnicalsAdxWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Average Directional Index Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAverageDirectionalIndex</returns>
+        public ApiResponse< ApiResponseCryptoAverageDirectionalIndex > GetCryptoPriceTechnicalsAdxWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/adx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAdx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAverageDirectionalIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAverageDirectionalIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAverageDirectionalIndex)));
+        }
+
+        /// <summary>
+        /// Average Directional Index Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAverageDirectionalIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoAverageDirectionalIndex> GetCryptoPriceTechnicalsAdxAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAverageDirectionalIndex> localVarResponse = await GetCryptoPriceTechnicalsAdxAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Average Directional Index Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average Directional Index. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAverageDirectionalIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAverageDirectionalIndex>> GetCryptoPriceTechnicalsAdxAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/adx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAdx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAverageDirectionalIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAverageDirectionalIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAverageDirectionalIndex)));
+        }
+
+        /// <summary>
+        /// Awesome Oscillator Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAwesomeOscillator</returns>
+        public ApiResponseCryptoAwesomeOscillator GetCryptoPriceTechnicalsAo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAwesomeOscillator> localVarResponse = GetCryptoPriceTechnicalsAoWithHttpInfo(pair, exchange, currency, shortPeriod, longPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Awesome Oscillator Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAwesomeOscillator</returns>
+        public ApiResponse< ApiResponseCryptoAwesomeOscillator > GetCryptoPriceTechnicalsAoWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/ao";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (shortPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "short_period", shortPeriod)); // query parameter
+            if (longPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "long_period", longPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAwesomeOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAwesomeOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAwesomeOscillator)));
+        }
+
+        /// <summary>
+        /// Awesome Oscillator Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAwesomeOscillator</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoAwesomeOscillator> GetCryptoPriceTechnicalsAoAsync (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAwesomeOscillator> localVarResponse = await GetCryptoPriceTechnicalsAoAsyncWithHttpInfo(pair, exchange, currency, shortPeriod, longPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Awesome Oscillator Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. (optional, default to 5)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional, default to 34)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAwesomeOscillator)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAwesomeOscillator>> GetCryptoPriceTechnicalsAoAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/ao";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (shortPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "short_period", shortPeriod)); // query parameter
+            if (longPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "long_period", longPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAwesomeOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAwesomeOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAwesomeOscillator)));
+        }
+
+        /// <summary>
+        /// Average True Range Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoAverageTrueRange</returns>
+        public ApiResponseCryptoAverageTrueRange GetCryptoPriceTechnicalsAtr (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAverageTrueRange> localVarResponse = GetCryptoPriceTechnicalsAtrWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Average True Range Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoAverageTrueRange</returns>
+        public ApiResponse< ApiResponseCryptoAverageTrueRange > GetCryptoPriceTechnicalsAtrWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/atr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAtr", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAverageTrueRange>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAverageTrueRange) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAverageTrueRange)));
+        }
+
+        /// <summary>
+        /// Average True Range Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoAverageTrueRange</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoAverageTrueRange> GetCryptoPriceTechnicalsAtrAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoAverageTrueRange> localVarResponse = await GetCryptoPriceTechnicalsAtrAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Average True Range Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Average True Range. (optional, default to 22)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoAverageTrueRange)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoAverageTrueRange>> GetCryptoPriceTechnicalsAtrAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/atr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsAtr", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoAverageTrueRange>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoAverageTrueRange) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoAverageTrueRange)));
+        }
+
+        /// <summary>
+        /// Bollinger Bands Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoBollingerBands</returns>
+        public ApiResponseCryptoBollingerBands GetCryptoPriceTechnicalsBb (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoBollingerBands> localVarResponse = GetCryptoPriceTechnicalsBbWithHttpInfo(pair, exchange, currency, period, standardDeviations, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bollinger Bands Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoBollingerBands</returns>
+        public ApiResponse< ApiResponseCryptoBollingerBands > GetCryptoPriceTechnicalsBbWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/bb";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (standardDeviations != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "standard_deviations", standardDeviations)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsBb", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoBollingerBands>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoBollingerBands) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoBollingerBands)));
+        }
+
+        /// <summary>
+        /// Bollinger Bands Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoBollingerBands</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoBollingerBands> GetCryptoPriceTechnicalsBbAsync (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoBollingerBands> localVarResponse = await GetCryptoPriceTechnicalsBbAsyncWithHttpInfo(pair, exchange, currency, period, standardDeviations, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bollinger Bands Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Bollinger Bands. (optional, default to 20)</param>
+        /// <param name="standardDeviations">The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. (optional, default to 2.0)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Bollinger Bands. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoBollingerBands)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoBollingerBands>> GetCryptoPriceTechnicalsBbAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/bb";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (standardDeviations != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "standard_deviations", standardDeviations)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsBb", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoBollingerBands>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoBollingerBands) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoBollingerBands)));
+        }
+
+        /// <summary>
+        /// Commodity Channel Index Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoCommodityChannelIndex</returns>
+        public ApiResponseCryptoCommodityChannelIndex GetCryptoPriceTechnicalsCci (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoCommodityChannelIndex> localVarResponse = GetCryptoPriceTechnicalsCciWithHttpInfo(pair, exchange, currency, period, constant, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Commodity Channel Index Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoCommodityChannelIndex</returns>
+        public ApiResponse< ApiResponseCryptoCommodityChannelIndex > GetCryptoPriceTechnicalsCciWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/cci";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (constant != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "constant", constant)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsCci", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoCommodityChannelIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoCommodityChannelIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoCommodityChannelIndex)));
+        }
+
+        /// <summary>
+        /// Commodity Channel Index Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoCommodityChannelIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoCommodityChannelIndex> GetCryptoPriceTechnicalsCciAsync (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoCommodityChannelIndex> localVarResponse = await GetCryptoPriceTechnicalsCciAsyncWithHttpInfo(pair, exchange, currency, period, constant, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Commodity Channel Index Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 20)</param>
+        /// <param name="constant">The number of observations, per period, to calculate Commodity Channel Index. (optional, default to 0.015)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoCommodityChannelIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoCommodityChannelIndex>> GetCryptoPriceTechnicalsCciAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/cci";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (constant != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "constant", constant)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsCci", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoCommodityChannelIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoCommodityChannelIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoCommodityChannelIndex)));
+        }
+
+        /// <summary>
+        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoChaikinMoneyFlow</returns>
+        public ApiResponseCryptoChaikinMoneyFlow GetCryptoPriceTechnicalsCmf (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoChaikinMoneyFlow> localVarResponse = GetCryptoPriceTechnicalsCmfWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoChaikinMoneyFlow</returns>
+        public ApiResponse< ApiResponseCryptoChaikinMoneyFlow > GetCryptoPriceTechnicalsCmfWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/cmf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsCmf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoChaikinMoneyFlow>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoChaikinMoneyFlow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoChaikinMoneyFlow)));
+        }
+
+        /// <summary>
+        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoChaikinMoneyFlow</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoChaikinMoneyFlow> GetCryptoPriceTechnicalsCmfAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoChaikinMoneyFlow> localVarResponse = await GetCryptoPriceTechnicalsCmfAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Chaikin Money Flow. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoChaikinMoneyFlow)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoChaikinMoneyFlow>> GetCryptoPriceTechnicalsCmfAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/cmf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsCmf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoChaikinMoneyFlow>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoChaikinMoneyFlow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoChaikinMoneyFlow)));
+        }
+
+        /// <summary>
+        /// Donchian Channel Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoDonchianChannel</returns>
+        public ApiResponseCryptoDonchianChannel GetCryptoPriceTechnicalsDc (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoDonchianChannel> localVarResponse = GetCryptoPriceTechnicalsDcWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Donchian Channel Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoDonchianChannel</returns>
+        public ApiResponse< ApiResponseCryptoDonchianChannel > GetCryptoPriceTechnicalsDcWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/dc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsDc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoDonchianChannel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoDonchianChannel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoDonchianChannel)));
+        }
+
+        /// <summary>
+        /// Donchian Channel Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoDonchianChannel</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoDonchianChannel> GetCryptoPriceTechnicalsDcAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoDonchianChannel> localVarResponse = await GetCryptoPriceTechnicalsDcAsyncWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Donchian Channel Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Donchian Channel. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Donchian Channel. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoDonchianChannel)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoDonchianChannel>> GetCryptoPriceTechnicalsDcAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/dc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsDc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoDonchianChannel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoDonchianChannel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoDonchianChannel)));
+        }
+
+        /// <summary>
+        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoDetrendedPriceOscillator</returns>
+        public ApiResponseCryptoDetrendedPriceOscillator GetCryptoPriceTechnicalsDpo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoDetrendedPriceOscillator> localVarResponse = GetCryptoPriceTechnicalsDpoWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoDetrendedPriceOscillator</returns>
+        public ApiResponse< ApiResponseCryptoDetrendedPriceOscillator > GetCryptoPriceTechnicalsDpoWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/dpo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsDpo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoDetrendedPriceOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoDetrendedPriceOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoDetrendedPriceOscillator)));
+        }
+
+        /// <summary>
+        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoDetrendedPriceOscillator</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoDetrendedPriceOscillator> GetCryptoPriceTechnicalsDpoAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoDetrendedPriceOscillator> localVarResponse = await GetCryptoPriceTechnicalsDpoAsyncWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Detrended Price Oscillator. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoDetrendedPriceOscillator)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoDetrendedPriceOscillator>> GetCryptoPriceTechnicalsDpoAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/dpo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsDpo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoDetrendedPriceOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoDetrendedPriceOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoDetrendedPriceOscillator)));
+        }
+
+        /// <summary>
+        /// Ease of Movement Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoEaseOfMovement</returns>
+        public ApiResponseCryptoEaseOfMovement GetCryptoPriceTechnicalsEom (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoEaseOfMovement> localVarResponse = GetCryptoPriceTechnicalsEomWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ease of Movement Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoEaseOfMovement</returns>
+        public ApiResponse< ApiResponseCryptoEaseOfMovement > GetCryptoPriceTechnicalsEomWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/eom";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsEom", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoEaseOfMovement>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoEaseOfMovement) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoEaseOfMovement)));
+        }
+
+        /// <summary>
+        /// Ease of Movement Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoEaseOfMovement</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoEaseOfMovement> GetCryptoPriceTechnicalsEomAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoEaseOfMovement> localVarResponse = await GetCryptoPriceTechnicalsEomAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ease of Movement Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Ease of Movement. (optional, default to 20)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoEaseOfMovement)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoEaseOfMovement>> GetCryptoPriceTechnicalsEomAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/eom";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsEom", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoEaseOfMovement>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoEaseOfMovement) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoEaseOfMovement)));
+        }
+
+        /// <summary>
+        /// Force Index Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoForceIndex</returns>
+        public ApiResponseCryptoForceIndex GetCryptoPriceTechnicalsFi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoForceIndex> localVarResponse = GetCryptoPriceTechnicalsFiWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Force Index Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoForceIndex</returns>
+        public ApiResponse< ApiResponseCryptoForceIndex > GetCryptoPriceTechnicalsFiWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/fi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsFi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoForceIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoForceIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoForceIndex)));
+        }
+
+        /// <summary>
+        /// Force Index Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoForceIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoForceIndex> GetCryptoPriceTechnicalsFiAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoForceIndex> localVarResponse = await GetCryptoPriceTechnicalsFiAsyncWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Force Index Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoForceIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoForceIndex>> GetCryptoPriceTechnicalsFiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/fi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsFi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoForceIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoForceIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoForceIndex)));
+        }
+
+        /// <summary>
+        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoIchimokuKinkoHyo</returns>
+        public ApiResponseCryptoIchimokuKinkoHyo GetCryptoPriceTechnicalsIchimoku (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoIchimokuKinkoHyo> localVarResponse = GetCryptoPriceTechnicalsIchimokuWithHttpInfo(pair, exchange, currency, lowPeriod, mediumPeriod, highPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoIchimokuKinkoHyo</returns>
+        public ApiResponse< ApiResponseCryptoIchimokuKinkoHyo > GetCryptoPriceTechnicalsIchimokuWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/ichimoku";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (lowPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "low_period", lowPeriod)); // query parameter
+            if (mediumPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "medium_period", mediumPeriod)); // query parameter
+            if (highPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "high_period", highPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsIchimoku", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoIchimokuKinkoHyo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoIchimokuKinkoHyo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoIchimokuKinkoHyo)));
+        }
+
+        /// <summary>
+        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoIchimokuKinkoHyo</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoIchimokuKinkoHyo> GetCryptoPriceTechnicalsIchimokuAsync (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoIchimokuKinkoHyo> localVarResponse = await GetCryptoPriceTechnicalsIchimokuAsyncWithHttpInfo(pair, exchange, currency, lowPeriod, mediumPeriod, highPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. (optional, default to 9)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. (optional, default to 26)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional, default to 52)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoIchimokuKinkoHyo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoIchimokuKinkoHyo>> GetCryptoPriceTechnicalsIchimokuAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/ichimoku";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (lowPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "low_period", lowPeriod)); // query parameter
+            if (mediumPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "medium_period", mediumPeriod)); // query parameter
+            if (highPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "high_period", highPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsIchimoku", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoIchimokuKinkoHyo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoIchimokuKinkoHyo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoIchimokuKinkoHyo)));
+        }
+
+        /// <summary>
+        /// Keltner Channel Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoKeltnerChannel</returns>
+        public ApiResponseCryptoKeltnerChannel GetCryptoPriceTechnicalsKc (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoKeltnerChannel> localVarResponse = GetCryptoPriceTechnicalsKcWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Keltner Channel Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoKeltnerChannel</returns>
+        public ApiResponse< ApiResponseCryptoKeltnerChannel > GetCryptoPriceTechnicalsKcWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/kc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsKc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoKeltnerChannel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoKeltnerChannel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoKeltnerChannel)));
+        }
+
+        /// <summary>
+        /// Keltner Channel Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoKeltnerChannel</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoKeltnerChannel> GetCryptoPriceTechnicalsKcAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoKeltnerChannel> localVarResponse = await GetCryptoPriceTechnicalsKcAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Keltner Channel Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Kelter Channel. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoKeltnerChannel)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoKeltnerChannel>> GetCryptoPriceTechnicalsKcAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/kc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsKc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoKeltnerChannel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoKeltnerChannel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoKeltnerChannel)));
+        }
+
+        /// <summary>
+        /// Know Sure Thing Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoKnowSureThing</returns>
+        public ApiResponseCryptoKnowSureThing GetCryptoPriceTechnicalsKst (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoKnowSureThing> localVarResponse = GetCryptoPriceTechnicalsKstWithHttpInfo(pair, exchange, currency, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Know Sure Thing Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoKnowSureThing</returns>
+        public ApiResponse< ApiResponseCryptoKnowSureThing > GetCryptoPriceTechnicalsKstWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/kst";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (roc1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc1", roc1)); // query parameter
+            if (roc2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc2", roc2)); // query parameter
+            if (roc3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc3", roc3)); // query parameter
+            if (roc4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc4", roc4)); // query parameter
+            if (sma1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma1", sma1)); // query parameter
+            if (sma2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma2", sma2)); // query parameter
+            if (sma3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma3", sma3)); // query parameter
+            if (sma4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma4", sma4)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsKst", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoKnowSureThing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoKnowSureThing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoKnowSureThing)));
+        }
+
+        /// <summary>
+        /// Know Sure Thing Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoKnowSureThing</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoKnowSureThing> GetCryptoPriceTechnicalsKstAsync (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoKnowSureThing> localVarResponse = await GetCryptoPriceTechnicalsKstAsyncWithHttpInfo(pair, exchange, currency, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Know Sure Thing Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="roc1">The number of observations, per period, to calculate the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="roc2">The number of observations, per period, to calculate the rate-of-change for RCMA2. (optional, default to 15)</param>
+        /// <param name="roc3">The number of observations, per period, to calculate the rate-of-change for RCMA3. (optional, default to 20)</param>
+        /// <param name="roc4">The number of observations, per period, to calculate the rate-of-change for RCMA4. (optional, default to 30)</param>
+        /// <param name="sma1">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. (optional, default to 10)</param>
+        /// <param name="sma2">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. (optional, default to 10)</param>
+        /// <param name="sma3">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. (optional, default to 10)</param>
+        /// <param name="sma4">The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. (optional, default to 15)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Know Sure Thing. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoKnowSureThing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoKnowSureThing>> GetCryptoPriceTechnicalsKstAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/kst";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (roc1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc1", roc1)); // query parameter
+            if (roc2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc2", roc2)); // query parameter
+            if (roc3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc3", roc3)); // query parameter
+            if (roc4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "roc4", roc4)); // query parameter
+            if (sma1 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma1", sma1)); // query parameter
+            if (sma2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma2", sma2)); // query parameter
+            if (sma3 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma3", sma3)); // query parameter
+            if (sma4 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sma4", sma4)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsKst", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoKnowSureThing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoKnowSureThing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoKnowSureThing)));
+        }
+
+        /// <summary>
+        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoMovingAverageConvergenceDivergence</returns>
+        public ApiResponseCryptoMovingAverageConvergenceDivergence GetCryptoPriceTechnicalsMacd (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoMovingAverageConvergenceDivergence> localVarResponse = GetCryptoPriceTechnicalsMacdWithHttpInfo(pair, exchange, currency, fastPeriod, slowPeriod, signalPeriod, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoMovingAverageConvergenceDivergence</returns>
+        public ApiResponse< ApiResponseCryptoMovingAverageConvergenceDivergence > GetCryptoPriceTechnicalsMacdWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/macd";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (fastPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fast_period", fastPeriod)); // query parameter
+            if (slowPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "slow_period", slowPeriod)); // query parameter
+            if (signalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "signal_period", signalPeriod)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsMacd", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoMovingAverageConvergenceDivergence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoMovingAverageConvergenceDivergence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoMovingAverageConvergenceDivergence)));
+        }
+
+        /// <summary>
+        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoMovingAverageConvergenceDivergence</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoMovingAverageConvergenceDivergence> GetCryptoPriceTechnicalsMacdAsync (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoMovingAverageConvergenceDivergence> localVarResponse = await GetCryptoPriceTechnicalsMacdAsyncWithHttpInfo(pair, exchange, currency, fastPeriod, slowPeriod, signalPeriod, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="fastPeriod">The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 12)</param>
+        /// <param name="slowPeriod">The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. (optional, default to 26)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. (optional, default to 9)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoMovingAverageConvergenceDivergence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoMovingAverageConvergenceDivergence>> GetCryptoPriceTechnicalsMacdAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/macd";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (fastPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fast_period", fastPeriod)); // query parameter
+            if (slowPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "slow_period", slowPeriod)); // query parameter
+            if (signalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "signal_period", signalPeriod)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsMacd", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoMovingAverageConvergenceDivergence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoMovingAverageConvergenceDivergence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoMovingAverageConvergenceDivergence)));
+        }
+
+        /// <summary>
+        /// Money Flow Index Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoMoneyFlowIndex</returns>
+        public ApiResponseCryptoMoneyFlowIndex GetCryptoPriceTechnicalsMfi (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoMoneyFlowIndex> localVarResponse = GetCryptoPriceTechnicalsMfiWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Money Flow Index Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoMoneyFlowIndex</returns>
+        public ApiResponse< ApiResponseCryptoMoneyFlowIndex > GetCryptoPriceTechnicalsMfiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/mfi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsMfi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoMoneyFlowIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoMoneyFlowIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoMoneyFlowIndex)));
+        }
+
+        /// <summary>
+        /// Money Flow Index Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoMoneyFlowIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoMoneyFlowIndex> GetCryptoPriceTechnicalsMfiAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoMoneyFlowIndex> localVarResponse = await GetCryptoPriceTechnicalsMfiAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Money Flow Index Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Money Flow Index. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoMoneyFlowIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoMoneyFlowIndex>> GetCryptoPriceTechnicalsMfiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/mfi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsMfi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoMoneyFlowIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoMoneyFlowIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoMoneyFlowIndex)));
+        }
+
+        /// <summary>
+        /// Mass Index Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoMassIndex</returns>
+        public ApiResponseCryptoMassIndex GetCryptoPriceTechnicalsMi (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoMassIndex> localVarResponse = GetCryptoPriceTechnicalsMiWithHttpInfo(pair, exchange, currency, emaPeriod, sumPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mass Index Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoMassIndex</returns>
+        public ApiResponse< ApiResponseCryptoMassIndex > GetCryptoPriceTechnicalsMiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/mi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (emaPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ema_period", emaPeriod)); // query parameter
+            if (sumPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sum_period", sumPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsMi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoMassIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoMassIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoMassIndex)));
+        }
+
+        /// <summary>
+        /// Mass Index Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoMassIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoMassIndex> GetCryptoPriceTechnicalsMiAsync (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoMassIndex> localVarResponse = await GetCryptoPriceTechnicalsMiAsyncWithHttpInfo(pair, exchange, currency, emaPeriod, sumPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mass Index Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="emaPeriod">The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. (optional, default to 9)</param>
+        /// <param name="sumPeriod">The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional, default to 25)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoMassIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoMassIndex>> GetCryptoPriceTechnicalsMiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/mi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (emaPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ema_period", emaPeriod)); // query parameter
+            if (sumPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sum_period", sumPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsMi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoMassIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoMassIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoMassIndex)));
+        }
+
+        /// <summary>
+        /// Negative Volume Index Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoNegativeVolumeIndex</returns>
+        public ApiResponseCryptoNegativeVolumeIndex GetCryptoPriceTechnicalsNvi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoNegativeVolumeIndex> localVarResponse = GetCryptoPriceTechnicalsNviWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Negative Volume Index Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoNegativeVolumeIndex</returns>
+        public ApiResponse< ApiResponseCryptoNegativeVolumeIndex > GetCryptoPriceTechnicalsNviWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/nvi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsNvi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoNegativeVolumeIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoNegativeVolumeIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoNegativeVolumeIndex)));
+        }
+
+        /// <summary>
+        /// Negative Volume Index Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoNegativeVolumeIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoNegativeVolumeIndex> GetCryptoPriceTechnicalsNviAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoNegativeVolumeIndex> localVarResponse = await GetCryptoPriceTechnicalsNviAsyncWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Negative Volume Index Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoNegativeVolumeIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoNegativeVolumeIndex>> GetCryptoPriceTechnicalsNviAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/nvi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsNvi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoNegativeVolumeIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoNegativeVolumeIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoNegativeVolumeIndex)));
+        }
+
+        /// <summary>
+        /// On-balance Volume Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoOnBalanceVolume</returns>
+        public ApiResponseCryptoOnBalanceVolume GetCryptoPriceTechnicalsObv (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoOnBalanceVolume> localVarResponse = GetCryptoPriceTechnicalsObvWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// On-balance Volume Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoOnBalanceVolume</returns>
+        public ApiResponse< ApiResponseCryptoOnBalanceVolume > GetCryptoPriceTechnicalsObvWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/obv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsObv", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoOnBalanceVolume>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoOnBalanceVolume) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoOnBalanceVolume)));
+        }
+
+        /// <summary>
+        /// On-balance Volume Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoOnBalanceVolume</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoOnBalanceVolume> GetCryptoPriceTechnicalsObvAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoOnBalanceVolume> localVarResponse = await GetCryptoPriceTechnicalsObvAsyncWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// On-balance Volume Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoOnBalanceVolume)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoOnBalanceVolume>> GetCryptoPriceTechnicalsObvAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/obv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsObv", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoOnBalanceVolume>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoOnBalanceVolume) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoOnBalanceVolume)));
+        }
+
+        /// <summary>
+        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoOnBalanceVolumeMean</returns>
+        public ApiResponseCryptoOnBalanceVolumeMean GetCryptoPriceTechnicalsObvMean (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoOnBalanceVolumeMean> localVarResponse = GetCryptoPriceTechnicalsObvMeanWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoOnBalanceVolumeMean</returns>
+        public ApiResponse< ApiResponseCryptoOnBalanceVolumeMean > GetCryptoPriceTechnicalsObvMeanWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/obv_mean";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsObvMean", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoOnBalanceVolumeMean>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoOnBalanceVolumeMean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoOnBalanceVolumeMean)));
+        }
+
+        /// <summary>
+        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoOnBalanceVolumeMean</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoOnBalanceVolumeMean> GetCryptoPriceTechnicalsObvMeanAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoOnBalanceVolumeMean> localVarResponse = await GetCryptoPriceTechnicalsObvMeanAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate On-balance Volume Mean. (optional, default to 10)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoOnBalanceVolumeMean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoOnBalanceVolumeMean>> GetCryptoPriceTechnicalsObvMeanAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/obv_mean";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsObvMean", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoOnBalanceVolumeMean>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoOnBalanceVolumeMean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoOnBalanceVolumeMean)));
+        }
+
+        /// <summary>
+        /// Relative Strength Index Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoRelativeStrengthIndex</returns>
+        public ApiResponseCryptoRelativeStrengthIndex GetCryptoPriceTechnicalsRsi (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoRelativeStrengthIndex> localVarResponse = GetCryptoPriceTechnicalsRsiWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Relative Strength Index Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoRelativeStrengthIndex</returns>
+        public ApiResponse< ApiResponseCryptoRelativeStrengthIndex > GetCryptoPriceTechnicalsRsiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/rsi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsRsi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoRelativeStrengthIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoRelativeStrengthIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoRelativeStrengthIndex)));
+        }
+
+        /// <summary>
+        /// Relative Strength Index Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoRelativeStrengthIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoRelativeStrengthIndex> GetCryptoPriceTechnicalsRsiAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoRelativeStrengthIndex> localVarResponse = await GetCryptoPriceTechnicalsRsiAsyncWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Relative Strength Index Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Relative Strength Index. (optional, default to 14)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Relative Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoRelativeStrengthIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoRelativeStrengthIndex>> GetCryptoPriceTechnicalsRsiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/rsi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsRsi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoRelativeStrengthIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoRelativeStrengthIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoRelativeStrengthIndex)));
+        }
+
+        /// <summary>
+        /// Simple Moving Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoSimpleMovingAverage</returns>
+        public ApiResponseCryptoSimpleMovingAverage GetCryptoPriceTechnicalsSma (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoSimpleMovingAverage> localVarResponse = GetCryptoPriceTechnicalsSmaWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simple Moving Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoSimpleMovingAverage</returns>
+        public ApiResponse< ApiResponseCryptoSimpleMovingAverage > GetCryptoPriceTechnicalsSmaWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/sma";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsSma", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoSimpleMovingAverage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoSimpleMovingAverage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoSimpleMovingAverage)));
+        }
+
+        /// <summary>
+        /// Simple Moving Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoSimpleMovingAverage</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoSimpleMovingAverage> GetCryptoPriceTechnicalsSmaAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoSimpleMovingAverage> localVarResponse = await GetCryptoPriceTechnicalsSmaAsyncWithHttpInfo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Simple Moving Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Simple Moving Average. (optional, default to 20)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating Simple Moving Average. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoSimpleMovingAverage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoSimpleMovingAverage>> GetCryptoPriceTechnicalsSmaAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/sma";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsSma", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoSimpleMovingAverage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoSimpleMovingAverage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoSimpleMovingAverage)));
+        }
+
+        /// <summary>
+        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoStochasticOscillator</returns>
+        public ApiResponseCryptoStochasticOscillator GetCryptoPriceTechnicalsSr (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoStochasticOscillator> localVarResponse = GetCryptoPriceTechnicalsSrWithHttpInfo(pair, exchange, currency, period, signalPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoStochasticOscillator</returns>
+        public ApiResponse< ApiResponseCryptoStochasticOscillator > GetCryptoPriceTechnicalsSrWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/sr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (signalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "signal_period", signalPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsSr", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoStochasticOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoStochasticOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoStochasticOscillator)));
+        }
+
+        /// <summary>
+        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoStochasticOscillator</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoStochasticOscillator> GetCryptoPriceTechnicalsSrAsync (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoStochasticOscillator> localVarResponse = await GetCryptoPriceTechnicalsSrAsyncWithHttpInfo(pair, exchange, currency, period, signalPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate %K of Stochastic Oscillator. (optional, default to 14)</param>
+        /// <param name="signalPeriod">The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional, default to 3)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoStochasticOscillator)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoStochasticOscillator>> GetCryptoPriceTechnicalsSrAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/sr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (signalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "signal_period", signalPeriod)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsSr", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoStochasticOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoStochasticOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoStochasticOscillator)));
+        }
+
+        /// <summary>
+        /// Triple Exponential Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoTripleExponentialAverage</returns>
+        public ApiResponseCryptoTripleExponentialAverage GetCryptoPriceTechnicalsTrix (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoTripleExponentialAverage> localVarResponse = GetCryptoPriceTechnicalsTrixWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Triple Exponential Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoTripleExponentialAverage</returns>
+        public ApiResponse< ApiResponseCryptoTripleExponentialAverage > GetCryptoPriceTechnicalsTrixWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/trix";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsTrix", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoTripleExponentialAverage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoTripleExponentialAverage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoTripleExponentialAverage)));
+        }
+
+        /// <summary>
+        /// Triple Exponential Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoTripleExponentialAverage</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoTripleExponentialAverage> GetCryptoPriceTechnicalsTrixAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoTripleExponentialAverage> localVarResponse = await GetCryptoPriceTechnicalsTrixAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Triple Exponential Average Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional, default to 15)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoTripleExponentialAverage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoTripleExponentialAverage>> GetCryptoPriceTechnicalsTrixAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/trix";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsTrix", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoTripleExponentialAverage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoTripleExponentialAverage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoTripleExponentialAverage)));
+        }
+
+        /// <summary>
+        /// True Strength Index Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoTrueStrengthIndex</returns>
+        public ApiResponseCryptoTrueStrengthIndex GetCryptoPriceTechnicalsTsi (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoTrueStrengthIndex> localVarResponse = GetCryptoPriceTechnicalsTsiWithHttpInfo(pair, exchange, currency, lowPeriod, highPeriod, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// True Strength Index Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoTrueStrengthIndex</returns>
+        public ApiResponse< ApiResponseCryptoTrueStrengthIndex > GetCryptoPriceTechnicalsTsiWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/tsi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (lowPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "low_period", lowPeriod)); // query parameter
+            if (highPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "high_period", highPeriod)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsTsi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoTrueStrengthIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoTrueStrengthIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoTrueStrengthIndex)));
+        }
+
+        /// <summary>
+        /// True Strength Index Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoTrueStrengthIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoTrueStrengthIndex> GetCryptoPriceTechnicalsTsiAsync (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoTrueStrengthIndex> localVarResponse = await GetCryptoPriceTechnicalsTsiAsyncWithHttpInfo(pair, exchange, currency, lowPeriod, highPeriod, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// True Strength Index Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="lowPeriod">The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 13)</param>
+        /// <param name="highPeriod">The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. (optional, default to 25)</param>
+        /// <param name="priceKey">The Crypto Currency Price field to use when calculating True Strength Index. (optional, default to close)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoTrueStrengthIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoTrueStrengthIndex>> GetCryptoPriceTechnicalsTsiAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/tsi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (lowPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "low_period", lowPeriod)); // query parameter
+            if (highPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "high_period", highPeriod)); // query parameter
+            if (priceKey != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "price_key", priceKey)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsTsi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoTrueStrengthIndex>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoTrueStrengthIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoTrueStrengthIndex)));
+        }
+
+        /// <summary>
+        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoUltimateOscillator</returns>
+        public ApiResponseCryptoUltimateOscillator GetCryptoPriceTechnicalsUo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoUltimateOscillator> localVarResponse = GetCryptoPriceTechnicalsUoWithHttpInfo(pair, exchange, currency, shortPeriod, mediumPeriod, longPeriod, shortWeight, mediumWeight, longWeight, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoUltimateOscillator</returns>
+        public ApiResponse< ApiResponseCryptoUltimateOscillator > GetCryptoPriceTechnicalsUoWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/uo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (shortPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "short_period", shortPeriod)); // query parameter
+            if (mediumPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "medium_period", mediumPeriod)); // query parameter
+            if (longPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "long_period", longPeriod)); // query parameter
+            if (shortWeight != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "short_weight", shortWeight)); // query parameter
+            if (mediumWeight != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "medium_weight", mediumWeight)); // query parameter
+            if (longWeight != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "long_weight", longWeight)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsUo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoUltimateOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoUltimateOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoUltimateOscillator)));
+        }
+
+        /// <summary>
+        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoUltimateOscillator</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoUltimateOscillator> GetCryptoPriceTechnicalsUoAsync (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoUltimateOscillator> localVarResponse = await GetCryptoPriceTechnicalsUoAsyncWithHttpInfo(pair, exchange, currency, shortPeriod, mediumPeriod, longPeriod, shortWeight, mediumWeight, longWeight, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="shortPeriod">The number of observations, per period, to calculate the short period for Ultimate Oscillator. (optional, default to 7)</param>
+        /// <param name="mediumPeriod">The number of observations, per period, to calculate the medium period for Ultimate Oscillator. (optional, default to 14)</param>
+        /// <param name="longPeriod">The number of observations, per period, to calculate the long period for Ultimate Oscillator. (optional, default to 28)</param>
+        /// <param name="shortWeight">The weight of short Buying Pressure average for Ultimate Oscillator. (optional, default to 4.0)</param>
+        /// <param name="mediumWeight">The weight of medium Buying Pressure average for Ultimate Oscillator. (optional, default to 2.0)</param>
+        /// <param name="longWeight">The weight of long Buying Pressure average for Ultimate Oscillator. (optional, default to 1.0)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoUltimateOscillator)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoUltimateOscillator>> GetCryptoPriceTechnicalsUoAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/uo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (shortPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "short_period", shortPeriod)); // query parameter
+            if (mediumPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "medium_period", mediumPeriod)); // query parameter
+            if (longPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "long_period", longPeriod)); // query parameter
+            if (shortWeight != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "short_weight", shortWeight)); // query parameter
+            if (mediumWeight != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "medium_weight", mediumWeight)); // query parameter
+            if (longWeight != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "long_weight", longWeight)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsUo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoUltimateOscillator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoUltimateOscillator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoUltimateOscillator)));
+        }
+
+        /// <summary>
+        /// Vortex Indicator Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoVortexIndicator</returns>
+        public ApiResponseCryptoVortexIndicator GetCryptoPriceTechnicalsVi (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoVortexIndicator> localVarResponse = GetCryptoPriceTechnicalsViWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Vortex Indicator Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoVortexIndicator</returns>
+        public ApiResponse< ApiResponseCryptoVortexIndicator > GetCryptoPriceTechnicalsViWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/vi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsVi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoVortexIndicator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoVortexIndicator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoVortexIndicator)));
+        }
+
+        /// <summary>
+        /// Vortex Indicator Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoVortexIndicator</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoVortexIndicator> GetCryptoPriceTechnicalsViAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoVortexIndicator> localVarResponse = await GetCryptoPriceTechnicalsViAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Vortex Indicator Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to calculate Vortex Indicator. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoVortexIndicator)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoVortexIndicator>> GetCryptoPriceTechnicalsViAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/vi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsVi", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoVortexIndicator>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoVortexIndicator) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoVortexIndicator)));
+        }
+
+        /// <summary>
+        /// Volume-price Trend Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoVolumePriceTrend</returns>
+        public ApiResponseCryptoVolumePriceTrend GetCryptoPriceTechnicalsVpt (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoVolumePriceTrend> localVarResponse = GetCryptoPriceTechnicalsVptWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Volume-price Trend Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoVolumePriceTrend</returns>
+        public ApiResponse< ApiResponseCryptoVolumePriceTrend > GetCryptoPriceTechnicalsVptWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/vpt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsVpt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoVolumePriceTrend>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoVolumePriceTrend) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoVolumePriceTrend)));
+        }
+
+        /// <summary>
+        /// Volume-price Trend Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoVolumePriceTrend</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoVolumePriceTrend> GetCryptoPriceTechnicalsVptAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoVolumePriceTrend> localVarResponse = await GetCryptoPriceTechnicalsVptAsyncWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Volume-price Trend Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoVolumePriceTrend)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoVolumePriceTrend>> GetCryptoPriceTechnicalsVptAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/vpt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsVpt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoVolumePriceTrend>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoVolumePriceTrend) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoVolumePriceTrend)));
+        }
+
+        /// <summary>
+        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoVolumeWeightedAveragePrice</returns>
+        public ApiResponseCryptoVolumeWeightedAveragePrice GetCryptoPriceTechnicalsVwap (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoVolumeWeightedAveragePrice> localVarResponse = GetCryptoPriceTechnicalsVwapWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoVolumeWeightedAveragePrice</returns>
+        public ApiResponse< ApiResponseCryptoVolumeWeightedAveragePrice > GetCryptoPriceTechnicalsVwapWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/vwap";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsVwap", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoVolumeWeightedAveragePrice>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoVolumeWeightedAveragePrice) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoVolumeWeightedAveragePrice)));
+        }
+
+        /// <summary>
+        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoVolumeWeightedAveragePrice</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoVolumeWeightedAveragePrice> GetCryptoPriceTechnicalsVwapAsync (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoVolumeWeightedAveragePrice> localVarResponse = await GetCryptoPriceTechnicalsVwapAsyncWithHttpInfo(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoVolumeWeightedAveragePrice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoVolumeWeightedAveragePrice>> GetCryptoPriceTechnicalsVwapAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/vwap";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsVwap", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoVolumeWeightedAveragePrice>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoVolumeWeightedAveragePrice) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoVolumeWeightedAveragePrice)));
+        }
+
+        /// <summary>
+        /// Williams %R Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCryptoWilliamsR</returns>
+        public ApiResponseCryptoWilliamsR GetCryptoPriceTechnicalsWr (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoWilliamsR> localVarResponse = GetCryptoPriceTechnicalsWrWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Williams %R Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCryptoWilliamsR</returns>
+        public ApiResponse< ApiResponseCryptoWilliamsR > GetCryptoPriceTechnicalsWrWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/wr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsWr", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoWilliamsR>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoWilliamsR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoWilliamsR)));
+        }
+
+        /// <summary>
+        /// Williams %R Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCryptoWilliamsR</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCryptoWilliamsR> GetCryptoPriceTechnicalsWrAsync (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCryptoWilliamsR> localVarResponse = await GetCryptoPriceTechnicalsWrAsyncWithHttpInfo(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Williams %R Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Return technicals for the given Crypto Currency Pair. (optional)</param>
+        /// <param name="exchange">Return technicals for a Crypto Currency on the given Crypto Exchange. (optional)</param>
+        /// <param name="currency">Return technicals for the given Crypto Currency. (optional)</param>
+        /// <param name="period">The number of observations, per period, to look-back when calculating Williams %R. (optional, default to 14)</param>
+        /// <param name="timeframe">The time interval for the prices when calculating technicals. (optional, default to d1)</param>
+        /// <param name="timezone">Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional, default to UTC)</param>
+        /// <param name="startDate">Return technicals on or after this date. (optional)</param>
+        /// <param name="startTime">Return technicals at or after this time (24-hour). (optional)</param>
+        /// <param name="endDate">Return technicals on or before this date. (optional)</param>
+        /// <param name="endTime">Return technicals at or before this time (24-hour). (optional)</param>
+        /// <param name="pageSize">An integer greater than or equal to 1 for specifying the number of results on each page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCryptoWilliamsR)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCryptoWilliamsR>> GetCryptoPriceTechnicalsWrAsyncWithHttpInfo (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/crypto/prices/technicals/wr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+            if (exchange != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange", exchange)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (period != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "period", period)); // query parameter
+            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCryptoPriceTechnicalsWr", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCryptoWilliamsR>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCryptoWilliamsR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCryptoWilliamsR)));
         }
 
         /// <summary>

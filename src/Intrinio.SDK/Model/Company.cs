@@ -57,7 +57,11 @@ namespace Intrinio.SDK.Model
         /// <param name="IndustryGroup">The company&#39;s operating industry group.</param>
         /// <param name="Template">The financial statement template used by Intrinio to standardize the as reported data.</param>
         /// <param name="StandardizedActive">If true, the company has standardized and as reported fundamental data via the Intrinio API; if false, the company has as-reported data only.</param>
-        public Company(string Id = default(string), string Ticker = default(string), string Name = default(string), string Lei = default(string), string LegalName = default(string), string StockExchange = default(string), string Sic = default(string), string ShortDescription = default(string), string LongDescription = default(string), string Ceo = default(string), string CompanyUrl = default(string), string BusinessAddress = default(string), string MailingAddress = default(string), string BusinessPhoneNo = default(string), string HqAddress1 = default(string), string HqAddress2 = default(string), string HqAddressCity = default(string), string HqAddressPostalCode = default(string), string EntityLegalForm = default(string), string Cik = default(string), DateTime? LatestFilingDate = default(DateTime?), string HqState = default(string), string HqCountry = default(string), string IncState = default(string), string IncCountry = default(string), int? Employees = default(int?), string EntityStatus = default(string), string Sector = default(string), string IndustryCategory = default(string), string IndustryGroup = default(string), string Template = default(string), bool? StandardizedActive = default(bool?))
+        /// <param name="FirstFundamentalDate">The period end date of the company&#39;s first reported fundamental.</param>
+        /// <param name="LastFundamentalDate">The period end date of the company&#39;s last reported fundamental.</param>
+        /// <param name="FirstStockPriceDate">The date of the company&#39;s first stock price, based on the company&#39;s primary security, which is typically traded on US exchages.</param>
+        /// <param name="LastStockPriceDate">The date of the company&#39;s last stock price, based on the company&#39;s primary security, which is typically traded on US exchages.</param>
+        public Company(string Id = default(string), string Ticker = default(string), string Name = default(string), string Lei = default(string), string LegalName = default(string), string StockExchange = default(string), string Sic = default(string), string ShortDescription = default(string), string LongDescription = default(string), string Ceo = default(string), string CompanyUrl = default(string), string BusinessAddress = default(string), string MailingAddress = default(string), string BusinessPhoneNo = default(string), string HqAddress1 = default(string), string HqAddress2 = default(string), string HqAddressCity = default(string), string HqAddressPostalCode = default(string), string EntityLegalForm = default(string), string Cik = default(string), DateTime? LatestFilingDate = default(DateTime?), string HqState = default(string), string HqCountry = default(string), string IncState = default(string), string IncCountry = default(string), int? Employees = default(int?), string EntityStatus = default(string), string Sector = default(string), string IndustryCategory = default(string), string IndustryGroup = default(string), string Template = default(string), bool? StandardizedActive = default(bool?), DateTime? FirstFundamentalDate = default(DateTime?), DateTime? LastFundamentalDate = default(DateTime?), DateTime? FirstStockPriceDate = default(DateTime?), DateTime? LastStockPriceDate = default(DateTime?))
         {
             this.Id = Id;
             this.Ticker = Ticker;
@@ -91,6 +95,10 @@ namespace Intrinio.SDK.Model
             this.IndustryGroup = IndustryGroup;
             this.Template = Template;
             this.StandardizedActive = StandardizedActive;
+            this.FirstFundamentalDate = FirstFundamentalDate;
+            this.LastFundamentalDate = LastFundamentalDate;
+            this.FirstStockPriceDate = FirstStockPriceDate;
+            this.LastStockPriceDate = LastStockPriceDate;
         }
         
         /// <summary>
@@ -318,6 +326,38 @@ namespace Intrinio.SDK.Model
         public bool? StandardizedActive { get; set; }
 
         /// <summary>
+        /// The period end date of the company&#39;s first reported fundamental
+        /// </summary>
+        /// <value>The period end date of the company&#39;s first reported fundamental</value>
+        [DataMember(Name="first_fundamental_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? FirstFundamentalDate { get; set; }
+
+        /// <summary>
+        /// The period end date of the company&#39;s last reported fundamental
+        /// </summary>
+        /// <value>The period end date of the company&#39;s last reported fundamental</value>
+        [DataMember(Name="last_fundamental_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? LastFundamentalDate { get; set; }
+
+        /// <summary>
+        /// The date of the company&#39;s first stock price, based on the company&#39;s primary security, which is typically traded on US exchages
+        /// </summary>
+        /// <value>The date of the company&#39;s first stock price, based on the company&#39;s primary security, which is typically traded on US exchages</value>
+        [DataMember(Name="first_stock_price_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? FirstStockPriceDate { get; set; }
+
+        /// <summary>
+        /// The date of the company&#39;s last stock price, based on the company&#39;s primary security, which is typically traded on US exchages
+        /// </summary>
+        /// <value>The date of the company&#39;s last stock price, based on the company&#39;s primary security, which is typically traded on US exchages</value>
+        [DataMember(Name="last_stock_price_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? LastStockPriceDate { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -357,6 +397,10 @@ namespace Intrinio.SDK.Model
             sb.Append("  IndustryGroup: ").Append(IndustryGroup).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  StandardizedActive: ").Append(StandardizedActive).Append("\n");
+            sb.Append("  FirstFundamentalDate: ").Append(FirstFundamentalDate).Append("\n");
+            sb.Append("  LastFundamentalDate: ").Append(LastFundamentalDate).Append("\n");
+            sb.Append("  FirstStockPriceDate: ").Append(FirstStockPriceDate).Append("\n");
+            sb.Append("  LastStockPriceDate: ").Append(LastStockPriceDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -550,6 +594,26 @@ namespace Intrinio.SDK.Model
                     this.StandardizedActive == input.StandardizedActive ||
                     (this.StandardizedActive != null &&
                     this.StandardizedActive.Equals(input.StandardizedActive))
+                ) && 
+                (
+                    this.FirstFundamentalDate == input.FirstFundamentalDate ||
+                    (this.FirstFundamentalDate != null &&
+                    this.FirstFundamentalDate.Equals(input.FirstFundamentalDate))
+                ) && 
+                (
+                    this.LastFundamentalDate == input.LastFundamentalDate ||
+                    (this.LastFundamentalDate != null &&
+                    this.LastFundamentalDate.Equals(input.LastFundamentalDate))
+                ) && 
+                (
+                    this.FirstStockPriceDate == input.FirstStockPriceDate ||
+                    (this.FirstStockPriceDate != null &&
+                    this.FirstStockPriceDate.Equals(input.FirstStockPriceDate))
+                ) && 
+                (
+                    this.LastStockPriceDate == input.LastStockPriceDate ||
+                    (this.LastStockPriceDate != null &&
+                    this.LastStockPriceDate.Equals(input.LastStockPriceDate))
                 );
         }
 
@@ -626,6 +690,14 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Template.GetHashCode();
                 if (this.StandardizedActive != null)
                     hashCode = hashCode * 59 + this.StandardizedActive.GetHashCode();
+                if (this.FirstFundamentalDate != null)
+                    hashCode = hashCode * 59 + this.FirstFundamentalDate.GetHashCode();
+                if (this.LastFundamentalDate != null)
+                    hashCode = hashCode * 59 + this.LastFundamentalDate.GetHashCode();
+                if (this.FirstStockPriceDate != null)
+                    hashCode = hashCode * 59 + this.FirstStockPriceDate.GetHashCode();
+                if (this.LastStockPriceDate != null)
+                    hashCode = hashCode * 59 + this.LastStockPriceDate.GetHashCode();
                 return hashCode;
             }
         }

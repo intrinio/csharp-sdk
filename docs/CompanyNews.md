@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.CompanyNews
-## Properties
+## Intrinio.SDK.Model.CompanyNews
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,6 +9,4 @@ Name | Type | Description | Notes
 **Url** | **string** | The url of the news article | [optional] 
 **Summary** | **string** | A summary of the news article | [optional] 
 **Company** | [**CompanySummary**](CompanySummary.md) | The Company that the Fundamental was belongs to | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

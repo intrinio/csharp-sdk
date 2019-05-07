@@ -11,20 +11,22 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetOptions_v2)
 
 [//]: # (ENDPOINT:/options/{symbol})
 
-[//]: # (DOC_LINK:OptionsApi.md#getoptions)
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptions)
 
 <a name="getoptions"></a>
-# **GetOptions**
+## **GetOptions**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptions_v2)
 
 > ApiResponseOptions GetOptions (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null)
 
-Options
+#### Options
 
 Returns the master list of option contracts for a given symbol.
 
@@ -89,6 +91,7 @@ Name | Type | Description  | Notes
  **expirationBefore** | **string**| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -97,20 +100,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetOptionsChain_v2)
 
 [//]: # (ENDPOINT:/options/chain/{symbol}/{expiration})
 
-[//]: # (DOC_LINK:OptionsApi.md#getoptionschain)
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionschain)
 
 <a name="getoptionschain"></a>
-# **GetOptionsChain**
+## **GetOptionsChain**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsChain_v2)
 
 > ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
 
-Options Chain
+#### Options Chain
 
 Returns all options contracts and their prices for the given symbol and expiration date.
 
@@ -171,6 +176,7 @@ Name | Type | Description  | Notes
  **strikeLessThan** | **decimal?**| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional] 
  **moneyness** | **string**| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 
@@ -179,20 +185,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetOptionsExpirations_v2)
 
 [//]: # (ENDPOINT:/options/expirations/{symbol})
 
-[//]: # (DOC_LINK:OptionsApi.md#getoptionsexpirations)
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsexpirations)
 
 <a name="getoptionsexpirations"></a>
-# **GetOptionsExpirations**
+## **GetOptionsExpirations**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsExpirations_v2)
 
 > ApiResponseOptionsExpirations GetOptionsExpirations (string symbol, string after = null, string before = null)
 
-Options Expirations
+#### Options Expirations
 
 Returns all option contract expiration dates for a given symbol.
 
@@ -243,6 +251,7 @@ Name | Type | Description  | Notes
  **symbol** | **string**| The option symbol, corresponding to the underlying security. | 
  **after** | **string**| Return option contract expiration dates after this date. | [optional] 
  **before** | **string**| Return option contract expiration dates before this date. | [optional] 
+<br/>
 
 ### Return type
 
@@ -251,20 +260,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetOptionsPrices_v2)
 
 [//]: # (ENDPOINT:/options/prices/{identifier})
 
-[//]: # (DOC_LINK:OptionsApi.md#getoptionsprices)
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsprices)
 
 <a name="getoptionsprices"></a>
-# **GetOptionsPrices**
+## **GetOptionsPrices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsPrices_v2)
 
 > ApiResponseOptionPrices GetOptionsPrices (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Option Prices
+#### Option Prices
 
 Returns all option prices for a given option contract identifier.
 
@@ -319,6 +330,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return option contract prices on or before this date. | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 

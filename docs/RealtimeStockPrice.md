@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.RealtimeStockPrice
-## Properties
+## Intrinio.SDK.Model.RealtimeStockPrice
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -17,6 +17,4 @@ Name | Type | Description | Notes
 **UpdatedOn** | **DateTime?** | The date and time when the data was last updated. | [optional] 
 **Source** | **string** | The source of the data. | [optional] 
 **Security** | [**RealtimeStockPriceSecurity**](RealtimeStockPriceSecurity.md) |  | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -55,20 +55,22 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetAllSecurities_v2)
 
 [//]: # (ENDPOINT:/securities)
 
-[//]: # (DOC_LINK:SecurityApi.md#getallsecurities)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getallsecurities)
 
 <a name="getallsecurities"></a>
-# **GetAllSecurities**
+## **GetAllSecurities**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllSecurities_v2)
 
 > ApiResponseSecurities GetAllSecurities (int? pageSize = null, string nextPage = null)
 
-All Securities
+#### All Securities
 
 Returns all Securities to which you have access.
 
@@ -117,6 +119,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -125,20 +128,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityById_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier})
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritybyid)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritybyid)
 
 <a name="getsecuritybyid"></a>
-# **GetSecurityById**
+## **GetSecurityById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityById_v2)
 
 > Security GetSecurityById (string identifier)
 
-Lookup Security
+#### Lookup Security
 
 Returns the Security with the given `identifier`
 
@@ -185,6 +190,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+<br/>
 
 ### Return type
 
@@ -193,20 +199,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityDataPointNumber_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/number)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritydatapointnumber)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritydatapointnumber)
 
 <a name="getsecuritydatapointnumber"></a>
-# **GetSecurityDataPointNumber**
+## **GetSecurityDataPointNumber**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityDataPointNumber_v2)
 
 > decimal? GetSecurityDataPointNumber (string identifier, string tag)
 
-Data Point (Number) for Security
+#### Data Point (Number) for Security
 
 Returns a numeric value for the given `tag` for the Security with the given `identifier`
 
@@ -255,6 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+<br/>
 
 ### Return type
 
@@ -263,20 +272,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityDataPointText_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/text)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritydatapointtext)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritydatapointtext)
 
 <a name="getsecuritydatapointtext"></a>
-# **GetSecurityDataPointText**
+## **GetSecurityDataPointText**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityDataPointText_v2)
 
 > string GetSecurityDataPointText (string identifier, string tag)
 
-Data Point (Text) for Security
+#### Data Point (Text) for Security
 
 Returns a text value for the given `tag` for the Security with the given `identifier`
 
@@ -325,6 +336,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **tag** | **string**| An Intrinio data tag ID or code-name | 
+<br/>
 
 ### Return type
 
@@ -333,20 +345,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityHistoricalData_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/historical_data/{tag})
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecurityhistoricaldata)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityhistoricaldata)
 
 <a name="getsecurityhistoricaldata"></a>
-# **GetSecurityHistoricalData**
+## **GetSecurityHistoricalData**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityHistoricalData_v2)
 
 > ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
-Historical Data for Security
+#### Historical Data for Security
 
 Returns historical values for the given `tag` and the Security with the given `identifier`
 
@@ -409,6 +423,7 @@ Name | Type | Description  | Notes
  **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -417,20 +432,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityIntradayPrices_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/intraday)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecurityintradayprices)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityintradayprices)
 
 <a name="getsecurityintradayprices"></a>
-# **GetSecurityIntradayPrices**
+## **GetSecurityIntradayPrices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityIntradayPrices_v2)
 
 > ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
 
-Intraday Stock Prices for Security
+#### Intraday Stock Prices for Security
 
 Return intraday stock prices for the Security with the given `identifier`
 
@@ -487,6 +504,7 @@ Name | Type | Description  | Notes
  **startTime** | **string**| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional] 
  **endDate** | **DateTime?**| Return intraday prices stopping at the specified date | [optional] 
  **endTime** | **string**| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional] 
+<br/>
 
 ### Return type
 
@@ -495,20 +513,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityLatestDividendRecord_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/dividends/latest)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritylatestdividendrecord)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritylatestdividendrecord)
 
 <a name="getsecuritylatestdividendrecord"></a>
-# **GetSecurityLatestDividendRecord**
+## **GetSecurityLatestDividendRecord**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityLatestDividendRecord_v2)
 
 > DividendRecord GetSecurityLatestDividendRecord (string identifier)
 
-Lastest Dividend Record for Security
+#### Lastest Dividend Record for Security
 
 Returns the latest available dividend information for the Security with the given `identifier`
 
@@ -555,6 +575,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+<br/>
 
 ### Return type
 
@@ -563,20 +584,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityLatestEarningsRecord_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/earnings/latest)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritylatestearningsrecord)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritylatestearningsrecord)
 
 <a name="getsecuritylatestearningsrecord"></a>
-# **GetSecurityLatestEarningsRecord**
+## **GetSecurityLatestEarningsRecord**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityLatestEarningsRecord_v2)
 
 > EarningsRecord GetSecurityLatestEarningsRecord (string identifier)
 
-Lastest Earnings Record for Security
+#### Lastest Earnings Record for Security
 
 Returns latest available earnings information for the Security with the given `identifier`
 
@@ -623,6 +646,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+<br/>
 
 ### Return type
 
@@ -631,20 +655,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsAdi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsadi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsadi)
 
 <a name="getsecuritypricetechnicalsadi"></a>
-# **GetSecurityPriceTechnicalsAdi**
+## **GetSecurityPriceTechnicalsAdi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdi_v2)
 
 > ApiResponseSecurityAccumulationDistributionIndex GetSecurityPriceTechnicalsAdi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Accumulation/Distribution Index
+#### Accumulation/Distribution Index
 
 Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given `identifier`
 
@@ -699,6 +725,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -707,20 +734,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsAdtv_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adtv)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsadtv)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsadtv)
 
 <a name="getsecuritypricetechnicalsadtv"></a>
-# **GetSecurityPriceTechnicalsAdtv**
+## **GetSecurityPriceTechnicalsAdtv**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdtv_v2)
 
 > ApiResponseSecurityAverageDailyTradingVolume GetSecurityPriceTechnicalsAdtv (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Average Daily Trading Volume
+#### Average Daily Trading Volume
 
 Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given `identifier`
 
@@ -777,6 +806,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -785,20 +815,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsAdx_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adx)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsadx)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsadx)
 
 <a name="getsecuritypricetechnicalsadx"></a>
-# **GetSecurityPriceTechnicalsAdx**
+## **GetSecurityPriceTechnicalsAdx**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdx_v2)
 
 > ApiResponseSecurityAverageDirectionalIndex GetSecurityPriceTechnicalsAdx (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Average Directional Index
+#### Average Directional Index
 
 Returns the Average Directional Index values of Stock Prices for the Security with the given `identifier`
 
@@ -855,6 +887,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -863,20 +896,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsAo_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ao)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsao)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsao)
 
 <a name="getsecuritypricetechnicalsao"></a>
-# **GetSecurityPriceTechnicalsAo**
+## **GetSecurityPriceTechnicalsAo**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAo_v2)
 
 > ApiResponseSecurityAwesomeOscillator GetSecurityPriceTechnicalsAo (string identifier, int? shortPeriod = null, int? longPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Awesome Oscillator
+#### Awesome Oscillator
 
 Returns the Awesome Oscillator values of Stock Prices for the Security with the given `identifier`
 
@@ -935,6 +970,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -943,20 +979,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsAtr_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/atr)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsatr)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsatr)
 
 <a name="getsecuritypricetechnicalsatr"></a>
-# **GetSecurityPriceTechnicalsAtr**
+## **GetSecurityPriceTechnicalsAtr**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAtr_v2)
 
 > ApiResponseSecurityAverageTrueRange GetSecurityPriceTechnicalsAtr (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Average True Range
+#### Average True Range
 
 Returns the Average True Range values of Stock Prices for the Security with the given `identifier`
 
@@ -1013,6 +1051,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1021,20 +1060,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsBb_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/bb)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsbb)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsbb)
 
 <a name="getsecuritypricetechnicalsbb"></a>
-# **GetSecurityPriceTechnicalsBb**
+## **GetSecurityPriceTechnicalsBb**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsBb_v2)
 
 > ApiResponseSecurityBollingerBands GetSecurityPriceTechnicalsBb (string identifier, int? period = null, float? standardDeviations = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Bollinger Bands
+#### Bollinger Bands
 
 Returns the Bollinger Bands values of Stock Prices for the Security with the given `identifier`
 
@@ -1095,6 +1136,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1103,20 +1145,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsCci_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cci)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalscci)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalscci)
 
 <a name="getsecuritypricetechnicalscci"></a>
-# **GetSecurityPriceTechnicalsCci**
+## **GetSecurityPriceTechnicalsCci**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCci_v2)
 
 > ApiResponseSecurityCommodityChannelIndex GetSecurityPriceTechnicalsCci (string identifier, int? period = null, float? constant = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Commodity Channel Index
+#### Commodity Channel Index
 
 Returns the Commodity Channel Index values of Stock Prices for the Security with the given `identifier`
 
@@ -1175,6 +1219,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1183,20 +1228,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsCmf_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cmf)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalscmf)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalscmf)
 
 <a name="getsecuritypricetechnicalscmf"></a>
-# **GetSecurityPriceTechnicalsCmf**
+## **GetSecurityPriceTechnicalsCmf**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCmf_v2)
 
 > ApiResponseSecurityChaikinMoneyFlow GetSecurityPriceTechnicalsCmf (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Chaikin Money Flow
+#### Chaikin Money Flow
 
 Returns the Chaikin Money Flow values of Stock Prices for the Security with the given `identifier`
 
@@ -1253,6 +1300,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1261,20 +1309,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsDc_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dc)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsdc)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsdc)
 
 <a name="getsecuritypricetechnicalsdc"></a>
-# **GetSecurityPriceTechnicalsDc**
+## **GetSecurityPriceTechnicalsDc**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDc_v2)
 
 > ApiResponseSecurityDonchianChannel GetSecurityPriceTechnicalsDc (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Donchian Channel
+#### Donchian Channel
 
 Returns the Donchian Channel values of Stock Prices for the Security with the given `identifier`
 
@@ -1333,6 +1383,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1341,20 +1392,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsDpo_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dpo)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsdpo)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsdpo)
 
 <a name="getsecuritypricetechnicalsdpo"></a>
-# **GetSecurityPriceTechnicalsDpo**
+## **GetSecurityPriceTechnicalsDpo**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDpo_v2)
 
 > ApiResponseSecurityDetrendedPriceOscillator GetSecurityPriceTechnicalsDpo (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Detrended Price Oscillator
+#### Detrended Price Oscillator
 
 Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given `identifier`
 
@@ -1413,6 +1466,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1421,20 +1475,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsEom_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/eom)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalseom)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalseom)
 
 <a name="getsecuritypricetechnicalseom"></a>
-# **GetSecurityPriceTechnicalsEom**
+## **GetSecurityPriceTechnicalsEom**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsEom_v2)
 
 > ApiResponseSecurityEaseOfMovement GetSecurityPriceTechnicalsEom (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Ease of Movement
+#### Ease of Movement
 
 Returns the Ease of Movement values of Stock Prices for the Security with the given `identifier`
 
@@ -1491,6 +1547,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1499,20 +1556,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsFi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/fi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsfi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsfi)
 
 <a name="getsecuritypricetechnicalsfi"></a>
-# **GetSecurityPriceTechnicalsFi**
+## **GetSecurityPriceTechnicalsFi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsFi_v2)
 
 > ApiResponseSecurityForceIndex GetSecurityPriceTechnicalsFi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Force Index
+#### Force Index
 
 Returns the Force Index values of Stock Prices for the Security with the given `identifier`
 
@@ -1567,6 +1626,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1575,20 +1635,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsIchimoku_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ichimoku)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsichimoku)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsichimoku)
 
 <a name="getsecuritypricetechnicalsichimoku"></a>
-# **GetSecurityPriceTechnicalsIchimoku**
+## **GetSecurityPriceTechnicalsIchimoku**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsIchimoku_v2)
 
 > ApiResponseSecurityIchimokuKinkoHyo GetSecurityPriceTechnicalsIchimoku (string identifier, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Ichimoku Kinko Hyo
+#### Ichimoku Kinko Hyo
 
 Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given `identifier`
 
@@ -1649,6 +1711,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1657,20 +1720,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsKc_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kc)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalskc)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalskc)
 
 <a name="getsecuritypricetechnicalskc"></a>
-# **GetSecurityPriceTechnicalsKc**
+## **GetSecurityPriceTechnicalsKc**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKc_v2)
 
 > ApiResponseSecurityKeltnerChannel GetSecurityPriceTechnicalsKc (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Keltner Channel
+#### Keltner Channel
 
 Returns the Keltner Channel values of Stock Prices for the Security with the given `identifier`
 
@@ -1727,6 +1792,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1735,20 +1801,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsKst_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kst)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalskst)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalskst)
 
 <a name="getsecuritypricetechnicalskst"></a>
-# **GetSecurityPriceTechnicalsKst**
+## **GetSecurityPriceTechnicalsKst**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKst_v2)
 
 > ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Know Sure Thing
+#### Know Sure Thing
 
 Returns the Know Sure Thing values of Stock Prices for the Security with the given `identifier`
 
@@ -1821,6 +1889,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1829,20 +1898,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsMacd_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/macd)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsmacd)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsmacd)
 
 <a name="getsecuritypricetechnicalsmacd"></a>
-# **GetSecurityPriceTechnicalsMacd**
+## **GetSecurityPriceTechnicalsMacd**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMacd_v2)
 
 > ApiResponseSecurityMovingAverageConvergenceDivergence GetSecurityPriceTechnicalsMacd (string identifier, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Moving Average Convergence Divergence
+#### Moving Average Convergence Divergence
 
 Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given `identifier`
 
@@ -1905,6 +1976,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1913,20 +1985,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsMfi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mfi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsmfi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsmfi)
 
 <a name="getsecuritypricetechnicalsmfi"></a>
-# **GetSecurityPriceTechnicalsMfi**
+## **GetSecurityPriceTechnicalsMfi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMfi_v2)
 
 > ApiResponseSecurityMoneyFlowIndex GetSecurityPriceTechnicalsMfi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Money Flow Index
+#### Money Flow Index
 
 Returns the Money Flow Index values of Stock Prices for the Security with the given `identifier`
 
@@ -1983,6 +2057,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -1991,20 +2066,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsMi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsmi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsmi)
 
 <a name="getsecuritypricetechnicalsmi"></a>
-# **GetSecurityPriceTechnicalsMi**
+## **GetSecurityPriceTechnicalsMi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMi_v2)
 
 > ApiResponseSecurityMassIndex GetSecurityPriceTechnicalsMi (string identifier, int? emaPeriod = null, int? sumPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Mass Index
+#### Mass Index
 
 Returns the Mass Index values of Stock Prices for the Security with the given `identifier`
 
@@ -2063,6 +2140,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2071,20 +2149,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsNvi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/nvi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsnvi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsnvi)
 
 <a name="getsecuritypricetechnicalsnvi"></a>
-# **GetSecurityPriceTechnicalsNvi**
+## **GetSecurityPriceTechnicalsNvi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsNvi_v2)
 
 > ApiResponseSecurityNegativeVolumeIndex GetSecurityPriceTechnicalsNvi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Negative Volume Index
+#### Negative Volume Index
 
 Returns the Negative Volume Index values of Stock Prices for the Security with the given `identifier`
 
@@ -2139,6 +2219,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2147,20 +2228,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsObv_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsobv)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsobv)
 
 <a name="getsecuritypricetechnicalsobv"></a>
-# **GetSecurityPriceTechnicalsObv**
+## **GetSecurityPriceTechnicalsObv**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObv_v2)
 
 > ApiResponseSecurityOnBalanceVolume GetSecurityPriceTechnicalsObv (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-On-balance Volume
+#### On-balance Volume
 
 Returns the On-balance Volume values of Stock Prices for the Security with the given `identifier`
 
@@ -2215,6 +2298,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2223,20 +2307,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsObvMean_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv_mean)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsobvmean)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsobvmean)
 
 <a name="getsecuritypricetechnicalsobvmean"></a>
-# **GetSecurityPriceTechnicalsObvMean**
+## **GetSecurityPriceTechnicalsObvMean**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObvMean_v2)
 
 > ApiResponseSecurityOnBalanceVolumeMean GetSecurityPriceTechnicalsObvMean (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-On-balance Volume Mean
+#### On-balance Volume Mean
 
 Returns the On-balance Volume Mean values of Stock Prices for the Security with the given `identifier`
 
@@ -2293,6 +2379,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2301,20 +2388,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsRsi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/rsi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsrsi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsrsi)
 
 <a name="getsecuritypricetechnicalsrsi"></a>
-# **GetSecurityPriceTechnicalsRsi**
+## **GetSecurityPriceTechnicalsRsi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsRsi_v2)
 
 > ApiResponseSecurityRelativeStrengthIndex GetSecurityPriceTechnicalsRsi (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Relative Strength Index
+#### Relative Strength Index
 
 Returns the Relative Strength Index values of Stock Prices for the Security with the given `identifier`
 
@@ -2373,6 +2462,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2381,20 +2471,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsSma_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sma)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalssma)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalssma)
 
 <a name="getsecuritypricetechnicalssma"></a>
-# **GetSecurityPriceTechnicalsSma**
+## **GetSecurityPriceTechnicalsSma**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSma_v2)
 
 > ApiResponseSecuritySimpleMovingAverage GetSecurityPriceTechnicalsSma (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Simple Moving Average
+#### Simple Moving Average
 
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
@@ -2453,6 +2545,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2461,20 +2554,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsSr_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sr)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalssr)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalssr)
 
 <a name="getsecuritypricetechnicalssr"></a>
-# **GetSecurityPriceTechnicalsSr**
+## **GetSecurityPriceTechnicalsSr**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSr_v2)
 
 > ApiResponseSecurityStochasticOscillator GetSecurityPriceTechnicalsSr (string identifier, int? period = null, int? signalPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Stochastic Oscillator
+#### Stochastic Oscillator
 
 Returns the Stochastic Oscillator values of Stock Prices for the Security with the given `identifier`
 
@@ -2533,6 +2628,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2541,20 +2637,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsTrix_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/trix)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalstrix)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalstrix)
 
 <a name="getsecuritypricetechnicalstrix"></a>
-# **GetSecurityPriceTechnicalsTrix**
+## **GetSecurityPriceTechnicalsTrix**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTrix_v2)
 
 > ApiResponseSecurityTripleExponentialAverage GetSecurityPriceTechnicalsTrix (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Triple Exponential Average
+#### Triple Exponential Average
 
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
@@ -2611,6 +2709,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2619,20 +2718,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsTsi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/tsi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalstsi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalstsi)
 
 <a name="getsecuritypricetechnicalstsi"></a>
-# **GetSecurityPriceTechnicalsTsi**
+## **GetSecurityPriceTechnicalsTsi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTsi_v2)
 
 > ApiResponseSecurityTrueStrengthIndex GetSecurityPriceTechnicalsTsi (string identifier, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-True Strength Index
+#### True Strength Index
 
 Returns the True Strength Index values of Stock Prices for the Security with the given `identifier`
 
@@ -2693,6 +2794,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2701,20 +2803,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsUo_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/uo)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsuo)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsuo)
 
 <a name="getsecuritypricetechnicalsuo"></a>
-# **GetSecurityPriceTechnicalsUo**
+## **GetSecurityPriceTechnicalsUo**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsUo_v2)
 
 > ApiResponseSecurityUltimateOscillator GetSecurityPriceTechnicalsUo (string identifier, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Ultimate Oscillator
+#### Ultimate Oscillator
 
 Returns the Ultimate Oscillator values of Stock Prices for the Security with the given `identifier`
 
@@ -2781,6 +2885,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2789,20 +2894,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsVi_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vi)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsvi)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsvi)
 
 <a name="getsecuritypricetechnicalsvi"></a>
-# **GetSecurityPriceTechnicalsVi**
+## **GetSecurityPriceTechnicalsVi**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVi_v2)
 
 > ApiResponseSecurityVortexIndicator GetSecurityPriceTechnicalsVi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Vortex Indicator
+#### Vortex Indicator
 
 Returns the Vortex Indicator values of Stock Prices for the Security with the given `identifier`
 
@@ -2859,6 +2966,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2867,20 +2975,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsVpt_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vpt)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsvpt)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsvpt)
 
 <a name="getsecuritypricetechnicalsvpt"></a>
-# **GetSecurityPriceTechnicalsVpt**
+## **GetSecurityPriceTechnicalsVpt**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVpt_v2)
 
 > ApiResponseSecurityVolumePriceTrend GetSecurityPriceTechnicalsVpt (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Volume-price Trend
+#### Volume-price Trend
 
 Returns the Volume-price Trend values of Stock Prices for the Security with the given `identifier`
 
@@ -2935,6 +3045,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -2943,20 +3054,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsVwap_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vwap)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalsvwap)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsvwap)
 
 <a name="getsecuritypricetechnicalsvwap"></a>
-# **GetSecurityPriceTechnicalsVwap**
+## **GetSecurityPriceTechnicalsVwap**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVwap_v2)
 
 > ApiResponseSecurityVolumeWeightedAveragePrice GetSecurityPriceTechnicalsVwap (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-Volume Weighted Average Price
+#### Volume Weighted Average Price
 
 Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given `identifier`
 
@@ -3011,6 +3124,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -3019,20 +3133,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityPriceTechnicalsWr_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/wr)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritypricetechnicalswr)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalswr)
 
 <a name="getsecuritypricetechnicalswr"></a>
-# **GetSecurityPriceTechnicalsWr**
+## **GetSecurityPriceTechnicalsWr**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsWr_v2)
 
 > ApiResponseSecurityWilliamsR GetSecurityPriceTechnicalsWr (string identifier, int? period = null, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
 
-Williams %R
+#### Williams %R
 
 Returns the Williams %R values of Stock Prices for the Security with the given `identifier`
 
@@ -3089,6 +3205,7 @@ Name | Type | Description  | Notes
  **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
  **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -3097,20 +3214,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityRealtimePrice_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/realtime)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecurityrealtimeprice)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityrealtimeprice)
 
 <a name="getsecurityrealtimeprice"></a>
-# **GetSecurityRealtimePrice**
+## **GetSecurityRealtimePrice**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityRealtimePrice_v2)
 
 > RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null)
 
-Realtime Stock Price for Security
+#### Realtime Stock Price for Security
 
 Return the realtime stock price for the Security with the given `identifier`
 
@@ -3159,6 +3278,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **source** | **string**| Return the realtime price from the specified data source | [optional] 
+<br/>
 
 ### Return type
 
@@ -3167,20 +3287,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityStockPriceAdjustments_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritystockpriceadjustments)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritystockpriceadjustments)
 
 <a name="getsecuritystockpriceadjustments"></a>
-# **GetSecurityStockPriceAdjustments**
+## **GetSecurityStockPriceAdjustments**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityStockPriceAdjustments_v2)
 
 > ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
-Stock Price Adjustments by Security
+#### Stock Price Adjustments by Security
 
 Returns stock price adjustments for the Security with the given `identifier`
 
@@ -3235,6 +3357,7 @@ Name | Type | Description  | Notes
  **endDate** | **DateTime?**| Return price adjustments on or before the date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -3243,20 +3366,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityStockPrices_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/prices)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecuritystockprices)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritystockprices)
 
 <a name="getsecuritystockprices"></a>
-# **GetSecurityStockPrices**
+## **GetSecurityStockPrices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityStockPrices_v2)
 
 > ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null)
 
-Stock Prices by Security
+#### Stock Prices by Security
 
 Return end-of-day stock prices for the Security with the given `identifier`
 
@@ -3313,6 +3438,7 @@ Name | Type | Description  | Notes
  **frequency** | **string**| Return stock prices in the given frequency | [optional] [default to daily]
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -3321,20 +3447,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityZacksAnalystRatings_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecurityzacksanalystratings)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzacksanalystratings)
 
 <a name="getsecurityzacksanalystratings"></a>
-# **GetSecurityZacksAnalystRatings**
+## **GetSecurityZacksAnalystRatings**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksAnalystRatings_v2)
 
 > ApiResponseSecurityZacksAnalystRatings GetSecurityZacksAnalystRatings (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null)
 
-Zacks Analyst Ratings
+#### Zacks Analyst Ratings
 
 Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given `identifier`. Zack’s storied research team aggregates and validates the ratings from professional analysts.
 
@@ -3415,6 +3543,7 @@ Name | Type | Description  | Notes
  **totalGreater** | **int?**| Return only records with more than this many recommendations, regardless of type | [optional] 
  **totalLess** | **int?**| Return only records with fewer than this many recommendations, regardless of type | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 
@@ -3423,20 +3552,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityZacksAnalystRatingsSnapshot_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings/snapshot)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecurityzacksanalystratingssnapshot)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzacksanalystratingssnapshot)
 
 <a name="getsecurityzacksanalystratingssnapshot"></a>
-# **GetSecurityZacksAnalystRatingsSnapshot**
+## **GetSecurityZacksAnalystRatingsSnapshot**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksAnalystRatingsSnapshot_v2)
 
 > ApiResponseSecurityZacksAnalystRatingsSnapshot GetSecurityZacksAnalystRatingsSnapshot (string identifier, string date = null)
 
-Zacks Analyst Ratings Snapshot
+#### Zacks Analyst Ratings Snapshot
 
 Returns a snapshot of ratings data compared with previous timeframes for the Security with the given `identifier`. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
 
@@ -3485,6 +3616,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **date** | **string**| Lookup a historical snapshot on the given date | [optional] 
+<br/>
 
 ### Return type
 
@@ -3493,20 +3625,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityZacksEpsSurprises_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/zacks/eps_surprises)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecurityzacksepssurprises)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzacksepssurprises)
 
 <a name="getsecurityzacksepssurprises"></a>
-# **GetSecurityZacksEpsSurprises**
+## **GetSecurityZacksEpsSurprises**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksEpsSurprises_v2)
 
 > ApiResponseSecurityZacksEPSSurprises GetSecurityZacksEpsSurprises (string identifier, int? pageSize = null, string nextPage = null)
 
-Zacks EPS Surprises for Security
+#### Zacks EPS Surprises for Security
 
 Return Zacks EPS surprises for the Security with the given `identifier`.
 
@@ -3557,6 +3691,7 @@ Name | Type | Description  | Notes
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -3565,20 +3700,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetSecurityZacksSalesSurprises_v2)
 
 [//]: # (ENDPOINT:/securities/{identifier}/zacks/sales_surprises)
 
-[//]: # (DOC_LINK:SecurityApi.md#getsecurityzackssalessurprises)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzackssalessurprises)
 
 <a name="getsecurityzackssalessurprises"></a>
-# **GetSecurityZacksSalesSurprises**
+## **GetSecurityZacksSalesSurprises**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksSalesSurprises_v2)
 
 > ApiResponseSecurityZacksSalesSurprises GetSecurityZacksSalesSurprises (string identifier, int? pageSize = null, string nextPage = null)
 
-Zacks Sales Surprises for Security
+#### Zacks Sales Surprises for Security
 
 Return Zacks sales surprises for the Security with the given `identifier`.
 
@@ -3629,6 +3766,7 @@ Name | Type | Description  | Notes
  **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -3637,20 +3775,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:ScreenSecurities_v2)
 
 [//]: # (ENDPOINT:/securities/screen)
 
-[//]: # (DOC_LINK:SecurityApi.md#screensecurities)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#screensecurities)
 
 <a name="screensecurities"></a>
-# **ScreenSecurities**
+## **ScreenSecurities**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/ScreenSecurities_v2)
 
 > List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
 
-Screen Securities
+#### Screen Securities
 
 Screen Securities using complex logic
 
@@ -3705,6 +3845,7 @@ Name | Type | Description  | Notes
  **orderDirection** | **string**| Sort order to use with the order_column | [optional] [default to asc]
  **primaryOnly** | **bool?**| Return only primary securities | [optional] [default to false]
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 
@@ -3713,20 +3854,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:SearchSecurities_v2)
 
 [//]: # (ENDPOINT:/securities/search)
 
-[//]: # (DOC_LINK:SecurityApi.md#searchsecurities)
+[//]: # (DOCUMENT_LINK:SecurityApi.md#searchsecurities)
 
 <a name="searchsecurities"></a>
-# **SearchSecurities**
+## **SearchSecurities**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchSecurities_v2)
 
 > ApiResponseSecuritiesSearch SearchSecurities (string query, int? pageSize = null)
 
-Search Securities
+#### Search Securities
 
 Searches for Securities matching the text `query`
 
@@ -3775,6 +3918,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**|  | 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 

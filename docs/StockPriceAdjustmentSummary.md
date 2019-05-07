@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.StockPriceAdjustmentSummary
-## Properties
+## Intrinio.SDK.Model.StockPriceAdjustmentSummary
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,6 +8,4 @@ Name | Type | Description | Notes
 **Dividend** | **decimal?** | The dividend amount, if a dividend was paid. | [optional] 
 **DividendCurrency** | **string** | The currency of the dividend, if known. | [optional] 
 **SplitRatio** | **decimal?** | The ratio of the stock split, if a stock split occurred. | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

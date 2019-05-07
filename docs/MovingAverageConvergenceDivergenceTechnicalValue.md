@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.MovingAverageConvergenceDivergenceTechnicalValue
-## Properties
+## Intrinio.SDK.Model.MovingAverageConvergenceDivergenceTechnicalValue
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -7,6 +7,4 @@ Name | Type | Description | Notes
 **MacdHistogram** | **float?** | The histogram value of the Moving Average Convergence Divergence calculation | [optional] 
 **MacdLine** | **float?** | The line value of the Moving Average Convergence Divergence calculation | [optional] 
 **SignalLine** | **float?** | The signal line value of the Moving Average Convergence Divergence calculation | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

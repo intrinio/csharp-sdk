@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.DataTagSummary
-## Properties
+## Intrinio.SDK.Model.DataTagSummary
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -7,6 +7,4 @@ Name | Type | Description | Notes
 **Name** | **string** | The readable name of the Data Tag | [optional] 
 **Tag** | **string** | The code-name of the Data Tag | [optional] 
 **Unit** | **string** | The unit of the Data Tag | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.ZacksEPSSurprise
-## Properties
+## Intrinio.SDK.Model.ZacksEPSSurprise
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -20,6 +20,4 @@ Name | Type | Description | Notes
 **EpsCountEstimate** | **decimal?** | The pre-earnings release number of estimates by analysts | [optional] 
 **EpsStdDevEstimate** | **decimal?** | The pre-earnings release standard deviation of EPS estimates | [optional] 
 **Security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Zacks EPS Surprise | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

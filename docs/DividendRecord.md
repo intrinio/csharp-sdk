@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.DividendRecord
-## Properties
+## Intrinio.SDK.Model.DividendRecord
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -13,6 +13,4 @@ Name | Type | Description | Notes
 **ForwardYield** | **decimal?** | The forward dividend yield | [optional] 
 **ForwardRate** | **decimal?** | The forward dividend rate | [optional] 
 **Security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

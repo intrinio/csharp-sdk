@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.DataTag
-## Properties
+## Intrinio.SDK.Model.DataTag
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -13,6 +13,4 @@ Name | Type | Description | Notes
 **Balance** | **string** | Whether the Data Tag represents a credit or debit | [optional] 
 **Type** | **string** | The nature of the Data Tag, operating or nonoperating | [optional] 
 **Unit** | **string** | The unit of the Data Tag | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

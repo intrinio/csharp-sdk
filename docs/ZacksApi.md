@@ -10,20 +10,22 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetZacksAnalystRatings_v2)
 
 [//]: # (ENDPOINT:/zacks/analyst_ratings)
 
-[//]: # (DOC_LINK:ZacksApi.md#getzacksanalystratings)
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksanalystratings)
 
 <a name="getzacksanalystratings"></a>
-# **GetZacksAnalystRatings**
+## **GetZacksAnalystRatings**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetZacksAnalystRatings_v2)
 
 > ApiResponseZacksAnalystRatings GetZacksAnalystRatings (string identifier = null, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null, string nextPage = null)
 
-Zacks Analyst Ratings
+#### Zacks Analyst Ratings
 
 Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
 
@@ -106,6 +108,7 @@ Name | Type | Description  | Notes
  **totalLess** | **int?**| Return only records with fewer than this many recommendations, regardless of type | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -114,20 +117,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetZacksEpsSurprises_v2)
 
 [//]: # (ENDPOINT:/zacks/eps_surprises)
 
-[//]: # (DOC_LINK:ZacksApi.md#getzacksepssurprises)
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksepssurprises)
 
 <a name="getzacksepssurprises"></a>
-# **GetZacksEpsSurprises**
+## **GetZacksEpsSurprises**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetZacksEpsSurprises_v2)
 
 > ApiResponseZacksEPSSurprises GetZacksEpsSurprises (string startDate = null, string endDate = null, decimal? epsActualGreater = null, decimal? epsActualLess = null, decimal? epsMeanEstimateGreater = null, decimal? epsMeanEstimateLess = null, decimal? epsAmountDiffGreater = null, decimal? epsAmountDiffLess = null, decimal? epsPercentDiffGreater = null, decimal? epsPercentDiffLess = null, decimal? epsCountEstimateGreater = null, decimal? epsCountEstimateLess = null, decimal? epsStdDevEstimateGreater = null, decimal? epsStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
 
-Zacks EPS Surprises
+#### Zacks EPS Surprises
 
 Returns Zacks eps surprise data for all Securities.
 
@@ -204,6 +209,7 @@ Name | Type | Description  | Notes
  **epsStdDevEstimateLess** | **decimal?**| Return only records with an EPS standard deviation less than this value | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -212,20 +218,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetZacksSalesSurprises_v2)
 
 [//]: # (ENDPOINT:/zacks/sales_surprises)
 
-[//]: # (DOC_LINK:ZacksApi.md#getzackssalessurprises)
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzackssalessurprises)
 
 <a name="getzackssalessurprises"></a>
-# **GetZacksSalesSurprises**
+## **GetZacksSalesSurprises**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetZacksSalesSurprises_v2)
 
 > ApiResponseZacksSalesSurprises GetZacksSalesSurprises (string startDate = null, string endDate = null, decimal? salesActualGreater = null, decimal? salesActualLess = null, decimal? salesMeanEstimateGreater = null, decimal? salesMeanEstimateLess = null, decimal? salesAmountDiffGreater = null, decimal? salesAmountDiffLess = null, decimal? salesPercentDiffGreater = null, decimal? salesPercentDiffLess = null, decimal? salesCountEstimateGreater = null, decimal? salesCountEstimateLess = null, decimal? salesStdDevEstimateGreater = null, decimal? salesStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
 
-Zacks Sales Surprises
+#### Zacks Sales Surprises
 
 Returns Zacks sales surprise data for all Securities.
 
@@ -302,6 +310,7 @@ Name | Type | Description  | Notes
  **salesStdDevEstimateLess** | **decimal?**| Return only records with a sales standard deviation less than this value | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 

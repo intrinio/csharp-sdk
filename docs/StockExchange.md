@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.StockExchange
-## Properties
+## Intrinio.SDK.Model.StockExchange
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -13,6 +13,4 @@ Name | Type | Description | Notes
 **Website** | **string** | The website of the exchange | [optional] 
 **FirstStockPriceDate** | **DateTime?** | The earliest date for which Intrinio has stock prices for the exchange | [optional] 
 **LastStockPriceDate** | **DateTime?** | The latest date for which Intrinio has stock prices for the exchange | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

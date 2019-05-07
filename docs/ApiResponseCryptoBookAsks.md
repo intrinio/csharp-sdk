@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.ApiResponseCryptoBookAsks
-## Properties
+## Intrinio.SDK.Model.ApiResponseCryptoBookAsks
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -7,6 +7,4 @@ Name | Type | Description | Notes
 **Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
 **Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
 **LastUpdated** | **string** | The UTC timestamp of when the order book was last updated. | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

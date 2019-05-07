@@ -10,20 +10,23 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetAllMunicipalities_v2)
 
 [//]: # (ENDPOINT:/municipalities)
 
-[//]: # (DOC_LINK:MunicipalityApi.md#getallmunicipalities)
+[//]: # (DOCUMENT_LINK:MunicipalityApi.md#getallmunicipalities)
 
 <a name="getallmunicipalities"></a>
-# **GetAllMunicipalities**
+## **GetAllMunicipalities**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllMunicipalities_v2)
 
 > ApiResponseMunicipalities GetAllMunicipalities (bool? hasFinancials = null, string governmentName = null, string governmentType = null, string areaName = null, string areaType = null, string city = null, string state = null, decimal? zipcode = null, decimal? populationGreaterThan = null, decimal? populationLessThan = null, decimal? enrollmentGreaterThan = null, decimal? enrollmentLessThan = null, string nextPage = null)
 
-All Municipalities
+#### All Municipalities
+
 
 ### Example
 
@@ -92,6 +95,7 @@ Name | Type | Description  | Notes
  **enrollmentGreaterThan** | **decimal?**| Return municipalities with an enrollment greater than the given number | [optional] 
  **enrollmentLessThan** | **decimal?**| Return municipalities with an enrollment less than the given number | [optional] 
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -100,20 +104,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetMunicipalityById_v2)
 
 [//]: # (ENDPOINT:/municipalities/{id})
 
-[//]: # (DOC_LINK:MunicipalityApi.md#getmunicipalitybyid)
+[//]: # (DOCUMENT_LINK:MunicipalityApi.md#getmunicipalitybyid)
 
 <a name="getmunicipalitybyid"></a>
-# **GetMunicipalityById**
+## **GetMunicipalityById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityById_v2)
 
 > Municipality GetMunicipalityById (string id)
 
-Municipality by ID
+#### Municipality by ID
 
 Returns the Municipality with the given ID
 
@@ -160,6 +166,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| An Intrinio ID of a Municipality | 
+<br/>
 
 ### Return type
 
@@ -168,20 +175,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetMunicipalityFinancials_v2)
 
 [//]: # (ENDPOINT:/municipalities/{id}/financials)
 
-[//]: # (DOC_LINK:MunicipalityApi.md#getmunicipalityfinancials)
+[//]: # (DOCUMENT_LINK:MunicipalityApi.md#getmunicipalityfinancials)
 
 <a name="getmunicipalityfinancials"></a>
-# **GetMunicipalityFinancials**
+## **GetMunicipalityFinancials**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityFinancials_v2)
 
 > ApiResponseMunicipalitiyFinancials GetMunicipalityFinancials (string id, decimal? fiscalYear = null)
 
-Financials for a Municipality
+#### Financials for a Municipality
 
 Returns financial statement data for the Municipality with the given ID
 
@@ -230,6 +239,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| An Intrinio ID of a Municipality | 
  **fiscalYear** | **decimal?**| Return financials for the given fiscal year | [optional] 
+<br/>
 
 ### Return type
 

@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.StockMarketIndexSummary
-## Properties
+## Intrinio.SDK.Model.StockMarketIndexSummary
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -12,6 +12,4 @@ Name | Type | Description | Notes
 **LastUpdated** | **DateTime?** | When the Index was updated last | [optional] 
 **ObservationStart** | **DateTime?** | The earliest date for which data is available | [optional] 
 **ObservationEnd** | **DateTime?** | The latest date for which data is available | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

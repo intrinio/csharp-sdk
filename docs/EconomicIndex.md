@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.EconomicIndex
-## Properties
+## Intrinio.SDK.Model.EconomicIndex
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -15,6 +15,4 @@ Name | Type | Description | Notes
 **ObservationEnd** | **DateTime?** | The latest date for which data is available | [optional] 
 **SeasonalAdjustment** | **string** | Whether the data is adjusted to account for seasonality | [optional] 
 **Units** | **string** | The units of the data | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -14,20 +14,22 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetAllFilings_v2)
 
 [//]: # (ENDPOINT:/filings)
 
-[//]: # (DOC_LINK:FilingApi.md#getallfilings)
+[//]: # (DOCUMENT_LINK:FilingApi.md#getallfilings)
 
 <a name="getallfilings"></a>
-# **GetAllFilings**
+## **GetAllFilings**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllFilings_v2)
 
 > ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
-All Filings
+#### All Filings
 
 Returns all Filings. Returns Filings matching parameters when supplied.
 
@@ -84,6 +86,7 @@ Name | Type | Description  | Notes
  **endDate** | **DateTime?**| Filed before or after the given date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -92,20 +95,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetAllNotes_v2)
 
 [//]: # (ENDPOINT:/filings/notes)
 
-[//]: # (DOC_LINK:FilingApi.md#getallnotes)
+[//]: # (DOCUMENT_LINK:FilingApi.md#getallnotes)
 
 <a name="getallnotes"></a>
-# **GetAllNotes**
+## **GetAllNotes**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllNotes_v2)
 
 > ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, int? pageSize = null, string nextPage = null)
 
-All Filing Notes
+#### All Filing Notes
 
 Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
 
@@ -166,6 +171,7 @@ Name | Type | Description  | Notes
  **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -174,20 +180,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetFilingById_v2)
 
 [//]: # (ENDPOINT:/filings/{id})
 
-[//]: # (DOC_LINK:FilingApi.md#getfilingbyid)
+[//]: # (DOCUMENT_LINK:FilingApi.md#getfilingbyid)
 
 <a name="getfilingbyid"></a>
-# **GetFilingById**
+## **GetFilingById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFilingById_v2)
 
 > Filing GetFilingById (string id)
 
-Lookup Filing
+#### Lookup Filing
 
 Returns the Filing with the given `identifier`
 
@@ -234,6 +242,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| The Intrinio ID of the Filing | 
+<br/>
 
 ### Return type
 
@@ -242,20 +251,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetNote_v2)
 
 [//]: # (ENDPOINT:/filings/notes/{identifier})
 
-[//]: # (DOC_LINK:FilingApi.md#getnote)
+[//]: # (DOCUMENT_LINK:FilingApi.md#getnote)
 
 <a name="getnote"></a>
-# **GetNote**
+## **GetNote**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNote_v2)
 
 > FilingNote GetNote (string identifier, string contentFormat = null)
 
-Filing Note by ID
+#### Filing Note by ID
+
 
 ### Example
 
@@ -302,6 +314,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| The Intrinio ID of the filing note | 
  **contentFormat** | **string**| Returns content in html (as filed) or plain text | [optional] [default to text]
+<br/>
 
 ### Return type
 
@@ -310,20 +323,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetNoteHtml_v2)
 
 [//]: # (ENDPOINT:/filings/notes/{identifier}/html)
 
-[//]: # (DOC_LINK:FilingApi.md#getnotehtml)
+[//]: # (DOCUMENT_LINK:FilingApi.md#getnotehtml)
 
 <a name="getnotehtml"></a>
-# **GetNoteHtml**
+## **GetNoteHtml**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteHtml_v2)
 
 > string GetNoteHtml (string identifier)
 
-Filing Note HTML
+#### Filing Note HTML
+
 
 ### Example
 
@@ -368,6 +384,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| The Intrinio ID of the filing note | 
+<br/>
 
 ### Return type
 
@@ -376,20 +393,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:GetNoteText_v2)
 
 [//]: # (ENDPOINT:/filings/notes/{identifier}/text)
 
-[//]: # (DOC_LINK:FilingApi.md#getnotetext)
+[//]: # (DOCUMENT_LINK:FilingApi.md#getnotetext)
 
 <a name="getnotetext"></a>
-# **GetNoteText**
+## **GetNoteText**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteText_v2)
 
 > string GetNoteText (string identifier)
 
-Filing Note Text
+#### Filing Note Text
+
 
 ### Example
 
@@ -434,6 +454,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| The Intrinio ID of the filing note | 
+<br/>
 
 ### Return type
 
@@ -442,20 +463,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:SearchNotes_v2)
 
 [//]: # (ENDPOINT:/filings/notes/search)
 
-[//]: # (DOC_LINK:FilingApi.md#searchnotes)
+[//]: # (DOCUMENT_LINK:FilingApi.md#searchnotes)
 
 <a name="searchnotes"></a>
-# **SearchNotes**
+## **SearchNotes**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchNotes_v2)
 
 > ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
 
-Search Filing Notes
+#### Search Filing Notes
 
 Searches for Filing Notes using the `query`
 
@@ -510,6 +533,7 @@ Name | Type | Description  | Notes
  **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
  **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
  **pageSize2** | **int?**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 

@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.CryptoPrice
-## Properties
+## Intrinio.SDK.Model.CryptoPrice
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,6 +9,4 @@ Name | Type | Description | Notes
 **Low** | **decimal?** | The low price of the timeframe. | [optional] 
 **Close** | **decimal?** | The closing price of the timeframe. | [optional] 
 **Volume** | **decimal?** | The volume during the timeframe. | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

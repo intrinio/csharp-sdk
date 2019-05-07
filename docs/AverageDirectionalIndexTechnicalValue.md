@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue
-## Properties
+## Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -7,6 +7,4 @@ Name | Type | Description | Notes
 **Adx** | **float?** | The Average Directional Index value | [optional] 
 **DiNeg** | **float?** | The Minus Directional Indicator value | [optional] 
 **DiPos** | **float?** | The Plus Directional Indicator value | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.RealtimeStockPriceSecurity
-## Properties
+## Intrinio.SDK.Model.RealtimeStockPriceSecurity
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,6 +8,4 @@ Name | Type | Description | Notes
 **ExchangeTicker** | **string** | The exchange-level ticker | [optional] 
 **Figi** | **string** | The OpenFIGI identifier | [optional] 
 **CompositeFigi** | **string** | The country-composite OpenFIGI identifier | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

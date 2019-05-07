@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.ForexPrice
-## Properties
+## Intrinio.SDK.Model.ForexPrice
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -13,6 +13,4 @@ Name | Type | Description | Notes
 **LowAsk** | **float?** | Low ask | [optional] 
 **CloseAsk** | **float?** | Close ask | [optional] 
 **TotalTicks** | **int?** | Total ticks | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

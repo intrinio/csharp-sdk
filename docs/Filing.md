@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.Filing
-## Properties
+## Intrinio.SDK.Model.Filing
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -13,6 +13,4 @@ Name | Type | Description | Notes
 **ReportUrl** | **string** | The URL to the actual report on the SEC site | [optional] 
 **InstanceUrl** | **string** | The URL for the XBRL filing for the report | [optional] 
 **Company** | [**CompanySummary**](CompanySummary.md) |  | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-# Intrinio.SDK.Model.CompanySummary
-## Properties
+## Intrinio.SDK.Model.CompanySummary
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,6 +8,4 @@ Name | Type | Description | Notes
 **Name** | **string** | The company&#39;s common name | [optional] 
 **Lei** | **string** | The Legal Entity Identifier (LEI) assigned to the company | [optional] 
 **Cik** | **string** | The Central Index Key (CIK) assigned to the company | [optional] 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -16,6 +16,16 @@ Method | HTTP request | Description
 
 [//]: # (START_OPERATION)
 
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetAllFilings)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseFilings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseFilings.md)
+
 [//]: # (OPERATION:GetAllFilings_v2)
 
 [//]: # (ENDPOINT:/filings)
@@ -27,11 +37,15 @@ Method | HTTP request | Description
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllFilings_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
 #### All Filings
 
 Returns all Filings. Returns Filings matching parameters when supplied.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -78,15 +92,20 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | **string**| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | 
- **reportType** | **string**| Filter by report type | [optional] 
- **startDate** | **DateTime?**| Filed on or after the given date | [optional] 
- **endDate** | **DateTime?**| Filed before or after the given date | [optional] 
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **company** | **string**| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **reportType** | **string**| Filter by report type | [optional]  &nbsp;
+ **startDate** | **DateTime?**| Filed on or after the given date | [optional]  &nbsp;
+ **endDate** | **DateTime?**| Filed before or after the given date | [optional]  &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -96,6 +115,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetAllNotes)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseFilingNotes)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseFilingNotes.md)
 
 [//]: # (OPERATION:GetAllNotes_v2)
 
@@ -108,11 +137,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllNotes_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, int? pageSize = null, string nextPage = null)
 
 #### All Filing Notes
 
 Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -161,17 +194,22 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional] 
- **reportType** | **string**| Notes contained in filings that match the given report type | [optional] 
- **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
- **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
- **periodEndedStartDate** | **DateTime?**| Limit search to filings with a period end date on or after this date | [optional] 
- **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional] 
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **company** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **reportType** | **string**| Notes contained in filings that match the given report type | [optional]  &nbsp;
+ **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional]  &nbsp;
+ **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional]  &nbsp;
+ **periodEndedStartDate** | **DateTime?**| Limit search to filings with a period end date on or after this date | [optional]  &nbsp;
+ **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional]  &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -181,6 +219,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetFilingById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelFiling)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:Filing.md)
 
 [//]: # (OPERATION:GetFilingById_v2)
 
@@ -193,11 +241,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFilingById_v2)
 
+[//]: # (START_OVERVIEW)
+
 > Filing GetFilingById (string id)
 
 #### Lookup Filing
 
 Returns the Filing with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -239,10 +291,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Intrinio ID of the Filing | 
+ **id** | **string**| The Intrinio ID of the Filing |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -252,6 +309,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetNote)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelFilingNote)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:FilingNote.md)
 
 [//]: # (OPERATION:GetNote_v2)
 
@@ -264,10 +331,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNote_v2)
 
+[//]: # (START_OVERVIEW)
+
 > FilingNote GetNote (string identifier, string contentFormat = null)
 
 #### Filing Note by ID
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -310,11 +381,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID of the filing note | 
- **contentFormat** | **string**| Returns content in html (as filed) or plain text | [optional] [default to text]
+ **identifier** | **string**| The Intrinio ID of the filing note |  &nbsp;
+ **contentFormat** | **string**| Returns content in html (as filed) or plain text | [optional] [default to text] &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -324,6 +400,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetNoteHtml)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetNoteHtml_v2)
 
@@ -336,10 +422,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteHtml_v2)
 
+[//]: # (START_OVERVIEW)
+
 > string GetNoteHtml (string identifier)
 
 #### Filing Note HTML
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -381,10 +471,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID of the filing note | 
+ **identifier** | **string**| The Intrinio ID of the filing note |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -394,6 +489,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetNoteText)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetNoteText_v2)
 
@@ -406,10 +511,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteText_v2)
 
+[//]: # (START_OVERVIEW)
+
 > string GetNoteText (string identifier)
 
 #### Filing Note Text
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -451,10 +560,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID of the filing note | 
+ **identifier** | **string**| The Intrinio ID of the filing note |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -464,6 +578,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:SearchNotes)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseFilingNotesSearch)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseFilingNotesSearch.md)
 
 [//]: # (OPERATION:SearchNotes_v2)
 
@@ -476,11 +600,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchNotes_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
 
 #### Search Filing Notes
 
 Searches for Filing Notes using the `query`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -526,14 +654,19 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search for notes that contain all or parts of this text | 
- **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
- **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **pageSize2** | **int?**| The number of results to return | [optional] [default to 100]
+ **query** | **string**| Search for notes that contain all or parts of this text |  &nbsp;
+ **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional]  &nbsp;
+ **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional]  &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **pageSize2** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 

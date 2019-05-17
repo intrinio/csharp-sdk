@@ -11,6 +11,16 @@ Method | HTTP request | Description
 
 [//]: # (START_OPERATION)
 
+[//]: # (CLASS:Intrinio.SDK.Api.DataPointApi)
+
+[//]: # (METHOD:GetDataPointNumber)
+
+[//]: # (RETURN_TYPE:decimal?)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
+
 [//]: # (OPERATION:GetDataPointNumber_v2)
 
 [//]: # (ENDPOINT:/data_point/{identifier}/{tag}/number)
@@ -22,11 +32,15 @@ Method | HTTP request | Description
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataPointNumber_v2)
 
+[//]: # (START_OVERVIEW)
+
 > decimal? GetDataPointNumber (string identifier, string tag)
 
 #### Data Point (Number)
 
 Returns a numeric value for the given `tag` and the entity with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -69,11 +83,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+ **identifier** | **string**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -83,6 +102,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.DataPointApi)
+
+[//]: # (METHOD:GetDataPointText)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetDataPointText_v2)
 
@@ -95,11 +124,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataPointText_v2)
 
+[//]: # (START_OVERVIEW)
+
 > string GetDataPointText (string identifier, string tag)
 
 #### Data Point (Text)
 
 Returns a text value for the given `tag` for the Security with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -142,11 +175,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+ **identifier** | **string**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 

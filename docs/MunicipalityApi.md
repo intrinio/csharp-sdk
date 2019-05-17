@@ -12,6 +12,16 @@ Method | HTTP request | Description
 
 [//]: # (START_OPERATION)
 
+[//]: # (CLASS:Intrinio.SDK.Api.MunicipalityApi)
+
+[//]: # (METHOD:GetAllMunicipalities)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseMunicipalities)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseMunicipalities.md)
+
 [//]: # (OPERATION:GetAllMunicipalities_v2)
 
 [//]: # (ENDPOINT:/municipalities)
@@ -23,10 +33,14 @@ Method | HTTP request | Description
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllMunicipalities_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseMunicipalities GetAllMunicipalities (bool? hasFinancials = null, string governmentName = null, string governmentType = null, string areaName = null, string areaType = null, string city = null, string state = null, decimal? zipcode = null, decimal? populationGreaterThan = null, decimal? populationLessThan = null, decimal? enrollmentGreaterThan = null, decimal? enrollmentLessThan = null, string nextPage = null)
 
 #### All Municipalities
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -80,22 +94,27 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hasFinancials** | **bool?**| Return municipalities with financials | [optional] 
- **governmentName** | **string**| Return municipalities with a government name matching the given query | [optional] 
- **governmentType** | **string**| Return municipalities with the given government type | [optional] 
- **areaName** | **string**| Return municipalities with an area name matching the given query | [optional] 
- **areaType** | **string**| Return municipalities with the given area type | [optional] 
- **city** | **string**| Return municipalities in the given city | [optional] 
- **state** | **string**| Return municipalities in the given state | [optional] 
- **zipcode** | **decimal?**| Return municipalities in the given zipcode | [optional] 
- **populationGreaterThan** | **decimal?**| Return municipalities with a population greater than the given number | [optional] 
- **populationLessThan** | **decimal?**| Return municipalities with a population less than the given number | [optional] 
- **enrollmentGreaterThan** | **decimal?**| Return municipalities with an enrollment greater than the given number | [optional] 
- **enrollmentLessThan** | **decimal?**| Return municipalities with an enrollment less than the given number | [optional] 
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **hasFinancials** | **bool?**| Return municipalities with financials | [optional]  &nbsp;
+ **governmentName** | **string**| Return municipalities with a government name matching the given query | [optional]  &nbsp;
+ **governmentType** | **string**| Return municipalities with the given government type | [optional]  &nbsp;
+ **areaName** | **string**| Return municipalities with an area name matching the given query | [optional]  &nbsp;
+ **areaType** | **string**| Return municipalities with the given area type | [optional]  &nbsp;
+ **city** | **string**| Return municipalities in the given city | [optional]  &nbsp;
+ **state** | **string**| Return municipalities in the given state | [optional]  &nbsp;
+ **zipcode** | **decimal?**| Return municipalities in the given zipcode | [optional]  &nbsp;
+ **populationGreaterThan** | **decimal?**| Return municipalities with a population greater than the given number | [optional]  &nbsp;
+ **populationLessThan** | **decimal?**| Return municipalities with a population less than the given number | [optional]  &nbsp;
+ **enrollmentGreaterThan** | **decimal?**| Return municipalities with an enrollment greater than the given number | [optional]  &nbsp;
+ **enrollmentLessThan** | **decimal?**| Return municipalities with an enrollment less than the given number | [optional]  &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -105,6 +124,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.MunicipalityApi)
+
+[//]: # (METHOD:GetMunicipalityById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelMunicipality)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:Municipality.md)
 
 [//]: # (OPERATION:GetMunicipalityById_v2)
 
@@ -117,11 +146,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityById_v2)
 
+[//]: # (START_OVERVIEW)
+
 > Municipality GetMunicipalityById (string id)
 
 #### Municipality by ID
 
 Returns the Municipality with the given ID
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -163,10 +196,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| An Intrinio ID of a Municipality | 
+ **id** | **string**| An Intrinio ID of a Municipality |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -176,6 +214,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.MunicipalityApi)
+
+[//]: # (METHOD:GetMunicipalityFinancials)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseMunicipalitiyFinancials)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseMunicipalitiyFinancials.md)
 
 [//]: # (OPERATION:GetMunicipalityFinancials_v2)
 
@@ -188,11 +236,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityFinancials_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseMunicipalitiyFinancials GetMunicipalityFinancials (string id, decimal? fiscalYear = null)
 
 #### Financials for a Municipality
 
 Returns financial statement data for the Municipality with the given ID
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -235,11 +287,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| An Intrinio ID of a Municipality | 
- **fiscalYear** | **decimal?**| Return financials for the given fiscal year | [optional] 
+ **id** | **string**| An Intrinio ID of a Municipality |  &nbsp;
+ **fiscalYear** | **decimal?**| Return financials for the given fiscal year | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 

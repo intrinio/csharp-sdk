@@ -12,6 +12,16 @@ Method | HTTP request | Description
 
 [//]: # (START_OPERATION)
 
+[//]: # (CLASS:Intrinio.SDK.Api.DataTagApi)
+
+[//]: # (METHOD:GetAllDataTags)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseDataTags)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseDataTags.md)
+
 [//]: # (OPERATION:GetAllDataTags_v2)
 
 [//]: # (ENDPOINT:/data_tags)
@@ -23,11 +33,15 @@ Method | HTTP request | Description
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllDataTags_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null)
 
 #### All Data Tags
 
 Returns all Data Tags. Returns Data Tags matching parameters when specified.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -75,16 +89,21 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | **string**| Tag | [optional] 
- **type** | **string**| Type | [optional] 
- **parent** | **string**| ID of tag parent | [optional] 
- **statementCode** | **string**| Statement Code | [optional] 
- **fsTemplate** | **string**| Template | [optional] [default to industrial]
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **tag** | **string**| Tag | [optional]  &nbsp;
+ **type** | **string**| Type | [optional]  &nbsp;
+ **parent** | **string**| ID of tag parent | [optional]  &nbsp;
+ **statementCode** | **string**| Statement Code | [optional]  &nbsp;
+ **fsTemplate** | **string**| Template | [optional] [default to industrial] &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -94,6 +113,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.DataTagApi)
+
+[//]: # (METHOD:GetDataTagById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelDataTag)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:DataTag.md)
 
 [//]: # (OPERATION:GetDataTagById_v2)
 
@@ -106,11 +135,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataTagById_v2)
 
+[//]: # (START_OVERVIEW)
+
 > DataTag GetDataTagById (string identifier)
 
 #### Lookup Data Tag
 
 Returns the Data Tag with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -152,10 +185,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID or the code-name of the Data Tag | 
+ **identifier** | **string**| The Intrinio ID or the code-name of the Data Tag |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -165,6 +203,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.DataTagApi)
+
+[//]: # (METHOD:SearchDataTags)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseDataTagsSearch)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseDataTagsSearch.md)
 
 [//]: # (OPERATION:SearchDataTags_v2)
 
@@ -177,11 +225,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchDataTags_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseDataTagsSearch SearchDataTags (string query, int? pageSize = null)
 
 #### Search Data Tags
 
 Searches for Data Tags matching the text `query`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -224,11 +276,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**|  | 
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **query** | **string**|  |  &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 

@@ -27,6 +27,16 @@ Method | HTTP request | Description
 
 [//]: # (START_OPERATION)
 
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetAllEconomicIndices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseEconomicIndices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndices.md)
+
 [//]: # (OPERATION:GetAllEconomicIndices_v2)
 
 [//]: # (ENDPOINT:/indices/economic)
@@ -38,10 +48,14 @@ Method | HTTP request | Description
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllEconomicIndices_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseEconomicIndices GetAllEconomicIndices (int? pageSize = null, string nextPage = null)
 
 #### All Economic Indices
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -84,11 +98,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -98,6 +117,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetAllSicIndices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSICIndices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndices.md)
 
 [//]: # (OPERATION:GetAllSicIndices_v2)
 
@@ -110,10 +139,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllSicIndices_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseSICIndices GetAllSicIndices (int? pageSize = null, string nextPage = null)
 
 #### All SIC Indices
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -156,11 +189,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -170,6 +208,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetAllStockMarketIndices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockMarketIndices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndices.md)
 
 [//]: # (OPERATION:GetAllStockMarketIndices_v2)
 
@@ -182,10 +230,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllStockMarketIndices_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseStockMarketIndices GetAllStockMarketIndices (int? pageSize = null, string nextPage = null)
 
 #### All Stock Market Indices
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -228,11 +280,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -242,6 +299,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetEconomicIndexById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelEconomicIndex)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:EconomicIndex.md)
 
 [//]: # (OPERATION:GetEconomicIndexById_v2)
 
@@ -254,10 +321,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexById_v2)
 
+[//]: # (START_OVERVIEW)
+
 > EconomicIndex GetEconomicIndexById (string identifier)
 
 #### Lookup Economic Index
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -299,10 +370,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -312,6 +388,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetEconomicIndexDataPointNumber)
+
+[//]: # (RETURN_TYPE:decimal?)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetEconomicIndexDataPointNumber_v2)
 
@@ -324,11 +410,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexDataPointNumber_v2)
 
+[//]: # (START_OVERVIEW)
+
 > decimal? GetEconomicIndexDataPointNumber (string identifier, string tag)
 
 #### Data Point (Number) for an Economic Index
 
 Returns a numeric value for the given `tag` for the Economic Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -371,11 +461,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -385,6 +480,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetEconomicIndexDataPointText)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetEconomicIndexDataPointText_v2)
 
@@ -397,11 +502,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexDataPointText_v2)
 
+[//]: # (START_OVERVIEW)
+
 > string GetEconomicIndexDataPointText (string identifier, string tag)
 
 #### Data Point (Text) for an Economic Index
 
 Returns a text value for the given `tag` for the Economic Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -444,11 +553,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -458,6 +572,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetEconomicIndexHistoricalData)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseEconomicIndexHistoricalData)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndexHistoricalData.md)
 
 [//]: # (OPERATION:GetEconomicIndexHistoricalData_v2)
 
@@ -470,11 +594,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexHistoricalData_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
 #### Historical Data for an Economic Index
 
 Returns historical values for the given `tag` and the Economic Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -523,17 +651,22 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
- **type** | **string**| Filter by type, when applicable | [optional] 
- **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
- **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
- **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
+ **type** | **string**| Filter by type, when applicable | [optional]  &nbsp;
+ **startDate** | **DateTime?**| Get historical data on or after this date | [optional]  &nbsp;
+ **endDate** | **DateTime?**| Get historical data on or before this date | [optional]  &nbsp;
+ **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -543,6 +676,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetSicIndexById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelSICIndex)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SICIndex.md)
 
 [//]: # (OPERATION:GetSicIndexById_v2)
 
@@ -555,10 +698,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexById_v2)
 
+[//]: # (START_OVERVIEW)
+
 > SICIndex GetSicIndexById (string identifier)
 
 #### Lookup SIC Index
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -600,10 +747,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -613,6 +765,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetSicIndexDataPointNumber)
+
+[//]: # (RETURN_TYPE:decimal?)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetSicIndexDataPointNumber_v2)
 
@@ -625,11 +787,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexDataPointNumber_v2)
 
+[//]: # (START_OVERVIEW)
+
 > decimal? GetSicIndexDataPointNumber (string identifier, string tag)
 
 #### Data Point (Number) for an SIC Index
 
 Returns a numeric value for the given `tag` for the SIC Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -672,11 +838,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -686,6 +857,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetSicIndexDataPointText)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetSicIndexDataPointText_v2)
 
@@ -698,11 +879,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexDataPointText_v2)
 
+[//]: # (START_OVERVIEW)
+
 > string GetSicIndexDataPointText (string identifier, string tag)
 
 #### Data Point (Text) for an SIC Index
 
 Returns a text value for the given `tag` for the SIC Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -745,11 +930,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -759,6 +949,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetSicIndexHistoricalData)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSICIndexHistoricalData)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndexHistoricalData.md)
 
 [//]: # (OPERATION:GetSicIndexHistoricalData_v2)
 
@@ -771,11 +971,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexHistoricalData_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
 #### Historical Data for an SIC Index
 
 Returns historical values for the given `tag` and the SIC Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -824,17 +1028,22 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
- **type** | **string**| Filter by type, when applicable | [optional] 
- **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
- **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
- **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
+ **type** | **string**| Filter by type, when applicable | [optional]  &nbsp;
+ **startDate** | **DateTime?**| Get historical data on or after this date | [optional]  &nbsp;
+ **endDate** | **DateTime?**| Get historical data on or before this date | [optional]  &nbsp;
+ **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -844,6 +1053,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetStockMarketIndexById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelStockMarketIndex)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:StockMarketIndex.md)
 
 [//]: # (OPERATION:GetStockMarketIndexById_v2)
 
@@ -856,10 +1075,14 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexById_v2)
 
+[//]: # (START_OVERVIEW)
+
 > StockMarketIndex GetStockMarketIndexById (string identifier)
 
 #### Lookup Stock Market Index
 
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -901,10 +1124,15 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -914,6 +1142,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetStockMarketIndexDataPointNumber)
+
+[//]: # (RETURN_TYPE:decimal?)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetStockMarketIndexDataPointNumber_v2)
 
@@ -926,11 +1164,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexDataPointNumber_v2)
 
+[//]: # (START_OVERVIEW)
+
 > decimal? GetStockMarketIndexDataPointNumber (string identifier, string tag)
 
 #### Data Point (Number) for Stock Market Index
 
 Returns a numeric value for the given `tag` for the Stock Market Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -973,11 +1215,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -987,6 +1234,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetStockMarketIndexDataPointText)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
 
 [//]: # (OPERATION:GetStockMarketIndexDataPointText_v2)
 
@@ -999,11 +1256,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexDataPointText_v2)
 
+[//]: # (START_OVERVIEW)
+
 > string GetStockMarketIndexDataPointText (string identifier, string tag)
 
 #### Data Point (Text) for Stock Market Index
 
 Returns a text value for the given `tag` for the Stock Market Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -1046,11 +1307,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -1060,6 +1326,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetStockMarketIndexHistoricalData)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockMarketIndexHistoricalData)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndexHistoricalData.md)
 
 [//]: # (OPERATION:GetStockMarketIndexHistoricalData_v2)
 
@@ -1072,11 +1348,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexHistoricalData_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
 #### Historical Data for Stock Market Index
 
 Returns historical values for the given `tag` and the Stock Market Index with the given `identifier`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -1125,17 +1405,22 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
- **tag** | **string**| An Intrinio data tag ID or code-name | 
- **type** | **string**| Filter by type, when applicable | [optional] 
- **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
- **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
- **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
+ **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
+ **type** | **string**| Filter by type, when applicable | [optional]  &nbsp;
+ **startDate** | **DateTime?**| Get historical data on or after this date | [optional]  &nbsp;
+ **endDate** | **DateTime?**| Get historical data on or before this date | [optional]  &nbsp;
+ **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -1145,6 +1430,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:SearchEconomicIndices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseEconomicIndicesSearch)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndicesSearch.md)
 
 [//]: # (OPERATION:SearchEconomicIndices_v2)
 
@@ -1157,11 +1452,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchEconomicIndices_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseEconomicIndicesSearch SearchEconomicIndices (string query, int? pageSize = null)
 
 #### Search Economic Indices
 
 Searches for indices using the text in `query`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -1204,11 +1503,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search query | 
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **query** | **string**| Search query |  &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -1218,6 +1522,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:SearchSicIndices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSICIndicesSearch)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndicesSearch.md)
 
 [//]: # (OPERATION:SearchSicIndices_v2)
 
@@ -1230,11 +1544,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchSicIndices_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseSICIndicesSearch SearchSicIndices (string query, int? pageSize = null)
 
 #### Search SIC Indices
 
 Searches for indices using the text in `query`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -1277,11 +1595,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search query | 
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **query** | **string**| Search query |  &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
@@ -1291,6 +1614,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:SearchStockMarketsIndices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockMarketIndicesSearch)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndicesSearch.md)
 
 [//]: # (OPERATION:SearchStockMarketsIndices_v2)
 
@@ -1303,11 +1636,15 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchStockMarketsIndices_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseStockMarketIndicesSearch SearchStockMarketsIndices (string query, int? pageSize = null)
 
 #### Search Stock Market Indices
 
 Searches for indices using the text in `query`
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -1350,11 +1687,16 @@ namespace Example
 
 ### Parameters
 
+[//]: # (START_PARAMETERS)
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search query | 
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **query** | **string**| Search query |  &nbsp;
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 

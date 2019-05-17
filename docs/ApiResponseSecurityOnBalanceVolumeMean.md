@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolumeMean
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolumeMean
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

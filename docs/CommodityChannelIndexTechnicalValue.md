@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CommodityChannelIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.CommodityChannelIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

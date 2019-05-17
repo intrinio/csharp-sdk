@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityEaseOfMovement
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityEaseOfMovement
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

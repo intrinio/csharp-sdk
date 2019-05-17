@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.DividendRecord
-### Properties
+### Intrinio.SDK.Model.DividendRecord
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

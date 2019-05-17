@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ForceIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.ForceIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

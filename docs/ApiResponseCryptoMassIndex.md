@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoMassIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoMassIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.Security
-### Properties
+### Intrinio.SDK.Model.Security
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

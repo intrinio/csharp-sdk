@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.DataTag
-### Properties
+### Intrinio.SDK.Model.DataTag
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

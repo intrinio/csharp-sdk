@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.BollingerBandsTechnicalValue
-### Properties
+### Intrinio.SDK.Model.BollingerBandsTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

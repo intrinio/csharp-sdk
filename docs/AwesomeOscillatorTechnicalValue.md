@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.AwesomeOscillatorTechnicalValue
-### Properties
+### Intrinio.SDK.Model.AwesomeOscillatorTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

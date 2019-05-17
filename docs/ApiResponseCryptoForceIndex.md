@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoForceIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoForceIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.VolumeWeightedAveragePriceValue
-### Properties
+### Intrinio.SDK.Model.VolumeWeightedAveragePriceValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

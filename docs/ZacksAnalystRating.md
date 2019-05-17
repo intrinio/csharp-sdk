@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ZacksAnalystRating
-### Properties
+### Intrinio.SDK.Model.ZacksAnalystRating
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

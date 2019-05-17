@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.UltimateOscillatorTechnicalValue
-### Properties
+### Intrinio.SDK.Model.UltimateOscillatorTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

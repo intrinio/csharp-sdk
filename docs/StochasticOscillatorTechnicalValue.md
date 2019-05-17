@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.StochasticOscillatorTechnicalValue
-### Properties
+### Intrinio.SDK.Model.StochasticOscillatorTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

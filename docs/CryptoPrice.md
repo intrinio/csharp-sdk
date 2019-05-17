@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoPrice
-### Properties
+### Intrinio.SDK.Model.CryptoPrice
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ForexPrice
-### Properties
+### Intrinio.SDK.Model.ForexPrice
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

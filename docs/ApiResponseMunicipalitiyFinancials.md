@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseMunicipalitiyFinancials
-### Properties
+### Intrinio.SDK.Model.ApiResponseMunicipalitiyFinancials
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.DetrendedPriceOscillatorTechnicalValue
-### Properties
+### Intrinio.SDK.Model.DetrendedPriceOscillatorTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoPair
-### Properties
+### Intrinio.SDK.Model.CryptoPair
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

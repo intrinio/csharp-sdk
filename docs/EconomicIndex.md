@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.EconomicIndex
-### Properties
+### Intrinio.SDK.Model.EconomicIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

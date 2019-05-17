@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetAllDataTags)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseDataTags)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseDataTags)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetDataTagById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelDataTag)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.DataTag)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:SearchDataTags)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseDataTagsSearch)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseDataTagsSearch)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

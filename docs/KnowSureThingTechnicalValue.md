@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.KnowSureThingTechnicalValue
-### Properties
+### Intrinio.SDK.Model.KnowSureThingTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

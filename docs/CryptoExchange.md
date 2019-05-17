@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoExchange
-### Properties
+### Intrinio.SDK.Model.CryptoExchange
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

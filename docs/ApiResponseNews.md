@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseNews
-### Properties
+### Intrinio.SDK.Model.ApiResponseNews
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

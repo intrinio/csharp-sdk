@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoMoneyFlowIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoMoneyFlowIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoPrices
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoPrices
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

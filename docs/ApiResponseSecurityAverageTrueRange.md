@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityAverageTrueRange
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityAverageTrueRange
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

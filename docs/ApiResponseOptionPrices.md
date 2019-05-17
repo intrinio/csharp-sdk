@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseOptionPrices
-### Properties
+### Intrinio.SDK.Model.ApiResponseOptionPrices
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

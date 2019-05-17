@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetAllCompanies)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCompanies)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanies)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetAllCompanyNews)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseNews)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseNews)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCompany)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelCompany)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Company)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCompanyFilings)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCompanyFilings)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyFilings)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCompanyFundamentals)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCompanyFundamentals)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyFundamentals)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -699,7 +699,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCompanyHistoricalData)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCompanyHistoricalData)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyHistoricalData)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -805,7 +805,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCompanyNews)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCompanyNews)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyNews)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -899,7 +899,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCompanySecurities)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCompanySecurities)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanySecurities)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -991,7 +991,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:LookupCompanyFundamental)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelFundamental)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Fundamental)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1087,7 +1087,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:SearchCompanies)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCompaniesSearch)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompaniesSearch)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.MovingAverageConvergenceDivergenceTechnicalValue
-### Properties
+### Intrinio.SDK.Model.MovingAverageConvergenceDivergenceTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

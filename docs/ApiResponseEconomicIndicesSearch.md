@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseEconomicIndicesSearch
-### Properties
+### Intrinio.SDK.Model.ApiResponseEconomicIndicesSearch
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

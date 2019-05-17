@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.VolumePriceTrendTechnicalValue
-### Properties
+### Intrinio.SDK.Model.VolumePriceTrendTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.OptionPrice
-### Properties
+### Intrinio.SDK.Model.OptionPrice
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

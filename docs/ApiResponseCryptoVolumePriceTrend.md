@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoVolumePriceTrend
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoVolumePriceTrend
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

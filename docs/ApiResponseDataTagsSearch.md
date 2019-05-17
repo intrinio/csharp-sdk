@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseDataTagsSearch
-### Properties
+### Intrinio.SDK.Model.ApiResponseDataTagsSearch
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

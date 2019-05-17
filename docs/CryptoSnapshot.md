@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoSnapshot
-### Properties
+### Intrinio.SDK.Model.CryptoSnapshot
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

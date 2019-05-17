@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseForexCurrencies
-### Properties
+### Intrinio.SDK.Model.ApiResponseForexCurrencies
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ZacksEPSSurprise
-### Properties
+### Intrinio.SDK.Model.ZacksEPSSurprise
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

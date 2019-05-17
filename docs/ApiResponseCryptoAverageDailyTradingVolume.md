@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoAverageDailyTradingVolume
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoAverageDailyTradingVolume
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

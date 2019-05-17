@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.MassIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.MassIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

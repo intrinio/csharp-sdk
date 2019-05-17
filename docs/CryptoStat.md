@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoStat
-### Properties
+### Intrinio.SDK.Model.CryptoStat
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

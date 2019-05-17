@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoAccumulationDistributionIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoAccumulationDistributionIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

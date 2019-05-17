@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoStochasticOscillator
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoStochasticOscillator
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

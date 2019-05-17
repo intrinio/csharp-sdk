@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.MoneyFlowIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.MoneyFlowIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

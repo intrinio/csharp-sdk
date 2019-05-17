@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityChaikinMoneyFlow
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityChaikinMoneyFlow
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

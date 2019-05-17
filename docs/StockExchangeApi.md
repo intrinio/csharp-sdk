@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetAllStockExchanges)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockExchanges)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchanges)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetStockExchangeById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelStockExchange)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.StockExchange)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetStockExchangePriceAdjustments)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockExchangeStockPriceAdjustments)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeStockPriceAdjustments)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetStockExchangePrices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockExchangeStockPrices)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeStockPrices)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetStockExchangeRealtimePrices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockExchangeRealtimeStockPrices)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeRealtimeStockPrices)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetStockExchangeSecurities)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockExchangeSecurities)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeSecurities)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

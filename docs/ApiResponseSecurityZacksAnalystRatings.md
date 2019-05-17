@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatings
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatings
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

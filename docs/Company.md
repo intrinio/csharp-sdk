@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.Company
-### Properties
+### Intrinio.SDK.Model.Company
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

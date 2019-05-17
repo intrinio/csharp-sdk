@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.NegativeVolumeIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.NegativeVolumeIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

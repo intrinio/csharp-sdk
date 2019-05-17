@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.SecurityScreenGroup
-### Properties
+### Intrinio.SDK.Model.SecurityScreenGroup
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

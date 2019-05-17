@@ -75,7 +75,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsAdi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoAccumulationDistributionIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAccumulationDistributionIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsAdtv)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoAverageDailyTradingVolume)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAverageDailyTradingVolume)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsAdx)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoAverageDirectionalIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAverageDirectionalIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsAo)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoAwesomeOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAwesomeOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsAtr)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoAverageTrueRange)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAverageTrueRange)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -635,7 +635,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsBb)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoBollingerBands)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoBollingerBands)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -751,7 +751,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsCci)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoCommodityChannelIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoCommodityChannelIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -865,7 +865,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsCmf)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoChaikinMoneyFlow)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoChaikinMoneyFlow)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -977,7 +977,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsDc)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoDonchianChannel)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoDonchianChannel)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1091,7 +1091,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsDpo)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoDetrendedPriceOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoDetrendedPriceOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1205,7 +1205,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsEom)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoEaseOfMovement)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoEaseOfMovement)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1317,7 +1317,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsFi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoForceIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoForceIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1427,7 +1427,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsIchimoku)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoIchimokuKinkoHyo)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoIchimokuKinkoHyo)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1543,7 +1543,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsKc)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoKeltnerChannel)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoKeltnerChannel)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1655,7 +1655,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsKst)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoKnowSureThing)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoKnowSureThing)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1783,7 +1783,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsMacd)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoMovingAverageConvergenceDivergence)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoMovingAverageConvergenceDivergence)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1901,7 +1901,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsMfi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoMoneyFlowIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoMoneyFlowIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2013,7 +2013,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsMi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoMassIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoMassIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2127,7 +2127,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsNvi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoNegativeVolumeIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoNegativeVolumeIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2237,7 +2237,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsObv)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoOnBalanceVolume)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoOnBalanceVolume)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2347,7 +2347,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsObvMean)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoOnBalanceVolumeMean)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoOnBalanceVolumeMean)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2459,7 +2459,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsRsi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoRelativeStrengthIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoRelativeStrengthIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2573,7 +2573,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsSma)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoSimpleMovingAverage)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoSimpleMovingAverage)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2687,7 +2687,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsSr)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoStochasticOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoStochasticOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2801,7 +2801,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsTrix)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoTripleExponentialAverage)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoTripleExponentialAverage)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -2913,7 +2913,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsTsi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoTrueStrengthIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoTrueStrengthIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3029,7 +3029,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsUo)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoUltimateOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoUltimateOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3151,7 +3151,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsVi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoVortexIndicator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoVortexIndicator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3263,7 +3263,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsVpt)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoVolumePriceTrend)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoVolumePriceTrend)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3373,7 +3373,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsVwap)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoVolumeWeightedAveragePrice)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoVolumeWeightedAveragePrice)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3483,7 +3483,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetCryptoPriceTechnicalsWr)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseCryptoWilliamsR)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoWilliamsR)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3595,7 +3595,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsAdi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityAccumulationDistributionIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAccumulationDistributionIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3693,7 +3693,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsAdtv)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityAverageDailyTradingVolume)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageDailyTradingVolume)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3793,7 +3793,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsAdx)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityAverageDirectionalIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3893,7 +3893,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsAo)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityAwesomeOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAwesomeOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -3995,7 +3995,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsAtr)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityAverageTrueRange)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageTrueRange)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4095,7 +4095,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsBb)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityBollingerBands)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityBollingerBands)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4199,7 +4199,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsCci)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityCommodityChannelIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityCommodityChannelIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4301,7 +4301,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsCmf)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityChaikinMoneyFlow)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityChaikinMoneyFlow)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4401,7 +4401,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsDc)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityDonchianChannel)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityDonchianChannel)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4503,7 +4503,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsDpo)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityDetrendedPriceOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityDetrendedPriceOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4605,7 +4605,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsEom)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityEaseOfMovement)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityEaseOfMovement)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4705,7 +4705,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsFi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityForceIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityForceIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4803,7 +4803,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsIchimoku)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityIchimokuKinkoHyo)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityIchimokuKinkoHyo)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -4907,7 +4907,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsKc)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityKeltnerChannel)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityKeltnerChannel)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5007,7 +5007,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsKst)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityKnowSureThing)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityKnowSureThing)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5123,7 +5123,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsMacd)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityMovingAverageConvergenceDivergence)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMovingAverageConvergenceDivergence)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5229,7 +5229,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsMfi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityMoneyFlowIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMoneyFlowIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5329,7 +5329,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsMi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityMassIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMassIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5431,7 +5431,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsNvi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityNegativeVolumeIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityNegativeVolumeIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5529,7 +5529,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsObv)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityOnBalanceVolume)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolume)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5627,7 +5627,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsObvMean)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityOnBalanceVolumeMean)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolumeMean)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5727,7 +5727,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsRsi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityRelativeStrengthIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityRelativeStrengthIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5829,7 +5829,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsSma)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecuritySimpleMovingAverage)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritySimpleMovingAverage)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -5931,7 +5931,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsSr)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityStochasticOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityStochasticOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -6033,7 +6033,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsTrix)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityTripleExponentialAverage)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTripleExponentialAverage)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -6133,7 +6133,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsTsi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityTrueStrengthIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTrueStrengthIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -6237,7 +6237,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsUo)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityUltimateOscillator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityUltimateOscillator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -6347,7 +6347,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsVi)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityVortexIndicator)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVortexIndicator)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -6447,7 +6447,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsVpt)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityVolumePriceTrend)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVolumePriceTrend)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -6545,7 +6545,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsVwap)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityVolumeWeightedAveragePrice)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVolumeWeightedAveragePrice)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -6643,7 +6643,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSecurityPriceTechnicalsWr)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSecurityWilliamsR)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityWilliamsR)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

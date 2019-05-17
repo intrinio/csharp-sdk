@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.TripleExponentialAverageTechnicalValue
-### Properties
+### Intrinio.SDK.Model.TripleExponentialAverageTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

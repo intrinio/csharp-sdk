@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.SICIndex
-### Properties
+### Intrinio.SDK.Model.SICIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

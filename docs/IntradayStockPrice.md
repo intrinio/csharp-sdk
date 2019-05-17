@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.IntradayStockPrice
-### Properties
+### Intrinio.SDK.Model.IntradayStockPrice
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

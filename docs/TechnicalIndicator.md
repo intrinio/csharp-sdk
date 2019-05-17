@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.TechnicalIndicator
-### Properties
+### Intrinio.SDK.Model.TechnicalIndicator
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ForexCurrency
-### Properties
+### Intrinio.SDK.Model.ForexCurrency
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

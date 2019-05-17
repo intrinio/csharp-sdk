@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.OnBalanceVolumeTechnicalValue
-### Properties
+### Intrinio.SDK.Model.OnBalanceVolumeTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

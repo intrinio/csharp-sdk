@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.SimpleMovingAverageTechnicalValue
-### Properties
+### Intrinio.SDK.Model.SimpleMovingAverageTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

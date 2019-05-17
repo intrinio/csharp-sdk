@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.VortexIndicatorTechnicalValue
-### Properties
+### Intrinio.SDK.Model.VortexIndicatorTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

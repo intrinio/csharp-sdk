@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CompanyFiling
-### Properties
+### Intrinio.SDK.Model.CompanyFiling
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

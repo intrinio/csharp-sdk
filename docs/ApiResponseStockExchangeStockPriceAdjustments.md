@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseStockExchangeStockPriceAdjustments
-### Properties
+### Intrinio.SDK.Model.ApiResponseStockExchangeStockPriceAdjustments
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

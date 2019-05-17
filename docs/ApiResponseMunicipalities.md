@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseMunicipalities
-### Properties
+### Intrinio.SDK.Model.ApiResponseMunicipalities
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

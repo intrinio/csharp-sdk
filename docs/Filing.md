@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.Filing
-### Properties
+### Intrinio.SDK.Model.Filing
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

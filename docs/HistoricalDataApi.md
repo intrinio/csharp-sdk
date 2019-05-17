@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetHistoricalData)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseHistoricalData)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseHistoricalData)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

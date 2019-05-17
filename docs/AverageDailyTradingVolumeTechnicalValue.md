@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.AverageDailyTradingVolumeTechnicalValue
-### Properties
+### Intrinio.SDK.Model.AverageDailyTradingVolumeTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

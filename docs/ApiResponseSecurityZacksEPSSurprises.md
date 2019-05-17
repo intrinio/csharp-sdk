@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityZacksEPSSurprises
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityZacksEPSSurprises
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

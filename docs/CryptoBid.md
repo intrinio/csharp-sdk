@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoBid
-### Properties
+### Intrinio.SDK.Model.CryptoBid
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

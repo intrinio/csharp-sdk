@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityForceIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityForceIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

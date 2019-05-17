@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityKeltnerChannel
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityKeltnerChannel
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCompanySecurities
-### Properties
+### Intrinio.SDK.Model.ApiResponseCompanySecurities
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

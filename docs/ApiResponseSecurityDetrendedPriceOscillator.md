@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityDetrendedPriceOscillator
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityDetrendedPriceOscillator
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

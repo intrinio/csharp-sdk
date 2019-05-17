@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoNegativeVolumeIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoNegativeVolumeIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

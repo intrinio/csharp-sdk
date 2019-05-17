@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCompanyHistoricalData
-### Properties
+### Intrinio.SDK.Model.ApiResponseCompanyHistoricalData
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

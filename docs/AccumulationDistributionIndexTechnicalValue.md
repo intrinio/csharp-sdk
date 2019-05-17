@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.AccumulationDistributionIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.AccumulationDistributionIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

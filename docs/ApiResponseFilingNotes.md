@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseFilingNotes
-### Properties
+### Intrinio.SDK.Model.ApiResponseFilingNotes
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

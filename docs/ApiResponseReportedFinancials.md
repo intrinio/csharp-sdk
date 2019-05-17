@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseReportedFinancials
-### Properties
+### Intrinio.SDK.Model.ApiResponseReportedFinancials
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

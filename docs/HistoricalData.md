@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.HistoricalData
-### Properties
+### Intrinio.SDK.Model.HistoricalData
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoAwesomeOscillator
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoAwesomeOscillator
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoExchanges
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoExchanges
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

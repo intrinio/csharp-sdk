@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityVolumeWeightedAveragePrice
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityVolumeWeightedAveragePrice
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

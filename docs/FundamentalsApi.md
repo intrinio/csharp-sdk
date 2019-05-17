@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetFundamentalById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelFundamental)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Fundamental)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetFundamentalReportedFinancials)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseReportedFinancials)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseReportedFinancials)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetFundamentalStandardizedFinancials)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStandardizedFinancials)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStandardizedFinancials)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:LookupFundamental)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelFundamental)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Fundamental)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

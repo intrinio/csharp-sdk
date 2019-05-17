@@ -31,7 +31,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetAllEconomicIndices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseEconomicIndices)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEconomicIndices)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetAllSicIndices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSICIndices)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSICIndices)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetAllStockMarketIndices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockMarketIndices)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockMarketIndices)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetEconomicIndexById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelEconomicIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.EconomicIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetEconomicIndexHistoricalData)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseEconomicIndexHistoricalData)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEconomicIndexHistoricalData)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -681,7 +681,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSicIndexById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelSICIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SICIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetSicIndexHistoricalData)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSICIndexHistoricalData)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSICIndexHistoricalData)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1058,7 +1058,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetStockMarketIndexById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelStockMarketIndex)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.StockMarketIndex)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1331,7 +1331,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetStockMarketIndexHistoricalData)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockMarketIndexHistoricalData)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockMarketIndexHistoricalData)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1435,7 +1435,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:SearchEconomicIndices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseEconomicIndicesSearch)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEconomicIndicesSearch)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1527,7 +1527,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:SearchSicIndices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseSICIndicesSearch)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSICIndicesSearch)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -1619,7 +1619,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:SearchStockMarketsIndices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseStockMarketIndicesSearch)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockMarketIndicesSearch)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

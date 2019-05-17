@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.StockExchange
-### Properties
+### Intrinio.SDK.Model.StockExchange
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

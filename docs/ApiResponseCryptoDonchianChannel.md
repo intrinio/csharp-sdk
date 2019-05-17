@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoDonchianChannel
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoDonchianChannel
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

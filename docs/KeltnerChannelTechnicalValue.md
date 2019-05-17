@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.KeltnerChannelTechnicalValue
-### Properties
+### Intrinio.SDK.Model.KeltnerChannelTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

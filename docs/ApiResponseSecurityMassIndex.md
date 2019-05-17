@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityMassIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityMassIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

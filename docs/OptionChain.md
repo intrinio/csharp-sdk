@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.OptionChain
-### Properties
+### Intrinio.SDK.Model.OptionChain
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

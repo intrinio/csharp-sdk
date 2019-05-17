@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoIchimokuKinkoHyo
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoIchimokuKinkoHyo
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoPairs
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoPairs
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.TrueStrengthIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.TrueStrengthIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

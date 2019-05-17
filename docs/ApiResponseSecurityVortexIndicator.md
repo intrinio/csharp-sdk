@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityVortexIndicator
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityVortexIndicator
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

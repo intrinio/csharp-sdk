@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityUltimateOscillator
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityUltimateOscillator
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

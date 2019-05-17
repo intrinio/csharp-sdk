@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.DonchianChannelTechnicalValue
-### Properties
+### Intrinio.SDK.Model.DonchianChannelTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

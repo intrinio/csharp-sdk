@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.EarningsRecord
-### Properties
+### Intrinio.SDK.Model.EarningsRecord
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

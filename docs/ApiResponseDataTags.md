@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseDataTags
-### Properties
+### Intrinio.SDK.Model.ApiResponseDataTags
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

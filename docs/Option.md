@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.Option
-### Properties
+### Intrinio.SDK.Model.Option
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

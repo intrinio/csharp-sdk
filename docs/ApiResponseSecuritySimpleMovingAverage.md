@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecuritySimpleMovingAverage
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecuritySimpleMovingAverage
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetAllFilings)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseFilings)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseFilings)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetAllNotes)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseFilingNotes)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseFilingNotes)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetFilingById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelFiling)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Filing)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetNote)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelFilingNote)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.FilingNote)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:SearchNotes)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseFilingNotesSearch)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseFilingNotesSearch)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

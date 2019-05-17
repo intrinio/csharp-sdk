@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetForexCurrencies)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseForexCurrencies)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseForexCurrencies)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -102,7 +102,7 @@ This endpoint does not need any parameter.
 
 [//]: # (METHOD:GetForexPairs)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseForexPairs)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseForexPairs)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 [//]: # (METHOD:GetForexPrices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseForexPrices)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseForexPrices)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

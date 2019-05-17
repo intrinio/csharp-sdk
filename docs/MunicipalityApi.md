@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetAllMunicipalities)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseMunicipalities)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseMunicipalities)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetMunicipalityById)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelMunicipality)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Municipality)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetMunicipalityFinancials)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseMunicipalitiyFinancials)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseMunicipalitiyFinancials)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

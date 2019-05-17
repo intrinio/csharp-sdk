@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoMovingAverageConvergenceDivergence
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoMovingAverageConvergenceDivergence
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

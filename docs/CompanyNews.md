@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CompanyNews
-### Properties
+### Intrinio.SDK.Model.CompanyNews
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

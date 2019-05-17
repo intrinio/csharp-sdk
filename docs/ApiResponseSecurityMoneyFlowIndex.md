@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityMoneyFlowIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityMoneyFlowIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

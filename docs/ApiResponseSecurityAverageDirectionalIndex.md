@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityTrueStrengthIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityTrueStrengthIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

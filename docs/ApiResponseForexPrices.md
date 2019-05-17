@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseForexPrices
-### Properties
+### Intrinio.SDK.Model.ApiResponseForexPrices
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.MunicipalityFinancial
-### Properties
+### Intrinio.SDK.Model.MunicipalityFinancial
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

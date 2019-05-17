@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.IchimokuKinkoHyoTechnicalValue
-### Properties
+### Intrinio.SDK.Model.IchimokuKinkoHyoTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

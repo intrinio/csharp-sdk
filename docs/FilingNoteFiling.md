@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.FilingNoteFiling
-### Properties
+### Intrinio.SDK.Model.FilingNoteFiling
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ForexPair
-### Properties
+### Intrinio.SDK.Model.ForexPair
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

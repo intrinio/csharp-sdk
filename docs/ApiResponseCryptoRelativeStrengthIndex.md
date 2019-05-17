@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoRelativeStrengthIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoRelativeStrengthIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

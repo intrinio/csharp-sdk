@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoBookEntry
-### Properties
+### Intrinio.SDK.Model.CryptoBookEntry
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

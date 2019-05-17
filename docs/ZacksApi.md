@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetZacksAnalystRatings)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseZacksAnalystRatings)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksAnalystRatings)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetZacksEpsSurprises)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseZacksEPSSurprises)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksEPSSurprises)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetZacksSalesSurprises)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseZacksSalesSurprises)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksSalesSurprises)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

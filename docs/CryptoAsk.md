@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoAsk
-### Properties
+### Intrinio.SDK.Model.CryptoAsk
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

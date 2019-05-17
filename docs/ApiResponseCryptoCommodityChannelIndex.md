@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoCommodityChannelIndex
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoCommodityChannelIndex
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

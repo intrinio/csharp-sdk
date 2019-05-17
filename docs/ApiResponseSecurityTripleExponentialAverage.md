@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityTripleExponentialAverage
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityTripleExponentialAverage
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

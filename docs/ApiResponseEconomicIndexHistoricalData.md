@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseEconomicIndexHistoricalData
-### Properties
+### Intrinio.SDK.Model.ApiResponseEconomicIndexHistoricalData
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

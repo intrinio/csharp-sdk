@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetOptions)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseOptions)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptions)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetOptionsChain)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseOptionsChain)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsChain)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetOptionsExpirations)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseOptionsExpirations)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsExpirations)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetOptionsPrices)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.ModelApiResponseOptionPrices)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionPrices)
 
 [//]: # (RETURN_TYPE_KIND:object)
 

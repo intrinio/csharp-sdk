@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.EaseOfMovementTechnicalValue
-### Properties
+### Intrinio.SDK.Model.EaseOfMovementTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

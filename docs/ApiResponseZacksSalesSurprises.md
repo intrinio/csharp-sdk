@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseZacksSalesSurprises
-### Properties
+### Intrinio.SDK.Model.ApiResponseZacksSalesSurprises
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

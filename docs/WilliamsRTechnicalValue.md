@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.WilliamsRTechnicalValue
-### Properties
+### Intrinio.SDK.Model.WilliamsRTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

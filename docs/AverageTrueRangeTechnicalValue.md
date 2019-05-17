@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.AverageTrueRangeTechnicalValue
-### Properties
+### Intrinio.SDK.Model.AverageTrueRangeTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

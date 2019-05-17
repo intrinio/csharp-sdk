@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSICIndices
-### Properties
+### Intrinio.SDK.Model.ApiResponseSICIndices
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

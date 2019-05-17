@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityWilliamsR
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityWilliamsR
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

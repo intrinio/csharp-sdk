@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityAverageDailyTradingVolume
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityAverageDailyTradingVolume
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

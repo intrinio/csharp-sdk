@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ChaikinMoneyFlowTechnicalValue
-### Properties
+### Intrinio.SDK.Model.ChaikinMoneyFlowTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

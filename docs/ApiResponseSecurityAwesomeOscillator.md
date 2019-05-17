@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityAwesomeOscillator
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityAwesomeOscillator
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

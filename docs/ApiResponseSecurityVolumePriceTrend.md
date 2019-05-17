@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityVolumePriceTrend
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityVolumePriceTrend
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

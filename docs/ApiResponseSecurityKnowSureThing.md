@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityKnowSureThing
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityKnowSureThing
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

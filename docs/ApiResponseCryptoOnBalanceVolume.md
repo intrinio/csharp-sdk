@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoOnBalanceVolume
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoOnBalanceVolume
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

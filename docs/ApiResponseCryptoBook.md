@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoBook
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoBook
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

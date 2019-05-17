@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.RelativeStrengthIndexTechnicalValue
-### Properties
+### Intrinio.SDK.Model.RelativeStrengthIndexTechnicalValue
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

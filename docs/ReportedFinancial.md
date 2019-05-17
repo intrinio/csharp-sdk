@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ReportedFinancial
-### Properties
+### Intrinio.SDK.Model.ReportedFinancial
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

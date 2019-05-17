@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoSnapshot
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoSnapshot
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

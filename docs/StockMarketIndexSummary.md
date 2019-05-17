@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.StockMarketIndexSummary
-### Properties
+### Intrinio.SDK.Model.StockMarketIndexSummary
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

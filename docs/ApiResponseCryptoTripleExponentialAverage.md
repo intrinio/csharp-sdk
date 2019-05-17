@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoTripleExponentialAverage
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoTripleExponentialAverage
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

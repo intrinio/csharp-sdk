@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ReportedTag
-### Properties
+### Intrinio.SDK.Model.ReportedTag
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

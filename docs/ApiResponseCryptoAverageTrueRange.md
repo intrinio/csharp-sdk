@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseCryptoAverageTrueRange
-### Properties
+### Intrinio.SDK.Model.ApiResponseCryptoAverageTrueRange
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

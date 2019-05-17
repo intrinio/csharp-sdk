@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.CryptoCurrency
-### Properties
+### Intrinio.SDK.Model.CryptoCurrency
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

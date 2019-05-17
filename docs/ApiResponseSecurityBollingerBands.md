@@ -1,5 +1,5 @@
-## Intrinio.SDK.Model.ApiResponseSecurityBollingerBands
-### Properties
+### Intrinio.SDK.Model.ApiResponseSecurityBollingerBands
+#### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

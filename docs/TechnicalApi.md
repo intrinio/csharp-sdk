@@ -68,44 +68,15 @@ Method | HTTP request | Description
 [**GetSecurityPriceTechnicalsWr**](TechnicalApi.md#getsecuritypricetechnicalswr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsAdi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAccumulationDistributionIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAccumulationDistributionIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsAdi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/adi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsadi)
-
 <a name="getcryptopricetechnicalsadi"></a>
-## **GetCryptoPriceTechnicalsAdi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAdi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsAdi**
 > ApiResponseCryptoAccumulationDistributionIndex GetCryptoPriceTechnicalsAdi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Accumulation/Distribution Index
+Accumulation/Distribution Index
 
 Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -148,74 +119,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAccumulationDistributionIndex**](ApiResponseCryptoAccumulationDistributionIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsAdtv)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAverageDailyTradingVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAverageDailyTradingVolume.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsAdtv_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/adtv)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsadtv)
-
 <a name="getcryptopricetechnicalsadtv"></a>
-## **GetCryptoPriceTechnicalsAdtv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAdtv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsAdtv**
 > ApiResponseCryptoAverageDailyTradingVolume GetCryptoPriceTechnicalsAdtv (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Average Daily Trading Volume
+Average Daily Trading Volume
 
 Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -259,75 +191,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average Daily Trading Volume. | [optional] [default to 22] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Average Daily Trading Volume. | [optional] [default to 22]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAverageDailyTradingVolume**](ApiResponseCryptoAverageDailyTradingVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsAdx)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAverageDirectionalIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAverageDirectionalIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsAdx_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/adx)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsadx)
-
 <a name="getcryptopricetechnicalsadx"></a>
-## **GetCryptoPriceTechnicalsAdx**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAdx_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsAdx**
 > ApiResponseCryptoAverageDirectionalIndex GetCryptoPriceTechnicalsAdx (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Average Directional Index
+Average Directional Index
 
 Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -371,75 +264,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average Directional Index. | [optional] [default to 22] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Average Directional Index. | [optional] [default to 22]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAverageDirectionalIndex**](ApiResponseCryptoAverageDirectionalIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsAo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAwesomeOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAwesomeOscillator.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsAo_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/ao)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsao)
-
 <a name="getcryptopricetechnicalsao"></a>
-## **GetCryptoPriceTechnicalsAo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsAo**
 > ApiResponseCryptoAwesomeOscillator GetCryptoPriceTechnicalsAo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? longPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Awesome Oscillator
+Awesome Oscillator
 
 Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -484,76 +338,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **shortPeriod** | **int?**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 5] &nbsp;
- **longPeriod** | **int?**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 34] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **shortPeriod** | **int?**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 5]
+ **longPeriod** | **int?**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 34]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAwesomeOscillator**](ApiResponseCryptoAwesomeOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsAtr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoAverageTrueRange)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAverageTrueRange.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsAtr_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/atr)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsatr)
-
 <a name="getcryptopricetechnicalsatr"></a>
-## **GetCryptoPriceTechnicalsAtr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAtr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsAtr**
 > ApiResponseCryptoAverageTrueRange GetCryptoPriceTechnicalsAtr (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Average True Range
+Average True Range
 
 Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -597,75 +412,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average True Range. | [optional] [default to 22] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Average True Range. | [optional] [default to 22]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAverageTrueRange**](ApiResponseCryptoAverageTrueRange.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsBb)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoBollingerBands)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoBollingerBands.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsBb_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/bb)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsbb)
-
 <a name="getcryptopricetechnicalsbb"></a>
-## **GetCryptoPriceTechnicalsBb**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsBb_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsBb**
 > ApiResponseCryptoBollingerBands GetCryptoPriceTechnicalsBb (string pair = null, string exchange = null, string currency = null, int? period = null, float? standardDeviations = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Bollinger Bands
+Bollinger Bands
 
 Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -711,77 +487,38 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Bollinger Bands. | [optional] [default to 20] &nbsp;
- **standardDeviations** | **float?**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. | [optional] [default to 2.0] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating Bollinger Bands. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Bollinger Bands. | [optional] [default to 20]
+ **standardDeviations** | **float?**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. | [optional] [default to 2.0]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating Bollinger Bands. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoBollingerBands**](ApiResponseCryptoBollingerBands.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsCci)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoCommodityChannelIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoCommodityChannelIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsCci_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/cci)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalscci)
-
 <a name="getcryptopricetechnicalscci"></a>
-## **GetCryptoPriceTechnicalsCci**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsCci_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsCci**
 > ApiResponseCryptoCommodityChannelIndex GetCryptoPriceTechnicalsCci (string pair = null, string exchange = null, string currency = null, int? period = null, float? constant = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Commodity Channel Index
+Commodity Channel Index
 
 Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -826,76 +563,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 20] &nbsp;
- **constant** | **float?**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 0.015] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 20]
+ **constant** | **float?**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 0.015]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoCommodityChannelIndex**](ApiResponseCryptoCommodityChannelIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsCmf)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoChaikinMoneyFlow)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoChaikinMoneyFlow.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsCmf_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/cmf)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalscmf)
-
 <a name="getcryptopricetechnicalscmf"></a>
-## **GetCryptoPriceTechnicalsCmf**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsCmf_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsCmf**
 > ApiResponseCryptoChaikinMoneyFlow GetCryptoPriceTechnicalsCmf (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Chaikin Money Flow
+Chaikin Money Flow
 
 Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -939,75 +637,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Chaikin Money Flow. | [optional] [default to 20] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Chaikin Money Flow. | [optional] [default to 20]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoChaikinMoneyFlow**](ApiResponseCryptoChaikinMoneyFlow.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsDc)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoDonchianChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoDonchianChannel.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsDc_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/dc)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsdc)
-
 <a name="getcryptopricetechnicalsdc"></a>
-## **GetCryptoPriceTechnicalsDc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsDc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsDc**
 > ApiResponseCryptoDonchianChannel GetCryptoPriceTechnicalsDc (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Donchian Channel
+Donchian Channel
 
 Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1052,76 +711,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Donchian Channel. | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating Donchian Channel. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Donchian Channel. | [optional] [default to 20]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating Donchian Channel. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoDonchianChannel**](ApiResponseCryptoDonchianChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsDpo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoDetrendedPriceOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoDetrendedPriceOscillator.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsDpo_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/dpo)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsdpo)
-
 <a name="getcryptopricetechnicalsdpo"></a>
-## **GetCryptoPriceTechnicalsDpo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsDpo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsDpo**
 > ApiResponseCryptoDetrendedPriceOscillator GetCryptoPriceTechnicalsDpo (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Detrended Price Oscillator
+Detrended Price Oscillator
 
 Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1166,76 +786,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Detrended Price Oscillator. | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating Detrended Price Oscillator. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Detrended Price Oscillator. | [optional] [default to 20]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating Detrended Price Oscillator. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoDetrendedPriceOscillator**](ApiResponseCryptoDetrendedPriceOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsEom)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoEaseOfMovement)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoEaseOfMovement.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsEom_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/eom)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalseom)
-
 <a name="getcryptopricetechnicalseom"></a>
-## **GetCryptoPriceTechnicalsEom**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsEom_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsEom**
 > ApiResponseCryptoEaseOfMovement GetCryptoPriceTechnicalsEom (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Ease of Movement
+Ease of Movement
 
 Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1279,75 +860,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Ease of Movement. | [optional] [default to 20] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Ease of Movement. | [optional] [default to 20]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoEaseOfMovement**](ApiResponseCryptoEaseOfMovement.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsFi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoForceIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoForceIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsFi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/fi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsfi)
-
 <a name="getcryptopricetechnicalsfi"></a>
-## **GetCryptoPriceTechnicalsFi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsFi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsFi**
 > ApiResponseCryptoForceIndex GetCryptoPriceTechnicalsFi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Force Index
+Force Index
 
 Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1390,74 +932,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoForceIndex**](ApiResponseCryptoForceIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsIchimoku)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoIchimokuKinkoHyo)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoIchimokuKinkoHyo.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsIchimoku_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/ichimoku)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsichimoku)
-
 <a name="getcryptopricetechnicalsichimoku"></a>
-## **GetCryptoPriceTechnicalsIchimoku**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsIchimoku_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsIchimoku**
 > ApiResponseCryptoIchimokuKinkoHyo GetCryptoPriceTechnicalsIchimoku (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Ichimoku Kinko Hyo
+Ichimoku Kinko Hyo
 
 Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1503,77 +1006,38 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **lowPeriod** | **int?**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. | [optional] [default to 9] &nbsp;
- **mediumPeriod** | **int?**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. | [optional] [default to 26] &nbsp;
- **highPeriod** | **int?**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. | [optional] [default to 52] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **lowPeriod** | **int?**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. | [optional] [default to 9]
+ **mediumPeriod** | **int?**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. | [optional] [default to 26]
+ **highPeriod** | **int?**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. | [optional] [default to 52]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoIchimokuKinkoHyo**](ApiResponseCryptoIchimokuKinkoHyo.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsKc)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoKeltnerChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoKeltnerChannel.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsKc_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/kc)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalskc)
-
 <a name="getcryptopricetechnicalskc"></a>
-## **GetCryptoPriceTechnicalsKc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsKc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsKc**
 > ApiResponseCryptoKeltnerChannel GetCryptoPriceTechnicalsKc (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Keltner Channel
+Keltner Channel
 
 Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1617,75 +1081,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Kelter Channel. | [optional] [default to 10] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Kelter Channel. | [optional] [default to 10]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoKeltnerChannel**](ApiResponseCryptoKeltnerChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsKst)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoKnowSureThing)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoKnowSureThing.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsKst_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/kst)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalskst)
-
 <a name="getcryptopricetechnicalskst"></a>
-## **GetCryptoPriceTechnicalsKst**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsKst_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsKst**
 > ApiResponseCryptoKnowSureThing GetCryptoPriceTechnicalsKst (string pair = null, string exchange = null, string currency = null, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Know Sure Thing
+Know Sure Thing
 
 Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1737,83 +1162,44 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **roc1** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA1. | [optional] [default to 10] &nbsp;
- **roc2** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA2. | [optional] [default to 15] &nbsp;
- **roc3** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA3. | [optional] [default to 20] &nbsp;
- **roc4** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA4. | [optional] [default to 30] &nbsp;
- **sma1** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. | [optional] [default to 10] &nbsp;
- **sma2** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. | [optional] [default to 10] &nbsp;
- **sma3** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. | [optional] [default to 10] &nbsp;
- **sma4** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. | [optional] [default to 15] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating Know Sure Thing. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **roc1** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA1. | [optional] [default to 10]
+ **roc2** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA2. | [optional] [default to 15]
+ **roc3** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA3. | [optional] [default to 20]
+ **roc4** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA4. | [optional] [default to 30]
+ **sma1** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. | [optional] [default to 10]
+ **sma2** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. | [optional] [default to 10]
+ **sma3** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. | [optional] [default to 10]
+ **sma4** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. | [optional] [default to 15]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating Know Sure Thing. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoKnowSureThing**](ApiResponseCryptoKnowSureThing.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsMacd)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoMovingAverageConvergenceDivergence)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoMovingAverageConvergenceDivergence.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsMacd_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/macd)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsmacd)
-
 <a name="getcryptopricetechnicalsmacd"></a>
-## **GetCryptoPriceTechnicalsMacd**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsMacd_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsMacd**
 > ApiResponseCryptoMovingAverageConvergenceDivergence GetCryptoPriceTechnicalsMacd (string pair = null, string exchange = null, string currency = null, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Moving Average Convergence Divergence
+Moving Average Convergence Divergence
 
 Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1860,78 +1246,39 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **fastPeriod** | **int?**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 12] &nbsp;
- **slowPeriod** | **int?**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 26] &nbsp;
- **signalPeriod** | **int?**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. | [optional] [default to 9] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **fastPeriod** | **int?**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 12]
+ **slowPeriod** | **int?**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 26]
+ **signalPeriod** | **int?**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. | [optional] [default to 9]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoMovingAverageConvergenceDivergence**](ApiResponseCryptoMovingAverageConvergenceDivergence.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsMfi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoMoneyFlowIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoMoneyFlowIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsMfi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/mfi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsmfi)
-
 <a name="getcryptopricetechnicalsmfi"></a>
-## **GetCryptoPriceTechnicalsMfi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsMfi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsMfi**
 > ApiResponseCryptoMoneyFlowIndex GetCryptoPriceTechnicalsMfi (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Money Flow Index
+Money Flow Index
 
 Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1975,75 +1322,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Money Flow Index. | [optional] [default to 14] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Money Flow Index. | [optional] [default to 14]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoMoneyFlowIndex**](ApiResponseCryptoMoneyFlowIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsMi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoMassIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoMassIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsMi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/mi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsmi)
-
 <a name="getcryptopricetechnicalsmi"></a>
-## **GetCryptoPriceTechnicalsMi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsMi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsMi**
 > ApiResponseCryptoMassIndex GetCryptoPriceTechnicalsMi (string pair = null, string exchange = null, string currency = null, int? emaPeriod = null, int? sumPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Mass Index
+Mass Index
 
 Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2088,76 +1396,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **emaPeriod** | **int?**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. | [optional] [default to 9] &nbsp;
- **sumPeriod** | **int?**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. | [optional] [default to 25] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **emaPeriod** | **int?**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. | [optional] [default to 9]
+ **sumPeriod** | **int?**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. | [optional] [default to 25]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoMassIndex**](ApiResponseCryptoMassIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsNvi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoNegativeVolumeIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoNegativeVolumeIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsNvi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/nvi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsnvi)
-
 <a name="getcryptopricetechnicalsnvi"></a>
-## **GetCryptoPriceTechnicalsNvi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsNvi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsNvi**
 > ApiResponseCryptoNegativeVolumeIndex GetCryptoPriceTechnicalsNvi (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Negative Volume Index
+Negative Volume Index
 
 Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2200,74 +1469,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoNegativeVolumeIndex**](ApiResponseCryptoNegativeVolumeIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsObv)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoOnBalanceVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoOnBalanceVolume.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsObv_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/obv)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsobv)
-
 <a name="getcryptopricetechnicalsobv"></a>
-## **GetCryptoPriceTechnicalsObv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsObv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsObv**
 > ApiResponseCryptoOnBalanceVolume GetCryptoPriceTechnicalsObv (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### On-balance Volume
+On-balance Volume
 
 Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2310,74 +1540,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoOnBalanceVolume**](ApiResponseCryptoOnBalanceVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsObvMean)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoOnBalanceVolumeMean)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoOnBalanceVolumeMean.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsObvMean_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/obv_mean)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsobvmean)
-
 <a name="getcryptopricetechnicalsobvmean"></a>
-## **GetCryptoPriceTechnicalsObvMean**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsObvMean_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsObvMean**
 > ApiResponseCryptoOnBalanceVolumeMean GetCryptoPriceTechnicalsObvMean (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### On-balance Volume Mean
+On-balance Volume Mean
 
 Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2421,75 +1612,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate On-balance Volume Mean. | [optional] [default to 10] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate On-balance Volume Mean. | [optional] [default to 10]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoOnBalanceVolumeMean**](ApiResponseCryptoOnBalanceVolumeMean.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsRsi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoRelativeStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoRelativeStrengthIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsRsi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/rsi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsrsi)
-
 <a name="getcryptopricetechnicalsrsi"></a>
-## **GetCryptoPriceTechnicalsRsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsRsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsRsi**
 > ApiResponseCryptoRelativeStrengthIndex GetCryptoPriceTechnicalsRsi (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Relative Strength Index
+Relative Strength Index
 
 Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2534,76 +1686,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Relative Strength Index. | [optional] [default to 14] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating Relative Strength Index. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Relative Strength Index. | [optional] [default to 14]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating Relative Strength Index. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoRelativeStrengthIndex**](ApiResponseCryptoRelativeStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsSma)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoSimpleMovingAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoSimpleMovingAverage.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsSma_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/sma)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalssma)
-
 <a name="getcryptopricetechnicalssma"></a>
-## **GetCryptoPriceTechnicalsSma**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsSma_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsSma**
 > ApiResponseCryptoSimpleMovingAverage GetCryptoPriceTechnicalsSma (string pair = null, string exchange = null, string currency = null, int? period = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Simple Moving Average
+Simple Moving Average
 
 Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2648,76 +1761,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Simple Moving Average. | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating Simple Moving Average. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Simple Moving Average. | [optional] [default to 20]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating Simple Moving Average. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoSimpleMovingAverage**](ApiResponseCryptoSimpleMovingAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsSr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoStochasticOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoStochasticOscillator.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsSr_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/sr)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalssr)
-
 <a name="getcryptopricetechnicalssr"></a>
-## **GetCryptoPriceTechnicalsSr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsSr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsSr**
 > ApiResponseCryptoStochasticOscillator GetCryptoPriceTechnicalsSr (string pair = null, string exchange = null, string currency = null, int? period = null, int? signalPeriod = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Stochastic Oscillator
+Stochastic Oscillator
 
 Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2762,76 +1836,37 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate %K of Stochastic Oscillator. | [optional] [default to 14] &nbsp;
- **signalPeriod** | **int?**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. | [optional] [default to 3] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate %K of Stochastic Oscillator. | [optional] [default to 14]
+ **signalPeriod** | **int?**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. | [optional] [default to 3]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoStochasticOscillator**](ApiResponseCryptoStochasticOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsTrix)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoTripleExponentialAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoTripleExponentialAverage.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsTrix_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/trix)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalstrix)
-
 <a name="getcryptopricetechnicalstrix"></a>
-## **GetCryptoPriceTechnicalsTrix**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsTrix_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsTrix**
 > ApiResponseCryptoTripleExponentialAverage GetCryptoPriceTechnicalsTrix (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Triple Exponential Average
+Triple Exponential Average
 
 Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2875,75 +1910,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. | [optional] [default to 15] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. | [optional] [default to 15]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoTripleExponentialAverage**](ApiResponseCryptoTripleExponentialAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsTsi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoTrueStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoTrueStrengthIndex.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsTsi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/tsi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalstsi)
-
 <a name="getcryptopricetechnicalstsi"></a>
-## **GetCryptoPriceTechnicalsTsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsTsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsTsi**
 > ApiResponseCryptoTrueStrengthIndex GetCryptoPriceTechnicalsTsi (string pair = null, string exchange = null, string currency = null, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### True Strength Index
+True Strength Index
 
 Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2989,77 +1985,38 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **lowPeriod** | **int?**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 13] &nbsp;
- **highPeriod** | **int?**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 25] &nbsp;
- **priceKey** | **string**| The Crypto Currency Price field to use when calculating True Strength Index. | [optional] [default to close] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **lowPeriod** | **int?**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 13]
+ **highPeriod** | **int?**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 25]
+ **priceKey** | **string**| The Crypto Currency Price field to use when calculating True Strength Index. | [optional] [default to close]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoTrueStrengthIndex**](ApiResponseCryptoTrueStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsUo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoUltimateOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoUltimateOscillator.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsUo_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/uo)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsuo)
-
 <a name="getcryptopricetechnicalsuo"></a>
-## **GetCryptoPriceTechnicalsUo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsUo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsUo**
 > ApiResponseCryptoUltimateOscillator GetCryptoPriceTechnicalsUo (string pair = null, string exchange = null, string currency = null, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Ultimate Oscillator
+Ultimate Oscillator
 
 Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3108,80 +2065,41 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **shortPeriod** | **int?**| The number of observations, per period, to calculate the short period for Ultimate Oscillator. | [optional] [default to 7] &nbsp;
- **mediumPeriod** | **int?**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator. | [optional] [default to 14] &nbsp;
- **longPeriod** | **int?**| The number of observations, per period, to calculate the long period for Ultimate Oscillator. | [optional] [default to 28] &nbsp;
- **shortWeight** | **float?**| The weight of short Buying Pressure average for Ultimate Oscillator. | [optional] [default to 4.0] &nbsp;
- **mediumWeight** | **float?**| The weight of medium Buying Pressure average for Ultimate Oscillator. | [optional] [default to 2.0] &nbsp;
- **longWeight** | **float?**| The weight of long Buying Pressure average for Ultimate Oscillator. | [optional] [default to 1.0] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **shortPeriod** | **int?**| The number of observations, per period, to calculate the short period for Ultimate Oscillator. | [optional] [default to 7]
+ **mediumPeriod** | **int?**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator. | [optional] [default to 14]
+ **longPeriod** | **int?**| The number of observations, per period, to calculate the long period for Ultimate Oscillator. | [optional] [default to 28]
+ **shortWeight** | **float?**| The weight of short Buying Pressure average for Ultimate Oscillator. | [optional] [default to 4.0]
+ **mediumWeight** | **float?**| The weight of medium Buying Pressure average for Ultimate Oscillator. | [optional] [default to 2.0]
+ **longWeight** | **float?**| The weight of long Buying Pressure average for Ultimate Oscillator. | [optional] [default to 1.0]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoUltimateOscillator**](ApiResponseCryptoUltimateOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsVi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoVortexIndicator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoVortexIndicator.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsVi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/vi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsvi)
-
 <a name="getcryptopricetechnicalsvi"></a>
-## **GetCryptoPriceTechnicalsVi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsVi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsVi**
 > ApiResponseCryptoVortexIndicator GetCryptoPriceTechnicalsVi (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Vortex Indicator
+Vortex Indicator
 
 Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3225,75 +2143,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Vortex Indicator. | [optional] [default to 14] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to calculate Vortex Indicator. | [optional] [default to 14]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoVortexIndicator**](ApiResponseCryptoVortexIndicator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsVpt)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoVolumePriceTrend)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoVolumePriceTrend.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsVpt_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/vpt)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsvpt)
-
 <a name="getcryptopricetechnicalsvpt"></a>
-## **GetCryptoPriceTechnicalsVpt**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsVpt_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsVpt**
 > ApiResponseCryptoVolumePriceTrend GetCryptoPriceTechnicalsVpt (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Volume-price Trend
+Volume-price Trend
 
 Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3336,74 +2215,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoVolumePriceTrend**](ApiResponseCryptoVolumePriceTrend.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsVwap)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoVolumeWeightedAveragePrice)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoVolumeWeightedAveragePrice.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsVwap_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/vwap)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalsvwap)
-
 <a name="getcryptopricetechnicalsvwap"></a>
-## **GetCryptoPriceTechnicalsVwap**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsVwap_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsVwap**
 > ApiResponseCryptoVolumeWeightedAveragePrice GetCryptoPriceTechnicalsVwap (string pair = null, string exchange = null, string currency = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Volume Weighted Average Price
+Volume Weighted Average Price
 
 Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3446,74 +2286,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoVolumeWeightedAveragePrice**](ApiResponseCryptoVolumeWeightedAveragePrice.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetCryptoPriceTechnicalsWr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCryptoWilliamsR)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoWilliamsR.md)
-
-[//]: # (OPERATION:GetCryptoPriceTechnicalsWr_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/wr)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getcryptopricetechnicalswr)
-
 <a name="getcryptopricetechnicalswr"></a>
-## **GetCryptoPriceTechnicalsWr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsWr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetCryptoPriceTechnicalsWr**
 > ApiResponseCryptoWilliamsR GetCryptoPriceTechnicalsWr (string pair = null, string exchange = null, string currency = null, int? period = null, string timeframe = null, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
-#### Williams %R
+Williams %R
 
 Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3557,75 +2358,36 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **string**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **int?**| The number of observations, per period, to look-back when calculating Williams %R. | [optional] [default to 14] &nbsp;
- **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **startDate** | **DateTime?**| Return technicals on or after this date. | [optional]  &nbsp;
- **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return technicals on or before this date. | [optional]  &nbsp;
- **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **string**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **string**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **string**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **int?**| The number of observations, per period, to look-back when calculating Williams %R. | [optional] [default to 14]
+ **timeframe** | **string**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **string**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **startDate** | **DateTime?**| Return technicals on or after this date. | [optional] 
+ **startTime** | **string**| Return technicals at or after this time (24-hour). | [optional] 
+ **endDate** | **DateTime?**| Return technicals on or before this date. | [optional] 
+ **endTime** | **string**| Return technicals at or before this time (24-hour). | [optional] 
+ **pageSize** | **int?**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoWilliamsR**](ApiResponseCryptoWilliamsR.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAdi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAccumulationDistributionIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAccumulationDistributionIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAdi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsadi)
-
 <a name="getsecuritypricetechnicalsadi"></a>
-## **GetSecurityPriceTechnicalsAdi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAdi**
 > ApiResponseSecurityAccumulationDistributionIndex GetSecurityPriceTechnicalsAdi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Accumulation/Distribution Index
+Accumulation/Distribution Index
 
 Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3662,68 +2424,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAccumulationDistributionIndex**](ApiResponseSecurityAccumulationDistributionIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAdtv)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageDailyTradingVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAverageDailyTradingVolume.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAdtv_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adtv)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsadtv)
-
 <a name="getsecuritypricetechnicalsadtv"></a>
-## **GetSecurityPriceTechnicalsAdtv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdtv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAdtv**
 > ApiResponseSecurityAverageDailyTradingVolume GetSecurityPriceTechnicalsAdtv (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Average Daily Trading Volume
+Average Daily Trading Volume
 
 Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3761,69 +2484,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average Daily Trading Volume | [optional] [default to 22] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Average Daily Trading Volume | [optional] [default to 22]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAverageDailyTradingVolume**](ApiResponseSecurityAverageDailyTradingVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAdx)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAverageDirectionalIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAdx_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adx)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsadx)
-
 <a name="getsecuritypricetechnicalsadx"></a>
-## **GetSecurityPriceTechnicalsAdx**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdx_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAdx**
 > ApiResponseSecurityAverageDirectionalIndex GetSecurityPriceTechnicalsAdx (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Average Directional Index
+Average Directional Index
 
 Returns the Average Directional Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3861,69 +2545,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average Directional Index | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Average Directional Index | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAverageDirectionalIndex**](ApiResponseSecurityAverageDirectionalIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAwesomeOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAwesomeOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAo_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ao)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsao)
-
 <a name="getsecuritypricetechnicalsao"></a>
-## **GetSecurityPriceTechnicalsAo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAo**
 > ApiResponseSecurityAwesomeOscillator GetSecurityPriceTechnicalsAo (string identifier, int? shortPeriod = null, int? longPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Awesome Oscillator
+Awesome Oscillator
 
 Returns the Awesome Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3962,70 +2607,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | **int?**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5] &nbsp;
- **longPeriod** | **int?**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **shortPeriod** | **int?**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5]
+ **longPeriod** | **int?**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAwesomeOscillator**](ApiResponseSecurityAwesomeOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAtr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageTrueRange)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAverageTrueRange.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAtr_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/atr)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsatr)
-
 <a name="getsecuritypricetechnicalsatr"></a>
-## **GetSecurityPriceTechnicalsAtr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAtr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAtr**
 > ApiResponseSecurityAverageTrueRange GetSecurityPriceTechnicalsAtr (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Average True Range
+Average True Range
 
 Returns the Average True Range values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4063,69 +2669,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average True Range | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Average True Range | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAverageTrueRange**](ApiResponseSecurityAverageTrueRange.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsBb)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityBollingerBands)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityBollingerBands.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsBb_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/bb)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsbb)
-
 <a name="getsecuritypricetechnicalsbb"></a>
-## **GetSecurityPriceTechnicalsBb**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsBb_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsBb**
 > ApiResponseSecurityBollingerBands GetSecurityPriceTechnicalsBb (string identifier, int? period = null, float? standardDeviations = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Bollinger Bands
+Bollinger Bands
 
 Returns the Bollinger Bands values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4165,71 +2732,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Bollinger Bands | [optional] [default to 20] &nbsp;
- **standardDeviations** | **float?**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands | [optional] [default to 2.0] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Bollinger Bands | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Bollinger Bands | [optional] [default to 20]
+ **standardDeviations** | **float?**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands | [optional] [default to 2.0]
+ **priceKey** | **string**| The Stock Price field to use when calculating Bollinger Bands | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityBollingerBands**](ApiResponseSecurityBollingerBands.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsCci)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityCommodityChannelIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityCommodityChannelIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsCci_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cci)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalscci)
-
 <a name="getsecuritypricetechnicalscci"></a>
-## **GetSecurityPriceTechnicalsCci**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCci_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsCci**
 > ApiResponseSecurityCommodityChannelIndex GetSecurityPriceTechnicalsCci (string identifier, int? period = null, float? constant = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Commodity Channel Index
+Commodity Channel Index
 
 Returns the Commodity Channel Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4268,70 +2796,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 20] &nbsp;
- **constant** | **float?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 0.015] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 20]
+ **constant** | **float?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 0.015]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityCommodityChannelIndex**](ApiResponseSecurityCommodityChannelIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsCmf)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityChaikinMoneyFlow)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityChaikinMoneyFlow.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsCmf_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cmf)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalscmf)
-
 <a name="getsecuritypricetechnicalscmf"></a>
-## **GetSecurityPriceTechnicalsCmf**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCmf_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsCmf**
 > ApiResponseSecurityChaikinMoneyFlow GetSecurityPriceTechnicalsCmf (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Chaikin Money Flow
+Chaikin Money Flow
 
 Returns the Chaikin Money Flow values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4369,69 +2858,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Chaikin Money Flow | [optional] [default to 20] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Chaikin Money Flow | [optional] [default to 20]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityChaikinMoneyFlow**](ApiResponseSecurityChaikinMoneyFlow.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsDc)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityDonchianChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityDonchianChannel.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsDc_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dc)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsdc)
-
 <a name="getsecuritypricetechnicalsdc"></a>
-## **GetSecurityPriceTechnicalsDc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsDc**
 > ApiResponseSecurityDonchianChannel GetSecurityPriceTechnicalsDc (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Donchian Channel
+Donchian Channel
 
 Returns the Donchian Channel values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4470,70 +2920,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Donchian Channel | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Donchian Channel | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Donchian Channel | [optional] [default to 20]
+ **priceKey** | **string**| The Stock Price field to use when calculating Donchian Channel | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityDonchianChannel**](ApiResponseSecurityDonchianChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsDpo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityDetrendedPriceOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityDetrendedPriceOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsDpo_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dpo)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsdpo)
-
 <a name="getsecuritypricetechnicalsdpo"></a>
-## **GetSecurityPriceTechnicalsDpo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDpo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsDpo**
 > ApiResponseSecurityDetrendedPriceOscillator GetSecurityPriceTechnicalsDpo (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Detrended Price Oscillator
+Detrended Price Oscillator
 
 Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4572,70 +2983,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Detrended Price Oscillator | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Detrended Price Oscillator | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Detrended Price Oscillator | [optional] [default to 20]
+ **priceKey** | **string**| The Stock Price field to use when calculating Detrended Price Oscillator | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityDetrendedPriceOscillator**](ApiResponseSecurityDetrendedPriceOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsEom)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityEaseOfMovement)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityEaseOfMovement.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsEom_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/eom)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalseom)
-
 <a name="getsecuritypricetechnicalseom"></a>
-## **GetSecurityPriceTechnicalsEom**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsEom_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsEom**
 > ApiResponseSecurityEaseOfMovement GetSecurityPriceTechnicalsEom (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Ease of Movement
+Ease of Movement
 
 Returns the Ease of Movement values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4673,69 +3045,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Ease of Movement | [optional] [default to 20] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Ease of Movement | [optional] [default to 20]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityEaseOfMovement**](ApiResponseSecurityEaseOfMovement.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsFi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityForceIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityForceIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsFi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/fi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsfi)
-
 <a name="getsecuritypricetechnicalsfi"></a>
-## **GetSecurityPriceTechnicalsFi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsFi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsFi**
 > ApiResponseSecurityForceIndex GetSecurityPriceTechnicalsFi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Force Index
+Force Index
 
 Returns the Force Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4772,68 +3105,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityForceIndex**](ApiResponseSecurityForceIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsIchimoku)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityIchimokuKinkoHyo)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityIchimokuKinkoHyo.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsIchimoku_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ichimoku)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsichimoku)
-
 <a name="getsecuritypricetechnicalsichimoku"></a>
-## **GetSecurityPriceTechnicalsIchimoku**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsIchimoku_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsIchimoku**
 > ApiResponseSecurityIchimokuKinkoHyo GetSecurityPriceTechnicalsIchimoku (string identifier, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Ichimoku Kinko Hyo
+Ichimoku Kinko Hyo
 
 Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4873,71 +3167,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | **int?**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9] &nbsp;
- **mediumPeriod** | **int?**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26] &nbsp;
- **highPeriod** | **int?**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **lowPeriod** | **int?**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9]
+ **mediumPeriod** | **int?**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26]
+ **highPeriod** | **int?**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityIchimokuKinkoHyo**](ApiResponseSecurityIchimokuKinkoHyo.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsKc)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityKeltnerChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityKeltnerChannel.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsKc_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kc)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalskc)
-
 <a name="getsecuritypricetechnicalskc"></a>
-## **GetSecurityPriceTechnicalsKc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsKc**
 > ApiResponseSecurityKeltnerChannel GetSecurityPriceTechnicalsKc (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Keltner Channel
+Keltner Channel
 
 Returns the Keltner Channel values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4975,69 +3230,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Kelter Channel | [optional] [default to 10] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Kelter Channel | [optional] [default to 10]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityKeltnerChannel**](ApiResponseSecurityKeltnerChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsKst)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityKnowSureThing)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityKnowSureThing.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsKst_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kst)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalskst)
-
 <a name="getsecuritypricetechnicalskst"></a>
-## **GetSecurityPriceTechnicalsKst**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKst_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsKst**
 > ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Know Sure Thing
+Know Sure Thing
 
 Returns the Know Sure Thing values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5083,77 +3299,38 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **roc1** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **roc2** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15] &nbsp;
- **roc3** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20] &nbsp;
- **roc4** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30] &nbsp;
- **sma1** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **sma2** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10] &nbsp;
- **sma3** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10] &nbsp;
- **sma4** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Know Sure Thing | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **roc1** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA1 | [optional] [default to 10]
+ **roc2** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15]
+ **roc3** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20]
+ **roc4** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30]
+ **sma1** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10]
+ **sma2** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10]
+ **sma3** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10]
+ **sma4** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15]
+ **priceKey** | **string**| The Stock Price field to use when calculating Know Sure Thing | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityKnowSureThing**](ApiResponseSecurityKnowSureThing.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsMacd)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMovingAverageConvergenceDivergence)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityMovingAverageConvergenceDivergence.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsMacd_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/macd)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsmacd)
-
 <a name="getsecuritypricetechnicalsmacd"></a>
-## **GetSecurityPriceTechnicalsMacd**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMacd_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsMacd**
 > ApiResponseSecurityMovingAverageConvergenceDivergence GetSecurityPriceTechnicalsMacd (string identifier, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Moving Average Convergence Divergence
+Moving Average Convergence Divergence
 
 Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5194,72 +3371,33 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **fastPeriod** | **int?**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12] &nbsp;
- **slowPeriod** | **int?**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26] &nbsp;
- **signalPeriod** | **int?**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Moving Average Convergence Divergence | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **fastPeriod** | **int?**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12]
+ **slowPeriod** | **int?**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26]
+ **signalPeriod** | **int?**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9]
+ **priceKey** | **string**| The Stock Price field to use when calculating Moving Average Convergence Divergence | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityMovingAverageConvergenceDivergence**](ApiResponseSecurityMovingAverageConvergenceDivergence.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsMfi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMoneyFlowIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityMoneyFlowIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsMfi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mfi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsmfi)
-
 <a name="getsecuritypricetechnicalsmfi"></a>
-## **GetSecurityPriceTechnicalsMfi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMfi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsMfi**
 > ApiResponseSecurityMoneyFlowIndex GetSecurityPriceTechnicalsMfi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Money Flow Index
+Money Flow Index
 
 Returns the Money Flow Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5297,69 +3435,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Money Flow Index | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Money Flow Index | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityMoneyFlowIndex**](ApiResponseSecurityMoneyFlowIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsMi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMassIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityMassIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsMi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsmi)
-
 <a name="getsecuritypricetechnicalsmi"></a>
-## **GetSecurityPriceTechnicalsMi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsMi**
 > ApiResponseSecurityMassIndex GetSecurityPriceTechnicalsMi (string identifier, int? emaPeriod = null, int? sumPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Mass Index
+Mass Index
 
 Returns the Mass Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5398,70 +3497,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **emaPeriod** | **int?**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9] &nbsp;
- **sumPeriod** | **int?**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **emaPeriod** | **int?**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9]
+ **sumPeriod** | **int?**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityMassIndex**](ApiResponseSecurityMassIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsNvi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityNegativeVolumeIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityNegativeVolumeIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsNvi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/nvi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsnvi)
-
 <a name="getsecuritypricetechnicalsnvi"></a>
-## **GetSecurityPriceTechnicalsNvi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsNvi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsNvi**
 > ApiResponseSecurityNegativeVolumeIndex GetSecurityPriceTechnicalsNvi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Negative Volume Index
+Negative Volume Index
 
 Returns the Negative Volume Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5498,68 +3558,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityNegativeVolumeIndex**](ApiResponseSecurityNegativeVolumeIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsObv)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityOnBalanceVolume.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsObv_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsobv)
-
 <a name="getsecuritypricetechnicalsobv"></a>
-## **GetSecurityPriceTechnicalsObv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsObv**
 > ApiResponseSecurityOnBalanceVolume GetSecurityPriceTechnicalsObv (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### On-balance Volume
+On-balance Volume
 
 Returns the On-balance Volume values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5596,68 +3617,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityOnBalanceVolume**](ApiResponseSecurityOnBalanceVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsObvMean)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolumeMean)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityOnBalanceVolumeMean.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsObvMean_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv_mean)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsobvmean)
-
 <a name="getsecuritypricetechnicalsobvmean"></a>
-## **GetSecurityPriceTechnicalsObvMean**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObvMean_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsObvMean**
 > ApiResponseSecurityOnBalanceVolumeMean GetSecurityPriceTechnicalsObvMean (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### On-balance Volume Mean
+On-balance Volume Mean
 
 Returns the On-balance Volume Mean values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5695,69 +3677,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate On-balance Volume Mean | [optional] [default to 10] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate On-balance Volume Mean | [optional] [default to 10]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityOnBalanceVolumeMean**](ApiResponseSecurityOnBalanceVolumeMean.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsRsi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityRelativeStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityRelativeStrengthIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsRsi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/rsi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsrsi)
-
 <a name="getsecuritypricetechnicalsrsi"></a>
-## **GetSecurityPriceTechnicalsRsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsRsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsRsi**
 > ApiResponseSecurityRelativeStrengthIndex GetSecurityPriceTechnicalsRsi (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Relative Strength Index
+Relative Strength Index
 
 Returns the Relative Strength Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5796,70 +3739,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Relative Strength Index | [optional] [default to 14] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Relative Strength Index | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Relative Strength Index | [optional] [default to 14]
+ **priceKey** | **string**| The Stock Price field to use when calculating Relative Strength Index | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityRelativeStrengthIndex**](ApiResponseSecurityRelativeStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsSma)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritySimpleMovingAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritySimpleMovingAverage.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsSma_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sma)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalssma)
-
 <a name="getsecuritypricetechnicalssma"></a>
-## **GetSecurityPriceTechnicalsSma**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSma_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsSma**
 > ApiResponseSecuritySimpleMovingAverage GetSecurityPriceTechnicalsSma (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Simple Moving Average
+Simple Moving Average
 
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -5898,70 +3802,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Simple Moving Average | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Simple Moving Average | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Simple Moving Average | [optional] [default to 20]
+ **priceKey** | **string**| The Stock Price field to use when calculating Simple Moving Average | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecuritySimpleMovingAverage**](ApiResponseSecuritySimpleMovingAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsSr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityStochasticOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStochasticOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsSr_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sr)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalssr)
-
 <a name="getsecuritypricetechnicalssr"></a>
-## **GetSecurityPriceTechnicalsSr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsSr**
 > ApiResponseSecurityStochasticOscillator GetSecurityPriceTechnicalsSr (string identifier, int? period = null, int? signalPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Stochastic Oscillator
+Stochastic Oscillator
 
 Returns the Stochastic Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6000,70 +3865,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate %K of Stochastic Oscillator | [optional] [default to 14] &nbsp;
- **signalPeriod** | **int?**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate %K of Stochastic Oscillator | [optional] [default to 14]
+ **signalPeriod** | **int?**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityStochasticOscillator**](ApiResponseSecurityStochasticOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsTrix)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTripleExponentialAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTripleExponentialAverage.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsTrix_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/trix)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalstrix)
-
 <a name="getsecuritypricetechnicalstrix"></a>
-## **GetSecurityPriceTechnicalsTrix**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTrix_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsTrix**
 > ApiResponseSecurityTripleExponentialAverage GetSecurityPriceTechnicalsTrix (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Triple Exponential Average
+Triple Exponential Average
 
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6101,69 +3927,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityTripleExponentialAverage**](ApiResponseSecurityTripleExponentialAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsTsi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTrueStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTrueStrengthIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsTsi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/tsi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalstsi)
-
 <a name="getsecuritypricetechnicalstsi"></a>
-## **GetSecurityPriceTechnicalsTsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsTsi**
 > ApiResponseSecurityTrueStrengthIndex GetSecurityPriceTechnicalsTsi (string identifier, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### True Strength Index
+True Strength Index
 
 Returns the True Strength Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6203,71 +3990,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | **int?**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13] &nbsp;
- **highPeriod** | **int?**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating True Strength Index | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **lowPeriod** | **int?**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13]
+ **highPeriod** | **int?**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25]
+ **priceKey** | **string**| The Stock Price field to use when calculating True Strength Index | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityTrueStrengthIndex**](ApiResponseSecurityTrueStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsUo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityUltimateOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityUltimateOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsUo_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/uo)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsuo)
-
 <a name="getsecuritypricetechnicalsuo"></a>
-## **GetSecurityPriceTechnicalsUo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsUo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsUo**
 > ApiResponseSecurityUltimateOscillator GetSecurityPriceTechnicalsUo (string identifier, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Ultimate Oscillator
+Ultimate Oscillator
 
 Returns the Ultimate Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6310,74 +4058,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | **int?**| The number of observations, per period, to calculate the short period for Ultimate Oscillator | [optional] [default to 7] &nbsp;
- **mediumPeriod** | **int?**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator | [optional] [default to 14] &nbsp;
- **longPeriod** | **int?**| The number of observations, per period, to calculate the long period for Ultimate Oscillator | [optional] [default to 28] &nbsp;
- **shortWeight** | **float?**| The weight of short Buying Pressure average for Ultimate Oscillator | [optional] [default to 4.0] &nbsp;
- **mediumWeight** | **float?**| The weight of medium Buying Pressure average for Ultimate Oscillator | [optional] [default to 2.0] &nbsp;
- **longWeight** | **float?**| The weight of long Buying Pressure average for Ultimate Oscillator | [optional] [default to 1.0] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **shortPeriod** | **int?**| The number of observations, per period, to calculate the short period for Ultimate Oscillator | [optional] [default to 7]
+ **mediumPeriod** | **int?**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator | [optional] [default to 14]
+ **longPeriod** | **int?**| The number of observations, per period, to calculate the long period for Ultimate Oscillator | [optional] [default to 28]
+ **shortWeight** | **float?**| The weight of short Buying Pressure average for Ultimate Oscillator | [optional] [default to 4.0]
+ **mediumWeight** | **float?**| The weight of medium Buying Pressure average for Ultimate Oscillator | [optional] [default to 2.0]
+ **longWeight** | **float?**| The weight of long Buying Pressure average for Ultimate Oscillator | [optional] [default to 1.0]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityUltimateOscillator**](ApiResponseSecurityUltimateOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsVi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVortexIndicator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityVortexIndicator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsVi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vi)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsvi)
-
 <a name="getsecuritypricetechnicalsvi"></a>
-## **GetSecurityPriceTechnicalsVi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsVi**
 > ApiResponseSecurityVortexIndicator GetSecurityPriceTechnicalsVi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Vortex Indicator
+Vortex Indicator
 
 Returns the Vortex Indicator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6415,69 +4124,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Vortex Indicator | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Vortex Indicator | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityVortexIndicator**](ApiResponseSecurityVortexIndicator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsVpt)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVolumePriceTrend)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityVolumePriceTrend.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsVpt_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vpt)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsvpt)
-
 <a name="getsecuritypricetechnicalsvpt"></a>
-## **GetSecurityPriceTechnicalsVpt**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVpt_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsVpt**
 > ApiResponseSecurityVolumePriceTrend GetSecurityPriceTechnicalsVpt (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Volume-price Trend
+Volume-price Trend
 
 Returns the Volume-price Trend values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6514,68 +4184,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityVolumePriceTrend**](ApiResponseSecurityVolumePriceTrend.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsVwap)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVolumeWeightedAveragePrice)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityVolumeWeightedAveragePrice.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsVwap_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vwap)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalsvwap)
-
 <a name="getsecuritypricetechnicalsvwap"></a>
-## **GetSecurityPriceTechnicalsVwap**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVwap_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsVwap**
 > ApiResponseSecurityVolumeWeightedAveragePrice GetSecurityPriceTechnicalsVwap (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Volume Weighted Average Price
+Volume Weighted Average Price
 
 Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6612,68 +4243,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityVolumeWeightedAveragePrice**](ApiResponseSecurityVolumeWeightedAveragePrice.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.TechnicalApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsWr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityWilliamsR)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityWilliamsR.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsWr_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/wr)
-
-[//]: # (DOCUMENT_LINK:TechnicalApi.md#getsecuritypricetechnicalswr)
-
 <a name="getsecuritypricetechnicalswr"></a>
-## **GetSecurityPriceTechnicalsWr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsWr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsWr**
 > ApiResponseSecurityWilliamsR GetSecurityPriceTechnicalsWr (string identifier, int? period = null, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
 
-#### Williams %R
+Williams %R
 
 Returns the Williams %R values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -6711,28 +4303,18 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to look-back when calculating Williams %R | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to look-back when calculating Williams %R | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityWilliamsR**](ApiResponseSecurityWilliamsR.md)
-
-[//]: # (END_OPERATION)
 

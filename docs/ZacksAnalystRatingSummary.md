@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.ZacksAnalystRatingSummary
-#### Properties
+# Intrinio.SDK.Model.ZacksAnalystRatingSummary
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -12,4 +12,6 @@ Name | Type | Description | Notes
 **Sells** | **int?** | The number of analysts recommending Sell. | [optional] 
 **StrongSells** | **int?** | The number of analysts recommending Strong Sell. | [optional] 
 **Total** | **int?** | The total number of analyst recommendations. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

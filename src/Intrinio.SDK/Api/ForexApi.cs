@@ -595,7 +595,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (pair != null) localVarPathParams.Add("pair", Configuration.ApiClient.ParameterToString(pair)); // path parameter
-            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timeframe != null) localVarPathParams.Add("timeframe", Configuration.ApiClient.ParameterToString(timeframe)); // path parameter
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
@@ -694,7 +694,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (pair != null) localVarPathParams.Add("pair", Configuration.ApiClient.ParameterToString(pair)); // path parameter
-            if (timeframe != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timeframe", timeframe)); // query parameter
+            if (timeframe != null) localVarPathParams.Add("timeframe", Configuration.ApiClient.ParameterToString(timeframe)); // path parameter
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter

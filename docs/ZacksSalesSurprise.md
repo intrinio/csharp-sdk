@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.ZacksSalesSurprise
-#### Properties
+# Intrinio.SDK.Model.ZacksSalesSurprise
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -20,4 +20,6 @@ Name | Type | Description | Notes
 **SalesAmountDiff** | **decimal?** | The sales surprise amount difference | [optional] 
 **SalesPercentDiff** | **decimal?** | The sales surprise percent difference | [optional] 
 **SalesStdDevEstimate** | **decimal?** | The pre-earnings release standard deviation of sales estimates | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

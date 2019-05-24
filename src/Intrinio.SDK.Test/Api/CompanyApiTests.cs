@@ -130,9 +130,12 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
+            //string reportType = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetCompanyFilings(identifier, pageSize, nextPage);
+            //var response = instance.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyFilings> (response, "response is ApiResponseCompanyFilings");
         }
         

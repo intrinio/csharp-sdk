@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.StockPrice
-#### Properties
+# Intrinio.SDK.Model.StockPrice
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -17,4 +17,6 @@ Name | Type | Description | Notes
 **AdjClose** | **decimal?** | The price at the end of the period, adjusted for splits and dividends | [optional] 
 **AdjVolume** | **decimal?** | The number of shares exchanged during the period, adjusted for splits and dividends | [optional] 
 **Security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

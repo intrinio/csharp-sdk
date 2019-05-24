@@ -9,44 +9,15 @@ Method | HTTP request | Description
 [**SearchDataTags**](DataTagApi.md#searchdatatags) | **GET** /data_tags/search | Search Data Tags
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.DataTagApi)
-
-[//]: # (METHOD:GetAllDataTags)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseDataTags)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseDataTags.md)
-
-[//]: # (OPERATION:GetAllDataTags_v2)
-
-[//]: # (ENDPOINT:/data_tags)
-
-[//]: # (DOCUMENT_LINK:DataTagApi.md#getalldatatags)
-
 <a name="getalldatatags"></a>
-## **GetAllDataTags**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllDataTags_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetAllDataTags**
 > ApiResponseDataTags GetAllDataTags (string tag = null, string type = null, string parent = null, string statementCode = null, string fsTemplate = null, int? pageSize = null, string nextPage = null)
 
-#### All Data Tags
+All Data Tags
 
 Returns all Data Tags. Returns Data Tags matching parameters when specified.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -85,70 +56,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | **string**| Tag | [optional]  &nbsp;
- **type** | **string**| Type | [optional]  &nbsp;
- **parent** | **string**| ID of tag parent | [optional]  &nbsp;
- **statementCode** | **string**| Statement Code | [optional]  &nbsp;
- **fsTemplate** | **string**| Template | [optional] [default to industrial] &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **tag** | **string**| Tag | [optional] 
+ **type** | **string**| Type | [optional] 
+ **parent** | **string**| ID of tag parent | [optional] 
+ **statementCode** | **string**| Statement Code | [optional] 
+ **fsTemplate** | **string**| Template | [optional] [default to industrial]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseDataTags**](ApiResponseDataTags.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.DataTagApi)
-
-[//]: # (METHOD:GetDataTagById)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.DataTag)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:DataTag.md)
-
-[//]: # (OPERATION:GetDataTagById_v2)
-
-[//]: # (ENDPOINT:/data_tags/{identifier})
-
-[//]: # (DOCUMENT_LINK:DataTagApi.md#getdatatagbyid)
-
 <a name="getdatatagbyid"></a>
-## **GetDataTagById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataTagById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetDataTagById**
 > DataTag GetDataTagById (string identifier)
 
-#### Lookup Data Tag
+Lookup Data Tag
 
 Returns the Data Tag with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -181,64 +113,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID or the code-name of the Data Tag |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| The Intrinio ID or the code-name of the Data Tag | 
 
 ### Return type
 
 [**DataTag**](DataTag.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.DataTagApi)
-
-[//]: # (METHOD:SearchDataTags)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseDataTagsSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseDataTagsSearch.md)
-
-[//]: # (OPERATION:SearchDataTags_v2)
-
-[//]: # (ENDPOINT:/data_tags/search)
-
-[//]: # (DOCUMENT_LINK:DataTagApi.md#searchdatatags)
-
 <a name="searchdatatags"></a>
-## **SearchDataTags**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchDataTags_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **SearchDataTags**
 > ApiResponseDataTagsSearch SearchDataTags (string query, int? pageSize = null)
 
-#### Search Data Tags
+Search Data Tags
 
 Searches for Data Tags matching the text `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -272,24 +165,14 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**|  |  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **string**|  | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseDataTagsSearch**](ApiResponseDataTagsSearch.md)
-
-[//]: # (END_OPERATION)
 

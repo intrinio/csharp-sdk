@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.ApiResponseSecurityIntradayPrices
-#### Properties
+# Intrinio.SDK.Model.ApiResponseSecurityIntradayPrices
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -7,4 +7,6 @@ Name | Type | Description | Notes
 **Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
 **Source** | **string** | The source of the data | [optional] 
 **NextPage** | **string** | The token required to request the next page of the data | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.CryptoStat
-#### Properties
+# Intrinio.SDK.Model.CryptoStat
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -11,4 +11,6 @@ Name | Type | Description | Notes
 **TotalSupply** | **decimal?** | The total supply of the Crypto Currency. | [optional] 
 **MaxSupply** | **decimal?** | The maxmium supply of coins available to mine. | [optional] 
 **LastUpdated** | **string** | UTC timestamp of when the data was last updated. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

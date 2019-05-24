@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.ReportedTag
-#### Properties
+# Intrinio.SDK.Model.ReportedTag
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,4 +10,6 @@ Name | Type | Description | Notes
 **_Abstract** | **bool?** | If true, the tag is an abstract and does not represent a nominal value | [optional] 
 **Sequence** | **int?** | The vertical sequence of the tag when displayed in the financial statement | [optional] 
 **Depth** | **int?** | The horizontal depth of the tag when displayed in the financial statement | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -58,11 +58,12 @@ namespace Intrinio.SDK.Model
         /// <param name="StatementCode">The code of the financial statement to which this Data Tag belongs.</param>
         /// <param name="StatementType">The format of the financial statment to which this Data Tag belongs.</param>
         /// <param name="Parent">The parent Data Tag forming the statement relationship with the factor.</param>
+        /// <param name="Sequence">The order in which the Data Tag appears in its logical group (such as a financial statement).</param>
         /// <param name="Factor">The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag.</param>
         /// <param name="Balance">Whether the Data Tag represents a credit or debit.</param>
         /// <param name="Type">The nature of the Data Tag, operating or nonoperating.</param>
         /// <param name="Unit">The unit of the Data Tag.</param>
-        public DataTag(string Id = default(string), string Name = default(string), string Tag = default(string), string StatementCode = default(string), StatementTypeEnum? StatementType = default(StatementTypeEnum?), string Parent = default(string), string Factor = default(string), string Balance = default(string), string Type = default(string), string Unit = default(string))
+        public DataTag(string Id = default(string), string Name = default(string), string Tag = default(string), string StatementCode = default(string), StatementTypeEnum? StatementType = default(StatementTypeEnum?), string Parent = default(string), decimal? Sequence = default(decimal?), string Factor = default(string), string Balance = default(string), string Type = default(string), string Unit = default(string))
         {
             this.Id = Id;
             this.Name = Name;
@@ -70,6 +71,7 @@ namespace Intrinio.SDK.Model
             this.StatementCode = StatementCode;
             this.StatementType = StatementType;
             this.Parent = Parent;
+            this.Sequence = Sequence;
             this.Factor = Factor;
             this.Balance = Balance;
             this.Type = Type;
@@ -113,6 +115,13 @@ namespace Intrinio.SDK.Model
         public string Parent { get; set; }
 
         /// <summary>
+        /// The order in which the Data Tag appears in its logical group (such as a financial statement)
+        /// </summary>
+        /// <value>The order in which the Data Tag appears in its logical group (such as a financial statement)</value>
+        [DataMember(Name="sequence", EmitDefaultValue=false)]
+        public decimal? Sequence { get; set; }
+
+        /// <summary>
         /// The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag
         /// </summary>
         /// <value>The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag</value>
@@ -154,6 +163,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  StatementCode: ").Append(StatementCode).Append("\n");
             sb.Append("  StatementType: ").Append(StatementType).Append("\n");
             sb.Append("  Parent: ").Append(Parent).Append("\n");
+            sb.Append("  Sequence: ").Append(Sequence).Append("\n");
             sb.Append("  Factor: ").Append(Factor).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -223,6 +233,11 @@ namespace Intrinio.SDK.Model
                     this.Parent.Equals(input.Parent))
                 ) && 
                 (
+                    this.Sequence == input.Sequence ||
+                    (this.Sequence != null &&
+                    this.Sequence.Equals(input.Sequence))
+                ) && 
+                (
                     this.Factor == input.Factor ||
                     (this.Factor != null &&
                     this.Factor.Equals(input.Factor))
@@ -265,6 +280,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.StatementType.GetHashCode();
                 if (this.Parent != null)
                     hashCode = hashCode * 59 + this.Parent.GetHashCode();
+                if (this.Sequence != null)
+                    hashCode = hashCode * 59 + this.Sequence.GetHashCode();
                 if (this.Factor != null)
                     hashCode = hashCode * 59 + this.Factor.GetHashCode();
                 if (this.Balance != null)

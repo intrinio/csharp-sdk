@@ -83,6 +83,38 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Tag'
         }
         /// <summary>
+        /// Test the property 'Parent'
+        /// </summary>
+        [Test]
+        public void ParentTest()
+        {
+            // TODO unit test for the property 'Parent'
+        }
+        /// <summary>
+        /// Test the property 'Sequence'
+        /// </summary>
+        [Test]
+        public void SequenceTest()
+        {
+            // TODO unit test for the property 'Sequence'
+        }
+        /// <summary>
+        /// Test the property 'Factor'
+        /// </summary>
+        [Test]
+        public void FactorTest()
+        {
+            // TODO unit test for the property 'Factor'
+        }
+        /// <summary>
+        /// Test the property 'Balance'
+        /// </summary>
+        [Test]
+        public void BalanceTest()
+        {
+            // TODO unit test for the property 'Balance'
+        }
+        /// <summary>
         /// Test the property 'Unit'
         /// </summary>
         [Test]

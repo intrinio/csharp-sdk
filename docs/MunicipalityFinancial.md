@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.MunicipalityFinancial
-#### Properties
+# Intrinio.SDK.Model.MunicipalityFinancial
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -45,4 +45,6 @@ Name | Type | Description | Notes
 **GovernmentalFundRevenues** | **decimal?** | Increases in financial resources attributable to any governmental fund. Governmental funds are used to account for general government activities that are financed primarily through taxes, intergovernmental revenues, and other nonexchange revenues. | [optional] 
 **GovernmentalFundExpenditures** | **decimal?** | Decreases in financial resources attributable to any governmental fund. Governmental funds are used to account for general government activities that are financed primarily through taxes, intergovernmental revenues, and other nonexchange revenues. | [optional] 
 **GovernmentalFundRevenuesOverUnderExpenditure** | **decimal?** | Difference between revenues and expenditures attributable to all governmental funds.  If positive, this amount is called a surplus.  If negative, it represents a deficit. Governmental funds are used to account for general government activities that are financed primarily through taxes, intergovernmental revenues, and other nonexchange revenues. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

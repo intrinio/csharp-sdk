@@ -24,7 +24,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -40,7 +40,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -207,7 +207,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -223,7 +223,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -485,7 +485,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -502,7 +502,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -571,7 +571,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -589,7 +589,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>

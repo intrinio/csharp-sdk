@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.StockPriceSummary
-#### Properties
+# Intrinio.SDK.Model.StockPriceSummary
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -16,4 +16,6 @@ Name | Type | Description | Notes
 **AdjLow** | **decimal?** | The lowest price over the span of the period, adjusted for splits and dividends | [optional] 
 **AdjClose** | **decimal?** | The price at the end of the period, adjusted for splits and dividends | [optional] 
 **AdjVolume** | **decimal?** | The number of shares exchanged during the period, adjusted for splits and dividends | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

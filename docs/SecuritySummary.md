@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.SecuritySummary
-#### Properties
+# Intrinio.SDK.Model.SecuritySummary
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -13,4 +13,6 @@ Name | Type | Description | Notes
 **Figi** | **string** | The OpenFIGI identifier | [optional] 
 **CompositeFigi** | **string** | The country-composite OpenFIGI identifier | [optional] 
 **ShareClassFigi** | **string** | The global-composite OpenFIGI identifier | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

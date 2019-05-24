@@ -107,6 +107,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Parent'
         }
         /// <summary>
+        /// Test the property 'Sequence'
+        /// </summary>
+        [Test]
+        public void SequenceTest()
+        {
+            // TODO unit test for the property 'Sequence'
+        }
+        /// <summary>
         /// Test the property 'Factor'
         /// </summary>
         [Test]

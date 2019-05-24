@@ -24,43 +24,13 @@ Method | HTTP request | Description
 [**SearchStockMarketsIndices**](IndexApi.md#searchstockmarketsindices) | **GET** /indices/stock_market/search | Search Stock Market Indices
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetAllEconomicIndices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEconomicIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndices.md)
-
-[//]: # (OPERATION:GetAllEconomicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/economic)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getalleconomicindices)
-
 <a name="getalleconomicindices"></a>
-## **GetAllEconomicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllEconomicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetAllEconomicIndices**
 > ApiResponseEconomicIndices GetAllEconomicIndices (int? pageSize = null, string nextPage = null)
 
-#### All Economic Indices
-
-
-[//]: # (END_OVERVIEW)
+All Economic Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -94,64 +64,24 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetAllSicIndices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSICIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndices.md)
-
-[//]: # (OPERATION:GetAllSicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/sic)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getallsicindices)
-
 <a name="getallsicindices"></a>
-## **GetAllSicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllSicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetAllSicIndices**
 > ApiResponseSICIndices GetAllSicIndices (int? pageSize = null, string nextPage = null)
 
-#### All SIC Indices
-
-
-[//]: # (END_OVERVIEW)
+All SIC Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -185,64 +115,24 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSICIndices**](ApiResponseSICIndices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetAllStockMarketIndices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockMarketIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndices.md)
-
-[//]: # (OPERATION:GetAllStockMarketIndices_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getallstockmarketindices)
-
 <a name="getallstockmarketindices"></a>
-## **GetAllStockMarketIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllStockMarketIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetAllStockMarketIndices**
 > ApiResponseStockMarketIndices GetAllStockMarketIndices (int? pageSize = null, string nextPage = null)
 
-#### All Stock Market Indices
-
-
-[//]: # (END_OVERVIEW)
+All Stock Market Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -276,64 +166,24 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetEconomicIndexById)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.EconomicIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:EconomicIndex.md)
-
-[//]: # (OPERATION:GetEconomicIndexById_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#geteconomicindexbyid)
-
 <a name="geteconomicindexbyid"></a>
-## **GetEconomicIndexById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetEconomicIndexById**
 > EconomicIndex GetEconomicIndexById (string identifier)
 
-#### Lookup Economic Index
-
-
-[//]: # (END_OVERVIEW)
+Lookup Economic Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -366,64 +216,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**EconomicIndex**](EconomicIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetEconomicIndexDataPointNumber)
-
-[//]: # (RETURN_TYPE:decimal?)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetEconomicIndexDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#geteconomicindexdatapointnumber)
-
 <a name="geteconomicindexdatapointnumber"></a>
-## **GetEconomicIndexDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetEconomicIndexDataPointNumber**
 > decimal? GetEconomicIndexDataPointNumber (string identifier, string tag)
 
-#### Data Point (Number) for an Economic Index
+Data Point (Number) for an Economic Index
 
 Returns a numeric value for the given `tag` for the Economic Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -457,65 +268,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
 
 ### Return type
 
 **decimal?**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetEconomicIndexDataPointText)
-
-[//]: # (RETURN_TYPE:string)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetEconomicIndexDataPointText_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#geteconomicindexdatapointtext)
-
 <a name="geteconomicindexdatapointtext"></a>
-## **GetEconomicIndexDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetEconomicIndexDataPointText**
 > string GetEconomicIndexDataPointText (string identifier, string tag)
 
-#### Data Point (Text) for an Economic Index
+Data Point (Text) for an Economic Index
 
 Returns a text value for the given `tag` for the Economic Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -549,65 +321,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **string**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetEconomicIndexHistoricalData)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEconomicIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndexHistoricalData.md)
-
-[//]: # (OPERATION:GetEconomicIndexHistoricalData_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#geteconomicindexhistoricaldata)
-
 <a name="geteconomicindexhistoricaldata"></a>
-## **GetEconomicIndexHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetEconomicIndexHistoricalData**
 > ApiResponseEconomicIndexHistoricalData GetEconomicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
-#### Historical Data for an Economic Index
+Historical Data for an Economic Index
 
 Returns historical values for the given `tag` and the Economic Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -647,70 +380,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
- **type** | **string**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **DateTime?**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **DateTime?**| Get historical data on or before this date | [optional]  &nbsp;
- **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
+ **type** | **string**| Filter by type, when applicable | [optional] 
+ **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
+ **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
+ **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetSicIndexById)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SICIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:SICIndex.md)
-
-[//]: # (OPERATION:GetSicIndexById_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getsicindexbyid)
-
 <a name="getsicindexbyid"></a>
-## **GetSicIndexById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSicIndexById**
 > SICIndex GetSicIndexById (string identifier)
 
-#### Lookup SIC Index
-
-
-[//]: # (END_OVERVIEW)
+Lookup SIC Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -743,64 +436,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**SICIndex**](SICIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetSicIndexDataPointNumber)
-
-[//]: # (RETURN_TYPE:decimal?)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetSicIndexDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getsicindexdatapointnumber)
-
 <a name="getsicindexdatapointnumber"></a>
-## **GetSicIndexDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSicIndexDataPointNumber**
 > decimal? GetSicIndexDataPointNumber (string identifier, string tag)
 
-#### Data Point (Number) for an SIC Index
+Data Point (Number) for an SIC Index
 
 Returns a numeric value for the given `tag` for the SIC Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -834,65 +488,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **decimal?**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetSicIndexDataPointText)
-
-[//]: # (RETURN_TYPE:string)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetSicIndexDataPointText_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getsicindexdatapointtext)
-
 <a name="getsicindexdatapointtext"></a>
-## **GetSicIndexDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSicIndexDataPointText**
 > string GetSicIndexDataPointText (string identifier, string tag)
 
-#### Data Point (Text) for an SIC Index
+Data Point (Text) for an SIC Index
 
 Returns a text value for the given `tag` for the SIC Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -926,65 +541,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **string**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetSicIndexHistoricalData)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSICIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndexHistoricalData.md)
-
-[//]: # (OPERATION:GetSicIndexHistoricalData_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getsicindexhistoricaldata)
-
 <a name="getsicindexhistoricaldata"></a>
-## **GetSicIndexHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSicIndexHistoricalData**
 > ApiResponseSICIndexHistoricalData GetSicIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
-#### Historical Data for an SIC Index
+Historical Data for an SIC Index
 
 Returns historical values for the given `tag` and the SIC Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1024,70 +600,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
- **type** | **string**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **DateTime?**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **DateTime?**| Get historical data on or before this date | [optional]  &nbsp;
- **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **type** | **string**| Filter by type, when applicable | [optional] 
+ **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
+ **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
+ **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSICIndexHistoricalData**](ApiResponseSICIndexHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetStockMarketIndexById)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.StockMarketIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:StockMarketIndex.md)
-
-[//]: # (OPERATION:GetStockMarketIndexById_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getstockmarketindexbyid)
-
 <a name="getstockmarketindexbyid"></a>
-## **GetStockMarketIndexById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetStockMarketIndexById**
 > StockMarketIndex GetStockMarketIndexById (string identifier)
 
-#### Lookup Stock Market Index
-
-
-[//]: # (END_OVERVIEW)
+Lookup Stock Market Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1120,64 +656,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**StockMarketIndex**](StockMarketIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetStockMarketIndexDataPointNumber)
-
-[//]: # (RETURN_TYPE:decimal?)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetStockMarketIndexDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getstockmarketindexdatapointnumber)
-
 <a name="getstockmarketindexdatapointnumber"></a>
-## **GetStockMarketIndexDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetStockMarketIndexDataPointNumber**
 > decimal? GetStockMarketIndexDataPointNumber (string identifier, string tag)
 
-#### Data Point (Number) for Stock Market Index
+Data Point (Number) for Stock Market Index
 
 Returns a numeric value for the given `tag` for the Stock Market Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1211,65 +708,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **decimal?**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetStockMarketIndexDataPointText)
-
-[//]: # (RETURN_TYPE:string)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetStockMarketIndexDataPointText_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getstockmarketindexdatapointtext)
-
 <a name="getstockmarketindexdatapointtext"></a>
-## **GetStockMarketIndexDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetStockMarketIndexDataPointText**
 > string GetStockMarketIndexDataPointText (string identifier, string tag)
 
-#### Data Point (Text) for Stock Market Index
+Data Point (Text) for Stock Market Index
 
 Returns a text value for the given `tag` for the Stock Market Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1303,65 +761,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **string**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:GetStockMarketIndexHistoricalData)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockMarketIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndexHistoricalData.md)
-
-[//]: # (OPERATION:GetStockMarketIndexHistoricalData_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getstockmarketindexhistoricaldata)
-
 <a name="getstockmarketindexhistoricaldata"></a>
-## **GetStockMarketIndexHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetStockMarketIndexHistoricalData**
 > ApiResponseStockMarketIndexHistoricalData GetStockMarketIndexHistoricalData (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
-#### Historical Data for Stock Market Index
+Historical Data for Stock Market Index
 
 Returns historical values for the given `tag` and the Stock Market Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1401,71 +820,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
- **type** | **string**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **DateTime?**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **DateTime?**| Get historical data on or before this date | [optional]  &nbsp;
- **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
+ **type** | **string**| Filter by type, when applicable | [optional] 
+ **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
+ **endDate** | **DateTime?**| Get historical data on or before this date | [optional] 
+ **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseStockMarketIndexHistoricalData**](ApiResponseStockMarketIndexHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:SearchEconomicIndices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEconomicIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndicesSearch.md)
-
-[//]: # (OPERATION:SearchEconomicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/economic/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#searcheconomicindices)
-
 <a name="searcheconomicindices"></a>
-## **SearchEconomicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchEconomicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **SearchEconomicIndices**
 > ApiResponseEconomicIndicesSearch SearchEconomicIndices (string query, int? pageSize = null)
 
-#### Search Economic Indices
+Search Economic Indices
 
 Searches for indices using the text in `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1499,65 +879,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search query |  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **string**| Search query | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseEconomicIndicesSearch**](ApiResponseEconomicIndicesSearch.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:SearchSicIndices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSICIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndicesSearch.md)
-
-[//]: # (OPERATION:SearchSicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/sic/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#searchsicindices)
-
 <a name="searchsicindices"></a>
-## **SearchSicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchSicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **SearchSicIndices**
 > ApiResponseSICIndicesSearch SearchSicIndices (string query, int? pageSize = null)
 
-#### Search SIC Indices
+Search SIC Indices
 
 Searches for indices using the text in `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1591,65 +932,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search query |  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **string**| Search query | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseSICIndicesSearch**](ApiResponseSICIndicesSearch.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
-
-[//]: # (METHOD:SearchStockMarketsIndices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockMarketIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndicesSearch.md)
-
-[//]: # (OPERATION:SearchStockMarketsIndices_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#searchstockmarketsindices)
-
 <a name="searchstockmarketsindices"></a>
-## **SearchStockMarketsIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchStockMarketsIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **SearchStockMarketsIndices**
 > ApiResponseStockMarketIndicesSearch SearchStockMarketsIndices (string query, int? pageSize = null)
 
-#### Search Stock Market Indices
+Search Stock Market Indices
 
 Searches for indices using the text in `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1683,24 +985,14 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search query |  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **string**| Search query | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseStockMarketIndicesSearch**](ApiResponseStockMarketIndicesSearch.md)
-
-[//]: # (END_OPERATION)
 

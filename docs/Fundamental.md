@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.Fundamental
-#### Properties
+# Intrinio.SDK.Model.Fundamental
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -12,4 +12,6 @@ Name | Type | Description | Notes
 **EndDate** | **DateTime?** | The period start date | [optional] 
 **FilingDate** | **DateTime?** | The date and time when the Fundamental was filed with the SEC | [optional] 
 **Company** | [**CompanySummary**](CompanySummary.md) | The Company that the Fundamental was belongs to | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

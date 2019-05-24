@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.Municipality
-#### Properties
+# Intrinio.SDK.Model.Municipality
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -22,4 +22,6 @@ Name | Type | Description | Notes
 **AreaType** | **string** | The type of area of the Municipality | [optional] 
 **Latitude** | **float?** | The latitude of the location of the Municipality | [optional] 
 **Longitude** | **float?** | The longitude of the location of the Municipality | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -54,44 +54,15 @@ Method | HTTP request | Description
 [**SearchSecurities**](SecurityApi.md#searchsecurities) | **GET** /securities/search | Search Securities
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetAllSecurities)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurities)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurities.md)
-
-[//]: # (OPERATION:GetAllSecurities_v2)
-
-[//]: # (ENDPOINT:/securities)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getallsecurities)
-
 <a name="getallsecurities"></a>
-## **GetAllSecurities**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllSecurities_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetAllSecurities**
 > ApiResponseSecurities GetAllSecurities (int? pageSize = null, string nextPage = null)
 
-#### All Securities
+All Securities
 
 Returns all Securities to which you have access.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -125,65 +96,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityById)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Security)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:Security.md)
-
-[//]: # (OPERATION:GetSecurityById_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier})
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritybyid)
-
 <a name="getsecuritybyid"></a>
-## **GetSecurityById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityById**
 > Security GetSecurityById (string identifier)
 
-#### Lookup Security
+Lookup Security
 
 Returns the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -216,64 +148,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
 
 ### Return type
 
 [**Security**](Security.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityDataPointNumber)
-
-[//]: # (RETURN_TYPE:decimal?)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetSecurityDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritydatapointnumber)
-
 <a name="getsecuritydatapointnumber"></a>
-## **GetSecurityDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityDataPointNumber**
 > decimal? GetSecurityDataPointNumber (string identifier, string tag)
 
-#### Data Point (Number) for Security
+Data Point (Number) for Security
 
 Returns a numeric value for the given `tag` for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -307,65 +200,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
 **decimal?**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityDataPointText)
-
-[//]: # (RETURN_TYPE:string)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetSecurityDataPointText_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritydatapointtext)
-
 <a name="getsecuritydatapointtext"></a>
-## **GetSecurityDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityDataPointText**
 > string GetSecurityDataPointText (string identifier, string tag)
 
-#### Data Point (Text) for Security
+Data Point (Text) for Security
 
 Returns a text value for the given `tag` for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -399,65 +253,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **string**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityHistoricalData)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityHistoricalData.md)
-
-[//]: # (OPERATION:GetSecurityHistoricalData_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityhistoricaldata)
-
 <a name="getsecurityhistoricaldata"></a>
-## **GetSecurityHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityHistoricalData**
 > ApiResponseSecurityHistoricalData GetSecurityHistoricalData (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
 
-#### Historical Data for Security
+Historical Data for Security
 
 Returns historical values for the given `tag` and the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -498,72 +313,33 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
- **frequency** | **string**| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
- **type** | **string**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **DateTime?**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **DateTime?**| Get historical date on or before this date | [optional]  &nbsp;
- **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **tag** | **string**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+ **frequency** | **string**| Return historical data in the given frequency | [optional] [default to daily]
+ **type** | **string**| Filter by type, when applicable | [optional] 
+ **startDate** | **DateTime?**| Get historical data on or after this date | [optional] 
+ **endDate** | **DateTime?**| Get historical date on or before this date | [optional] 
+ **sortOrder** | **string**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityIntradayPrices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityIntradayPrices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityIntradayPrices.md)
-
-[//]: # (OPERATION:GetSecurityIntradayPrices_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/intraday)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityintradayprices)
-
 <a name="getsecurityintradayprices"></a>
-## **GetSecurityIntradayPrices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityIntradayPrices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityIntradayPrices**
 > ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
 
-#### Intraday Stock Prices for Security
+Intraday Stock Prices for Security
 
 Return intraday stock prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -601,69 +377,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **source** | **string**| Return intraday prices from the specified data source | [optional]  &nbsp;
- **startDate** | **DateTime?**| Return intraday prices starting at the specified date | [optional]  &nbsp;
- **startTime** | **string**| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return intraday prices stopping at the specified date | [optional]  &nbsp;
- **endTime** | **string**| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **source** | **string**| Return intraday prices from the specified data source | [optional] 
+ **startDate** | **DateTime?**| Return intraday prices starting at the specified date | [optional] 
+ **startTime** | **string**| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional] 
+ **endDate** | **DateTime?**| Return intraday prices stopping at the specified date | [optional] 
+ **endTime** | **string**| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityIntradayPrices**](ApiResponseSecurityIntradayPrices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityLatestDividendRecord)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.DividendRecord)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:DividendRecord.md)
-
-[//]: # (OPERATION:GetSecurityLatestDividendRecord_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/dividends/latest)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritylatestdividendrecord)
-
 <a name="getsecuritylatestdividendrecord"></a>
-## **GetSecurityLatestDividendRecord**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityLatestDividendRecord_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityLatestDividendRecord**
 > DividendRecord GetSecurityLatestDividendRecord (string identifier)
 
-#### Lastest Dividend Record for Security
+Lastest Dividend Record for Security
 
 Returns the latest available dividend information for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -696,64 +433,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
 
 ### Return type
 
 [**DividendRecord**](DividendRecord.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityLatestEarningsRecord)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.EarningsRecord)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:EarningsRecord.md)
-
-[//]: # (OPERATION:GetSecurityLatestEarningsRecord_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/earnings/latest)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritylatestearningsrecord)
-
 <a name="getsecuritylatestearningsrecord"></a>
-## **GetSecurityLatestEarningsRecord**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityLatestEarningsRecord_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityLatestEarningsRecord**
 > EarningsRecord GetSecurityLatestEarningsRecord (string identifier)
 
-#### Lastest Earnings Record for Security
+Lastest Earnings Record for Security
 
 Returns latest available earnings information for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -786,64 +484,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
 
 ### Return type
 
 [**EarningsRecord**](EarningsRecord.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAdi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAccumulationDistributionIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAccumulationDistributionIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAdi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsadi)
-
 <a name="getsecuritypricetechnicalsadi"></a>
-## **GetSecurityPriceTechnicalsAdi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAdi**
 > ApiResponseSecurityAccumulationDistributionIndex GetSecurityPriceTechnicalsAdi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Accumulation/Distribution Index
+Accumulation/Distribution Index
 
 Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -880,68 +539,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAccumulationDistributionIndex**](ApiResponseSecurityAccumulationDistributionIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAdtv)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageDailyTradingVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAverageDailyTradingVolume.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAdtv_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adtv)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsadtv)
-
 <a name="getsecuritypricetechnicalsadtv"></a>
-## **GetSecurityPriceTechnicalsAdtv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdtv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAdtv**
 > ApiResponseSecurityAverageDailyTradingVolume GetSecurityPriceTechnicalsAdtv (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Average Daily Trading Volume
+Average Daily Trading Volume
 
 Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -979,69 +599,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average Daily Trading Volume | [optional] [default to 22] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Average Daily Trading Volume | [optional] [default to 22]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAverageDailyTradingVolume**](ApiResponseSecurityAverageDailyTradingVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAdx)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAverageDirectionalIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAdx_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adx)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsadx)
-
 <a name="getsecuritypricetechnicalsadx"></a>
-## **GetSecurityPriceTechnicalsAdx**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdx_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAdx**
 > ApiResponseSecurityAverageDirectionalIndex GetSecurityPriceTechnicalsAdx (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Average Directional Index
+Average Directional Index
 
 Returns the Average Directional Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1079,69 +660,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average Directional Index | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Average Directional Index | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAverageDirectionalIndex**](ApiResponseSecurityAverageDirectionalIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAwesomeOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAwesomeOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAo_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ao)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsao)
-
 <a name="getsecuritypricetechnicalsao"></a>
-## **GetSecurityPriceTechnicalsAo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAo**
 > ApiResponseSecurityAwesomeOscillator GetSecurityPriceTechnicalsAo (string identifier, int? shortPeriod = null, int? longPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Awesome Oscillator
+Awesome Oscillator
 
 Returns the Awesome Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1180,70 +722,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | **int?**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5] &nbsp;
- **longPeriod** | **int?**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **shortPeriod** | **int?**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5]
+ **longPeriod** | **int?**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAwesomeOscillator**](ApiResponseSecurityAwesomeOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsAtr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityAverageTrueRange)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityAverageTrueRange.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsAtr_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/atr)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsatr)
-
 <a name="getsecuritypricetechnicalsatr"></a>
-## **GetSecurityPriceTechnicalsAtr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAtr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsAtr**
 > ApiResponseSecurityAverageTrueRange GetSecurityPriceTechnicalsAtr (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Average True Range
+Average True Range
 
 Returns the Average True Range values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1281,69 +784,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Average True Range | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Average True Range | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityAverageTrueRange**](ApiResponseSecurityAverageTrueRange.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsBb)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityBollingerBands)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityBollingerBands.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsBb_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/bb)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsbb)
-
 <a name="getsecuritypricetechnicalsbb"></a>
-## **GetSecurityPriceTechnicalsBb**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsBb_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsBb**
 > ApiResponseSecurityBollingerBands GetSecurityPriceTechnicalsBb (string identifier, int? period = null, float? standardDeviations = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Bollinger Bands
+Bollinger Bands
 
 Returns the Bollinger Bands values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1383,71 +847,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Bollinger Bands | [optional] [default to 20] &nbsp;
- **standardDeviations** | **float?**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands | [optional] [default to 2.0] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Bollinger Bands | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Bollinger Bands | [optional] [default to 20]
+ **standardDeviations** | **float?**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands | [optional] [default to 2.0]
+ **priceKey** | **string**| The Stock Price field to use when calculating Bollinger Bands | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityBollingerBands**](ApiResponseSecurityBollingerBands.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsCci)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityCommodityChannelIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityCommodityChannelIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsCci_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cci)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalscci)
-
 <a name="getsecuritypricetechnicalscci"></a>
-## **GetSecurityPriceTechnicalsCci**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCci_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsCci**
 > ApiResponseSecurityCommodityChannelIndex GetSecurityPriceTechnicalsCci (string identifier, int? period = null, float? constant = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Commodity Channel Index
+Commodity Channel Index
 
 Returns the Commodity Channel Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1486,70 +911,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 20] &nbsp;
- **constant** | **float?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 0.015] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 20]
+ **constant** | **float?**| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 0.015]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityCommodityChannelIndex**](ApiResponseSecurityCommodityChannelIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsCmf)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityChaikinMoneyFlow)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityChaikinMoneyFlow.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsCmf_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cmf)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalscmf)
-
 <a name="getsecuritypricetechnicalscmf"></a>
-## **GetSecurityPriceTechnicalsCmf**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCmf_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsCmf**
 > ApiResponseSecurityChaikinMoneyFlow GetSecurityPriceTechnicalsCmf (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Chaikin Money Flow
+Chaikin Money Flow
 
 Returns the Chaikin Money Flow values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1587,69 +973,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Chaikin Money Flow | [optional] [default to 20] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Chaikin Money Flow | [optional] [default to 20]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityChaikinMoneyFlow**](ApiResponseSecurityChaikinMoneyFlow.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsDc)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityDonchianChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityDonchianChannel.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsDc_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dc)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsdc)
-
 <a name="getsecuritypricetechnicalsdc"></a>
-## **GetSecurityPriceTechnicalsDc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsDc**
 > ApiResponseSecurityDonchianChannel GetSecurityPriceTechnicalsDc (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Donchian Channel
+Donchian Channel
 
 Returns the Donchian Channel values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1688,70 +1035,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Donchian Channel | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Donchian Channel | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Donchian Channel | [optional] [default to 20]
+ **priceKey** | **string**| The Stock Price field to use when calculating Donchian Channel | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityDonchianChannel**](ApiResponseSecurityDonchianChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsDpo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityDetrendedPriceOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityDetrendedPriceOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsDpo_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dpo)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsdpo)
-
 <a name="getsecuritypricetechnicalsdpo"></a>
-## **GetSecurityPriceTechnicalsDpo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDpo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsDpo**
 > ApiResponseSecurityDetrendedPriceOscillator GetSecurityPriceTechnicalsDpo (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Detrended Price Oscillator
+Detrended Price Oscillator
 
 Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1790,70 +1098,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Detrended Price Oscillator | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Detrended Price Oscillator | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Detrended Price Oscillator | [optional] [default to 20]
+ **priceKey** | **string**| The Stock Price field to use when calculating Detrended Price Oscillator | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityDetrendedPriceOscillator**](ApiResponseSecurityDetrendedPriceOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsEom)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityEaseOfMovement)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityEaseOfMovement.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsEom_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/eom)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalseom)
-
 <a name="getsecuritypricetechnicalseom"></a>
-## **GetSecurityPriceTechnicalsEom**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsEom_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsEom**
 > ApiResponseSecurityEaseOfMovement GetSecurityPriceTechnicalsEom (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Ease of Movement
+Ease of Movement
 
 Returns the Ease of Movement values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1891,69 +1160,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Ease of Movement | [optional] [default to 20] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Ease of Movement | [optional] [default to 20]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityEaseOfMovement**](ApiResponseSecurityEaseOfMovement.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsFi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityForceIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityForceIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsFi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/fi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsfi)
-
 <a name="getsecuritypricetechnicalsfi"></a>
-## **GetSecurityPriceTechnicalsFi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsFi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsFi**
 > ApiResponseSecurityForceIndex GetSecurityPriceTechnicalsFi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Force Index
+Force Index
 
 Returns the Force Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1990,68 +1220,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityForceIndex**](ApiResponseSecurityForceIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsIchimoku)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityIchimokuKinkoHyo)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityIchimokuKinkoHyo.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsIchimoku_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ichimoku)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsichimoku)
-
 <a name="getsecuritypricetechnicalsichimoku"></a>
-## **GetSecurityPriceTechnicalsIchimoku**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsIchimoku_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsIchimoku**
 > ApiResponseSecurityIchimokuKinkoHyo GetSecurityPriceTechnicalsIchimoku (string identifier, int? lowPeriod = null, int? mediumPeriod = null, int? highPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Ichimoku Kinko Hyo
+Ichimoku Kinko Hyo
 
 Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2091,71 +1282,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | **int?**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9] &nbsp;
- **mediumPeriod** | **int?**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26] &nbsp;
- **highPeriod** | **int?**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **lowPeriod** | **int?**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9]
+ **mediumPeriod** | **int?**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26]
+ **highPeriod** | **int?**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityIchimokuKinkoHyo**](ApiResponseSecurityIchimokuKinkoHyo.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsKc)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityKeltnerChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityKeltnerChannel.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsKc_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kc)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalskc)
-
 <a name="getsecuritypricetechnicalskc"></a>
-## **GetSecurityPriceTechnicalsKc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsKc**
 > ApiResponseSecurityKeltnerChannel GetSecurityPriceTechnicalsKc (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Keltner Channel
+Keltner Channel
 
 Returns the Keltner Channel values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2193,69 +1345,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Kelter Channel | [optional] [default to 10] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Kelter Channel | [optional] [default to 10]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityKeltnerChannel**](ApiResponseSecurityKeltnerChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsKst)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityKnowSureThing)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityKnowSureThing.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsKst_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kst)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalskst)
-
 <a name="getsecuritypricetechnicalskst"></a>
-## **GetSecurityPriceTechnicalsKst**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKst_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsKst**
 > ApiResponseSecurityKnowSureThing GetSecurityPriceTechnicalsKst (string identifier, int? roc1 = null, int? roc2 = null, int? roc3 = null, int? roc4 = null, int? sma1 = null, int? sma2 = null, int? sma3 = null, int? sma4 = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Know Sure Thing
+Know Sure Thing
 
 Returns the Know Sure Thing values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2301,77 +1414,38 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **roc1** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **roc2** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15] &nbsp;
- **roc3** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20] &nbsp;
- **roc4** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30] &nbsp;
- **sma1** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **sma2** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10] &nbsp;
- **sma3** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10] &nbsp;
- **sma4** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Know Sure Thing | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **roc1** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA1 | [optional] [default to 10]
+ **roc2** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15]
+ **roc3** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20]
+ **roc4** | **int?**| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30]
+ **sma1** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10]
+ **sma2** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10]
+ **sma3** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10]
+ **sma4** | **int?**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15]
+ **priceKey** | **string**| The Stock Price field to use when calculating Know Sure Thing | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityKnowSureThing**](ApiResponseSecurityKnowSureThing.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsMacd)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMovingAverageConvergenceDivergence)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityMovingAverageConvergenceDivergence.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsMacd_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/macd)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsmacd)
-
 <a name="getsecuritypricetechnicalsmacd"></a>
-## **GetSecurityPriceTechnicalsMacd**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMacd_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsMacd**
 > ApiResponseSecurityMovingAverageConvergenceDivergence GetSecurityPriceTechnicalsMacd (string identifier, int? fastPeriod = null, int? slowPeriod = null, int? signalPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Moving Average Convergence Divergence
+Moving Average Convergence Divergence
 
 Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2412,72 +1486,33 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **fastPeriod** | **int?**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12] &nbsp;
- **slowPeriod** | **int?**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26] &nbsp;
- **signalPeriod** | **int?**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Moving Average Convergence Divergence | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **fastPeriod** | **int?**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12]
+ **slowPeriod** | **int?**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26]
+ **signalPeriod** | **int?**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9]
+ **priceKey** | **string**| The Stock Price field to use when calculating Moving Average Convergence Divergence | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityMovingAverageConvergenceDivergence**](ApiResponseSecurityMovingAverageConvergenceDivergence.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsMfi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMoneyFlowIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityMoneyFlowIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsMfi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mfi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsmfi)
-
 <a name="getsecuritypricetechnicalsmfi"></a>
-## **GetSecurityPriceTechnicalsMfi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMfi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsMfi**
 > ApiResponseSecurityMoneyFlowIndex GetSecurityPriceTechnicalsMfi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Money Flow Index
+Money Flow Index
 
 Returns the Money Flow Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2515,69 +1550,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Money Flow Index | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Money Flow Index | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityMoneyFlowIndex**](ApiResponseSecurityMoneyFlowIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsMi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityMassIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityMassIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsMi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsmi)
-
 <a name="getsecuritypricetechnicalsmi"></a>
-## **GetSecurityPriceTechnicalsMi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsMi**
 > ApiResponseSecurityMassIndex GetSecurityPriceTechnicalsMi (string identifier, int? emaPeriod = null, int? sumPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Mass Index
+Mass Index
 
 Returns the Mass Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2616,70 +1612,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **emaPeriod** | **int?**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9] &nbsp;
- **sumPeriod** | **int?**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **emaPeriod** | **int?**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9]
+ **sumPeriod** | **int?**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityMassIndex**](ApiResponseSecurityMassIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsNvi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityNegativeVolumeIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityNegativeVolumeIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsNvi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/nvi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsnvi)
-
 <a name="getsecuritypricetechnicalsnvi"></a>
-## **GetSecurityPriceTechnicalsNvi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsNvi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsNvi**
 > ApiResponseSecurityNegativeVolumeIndex GetSecurityPriceTechnicalsNvi (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Negative Volume Index
+Negative Volume Index
 
 Returns the Negative Volume Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2716,68 +1673,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityNegativeVolumeIndex**](ApiResponseSecurityNegativeVolumeIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsObv)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityOnBalanceVolume.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsObv_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsobv)
-
 <a name="getsecuritypricetechnicalsobv"></a>
-## **GetSecurityPriceTechnicalsObv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsObv**
 > ApiResponseSecurityOnBalanceVolume GetSecurityPriceTechnicalsObv (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### On-balance Volume
+On-balance Volume
 
 Returns the On-balance Volume values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2814,68 +1732,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityOnBalanceVolume**](ApiResponseSecurityOnBalanceVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsObvMean)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityOnBalanceVolumeMean)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityOnBalanceVolumeMean.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsObvMean_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv_mean)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsobvmean)
-
 <a name="getsecuritypricetechnicalsobvmean"></a>
-## **GetSecurityPriceTechnicalsObvMean**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObvMean_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsObvMean**
 > ApiResponseSecurityOnBalanceVolumeMean GetSecurityPriceTechnicalsObvMean (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### On-balance Volume Mean
+On-balance Volume Mean
 
 Returns the On-balance Volume Mean values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2913,69 +1792,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate On-balance Volume Mean | [optional] [default to 10] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate On-balance Volume Mean | [optional] [default to 10]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityOnBalanceVolumeMean**](ApiResponseSecurityOnBalanceVolumeMean.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsRsi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityRelativeStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityRelativeStrengthIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsRsi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/rsi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsrsi)
-
 <a name="getsecuritypricetechnicalsrsi"></a>
-## **GetSecurityPriceTechnicalsRsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsRsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsRsi**
 > ApiResponseSecurityRelativeStrengthIndex GetSecurityPriceTechnicalsRsi (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Relative Strength Index
+Relative Strength Index
 
 Returns the Relative Strength Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3014,70 +1854,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Relative Strength Index | [optional] [default to 14] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Relative Strength Index | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Relative Strength Index | [optional] [default to 14]
+ **priceKey** | **string**| The Stock Price field to use when calculating Relative Strength Index | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityRelativeStrengthIndex**](ApiResponseSecurityRelativeStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsSma)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritySimpleMovingAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritySimpleMovingAverage.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsSma_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sma)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalssma)
-
 <a name="getsecuritypricetechnicalssma"></a>
-## **GetSecurityPriceTechnicalsSma**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSma_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsSma**
 > ApiResponseSecuritySimpleMovingAverage GetSecurityPriceTechnicalsSma (string identifier, int? period = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Simple Moving Average
+Simple Moving Average
 
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3116,70 +1917,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Simple Moving Average | [optional] [default to 20] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating Simple Moving Average | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Simple Moving Average | [optional] [default to 20]
+ **priceKey** | **string**| The Stock Price field to use when calculating Simple Moving Average | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecuritySimpleMovingAverage**](ApiResponseSecuritySimpleMovingAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsSr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityStochasticOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStochasticOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsSr_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sr)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalssr)
-
 <a name="getsecuritypricetechnicalssr"></a>
-## **GetSecurityPriceTechnicalsSr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsSr**
 > ApiResponseSecurityStochasticOscillator GetSecurityPriceTechnicalsSr (string identifier, int? period = null, int? signalPeriod = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Stochastic Oscillator
+Stochastic Oscillator
 
 Returns the Stochastic Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3218,70 +1980,31 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate %K of Stochastic Oscillator | [optional] [default to 14] &nbsp;
- **signalPeriod** | **int?**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate %K of Stochastic Oscillator | [optional] [default to 14]
+ **signalPeriod** | **int?**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityStochasticOscillator**](ApiResponseSecurityStochasticOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsTrix)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTripleExponentialAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTripleExponentialAverage.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsTrix_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/trix)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalstrix)
-
 <a name="getsecuritypricetechnicalstrix"></a>
-## **GetSecurityPriceTechnicalsTrix**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTrix_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsTrix**
 > ApiResponseSecurityTripleExponentialAverage GetSecurityPriceTechnicalsTrix (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Triple Exponential Average
+Triple Exponential Average
 
 Returns the Simple Moving Average values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3319,69 +2042,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityTripleExponentialAverage**](ApiResponseSecurityTripleExponentialAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsTsi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTrueStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTrueStrengthIndex.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsTsi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/tsi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalstsi)
-
 <a name="getsecuritypricetechnicalstsi"></a>
-## **GetSecurityPriceTechnicalsTsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsTsi**
 > ApiResponseSecurityTrueStrengthIndex GetSecurityPriceTechnicalsTsi (string identifier, int? lowPeriod = null, int? highPeriod = null, string priceKey = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### True Strength Index
+True Strength Index
 
 Returns the True Strength Index values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3421,71 +2105,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | **int?**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13] &nbsp;
- **highPeriod** | **int?**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25] &nbsp;
- **priceKey** | **string**| The Stock Price field to use when calculating True Strength Index | [optional] [default to close] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **lowPeriod** | **int?**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13]
+ **highPeriod** | **int?**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25]
+ **priceKey** | **string**| The Stock Price field to use when calculating True Strength Index | [optional] [default to close]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityTrueStrengthIndex**](ApiResponseSecurityTrueStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsUo)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityUltimateOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityUltimateOscillator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsUo_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/uo)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsuo)
-
 <a name="getsecuritypricetechnicalsuo"></a>
-## **GetSecurityPriceTechnicalsUo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsUo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsUo**
 > ApiResponseSecurityUltimateOscillator GetSecurityPriceTechnicalsUo (string identifier, int? shortPeriod = null, int? mediumPeriod = null, int? longPeriod = null, float? shortWeight = null, float? mediumWeight = null, float? longWeight = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Ultimate Oscillator
+Ultimate Oscillator
 
 Returns the Ultimate Oscillator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3528,74 +2173,35 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | **int?**| The number of observations, per period, to calculate the short period for Ultimate Oscillator | [optional] [default to 7] &nbsp;
- **mediumPeriod** | **int?**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator | [optional] [default to 14] &nbsp;
- **longPeriod** | **int?**| The number of observations, per period, to calculate the long period for Ultimate Oscillator | [optional] [default to 28] &nbsp;
- **shortWeight** | **float?**| The weight of short Buying Pressure average for Ultimate Oscillator | [optional] [default to 4.0] &nbsp;
- **mediumWeight** | **float?**| The weight of medium Buying Pressure average for Ultimate Oscillator | [optional] [default to 2.0] &nbsp;
- **longWeight** | **float?**| The weight of long Buying Pressure average for Ultimate Oscillator | [optional] [default to 1.0] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **shortPeriod** | **int?**| The number of observations, per period, to calculate the short period for Ultimate Oscillator | [optional] [default to 7]
+ **mediumPeriod** | **int?**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator | [optional] [default to 14]
+ **longPeriod** | **int?**| The number of observations, per period, to calculate the long period for Ultimate Oscillator | [optional] [default to 28]
+ **shortWeight** | **float?**| The weight of short Buying Pressure average for Ultimate Oscillator | [optional] [default to 4.0]
+ **mediumWeight** | **float?**| The weight of medium Buying Pressure average for Ultimate Oscillator | [optional] [default to 2.0]
+ **longWeight** | **float?**| The weight of long Buying Pressure average for Ultimate Oscillator | [optional] [default to 1.0]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityUltimateOscillator**](ApiResponseSecurityUltimateOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsVi)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVortexIndicator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityVortexIndicator.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsVi_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vi)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsvi)
-
 <a name="getsecuritypricetechnicalsvi"></a>
-## **GetSecurityPriceTechnicalsVi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsVi**
 > ApiResponseSecurityVortexIndicator GetSecurityPriceTechnicalsVi (string identifier, int? period = null, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Vortex Indicator
+Vortex Indicator
 
 Returns the Vortex Indicator values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3633,69 +2239,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to calculate Vortex Indicator | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to calculate Vortex Indicator | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityVortexIndicator**](ApiResponseSecurityVortexIndicator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsVpt)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVolumePriceTrend)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityVolumePriceTrend.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsVpt_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vpt)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsvpt)
-
 <a name="getsecuritypricetechnicalsvpt"></a>
-## **GetSecurityPriceTechnicalsVpt**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVpt_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsVpt**
 > ApiResponseSecurityVolumePriceTrend GetSecurityPriceTechnicalsVpt (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Volume-price Trend
+Volume-price Trend
 
 Returns the Volume-price Trend values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3732,68 +2299,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityVolumePriceTrend**](ApiResponseSecurityVolumePriceTrend.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsVwap)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityVolumeWeightedAveragePrice)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityVolumeWeightedAveragePrice.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsVwap_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vwap)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalsvwap)
-
 <a name="getsecuritypricetechnicalsvwap"></a>
-## **GetSecurityPriceTechnicalsVwap**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVwap_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsVwap**
 > ApiResponseSecurityVolumeWeightedAveragePrice GetSecurityPriceTechnicalsVwap (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Volume Weighted Average Price
+Volume Weighted Average Price
 
 Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3830,68 +2358,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityVolumeWeightedAveragePrice**](ApiResponseSecurityVolumeWeightedAveragePrice.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityPriceTechnicalsWr)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityWilliamsR)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityWilliamsR.md)
-
-[//]: # (OPERATION:GetSecurityPriceTechnicalsWr_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/wr)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritypricetechnicalswr)
-
 <a name="getsecuritypricetechnicalswr"></a>
-## **GetSecurityPriceTechnicalsWr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsWr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityPriceTechnicalsWr**
 > ApiResponseSecurityWilliamsR GetSecurityPriceTechnicalsWr (string identifier, int? period = null, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null)
 
-#### Williams %R
+Williams %R
 
 Returns the Williams %R values of Stock Prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -3929,69 +2418,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | **int?**| The number of observations, per period, to look-back when calculating Williams %R | [optional] [default to 14] &nbsp;
- **startDate** | **string**| Return technical indicator values on or after the date | [optional]  &nbsp;
- **endDate** | **string**| Return technical indicator values on or before the date | [optional]  &nbsp;
- **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **period** | **int?**| The number of observations, per period, to look-back when calculating Williams %R | [optional] [default to 14]
+ **startDate** | **string**| Return technical indicator values on or after the date | [optional] 
+ **endDate** | **string**| Return technical indicator values on or before the date | [optional] 
+ **pageSize** | **decimal?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityWilliamsR**](ApiResponseSecurityWilliamsR.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityRealtimePrice)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.RealtimeStockPrice)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:RealtimeStockPrice.md)
-
-[//]: # (OPERATION:GetSecurityRealtimePrice_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/realtime)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityrealtimeprice)
-
 <a name="getsecurityrealtimeprice"></a>
-## **GetSecurityRealtimePrice**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityRealtimePrice_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityRealtimePrice**
 > RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null)
 
-#### Realtime Stock Price for Security
+Realtime Stock Price for Security
 
 Return the realtime stock price for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4025,65 +2475,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **source** | **string**| Return the realtime price from the specified data source | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **source** | **string**| Return the realtime price from the specified data source | [optional] 
 
 ### Return type
 
 [**RealtimeStockPrice**](RealtimeStockPrice.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityStockPriceAdjustments)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityStockPriceAdjustments)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStockPriceAdjustments.md)
-
-[//]: # (OPERATION:GetSecurityStockPriceAdjustments_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritystockpriceadjustments)
-
 <a name="getsecuritystockpriceadjustments"></a>
-## **GetSecurityStockPriceAdjustments**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityStockPriceAdjustments_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityStockPriceAdjustments**
 > ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustments (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
-#### Stock Price Adjustments by Security
+Stock Price Adjustments by Security
 
 Returns stock price adjustments for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4120,68 +2531,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **DateTime?**| Return price adjustments on or after the date | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return price adjustments on or before the date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **DateTime?**| Return price adjustments on or after the date | [optional] 
+ **endDate** | **DateTime?**| Return price adjustments on or before the date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityStockPrices)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityStockPrices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStockPrices.md)
-
-[//]: # (OPERATION:GetSecurityStockPrices_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/prices)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritystockprices)
-
 <a name="getsecuritystockprices"></a>
-## **GetSecurityStockPrices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityStockPrices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityStockPrices**
 > ApiResponseSecurityStockPrices GetSecurityStockPrices (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null)
 
-#### Stock Prices by Security
+Stock Prices by Security
 
 Return end-of-day stock prices for the Security with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4219,69 +2591,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **DateTime?**| Return prices on or after the date | [optional]  &nbsp;
- **endDate** | **DateTime?**| Return prices on or before the date | [optional]  &nbsp;
- **frequency** | **string**| Return stock prices in the given frequency | [optional] [default to daily] &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **DateTime?**| Return prices on or after the date | [optional] 
+ **endDate** | **DateTime?**| Return prices on or before the date | [optional] 
+ **frequency** | **string**| Return stock prices in the given frequency | [optional] [default to daily]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityStockPrices**](ApiResponseSecurityStockPrices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityZacksAnalystRatings)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatings)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityZacksAnalystRatings.md)
-
-[//]: # (OPERATION:GetSecurityZacksAnalystRatings_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzacksanalystratings)
-
 <a name="getsecurityzacksanalystratings"></a>
-## **GetSecurityZacksAnalystRatings**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksAnalystRatings_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityZacksAnalystRatings**
 > ApiResponseSecurityZacksAnalystRatings GetSecurityZacksAnalystRatings (string identifier, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null)
 
-#### Zacks Analyst Ratings
+Zacks Analyst Ratings
 
 Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given `identifier`. Zack’s storied research team aggregates and validates the ratings from professional analysts.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4331,81 +2664,42 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **startDate** | **string**| Limit ratings to those on or after this date | [optional]  &nbsp;
- **endDate** | **string**| Limit ratings to those on or before this date | [optional]  &nbsp;
- **meanGreater** | **decimal?**| Return only records with a mean (average) higher than this value | [optional]  &nbsp;
- **meanLess** | **decimal?**| Return only records with a mean (average) lower than this value | [optional]  &nbsp;
- **strongBuysGreater** | **int?**| Return only records with more than this many Strong Buy recommendations | [optional]  &nbsp;
- **strongBuysLess** | **int?**| Return only records with fewer than this many Strong Buy recommendations | [optional]  &nbsp;
- **buysGreater** | **int?**| Return only records with more than this many Buy recommendations | [optional]  &nbsp;
- **buysLess** | **int?**| Return only records with fewer than this many Buy recommendations | [optional]  &nbsp;
- **holdsGreater** | **int?**| Return only records with more than this many Hold recommendations | [optional]  &nbsp;
- **holdsLess** | **int?**| Return only records with fewer than this many Hold recommendations | [optional]  &nbsp;
- **sellsGreater** | **int?**| Return only records with more than this many Sell recommendations | [optional]  &nbsp;
- **sellsLess** | **int?**| Return only records with fewer than this many Sell recommendations | [optional]  &nbsp;
- **strongSellsGreater** | **int?**| Return only records with more than this many Strong Sell recommendations | [optional]  &nbsp;
- **strongSellsLess** | **int?**| Return only records with fewer than this many Strong Sell recommendations | [optional]  &nbsp;
- **totalGreater** | **int?**| Return only records with more than this many recommendations, regardless of type | [optional]  &nbsp;
- **totalLess** | **int?**| Return only records with fewer than this many recommendations, regardless of type | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **string**| Limit ratings to those on or after this date | [optional] 
+ **endDate** | **string**| Limit ratings to those on or before this date | [optional] 
+ **meanGreater** | **decimal?**| Return only records with a mean (average) higher than this value | [optional] 
+ **meanLess** | **decimal?**| Return only records with a mean (average) lower than this value | [optional] 
+ **strongBuysGreater** | **int?**| Return only records with more than this many Strong Buy recommendations | [optional] 
+ **strongBuysLess** | **int?**| Return only records with fewer than this many Strong Buy recommendations | [optional] 
+ **buysGreater** | **int?**| Return only records with more than this many Buy recommendations | [optional] 
+ **buysLess** | **int?**| Return only records with fewer than this many Buy recommendations | [optional] 
+ **holdsGreater** | **int?**| Return only records with more than this many Hold recommendations | [optional] 
+ **holdsLess** | **int?**| Return only records with fewer than this many Hold recommendations | [optional] 
+ **sellsGreater** | **int?**| Return only records with more than this many Sell recommendations | [optional] 
+ **sellsLess** | **int?**| Return only records with fewer than this many Sell recommendations | [optional] 
+ **strongSellsGreater** | **int?**| Return only records with more than this many Strong Sell recommendations | [optional] 
+ **strongSellsLess** | **int?**| Return only records with fewer than this many Strong Sell recommendations | [optional] 
+ **totalGreater** | **int?**| Return only records with more than this many recommendations, regardless of type | [optional] 
+ **totalLess** | **int?**| Return only records with fewer than this many recommendations, regardless of type | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseSecurityZacksAnalystRatings**](ApiResponseSecurityZacksAnalystRatings.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityZacksAnalystRatingsSnapshot)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatingsSnapshot)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityZacksAnalystRatingsSnapshot.md)
-
-[//]: # (OPERATION:GetSecurityZacksAnalystRatingsSnapshot_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings/snapshot)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzacksanalystratingssnapshot)
-
 <a name="getsecurityzacksanalystratingssnapshot"></a>
-## **GetSecurityZacksAnalystRatingsSnapshot**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksAnalystRatingsSnapshot_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityZacksAnalystRatingsSnapshot**
 > ApiResponseSecurityZacksAnalystRatingsSnapshot GetSecurityZacksAnalystRatingsSnapshot (string identifier, string date = null)
 
-#### Zacks Analyst Ratings Snapshot
+Zacks Analyst Ratings Snapshot
 
 Returns a snapshot of ratings data compared with previous timeframes for the Security with the given `identifier`. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4439,65 +2733,26 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **date** | **string**| Lookup a historical snapshot on the given date | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **date** | **string**| Lookup a historical snapshot on the given date | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityZacksAnalystRatingsSnapshot**](ApiResponseSecurityZacksAnalystRatingsSnapshot.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityZacksEpsSurprises)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityZacksEPSSurprises)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityZacksEPSSurprises.md)
-
-[//]: # (OPERATION:GetSecurityZacksEpsSurprises_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/zacks/eps_surprises)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzacksepssurprises)
-
 <a name="getsecurityzacksepssurprises"></a>
-## **GetSecurityZacksEpsSurprises**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksEpsSurprises_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityZacksEpsSurprises**
 > ApiResponseSecurityZacksEPSSurprises GetSecurityZacksEpsSurprises (string identifier, int? pageSize = null, string nextPage = null)
 
-#### Zacks EPS Surprises for Security
+Zacks EPS Surprises for Security
 
 Return Zacks EPS surprises for the Security with the given `identifier`.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4532,66 +2787,27 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityZacksEPSSurprises**](ApiResponseSecurityZacksEPSSurprises.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:GetSecurityZacksSalesSurprises)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityZacksSalesSurprises)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityZacksSalesSurprises.md)
-
-[//]: # (OPERATION:GetSecurityZacksSalesSurprises_v2)
-
-[//]: # (ENDPOINT:/securities/{identifier}/zacks/sales_surprises)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityzackssalessurprises)
-
 <a name="getsecurityzackssalessurprises"></a>
-## **GetSecurityZacksSalesSurprises**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityZacksSalesSurprises_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetSecurityZacksSalesSurprises**
 > ApiResponseSecurityZacksSalesSurprises GetSecurityZacksSalesSurprises (string identifier, int? pageSize = null, string nextPage = null)
 
-#### Zacks Sales Surprises for Security
+Zacks Sales Surprises for Security
 
 Return Zacks sales surprises for the Security with the given `identifier`.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4626,66 +2842,27 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityZacksSalesSurprises**](ApiResponseSecurityZacksSalesSurprises.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:ScreenSecurities)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.List<SecurityScreenResult>)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:SecurityScreenResult.md)
-
-[//]: # (OPERATION:ScreenSecurities_v2)
-
-[//]: # (ENDPOINT:/securities/screen)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#screensecurities)
-
 <a name="screensecurities"></a>
-## **ScreenSecurities**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/ScreenSecurities_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **ScreenSecurities**
 > List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
 
-#### Screen Securities
+Screen Securities
 
 Screen Securities using complex logic
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4722,68 +2899,29 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
- **orderColumn** | **string**| Results returned sorted by this column | [optional]  &nbsp;
- **orderDirection** | **string**| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
- **primaryOnly** | **bool?**| Return only primary securities | [optional] [default to false] &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional] 
+ **orderColumn** | **string**| Results returned sorted by this column | [optional] 
+ **orderDirection** | **string**| Sort order to use with the order_column | [optional] [default to asc]
+ **primaryOnly** | **bool?**| Return only primary securities | [optional] [default to false]
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**List<SecurityScreenResult>**](SecurityScreenResult.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
-
-[//]: # (METHOD:SearchSecurities)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritiesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesSearch.md)
-
-[//]: # (OPERATION:SearchSecurities_v2)
-
-[//]: # (ENDPOINT:/securities/search)
-
-[//]: # (DOCUMENT_LINK:SecurityApi.md#searchsecurities)
-
 <a name="searchsecurities"></a>
-## **SearchSecurities**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchSecurities_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **SearchSecurities**
 > ApiResponseSecuritiesSearch SearchSecurities (string query, int? pageSize = null)
 
-#### Search Securities
+Search Securities
 
 Searches for Securities matching the text `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -4817,24 +2955,14 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**|  |  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **string**|  | 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseSecuritiesSearch**](ApiResponseSecuritiesSearch.md)
-
-[//]: # (END_OPERATION)
 

@@ -13,44 +13,15 @@ Method | HTTP request | Description
 [**SearchNotes**](FilingApi.md#searchnotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
-
-[//]: # (METHOD:GetAllFilings)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseFilings)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseFilings.md)
-
-[//]: # (OPERATION:GetAllFilings_v2)
-
-[//]: # (ENDPOINT:/filings)
-
-[//]: # (DOCUMENT_LINK:FilingApi.md#getallfilings)
-
 <a name="getallfilings"></a>
-## **GetAllFilings**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllFilings_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetAllFilings**
 > ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
-#### All Filings
+All Filings
 
 Returns all Filings. Returns Filings matching parameters when supplied.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -68,7 +39,7 @@ namespace Example
 
             var filingApi = new FilingApi();
             var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-            var reportType = "";  // string | Filter by report type (optional) 
+            var reportType = "";  // string | Filter by report type. Separate values with commas to return multiple report types. (optional) 
             var startDate = "2015-01-01";  // DateTime? | Filed on or after the given date (optional) 
             var endDate = "";  // DateTime? | Filed before or after the given date (optional) 
             var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -88,69 +59,30 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | **string**| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **reportType** | **string**| Filter by report type | [optional]  &nbsp;
- **startDate** | **DateTime?**| Filed on or after the given date | [optional]  &nbsp;
- **endDate** | **DateTime?**| Filed before or after the given date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **company** | **string**| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | 
+ **reportType** | **string**| Filter by report type. Separate values with commas to return multiple report types. | [optional] 
+ **startDate** | **DateTime?**| Filed on or after the given date | [optional] 
+ **endDate** | **DateTime?**| Filed before or after the given date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseFilings**](ApiResponseFilings.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
-
-[//]: # (METHOD:GetAllNotes)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseFilingNotes)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseFilingNotes.md)
-
-[//]: # (OPERATION:GetAllNotes_v2)
-
-[//]: # (ENDPOINT:/filings/notes)
-
-[//]: # (DOCUMENT_LINK:FilingApi.md#getallnotes)
-
 <a name="getallnotes"></a>
-## **GetAllNotes**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllNotes_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetAllNotes**
 > ApiResponseFilingNotes GetAllNotes (string company = null, string reportType = null, DateTime? filingStartDate = null, DateTime? filingEndDate = null, DateTime? periodEndedStartDate = null, DateTime? periodEndedEndDate = null, int? pageSize = null, string nextPage = null)
 
-#### All Filing Notes
+All Filing Notes
 
 Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -190,71 +122,32 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
- **reportType** | **string**| Notes contained in filings that match the given report type | [optional]  &nbsp;
- **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional]  &nbsp;
- **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional]  &nbsp;
- **periodEndedStartDate** | **DateTime?**| Limit search to filings with a period end date on or after this date | [optional]  &nbsp;
- **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **string**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **company** | **string**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional] 
+ **reportType** | **string**| Notes contained in filings that match the given report type | [optional] 
+ **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
+ **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
+ **periodEndedStartDate** | **DateTime?**| Limit search to filings with a period end date on or after this date | [optional] 
+ **periodEndedEndDate** | **DateTime?**| Limit search to filings with a period end date on or before this date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **string**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
-
-[//]: # (METHOD:GetFilingById)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Filing)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:Filing.md)
-
-[//]: # (OPERATION:GetFilingById_v2)
-
-[//]: # (ENDPOINT:/filings/{id})
-
-[//]: # (DOCUMENT_LINK:FilingApi.md#getfilingbyid)
-
 <a name="getfilingbyid"></a>
-## **GetFilingById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFilingById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetFilingById**
 > Filing GetFilingById (string id)
 
-#### Lookup Filing
+Lookup Filing
 
 Returns the Filing with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -287,63 +180,23 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Intrinio ID of the Filing |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **id** | **string**| The Intrinio ID of the Filing | 
 
 ### Return type
 
 [**Filing**](Filing.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
-
-[//]: # (METHOD:GetNote)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.FilingNote)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:FilingNote.md)
-
-[//]: # (OPERATION:GetNote_v2)
-
-[//]: # (ENDPOINT:/filings/notes/{identifier})
-
-[//]: # (DOCUMENT_LINK:FilingApi.md#getnote)
-
 <a name="getnote"></a>
-## **GetNote**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNote_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetNote**
 > FilingNote GetNote (string identifier, string contentFormat = null)
 
-#### Filing Note by ID
-
-
-[//]: # (END_OVERVIEW)
+Filing Note by ID
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -377,64 +230,24 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID of the filing note |  &nbsp;
- **contentFormat** | **string**| Returns content in html (as filed) or plain text | [optional] [default to text] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| The Intrinio ID of the filing note | 
+ **contentFormat** | **string**| Returns content in html (as filed) or plain text | [optional] [default to text]
 
 ### Return type
 
 [**FilingNote**](FilingNote.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
-
-[//]: # (METHOD:GetNoteHtml)
-
-[//]: # (RETURN_TYPE:string)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetNoteHtml_v2)
-
-[//]: # (ENDPOINT:/filings/notes/{identifier}/html)
-
-[//]: # (DOCUMENT_LINK:FilingApi.md#getnotehtml)
-
 <a name="getnotehtml"></a>
-## **GetNoteHtml**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteHtml_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetNoteHtml**
 > string GetNoteHtml (string identifier)
 
-#### Filing Note HTML
-
-
-[//]: # (END_OVERVIEW)
+Filing Note HTML
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -467,63 +280,23 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID of the filing note |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| The Intrinio ID of the filing note | 
 
 ### Return type
 
 **string**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
-
-[//]: # (METHOD:GetNoteText)
-
-[//]: # (RETURN_TYPE:string)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:GetNoteText_v2)
-
-[//]: # (ENDPOINT:/filings/notes/{identifier}/text)
-
-[//]: # (DOCUMENT_LINK:FilingApi.md#getnotetext)
-
 <a name="getnotetext"></a>
-## **GetNoteText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **GetNoteText**
 > string GetNoteText (string identifier)
 
-#### Filing Note Text
-
-
-[//]: # (END_OVERVIEW)
+Filing Note Text
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -556,64 +329,25 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **string**| The Intrinio ID of the filing note |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **string**| The Intrinio ID of the filing note | 
 
 ### Return type
 
 **string**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
-
-[//]: # (METHOD:SearchNotes)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseFilingNotesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseFilingNotesSearch.md)
-
-[//]: # (OPERATION:SearchNotes_v2)
-
-[//]: # (ENDPOINT:/filings/notes/search)
-
-[//]: # (DOCUMENT_LINK:FilingApi.md#searchnotes)
-
 <a name="searchnotes"></a>
-## **SearchNotes**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchNotes_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **SearchNotes**
 > ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
 
-#### Search Filing Notes
+Search Filing Notes
 
 Searches for Filing Notes using the `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```csharp
 using System;
 using System.Diagnostics;
@@ -650,27 +384,17 @@ namespace Example
 }
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Search for notes that contain all or parts of this text |  &nbsp;
- **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional]  &nbsp;
- **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional]  &nbsp;
- **pageSize** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
- **pageSize2** | **int?**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **string**| Search for notes that contain all or parts of this text | 
+ **filingStartDate** | **DateTime?**| Limit search to filings on or after this date | [optional] 
+ **filingEndDate** | **DateTime?**| Limit search to filings on or before this date | [optional] 
+ **pageSize** | **int?**| The number of results to return | [optional] [default to 100]
+ **pageSize2** | **int?**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseFilingNotesSearch**](ApiResponseFilingNotesSearch.md)
-
-[//]: # (END_OPERATION)
 

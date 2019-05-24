@@ -1,5 +1,5 @@
-### Intrinio.SDK.Model.IntradayStockPrice
-#### Properties
+# Intrinio.SDK.Model.IntradayStockPrice
+## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -11,4 +11,6 @@ Name | Type | Description | Notes
 **BidSize** | **decimal?** | The size of the top bid order. | [optional] 
 **Volume** | **decimal?** | The number of shares exchanged during the trading day on the exchange. | [optional] 
 **Source** | **string** | The source of the data. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

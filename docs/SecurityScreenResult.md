@@ -1,10 +1,23 @@
-# Intrinio.SDK.Model.SecurityScreenResult
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.SecurityScreenResult)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
-**Data** | [**List&lt;SecurityScreenResultData&gt;**](SecurityScreenResultData.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.SecurityScreenResult
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Security** | [**SecuritySummary**](SecuritySummary.md) |  &nbsp;
+**Data** | [**List&lt;SecurityScreenResultData&gt;**](SecurityScreenResultData.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecurityScreenResultData)
+
 

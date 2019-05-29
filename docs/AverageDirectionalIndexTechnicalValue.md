@@ -1,12 +1,19 @@
-# Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Adx** | **float?** | The Average Directional Index value | [optional] 
-**DiNeg** | **float?** | The Minus Directional Indicator value | [optional] 
-**DiPos** | **float?** | The Plus Directional Indicator value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Adx** | float? | The Average Directional Index value &nbsp;
+**DiNeg** | float? | The Minus Directional Indicator value &nbsp;
+**DiPos** | float? | The Plus Directional Indicator value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

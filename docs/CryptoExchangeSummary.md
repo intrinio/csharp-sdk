@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.CryptoExchangeSummary
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.CryptoExchangeSummary)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | **string** | The Crypto Exchange name. | [optional] 
-**Code** | **string** | The Crypto Exchange code. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.CryptoExchangeSummary
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Name** | string | The Crypto Exchange name. &nbsp;
+**Code** | string | The Crypto Exchange code. &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

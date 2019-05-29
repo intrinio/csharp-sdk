@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseEconomicIndicesSearch
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseEconomicIndicesSearch)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Indices** | [**List&lt;EconomicIndexSummary&gt;**](EconomicIndexSummary.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseEconomicIndicesSearch
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Indices** | [**List&lt;EconomicIndexSummary&gt;**](EconomicIndexSummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.EconomicIndexSummary)
+
 

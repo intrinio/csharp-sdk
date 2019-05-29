@@ -1,11 +1,18 @@
-# Intrinio.SDK.Model.SecurityScreenClause
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.SecurityScreenClause)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Field** | **string** | The field to use when screening, such as an Intrinio Data Tag | [optional] 
-**_Operator** | **string** | The logic operator to use when screening | [optional] 
-**Value** | **string** | The value to screen by | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.SecurityScreenClause
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Field** | string | The field to use when screening, such as an Intrinio Data Tag &nbsp;
+**_Operator** | string | The logic operator to use when screening &nbsp;
+**Value** | string | The value to screen by &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

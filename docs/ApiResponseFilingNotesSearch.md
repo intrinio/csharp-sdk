@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseFilingNotesSearch
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseFilingNotesSearch)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**FilingNotes** | [**List&lt;FilingNoteSummary&gt;**](FilingNoteSummary.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseFilingNotesSearch
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**FilingNotes** | [**List&lt;FilingNoteSummary&gt;**](FilingNoteSummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.FilingNoteSummary)
+
 

@@ -1,12 +1,25 @@
-# Intrinio.SDK.Model.ApiResponseSecurityIntradayPrices
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecurityIntradayPrices)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**IntradayPrices** | [**List&lt;IntradayStockPrice&gt;**](IntradayStockPrice.md) | The intraday stock prices for the Security | [optional] 
-**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
-**Source** | **string** | The source of the data | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecurityIntradayPrices
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**IntradayPrices** | [**List&lt;IntradayStockPrice&gt;**](IntradayStockPrice.md) | The intraday stock prices for the Security &nbsp;
+**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+**Source** | string | The source of the data &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.IntradayStockPrice)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.6.2
-- Package version: 3.0.0
+- API version: 2.7.0
+- Package version: 3.1.0
 
 
 <a name="frameworks-supported"></a>
@@ -79,38 +79,44 @@ using Intrinio.SDK.Model;
 
 namespace Example
 {
-    public class Example
+  public class GetAllCompaniesExample
+  {
+    public static void Main()
     {
-        public static void Main()
-        {
-            Configuration.Default.ApiKey.Add("api_key", "YOUR_API_KEY");
+      Configuration.Default.AddApiKey("api_key", "OmJiN2MyNjU4ZDFjMmFlMTc2M2ZmNjJjM2U5NWQ0NmVh");
 
-            var companyApi = new CompanyApi();
-            String nextPage = null;
+      var companyApi = new CompanyApi();
+      var latestFilingDate = "";  // DateTime? | Last filing date (optional) 
+      var sic = "";  // string | Standard Industrial Classification code (optional) 
+      var template = "";  // string | Template (optional) 
+      var sector = "";  // string | Industry sector (optional) 
+      var industryCategory = "";  // string | Industry category (optional) 
+      var industryGroup = "";  // string | Industry group (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
-            try
-            {
-                ApiResponseCompanies response = companyApi.GetAllCompanies(nextPage);
-                response.Companies.ForEach(delegate (CompanySummary company)
-                {
-                    Console.WriteLine(company.Ticker + " - " + company.Name);
-                });
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling CompanyApi.FilterCompanies: " + e.Message );
-            }
-            
-            Console.ReadLine();
-        }
+      try
+      {
+        ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, pageSize, nextPage);
+        Debug.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Debug.Print("Exception when calling CompanyApi.GetAllCompanies: " + e.Message );
+      }
     }
+  }
 }
 ```
 
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-v2.intrinio.com*
+Complete documentation for the Intrinio C# SDK is available on the Intrinio website.
+
+[View Intrinio C# SDK Documentation](https://docs.intrinio.com/documentation/api_v2/csharp)
+
+A listing of classes and methods is also provided below:
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -174,6 +180,7 @@ Class | Method | HTTP request | Description
 *FilingApi* | [**GetAllFilings**](docs/FilingApi.md#getallfilings) | **GET** /filings | All Filings
 *FilingApi* | [**GetAllNotes**](docs/FilingApi.md#getallnotes) | **GET** /filings/notes | All Filing Notes
 *FilingApi* | [**GetFilingById**](docs/FilingApi.md#getfilingbyid) | **GET** /filings/{id} | Lookup Filing
+*FilingApi* | [**GetFilingFundamentals**](docs/FilingApi.md#getfilingfundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 *FilingApi* | [**GetNote**](docs/FilingApi.md#getnote) | **GET** /filings/notes/{identifier} | Filing Note by ID
 *FilingApi* | [**GetNoteHtml**](docs/FilingApi.md#getnotehtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
 *FilingApi* | [**GetNoteText**](docs/FilingApi.md#getnotetext) | **GET** /filings/notes/{identifier}/text | Filing Note Text
@@ -388,6 +395,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
  - [Model.ApiResponseEconomicIndices](docs/ApiResponseEconomicIndices.md)
  - [Model.ApiResponseEconomicIndicesSearch](docs/ApiResponseEconomicIndicesSearch.md)
+ - [Model.ApiResponseFilingFundamentals](docs/ApiResponseFilingFundamentals.md)
  - [Model.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [Model.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
  - [Model.ApiResponseFilings](docs/ApiResponseFilings.md)

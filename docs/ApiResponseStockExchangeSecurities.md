@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseStockExchangeSecurities
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseStockExchangeSecurities)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Securities** | [**List&lt;SecuritySummary&gt;**](SecuritySummary.md) | The securities traded on the Stock Exchange | [optional] 
-**StockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseStockExchangeSecurities
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Securities** | [**List&lt;SecuritySummary&gt;**](SecuritySummary.md) | The securities traded on the Stock Exchange &nbsp;
+**StockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.StockExchange)
+
 

@@ -1,11 +1,21 @@
-# Intrinio.SDK.Model.FilingNoteSummary
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.FilingNoteSummary)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | **string** | The Intrinio ID of the note | [optional] 
-**XbrlTag** | **string** | The XBRL tag used for the note by the filing entity | [optional] 
-**Filing** | [**FilingNoteFiling**](FilingNoteFiling.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.FilingNoteSummary
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Id** | string | The Intrinio ID of the note &nbsp;
+**XbrlTag** | string | The XBRL tag used for the note by the filing entity &nbsp;
+**Filing** | [**FilingNoteFiling**](FilingNoteFiling.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.FilingNoteFiling)
+
 

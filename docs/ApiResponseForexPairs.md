@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseForexPairs
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseForexPairs)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Pairs** | [**List&lt;ForexPair&gt;**](ForexPair.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseForexPairs
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Pairs** | [**List&lt;ForexPair&gt;**](ForexPair.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ForexPair)
+
 

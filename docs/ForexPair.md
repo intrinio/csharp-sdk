@@ -1,11 +1,18 @@
-# Intrinio.SDK.Model.ForexPair
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ForexPair)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Code** | **string** | The common code of the currency pair | [optional] 
-**BaseCurrency** | **string** | The ISO 4217 currency code of the base currency | [optional] 
-**QuoteCurrency** | **string** | The ISO 4217 currency code of the quote currency | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ForexPair
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Code** | string | The common code of the currency pair &nbsp;
+**BaseCurrency** | string | The ISO 4217 currency code of the base currency &nbsp;
+**QuoteCurrency** | string | The ISO 4217 currency code of the quote currency &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

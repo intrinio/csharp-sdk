@@ -1,14 +1,21 @@
-# Intrinio.SDK.Model.CryptoExchange
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.CryptoExchange)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | **string** | The Crypto Exchange name. | [optional] 
-**Code** | **string** | The Crypto Exchange code. | [optional] 
-**BookDepthAvailable** | **bool?** | A boolean, representing whether book depth data is provided by this exchange or not. | [optional] 
-**HistoryAvailable** | **bool?** | A boolean, representing whether historical data is provided by this exchange or not. | [optional] 
-**SnapshotAvailable** | **bool?** | A boolean, representing whether snpashot data is provided by this exchange or not. | [optional] 
-**TradesAvailable** | **bool?** | A boolean, representing whether trade data is provided by this exchange or not. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.CryptoExchange
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Name** | string | The Crypto Exchange name. &nbsp;
+**Code** | string | The Crypto Exchange code. &nbsp;
+**BookDepthAvailable** | bool? | A boolean, representing whether book depth data is provided by this exchange or not. &nbsp;
+**HistoryAvailable** | bool? | A boolean, representing whether historical data is provided by this exchange or not. &nbsp;
+**SnapshotAvailable** | bool? | A boolean, representing whether snpashot data is provided by this exchange or not. &nbsp;
+**TradesAvailable** | bool? | A boolean, representing whether trade data is provided by this exchange or not. &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

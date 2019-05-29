@@ -1,20 +1,27 @@
-# Intrinio.SDK.Model.EconomicIndex
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.EconomicIndex)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | **string** | The Intrinio ID for the Index | [optional] 
-**Symbol** | **string** | The symbol used to identify the Index | [optional] 
-**Name** | **string** | The name of the Index | [optional] 
-**Continent** | **string** | The continent of the country of focus for the Index | [optional] 
-**Country** | **string** | The country of focus for the Index | [optional] 
-**UpdateFrequency** | **string** | How often the Index is updated | [optional] 
-**LastUpdated** | **DateTime?** | When the Index was updated last | [optional] 
-**Description** | **string** | A paragraph describing the index and its scope | [optional] 
-**ObservationStart** | **DateTime?** | The earliest date for which data is available | [optional] 
-**ObservationEnd** | **DateTime?** | The latest date for which data is available | [optional] 
-**SeasonalAdjustment** | **string** | Whether the data is adjusted to account for seasonality | [optional] 
-**Units** | **string** | The units of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.EconomicIndex
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Id** | string | The Intrinio ID for the Index &nbsp;
+**Symbol** | string | The symbol used to identify the Index &nbsp;
+**Name** | string | The name of the Index &nbsp;
+**Continent** | string | The continent of the country of focus for the Index &nbsp;
+**Country** | string | The country of focus for the Index &nbsp;
+**UpdateFrequency** | string | How often the Index is updated &nbsp;
+**LastUpdated** | DateTime? | When the Index was updated last &nbsp;
+**Description** | string | A paragraph describing the index and its scope &nbsp;
+**ObservationStart** | DateTime? | The earliest date for which data is available &nbsp;
+**ObservationEnd** | DateTime? | The latest date for which data is available &nbsp;
+**SeasonalAdjustment** | string | Whether the data is adjusted to account for seasonality &nbsp;
+**Units** | string | The units of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

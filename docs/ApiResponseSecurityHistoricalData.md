@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseSecurityHistoricalData
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecurityHistoricalData)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**HistoricalData** | [**List&lt;HistoricalData&gt;**](HistoricalData.md) |  | [optional] 
-**Security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecurityHistoricalData
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**HistoricalData** | [**List&lt;HistoricalData&gt;**](HistoricalData.md) |  &nbsp;
+**Security** | [**SecuritySummary**](SecuritySummary.md) |  &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.HistoricalData)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

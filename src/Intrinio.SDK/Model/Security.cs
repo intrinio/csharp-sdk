@@ -29,7 +29,7 @@ namespace Intrinio.SDK.Model
         /// <param name="CompanyId">The Intrinio ID for the company for which the Security is issued.</param>
         /// <param name="Name">The name of the Security.</param>
         /// <param name="Type">The Security&#39;s type.</param>
-        /// <param name="Code">A 2-3 digit code classifying the Security.</param>
+        /// <param name="Code">A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;).</param>
         /// <param name="ShareClass">The Security&#39;s share class (if applicable).</param>
         /// <param name="Currency">The currency in which the Security is traded on the exchange.</param>
         /// <param name="RoundLotSize">The normal unit of trading.</param>
@@ -114,9 +114,9 @@ namespace Intrinio.SDK.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// A 2-3 digit code classifying the Security
+        /// A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)
         /// </summary>
-        /// <value>A 2-3 digit code classifying the Security</value>
+        /// <value>A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
 

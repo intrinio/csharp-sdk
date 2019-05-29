@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.SimpleMovingAverageTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.SimpleMovingAverageTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Sma** | **float?** | The Simple Moving Average calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.SimpleMovingAverageTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Sma** | float? | The Simple Moving Average calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

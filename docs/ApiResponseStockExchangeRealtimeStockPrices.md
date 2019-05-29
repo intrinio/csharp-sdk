@@ -1,10 +1,23 @@
-# Intrinio.SDK.Model.ApiResponseStockExchangeRealtimeStockPrices
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseStockExchangeRealtimeStockPrices)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**StockPrices** | [**List&lt;RealtimeStockPrice&gt;**](RealtimeStockPrice.md) | The realtime stock prices for all Securities traded on the Stock Exchange | [optional] 
-**StockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseStockExchangeRealtimeStockPrices
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**StockPrices** | [**List&lt;RealtimeStockPrice&gt;**](RealtimeStockPrice.md) | The realtime stock prices for all Securities traded on the Stock Exchange &nbsp;
+**StockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.RealtimeStockPrice)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.StockExchange)
+
 

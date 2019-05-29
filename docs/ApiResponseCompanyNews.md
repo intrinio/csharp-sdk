@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseCompanyNews
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCompanyNews)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**News** | [**List&lt;CompanyNews&gt;**](CompanyNews.md) |  | [optional] 
-**Company** | [**CompanySummary**](CompanySummary.md) |  | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCompanyNews
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**News** | [**List&lt;CompanyNews&gt;**](CompanyNews.md) |  &nbsp;
+**Company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CompanyNews)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CompanySummary)
+
 

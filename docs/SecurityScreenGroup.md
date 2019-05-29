@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.SecurityScreenGroup
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.SecurityScreenGroup)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**_Operator** | **string** | The logic operator for the group (AND, OR, NOT) | [optional] 
-**Clauses** | [**List&lt;SecurityScreenClause&gt;**](SecurityScreenClause.md) | The logic clauses in the group | [optional] 
-**Groups** | [**List&lt;SecurityScreenGroup&gt;**](SecurityScreenGroup.md) | The nested groups within the group | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.SecurityScreenGroup
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**_Operator** | string | The logic operator for the group (AND, OR, NOT) &nbsp;
+**Clauses** | [**List&lt;SecurityScreenClause&gt;**](SecurityScreenClause.md) | The logic clauses in the group &nbsp;
+**Groups** | [**List&lt;SecurityScreenGroup&gt;**](SecurityScreenGroup.md) | The nested groups within the group &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecurityScreenClause)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecurityScreenGroup)
+
 

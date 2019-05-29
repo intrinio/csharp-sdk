@@ -1,14 +1,33 @@
-# Intrinio.SDK.Model.ApiResponseCryptoSimpleMovingAverage
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCryptoSimpleMovingAverage)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Technicals** | [**List&lt;SimpleMovingAverageTechnicalValue&gt;**](SimpleMovingAverageTechnicalValue.md) |  | [optional] 
-**Indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator | [optional] 
-**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
-**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
-**Timeframe** | **string** | The time interval for the crypto currency prices | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCryptoSimpleMovingAverage
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Technicals** | [**List&lt;SimpleMovingAverageTechnicalValue&gt;**](SimpleMovingAverageTechnicalValue.md) |  &nbsp;
+**Indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator &nbsp;
+**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  &nbsp;
+**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  &nbsp;
+**Timeframe** | string | The time interval for the crypto currency prices &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SimpleMovingAverageTechnicalValue)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.TechnicalIndicator)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoPairSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoExchangeSummary)
+
 

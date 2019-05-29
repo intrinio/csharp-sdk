@@ -1,13 +1,29 @@
-# Intrinio.SDK.Model.ApiResponseCryptoPrices
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCryptoPrices)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Prices** | [**List&lt;CryptoPrice&gt;**](CryptoPrice.md) | All the BAR prices, time, and volume. | [optional] 
-**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
-**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
-**Timeframe** | **string** | The time interval for the crypto currency prices. | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCryptoPrices
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Prices** | [**List&lt;CryptoPrice&gt;**](CryptoPrice.md) | All the BAR prices, time, and volume. &nbsp;
+**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  &nbsp;
+**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  &nbsp;
+**Timeframe** | string | The time interval for the crypto currency prices. &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoPrice)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoPairSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoExchangeSummary)
+
 

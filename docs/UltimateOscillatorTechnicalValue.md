@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.UltimateOscillatorTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.UltimateOscillatorTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Uo** | **float?** | The Ultimate Oscillator calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.UltimateOscillatorTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Uo** | float? | The Ultimate Oscillator calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

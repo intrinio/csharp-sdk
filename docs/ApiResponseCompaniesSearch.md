@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseCompaniesSearch
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCompaniesSearch)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Companies** | [**List&lt;CompanySummary&gt;**](CompanySummary.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCompaniesSearch
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Companies** | [**List&lt;CompanySummary&gt;**](CompanySummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CompanySummary)
+
 

@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseStockMarketIndicesSearch
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseStockMarketIndicesSearch)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Indices** | [**List&lt;StockMarketIndexSummary&gt;**](StockMarketIndexSummary.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseStockMarketIndicesSearch
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Indices** | [**List&lt;StockMarketIndexSummary&gt;**](StockMarketIndexSummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.StockMarketIndexSummary)
+
 

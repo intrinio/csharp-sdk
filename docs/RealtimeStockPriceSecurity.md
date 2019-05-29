@@ -1,13 +1,20 @@
-# Intrinio.SDK.Model.RealtimeStockPriceSecurity
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.RealtimeStockPriceSecurity)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | **string** | The Intrinio ID for Security | [optional] 
-**Ticker** | **string** | The common/local ticker of the Security | [optional] 
-**ExchangeTicker** | **string** | The exchange-level ticker | [optional] 
-**Figi** | **string** | The OpenFIGI identifier | [optional] 
-**CompositeFigi** | **string** | The country-composite OpenFIGI identifier | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.RealtimeStockPriceSecurity
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Id** | string | The Intrinio ID for Security &nbsp;
+**Ticker** | string | The common/local ticker of the Security &nbsp;
+**ExchangeTicker** | string | The exchange-level ticker &nbsp;
+**Figi** | string | The OpenFIGI identifier &nbsp;
+**CompositeFigi** | string | The country-composite OpenFIGI identifier &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

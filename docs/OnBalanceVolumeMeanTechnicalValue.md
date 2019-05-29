@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.OnBalanceVolumeMeanTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.OnBalanceVolumeMeanTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**ObvMean** | **float?** | The On-balance Volume Mean calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.OnBalanceVolumeMeanTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**ObvMean** | float? | The On-balance Volume Mean calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

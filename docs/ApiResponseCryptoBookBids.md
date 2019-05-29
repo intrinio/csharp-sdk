@@ -1,12 +1,28 @@
-# Intrinio.SDK.Model.ApiResponseCryptoBookBids
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCryptoBookBids)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Bids** | [**List&lt;CryptoBookEntry&gt;**](CryptoBookEntry.md) | The bid prices and their respective sizes, in descending order of price. | [optional] 
-**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
-**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
-**LastUpdated** | **string** | The UTC timestamp of when the order book was last updated. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCryptoBookBids
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Bids** | [**List&lt;CryptoBookEntry&gt;**](CryptoBookEntry.md) | The bid prices and their respective sizes, in descending order of price. &nbsp;
+**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  &nbsp;
+**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  &nbsp;
+**LastUpdated** | string | The UTC timestamp of when the order book was last updated. &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoBookEntry)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoPairSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoExchangeSummary)
+
 

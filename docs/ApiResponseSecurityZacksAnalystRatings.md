@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatings
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatings)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**AnalystRatings** | [**List&lt;ZacksAnalystRatingSummary&gt;**](ZacksAnalystRatingSummary.md) |  | [optional] 
-**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatings
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**AnalystRatings** | [**List&lt;ZacksAnalystRatingSummary&gt;**](ZacksAnalystRatingSummary.md) |  &nbsp;
+**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ZacksAnalystRatingSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

@@ -1,12 +1,19 @@
-# Intrinio.SDK.Model.KeltnerChannelTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.KeltnerChannelTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**LowerBand** | **float?** | The lower band value of the Keltner Channel calculation | [optional] 
-**MiddleBand** | **float?** | The middle band value of the Keltner Channel calculation | [optional] 
-**UpperBand** | **float?** | The upper band value of the Keltner Channel calculation | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.KeltnerChannelTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**LowerBand** | float? | The lower band value of the Keltner Channel calculation &nbsp;
+**MiddleBand** | float? | The middle band value of the Keltner Channel calculation &nbsp;
+**UpperBand** | float? | The upper band value of the Keltner Channel calculation &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

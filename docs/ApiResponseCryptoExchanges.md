@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseCryptoExchanges
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCryptoExchanges)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Exchanges** | [**List&lt;CryptoExchange&gt;**](CryptoExchange.md) | A list of Crypto Exchanges for the given Crypto Currency Pair sorted alphabetically by code. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCryptoExchanges
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Exchanges** | [**List&lt;CryptoExchange&gt;**](CryptoExchange.md) | A list of Crypto Exchanges for the given Crypto Currency Pair sorted alphabetically by code. &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoExchange)
+
 

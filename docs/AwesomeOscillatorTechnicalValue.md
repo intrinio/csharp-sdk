@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.AwesomeOscillatorTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.AwesomeOscillatorTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Ao** | **float?** | The Awesome Oscillator calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.AwesomeOscillatorTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Ao** | float? | The Awesome Oscillator calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

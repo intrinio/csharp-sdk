@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ReportedFinancial
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ReportedFinancial)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**XbrlTag** | [**ReportedTag**](ReportedTag.md) |  | [optional] 
-**Value** | **decimal?** | The value reported for the XBRL Tag within the scope of the Fundamental | [optional] 
-**Dimensions** | [**List&lt;ReportedFinancialDimension&gt;**](ReportedFinancialDimension.md) | The combination of XBRL axis and members that defines the dimensionalization of this fact (if any) | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ReportedFinancial
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**XbrlTag** | [**ReportedTag**](ReportedTag.md) |  &nbsp;
+**Value** | decimal? | The value reported for the XBRL Tag within the scope of the Fundamental &nbsp;
+**Dimensions** | [**List&lt;ReportedFinancialDimension&gt;**](ReportedFinancialDimension.md) | The combination of XBRL axis and members that defines the dimensionalization of this fact (if any) &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ReportedTag)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ReportedFinancialDimension)
+
 

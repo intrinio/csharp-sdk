@@ -1,10 +1,20 @@
-# Intrinio.SDK.Model.ApiResponseZacksEPSSurprises
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseZacksEPSSurprises)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**EpsSurprises** | [**List&lt;ZacksEPSSurprise&gt;**](ZacksEPSSurprise.md) | Zacks EPS Surprise data for a Security in descending order by actual reported date | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseZacksEPSSurprises
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**EpsSurprises** | [**List&lt;ZacksEPSSurprise&gt;**](ZacksEPSSurprise.md) | Zacks EPS Surprise data for a Security in descending order by actual reported date &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ZacksEPSSurprise)
+
 

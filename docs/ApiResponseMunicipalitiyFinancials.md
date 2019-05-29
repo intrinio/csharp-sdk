@@ -1,10 +1,23 @@
-# Intrinio.SDK.Model.ApiResponseMunicipalitiyFinancials
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseMunicipalitiyFinancials)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Financials** | [**List&lt;MunicipalityFinancial&gt;**](MunicipalityFinancial.md) |  | [optional] 
-**Municipality** | [**Municipality**](Municipality.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseMunicipalitiyFinancials
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Financials** | [**List&lt;MunicipalityFinancial&gt;**](MunicipalityFinancial.md) |  &nbsp;
+**Municipality** | [**Municipality**](Municipality.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.MunicipalityFinancial)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.Municipality)
+
 

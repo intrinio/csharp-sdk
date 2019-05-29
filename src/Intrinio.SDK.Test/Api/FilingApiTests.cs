@@ -101,6 +101,25 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetFilingFundamentals
+        /// </summary>
+        [Test]
+        public void GetFilingFundamentalsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string statementCode = null;
+            //string type = null;
+            //int? fiscalYear = null;
+            //string fiscalPeriod = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string nextPage = null;
+            //var response = instance.GetFilingFundamentals(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
+            //Assert.IsInstanceOf<ApiResponseFilingFundamentals> (response, "response is ApiResponseFilingFundamentals");
+        }
+        
+        /// <summary>
         /// Test GetNote
         /// </summary>
         [Test]

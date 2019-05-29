@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.NegativeVolumeIndexTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.NegativeVolumeIndexTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Nvi** | **float?** | The Negative Volume Index calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.NegativeVolumeIndexTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Nvi** | float? | The Negative Volume Index calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

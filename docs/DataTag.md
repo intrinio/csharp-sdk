@@ -1,19 +1,26 @@
-# Intrinio.SDK.Model.DataTag
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.DataTag)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | **string** | The Intrinio ID for the Data Tag | [optional] 
-**Name** | **string** | The readable name of the Data Tag | [optional] 
-**Tag** | **string** | The code-name of the Data Tag | [optional] 
-**StatementCode** | **string** | The code of the financial statement to which this Data Tag belongs | [optional] 
-**StatementType** | **string** | The format of the financial statment to which this Data Tag belongs | [optional] 
-**Parent** | **string** | The parent Data Tag forming the statement relationship with the factor | [optional] 
-**Sequence** | **decimal?** | The order in which the Data Tag appears in its logical group (such as a financial statement) | [optional] 
-**Factor** | **string** | The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag | [optional] 
-**Balance** | **string** | Whether the Data Tag represents a credit or debit | [optional] 
-**Type** | **string** | The nature of the Data Tag, operating or nonoperating | [optional] 
-**Unit** | **string** | The unit of the Data Tag | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.DataTag
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Id** | string | The Intrinio ID for the Data Tag &nbsp;
+**Name** | string | The readable name of the Data Tag &nbsp;
+**Tag** | string | The code-name of the Data Tag &nbsp;
+**StatementCode** | string | The code of the financial statement to which this Data Tag belongs &nbsp;
+**StatementType** | string | The format of the financial statment to which this Data Tag belongs &nbsp;
+**Parent** | string | The parent Data Tag forming the statement relationship with the factor &nbsp;
+**Sequence** | decimal? | The order in which the Data Tag appears in its logical group (such as a financial statement) &nbsp;
+**Factor** | string | The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag &nbsp;
+**Balance** | string | Whether the Data Tag represents a credit or debit &nbsp;
+**Type** | string | The nature of the Data Tag, operating or nonoperating &nbsp;
+**Unit** | string | The unit of the Data Tag &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

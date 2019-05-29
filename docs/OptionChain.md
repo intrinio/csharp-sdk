@@ -1,10 +1,23 @@
-# Intrinio.SDK.Model.OptionChain
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.OptionChain)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Option** | [**Option**](Option.md) |  | [optional] 
-**Price** | [**OptionPrice**](OptionPrice.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.OptionChain
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Option** | [**Option**](Option.md) |  &nbsp;
+**Price** | [**OptionPrice**](OptionPrice.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.Option)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.OptionPrice)
+
 

@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.HistoricalData
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.HistoricalData)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Date** | **DateTime?** | The date that the value is present | [optional] 
-**Value** | **decimal?** | The historical value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.HistoricalData
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Date** | DateTime? | The date that the value is present &nbsp;
+**Value** | decimal? | The historical value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

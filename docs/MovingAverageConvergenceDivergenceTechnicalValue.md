@@ -1,12 +1,19 @@
-# Intrinio.SDK.Model.MovingAverageConvergenceDivergenceTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.MovingAverageConvergenceDivergenceTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**MacdHistogram** | **float?** | The histogram value of the Moving Average Convergence Divergence calculation | [optional] 
-**MacdLine** | **float?** | The line value of the Moving Average Convergence Divergence calculation | [optional] 
-**SignalLine** | **float?** | The signal line value of the Moving Average Convergence Divergence calculation | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.MovingAverageConvergenceDivergenceTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**MacdHistogram** | float? | The histogram value of the Moving Average Convergence Divergence calculation &nbsp;
+**MacdLine** | float? | The line value of the Moving Average Convergence Divergence calculation &nbsp;
+**SignalLine** | float? | The signal line value of the Moving Average Convergence Divergence calculation &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

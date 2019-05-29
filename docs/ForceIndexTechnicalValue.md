@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.ForceIndexTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ForceIndexTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Fi** | **float?** | The Force Index calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ForceIndexTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Fi** | float? | The Force Index calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

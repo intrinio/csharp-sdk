@@ -1,10 +1,23 @@
-# Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatingsSnapshot
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatingsSnapshot)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Snapshots** | [**List&lt;ZacksAnalystRatingSnapshot&gt;**](ZacksAnalystRatingSnapshot.md) |  | [optional] 
-**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecurityZacksAnalystRatingsSnapshot
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Snapshots** | [**List&lt;ZacksAnalystRatingSnapshot&gt;**](ZacksAnalystRatingSnapshot.md) |  &nbsp;
+**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ZacksAnalystRatingSnapshot)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

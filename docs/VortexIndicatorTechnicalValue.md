@@ -1,11 +1,18 @@
-# Intrinio.SDK.Model.VortexIndicatorTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.VortexIndicatorTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**NegativeVi** | **float?** | The negative Vortex Indicator value | [optional] 
-**PositiveVi** | **float?** | The positive Vortex Indicator value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.VortexIndicatorTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**NegativeVi** | float? | The negative Vortex Indicator value &nbsp;
+**PositiveVi** | float? | The positive Vortex Indicator value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

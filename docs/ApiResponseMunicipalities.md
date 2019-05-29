@@ -1,10 +1,20 @@
-# Intrinio.SDK.Model.ApiResponseMunicipalities
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseMunicipalities)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Municipalities** | [**List&lt;Municipality&gt;**](Municipality.md) |  | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseMunicipalities
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Municipalities** | [**List&lt;Municipality&gt;**](Municipality.md) |  &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.Municipality)
+
 

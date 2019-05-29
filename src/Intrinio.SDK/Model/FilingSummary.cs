@@ -29,7 +29,7 @@ namespace Intrinio.SDK.Model
         /// <param name="FilingDate">The date when the filing was submitted to the SEC by the company.</param>
         /// <param name="AcceptedDate">The date and time when the filing was accepted by SEC.</param>
         /// <param name="PeriodEndDate">The ending date of the fiscal period for the filing.</param>
-        /// <param name="ReportType">The filing report type.</param>
+        /// <param name="ReportType">The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;.</param>
         /// <param name="SecUniqueId">A unique identifier for the filing provided by the SEC.</param>
         /// <param name="FilingUrl">The URL to the filing page on the SEC site.</param>
         /// <param name="ReportUrl">The URL to the actual report on the SEC site.</param>
@@ -78,9 +78,9 @@ namespace Intrinio.SDK.Model
         public DateTime? PeriodEndDate { get; set; }
 
         /// <summary>
-        /// The filing report type
+        /// The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;
         /// </summary>
-        /// <value>The filing report type</value>
+        /// <value>The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;</value>
         [DataMember(Name="report_type", EmitDefaultValue=false)]
         public string ReportType { get; set; }
 

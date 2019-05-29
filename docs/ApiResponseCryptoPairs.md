@@ -1,10 +1,20 @@
-# Intrinio.SDK.Model.ApiResponseCryptoPairs
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCryptoPairs)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Pairs** | [**List&lt;CryptoPair&gt;**](CryptoPair.md) | A list of Crypto Currency Pairs for the given Crypto Exchange and Crypto Currency sorted alphabetically by code. | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCryptoPairs
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Pairs** | [**List&lt;CryptoPair&gt;**](CryptoPair.md) | A list of Crypto Currency Pairs for the given Crypto Exchange and Crypto Currency sorted alphabetically by code. &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoPair)
+
 

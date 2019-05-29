@@ -1,12 +1,28 @@
-# Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Technicals** | [**List&lt;AverageDirectionalIndexTechnicalValue&gt;**](AverageDirectionalIndexTechnicalValue.md) |  | [optional] 
-**Indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator | [optional] 
-**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Stock Price | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecurityAverageDirectionalIndex
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Technicals** | [**List&lt;AverageDirectionalIndexTechnicalValue&gt;**](AverageDirectionalIndexTechnicalValue.md) |  &nbsp;
+**Indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator &nbsp;
+**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Stock Price &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.AverageDirectionalIndexTechnicalValue)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.TechnicalIndicator)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

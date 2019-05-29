@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseCompanySecurities
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCompanySecurities)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Securities** | [**List&lt;SecuritySummary&gt;**](SecuritySummary.md) |  | [optional] 
-**Company** | [**CompanySummary**](CompanySummary.md) |  | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCompanySecurities
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Securities** | [**List&lt;SecuritySummary&gt;**](SecuritySummary.md) |  &nbsp;
+**Company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CompanySummary)
+
 

@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseSecuritiesSearch
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecuritiesSearch)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Securities** | [**List&lt;SecuritySummary&gt;**](SecuritySummary.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecuritiesSearch
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Securities** | [**List&lt;SecuritySummary&gt;**](SecuritySummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

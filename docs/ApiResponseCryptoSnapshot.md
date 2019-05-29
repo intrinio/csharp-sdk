@@ -1,11 +1,27 @@
-# Intrinio.SDK.Model.ApiResponseCryptoSnapshot
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseCryptoSnapshot)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
-**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
-**Snapshot** | [**CryptoSnapshot**](CryptoSnapshot.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseCryptoSnapshot
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  &nbsp;
+**Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  &nbsp;
+**Snapshot** | [**CryptoSnapshot**](CryptoSnapshot.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoPairSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoExchangeSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CryptoSnapshot)
+
 

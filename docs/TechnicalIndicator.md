@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.TechnicalIndicator
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.TechnicalIndicator)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Technical Indicator | [optional] 
-**Symbol** | **string** | The symbol of the Technical Indicator | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.TechnicalIndicator
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Name** | string | The name of the Technical Indicator &nbsp;
+**Symbol** | string | The symbol of the Technical Indicator &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

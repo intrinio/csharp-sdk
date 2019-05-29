@@ -1,10 +1,20 @@
-# Intrinio.SDK.Model.StandardizedFinancial
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.StandardizedFinancial)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DataTag** | [**DataTagSummary**](DataTagSummary.md) |  | [optional] 
-**Value** | **decimal?** | The value for the Data Tag within the scope of the Fundamental | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.StandardizedFinancial
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DataTag** | [**DataTagSummary**](DataTagSummary.md) |  &nbsp;
+**Value** | decimal? | The value for the Data Tag within the scope of the Fundamental &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.DataTagSummary)
+
 

@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseOptionsChain
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseOptionsChain)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Chain** | [**List&lt;OptionChain&gt;**](OptionChain.md) | A list of options for the provided expiration date their respective option prices. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseOptionsChain
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Chain** | [**List&lt;OptionChain&gt;**](OptionChain.md) | A list of options for the provided expiration date their respective option prices. &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.OptionChain)
+
 

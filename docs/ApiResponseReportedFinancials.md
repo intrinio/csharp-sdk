@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseReportedFinancials
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseReportedFinancials)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**ReportedFinancials** | [**List&lt;ReportedFinancial&gt;**](ReportedFinancial.md) |  | [optional] 
-**Fundamental** | [**Fundamental**](Fundamental.md) |  | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseReportedFinancials
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**ReportedFinancials** | [**List&lt;ReportedFinancial&gt;**](ReportedFinancial.md) |  &nbsp;
+**Fundamental** | [**Fundamental**](Fundamental.md) |  &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ReportedFinancial)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.Fundamental)
+
 

@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseDataTagsSearch
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseDataTagsSearch)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Tags** | [**List&lt;DataTag&gt;**](DataTag.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseDataTagsSearch
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Tags** | [**List&lt;DataTag&gt;**](DataTag.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.DataTag)
+
 

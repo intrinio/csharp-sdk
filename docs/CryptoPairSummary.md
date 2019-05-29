@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.CryptoPairSummary
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.CryptoPairSummary)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | **string** | The Crypto Currency Pair name. | [optional] 
-**Code** | **string** | The Crypto Currency Pair code. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.CryptoPairSummary
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Name** | string | The Crypto Currency Pair name. &nbsp;
+**Code** | string | The Crypto Currency Pair code. &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

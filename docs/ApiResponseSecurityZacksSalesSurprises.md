@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseSecurityZacksSalesSurprises
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecurityZacksSalesSurprises)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**SalesSurprises** | [**List&lt;ZacksSalesSurpriseSummary&gt;**](ZacksSalesSurpriseSummary.md) |  | [optional] 
-**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecurityZacksSalesSurprises
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**SalesSurprises** | [**List&lt;ZacksSalesSurpriseSummary&gt;**](ZacksSalesSurpriseSummary.md) |  &nbsp;
+**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ZacksSalesSurpriseSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

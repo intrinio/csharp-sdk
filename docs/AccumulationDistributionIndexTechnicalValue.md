@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.AccumulationDistributionIndexTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.AccumulationDistributionIndexTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Adi** | **float?** | The Accumulation/Distribution Index calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.AccumulationDistributionIndexTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Adi** | float? | The Accumulation/Distribution Index calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

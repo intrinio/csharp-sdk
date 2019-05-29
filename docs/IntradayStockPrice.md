@@ -1,16 +1,23 @@
-# Intrinio.SDK.Model.IntradayStockPrice
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.IntradayStockPrice)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Time** | **DateTime?** | The timestamp that the &#x60;last_price&#x60; represents. | [optional] 
-**LastPrice** | **decimal?** | The price of the last trade. | [optional] 
-**AskPrice** | **decimal?** | The price of the top ask order. | [optional] 
-**AskSize** | **decimal?** | The size of the top ask order. | [optional] 
-**BidPrice** | **decimal?** | The price of the top bid order. | [optional] 
-**BidSize** | **decimal?** | The size of the top bid order. | [optional] 
-**Volume** | **decimal?** | The number of shares exchanged during the trading day on the exchange. | [optional] 
-**Source** | **string** | The source of the data. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.IntradayStockPrice
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Time** | DateTime? | The timestamp that the &#x60;last_price&#x60; represents. &nbsp;
+**LastPrice** | decimal? | The price of the last trade. &nbsp;
+**AskPrice** | decimal? | The price of the top ask order. &nbsp;
+**AskSize** | decimal? | The size of the top ask order. &nbsp;
+**BidPrice** | decimal? | The price of the top bid order. &nbsp;
+**BidSize** | decimal? | The size of the top bid order. &nbsp;
+**Volume** | decimal? | The number of shares exchanged during the trading day on the exchange. &nbsp;
+**Source** | string | The source of the data. &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

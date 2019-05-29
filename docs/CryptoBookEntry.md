@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.CryptoBookEntry
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.CryptoBookEntry)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Price** | **decimal?** | The price of the book entry. | [optional] 
-**Size** | **decimal?** | The size for the price of the book entry. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.CryptoBookEntry
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Price** | decimal? | The price of the book entry. &nbsp;
+**Size** | decimal? | The size for the price of the book entry. &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

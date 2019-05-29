@@ -1,9 +1,19 @@
-# Intrinio.SDK.Model.ApiResponseForexCurrencies
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseForexCurrencies)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Currencies** | [**List&lt;ForexCurrency&gt;**](ForexCurrency.md) |  | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseForexCurrencies
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Currencies** | [**List&lt;ForexCurrency&gt;**](ForexCurrency.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.ForexCurrency)
+
 

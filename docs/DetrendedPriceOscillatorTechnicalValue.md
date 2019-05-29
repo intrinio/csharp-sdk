@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.DetrendedPriceOscillatorTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.DetrendedPriceOscillatorTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Dpo** | **float?** | The Detrended Price Oscillator calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.DetrendedPriceOscillatorTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Dpo** | float? | The Detrended Price Oscillator calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

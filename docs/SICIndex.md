@@ -1,13 +1,20 @@
-# Intrinio.SDK.Model.SICIndex
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.SICIndex)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | **string** | Intrinio ID for the Index | [optional] 
-**Symbol** | **string** | The symbol used to identify the Index | [optional] 
-**Name** | **string** | The name of the Index | [optional] 
-**Continent** | **string** | The continent of the country of focus for the Index | [optional] 
-**Country** | **string** | The country of focus for the Index | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.SICIndex
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Id** | string | Intrinio ID for the Index &nbsp;
+**Symbol** | string | The symbol used to identify the Index &nbsp;
+**Name** | string | The name of the Index &nbsp;
+**Continent** | string | The continent of the country of focus for the Index &nbsp;
+**Country** | string | The country of focus for the Index &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

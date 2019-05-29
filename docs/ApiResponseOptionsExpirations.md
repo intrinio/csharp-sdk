@@ -1,9 +1,16 @@
-# Intrinio.SDK.Model.ApiResponseOptionsExpirations
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseOptionsExpirations)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Expirations** | **List&lt;string&gt;** | A list of option expiration dates in descending order | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseOptionsExpirations
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Expirations** | List&lt;string&gt; | A list of option expiration dates in descending order &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

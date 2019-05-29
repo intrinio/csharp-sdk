@@ -1,10 +1,17 @@
-# Intrinio.SDK.Model.EaseOfMovementTechnicalValue
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.EaseOfMovementTechnicalValue)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DateTime** | **DateTime?** | The date_time of the observation | [optional] 
-**Eom** | **float?** | The Ease of Movement calculation value | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.EaseOfMovementTechnicalValue
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**DateTime** | DateTime? | The date_time of the observation &nbsp;
+**Eom** | float? | The Ease of Movement calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

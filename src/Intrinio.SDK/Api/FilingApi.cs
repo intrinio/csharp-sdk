@@ -24,7 +24,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -40,7 +40,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -55,7 +55,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -73,7 +73,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -103,6 +103,41 @@ namespace Intrinio.SDK.Api
         /// <param name="id">The Intrinio ID of the Filing</param>
         /// <returns>ApiResponse of Filing</returns>
         ApiResponse<Filing> GetFilingByIdWithHttpInfo (string id);
+        /// <summary>
+        /// All Fundamentals by Filing
+        /// </summary>
+        /// <remarks>
+        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseFilingFundamentals</returns>
+        ApiResponseFilingFundamentals GetFilingFundamentals (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+
+        /// <summary>
+        /// All Fundamentals by Filing
+        /// </summary>
+        /// <remarks>
+        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseFilingFundamentals</returns>
+        ApiResponse<ApiResponseFilingFundamentals> GetFilingFundamentalsWithHttpInfo (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
         /// Filing Note by ID
         /// </summary>
@@ -207,7 +242,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -223,7 +258,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -238,7 +273,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -256,7 +291,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -286,6 +321,41 @@ namespace Intrinio.SDK.Api
         /// <param name="id">The Intrinio ID of the Filing</param>
         /// <returns>Task of ApiResponse (Filing)</returns>
         System.Threading.Tasks.Task<ApiResponse<Filing>> GetFilingByIdAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// All Fundamentals by Filing
+        /// </summary>
+        /// <remarks>
+        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseFilingFundamentals</returns>
+        System.Threading.Tasks.Task<ApiResponseFilingFundamentals> GetFilingFundamentalsAsync (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+
+        /// <summary>
+        /// All Fundamentals by Filing
+        /// </summary>
+        /// <remarks>
+        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingFundamentals)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingFundamentals>> GetFilingFundamentalsAsyncWithHttpInfo (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
         /// Filing Note by ID
         /// </summary>
@@ -485,7 +555,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -502,7 +572,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -571,7 +641,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -589,7 +659,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple report types. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -658,7 +728,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -677,7 +747,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -747,7 +817,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -767,7 +837,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given report type (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -973,6 +1043,191 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<Filing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Filing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Filing)));
+        }
+
+        /// <summary>
+        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseFilingFundamentals</returns>
+        public ApiResponseFilingFundamentals GetFilingFundamentals (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseFilingFundamentals> localVarResponse = GetFilingFundamentalsWithHttpInfo(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseFilingFundamentals</returns>
+        public ApiResponse< ApiResponseFilingFundamentals > GetFilingFundamentalsWithHttpInfo (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetFilingFundamentals");
+
+            var localVarPath = "/filings/{identifier}/fundamentals";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFilingFundamentals", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingFundamentals>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingFundamentals) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingFundamentals)));
+        }
+
+        /// <summary>
+        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseFilingFundamentals</returns>
+        public async System.Threading.Tasks.Task<ApiResponseFilingFundamentals> GetFilingFundamentalsAsync (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseFilingFundamentals> localVarResponse = await GetFilingFundamentalsAsyncWithHttpInfo(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Filing identifier</param>
+        /// <param name="statementCode">Filters fundamentals by statement code (optional)</param>
+        /// <param name="type">Filters fundamentals by type (optional)</param>
+        /// <param name="fiscalYear">Filters fundamentals by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filters fundamentals by fiscal period (optional)</param>
+        /// <param name="startDate">Returns fundamentals on or after the given date (optional)</param>
+        /// <param name="endDate">Returns fundamentals on or before the given date (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseFilingFundamentals)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingFundamentals>> GetFilingFundamentalsAsyncWithHttpInfo (string identifier, string statementCode = null, string type = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling FilingApi->GetFilingFundamentals");
+
+            var localVarPath = "/filings/{identifier}/fundamentals";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFilingFundamentals", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseFilingFundamentals>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseFilingFundamentals) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseFilingFundamentals)));
         }
 
         /// <summary>

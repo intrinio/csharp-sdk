@@ -1,14 +1,21 @@
-# Intrinio.SDK.Model.CryptoPrice
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.CryptoPrice)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Time** | **DateTime?** | The date and time of the beginning of the timeframe (in UTC). The open prices would be at this time, while close prices would be at this time plus the timeframe. | [optional] 
-**Open** | **decimal?** | The opening price of the timeframe. | [optional] 
-**High** | **decimal?** | The high price of the timeframe. | [optional] 
-**Low** | **decimal?** | The low price of the timeframe. | [optional] 
-**Close** | **decimal?** | The closing price of the timeframe. | [optional] 
-**Volume** | **decimal?** | The volume during the timeframe. | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.CryptoPrice
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**Time** | DateTime? | The date and time of the beginning of the timeframe (in UTC). The open prices would be at this time, while close prices would be at this time plus the timeframe. &nbsp;
+**Open** | decimal? | The opening price of the timeframe. &nbsp;
+**High** | decimal? | The high price of the timeframe. &nbsp;
+**Low** | decimal? | The low price of the timeframe. &nbsp;
+**Close** | decimal? | The closing price of the timeframe. &nbsp;
+**Volume** | decimal? | The volume during the timeframe. &nbsp;
+
+[//]: # (END_DEFINITION)
+
 

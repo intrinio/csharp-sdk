@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="FilingNoteFiling" /> class.
         /// </summary>
         /// <param name="Cik">The Central Index Key (CIK) assigned to the company.</param>
-        /// <param name="ReportType">The type of report (10-Q, 10-K, etc) filed.</param>
+        /// <param name="ReportType">The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;.</param>
         /// <param name="PeriodEndDate">The ending date of the fiscal period for the filing.</param>
         /// <param name="FilingDate">The date the report was filed with the SEC.</param>
         public FilingNoteFiling(string Cik = default(string), string ReportType = default(string), DateTime? PeriodEndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?))
@@ -45,9 +45,9 @@ namespace Intrinio.SDK.Model
         public string Cik { get; set; }
 
         /// <summary>
-        /// The type of report (10-Q, 10-K, etc) filed
+        /// The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;
         /// </summary>
-        /// <value>The type of report (10-Q, 10-K, etc) filed</value>
+        /// <value>The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;</value>
         [DataMember(Name="report_type", EmitDefaultValue=false)]
         public string ReportType { get; set; }
 

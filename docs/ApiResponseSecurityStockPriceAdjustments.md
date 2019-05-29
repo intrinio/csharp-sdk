@@ -1,11 +1,24 @@
-# Intrinio.SDK.Model.ApiResponseSecurityStockPriceAdjustments
-## Properties
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseSecurityStockPriceAdjustments)
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**StockPriceAdjustments** | [**List&lt;StockPriceAdjustmentSummary&gt;**](StockPriceAdjustmentSummary.md) | The stock price adjustments for the Security | [optional] 
-**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
-**NextPage** | **string** | The token required to request the next page of the data | [optional] 
+[//]: # (KIND:object)
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+### Intrinio.SDK.Model.ApiResponseSecurityStockPriceAdjustments
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**StockPriceAdjustments** | [**List&lt;StockPriceAdjustmentSummary&gt;**](StockPriceAdjustmentSummary.md) | The stock price adjustments for the Security &nbsp;
+**Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+**NextPage** | string | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.StockPriceAdjustmentSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.SecuritySummary)
+
 

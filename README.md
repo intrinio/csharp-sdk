@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.7.0
-- Package version: 3.1.0
+- API version: 2.8.0
+- Package version: 3.2.0
 
 
 <a name="frameworks-supported"></a>
@@ -63,10 +63,6 @@ nuget pack -Build -OutputDirectory out Intrinio.SDK.csproj
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
 
 
-## SDK Code Examples
-
-Code examples for Intrinio SDKs are available at https://github.com/intrinio/sdk-code-samples
-
 <a name="getting-started"></a>
 ## Getting Started
 
@@ -114,7 +110,7 @@ namespace Example
 
 Complete documentation for the Intrinio C# SDK is available on the Intrinio website.
 
-[View Intrinio C# SDK Documentation](https://docs.intrinio.com/documentation/api_v2/csharp)
+[View Intrinio C# SDK Documentation](https://docs.intrinio.com/documentation/csharp)
 
 A listing of classes and methods is also provided below:
 
@@ -128,6 +124,7 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetCompanyFilings**](docs/CompanyApi.md#getcompanyfilings) | **GET** /companies/{identifier}/filings | All Filings by Company
 *CompanyApi* | [**GetCompanyFundamentals**](docs/CompanyApi.md#getcompanyfundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
 *CompanyApi* | [**GetCompanyHistoricalData**](docs/CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+*CompanyApi* | [**GetCompanyIpos**](docs/CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 *CompanyApi* | [**GetCompanyNews**](docs/CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
 *CompanyApi* | [**GetCompanySecurities**](docs/CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *CompanyApi* | [**LookupCompanyFundamental**](docs/CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
@@ -403,6 +400,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseForexPairs](docs/ApiResponseForexPairs.md)
  - [Model.ApiResponseForexPrices](docs/ApiResponseForexPrices.md)
  - [Model.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
+ - [Model.ApiResponseInitialPublicOfferings](docs/ApiResponseInitialPublicOfferings.md)
  - [Model.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
  - [Model.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [Model.ApiResponseNews](docs/ApiResponseNews.md)
@@ -476,6 +474,7 @@ Class | Method | HTTP request | Description
  - [Model.CommodityChannelIndexTechnicalValue](docs/CommodityChannelIndexTechnicalValue.md)
  - [Model.Company](docs/Company.md)
  - [Model.CompanyFiling](docs/CompanyFiling.md)
+ - [Model.CompanyInitialPublicOffering](docs/CompanyInitialPublicOffering.md)
  - [Model.CompanyNews](docs/CompanyNews.md)
  - [Model.CompanyNewsSummary](docs/CompanyNewsSummary.md)
  - [Model.CompanySummary](docs/CompanySummary.md)

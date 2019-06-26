@@ -31,7 +31,7 @@ Method | HTTP request | Description
 <a name="getalldatatags"></a>
 ## **GetAllDataTags**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllDataTags_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllDataTags_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -74,11 +74,11 @@ namespace Example
       try
       {
         ApiResponseDataTags result = dataTagApi.GetAllDataTags(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling DataTagApi.GetAllDataTags: " + e.Message );
+        Console.WriteLine("Exception when calling DataTagApi.GetAllDataTags: " + e.Message );
       }
     }
   }
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 <a name="getdatatagbyid"></a>
 ## **GetDataTagById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataTagById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetDataTagById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -170,11 +170,11 @@ namespace Example
       try
       {
         DataTag result = dataTagApi.GetDataTagById(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling DataTagApi.GetDataTagById: " + e.Message );
+        Console.WriteLine("Exception when calling DataTagApi.GetDataTagById: " + e.Message );
       }
     }
   }
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 <a name="searchdatatags"></a>
 ## **SearchDataTags**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchDataTags_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/SearchDataTags_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -261,11 +261,11 @@ namespace Example
       try
       {
         ApiResponseDataTagsSearch result = dataTagApi.SearchDataTags(query, pageSize);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling DataTagApi.SearchDataTags: " + e.Message );
+        Console.WriteLine("Exception when calling DataTagApi.SearchDataTags: " + e.Message );
       }
     }
   }

@@ -36,7 +36,7 @@ Method | HTTP request | Description
 <a name="getallfilings"></a>
 ## **GetAllFilings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllFilings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllFilings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -70,19 +70,19 @@ namespace Example
       var filingApi = new FilingApi();
       var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
       var reportType = "";  // string | Filter by report type. Separate values with commas to return multiple The filing <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>. (optional) 
-      var startDate = "2015-01-01";  // DateTime? | Filed on or after the given date (optional) 
-      var endDate = "";  // DateTime? | Filed before or after the given date (optional) 
+      var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Filed on or after the given date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Filed before or after the given date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.GetAllFilings: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.GetAllFilings: " + e.Message );
       }
     }
   }
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 <a name="getallnotes"></a>
 ## **GetAllNotes**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllNotes_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllNotes_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -170,21 +170,21 @@ namespace Example
       var filingApi = new FilingApi();
       var company = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional) 
       var reportType = "10-Q";  // string | Notes contained in filings that match the given <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a> (optional) 
-      var filingStartDate = "2018-07-15";  // DateTime? | Limit search to filings on or after this date (optional) 
-      var filingEndDate = "2018-11-15";  // DateTime? | Limit search to filings on or before this date (optional) 
-      var periodEndedStartDate = "2018-07-15";  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
-      var periodEndedEndDate = "2018-11-15";  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
+      var filingStartDate = DateTime.Parse("2018-07-15");  // DateTime? | Limit search to filings on or after this date (optional) 
+      var filingEndDate = DateTime.Parse("2018-11-15");  // DateTime? | Limit search to filings on or before this date (optional) 
+      var periodEndedStartDate = DateTime.Parse("2018-07-15");  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
+      var periodEndedEndDate = DateTime.Parse("2018-11-15");  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseFilingNotes result = filingApi.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.GetAllNotes: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.GetAllNotes: " + e.Message );
       }
     }
   }
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 <a name="getfilingbyid"></a>
 ## **GetFilingById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFilingById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFilingById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -277,11 +277,11 @@ namespace Example
       try
       {
         Filing result = filingApi.GetFilingById(id);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.GetFilingById: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.GetFilingById: " + e.Message );
       }
     }
   }
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 <a name="getfilingfundamentals"></a>
 ## **GetFilingFundamentals**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFilingFundamentals_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFilingFundamentals_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -367,18 +367,18 @@ namespace Example
       var type = "";  // string | Filters fundamentals by type (optional) 
       var fiscalYear = "";  // int? | Filters fundamentals by fiscal year (optional) 
       var fiscalPeriod = "";  // string | Filters fundamentals by fiscal period (optional) 
-      var startDate = "";  // DateTime? | Returns fundamentals on or after the given date (optional) 
-      var endDate = "";  // DateTime? | Returns fundamentals on or before the given date (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Returns fundamentals on or after the given date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Returns fundamentals on or before the given date (optional) 
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseFilingFundamentals result = filingApi.GetFilingFundamentals(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.GetFilingFundamentals: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.GetFilingFundamentals: " + e.Message );
       }
     }
   }
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 <a name="getnote"></a>
 ## **GetNote**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNote_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetNote_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -471,11 +471,11 @@ namespace Example
       try
       {
         FilingNote result = filingApi.GetNote(identifier, contentFormat);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.GetNote: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.GetNote: " + e.Message );
       }
     }
   }
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 <a name="getnotehtml"></a>
 ## **GetNoteHtml**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteHtml_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetNoteHtml_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -561,11 +561,11 @@ namespace Example
       try
       {
         string result = filingApi.GetNoteHtml(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.GetNoteHtml: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.GetNoteHtml: " + e.Message );
       }
     }
   }
@@ -614,7 +614,7 @@ Name | Type | Description  | Notes
 <a name="getnotetext"></a>
 ## **GetNoteText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetNoteText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetNoteText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -650,11 +650,11 @@ namespace Example
       try
       {
         string result = filingApi.GetNoteText(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.GetNoteText: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.GetNoteText: " + e.Message );
       }
     }
   }
@@ -703,7 +703,7 @@ Name | Type | Description  | Notes
 <a name="searchnotes"></a>
 ## **SearchNotes**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchNotes_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/SearchNotes_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -736,19 +736,19 @@ namespace Example
 
       var filingApi = new FilingApi();
       var query = "inflation";  // string | Search for notes that contain all or parts of this text
-      var filingStartDate = "2018-07-15";  // DateTime? | Limit search to filings on or after this date (optional) 
-      var filingEndDate = "2018-11-30";  // DateTime? | Limit search to filings on or before this date (optional) 
+      var filingStartDate = DateTime.Parse("2018-07-15");  // DateTime? | Limit search to filings on or after this date (optional) 
+      var filingEndDate = DateTime.Parse("2018-11-30");  // DateTime? | Limit search to filings on or before this date (optional) 
       var pageSize = 50;  // int? | The number of results to return (optional)  (default to 100)
       var pageSize2 = 100;  // int? | The number of results to return (optional)  (default to 100)
 
       try
       {
         ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize, pageSize2);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FilingApi.SearchNotes: " + e.Message );
+        Console.WriteLine("Exception when calling FilingApi.SearchNotes: " + e.Message );
       }
     }
   }

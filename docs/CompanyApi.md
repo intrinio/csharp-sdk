@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**GetCompanyFilings**](CompanyApi.md#getcompanyfilings) | **GET** /companies/{identifier}/filings | All Filings by Company
 [**GetCompanyFundamentals**](CompanyApi.md#getcompanyfundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
 [**GetCompanyHistoricalData**](CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+[**GetCompanyIpos**](CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 [**GetCompanyNews**](CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
 [**GetCompanySecurities**](CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**LookupCompanyFundamental**](CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
@@ -40,11 +41,11 @@ Method | HTTP request | Description
 <a name="getallcompanies"></a>
 ## **GetAllCompanies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllCompanies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllCompanies_v2)
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null)
+> ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
 
 #### All Companies
 
@@ -72,23 +73,25 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var companyApi = new CompanyApi();
-      var latestFilingDate = "";  // DateTime? | Last filing date (optional) 
-      var sic = "";  // string | Standard Industrial Classification code (optional) 
-      var template = "";  // string | Template (optional) 
-      var sector = "";  // string | Industry sector (optional) 
-      var industryCategory = "";  // string | Industry category (optional) 
-      var industryGroup = "";  // string | Industry group (optional) 
+      var latestFilingDate = DateTime.Now;  // DateTime? | Last filing date (optional) 
+      var sic = "";  // string | Return companies with the given Standard Industrial Classification code (optional) 
+      var template = "";  // string | Return companies with the given financial statement template (optional) 
+      var sector = "";  // string | Return companies in the given industry sector (optional) 
+      var industryCategory = "";  // string | Return companies in the given industry category (optional) 
+      var industryGroup = "";  // string | Return companies in the given industry group (optional) 
+      var hasFundamentals = true;  // bool? | Return only companies that have fundamentals when true (optional) 
+      var hasStockPrices = true;  // bool? | Return only companies that have stock prices when true (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
-        ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetAllCompanies: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetAllCompanies: " + e.Message );
       }
     }
   }
@@ -105,11 +108,13 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **latestFilingDate** | DateTime?| Last filing date | [optional]  &nbsp;
- **sic** | string| Standard Industrial Classification code | [optional]  &nbsp;
- **template** | string| Template | [optional]  &nbsp;
- **sector** | string| Industry sector | [optional]  &nbsp;
- **industryCategory** | string| Industry category | [optional]  &nbsp;
- **industryGroup** | string| Industry group | [optional]  &nbsp;
+ **sic** | string| Return companies with the given Standard Industrial Classification code | [optional]  &nbsp;
+ **template** | string| Return companies with the given financial statement template | [optional]  &nbsp;
+ **sector** | string| Return companies in the given industry sector | [optional]  &nbsp;
+ **industryCategory** | string| Return companies in the given industry category | [optional]  &nbsp;
+ **industryGroup** | string| Return companies in the given industry group | [optional]  &nbsp;
+ **hasFundamentals** | bool?| Return only companies that have fundamentals when true | [optional]  &nbsp;
+ **hasStockPrices** | bool?| Return only companies that have stock prices when true | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -144,7 +149,7 @@ Name | Type | Description  | Notes
 <a name="getallcompanynews"></a>
 ## **GetAllCompanyNews**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllCompanyNews_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllCompanyNews_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -182,11 +187,11 @@ namespace Example
       try
       {
         ApiResponseNews result = companyApi.GetAllCompanyNews(pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetAllCompanyNews: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetAllCompanyNews: " + e.Message );
       }
     }
   }
@@ -236,7 +241,7 @@ Name | Type | Description  | Notes
 <a name="getcompany"></a>
 ## **GetCompany**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompany_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompany_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -273,11 +278,11 @@ namespace Example
       try
       {
         Company result = companyApi.GetCompany(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompany: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompany: " + e.Message );
       }
     }
   }
@@ -326,7 +331,7 @@ Name | Type | Description  | Notes
 <a name="getcompanydatapointnumber"></a>
 ## **GetCompanyDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompanyDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -364,11 +369,11 @@ namespace Example
       try
       {
         decimal? result = companyApi.GetCompanyDataPointNumber(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompanyDataPointNumber: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanyDataPointNumber: " + e.Message );
       }
     }
   }
@@ -418,7 +423,7 @@ Name | Type | Description  | Notes
 <a name="getcompanydatapointtext"></a>
 ## **GetCompanyDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompanyDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -456,11 +461,11 @@ namespace Example
       try
       {
         string result = companyApi.GetCompanyDataPointText(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompanyDataPointText: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanyDataPointText: " + e.Message );
       }
     }
   }
@@ -510,7 +515,7 @@ Name | Type | Description  | Notes
 <a name="getcompanyfilings"></a>
 ## **GetCompanyFilings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompanyFilings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyFilings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -544,19 +549,19 @@ namespace Example
       var companyApi = new CompanyApi();
       var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
       var reportType = "";  // string | Filter by <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types. (optional) 
-      var startDate = "2015-01-01";  // DateTime? | Filed on or after the given date (optional) 
-      var endDate = "";  // DateTime? | Filed before or after the given date (optional) 
+      var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Filed on or after the given date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Filed before or after the given date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompanyFilings: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanyFilings: " + e.Message );
       }
     }
   }
@@ -610,7 +615,7 @@ Name | Type | Description  | Notes
 <a name="getcompanyfundamentals"></a>
 ## **GetCompanyFundamentals**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompanyFundamentals_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyFundamentals_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -643,25 +648,25 @@ namespace Example
 
       var companyApi = new CompanyApi();
       var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var filedAfter = "";  // DateTime? | Filed on or after this date (optional) 
-      var filedBefore = "";  // DateTime? | Filed on or before this date (optional) 
+      var filedAfter = DateTime.Now;  // DateTime? | Filed on or after this date (optional) 
+      var filedBefore = DateTime.Now;  // DateTime? | Filed on or before this date (optional) 
       var reportedOnly = false;  // bool? | Only as-reported fundamentals (optional) 
       var fiscalYear = "";  // int? | Only for the given fiscal year (optional) 
       var statementCode = "";  // string | Only of the given statement code (optional) 
       var type = "";  // string | Only of the given type (optional) 
-      var startDate = "";  // DateTime? | Only on or after the given date (optional) 
-      var endDate = "";  // DateTime? | Only on or before the given date (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Only on or after the given date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Only on or before the given date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompanyFundamentals: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanyFundamentals: " + e.Message );
       }
     }
   }
@@ -720,7 +725,7 @@ Name | Type | Description  | Notes
 <a name="getcompanyhistoricaldata"></a>
 ## **GetCompanyHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompanyHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -755,9 +760,9 @@ namespace Example
       var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
       var tag = "marketcap";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
       var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
-      var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = "";  // DateTime? | Get historical data on or before this date (optional) 
+      var type = "";  // string | Return historical data for given fiscal period type (optional) 
+      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Return historical data on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return historical data on or before this date (optional) 
       var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -765,11 +770,11 @@ namespace Example
       try
       {
         ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompanyHistoricalData: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanyHistoricalData: " + e.Message );
       }
     }
   }
@@ -788,9 +793,9 @@ Name | Type | Description  | Notes
  **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
  **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
  **frequency** | string| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
- **type** | string| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | DateTime?| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | DateTime?| Get historical data on or before this date | [optional]  &nbsp;
+ **type** | string| Return historical data for given fiscal period type | [optional]  &nbsp;
+ **startDate** | DateTime?| Return historical data on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return historical data on or before this date | [optional]  &nbsp;
  **sortOrder** | string| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
@@ -801,6 +806,98 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyHistoricalData**](ApiResponseCompanyHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:GetCompanyIpos)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseInitialPublicOfferings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseInitialPublicOfferings.md)
+
+[//]: # (OPERATION:GetCompanyIpos_v2)
+
+[//]: # (ENDPOINT:/companies/ipos)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getcompanyipos)
+
+<a name="getcompanyipos"></a>
+## **GetCompanyIpos**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyIpos_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseInitialPublicOfferings GetCompanyIpos (int? pageSize = null, string nextPage = null)
+
+#### IPOs
+
+Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \"going public\" is initiated by an IPO, at which point the company's stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetCompanyIposExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var companyApi = new CompanyApi();
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseInitialPublicOfferings result = companyApi.GetCompanyIpos(pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanyIpos: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseInitialPublicOfferings**](ApiResponseInitialPublicOfferings.md)
 
 [//]: # (END_OPERATION)
 
@@ -826,7 +923,7 @@ Name | Type | Description  | Notes
 <a name="getcompanynews"></a>
 ## **GetCompanyNews**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompanyNews_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyNews_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -865,11 +962,11 @@ namespace Example
       try
       {
         ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompanyNews: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanyNews: " + e.Message );
       }
     }
   }
@@ -920,7 +1017,7 @@ Name | Type | Description  | Notes
 <a name="getcompanysecurities"></a>
 ## **GetCompanySecurities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCompanySecurities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanySecurities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -958,11 +1055,11 @@ namespace Example
       try
       {
         ApiResponseCompanySecurities result = companyApi.GetCompanySecurities(identifier, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.GetCompanySecurities: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.GetCompanySecurities: " + e.Message );
       }
     }
   }
@@ -1012,7 +1109,7 @@ Name | Type | Description  | Notes
 <a name="lookupcompanyfundamental"></a>
 ## **LookupCompanyFundamental**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/LookupCompanyFundamental_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/LookupCompanyFundamental_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1052,11 +1149,11 @@ namespace Example
       try
       {
         Fundamental result = companyApi.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.LookupCompanyFundamental: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.LookupCompanyFundamental: " + e.Message );
       }
     }
   }
@@ -1108,7 +1205,7 @@ Name | Type | Description  | Notes
 <a name="searchcompanies"></a>
 ## **SearchCompanies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchCompanies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/SearchCompanies_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1146,11 +1243,11 @@ namespace Example
       try
       {
         ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, pageSize);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling CompanyApi.SearchCompanies: " + e.Message );
+        Console.WriteLine("Exception when calling CompanyApi.SearchCompanies: " + e.Message );
       }
     }
   }

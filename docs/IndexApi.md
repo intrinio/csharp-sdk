@@ -46,7 +46,7 @@ Method | HTTP request | Description
 <a name="getalleconomicindices"></a>
 ## **GetAllEconomicIndices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllEconomicIndices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllEconomicIndices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -83,11 +83,11 @@ namespace Example
       try
       {
         ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetAllEconomicIndices: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetAllEconomicIndices: " + e.Message );
       }
     }
   }
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 <a name="getallsicindices"></a>
 ## **GetAllSicIndices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllSicIndices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllSicIndices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -174,11 +174,11 @@ namespace Example
       try
       {
         ApiResponseSICIndices result = indexApi.GetAllSicIndices(pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetAllSicIndices: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetAllSicIndices: " + e.Message );
       }
     }
   }
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 <a name="getallstockmarketindices"></a>
 ## **GetAllStockMarketIndices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllStockMarketIndices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllStockMarketIndices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -265,11 +265,11 @@ namespace Example
       try
       {
         ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetAllStockMarketIndices: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetAllStockMarketIndices: " + e.Message );
       }
     }
   }
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 <a name="geteconomicindexbyid"></a>
 ## **GetEconomicIndexById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEconomicIndexById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -355,11 +355,11 @@ namespace Example
       try
       {
         EconomicIndex result = indexApi.GetEconomicIndexById(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetEconomicIndexById: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexById: " + e.Message );
       }
     }
   }
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 <a name="geteconomicindexdatapointnumber"></a>
 ## **GetEconomicIndexDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEconomicIndexDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -446,11 +446,11 @@ namespace Example
       try
       {
         decimal? result = indexApi.GetEconomicIndexDataPointNumber(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetEconomicIndexDataPointNumber: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexDataPointNumber: " + e.Message );
       }
     }
   }
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 <a name="geteconomicindexdatapointtext"></a>
 ## **GetEconomicIndexDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEconomicIndexDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -538,11 +538,11 @@ namespace Example
       try
       {
         string result = indexApi.GetEconomicIndexDataPointText(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetEconomicIndexDataPointText: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexDataPointText: " + e.Message );
       }
     }
   }
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 <a name="geteconomicindexhistoricaldata"></a>
 ## **GetEconomicIndexHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetEconomicIndexHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEconomicIndexHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -627,8 +627,8 @@ namespace Example
       var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
       var tag = "level";  // string | An Intrinio data tag <a href='https://data.intrinio.com/data-tags/economic'>reference</a>
       var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = "";  // DateTime? | Get historical data on or before this date (optional) 
+      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Get historical data on or before this date (optional) 
       var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -636,11 +636,11 @@ namespace Example
       try
       {
         ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetEconomicIndexHistoricalData: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexHistoricalData: " + e.Message );
       }
     }
   }
@@ -696,7 +696,7 @@ Name | Type | Description  | Notes
 <a name="getsicindexbyid"></a>
 ## **GetSicIndexById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSicIndexById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -732,11 +732,11 @@ namespace Example
       try
       {
         SICIndex result = indexApi.GetSicIndexById(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetSicIndexById: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetSicIndexById: " + e.Message );
       }
     }
   }
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
 <a name="getsicindexdatapointnumber"></a>
 ## **GetSicIndexDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSicIndexDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -823,11 +823,11 @@ namespace Example
       try
       {
         decimal? result = indexApi.GetSicIndexDataPointNumber(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetSicIndexDataPointNumber: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetSicIndexDataPointNumber: " + e.Message );
       }
     }
   }
@@ -877,7 +877,7 @@ Name | Type | Description  | Notes
 <a name="getsicindexdatapointtext"></a>
 ## **GetSicIndexDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSicIndexDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -915,11 +915,11 @@ namespace Example
       try
       {
         string result = indexApi.GetSicIndexDataPointText(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetSicIndexDataPointText: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetSicIndexDataPointText: " + e.Message );
       }
     }
   }
@@ -969,7 +969,7 @@ Name | Type | Description  | Notes
 <a name="getsicindexhistoricaldata"></a>
 ## **GetSicIndexHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSicIndexHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSicIndexHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1004,8 +1004,8 @@ namespace Example
       var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
       var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
       var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = "";  // DateTime? | Get historical data on or before this date (optional) 
+      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Get historical data on or before this date (optional) 
       var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1013,11 +1013,11 @@ namespace Example
       try
       {
         ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetSicIndexHistoricalData: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetSicIndexHistoricalData: " + e.Message );
       }
     }
   }
@@ -1073,7 +1073,7 @@ Name | Type | Description  | Notes
 <a name="getstockmarketindexbyid"></a>
 ## **GetStockMarketIndexById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockMarketIndexById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1109,11 +1109,11 @@ namespace Example
       try
       {
         StockMarketIndex result = indexApi.GetStockMarketIndexById(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetStockMarketIndexById: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexById: " + e.Message );
       }
     }
   }
@@ -1162,7 +1162,7 @@ Name | Type | Description  | Notes
 <a name="getstockmarketindexdatapointnumber"></a>
 ## **GetStockMarketIndexDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockMarketIndexDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1200,11 +1200,11 @@ namespace Example
       try
       {
         decimal? result = indexApi.GetStockMarketIndexDataPointNumber(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetStockMarketIndexDataPointNumber: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexDataPointNumber: " + e.Message );
       }
     }
   }
@@ -1254,7 +1254,7 @@ Name | Type | Description  | Notes
 <a name="getstockmarketindexdatapointtext"></a>
 ## **GetStockMarketIndexDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockMarketIndexDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1292,11 +1292,11 @@ namespace Example
       try
       {
         string result = indexApi.GetStockMarketIndexDataPointText(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetStockMarketIndexDataPointText: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexDataPointText: " + e.Message );
       }
     }
   }
@@ -1346,7 +1346,7 @@ Name | Type | Description  | Notes
 <a name="getstockmarketindexhistoricaldata"></a>
 ## **GetStockMarketIndexHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockMarketIndexHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockMarketIndexHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1381,8 +1381,8 @@ namespace Example
       var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
       var tag = "level";  // string | An Intrinio data tag ID or code-name
       var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = "2018-01-01";  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = "";  // DateTime? | Get historical data on or before this date (optional) 
+      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Get historical data on or before this date (optional) 
       var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1390,11 +1390,11 @@ namespace Example
       try
       {
         ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.GetStockMarketIndexHistoricalData: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexHistoricalData: " + e.Message );
       }
     }
   }
@@ -1450,7 +1450,7 @@ Name | Type | Description  | Notes
 <a name="searcheconomicindices"></a>
 ## **SearchEconomicIndices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchEconomicIndices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/SearchEconomicIndices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1488,11 +1488,11 @@ namespace Example
       try
       {
         ApiResponseEconomicIndicesSearch result = indexApi.SearchEconomicIndices(query, pageSize);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.SearchEconomicIndices: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.SearchEconomicIndices: " + e.Message );
       }
     }
   }
@@ -1542,7 +1542,7 @@ Name | Type | Description  | Notes
 <a name="searchsicindices"></a>
 ## **SearchSicIndices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchSicIndices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/SearchSicIndices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1580,11 +1580,11 @@ namespace Example
       try
       {
         ApiResponseSICIndicesSearch result = indexApi.SearchSicIndices(query, pageSize);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.SearchSicIndices: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.SearchSicIndices: " + e.Message );
       }
     }
   }
@@ -1634,7 +1634,7 @@ Name | Type | Description  | Notes
 <a name="searchstockmarketsindices"></a>
 ## **SearchStockMarketsIndices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/SearchStockMarketsIndices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/SearchStockMarketsIndices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1672,11 +1672,11 @@ namespace Example
       try
       {
         ApiResponseStockMarketIndicesSearch result = indexApi.SearchStockMarketsIndices(query, pageSize);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling IndexApi.SearchStockMarketsIndices: " + e.Message );
+        Console.WriteLine("Exception when calling IndexApi.SearchStockMarketsIndices: " + e.Message );
       }
     }
   }

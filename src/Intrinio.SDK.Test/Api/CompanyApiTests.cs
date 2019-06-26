@@ -65,9 +65,11 @@ namespace Intrinio.SDK.Test
             //string sector = null;
             //string industryCategory = null;
             //string industryGroup = null;
+            //bool? hasFundamentals = null;
+            //bool? hasStockPrices = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, pageSize, nextPage);
+            //var response = instance.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanies> (response, "response is ApiResponseCompanies");
         }
         
@@ -179,6 +181,19 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //var response = instance.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyHistoricalData> (response, "response is ApiResponseCompanyHistoricalData");
+        }
+        
+        /// <summary>
+        /// Test GetCompanyIpos
+        /// </summary>
+        [Test]
+        public void GetCompanyIposTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetCompanyIpos(pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseInitialPublicOfferings> (response, "response is ApiResponseInitialPublicOfferings");
         }
         
         /// <summary>

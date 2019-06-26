@@ -31,7 +31,7 @@ Method | HTTP request | Description
 <a name="getallmunicipalities"></a>
 ## **GetAllMunicipalities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllMunicipalities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllMunicipalities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -79,11 +79,11 @@ namespace Example
       try
       {
         ApiResponseMunicipalities result = municipalityApi.GetAllMunicipalities(hasFinancials, governmentName, governmentType, areaName, areaType, city, state, zipcode, populationGreaterThan, populationLessThan, enrollmentGreaterThan, enrollmentLessThan, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling MunicipalityApi.GetAllMunicipalities: " + e.Message );
+        Console.WriteLine("Exception when calling MunicipalityApi.GetAllMunicipalities: " + e.Message );
       }
     }
   }
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 <a name="getmunicipalitybyid"></a>
 ## **GetMunicipalityById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetMunicipalityById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -181,11 +181,11 @@ namespace Example
       try
       {
         Municipality result = municipalityApi.GetMunicipalityById(id);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling MunicipalityApi.GetMunicipalityById: " + e.Message );
+        Console.WriteLine("Exception when calling MunicipalityApi.GetMunicipalityById: " + e.Message );
       }
     }
   }
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 <a name="getmunicipalityfinancials"></a>
 ## **GetMunicipalityFinancials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetMunicipalityFinancials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetMunicipalityFinancials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -272,11 +272,11 @@ namespace Example
       try
       {
         ApiResponseMunicipalitiyFinancials result = municipalityApi.GetMunicipalityFinancials(id, fiscalYear);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling MunicipalityApi.GetMunicipalityFinancials: " + e.Message );
+        Console.WriteLine("Exception when calling MunicipalityApi.GetMunicipalityFinancials: " + e.Message );
       }
     }
   }

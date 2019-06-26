@@ -24,15 +24,17 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanies</returns>
-        ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null);
+        ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Companies
@@ -42,15 +44,17 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
-        ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All News
         /// </summary>
@@ -223,9 +227,9 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -242,14 +246,37 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyHistoricalData</returns>
         ApiResponse<ApiResponseCompanyHistoricalData> GetCompanyHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// IPOs
+        /// </summary>
+        /// <remarks>
+        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseInitialPublicOfferings</returns>
+        ApiResponseInitialPublicOfferings GetCompanyIpos (int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// IPOs
+        /// </summary>
+        /// <remarks>
+        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseInitialPublicOfferings</returns>
+        ApiResponse<ApiResponseInitialPublicOfferings> GetCompanyIposWithHttpInfo (int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All News by Company
         /// </summary>
@@ -358,15 +385,17 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanies</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Companies
@@ -376,15 +405,17 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All News
         /// </summary>
@@ -557,9 +588,9 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -576,14 +607,37 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyHistoricalData)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyHistoricalData>> GetCompanyHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// IPOs
+        /// </summary>
+        /// <remarks>
+        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseInitialPublicOfferings</returns>
+        System.Threading.Tasks.Task<ApiResponseInitialPublicOfferings> GetCompanyIposAsync (int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// IPOs
+        /// </summary>
+        /// <remarks>
+        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseInitialPublicOfferings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInitialPublicOfferings>> GetCompanyIposAsyncWithHttpInfo (int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All News by Company
         /// </summary>
@@ -787,17 +841,19 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanies</returns>
-        public ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanies> localVarResponse = GetAllCompaniesWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = GetAllCompaniesWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -806,15 +862,17 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
-        public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -844,6 +902,8 @@ namespace Intrinio.SDK.Api
             if (sector != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sector", sector)); // query parameter
             if (industryCategory != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_category", industryCategory)); // query parameter
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
+            if (hasFundamentals != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_fundamentals", hasFundamentals)); // query parameter
+            if (hasStockPrices != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_stock_prices", hasStockPrices)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -876,17 +936,19 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanies</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanies> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -896,15 +958,17 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="latestFilingDate">Last filing date (optional)</param>
-        /// <param name="sic">Standard Industrial Classification code (optional)</param>
-        /// <param name="template">Template (optional)</param>
-        /// <param name="sector">Industry sector (optional)</param>
-        /// <param name="industryCategory">Industry category (optional)</param>
-        /// <param name="industryGroup">Industry group (optional)</param>
+        /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
+        /// <param name="template">Return companies with the given financial statement template (optional)</param>
+        /// <param name="sector">Return companies in the given industry sector (optional)</param>
+        /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
+        /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
+        /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
+        /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -934,6 +998,8 @@ namespace Intrinio.SDK.Api
             if (sector != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sector", sector)); // query parameter
             if (industryCategory != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_category", industryCategory)); // query parameter
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
+            if (hasFundamentals != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_fundamentals", hasFundamentals)); // query parameter
+            if (hasStockPrices != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_stock_prices", hasStockPrices)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -1940,9 +2006,9 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -1960,9 +2026,9 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -2038,9 +2104,9 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -2059,9 +2125,9 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
-        /// <param name="type">Filter by type, when applicable (optional)</param>
-        /// <param name="startDate">Get historical data on or after this date (optional)</param>
-        /// <param name="endDate">Get historical data on or before this date (optional)</param>
+        /// <param name="type">Return historical data for given fiscal period type (optional)</param>
+        /// <param name="startDate">Return historical data on or after this date (optional)</param>
+        /// <param name="endDate">Return historical data on or before this date (optional)</param>
         /// <param name="sortOrder">Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (optional, default to desc)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
@@ -2128,6 +2194,149 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseCompanyHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseCompanyHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyHistoricalData)));
+        }
+
+        /// <summary>
+        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseInitialPublicOfferings</returns>
+        public ApiResponseInitialPublicOfferings GetCompanyIpos (int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseInitialPublicOfferings> localVarResponse = GetCompanyIposWithHttpInfo(pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseInitialPublicOfferings</returns>
+        public ApiResponse< ApiResponseInitialPublicOfferings > GetCompanyIposWithHttpInfo (int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/companies/ipos";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyIpos", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseInitialPublicOfferings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseInitialPublicOfferings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseInitialPublicOfferings)));
+        }
+
+        /// <summary>
+        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseInitialPublicOfferings</returns>
+        public async System.Threading.Tasks.Task<ApiResponseInitialPublicOfferings> GetCompanyIposAsync (int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseInitialPublicOfferings> localVarResponse = await GetCompanyIposAsyncWithHttpInfo(pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseInitialPublicOfferings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInitialPublicOfferings>> GetCompanyIposAsyncWithHttpInfo (int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/companies/ipos";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyIpos", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseInitialPublicOfferings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseInitialPublicOfferings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseInitialPublicOfferings)));
         }
 
         /// <summary>

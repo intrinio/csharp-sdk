@@ -31,7 +31,7 @@ Method | HTTP request | Description
 <a name="getzacksanalystratings"></a>
 ## **GetZacksAnalystRatings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetZacksAnalystRatings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksAnalystRatings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -64,8 +64,8 @@ namespace Example
 
       var zacksApi = new ZacksApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional) 
-      var startDate = "";  // string | Limit ratings to those on or after this date (optional) 
-      var endDate = "";  // string | Limit ratings to those on or before this date (optional) 
+      var startDate = DateTime.Parse("";  // string | Limit ratings to those on or after this date (optional) 
+      var endDate = DateTime.Parse("";  // string | Limit ratings to those on or before this date (optional) 
       var meanGreater = "";  // decimal? | Return only records with a mean (average) higher than this value (optional) 
       var meanLess = "";  // decimal? | Return only records with a mean (average) lower than this value (optional) 
       var strongBuysGreater = "";  // int? | Return only records with more than this many Strong Buy recommendations (optional) 
@@ -86,11 +86,11 @@ namespace Example
       try
       {
         ApiResponseZacksAnalystRatings result = zacksApi.GetZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling ZacksApi.GetZacksAnalystRatings: " + e.Message );
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksAnalystRatings: " + e.Message );
       }
     }
   }
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 <a name="getzacksepssurprises"></a>
 ## **GetZacksEpsSurprises**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetZacksEpsSurprises_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksEpsSurprises_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -189,8 +189,8 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var zacksApi = new ZacksApi();
-      var startDate = "";  // string | Limit EPS surprises to those on or after this date (optional) 
-      var endDate = "";  // string | Limit EPS surprises to those on or before this date (optional) 
+      var startDate = DateTime.Parse("";  // string | Limit EPS surprises to those on or after this date (optional) 
+      var endDate = DateTime.Parse("";  // string | Limit EPS surprises to those on or before this date (optional) 
       var epsActualGreater = "";  // decimal? | Return only records with an actual EPS higher than this value (optional) 
       var epsActualLess = "";  // decimal? | Return only records with an actual EPS lower than this value (optional) 
       var epsMeanEstimateGreater = "";  // decimal? | Return only records with an EPS mean estimate greater than this value (optional) 
@@ -209,11 +209,11 @@ namespace Example
       try
       {
         ApiResponseZacksEPSSurprises result = zacksApi.GetZacksEpsSurprises(startDate, endDate, epsActualGreater, epsActualLess, epsMeanEstimateGreater, epsMeanEstimateLess, epsAmountDiffGreater, epsAmountDiffLess, epsPercentDiffGreater, epsPercentDiffLess, epsCountEstimateGreater, epsCountEstimateLess, epsStdDevEstimateGreater, epsStdDevEstimateLess, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling ZacksApi.GetZacksEpsSurprises: " + e.Message );
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksEpsSurprises: " + e.Message );
       }
     }
   }
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 <a name="getzackssalessurprises"></a>
 ## **GetZacksSalesSurprises**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetZacksSalesSurprises_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksSalesSurprises_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -309,8 +309,8 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var zacksApi = new ZacksApi();
-      var startDate = "";  // string | Limit sales surprises to those on or after this date (optional) 
-      var endDate = "";  // string | Limit sales surprises to those on or before this date (optional) 
+      var startDate = DateTime.Parse("";  // string | Limit sales surprises to those on or after this date (optional) 
+      var endDate = DateTime.Parse("";  // string | Limit sales surprises to those on or before this date (optional) 
       var salesActualGreater = "";  // decimal? | Return only records with an actual sales higher than this value (optional) 
       var salesActualLess = "";  // decimal? | Return only records with an actual sales lower than this value (optional) 
       var salesMeanEstimateGreater = "";  // decimal? | Return only records with a sales mean estimate greater than this value (optional) 
@@ -329,11 +329,11 @@ namespace Example
       try
       {
         ApiResponseZacksSalesSurprises result = zacksApi.GetZacksSalesSurprises(startDate, endDate, salesActualGreater, salesActualLess, salesMeanEstimateGreater, salesMeanEstimateLess, salesAmountDiffGreater, salesAmountDiffLess, salesPercentDiffGreater, salesPercentDiffLess, salesCountEstimateGreater, salesCountEstimateLess, salesStdDevEstimateGreater, salesStdDevEstimateLess, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling ZacksApi.GetZacksSalesSurprises: " + e.Message );
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksSalesSurprises: " + e.Message );
       }
     }
   }

@@ -31,7 +31,7 @@ Method | HTTP request | Description
 <a name="getforexcurrencies"></a>
 ## **GetForexCurrencies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetForexCurrencies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetForexCurrencies_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -67,11 +67,11 @@ namespace Example
       try
       {
         ApiResponseForexCurrencies result = forexApi.GetForexCurrencies();
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling ForexApi.GetForexCurrencies: " + e.Message );
+        Console.WriteLine("Exception when calling ForexApi.GetForexCurrencies: " + e.Message );
       }
     }
   }
@@ -117,7 +117,7 @@ This endpoint does not need any parameter.
 <a name="getforexpairs"></a>
 ## **GetForexPairs**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetForexPairs_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetForexPairs_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -153,11 +153,11 @@ namespace Example
       try
       {
         ApiResponseForexPairs result = forexApi.GetForexPairs();
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling ForexApi.GetForexPairs: " + e.Message );
+        Console.WriteLine("Exception when calling ForexApi.GetForexPairs: " + e.Message );
       }
     }
   }
@@ -203,7 +203,7 @@ This endpoint does not need any parameter.
 <a name="getforexprices"></a>
 ## **GetForexPrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetForexPrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetForexPrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -238,9 +238,9 @@ namespace Example
       var pair = "EURUSD";  // string | The Forex Currency Pair code
       var timeframe = "D1";  // string | The time interval for the quotes
       var timezone = "UTC";  // string | Returns trading times in this timezone (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return Forex Prices on or after this date (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return Forex Prices on or after this date (optional) 
       var startTime = "";  // string | Return Forex Prices at or after this time (24-hour) (optional) 
-      var endDate = "";  // DateTime? | Return Forex Prices on or before this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return Forex Prices on or before this date (optional) 
       var endTime = "";  // string | Return Forex Prices at or before this time (24-hour) (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -248,11 +248,11 @@ namespace Example
       try
       {
         ApiResponseForexPrices result = forexApi.GetForexPrices(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling ForexApi.GetForexPrices: " + e.Message );
+        Console.WriteLine("Exception when calling ForexApi.GetForexPrices: " + e.Message );
       }
     }
   }

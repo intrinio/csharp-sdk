@@ -32,7 +32,7 @@ Method | HTTP request | Description
 <a name="getoptions"></a>
 ## **GetOptions**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptions_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptions_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -78,11 +78,11 @@ namespace Example
       try
       {
         ApiResponseOptions result = optionsApi.GetOptions(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling OptionsApi.GetOptions: " + e.Message );
+        Console.WriteLine("Exception when calling OptionsApi.GetOptions: " + e.Message );
       }
     }
   }
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 <a name="getoptionschain"></a>
 ## **GetOptionsChain**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsChain_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsChain_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -184,11 +184,11 @@ namespace Example
       try
       {
         ApiResponseOptionsChain result = optionsApi.GetOptionsChain(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling OptionsApi.GetOptionsChain: " + e.Message );
+        Console.WriteLine("Exception when calling OptionsApi.GetOptionsChain: " + e.Message );
       }
     }
   }
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 <a name="getoptionsexpirations"></a>
 ## **GetOptionsExpirations**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsExpirations_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsExpirations_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -283,11 +283,11 @@ namespace Example
       try
       {
         ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirations(symbol, after, before);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling OptionsApi.GetOptionsExpirations: " + e.Message );
+        Console.WriteLine("Exception when calling OptionsApi.GetOptionsExpirations: " + e.Message );
       }
     }
   }
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 <a name="getoptionsprices"></a>
 ## **GetOptionsPrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetOptionsPrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsPrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -371,19 +371,19 @@ namespace Example
 
       var optionsApi = new OptionsApi();
       var identifier = null;  // string | The Intrinio ID or code of the options contract to request prices for.
-      var startDate = "2019-01-01";  // string | Return option contract prices on or after this date. (optional) 
-      var endDate = "2019-12-31";  // string | Return option contract prices on or before this date. (optional) 
+      var startDate = DateTime.Parse("2019-01-01";  // string | Return option contract prices on or after this date. (optional) 
+      var endDate = DateTime.Parse("2019-12-31";  // string | Return option contract prices on or before this date. (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseOptionPrices result = optionsApi.GetOptionsPrices(identifier, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling OptionsApi.GetOptionsPrices: " + e.Message );
+        Console.WriteLine("Exception when calling OptionsApi.GetOptionsPrices: " + e.Message );
       }
     }
   }

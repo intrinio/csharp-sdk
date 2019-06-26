@@ -29,7 +29,7 @@ Method | HTTP request | Description
 <a name="gethistoricaldata"></a>
 ## **GetHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -65,8 +65,8 @@ namespace Example
       var tag = "marketcap";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
       var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
       var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = "2015-01-01";  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = "";  // DateTime? | Get historical date on or before this date (optional) 
+      var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Get historical data on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Get historical date on or before this date (optional) 
       var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -74,11 +74,11 @@ namespace Example
       try
       {
         ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling HistoricalDataApi.GetHistoricalData: " + e.Message );
+        Console.WriteLine("Exception when calling HistoricalDataApi.GetHistoricalData: " + e.Message );
       }
     }
   }

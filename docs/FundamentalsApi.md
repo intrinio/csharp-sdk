@@ -32,7 +32,7 @@ Method | HTTP request | Description
 <a name="getfundamentalbyid"></a>
 ## **GetFundamentalById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFundamentalById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFundamentalById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -69,11 +69,11 @@ namespace Example
       try
       {
         Fundamental result = fundamentalsApi.GetFundamentalById(id);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FundamentalsApi.GetFundamentalById: " + e.Message );
+        Console.WriteLine("Exception when calling FundamentalsApi.GetFundamentalById: " + e.Message );
       }
     }
   }
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 <a name="getfundamentalreportedfinancials"></a>
 ## **GetFundamentalReportedFinancials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFundamentalReportedFinancials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFundamentalReportedFinancials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -159,11 +159,11 @@ namespace Example
       try
       {
         ApiResponseReportedFinancials result = fundamentalsApi.GetFundamentalReportedFinancials(id);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FundamentalsApi.GetFundamentalReportedFinancials: " + e.Message );
+        Console.WriteLine("Exception when calling FundamentalsApi.GetFundamentalReportedFinancials: " + e.Message );
       }
     }
   }
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 <a name="getfundamentalstandardizedfinancials"></a>
 ## **GetFundamentalStandardizedFinancials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetFundamentalStandardizedFinancials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFundamentalStandardizedFinancials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 #### Standardized Financials
 
-Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies' fundamentals.
 
 [//]: # (END_OVERVIEW)
 
@@ -249,11 +249,11 @@ namespace Example
       try
       {
         ApiResponseStandardizedFinancials result = fundamentalsApi.GetFundamentalStandardizedFinancials(id);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FundamentalsApi.GetFundamentalStandardizedFinancials: " + e.Message );
+        Console.WriteLine("Exception when calling FundamentalsApi.GetFundamentalStandardizedFinancials: " + e.Message );
       }
     }
   }
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 <a name="lookupfundamental"></a>
 ## **LookupFundamental**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/LookupFundamental_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/LookupFundamental_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -342,11 +342,11 @@ namespace Example
       try
       {
         Fundamental result = fundamentalsApi.LookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling FundamentalsApi.LookupFundamental: " + e.Message );
+        Console.WriteLine("Exception when calling FundamentalsApi.LookupFundamental: " + e.Message );
       }
     }
   }

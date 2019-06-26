@@ -90,7 +90,7 @@ Method | HTTP request | Description
 <a name="getcryptopricetechnicalsadi"></a>
 ## **GetCryptoPriceTechnicalsAdi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAdi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsAdi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -127,9 +127,9 @@ namespace Example
       var currency = "BTC";  // string | Return technicals for the given Crypto Currency. (optional) 
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -137,11 +137,11 @@ namespace Example
       try
       {
         ApiResponseCryptoAccumulationDistributionIndex result = technicalApi.GetCryptoPriceTechnicalsAdi(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAdi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAdi: " + e.Message );
       }
     }
   }
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsadtv"></a>
 ## **GetCryptoPriceTechnicalsAdtv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAdtv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsAdtv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -238,9 +238,9 @@ namespace Example
       var period = "";  // int? | The number of observations, per period, to calculate Average Daily Trading Volume. (optional)  (default to 22)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -248,11 +248,11 @@ namespace Example
       try
       {
         ApiResponseCryptoAverageDailyTradingVolume result = technicalApi.GetCryptoPriceTechnicalsAdtv(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAdtv: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAdtv: " + e.Message );
       }
     }
   }
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsadx"></a>
 ## **GetCryptoPriceTechnicalsAdx**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAdx_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsAdx_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -350,9 +350,9 @@ namespace Example
       var period = "";  // int? | The number of observations, per period, to calculate Average Directional Index. (optional)  (default to 22)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -360,11 +360,11 @@ namespace Example
       try
       {
         ApiResponseCryptoAverageDirectionalIndex result = technicalApi.GetCryptoPriceTechnicalsAdx(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAdx: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAdx: " + e.Message );
       }
     }
   }
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsao"></a>
 ## **GetCryptoPriceTechnicalsAo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsAo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -463,9 +463,9 @@ namespace Example
       var longPeriod = "";  // int? | The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. (optional)  (default to 34)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -473,11 +473,11 @@ namespace Example
       try
       {
         ApiResponseCryptoAwesomeOscillator result = technicalApi.GetCryptoPriceTechnicalsAo(pair, exchange, currency, shortPeriod, longPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAo: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAo: " + e.Message );
       }
     }
   }
@@ -538,7 +538,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsatr"></a>
 ## **GetCryptoPriceTechnicalsAtr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsAtr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsAtr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -576,9 +576,9 @@ namespace Example
       var period = "";  // int? | The number of observations, per period, to calculate Average True Range. (optional)  (default to 22)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -586,11 +586,11 @@ namespace Example
       try
       {
         ApiResponseCryptoAverageTrueRange result = technicalApi.GetCryptoPriceTechnicalsAtr(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAtr: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsAtr: " + e.Message );
       }
     }
   }
@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsbb"></a>
 ## **GetCryptoPriceTechnicalsBb**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsBb_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsBb_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -690,9 +690,9 @@ namespace Example
       var priceKey = "";  // string | The Crypto Currency Price field to use when calculating Bollinger Bands. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -700,11 +700,11 @@ namespace Example
       try
       {
         ApiResponseCryptoBollingerBands result = technicalApi.GetCryptoPriceTechnicalsBb(pair, exchange, currency, period, standardDeviations, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsBb: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsBb: " + e.Message );
       }
     }
   }
@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalscci"></a>
 ## **GetCryptoPriceTechnicalsCci**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsCci_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsCci_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -805,9 +805,9 @@ namespace Example
       var constant = "";  // float? | The number of observations, per period, to calculate Commodity Channel Index. (optional)  (default to 0.015)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -815,11 +815,11 @@ namespace Example
       try
       {
         ApiResponseCryptoCommodityChannelIndex result = technicalApi.GetCryptoPriceTechnicalsCci(pair, exchange, currency, period, constant, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsCci: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsCci: " + e.Message );
       }
     }
   }
@@ -880,7 +880,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalscmf"></a>
 ## **GetCryptoPriceTechnicalsCmf**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsCmf_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsCmf_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -918,9 +918,9 @@ namespace Example
       var period = "";  // int? | The number of observations, per period, to calculate Chaikin Money Flow. (optional)  (default to 20)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -928,11 +928,11 @@ namespace Example
       try
       {
         ApiResponseCryptoChaikinMoneyFlow result = technicalApi.GetCryptoPriceTechnicalsCmf(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsCmf: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsCmf: " + e.Message );
       }
     }
   }
@@ -992,7 +992,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsdc"></a>
 ## **GetCryptoPriceTechnicalsDc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsDc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsDc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1031,9 +1031,9 @@ namespace Example
       var priceKey = "";  // string | The Crypto Currency Price field to use when calculating Donchian Channel. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1041,11 +1041,11 @@ namespace Example
       try
       {
         ApiResponseCryptoDonchianChannel result = technicalApi.GetCryptoPriceTechnicalsDc(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsDc: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsDc: " + e.Message );
       }
     }
   }
@@ -1106,7 +1106,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsdpo"></a>
 ## **GetCryptoPriceTechnicalsDpo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsDpo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsDpo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1145,9 +1145,9 @@ namespace Example
       var priceKey = "";  // string | The Crypto Currency Price field to use when calculating Detrended Price Oscillator. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1155,11 +1155,11 @@ namespace Example
       try
       {
         ApiResponseCryptoDetrendedPriceOscillator result = technicalApi.GetCryptoPriceTechnicalsDpo(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsDpo: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsDpo: " + e.Message );
       }
     }
   }
@@ -1220,7 +1220,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalseom"></a>
 ## **GetCryptoPriceTechnicalsEom**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsEom_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsEom_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1258,9 +1258,9 @@ namespace Example
       var period = 20;  // int? | The number of observations, per period, to calculate Ease of Movement. (optional)  (default to 20)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1268,11 +1268,11 @@ namespace Example
       try
       {
         ApiResponseCryptoEaseOfMovement result = technicalApi.GetCryptoPriceTechnicalsEom(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsEom: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsEom: " + e.Message );
       }
     }
   }
@@ -1332,7 +1332,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsfi"></a>
 ## **GetCryptoPriceTechnicalsFi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsFi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsFi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1369,9 +1369,9 @@ namespace Example
       var currency = "BTC";  // string | Return technicals for the given Crypto Currency. (optional) 
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1379,11 +1379,11 @@ namespace Example
       try
       {
         ApiResponseCryptoForceIndex result = technicalApi.GetCryptoPriceTechnicalsFi(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsFi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsFi: " + e.Message );
       }
     }
   }
@@ -1442,7 +1442,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsichimoku"></a>
 ## **GetCryptoPriceTechnicalsIchimoku**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsIchimoku_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsIchimoku_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1482,9 +1482,9 @@ namespace Example
       var highPeriod = 52;  // int? | The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. (optional)  (default to 52)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1492,11 +1492,11 @@ namespace Example
       try
       {
         ApiResponseCryptoIchimokuKinkoHyo result = technicalApi.GetCryptoPriceTechnicalsIchimoku(pair, exchange, currency, lowPeriod, mediumPeriod, highPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsIchimoku: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsIchimoku: " + e.Message );
       }
     }
   }
@@ -1558,7 +1558,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalskc"></a>
 ## **GetCryptoPriceTechnicalsKc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsKc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsKc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1596,9 +1596,9 @@ namespace Example
       var period = 10;  // int? | The number of observations, per period, to calculate Kelter Channel. (optional)  (default to 10)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1606,11 +1606,11 @@ namespace Example
       try
       {
         ApiResponseCryptoKeltnerChannel result = technicalApi.GetCryptoPriceTechnicalsKc(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsKc: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsKc: " + e.Message );
       }
     }
   }
@@ -1670,7 +1670,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalskst"></a>
 ## **GetCryptoPriceTechnicalsKst**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsKst_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsKst_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1716,9 +1716,9 @@ namespace Example
       var priceKey = "close";  // string | The Crypto Currency Price field to use when calculating Know Sure Thing. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1726,11 +1726,11 @@ namespace Example
       try
       {
         ApiResponseCryptoKnowSureThing result = technicalApi.GetCryptoPriceTechnicalsKst(pair, exchange, currency, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsKst: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsKst: " + e.Message );
       }
     }
   }
@@ -1798,7 +1798,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsmacd"></a>
 ## **GetCryptoPriceTechnicalsMacd**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsMacd_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsMacd_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1839,9 +1839,9 @@ namespace Example
       var priceKey = "close";  // string | The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1849,11 +1849,11 @@ namespace Example
       try
       {
         ApiResponseCryptoMovingAverageConvergenceDivergence result = technicalApi.GetCryptoPriceTechnicalsMacd(pair, exchange, currency, fastPeriod, slowPeriod, signalPeriod, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsMacd: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsMacd: " + e.Message );
       }
     }
   }
@@ -1916,7 +1916,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsmfi"></a>
 ## **GetCryptoPriceTechnicalsMfi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsMfi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsMfi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1954,9 +1954,9 @@ namespace Example
       var period = 14;  // int? | The number of observations, per period, to calculate Money Flow Index. (optional)  (default to 14)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -1964,11 +1964,11 @@ namespace Example
       try
       {
         ApiResponseCryptoMoneyFlowIndex result = technicalApi.GetCryptoPriceTechnicalsMfi(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsMfi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsMfi: " + e.Message );
       }
     }
   }
@@ -2028,7 +2028,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsmi"></a>
 ## **GetCryptoPriceTechnicalsMi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsMi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsMi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2067,9 +2067,9 @@ namespace Example
       var sumPeriod = 25;  // int? | The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. (optional)  (default to 25)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2077,11 +2077,11 @@ namespace Example
       try
       {
         ApiResponseCryptoMassIndex result = technicalApi.GetCryptoPriceTechnicalsMi(pair, exchange, currency, emaPeriod, sumPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsMi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsMi: " + e.Message );
       }
     }
   }
@@ -2142,7 +2142,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsnvi"></a>
 ## **GetCryptoPriceTechnicalsNvi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsNvi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsNvi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2179,9 +2179,9 @@ namespace Example
       var currency = "BTC";  // string | Return technicals for the given Crypto Currency. (optional) 
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2189,11 +2189,11 @@ namespace Example
       try
       {
         ApiResponseCryptoNegativeVolumeIndex result = technicalApi.GetCryptoPriceTechnicalsNvi(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsNvi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsNvi: " + e.Message );
       }
     }
   }
@@ -2252,7 +2252,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsobv"></a>
 ## **GetCryptoPriceTechnicalsObv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsObv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsObv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2289,9 +2289,9 @@ namespace Example
       var currency = "BTC";  // string | Return technicals for the given Crypto Currency. (optional) 
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2299,11 +2299,11 @@ namespace Example
       try
       {
         ApiResponseCryptoOnBalanceVolume result = technicalApi.GetCryptoPriceTechnicalsObv(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsObv: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsObv: " + e.Message );
       }
     }
   }
@@ -2362,7 +2362,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsobvmean"></a>
 ## **GetCryptoPriceTechnicalsObvMean**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsObvMean_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsObvMean_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2400,9 +2400,9 @@ namespace Example
       var period = 10;  // int? | The number of observations, per period, to calculate On-balance Volume Mean. (optional)  (default to 10)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2410,11 +2410,11 @@ namespace Example
       try
       {
         ApiResponseCryptoOnBalanceVolumeMean result = technicalApi.GetCryptoPriceTechnicalsObvMean(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsObvMean: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsObvMean: " + e.Message );
       }
     }
   }
@@ -2474,7 +2474,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsrsi"></a>
 ## **GetCryptoPriceTechnicalsRsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsRsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsRsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2513,9 +2513,9 @@ namespace Example
       var priceKey = "close";  // string | The Crypto Currency Price field to use when calculating Relative Strength Index. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2523,11 +2523,11 @@ namespace Example
       try
       {
         ApiResponseCryptoRelativeStrengthIndex result = technicalApi.GetCryptoPriceTechnicalsRsi(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsRsi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsRsi: " + e.Message );
       }
     }
   }
@@ -2588,7 +2588,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalssma"></a>
 ## **GetCryptoPriceTechnicalsSma**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsSma_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsSma_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2627,9 +2627,9 @@ namespace Example
       var priceKey = "close";  // string | The Crypto Currency Price field to use when calculating Simple Moving Average. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2637,11 +2637,11 @@ namespace Example
       try
       {
         ApiResponseCryptoSimpleMovingAverage result = technicalApi.GetCryptoPriceTechnicalsSma(pair, exchange, currency, period, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsSma: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsSma: " + e.Message );
       }
     }
   }
@@ -2702,7 +2702,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalssr"></a>
 ## **GetCryptoPriceTechnicalsSr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsSr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsSr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2741,9 +2741,9 @@ namespace Example
       var signalPeriod = 3;  // int? | The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. (optional)  (default to 3)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2751,11 +2751,11 @@ namespace Example
       try
       {
         ApiResponseCryptoStochasticOscillator result = technicalApi.GetCryptoPriceTechnicalsSr(pair, exchange, currency, period, signalPeriod, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsSr: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsSr: " + e.Message );
       }
     }
   }
@@ -2816,7 +2816,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalstrix"></a>
 ## **GetCryptoPriceTechnicalsTrix**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsTrix_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsTrix_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2854,9 +2854,9 @@ namespace Example
       var period = 15;  // int? | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. (optional)  (default to 15)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2864,11 +2864,11 @@ namespace Example
       try
       {
         ApiResponseCryptoTripleExponentialAverage result = technicalApi.GetCryptoPriceTechnicalsTrix(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsTrix: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsTrix: " + e.Message );
       }
     }
   }
@@ -2928,7 +2928,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalstsi"></a>
 ## **GetCryptoPriceTechnicalsTsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsTsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsTsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2968,9 +2968,9 @@ namespace Example
       var priceKey = "close";  // string | The Crypto Currency Price field to use when calculating True Strength Index. (optional)  (default to close)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -2978,11 +2978,11 @@ namespace Example
       try
       {
         ApiResponseCryptoTrueStrengthIndex result = technicalApi.GetCryptoPriceTechnicalsTsi(pair, exchange, currency, lowPeriod, highPeriod, priceKey, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsTsi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsTsi: " + e.Message );
       }
     }
   }
@@ -3044,7 +3044,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsuo"></a>
 ## **GetCryptoPriceTechnicalsUo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsUo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsUo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3087,9 +3087,9 @@ namespace Example
       var longWeight = 1.0;  // float? | The weight of long Buying Pressure average for Ultimate Oscillator. (optional)  (default to 1.0)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -3097,11 +3097,11 @@ namespace Example
       try
       {
         ApiResponseCryptoUltimateOscillator result = technicalApi.GetCryptoPriceTechnicalsUo(pair, exchange, currency, shortPeriod, mediumPeriod, longPeriod, shortWeight, mediumWeight, longWeight, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsUo: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsUo: " + e.Message );
       }
     }
   }
@@ -3166,7 +3166,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsvi"></a>
 ## **GetCryptoPriceTechnicalsVi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsVi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsVi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3204,9 +3204,9 @@ namespace Example
       var period = 14;  // int? | The number of observations, per period, to calculate Vortex Indicator. (optional)  (default to 14)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -3214,11 +3214,11 @@ namespace Example
       try
       {
         ApiResponseCryptoVortexIndicator result = technicalApi.GetCryptoPriceTechnicalsVi(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsVi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsVi: " + e.Message );
       }
     }
   }
@@ -3278,7 +3278,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsvpt"></a>
 ## **GetCryptoPriceTechnicalsVpt**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsVpt_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsVpt_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3315,9 +3315,9 @@ namespace Example
       var currency = "BTC";  // string | Return technicals for the given Crypto Currency. (optional) 
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -3325,11 +3325,11 @@ namespace Example
       try
       {
         ApiResponseCryptoVolumePriceTrend result = technicalApi.GetCryptoPriceTechnicalsVpt(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsVpt: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsVpt: " + e.Message );
       }
     }
   }
@@ -3388,7 +3388,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalsvwap"></a>
 ## **GetCryptoPriceTechnicalsVwap**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsVwap_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsVwap_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3425,9 +3425,9 @@ namespace Example
       var currency = "BTC";  // string | Return technicals for the given Crypto Currency. (optional) 
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -3435,11 +3435,11 @@ namespace Example
       try
       {
         ApiResponseCryptoVolumeWeightedAveragePrice result = technicalApi.GetCryptoPriceTechnicalsVwap(pair, exchange, currency, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsVwap: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsVwap: " + e.Message );
       }
     }
   }
@@ -3498,7 +3498,7 @@ Name | Type | Description  | Notes
 <a name="getcryptopricetechnicalswr"></a>
 ## **GetCryptoPriceTechnicalsWr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetCryptoPriceTechnicalsWr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCryptoPriceTechnicalsWr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3536,9 +3536,9 @@ namespace Example
       var period = 14;  // int? | The number of observations, per period, to look-back when calculating Williams %R. (optional)  (default to 14)
       var timeframe = "d1";  // string | The time interval for the prices when calculating technicals. (optional)  (default to d1)
       var timezone = "UTC";  // string | Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. (optional)  (default to UTC)
-      var startDate = "";  // DateTime? | Return technicals on or after this date. (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return technicals on or after this date. (optional) 
       var startTime = "";  // string | Return technicals at or after this time (24-hour). (optional) 
-      var endDate = "";  // DateTime? | Return technicals on or before this date. (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return technicals on or before this date. (optional) 
       var endTime = "";  // string | Return technicals at or before this time (24-hour). (optional) 
       var pageSize = 100;  // int? | An integer greater than or equal to 1 for specifying the number of results on each page. (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
@@ -3546,11 +3546,11 @@ namespace Example
       try
       {
         ApiResponseCryptoWilliamsR result = technicalApi.GetCryptoPriceTechnicalsWr(pair, exchange, currency, period, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsWr: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetCryptoPriceTechnicalsWr: " + e.Message );
       }
     }
   }
@@ -3610,7 +3610,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsadi"></a>
 ## **GetSecurityPriceTechnicalsAdi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsAdi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3643,19 +3643,19 @@ namespace Example
 
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityAccumulationDistributionIndex result = technicalApi.GetSecurityPriceTechnicalsAdi(identifier, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAdi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAdi: " + e.Message );
       }
     }
   }
@@ -3708,7 +3708,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsadtv"></a>
 ## **GetSecurityPriceTechnicalsAdtv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdtv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsAdtv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3742,19 +3742,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 22;  // int? | The number of observations, per period, to calculate Average Daily Trading Volume (optional)  (default to 22)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityAverageDailyTradingVolume result = technicalApi.GetSecurityPriceTechnicalsAdtv(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAdtv: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAdtv: " + e.Message );
       }
     }
   }
@@ -3808,7 +3808,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsadx"></a>
 ## **GetSecurityPriceTechnicalsAdx**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAdx_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsAdx_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3842,19 +3842,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Average Directional Index (optional)  (default to 14)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityAverageDirectionalIndex result = technicalApi.GetSecurityPriceTechnicalsAdx(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAdx: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAdx: " + e.Message );
       }
     }
   }
@@ -3908,7 +3908,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsao"></a>
 ## **GetSecurityPriceTechnicalsAo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsAo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3943,19 +3943,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var shortPeriod = 5;  // int? | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator (optional)  (default to 5)
       var longPeriod = 34;  // int? | The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator (optional)  (default to 34)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityAwesomeOscillator result = technicalApi.GetSecurityPriceTechnicalsAo(identifier, shortPeriod, longPeriod, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAo: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAo: " + e.Message );
       }
     }
   }
@@ -4010,7 +4010,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsatr"></a>
 ## **GetSecurityPriceTechnicalsAtr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsAtr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsAtr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4044,19 +4044,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Average True Range (optional)  (default to 14)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityAverageTrueRange result = technicalApi.GetSecurityPriceTechnicalsAtr(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAtr: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsAtr: " + e.Message );
       }
     }
   }
@@ -4110,7 +4110,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsbb"></a>
 ## **GetSecurityPriceTechnicalsBb**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsBb_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsBb_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4146,19 +4146,19 @@ namespace Example
       var period = 20;  // int? | The number of observations, per period, to calculate Bollinger Bands (optional)  (default to 20)
       var standardDeviations = 2.0;  // float? | The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands (optional)  (default to 2.0)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Bollinger Bands (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityBollingerBands result = technicalApi.GetSecurityPriceTechnicalsBb(identifier, period, standardDeviations, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsBb: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsBb: " + e.Message );
       }
     }
   }
@@ -4214,7 +4214,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalscci"></a>
 ## **GetSecurityPriceTechnicalsCci**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCci_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsCci_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4249,19 +4249,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Commodity Channel Index (optional)  (default to 20)
       var constant = 0.015;  // float? | The number of observations, per period, to calculate Commodity Channel Index (optional)  (default to 0.015)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityCommodityChannelIndex result = technicalApi.GetSecurityPriceTechnicalsCci(identifier, period, constant, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsCci: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsCci: " + e.Message );
       }
     }
   }
@@ -4316,7 +4316,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalscmf"></a>
 ## **GetSecurityPriceTechnicalsCmf**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsCmf_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsCmf_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4350,19 +4350,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Chaikin Money Flow (optional)  (default to 20)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityChaikinMoneyFlow result = technicalApi.GetSecurityPriceTechnicalsCmf(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsCmf: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsCmf: " + e.Message );
       }
     }
   }
@@ -4416,7 +4416,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsdc"></a>
 ## **GetSecurityPriceTechnicalsDc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsDc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4451,19 +4451,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Donchian Channel (optional)  (default to 20)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Donchian Channel (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityDonchianChannel result = technicalApi.GetSecurityPriceTechnicalsDc(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsDc: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsDc: " + e.Message );
       }
     }
   }
@@ -4518,7 +4518,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsdpo"></a>
 ## **GetSecurityPriceTechnicalsDpo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsDpo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsDpo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4553,19 +4553,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Detrended Price Oscillator (optional)  (default to 20)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Detrended Price Oscillator (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityDetrendedPriceOscillator result = technicalApi.GetSecurityPriceTechnicalsDpo(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsDpo: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsDpo: " + e.Message );
       }
     }
   }
@@ -4620,7 +4620,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalseom"></a>
 ## **GetSecurityPriceTechnicalsEom**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsEom_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsEom_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4654,19 +4654,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Ease of Movement (optional)  (default to 20)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityEaseOfMovement result = technicalApi.GetSecurityPriceTechnicalsEom(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsEom: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsEom: " + e.Message );
       }
     }
   }
@@ -4720,7 +4720,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsfi"></a>
 ## **GetSecurityPriceTechnicalsFi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsFi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsFi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4753,19 +4753,19 @@ namespace Example
 
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityForceIndex result = technicalApi.GetSecurityPriceTechnicalsFi(identifier, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsFi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsFi: " + e.Message );
       }
     }
   }
@@ -4818,7 +4818,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsichimoku"></a>
 ## **GetSecurityPriceTechnicalsIchimoku**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsIchimoku_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsIchimoku_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4854,19 +4854,19 @@ namespace Example
       var lowPeriod = 9;  // int? | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo (optional)  (default to 9)
       var mediumPeriod = 26;  // int? | The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo (optional)  (default to 26)
       var highPeriod = 52;  // int? | The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo (optional)  (default to 52)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityIchimokuKinkoHyo result = technicalApi.GetSecurityPriceTechnicalsIchimoku(identifier, lowPeriod, mediumPeriod, highPeriod, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsIchimoku: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsIchimoku: " + e.Message );
       }
     }
   }
@@ -4922,7 +4922,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalskc"></a>
 ## **GetSecurityPriceTechnicalsKc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsKc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4956,19 +4956,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 10;  // int? | The number of observations, per period, to calculate Kelter Channel (optional)  (default to 10)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityKeltnerChannel result = technicalApi.GetSecurityPriceTechnicalsKc(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsKc: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsKc: " + e.Message );
       }
     }
   }
@@ -5022,7 +5022,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalskst"></a>
 ## **GetSecurityPriceTechnicalsKst**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsKst_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsKst_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5064,19 +5064,19 @@ namespace Example
       var sma3 = 10;  // int? | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional)  (default to 10)
       var sma4 = 15;  // int? | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 (optional)  (default to 15)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Know Sure Thing (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityKnowSureThing result = technicalApi.GetSecurityPriceTechnicalsKst(identifier, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsKst: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsKst: " + e.Message );
       }
     }
   }
@@ -5138,7 +5138,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsmacd"></a>
 ## **GetSecurityPriceTechnicalsMacd**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMacd_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsMacd_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5175,19 +5175,19 @@ namespace Example
       var slowPeriod = 26;  // int? | The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence (optional)  (default to 26)
       var signalPeriod = 9;  // int? | The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence (optional)  (default to 9)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Moving Average Convergence Divergence (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityMovingAverageConvergenceDivergence result = technicalApi.GetSecurityPriceTechnicalsMacd(identifier, fastPeriod, slowPeriod, signalPeriod, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsMacd: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsMacd: " + e.Message );
       }
     }
   }
@@ -5244,7 +5244,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsmfi"></a>
 ## **GetSecurityPriceTechnicalsMfi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMfi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsMfi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5278,19 +5278,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Money Flow Index (optional)  (default to 14)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityMoneyFlowIndex result = technicalApi.GetSecurityPriceTechnicalsMfi(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsMfi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsMfi: " + e.Message );
       }
     }
   }
@@ -5344,7 +5344,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsmi"></a>
 ## **GetSecurityPriceTechnicalsMi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsMi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsMi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5379,19 +5379,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var emaPeriod = 9;  // int? | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index (optional)  (default to 9)
       var sumPeriod = 25;  // int? | The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index (optional)  (default to 25)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityMassIndex result = technicalApi.GetSecurityPriceTechnicalsMi(identifier, emaPeriod, sumPeriod, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsMi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsMi: " + e.Message );
       }
     }
   }
@@ -5446,7 +5446,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsnvi"></a>
 ## **GetSecurityPriceTechnicalsNvi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsNvi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsNvi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5479,19 +5479,19 @@ namespace Example
 
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityNegativeVolumeIndex result = technicalApi.GetSecurityPriceTechnicalsNvi(identifier, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsNvi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsNvi: " + e.Message );
       }
     }
   }
@@ -5544,7 +5544,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsobv"></a>
 ## **GetSecurityPriceTechnicalsObv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsObv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5577,19 +5577,19 @@ namespace Example
 
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityOnBalanceVolume result = technicalApi.GetSecurityPriceTechnicalsObv(identifier, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsObv: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsObv: " + e.Message );
       }
     }
   }
@@ -5642,7 +5642,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsobvmean"></a>
 ## **GetSecurityPriceTechnicalsObvMean**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsObvMean_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsObvMean_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5676,19 +5676,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 10;  // int? | The number of observations, per period, to calculate On-balance Volume Mean (optional)  (default to 10)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityOnBalanceVolumeMean result = technicalApi.GetSecurityPriceTechnicalsObvMean(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsObvMean: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsObvMean: " + e.Message );
       }
     }
   }
@@ -5742,7 +5742,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsrsi"></a>
 ## **GetSecurityPriceTechnicalsRsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsRsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsRsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5777,19 +5777,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Relative Strength Index (optional)  (default to 14)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Relative Strength Index (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityRelativeStrengthIndex result = technicalApi.GetSecurityPriceTechnicalsRsi(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsRsi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsRsi: " + e.Message );
       }
     }
   }
@@ -5844,7 +5844,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalssma"></a>
 ## **GetSecurityPriceTechnicalsSma**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSma_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsSma_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5879,19 +5879,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Simple Moving Average (optional)  (default to 20)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Simple Moving Average (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecuritySimpleMovingAverage result = technicalApi.GetSecurityPriceTechnicalsSma(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsSma: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsSma: " + e.Message );
       }
     }
   }
@@ -5946,7 +5946,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalssr"></a>
 ## **GetSecurityPriceTechnicalsSr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsSr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsSr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5981,19 +5981,19 @@ namespace Example
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate %K of Stochastic Oscillator (optional)  (default to 14)
       var signalPeriod = 3;  // int? | The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator (optional)  (default to 3)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityStochasticOscillator result = technicalApi.GetSecurityPriceTechnicalsSr(identifier, period, signalPeriod, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsSr: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsSr: " + e.Message );
       }
     }
   }
@@ -6048,7 +6048,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalstrix"></a>
 ## **GetSecurityPriceTechnicalsTrix**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTrix_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsTrix_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6082,19 +6082,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 15;  // int? | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average (optional)  (default to 15)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityTripleExponentialAverage result = technicalApi.GetSecurityPriceTechnicalsTrix(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsTrix: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsTrix: " + e.Message );
       }
     }
   }
@@ -6148,7 +6148,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalstsi"></a>
 ## **GetSecurityPriceTechnicalsTsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsTsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsTsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6184,19 +6184,19 @@ namespace Example
       var lowPeriod = 13;  // int? | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index (optional)  (default to 13)
       var highPeriod = 25;  // int? | The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index (optional)  (default to 25)
       var priceKey = "close";  // string | The Stock Price field to use when calculating True Strength Index (optional)  (default to close)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityTrueStrengthIndex result = technicalApi.GetSecurityPriceTechnicalsTsi(identifier, lowPeriod, highPeriod, priceKey, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsTsi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsTsi: " + e.Message );
       }
     }
   }
@@ -6252,7 +6252,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsuo"></a>
 ## **GetSecurityPriceTechnicalsUo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsUo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsUo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6291,19 +6291,19 @@ namespace Example
       var shortWeight = 4.0;  // float? | The weight of short Buying Pressure average for Ultimate Oscillator (optional)  (default to 4.0)
       var mediumWeight = 2.0;  // float? | The weight of medium Buying Pressure average for Ultimate Oscillator (optional)  (default to 2.0)
       var longWeight = 1.0;  // float? | The weight of long Buying Pressure average for Ultimate Oscillator (optional)  (default to 1.0)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityUltimateOscillator result = technicalApi.GetSecurityPriceTechnicalsUo(identifier, shortPeriod, mediumPeriod, longPeriod, shortWeight, mediumWeight, longWeight, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsUo: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsUo: " + e.Message );
       }
     }
   }
@@ -6362,7 +6362,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsvi"></a>
 ## **GetSecurityPriceTechnicalsVi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsVi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6396,19 +6396,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Vortex Indicator (optional)  (default to 14)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityVortexIndicator result = technicalApi.GetSecurityPriceTechnicalsVi(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsVi: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsVi: " + e.Message );
       }
     }
   }
@@ -6462,7 +6462,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsvpt"></a>
 ## **GetSecurityPriceTechnicalsVpt**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVpt_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsVpt_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6495,19 +6495,19 @@ namespace Example
 
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityVolumePriceTrend result = technicalApi.GetSecurityPriceTechnicalsVpt(identifier, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsVpt: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsVpt: " + e.Message );
       }
     }
   }
@@ -6560,7 +6560,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalsvwap"></a>
 ## **GetSecurityPriceTechnicalsVwap**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsVwap_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsVwap_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6593,19 +6593,19 @@ namespace Example
 
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityVolumeWeightedAveragePrice result = technicalApi.GetSecurityPriceTechnicalsVwap(identifier, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsVwap: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsVwap: " + e.Message );
       }
     }
   }
@@ -6658,7 +6658,7 @@ Name | Type | Description  | Notes
 <a name="getsecuritypricetechnicalswr"></a>
 ## **GetSecurityPriceTechnicalsWr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetSecurityPriceTechnicalsWr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityPriceTechnicalsWr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6692,19 +6692,19 @@ namespace Example
       var technicalApi = new TechnicalApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to look-back when calculating Williams %R (optional)  (default to 14)
-      var startDate = "2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = "2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
+      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
+      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseSecurityWilliamsR result = technicalApi.GetSecurityPriceTechnicalsWr(identifier, period, startDate, endDate, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsWr: " + e.Message );
+        Console.WriteLine("Exception when calling TechnicalApi.GetSecurityPriceTechnicalsWr: " + e.Message );
       }
     }
   }

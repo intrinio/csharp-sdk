@@ -59,9 +59,25 @@ namespace Intrinio.SDK.Test
         public void GetAllSecuritiesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //bool? active = null;
+            //bool? delisted = null;
+            //string code = null;
+            //string currency = null;
+            //string ticker = null;
+            //string name = null;
+            //string compositeMic = null;
+            //string exchangeMic = null;
+            //DateTime? stockPricesAfter = null;
+            //DateTime? stockPricesBefore = null;
+            //string cik = null;
+            //string figi = null;
+            //string compositeFigi = null;
+            //string shareClassFigi = null;
+            //string figiUniqueId = null;
+            //bool? includeNonFigi = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllSecurities(pageSize, nextPage);
+            //var response = instance.GetAllSecurities(active, delisted, code, currency, ticker, name, compositeMic, exchangeMic, stockPricesAfter, stockPricesBefore, cik, figi, compositeFigi, shareClassFigi, figiUniqueId, includeNonFigi, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurities> (response, "response is ApiResponseSecurities");
         }
         

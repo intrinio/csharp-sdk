@@ -30,7 +30,7 @@ Method | HTTP request | Description
 <a name="getdatapointnumber"></a>
 ## **GetDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -68,11 +68,11 @@ namespace Example
       try
       {
         decimal? result = dataPointApi.GetDataPointNumber(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling DataPointApi.GetDataPointNumber: " + e.Message );
+        Console.WriteLine("Exception when calling DataPointApi.GetDataPointNumber: " + e.Message );
       }
     }
   }
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 <a name="getdatapointtext"></a>
 ## **GetDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -160,11 +160,11 @@ namespace Example
       try
       {
         string result = dataPointApi.GetDataPointText(identifier, tag);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling DataPointApi.GetDataPointText: " + e.Message );
+        Console.WriteLine("Exception when calling DataPointApi.GetDataPointText: " + e.Message );
       }
     }
   }

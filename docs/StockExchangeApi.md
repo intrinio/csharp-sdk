@@ -34,7 +34,7 @@ Method | HTTP request | Description
 <a name="getallstockexchanges"></a>
 ## **GetAllStockExchanges**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetAllStockExchanges_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllStockExchanges_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -74,11 +74,11 @@ namespace Example
       try
       {
         ApiResponseStockExchanges result = stockExchangeApi.GetAllStockExchanges(city, country, countryCode, pageSize);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling StockExchangeApi.GetAllStockExchanges: " + e.Message );
+        Console.WriteLine("Exception when calling StockExchangeApi.GetAllStockExchanges: " + e.Message );
       }
     }
   }
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 <a name="getstockexchangebyid"></a>
 ## **GetStockExchangeById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockExchangeById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangeById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -167,11 +167,11 @@ namespace Example
       try
       {
         StockExchange result = stockExchangeApi.GetStockExchangeById(identifier);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling StockExchangeApi.GetStockExchangeById: " + e.Message );
+        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangeById: " + e.Message );
       }
     }
   }
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 <a name="getstockexchangepriceadjustments"></a>
 ## **GetStockExchangePriceAdjustments**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockExchangePriceAdjustments_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangePriceAdjustments_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -253,18 +253,18 @@ namespace Example
 
       var stockExchangeApi = new StockExchangeApi();
       var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var date = "2018-08-14";  // DateTime? | The date for which to return price adjustments (optional) 
+      var date = "2018-08-14");  // DateTime? | The date for which to return price adjustments (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling StockExchangeApi.GetStockExchangePriceAdjustments: " + e.Message );
+        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangePriceAdjustments: " + e.Message );
       }
     }
   }
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 <a name="getstockexchangeprices"></a>
 ## **GetStockExchangePrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockExchangePrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangePrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -349,18 +349,18 @@ namespace Example
 
       var stockExchangeApi = new StockExchangeApi();
       var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var date = "2018-08-14";  // DateTime? | The date for which to return prices (optional) 
+      var date = "2018-08-14");  // DateTime? | The date for which to return prices (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling StockExchangeApi.GetStockExchangePrices: " + e.Message );
+        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangePrices: " + e.Message );
       }
     }
   }
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 <a name="getstockexchangerealtimeprices"></a>
 ## **GetStockExchangeRealtimePrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockExchangeRealtimePrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangeRealtimePrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -445,18 +445,18 @@ namespace Example
 
       var stockExchangeApi = new StockExchangeApi();
       var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var source = "";  // string | Return realtime prices from the specified data source (optional) 
+      var source = "";  // string | Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
         ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling StockExchangeApi.GetStockExchangeRealtimePrices: " + e.Message );
+        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangeRealtimePrices: " + e.Message );
       }
     }
   }
@@ -473,7 +473,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **source** | string| Return realtime prices from the specified data source | [optional]  &nbsp;
+ **source** | string| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 <a name="getstockexchangesecurities"></a>
 ## **GetStockExchangeSecurities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/GetStockExchangeSecurities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangeSecurities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -547,11 +547,11 @@ namespace Example
       try
       {
         ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, pageSize, nextPage);
-        Debug.WriteLine(result.ToJson());
+        Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
       {
-        Debug.Print("Exception when calling StockExchangeApi.GetStockExchangeSecurities: " + e.Message );
+        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangeSecurities: " + e.Message );
       }
     }
   }

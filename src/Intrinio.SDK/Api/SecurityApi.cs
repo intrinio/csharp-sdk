@@ -20,25 +20,57 @@ namespace Intrinio.SDK.Api
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access.
+        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
-        ApiResponseSecurities GetAllSecurities (int? pageSize = null, string nextPage = null);
+        ApiResponseSecurities GetAllSecurities (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access.
+        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Security
         /// </summary>
@@ -1233,7 +1265,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>RealtimeStockPrice</returns>
         RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null);
 
@@ -1245,7 +1277,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>ApiResponse of RealtimeStockPrice</returns>
         ApiResponse<RealtimeStockPrice> GetSecurityRealtimePriceWithHttpInfo (string identifier, string source = null);
         /// <summary>
@@ -1494,25 +1526,57 @@ namespace Intrinio.SDK.Api
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access.
+        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access.
+        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Security
         /// </summary>
@@ -2707,7 +2771,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of RealtimeStockPrice</returns>
         System.Threading.Tasks.Task<RealtimeStockPrice> GetSecurityRealtimePriceAsync (string identifier, string source = null);
 
@@ -2719,7 +2783,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of ApiResponse (RealtimeStockPrice)</returns>
         System.Threading.Tasks.Task<ApiResponse<RealtimeStockPrice>> GetSecurityRealtimePriceAsyncWithHttpInfo (string identifier, string source = null);
         /// <summary>
@@ -3063,26 +3127,58 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access.
+        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
-        public ApiResponseSecurities GetAllSecurities (int? pageSize = null, string nextPage = null)
+        public ApiResponseSecurities GetAllSecurities (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurities> localVarResponse = GetAllSecuritiesWithHttpInfo(pageSize, nextPage);
+             ApiResponse<ApiResponseSecurities> localVarResponse = GetAllSecuritiesWithHttpInfo(active, delisted, code, currency, ticker, name, compositeMic, exchangeMic, stockPricesAfter, stockPricesBefore, cik, figi, compositeFigi, shareClassFigi, figiUniqueId, includeNonFigi, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access.
+        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
-        public ApiResponse< ApiResponseSecurities > GetAllSecuritiesWithHttpInfo (int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurities > GetAllSecuritiesWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -3106,6 +3202,22 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (active != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active", active)); // query parameter
+            if (delisted != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "delisted", delisted)); // query parameter
+            if (code != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "code", code)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+            if (compositeMic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "composite_mic", compositeMic)); // query parameter
+            if (exchangeMic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange_mic", exchangeMic)); // query parameter
+            if (stockPricesAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_prices_after", stockPricesAfter)); // query parameter
+            if (stockPricesBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_prices_before", stockPricesBefore)); // query parameter
+            if (cik != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "cik", cik)); // query parameter
+            if (figi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "figi", figi)); // query parameter
+            if (compositeFigi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "composite_figi", compositeFigi)); // query parameter
+            if (shareClassFigi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "share_class_figi", shareClassFigi)); // query parameter
+            if (figiUniqueId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "figi_unique_id", figiUniqueId)); // query parameter
+            if (includeNonFigi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_non_figi", includeNonFigi)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -3134,27 +3246,59 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access.
+        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurities> localVarResponse = await GetAllSecuritiesAsyncWithHttpInfo(pageSize, nextPage);
+             ApiResponse<ApiResponseSecurities> localVarResponse = await GetAllSecuritiesAsyncWithHttpInfo(active, delisted, code, currency, ticker, name, compositeMic, exchangeMic, stockPricesAfter, stockPricesBefore, cik, figi, compositeFigi, shareClassFigi, figiUniqueId, includeNonFigi, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access.
+        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
+        /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
+        /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
+        /// <param name="compositeMic">Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional)</param>
+        /// <param name="exchangeMic">The MIC code of the exchange where the security is actually traded. (optional)</param>
+        /// <param name="stockPricesAfter">Return securities with end-of-day stock prices on or after this date. (optional)</param>
+        /// <param name="stockPricesBefore">Return securities with end-of-day stock prices on or before this date. (optional)</param>
+        /// <param name="cik">Return securities belonging to the company with the given Central Index Key (CIK). (optional)</param>
+        /// <param name="figi">Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="compositeFigi">Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="shareClassFigi">Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/securities";
@@ -3178,6 +3322,22 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (active != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active", active)); // query parameter
+            if (delisted != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "delisted", delisted)); // query parameter
+            if (code != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "code", code)); // query parameter
+            if (currency != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "currency", currency)); // query parameter
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+            if (compositeMic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "composite_mic", compositeMic)); // query parameter
+            if (exchangeMic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "exchange_mic", exchangeMic)); // query parameter
+            if (stockPricesAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_prices_after", stockPricesAfter)); // query parameter
+            if (stockPricesBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_prices_before", stockPricesBefore)); // query parameter
+            if (cik != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "cik", cik)); // query parameter
+            if (figi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "figi", figi)); // query parameter
+            if (compositeFigi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "composite_figi", compositeFigi)); // query parameter
+            if (shareClassFigi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "share_class_figi", shareClassFigi)); // query parameter
+            if (figiUniqueId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "figi_unique_id", figiUniqueId)); // query parameter
+            if (includeNonFigi != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_non_figi", includeNonFigi)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -9826,7 +9986,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>RealtimeStockPrice</returns>
         public RealtimeStockPrice GetSecurityRealtimePrice (string identifier, string source = null)
         {
@@ -9839,7 +9999,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>ApiResponse of RealtimeStockPrice</returns>
         public ApiResponse< RealtimeStockPrice > GetSecurityRealtimePriceWithHttpInfo (string identifier, string source = null)
         {
@@ -9900,7 +10060,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of RealtimeStockPrice</returns>
         public async System.Threading.Tasks.Task<RealtimeStockPrice> GetSecurityRealtimePriceAsync (string identifier, string source = null)
         {
@@ -9914,7 +10074,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source (optional)</param>
+        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of ApiResponse (RealtimeStockPrice)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RealtimeStockPrice>> GetSecurityRealtimePriceAsyncWithHttpInfo (string identifier, string source = null)
         {

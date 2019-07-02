@@ -82,13 +82,14 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string symbol = null;
             //string expiration = null;
+            //DateTime? date = null;
             //string type = null;
             //decimal? strike = null;
             //decimal? strikeGreaterThan = null;
             //decimal? strikeLessThan = null;
             //string moneyness = null;
             //int? pageSize = null;
-            //var response = instance.GetOptionsChain(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
+            //var response = instance.GetOptionsChain(symbol, expiration, date, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
             //Assert.IsInstanceOf<ApiResponseOptionsChain> (response, "response is ApiResponseOptionsChain");
         }
         

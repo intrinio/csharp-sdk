@@ -27,10 +27,12 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="StockPrices">The realtime stock prices for all Securities traded on the Stock Exchange.</param>
         /// <param name="StockExchange">The Stock Exchange resolved from the given identifier.</param>
-        public ApiResponseStockExchangeRealtimeStockPrices(List<RealtimeStockPrice> StockPrices = default(List<RealtimeStockPrice>), StockExchange StockExchange = default(StockExchange))
+        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        public ApiResponseStockExchangeRealtimeStockPrices(List<RealtimeStockPrice> StockPrices = default(List<RealtimeStockPrice>), StockExchange StockExchange = default(StockExchange), string NextPage = default(string))
         {
             this.StockPrices = StockPrices;
             this.StockExchange = StockExchange;
+            this.NextPage = NextPage;
         }
         
         /// <summary>
@@ -48,6 +50,13 @@ namespace Intrinio.SDK.Model
         public StockExchange StockExchange { get; set; }
 
         /// <summary>
+        /// The token required to request the next page of the data
+        /// </summary>
+        /// <value>The token required to request the next page of the data</value>
+        [DataMember(Name="next_page", EmitDefaultValue=false)]
+        public string NextPage { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -57,6 +66,7 @@ namespace Intrinio.SDK.Model
             sb.Append("class ApiResponseStockExchangeRealtimeStockPrices {\n");
             sb.Append("  StockPrices: ").Append(StockPrices).Append("\n");
             sb.Append("  StockExchange: ").Append(StockExchange).Append("\n");
+            sb.Append("  NextPage: ").Append(NextPage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,6 +110,11 @@ namespace Intrinio.SDK.Model
                     this.StockExchange == input.StockExchange ||
                     (this.StockExchange != null &&
                     this.StockExchange.Equals(input.StockExchange))
+                ) && 
+                (
+                    this.NextPage == input.NextPage ||
+                    (this.NextPage != null &&
+                    this.NextPage.Equals(input.NextPage))
                 );
         }
 
@@ -116,6 +131,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.StockPrices.GetHashCode();
                 if (this.StockExchange != null)
                     hashCode = hashCode * 59 + this.StockExchange.GetHashCode();
+                if (this.NextPage != null)
+                    hashCode = hashCode * 59 + this.NextPage.GetHashCode();
                 return hashCode;
             }
         }

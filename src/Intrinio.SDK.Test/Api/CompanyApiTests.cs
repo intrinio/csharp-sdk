@@ -190,9 +190,15 @@ namespace Intrinio.SDK.Test
         public void GetCompanyIposTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string ticker = null;
+            //string status = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //int? offerAmountGreaterThan = null;
+            //int? offerAmountLessThan = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetCompanyIpos(pageSize, nextPage);
+            //var response = instance.GetCompanyIpos(ticker, status, startDate, endDate, offerAmountGreaterThan, offerAmountLessThan, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseInitialPublicOfferings> (response, "response is ApiResponseInitialPublicOfferings");
         }
         

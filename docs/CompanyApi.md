@@ -835,7 +835,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseInitialPublicOfferings GetCompanyIpos (int? pageSize = null, string nextPage = null)
+> ApiResponseInitialPublicOfferings GetCompanyIpos (string ticker = null, string status = null, DateTime? startDate = null, DateTime? endDate = null, int? offerAmountGreaterThan = null, int? offerAmountLessThan = null, int? pageSize = null, string nextPage = null)
 
 #### IPOs
 
@@ -863,12 +863,18 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var companyApi = new CompanyApi();
+      var ticker = "";  // string | Return IPOs with the given ticker (typically the IPO for the company) (optional) 
+      var status = "";  // string | Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return IPOs on or after the given date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return IPOs on or before the given date (optional) 
+      var offerAmountGreaterThan = "";  // int? | Return IPOs with an offer dollar amount greater than the given amount (optional) 
+      var offerAmountLessThan = "";  // int? | Return IPOs with an offer dollar amount less than the given amount (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
-        ApiResponseInitialPublicOfferings result = companyApi.GetCompanyIpos(pageSize, nextPage);
+        ApiResponseInitialPublicOfferings result = companyApi.GetCompanyIpos(ticker, status, startDate, endDate, offerAmountGreaterThan, offerAmountLessThan, pageSize, nextPage);
         Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
@@ -889,6 +895,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **ticker** | string| Return IPOs with the given ticker (typically the IPO for the company) | [optional]  &nbsp;
+ **status** | string| Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand | [optional]  &nbsp;
+ **startDate** | DateTime?| Return IPOs on or after the given date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return IPOs on or before the given date | [optional]  &nbsp;
+ **offerAmountGreaterThan** | int?| Return IPOs with an offer dollar amount greater than the given amount | [optional]  &nbsp;
+ **offerAmountLessThan** | int?| Return IPOs with an offer dollar amount less than the given amount | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
+> ApiResponseOptionsChain GetOptionsChain (string symbol, string expiration, DateTime? date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string moneyness = null, int? pageSize = null)
 
 #### Options Chain
 
@@ -173,7 +173,8 @@ namespace Example
 
       var optionsApi = new OptionsApi();
       var symbol = "MSFT";  // string | The option symbol, corresponding to the underlying security.
-      var expiration = "2019-03-06";  // string | The expiration date of the options contract
+      var expiration = "2019-04-05";  // string | The expiration date of the options contract
+      var date = "2019-04-05");  // DateTime? | The date of the option price. Returns option prices on this date. (optional) 
       var type = "put";  // string | The option contract type. (optional) 
       var strike = 170.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional) 
       var strikeGreaterThan = 190.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional) 
@@ -183,7 +184,7 @@ namespace Example
 
       try
       {
-        ApiResponseOptionsChain result = optionsApi.GetOptionsChain(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
+        ApiResponseOptionsChain result = optionsApi.GetOptionsChain(symbol, expiration, date, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
         Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
@@ -206,6 +207,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
  **expiration** | string| The expiration date of the options contract |  &nbsp;
+ **date** | DateTime?| The date of the option price. Returns option prices on this date. | [optional]  &nbsp;
  **type** | string| The option contract type. | [optional]  &nbsp;
  **strike** | decimal?| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
  **strikeGreaterThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;

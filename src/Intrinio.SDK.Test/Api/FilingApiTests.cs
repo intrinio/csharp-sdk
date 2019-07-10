@@ -167,8 +167,7 @@ namespace Intrinio.SDK.Test
             //DateTime? filingStartDate = null;
             //DateTime? filingEndDate = null;
             //int? pageSize = null;
-            //int? pageSize2 = null;
-            //var response = instance.SearchNotes(query, filingStartDate, filingEndDate, pageSize, pageSize2);
+            //var response = instance.SearchNotes(query, filingStartDate, filingEndDate, pageSize);
             //Assert.IsInstanceOf<ApiResponseFilingNotesSearch> (response, "response is ApiResponseFilingNotesSearch");
         }
         

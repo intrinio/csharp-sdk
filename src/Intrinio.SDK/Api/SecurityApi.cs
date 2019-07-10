@@ -1479,7 +1479,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>List&lt;SecurityScreenResult&gt;</returns>
         List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
 
@@ -1494,7 +1494,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>ApiResponse of List&lt;SecurityScreenResult&gt;</returns>
         ApiResponse<List<SecurityScreenResult>> ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
         /// <summary>
@@ -2985,7 +2985,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>Task of List&lt;SecurityScreenResult&gt;</returns>
         System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
 
@@ -3000,7 +3000,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (List&lt;SecurityScreenResult&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null);
         /// <summary>
@@ -11182,7 +11182,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>List&lt;SecurityScreenResult&gt;</returns>
         public List<SecurityScreenResult> ScreenSecurities (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {
@@ -11198,7 +11198,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>ApiResponse of List&lt;SecurityScreenResult&gt;</returns>
         public ApiResponse< List<SecurityScreenResult> > ScreenSecuritiesWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {
@@ -11270,7 +11270,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>Task of List&lt;SecurityScreenResult&gt;</returns>
         public async System.Threading.Tasks.Task<List<SecurityScreenResult>> ScreenSecuritiesAsync (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {
@@ -11287,7 +11287,7 @@ namespace Intrinio.SDK.Api
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="pageSize">The number of results to return. Maximum for this endpoint is 50000. (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (List&lt;SecurityScreenResult&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<SecurityScreenResult>>> ScreenSecuritiesAsyncWithHttpInfo (SecurityScreenGroup logic = null, string orderColumn = null, string orderDirection = null, bool? primaryOnly = null, int? pageSize = null)
         {

@@ -214,9 +214,8 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseFilingNotesSearch</returns>
-        ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null);
+        ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null);
 
         /// <summary>
         /// Search Filing Notes
@@ -229,9 +228,8 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseFilingNotesSearch</returns>
-        ApiResponse<ApiResponseFilingNotesSearch> SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null);
+        ApiResponse<ApiResponseFilingNotesSearch> SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -432,9 +430,8 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseFilingNotesSearch</returns>
-        System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null);
+        System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null);
 
         /// <summary>
         /// Search Filing Notes
@@ -447,9 +444,8 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilingNotesSearch)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -1673,11 +1669,10 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseFilingNotesSearch</returns>
-        public ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
+        public ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null)
         {
-             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = SearchNotesWithHttpInfo(query, filingStartDate, filingEndDate, pageSize, pageSize2);
+             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = SearchNotesWithHttpInfo(query, filingStartDate, filingEndDate, pageSize);
              return localVarResponse.Data;
         }
 
@@ -1689,9 +1684,8 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseFilingNotesSearch</returns>
-        public ApiResponse< ApiResponseFilingNotesSearch > SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
+        public ApiResponse< ApiResponseFilingNotesSearch > SearchNotesWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1722,7 +1716,6 @@ namespace Intrinio.SDK.Api
             if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
             if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
-            if (pageSize2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -1756,11 +1749,10 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseFilingNotesSearch</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
+        public async System.Threading.Tasks.Task<ApiResponseFilingNotesSearch> SearchNotesAsync (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null)
         {
-             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = await SearchNotesAsyncWithHttpInfo(query, filingStartDate, filingEndDate, pageSize, pageSize2);
+             ApiResponse<ApiResponseFilingNotesSearch> localVarResponse = await SearchNotesAsyncWithHttpInfo(query, filingStartDate, filingEndDate, pageSize);
              return localVarResponse.Data;
 
         }
@@ -1773,9 +1765,8 @@ namespace Intrinio.SDK.Api
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="pageSize2">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilingNotesSearch)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilingNotesSearch>> SearchNotesAsyncWithHttpInfo (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1806,7 +1797,6 @@ namespace Intrinio.SDK.Api
             if (filingStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_start_date", filingStartDate)); // query parameter
             if (filingEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filing_end_date", filingEndDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
-            if (pageSize2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

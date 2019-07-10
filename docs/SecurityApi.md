@@ -4738,7 +4738,7 @@ namespace Example
       var orderColumn = orderColumn_example;  // string | Results returned sorted by this column (optional) 
       var orderDirection = orderDirection_example;  // string | Sort order to use with the order_column (optional)  (default to asc)
       var primaryOnly = true;  // bool? | Return only primary securities (optional)  (default to false)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var pageSize = 100;  // int? | The number of results to return. Maximum for this endpoint is 50000. (optional)  (default to 100)
 
       try
       {
@@ -4767,7 +4767,7 @@ Name | Type | Description  | Notes
  **orderColumn** | string| Results returned sorted by this column | [optional]  &nbsp;
  **orderDirection** | string| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
  **primaryOnly** | bool?| Return only primary securities | [optional] [default to false] &nbsp;
- **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **pageSize** | int?| The number of results to return. Maximum for this endpoint is 50000. | [optional] [default to 100] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

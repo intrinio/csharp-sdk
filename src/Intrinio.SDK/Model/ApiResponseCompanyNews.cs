@@ -28,7 +28,7 @@ namespace Intrinio.SDK.Model
         /// <param name="News">News.</param>
         /// <param name="Company">Company.</param>
         /// <param name="NextPage">The token required to request the next page of the data.</param>
-        public ApiResponseCompanyNews(List<CompanyNews> News = default(List<CompanyNews>), CompanySummary Company = default(CompanySummary), string NextPage = default(string))
+        public ApiResponseCompanyNews(List<CompanyNewsSummary> News = default(List<CompanyNewsSummary>), CompanySummary Company = default(CompanySummary), string NextPage = default(string))
         {
             this.News = News;
             this.Company = Company;
@@ -39,7 +39,7 @@ namespace Intrinio.SDK.Model
         /// Gets or Sets News
         /// </summary>
         [DataMember(Name="news", EmitDefaultValue=false)]
-        public List<CompanyNews> News { get; set; }
+        public List<CompanyNewsSummary> News { get; set; }
 
         /// <summary>
         /// Gets or Sets Company

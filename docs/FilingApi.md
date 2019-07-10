@@ -707,7 +707,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null, int? pageSize2 = null)
+> ApiResponseFilingNotesSearch SearchNotes (string query, DateTime? filingStartDate = null, DateTime? filingEndDate = null, int? pageSize = null)
 
 #### Search Filing Notes
 
@@ -738,12 +738,11 @@ namespace Example
       var query = "inflation";  // string | Search for notes that contain all or parts of this text
       var filingStartDate = DateTime.Parse("2018-07-15");  // DateTime? | Limit search to filings on or after this date (optional) 
       var filingEndDate = DateTime.Parse("2018-11-30");  // DateTime? | Limit search to filings on or before this date (optional) 
-      var pageSize = 50;  // int? | The number of results to return (optional)  (default to 100)
-      var pageSize2 = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
 
       try
       {
-        ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize, pageSize2);
+        ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize);
         Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
@@ -768,7 +767,6 @@ Name | Type | Description  | Notes
  **filingStartDate** | DateTime?| Limit search to filings on or after this date | [optional]  &nbsp;
  **filingEndDate** | DateTime?| Limit search to filings on or before this date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
- **pageSize2** | int?| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

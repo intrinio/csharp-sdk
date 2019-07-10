@@ -30,7 +30,7 @@ namespace Intrinio.SDK.Model
         /// <param name="PublicationDate">The publication date of the news article.</param>
         /// <param name="Url">The url of the news article.</param>
         /// <param name="Summary">A summary of the news article.</param>
-        /// <param name="Company">The Company that the Fundamental was belongs to.</param>
+        /// <param name="Company">The Company to which the new article pertains.</param>
         public CompanyNews(string Id = default(string), string Title = default(string), DateTime? PublicationDate = default(DateTime?), string Url = default(string), string Summary = default(string), CompanySummary Company = default(CompanySummary))
         {
             this.Id = Id;
@@ -77,9 +77,9 @@ namespace Intrinio.SDK.Model
         public string Summary { get; set; }
 
         /// <summary>
-        /// The Company that the Fundamental was belongs to
+        /// The Company to which the new article pertains
         /// </summary>
-        /// <value>The Company that the Fundamental was belongs to</value>
+        /// <value>The Company to which the new article pertains</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public CompanySummary Company { get; set; }
 

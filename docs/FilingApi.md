@@ -69,7 +69,7 @@ namespace Example
 
       var filingApi = new FilingApi();
       var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-      var reportType = "";  // string | Filter by report type. Separate values with commas to return multiple The filing <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>. (optional) 
+      var reportType = "";  // string | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>. (optional) 
       var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Filed on or after the given date (optional) 
       var endDate = DateTime.Now;  // DateTime? | Filed before or after the given date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -99,7 +99,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company** | string| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **reportType** | string| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
+ **reportType** | string| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
  **startDate** | DateTime?| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | DateTime?| Filed before or after the given date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -169,11 +169,11 @@ namespace Example
 
       var filingApi = new FilingApi();
       var company = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional) 
-      var reportType = "10-Q";  // string | Notes contained in filings that match the given <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a> (optional) 
-      var filingStartDate = DateTime.Parse("2018-07-15");  // DateTime? | Limit search to filings on or after this date (optional) 
-      var filingEndDate = DateTime.Parse("2018-11-15");  // DateTime? | Limit search to filings on or before this date (optional) 
-      var periodEndedStartDate = DateTime.Parse("2018-07-15");  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
-      var periodEndedEndDate = DateTime.Parse("2018-11-15");  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
+      var reportType = "10-Q";  // string | Notes contained in filings that match the given <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a> (optional) 
+      var filingStartDate = DateTime.Now;  // DateTime? | Limit search to filings on or after this date (optional) 
+      var filingEndDate = DateTime.Now;  // DateTime? | Limit search to filings on or before this date (optional) 
+      var periodEndedStartDate = DateTime.Now;  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
+      var periodEndedEndDate = DateTime.Now;  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
@@ -201,7 +201,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
- **reportType** | string| Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; | [optional]  &nbsp;
+ **reportType** | string| Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; | [optional]  &nbsp;
  **filingStartDate** | DateTime?| Limit search to filings on or after this date | [optional]  &nbsp;
  **filingEndDate** | DateTime?| Limit search to filings on or before this date | [optional]  &nbsp;
  **periodEndedStartDate** | DateTime?| Limit search to filings with a period end date on or after this date | [optional]  &nbsp;
@@ -465,7 +465,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var filingApi = new FilingApi();
-      var identifier = "xbn_3fghz";  // string | The Intrinio ID of the filing note
+      var identifier = "xbn_ydK3QL";  // string | The Intrinio ID of the filing note
       var contentFormat = "text";  // string | Returns content in html (as filed) or plain text (optional)  (default to text)
 
       try
@@ -556,7 +556,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var filingApi = new FilingApi();
-      var identifier = "xbn_3fghz";  // string | The Intrinio ID of the filing note
+      var identifier = "xbn_ydK3QL";  // string | The Intrinio ID of the filing note
 
       try
       {
@@ -645,7 +645,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var filingApi = new FilingApi();
-      var identifier = "xbn_3fghz";  // string | The Intrinio ID of the filing note
+      var identifier = "xbn_ydK3QL";  // string | The Intrinio ID of the filing note
 
       try
       {

@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="ApiResponseFilingNotes" /> class.
         /// </summary>
         /// <param name="FilingNotes">FilingNotes.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseFilingNotes(List<FilingNoteSummary> FilingNotes = default(List<FilingNoteSummary>), string NextPage = default(string))
         {
             this.FilingNotes = FilingNotes;
@@ -40,9 +40,9 @@ namespace Intrinio.SDK.Model
         public List<FilingNoteSummary> FilingNotes { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

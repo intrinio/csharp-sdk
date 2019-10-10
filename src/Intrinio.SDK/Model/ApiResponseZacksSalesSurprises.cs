@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="ApiResponseZacksSalesSurprises" /> class.
         /// </summary>
         /// <param name="SalesSurprises">Zacks Sales Surprise data for a Security in descending order by actual reported date.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseZacksSalesSurprises(List<ZacksSalesSurprise> SalesSurprises = default(List<ZacksSalesSurprise>), string NextPage = default(string))
         {
             this.SalesSurprises = SalesSurprises;
@@ -41,9 +41,9 @@ namespace Intrinio.SDK.Model
         public List<ZacksSalesSurprise> SalesSurprises { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

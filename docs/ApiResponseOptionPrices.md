@@ -11,7 +11,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **Prices** | [**List&lt;OptionPrice&gt;**](OptionPrice.md) | A list of option prices in descending order by date &nbsp;
 **Option** | [**Option**](Option.md) |  &nbsp;
-**NextPage** | string | The token required to request the next page of the data &nbsp;
+**NextPage** | string | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

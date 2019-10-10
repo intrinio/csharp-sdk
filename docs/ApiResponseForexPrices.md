@@ -11,7 +11,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **Prices** | [**List&lt;ForexPrice&gt;**](ForexPrice.md) |  &nbsp;
 **Pair** | [**ForexPair**](ForexPair.md) | The Forex currency pair for which prices were requested &nbsp;
-**NextPage** | string | The token required to request the next page of the data &nbsp;
+**NextPage** | string | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

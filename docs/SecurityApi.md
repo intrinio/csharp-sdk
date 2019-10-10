@@ -110,7 +110,7 @@ namespace Example
       var securityApi = new SecurityApi();
       var active = true;  // bool? | When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional) 
       var delisted = false;  // bool? | When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional) 
-      var code = "";  // string | Return securities classified with the given code (<a href=\"/documentation/security_codes\" target=\"_blank\">reference</a>). (optional) 
+      var code = "";  // string | Return securities classified with the given code (<a href=\"https://docs.intrinio.com/documentation/security_codes\" target=\"_blank\">reference</a>). (optional) 
       var currency = "";  // string | Return securities traded in the given 3-digit ISO 4217 currency code (<a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">reference</a>). (optional) 
       var ticker = "";  // string | Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional) 
       var name = "";  // string | Return securities with the given text in their name (not case sensitive). (optional) 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **active** | bool?| When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). | [optional]  &nbsp;
  **delisted** | bool?| When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. | [optional]  &nbsp;
- **code** | string| Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **code** | string| Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **currency** | string| Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **ticker** | string| Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. | [optional]  &nbsp;
  **name** | string| Return securities with the given text in their name (not case sensitive). | [optional]  &nbsp;
@@ -584,7 +584,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+> ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
 
 #### Intraday Stock Prices for Security
 
@@ -614,14 +614,16 @@ namespace Example
       var securityApi = new SecurityApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var source = "";  // string | Return intraday prices from the specified data source (optional) 
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Return intraday prices starting at the specified date (optional) 
-      var startTime = 4200;  // string | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC) (optional) 
-      var endDate = DateTime.Parse("2018-01-01");  // DateTime? | Return intraday prices stopping at the specified date (optional) 
-      var endTime = 4200;  // string | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC) (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Return intraday prices starting at the specified date (optional) 
+      var startTime = "";  // string | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC) (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Return intraday prices stopping at the specified date (optional) 
+      var endTime = "";  // string | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC) (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
-        ApiResponseSecurityIntradayPrices result = securityApi.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime);
+        ApiResponseSecurityIntradayPrices result = securityApi.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
         Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
@@ -648,6 +650,8 @@ Name | Type | Description  | Notes
  **startTime** | string| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional]  &nbsp;
  **endDate** | DateTime?| Return intraday prices stopping at the specified date | [optional]  &nbsp;
  **endTime** | string| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -4734,10 +4738,10 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var logic = new SecurityScreenGroup(); // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions. (optional) 
-      var orderColumn = orderColumn_example;  // string | Results returned sorted by this column (optional) 
-      var orderDirection = orderDirection_example;  // string | Sort order to use with the order_column (optional)  (default to asc)
-      var primaryOnly = true;  // bool? | Return only primary securities (optional)  (default to false)
+      var logic = new SecurityScreenGroup(); // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"https://docs.intrinio.com/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions. (optional) 
+      var orderColumn = "marketcap";  // string | Results returned sorted by this column (optional) 
+      var orderDirection = "asc";  // string | Sort order to use with the order_column (optional)  (default to asc)
+      var primaryOnly = false;  // bool? | Return only primary securities (optional)  (default to false)
       var pageSize = 100;  // int? | The number of results to return. Maximum for this endpoint is 50000. (optional)  (default to 100)
 
       try
@@ -4763,7 +4767,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
  **orderColumn** | string| Results returned sorted by this column | [optional]  &nbsp;
  **orderDirection** | string| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
  **primaryOnly** | bool?| Return only primary securities | [optional] [default to false] &nbsp;

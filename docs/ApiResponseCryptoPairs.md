@@ -10,7 +10,7 @@
 Name | Type | Description
 ------------ | ------------- | -------------
 **Pairs** | [**List&lt;CryptoPair&gt;**](CryptoPair.md) | A list of Crypto Currency Pairs for the given Crypto Exchange and Crypto Currency sorted alphabetically by code. &nbsp;
-**NextPage** | string | The token required to request the next page of the data &nbsp;
+**NextPage** | string | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

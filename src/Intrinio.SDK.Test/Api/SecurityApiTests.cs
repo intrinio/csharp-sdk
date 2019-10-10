@@ -152,7 +152,9 @@ namespace Intrinio.SDK.Test
             //string startTime = null;
             //DateTime? endDate = null;
             //string endTime = null;
-            //var response = instance.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime);
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityIntradayPrices> (response, "response is ApiResponseSecurityIntradayPrices");
         }
         

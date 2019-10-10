@@ -25,7 +25,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -53,7 +53,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -188,8 +188,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntradayPrices</returns>
-        ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
+        ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Intraday Stock Prices for Security
@@ -204,8 +206,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntradayPrices</returns>
-        ApiResponse<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
+        ApiResponse<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lastest Dividend Record for Security
         /// </summary>
@@ -1475,7 +1479,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -1490,7 +1494,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -1531,7 +1535,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -1559,7 +1563,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -1694,8 +1698,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntradayPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Intraday Stock Prices for Security
@@ -1710,8 +1716,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntradayPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lastest Dividend Record for Security
         /// </summary>
@@ -2981,7 +2989,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -2996,7 +3004,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities using complex logic
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -3132,7 +3140,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -3161,7 +3169,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -3251,7 +3259,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -3281,7 +3289,7 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
         /// <param name="delisted">When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional)</param>
-        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
+        /// <param name="code">Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="currency">Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="ticker">Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional)</param>
         /// <param name="name">Return securities with the given text in their name (not case sensitive). (optional)</param>
@@ -4025,10 +4033,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntradayPrices</returns>
-        public ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        public ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = GetSecurityIntradayPricesWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime);
+             ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = GetSecurityIntradayPricesWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -4042,8 +4052,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntradayPrices</returns>
-        public ApiResponse< ApiResponseSecurityIntradayPrices > GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        public ApiResponse< ApiResponseSecurityIntradayPrices > GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4076,6 +4088,8 @@ namespace Intrinio.SDK.Api
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -4111,10 +4125,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntradayPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = await GetSecurityIntradayPricesAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime);
+             ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = await GetSecurityIntradayPricesAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -4129,8 +4145,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) (optional)</param>
         /// <param name="endDate">Return intraday prices stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntradayPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4163,6 +4181,8 @@ namespace Intrinio.SDK.Api
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -11178,7 +11198,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -11194,7 +11214,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -11266,7 +11286,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -11283,7 +11303,7 @@ namespace Intrinio.SDK.Api
         /// Screen Securities Screen Securities using complex logic
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>

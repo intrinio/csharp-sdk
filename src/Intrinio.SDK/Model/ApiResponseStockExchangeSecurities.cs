@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Securities">The securities traded on the Stock Exchange.</param>
         /// <param name="StockExchange">The Stock Exchange resolved from the given identifier.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseStockExchangeSecurities(List<SecuritySummary> Securities = default(List<SecuritySummary>), StockExchange StockExchange = default(StockExchange), string NextPage = default(string))
         {
             this.Securities = Securities;
@@ -50,9 +50,9 @@ namespace Intrinio.SDK.Model
         public StockExchange StockExchange { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

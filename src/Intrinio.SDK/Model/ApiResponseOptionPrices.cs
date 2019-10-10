@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Prices">A list of option prices in descending order by date.</param>
         /// <param name="Option">Option.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseOptionPrices(List<OptionPrice> Prices = default(List<OptionPrice>), Option Option = default(Option), string NextPage = default(string))
         {
             this.Prices = Prices;
@@ -49,9 +49,9 @@ namespace Intrinio.SDK.Model
         public Option Option { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

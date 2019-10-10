@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="StandardizedFinancials">StandardizedFinancials.</param>
         /// <param name="Fundamental">Fundamental.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseStandardizedFinancials(List<StandardizedFinancial> StandardizedFinancials = default(List<StandardizedFinancial>), Fundamental Fundamental = default(Fundamental), string NextPage = default(string))
         {
             this.StandardizedFinancials = StandardizedFinancials;
@@ -48,9 +48,9 @@ namespace Intrinio.SDK.Model
         public Fundamental Fundamental { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

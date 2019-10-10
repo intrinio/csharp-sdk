@@ -13,7 +13,7 @@ Name | Type | Description
 **CompanyId** | string | The Intrinio ID for the company for which the Security is issued &nbsp;
 **Name** | string | The name of the Security &nbsp;
 **Type** | string | The Security&#39;s type &nbsp;
-**Code** | string | A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
+**Code** | string | A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
 **ShareClass** | string | The Security&#39;s share class (if applicable) &nbsp;
 **Currency** | string | The currency in which the Security is traded on the exchange &nbsp;
 **RoundLotSize** | decimal? | The normal unit of trading &nbsp;

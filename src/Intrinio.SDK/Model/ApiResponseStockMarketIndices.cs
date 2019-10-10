@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="ApiResponseStockMarketIndices" /> class.
         /// </summary>
         /// <param name="Indices">Indices.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseStockMarketIndices(List<StockMarketIndexSummary> Indices = default(List<StockMarketIndexSummary>), string NextPage = default(string))
         {
             this.Indices = Indices;
@@ -40,9 +40,9 @@ namespace Intrinio.SDK.Model
         public List<StockMarketIndexSummary> Indices { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

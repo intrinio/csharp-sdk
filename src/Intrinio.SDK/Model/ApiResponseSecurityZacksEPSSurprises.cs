@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="EpsSurprises">EpsSurprises.</param>
         /// <param name="Security">The Security resolved from the given identifier.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseSecurityZacksEPSSurprises(List<ZacksEPSSurpriseSummary> EpsSurprises = default(List<ZacksEPSSurpriseSummary>), SecuritySummary Security = default(SecuritySummary), string NextPage = default(string))
         {
             this.EpsSurprises = EpsSurprises;
@@ -49,9 +49,9 @@ namespace Intrinio.SDK.Model
         public SecuritySummary Security { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

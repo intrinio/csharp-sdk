@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Filings">Filings.</param>
         /// <param name="Company">Company.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseCompanyFilings(List<FilingSummary> Filings = default(List<FilingSummary>), CompanySummary Company = default(CompanySummary), string NextPage = default(string))
         {
             this.Filings = Filings;
@@ -48,9 +48,9 @@ namespace Intrinio.SDK.Model
         public CompanySummary Company { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

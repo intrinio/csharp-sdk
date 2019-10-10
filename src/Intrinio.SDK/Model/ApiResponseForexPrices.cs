@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Prices">Prices.</param>
         /// <param name="Pair">The Forex currency pair for which prices were requested.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseForexPrices(List<ForexPrice> Prices = default(List<ForexPrice>), ForexPair Pair = default(ForexPair), string NextPage = default(string))
         {
             this.Prices = Prices;
@@ -49,9 +49,9 @@ namespace Intrinio.SDK.Model
         public ForexPair Pair { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

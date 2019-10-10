@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Fundamentals">Fundamentals.</param>
         /// <param name="Filing">Filing.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseFilingFundamentals(List<FundamentalSummary> Fundamentals = default(List<FundamentalSummary>), FilingSummary Filing = default(FilingSummary), string NextPage = default(string))
         {
             this.Fundamentals = Fundamentals;
@@ -48,9 +48,9 @@ namespace Intrinio.SDK.Model
         public FilingSummary Filing { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

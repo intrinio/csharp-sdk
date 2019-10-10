@@ -28,7 +28,7 @@ namespace Intrinio.SDK.Model
         /// <param name="Id">The Intrinio ID for Security.</param>
         /// <param name="CompanyId">The Intrinio ID for the Company for which the Security is issued.</param>
         /// <param name="Name">The name of the Security.</param>
-        /// <param name="Code">A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;).</param>
+        /// <param name="Code">A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;).</param>
         /// <param name="Currency">The currency in which the Security is traded on the exchange.</param>
         /// <param name="Ticker">The common/local ticker of the Security.</param>
         /// <param name="CompositeTicker">The country-composite ticker of the Security.</param>
@@ -71,9 +71,9 @@ namespace Intrinio.SDK.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)
+        /// A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)
         /// </summary>
-        /// <value>A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)</value>
+        /// <value>A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
 

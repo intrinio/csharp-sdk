@@ -30,7 +30,7 @@ namespace Intrinio.SDK.Model
         /// <param name="Pair">Pair.</param>
         /// <param name="Exchange">Exchange.</param>
         /// <param name="Timeframe">The time interval for the crypto currency prices.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseCryptoTrueStrengthIndex(List<TrueStrengthIndexTechnicalValue> Technicals = default(List<TrueStrengthIndexTechnicalValue>), TechnicalIndicator Indicator = default(TechnicalIndicator), CryptoPairSummary Pair = default(CryptoPairSummary), CryptoExchangeSummary Exchange = default(CryptoExchangeSummary), string Timeframe = default(string), string NextPage = default(string))
         {
             this.Technicals = Technicals;
@@ -74,9 +74,9 @@ namespace Intrinio.SDK.Model
         public string Timeframe { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

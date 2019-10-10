@@ -11,7 +11,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **StockPriceAdjustments** | [**List&lt;StockPriceAdjustment&gt;**](StockPriceAdjustment.md) | The stock price adjustments for all Securities traded on the Stock Exchange on the given date &nbsp;
 **StockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier &nbsp;
-**NextPage** | string | The token required to request the next page of the data &nbsp;
+**NextPage** | string | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

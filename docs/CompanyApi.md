@@ -548,7 +548,7 @@ namespace Example
 
       var companyApi = new CompanyApi();
       var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var reportType = "";  // string | Filter by <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types. (optional) 
+      var reportType = "";  // string | Filter by <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types. (optional) 
       var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Filed on or after the given date (optional) 
       var endDate = DateTime.Now;  // DateTime? | Filed before or after the given date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -578,7 +578,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **reportType** | string| Filter by &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
+ **reportType** | string| Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
  **startDate** | DateTime?| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | DateTime?| Filed before or after the given date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;

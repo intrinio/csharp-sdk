@@ -66,9 +66,9 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var stockExchangeApi = new StockExchangeApi();
-      var city = city_example;  // string | Filter by city (optional) 
-      var country = "CHINA";  // string | Filter by country (optional) 
-      var countryCode = countryCode_example;  // string | Filter by ISO country code (optional) 
+      var city = "New York";  // string | Filter by city (optional) 
+      var country = "UNITED STATES OF AMERICA";  // string | Filter by country (optional) 
+      var countryCode = "US";  // string | Filter by ISO country code (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
 
       try

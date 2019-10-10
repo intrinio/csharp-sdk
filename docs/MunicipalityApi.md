@@ -63,17 +63,17 @@ namespace Example
 
       var municipalityApi = new MunicipalityApi();
       var hasFinancials = true;  // bool? | Return municipalities with financials (optional) 
-      var governmentName = governmentName_example;  // string | Return municipalities with a government name matching the given query (optional) 
-      var governmentType = governmentType_example;  // string | Return municipalities with the given government type (optional) 
-      var areaName = areaName_example;  // string | Return municipalities with an area name matching the given query (optional) 
-      var areaType = areaType_example;  // string | Return municipalities with the given area type (optional) 
-      var city = city_example;  // string | Return municipalities in the given city (optional) 
-      var state = state_example;  // string | Return municipalities in the given state (optional) 
-      var zipcode = 8.14;  // decimal? | Return municipalities in the given zipcode (optional) 
-      var populationGreaterThan = 8.14;  // decimal? | Return municipalities with a population greater than the given number (optional) 
-      var populationLessThan = 8.14;  // decimal? | Return municipalities with a population less than the given number (optional) 
-      var enrollmentGreaterThan = 8.14;  // decimal? | Return municipalities with an enrollment greater than the given number (optional) 
-      var enrollmentLessThan = 8.14;  // decimal? | Return municipalities with an enrollment less than the given number (optional) 
+      var governmentName = "";  // string | Return municipalities with a government name matching the given query (optional) 
+      var governmentType = "";  // string | Return municipalities with the given government type (optional) 
+      var areaName = "";  // string | Return municipalities with an area name matching the given query (optional) 
+      var areaType = "";  // string | Return municipalities with the given area type (optional) 
+      var city = "";  // string | Return municipalities in the given city (optional) 
+      var state = "";  // string | Return municipalities in the given state (optional) 
+      var zipcode = "";  // decimal? | Return municipalities in the given zipcode (optional) 
+      var populationGreaterThan = "";  // decimal? | Return municipalities with a population greater than the given number (optional) 
+      var populationLessThan = "";  // decimal? | Return municipalities with a population less than the given number (optional) 
+      var enrollmentGreaterThan = "";  // decimal? | Return municipalities with an enrollment greater than the given number (optional) 
+      var enrollmentLessThan = "";  // decimal? | Return municipalities with an enrollment less than the given number (optional) 
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
@@ -267,7 +267,7 @@ namespace Example
 
       var municipalityApi = new MunicipalityApi();
       var id = "mun_Xn7x4z";  // string | An Intrinio ID of a Municipality
-      var fiscalYear = 8.14;  // decimal? | Return financials for the given fiscal year (optional) 
+      var fiscalYear = 2017;  // decimal? | Return financials for the given fiscal year (optional) 
 
       try
       {

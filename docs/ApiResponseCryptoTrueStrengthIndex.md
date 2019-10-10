@@ -14,7 +14,7 @@ Name | Type | Description
 **Pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  &nbsp;
 **Exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  &nbsp;
 **Timeframe** | string | The time interval for the crypto currency prices &nbsp;
-**NextPage** | string | The token required to request the next page of the data &nbsp;
+**NextPage** | string | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

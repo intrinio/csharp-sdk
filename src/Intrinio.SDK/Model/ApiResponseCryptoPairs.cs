@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="ApiResponseCryptoPairs" /> class.
         /// </summary>
         /// <param name="Pairs">A list of Crypto Currency Pairs for the given Crypto Exchange and Crypto Currency sorted alphabetically by code..</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseCryptoPairs(List<CryptoPair> Pairs = default(List<CryptoPair>), string NextPage = default(string))
         {
             this.Pairs = Pairs;
@@ -41,9 +41,9 @@ namespace Intrinio.SDK.Model
         public List<CryptoPair> Pairs { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

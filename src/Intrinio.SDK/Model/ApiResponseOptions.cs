@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="ApiResponseOptions" /> class.
         /// </summary>
         /// <param name="Options">A list of options contracts with the given symbol.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseOptions(List<Option> Options = default(List<Option>), string NextPage = default(string))
         {
             this.Options = Options;
@@ -41,9 +41,9 @@ namespace Intrinio.SDK.Model
         public List<Option> Options { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

@@ -28,7 +28,7 @@ namespace Intrinio.SDK.Model
         /// <param name="Technicals">Technicals.</param>
         /// <param name="Indicator">The name and symbol of the technical indicator.</param>
         /// <param name="Security">The Security of the Stock Price.</param>
-        /// <param name="NextPage">The token required to request the next page of the data.</param>
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
         public ApiResponseSecurityAverageTrueRange(List<AverageTrueRangeTechnicalValue> Technicals = default(List<AverageTrueRangeTechnicalValue>), TechnicalIndicator Indicator = default(TechnicalIndicator), SecuritySummary Security = default(SecuritySummary), string NextPage = default(string))
         {
             this.Technicals = Technicals;
@@ -58,9 +58,9 @@ namespace Intrinio.SDK.Model
         public SecuritySummary Security { get; set; }
 
         /// <summary>
-        /// The token required to request the next page of the data
+        /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
-        /// <value>The token required to request the next page of the data</value>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
 

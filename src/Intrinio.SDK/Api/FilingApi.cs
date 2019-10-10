@@ -24,7 +24,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -40,7 +40,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -55,7 +55,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -73,7 +73,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -240,7 +240,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -256,7 +256,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -271,7 +271,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -289,7 +289,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -551,7 +551,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -568,7 +568,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -637,7 +637,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -655,7 +655,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
+        /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -724,7 +724,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -743,7 +743,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -813,7 +813,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>
@@ -833,7 +833,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
-        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
+        /// <param name="reportType">Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; (optional)</param>
         /// <param name="filingStartDate">Limit search to filings on or after this date (optional)</param>
         /// <param name="filingEndDate">Limit search to filings on or before this date (optional)</param>
         /// <param name="periodEndedStartDate">Limit search to filings with a period end date on or after this date (optional)</param>

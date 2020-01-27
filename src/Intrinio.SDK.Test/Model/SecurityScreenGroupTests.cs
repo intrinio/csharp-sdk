@@ -59,12 +59,12 @@ namespace Intrinio.SDK.Test
 
 
         /// <summary>
-        /// Test the property '_Operator'
+        /// Test the property 'Operator'
         /// </summary>
         [Test]
-        public void _OperatorTest()
+        public void OperatorTest()
         {
-            // TODO unit test for the property '_Operator'
+            // TODO unit test for the property 'Operator'
         }
         /// <summary>
         /// Test the property 'Clauses'

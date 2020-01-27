@@ -9,7 +9,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**_Operator** | string | The logic operator for the group (AND, OR, NOT) &nbsp;
+**Operator** | string | The logic operator for the group (AND, OR, NOT) &nbsp;
 **Clauses** | [**List&lt;SecurityScreenClause&gt;**](SecurityScreenClause.md) | The logic clauses in the group &nbsp;
 **Groups** | [**List&lt;SecurityScreenGroup&gt;**](SecurityScreenGroup.md) | The nested groups within the group &nbsp;
 

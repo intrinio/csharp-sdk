@@ -29,16 +29,16 @@ namespace Intrinio.SDK.Model
         /// <param name="Name">The tag name.</param>
         /// <param name="Balance">Whether the tag represents a credit or debit.</param>
         /// <param name="Unit">The unit of the tag.</param>
-        /// <param name="_Abstract">If true, the tag is an abstract and does not represent a nominal value.</param>
+        /// <param name="Abstract">If true, the tag is an abstract and does not represent a nominal value.</param>
         /// <param name="Sequence">The vertical sequence of the tag when displayed in the financial statement.</param>
         /// <param name="Depth">The horizontal depth of the tag when displayed in the financial statement.</param>
-        public ReportedTag(string Tag = default(string), string Name = default(string), string Balance = default(string), string Unit = default(string), bool? _Abstract = default(bool?), int? Sequence = default(int?), int? Depth = default(int?))
+        public ReportedTag(string Tag = default(string), string Name = default(string), string Balance = default(string), string Unit = default(string), bool? Abstract = default(bool?), int? Sequence = default(int?), int? Depth = default(int?))
         {
             this.Tag = Tag;
             this.Name = Name;
             this.Balance = Balance;
             this.Unit = Unit;
-            this._Abstract = _Abstract;
+            this.Abstract = Abstract;
             this.Sequence = Sequence;
             this.Depth = Depth;
         }
@@ -76,7 +76,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>If true, the tag is an abstract and does not represent a nominal value</value>
         [DataMember(Name="abstract", EmitDefaultValue=false)]
-        public bool? _Abstract { get; set; }
+        public bool? Abstract { get; set; }
 
         /// <summary>
         /// The vertical sequence of the tag when displayed in the financial statement
@@ -104,7 +104,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
-            sb.Append("  _Abstract: ").Append(_Abstract).Append("\n");
+            sb.Append("  Abstract: ").Append(Abstract).Append("\n");
             sb.Append("  Sequence: ").Append(Sequence).Append("\n");
             sb.Append("  Depth: ").Append(Depth).Append("\n");
             sb.Append("}\n");
@@ -162,9 +162,9 @@ namespace Intrinio.SDK.Model
                     this.Unit.Equals(input.Unit))
                 ) && 
                 (
-                    this._Abstract == input._Abstract ||
-                    (this._Abstract != null &&
-                    this._Abstract.Equals(input._Abstract))
+                    this.Abstract == input.Abstract ||
+                    (this.Abstract != null &&
+                    this.Abstract.Equals(input.Abstract))
                 ) && 
                 (
                     this.Sequence == input.Sequence ||
@@ -195,8 +195,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Balance.GetHashCode();
                 if (this.Unit != null)
                     hashCode = hashCode * 59 + this.Unit.GetHashCode();
-                if (this._Abstract != null)
-                    hashCode = hashCode * 59 + this._Abstract.GetHashCode();
+                if (this.Abstract != null)
+                    hashCode = hashCode * 59 + this.Abstract.GetHashCode();
                 if (this.Sequence != null)
                     hashCode = hashCode * 59 + this.Sequence.GetHashCode();
                 if (this.Depth != null)

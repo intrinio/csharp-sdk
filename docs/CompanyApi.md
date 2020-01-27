@@ -73,7 +73,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var companyApi = new CompanyApi();
-      var latestFilingDate = DateTime.Now;  // DateTime? | Last filing date (optional) 
+      var latestFilingDate = DateTime.Now;  // DateTime? | Return companies whose latest 10-Q or 10-K was filed on or after this date (optional) 
       var sic = "";  // string | Return companies with the given Standard Industrial Classification code (optional) 
       var template = "";  // string | Return companies with the given financial statement template (optional) 
       var sector = "";  // string | Return companies in the given industry sector (optional) 
@@ -107,7 +107,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **latestFilingDate** | DateTime?| Last filing date | [optional]  &nbsp;
+ **latestFilingDate** | DateTime?| Return companies whose latest 10-Q or 10-K was filed on or after this date | [optional]  &nbsp;
  **sic** | string| Return companies with the given Standard Industrial Classification code | [optional]  &nbsp;
  **template** | string| Return companies with the given financial statement template | [optional]  &nbsp;
  **sector** | string| Return companies in the given industry sector | [optional]  &nbsp;

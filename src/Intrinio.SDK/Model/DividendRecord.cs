@@ -31,27 +31,27 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum P for value: "P"
+            /// Enum P for value: P
             /// </summary>
-            [EnumMember(Value = "P")]
+            [EnumMember(Value = P)]
             P = 1,
             
             /// <summary>
-            /// Enum X for value: "X"
+            /// Enum X for value: X
             /// </summary>
-            [EnumMember(Value = "X")]
+            [EnumMember(Value = X)]
             X = 2,
             
             /// <summary>
-            /// Enum S for value: "S"
+            /// Enum S for value: S
             /// </summary>
-            [EnumMember(Value = "S")]
+            [EnumMember(Value = S)]
             S = 3,
             
             /// <summary>
-            /// Enum R for value: "R"
+            /// Enum R for value: R
             /// </summary>
-            [EnumMember(Value = "R")]
+            [EnumMember(Value = R)]
             R = 4
         }
 
@@ -73,8 +73,9 @@ namespace Intrinio.SDK.Model
         /// <param name="Status">Status of the dividend.</param>
         /// <param name="ForwardYield">The forward dividend yield.</param>
         /// <param name="ForwardRate">The forward dividend rate.</param>
+        /// <param name="LastExDividendDate">The last reported day the stock starts trading without the value of its next dividend payment.</param>
         /// <param name="Security">Security.</param>
-        public DividendRecord(decimal? ExDividend = default(decimal?), string Currency = default(string), DateTime? AnnouncementDate = default(DateTime?), DateTime? RecordDate = default(DateTime?), DateTime? PayDate = default(DateTime?), string Frequency = default(string), StatusEnum? Status = default(StatusEnum?), decimal? ForwardYield = default(decimal?), decimal? ForwardRate = default(decimal?), SecuritySummary Security = default(SecuritySummary))
+        public DividendRecord(decimal? ExDividend = default(decimal?), string Currency = default(string), DateTime? AnnouncementDate = default(DateTime?), DateTime? RecordDate = default(DateTime?), DateTime? PayDate = default(DateTime?), string Frequency = default(string), StatusEnum? Status = default(StatusEnum?), decimal? ForwardYield = default(decimal?), decimal? ForwardRate = default(decimal?), DateTime? LastExDividendDate = default(DateTime?), SecuritySummary Security = default(SecuritySummary))
         {
             this.ExDividend = ExDividend;
             this.Currency = Currency;
@@ -85,6 +86,7 @@ namespace Intrinio.SDK.Model
             this.Status = Status;
             this.ForwardYield = ForwardYield;
             this.ForwardRate = ForwardRate;
+            this.LastExDividendDate = LastExDividendDate;
             this.Security = Security;
         }
         
@@ -149,6 +151,14 @@ namespace Intrinio.SDK.Model
         public decimal? ForwardRate { get; set; }
 
         /// <summary>
+        /// The last reported day the stock starts trading without the value of its next dividend payment
+        /// </summary>
+        /// <value>The last reported day the stock starts trading without the value of its next dividend payment</value>
+        [DataMember(Name="last_ex_dividend_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? LastExDividendDate { get; set; }
+
+        /// <summary>
         /// Gets or Sets Security
         /// </summary>
         [DataMember(Name="security", EmitDefaultValue=false)]
@@ -171,6 +181,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ForwardYield: ").Append(ForwardYield).Append("\n");
             sb.Append("  ForwardRate: ").Append(ForwardRate).Append("\n");
+            sb.Append("  LastExDividendDate: ").Append(LastExDividendDate).Append("\n");
             sb.Append("  Security: ").Append(Security).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -252,6 +263,11 @@ namespace Intrinio.SDK.Model
                     this.ForwardRate.Equals(input.ForwardRate))
                 ) && 
                 (
+                    this.LastExDividendDate == input.LastExDividendDate ||
+                    (this.LastExDividendDate != null &&
+                    this.LastExDividendDate.Equals(input.LastExDividendDate))
+                ) && 
+                (
                     this.Security == input.Security ||
                     (this.Security != null &&
                     this.Security.Equals(input.Security))
@@ -285,6 +301,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.ForwardYield.GetHashCode();
                 if (this.ForwardRate != null)
                     hashCode = hashCode * 59 + this.ForwardRate.GetHashCode();
+                if (this.LastExDividendDate != null)
+                    hashCode = hashCode * 59 + this.LastExDividendDate.GetHashCode();
                 if (this.Security != null)
                     hashCode = hashCode * 59 + this.Security.GetHashCode();
                 return hashCode;

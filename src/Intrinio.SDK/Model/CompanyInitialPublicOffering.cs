@@ -31,21 +31,21 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum Upcoming for value: "upcoming"
+            /// Enum Upcoming for value: upcoming
             /// </summary>
-            [EnumMember(Value = "upcoming")]
+            [EnumMember(Value = upcoming)]
             Upcoming = 1,
             
             /// <summary>
-            /// Enum Priced for value: "priced"
+            /// Enum Priced for value: priced
             /// </summary>
-            [EnumMember(Value = "priced")]
+            [EnumMember(Value = priced)]
             Priced = 2,
             
             /// <summary>
-            /// Enum Withdrawn for value: "withdrawn"
+            /// Enum Withdrawn for value: withdrawn
             /// </summary>
-            [EnumMember(Value = "withdrawn")]
+            [EnumMember(Value = withdrawn)]
             Withdrawn = 3
         }
 

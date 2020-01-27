@@ -31,27 +31,27 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum BeforeMarket for value: "Before Market"
+            /// Enum BeforeMarket for value: Before Market
             /// </summary>
-            [EnumMember(Value = "Before Market")]
+            [EnumMember(Value = Before Market)]
             BeforeMarket = 1,
             
             /// <summary>
-            /// Enum DuringMarket for value: "During Market"
+            /// Enum DuringMarket for value: During Market
             /// </summary>
-            [EnumMember(Value = "During Market")]
+            [EnumMember(Value = During Market)]
             DuringMarket = 2,
             
             /// <summary>
-            /// Enum AfterMarket for value: "After Market"
+            /// Enum AfterMarket for value: After Market
             /// </summary>
-            [EnumMember(Value = "After Market")]
+            [EnumMember(Value = After Market)]
             AfterMarket = 3,
             
             /// <summary>
-            /// Enum Unspecified for value: "Unspecified"
+            /// Enum Unspecified for value: Unspecified
             /// </summary>
-            [EnumMember(Value = "Unspecified")]
+            [EnumMember(Value = Unspecified)]
             Unspecified = 4
         }
 
@@ -70,15 +70,15 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum B for value: "B"
+            /// Enum B for value: B
             /// </summary>
-            [EnumMember(Value = "B")]
+            [EnumMember(Value = B)]
             B = 1,
             
             /// <summary>
-            /// Enum S for value: "S"
+            /// Enum S for value: S
             /// </summary>
-            [EnumMember(Value = "S")]
+            [EnumMember(Value = S)]
             S = 2
         }
 
@@ -97,21 +97,21 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum V for value: "V"
+            /// Enum V for value: V
             /// </summary>
-            [EnumMember(Value = "V")]
+            [EnumMember(Value = V)]
             V = 1,
             
             /// <summary>
-            /// Enum T for value: "T"
+            /// Enum T for value: T
             /// </summary>
-            [EnumMember(Value = "T")]
+            [EnumMember(Value = T)]
             T = 2,
             
             /// <summary>
-            /// Enum I for value: "I"
+            /// Enum I for value: I
             /// </summary>
-            [EnumMember(Value = "I")]
+            [EnumMember(Value = I)]
             I = 3
         }
 
@@ -146,8 +146,9 @@ namespace Intrinio.SDK.Model
         /// <param name="NextEarningsDate">Next earnings date.</param>
         /// <param name="NextEarningsQuarter">The quarter of the next earnings release.</param>
         /// <param name="NextEarningsFiscalYear">The fiscal year associated with next earnings date and next earnings quarter.</param>
+        /// <param name="PreliminaryEarningsDate">The release date of a preliminary earnings report.</param>
         /// <param name="Security">Security.</param>
-        public EarningsRecord(string Quarter = default(string), TimeOfDayEnum? TimeOfDay = default(TimeOfDayEnum?), string BroadcastUrl = default(string), string TranscriptUrl = default(string), string TranscriptQuarter = default(string), string TranscriptFiscalYear = default(string), DateTime? ConferenceCallDate = default(DateTime?), string ConferenceCallTime = default(string), string ConferenceCallPhoneNumber = default(string), string ConferenceCallPasscode = default(string), DateTime? LastConfirmationDate = default(DateTime?), DateTime? BoardOfDirectorsMeetingDate = default(DateTime?), BoardOfDirectorsMeetingTypeEnum? BoardOfDirectorsMeetingType = default(BoardOfDirectorsMeetingTypeEnum?), string CompanyWebsite = default(string), DateTime? Q1Date = default(DateTime?), DateTime? Q2Date = default(DateTime?), DateTime? Q3Date = default(DateTime?), DateTime? Q4Date = default(DateTime?), TypeEnum? Type = default(TypeEnum?), DateTime? NextEarningsDate = default(DateTime?), string NextEarningsQuarter = default(string), int? NextEarningsFiscalYear = default(int?), SecuritySummary Security = default(SecuritySummary))
+        public EarningsRecord(string Quarter = default(string), TimeOfDayEnum? TimeOfDay = default(TimeOfDayEnum?), string BroadcastUrl = default(string), string TranscriptUrl = default(string), string TranscriptQuarter = default(string), string TranscriptFiscalYear = default(string), DateTime? ConferenceCallDate = default(DateTime?), string ConferenceCallTime = default(string), string ConferenceCallPhoneNumber = default(string), string ConferenceCallPasscode = default(string), DateTime? LastConfirmationDate = default(DateTime?), DateTime? BoardOfDirectorsMeetingDate = default(DateTime?), BoardOfDirectorsMeetingTypeEnum? BoardOfDirectorsMeetingType = default(BoardOfDirectorsMeetingTypeEnum?), string CompanyWebsite = default(string), DateTime? Q1Date = default(DateTime?), DateTime? Q2Date = default(DateTime?), DateTime? Q3Date = default(DateTime?), DateTime? Q4Date = default(DateTime?), TypeEnum? Type = default(TypeEnum?), DateTime? NextEarningsDate = default(DateTime?), string NextEarningsQuarter = default(string), int? NextEarningsFiscalYear = default(int?), DateTime? PreliminaryEarningsDate = default(DateTime?), SecuritySummary Security = default(SecuritySummary))
         {
             this.Quarter = Quarter;
             this.TimeOfDay = TimeOfDay;
@@ -171,6 +172,7 @@ namespace Intrinio.SDK.Model
             this.NextEarningsDate = NextEarningsDate;
             this.NextEarningsQuarter = NextEarningsQuarter;
             this.NextEarningsFiscalYear = NextEarningsFiscalYear;
+            this.PreliminaryEarningsDate = PreliminaryEarningsDate;
             this.Security = Security;
         }
         
@@ -319,6 +321,14 @@ namespace Intrinio.SDK.Model
         public int? NextEarningsFiscalYear { get; set; }
 
         /// <summary>
+        /// The release date of a preliminary earnings report
+        /// </summary>
+        /// <value>The release date of a preliminary earnings report</value>
+        [DataMember(Name="preliminary_earnings_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? PreliminaryEarningsDate { get; set; }
+
+        /// <summary>
         /// Gets or Sets Security
         /// </summary>
         [DataMember(Name="security", EmitDefaultValue=false)]
@@ -354,6 +364,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  NextEarningsDate: ").Append(NextEarningsDate).Append("\n");
             sb.Append("  NextEarningsQuarter: ").Append(NextEarningsQuarter).Append("\n");
             sb.Append("  NextEarningsFiscalYear: ").Append(NextEarningsFiscalYear).Append("\n");
+            sb.Append("  PreliminaryEarningsDate: ").Append(PreliminaryEarningsDate).Append("\n");
             sb.Append("  Security: ").Append(Security).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -500,6 +511,11 @@ namespace Intrinio.SDK.Model
                     this.NextEarningsFiscalYear.Equals(input.NextEarningsFiscalYear))
                 ) && 
                 (
+                    this.PreliminaryEarningsDate == input.PreliminaryEarningsDate ||
+                    (this.PreliminaryEarningsDate != null &&
+                    this.PreliminaryEarningsDate.Equals(input.PreliminaryEarningsDate))
+                ) && 
+                (
                     this.Security == input.Security ||
                     (this.Security != null &&
                     this.Security.Equals(input.Security))
@@ -559,6 +575,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.NextEarningsQuarter.GetHashCode();
                 if (this.NextEarningsFiscalYear != null)
                     hashCode = hashCode * 59 + this.NextEarningsFiscalYear.GetHashCode();
+                if (this.PreliminaryEarningsDate != null)
+                    hashCode = hashCode * 59 + this.PreliminaryEarningsDate.GetHashCode();
                 if (this.Security != null)
                     hashCode = hashCode * 59 + this.Security.GetHashCode();
                 return hashCode;

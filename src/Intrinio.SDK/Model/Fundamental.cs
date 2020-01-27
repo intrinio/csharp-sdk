@@ -31,21 +31,21 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum Reported for value: "reported"
+            /// Enum Reported for value: reported
             /// </summary>
-            [EnumMember(Value = "reported")]
+            [EnumMember(Value = reported)]
             Reported = 1,
             
             /// <summary>
-            /// Enum Restated for value: "restated"
+            /// Enum Restated for value: restated
             /// </summary>
-            [EnumMember(Value = "restated")]
+            [EnumMember(Value = restated)]
             Restated = 2,
             
             /// <summary>
-            /// Enum Calculated for value: "calculated"
+            /// Enum Calculated for value: calculated
             /// </summary>
-            [EnumMember(Value = "calculated")]
+            [EnumMember(Value = calculated)]
             Calculated = 3
         }
 
@@ -66,8 +66,9 @@ namespace Intrinio.SDK.Model
         /// <param name="StartDate">The period start date.</param>
         /// <param name="EndDate">The period start date.</param>
         /// <param name="FilingDate">The date and time when the Fundamental was filed with the SEC.</param>
+        /// <param name="IsLatest">Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;).</param>
         /// <param name="Company">The Company that the Fundamental was belongs to.</param>
-        public Fundamental(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?), CompanySummary Company = default(CompanySummary))
+        public Fundamental(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?), bool? IsLatest = default(bool?), CompanySummary Company = default(CompanySummary))
         {
             this.Id = Id;
             this.StatementCode = StatementCode;
@@ -77,6 +78,7 @@ namespace Intrinio.SDK.Model
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.FilingDate = FilingDate;
+            this.IsLatest = IsLatest;
             this.Company = Company;
         }
         
@@ -133,6 +135,13 @@ namespace Intrinio.SDK.Model
         public DateTime? FilingDate { get; set; }
 
         /// <summary>
+        /// Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)
+        /// </summary>
+        /// <value>Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)</value>
+        [DataMember(Name="is_latest", EmitDefaultValue=false)]
+        public bool? IsLatest { get; set; }
+
+        /// <summary>
         /// The Company that the Fundamental was belongs to
         /// </summary>
         /// <value>The Company that the Fundamental was belongs to</value>
@@ -155,6 +164,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  FilingDate: ").Append(FilingDate).Append("\n");
+            sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -231,6 +241,11 @@ namespace Intrinio.SDK.Model
                     this.FilingDate.Equals(input.FilingDate))
                 ) && 
                 (
+                    this.IsLatest == input.IsLatest ||
+                    (this.IsLatest != null &&
+                    this.IsLatest.Equals(input.IsLatest))
+                ) && 
+                (
                     this.Company == input.Company ||
                     (this.Company != null &&
                     this.Company.Equals(input.Company))
@@ -262,6 +277,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.FilingDate != null)
                     hashCode = hashCode * 59 + this.FilingDate.GetHashCode();
+                if (this.IsLatest != null)
+                    hashCode = hashCode * 59 + this.IsLatest.GetHashCode();
                 if (this.Company != null)
                     hashCode = hashCode * 59 + this.Company.GetHashCode();
                 return hashCode;

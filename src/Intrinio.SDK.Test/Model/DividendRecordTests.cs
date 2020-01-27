@@ -131,6 +131,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'ForwardRate'
         }
         /// <summary>
+        /// Test the property 'LastExDividendDate'
+        /// </summary>
+        [Test]
+        public void LastExDividendDateTest()
+        {
+            // TODO unit test for the property 'LastExDividendDate'
+        }
+        /// <summary>
         /// Test the property 'Security'
         /// </summary>
         [Test]

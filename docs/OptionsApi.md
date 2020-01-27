@@ -372,7 +372,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var optionsApi = new OptionsApi();
-      var identifier = null;  // string | The Intrinio ID or code of the options contract to request prices for.
+      var identifier = identifier_example;  // string | The Intrinio ID or code of the options contract to request prices for.
       var startDate = DateTime.Parse("2019-01-01";  // string | Return option contract prices on or after this date. (optional) 
       var endDate = DateTime.Parse("2019-12-31";  // string | Return option contract prices on or before this date. (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)

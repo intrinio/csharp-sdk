@@ -235,6 +235,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'NextEarningsFiscalYear'
         }
         /// <summary>
+        /// Test the property 'PreliminaryEarningsDate'
+        /// </summary>
+        [Test]
+        public void PreliminaryEarningsDateTest()
+        {
+            // TODO unit test for the property 'PreliminaryEarningsDate'
+        }
+        /// <summary>
         /// Test the property 'Security'
         /// </summary>
         [Test]

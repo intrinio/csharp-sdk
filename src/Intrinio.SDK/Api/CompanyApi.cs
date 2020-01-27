@@ -23,7 +23,7 @@ namespace Intrinio.SDK.Api
         /// Returns all Companies. When parameters are specified, returns matching companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>
@@ -43,7 +43,7 @@ namespace Intrinio.SDK.Api
         /// Returns all Companies. When parameters are specified, returns matching companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>
@@ -396,7 +396,7 @@ namespace Intrinio.SDK.Api
         /// Returns all Companies. When parameters are specified, returns matching companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>
@@ -416,7 +416,7 @@ namespace Intrinio.SDK.Api
         /// Returns all Companies. When parameters are specified, returns matching companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>
@@ -864,7 +864,7 @@ namespace Intrinio.SDK.Api
         /// All Companies Returns all Companies. When parameters are specified, returns matching companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>
@@ -885,7 +885,7 @@ namespace Intrinio.SDK.Api
         /// All Companies Returns all Companies. When parameters are specified, returns matching companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>
@@ -959,7 +959,7 @@ namespace Intrinio.SDK.Api
         /// All Companies Returns all Companies. When parameters are specified, returns matching companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>
@@ -981,7 +981,7 @@ namespace Intrinio.SDK.Api
         /// All Companies Returns all Companies. When parameters are specified, returns matching companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="latestFilingDate">Last filing date (optional)</param>
+        /// <param name="latestFilingDate">Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)</param>
         /// <param name="sic">Return companies with the given Standard Industrial Classification code (optional)</param>
         /// <param name="template">Return companies with the given financial statement template (optional)</param>
         /// <param name="sector">Return companies in the given industry sector (optional)</param>

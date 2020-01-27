@@ -91,12 +91,12 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Unit'
         }
         /// <summary>
-        /// Test the property '_Abstract'
+        /// Test the property 'Abstract'
         /// </summary>
         [Test]
-        public void _AbstractTest()
+        public void AbstractTest()
         {
-            // TODO unit test for the property '_Abstract'
+            // TODO unit test for the property 'Abstract'
         }
         /// <summary>
         /// Test the property 'Sequence'

@@ -31,39 +31,39 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum Eq for value: "eq"
+            /// Enum Eq for value: eq
             /// </summary>
-            [EnumMember(Value = "eq")]
+            [EnumMember(Value = eq)]
             Eq = 1,
             
             /// <summary>
-            /// Enum Gt for value: "gt"
+            /// Enum Gt for value: gt
             /// </summary>
-            [EnumMember(Value = "gt")]
+            [EnumMember(Value = gt)]
             Gt = 2,
             
             /// <summary>
-            /// Enum Gte for value: "gte"
+            /// Enum Gte for value: gte
             /// </summary>
-            [EnumMember(Value = "gte")]
+            [EnumMember(Value = gte)]
             Gte = 3,
             
             /// <summary>
-            /// Enum Lt for value: "lt"
+            /// Enum Lt for value: lt
             /// </summary>
-            [EnumMember(Value = "lt")]
+            [EnumMember(Value = lt)]
             Lt = 4,
             
             /// <summary>
-            /// Enum Lte for value: "lte"
+            /// Enum Lte for value: lte
             /// </summary>
-            [EnumMember(Value = "lte")]
+            [EnumMember(Value = lte)]
             Lte = 5,
             
             /// <summary>
-            /// Enum Contains for value: "contains"
+            /// Enum Contains for value: contains
             /// </summary>
-            [EnumMember(Value = "contains")]
+            [EnumMember(Value = contains)]
             Contains = 6
         }
 
@@ -72,17 +72,17 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The logic operator to use when screening</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityScreenClause" /> class.
         /// </summary>
         /// <param name="Field">The field to use when screening, such as an Intrinio Data Tag.</param>
-        /// <param name="_Operator">The logic operator to use when screening.</param>
+        /// <param name="Operator">The logic operator to use when screening.</param>
         /// <param name="Value">The value to screen by.</param>
-        public SecurityScreenClause(string Field = default(string), OperatorEnum? _Operator = default(OperatorEnum?), string Value = default(string))
+        public SecurityScreenClause(string Field = default(string), OperatorEnum? Operator = default(OperatorEnum?), string Value = default(string))
         {
             this.Field = Field;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Value = Value;
         }
         
@@ -110,7 +110,7 @@ namespace Intrinio.SDK.Model
             var sb = new StringBuilder();
             sb.Append("class SecurityScreenClause {\n");
             sb.Append("  Field: ").Append(Field).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -152,9 +152,9 @@ namespace Intrinio.SDK.Model
                     this.Field.Equals(input.Field))
                 ) && 
                 (
-                    this._Operator == input._Operator ||
-                    (this._Operator != null &&
-                    this._Operator.Equals(input._Operator))
+                    this.Operator == input.Operator ||
+                    (this.Operator != null &&
+                    this.Operator.Equals(input.Operator))
                 ) && 
                 (
                     this.Value == input.Value ||
@@ -174,8 +174,8 @@ namespace Intrinio.SDK.Model
                 int hashCode = 41;
                 if (this.Field != null)
                     hashCode = hashCode * 59 + this.Field.GetHashCode();
-                if (this._Operator != null)
-                    hashCode = hashCode * 59 + this._Operator.GetHashCode();
+                if (this.Operator != null)
+                    hashCode = hashCode * 59 + this.Operator.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 return hashCode;

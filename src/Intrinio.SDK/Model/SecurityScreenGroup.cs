@@ -25,12 +25,12 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityScreenGroup" /> class.
         /// </summary>
-        /// <param name="_Operator">The logic operator for the group (AND, OR, NOT).</param>
+        /// <param name="Operator">The logic operator for the group (AND, OR, NOT).</param>
         /// <param name="Clauses">The logic clauses in the group.</param>
         /// <param name="Groups">The nested groups within the group.</param>
-        public SecurityScreenGroup(string _Operator = default(string), List<SecurityScreenClause> Clauses = default(List<SecurityScreenClause>), List<SecurityScreenGroup> Groups = default(List<SecurityScreenGroup>))
+        public SecurityScreenGroup(string Operator = default(string), List<SecurityScreenClause> Clauses = default(List<SecurityScreenClause>), List<SecurityScreenGroup> Groups = default(List<SecurityScreenGroup>))
         {
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Clauses = Clauses;
             this.Groups = Groups;
         }
@@ -40,7 +40,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The logic operator for the group (AND, OR, NOT)</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public string _Operator { get; set; }
+        public string Operator { get; set; }
 
         /// <summary>
         /// The logic clauses in the group
@@ -64,7 +64,7 @@ namespace Intrinio.SDK.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityScreenGroup {\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Clauses: ").Append(Clauses).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("}\n");
@@ -102,9 +102,9 @@ namespace Intrinio.SDK.Model
 
             return 
                 (
-                    this._Operator == input._Operator ||
-                    (this._Operator != null &&
-                    this._Operator.Equals(input._Operator))
+                    this.Operator == input.Operator ||
+                    (this.Operator != null &&
+                    this.Operator.Equals(input.Operator))
                 ) && 
                 (
                     this.Clauses == input.Clauses ||
@@ -127,8 +127,8 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._Operator != null)
-                    hashCode = hashCode * 59 + this._Operator.GetHashCode();
+                if (this.Operator != null)
+                    hashCode = hashCode * 59 + this.Operator.GetHashCode();
                 if (this.Clauses != null)
                     hashCode = hashCode * 59 + this.Clauses.GetHashCode();
                 if (this.Groups != null)

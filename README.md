@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.8.4
-- Package version: 5.0.0
+- API version: 2.8.8
+- Package version: 5.1.0
 
 
 <a name="frameworks-supported"></a>
@@ -129,46 +129,6 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetCompanySecurities**](docs/CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *CompanyApi* | [**LookupCompanyFundamental**](docs/CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 *CompanyApi* | [**SearchCompanies**](docs/CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
-*CryptoApi* | [**GetCryptoBookAsks**](docs/CryptoApi.md#getcryptobookasks) | **GET** /crypto/book/asks | Crypto Book Asks
-*CryptoApi* | [**GetCryptoBookBids**](docs/CryptoApi.md#getcryptobookbids) | **GET** /crypto/book/bids | Crypto Book Bids
-*CryptoApi* | [**GetCryptoBookSummary**](docs/CryptoApi.md#getcryptobooksummary) | **GET** /crypto/book | Crypto Book Summary
-*CryptoApi* | [**GetCryptoCurrencies**](docs/CryptoApi.md#getcryptocurrencies) | **GET** /crypto/currencies | Crypto Currencies
-*CryptoApi* | [**GetCryptoExchanges**](docs/CryptoApi.md#getcryptoexchanges) | **GET** /crypto/exchanges | Crypto Exchanges
-*CryptoApi* | [**GetCryptoPairs**](docs/CryptoApi.md#getcryptopairs) | **GET** /crypto/pairs | Crypto Pairs
-*CryptoApi* | [**GetCryptoPriceTechnicalsAdi**](docs/CryptoApi.md#getcryptopricetechnicalsadi) | **GET** /crypto/prices/technicals/adi | Accumulation/Distribution Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsAdtv**](docs/CryptoApi.md#getcryptopricetechnicalsadtv) | **GET** /crypto/prices/technicals/adtv | Average Daily Trading Volume
-*CryptoApi* | [**GetCryptoPriceTechnicalsAdx**](docs/CryptoApi.md#getcryptopricetechnicalsadx) | **GET** /crypto/prices/technicals/adx | Average Directional Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsAo**](docs/CryptoApi.md#getcryptopricetechnicalsao) | **GET** /crypto/prices/technicals/ao | Awesome Oscillator
-*CryptoApi* | [**GetCryptoPriceTechnicalsAtr**](docs/CryptoApi.md#getcryptopricetechnicalsatr) | **GET** /crypto/prices/technicals/atr | Average True Range
-*CryptoApi* | [**GetCryptoPriceTechnicalsBb**](docs/CryptoApi.md#getcryptopricetechnicalsbb) | **GET** /crypto/prices/technicals/bb | Bollinger Bands
-*CryptoApi* | [**GetCryptoPriceTechnicalsCci**](docs/CryptoApi.md#getcryptopricetechnicalscci) | **GET** /crypto/prices/technicals/cci | Commodity Channel Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsCmf**](docs/CryptoApi.md#getcryptopricetechnicalscmf) | **GET** /crypto/prices/technicals/cmf | Chaikin Money Flow
-*CryptoApi* | [**GetCryptoPriceTechnicalsDc**](docs/CryptoApi.md#getcryptopricetechnicalsdc) | **GET** /crypto/prices/technicals/dc | Donchian Channel
-*CryptoApi* | [**GetCryptoPriceTechnicalsDpo**](docs/CryptoApi.md#getcryptopricetechnicalsdpo) | **GET** /crypto/prices/technicals/dpo | Detrended Price Oscillator
-*CryptoApi* | [**GetCryptoPriceTechnicalsEom**](docs/CryptoApi.md#getcryptopricetechnicalseom) | **GET** /crypto/prices/technicals/eom | Ease of Movement
-*CryptoApi* | [**GetCryptoPriceTechnicalsFi**](docs/CryptoApi.md#getcryptopricetechnicalsfi) | **GET** /crypto/prices/technicals/fi | Force Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsIchimoku**](docs/CryptoApi.md#getcryptopricetechnicalsichimoku) | **GET** /crypto/prices/technicals/ichimoku | Ichimoku Kinko Hyo
-*CryptoApi* | [**GetCryptoPriceTechnicalsKc**](docs/CryptoApi.md#getcryptopricetechnicalskc) | **GET** /crypto/prices/technicals/kc | Keltner Channel
-*CryptoApi* | [**GetCryptoPriceTechnicalsKst**](docs/CryptoApi.md#getcryptopricetechnicalskst) | **GET** /crypto/prices/technicals/kst | Know Sure Thing
-*CryptoApi* | [**GetCryptoPriceTechnicalsMacd**](docs/CryptoApi.md#getcryptopricetechnicalsmacd) | **GET** /crypto/prices/technicals/macd | Moving Average Convergence Divergence
-*CryptoApi* | [**GetCryptoPriceTechnicalsMfi**](docs/CryptoApi.md#getcryptopricetechnicalsmfi) | **GET** /crypto/prices/technicals/mfi | Money Flow Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsMi**](docs/CryptoApi.md#getcryptopricetechnicalsmi) | **GET** /crypto/prices/technicals/mi | Mass Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsNvi**](docs/CryptoApi.md#getcryptopricetechnicalsnvi) | **GET** /crypto/prices/technicals/nvi | Negative Volume Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsObv**](docs/CryptoApi.md#getcryptopricetechnicalsobv) | **GET** /crypto/prices/technicals/obv | On-balance Volume
-*CryptoApi* | [**GetCryptoPriceTechnicalsObvMean**](docs/CryptoApi.md#getcryptopricetechnicalsobvmean) | **GET** /crypto/prices/technicals/obv_mean | On-balance Volume Mean
-*CryptoApi* | [**GetCryptoPriceTechnicalsRsi**](docs/CryptoApi.md#getcryptopricetechnicalsrsi) | **GET** /crypto/prices/technicals/rsi | Relative Strength Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsSma**](docs/CryptoApi.md#getcryptopricetechnicalssma) | **GET** /crypto/prices/technicals/sma | Simple Moving Average
-*CryptoApi* | [**GetCryptoPriceTechnicalsSr**](docs/CryptoApi.md#getcryptopricetechnicalssr) | **GET** /crypto/prices/technicals/sr | Stochastic Oscillator
-*CryptoApi* | [**GetCryptoPriceTechnicalsTrix**](docs/CryptoApi.md#getcryptopricetechnicalstrix) | **GET** /crypto/prices/technicals/trix | Triple Exponential Average
-*CryptoApi* | [**GetCryptoPriceTechnicalsTsi**](docs/CryptoApi.md#getcryptopricetechnicalstsi) | **GET** /crypto/prices/technicals/tsi | True Strength Index
-*CryptoApi* | [**GetCryptoPriceTechnicalsUo**](docs/CryptoApi.md#getcryptopricetechnicalsuo) | **GET** /crypto/prices/technicals/uo | Ultimate Oscillator
-*CryptoApi* | [**GetCryptoPriceTechnicalsVi**](docs/CryptoApi.md#getcryptopricetechnicalsvi) | **GET** /crypto/prices/technicals/vi | Vortex Indicator
-*CryptoApi* | [**GetCryptoPriceTechnicalsVpt**](docs/CryptoApi.md#getcryptopricetechnicalsvpt) | **GET** /crypto/prices/technicals/vpt | Volume-price Trend
-*CryptoApi* | [**GetCryptoPriceTechnicalsVwap**](docs/CryptoApi.md#getcryptopricetechnicalsvwap) | **GET** /crypto/prices/technicals/vwap | Volume Weighted Average Price
-*CryptoApi* | [**GetCryptoPriceTechnicalsWr**](docs/CryptoApi.md#getcryptopricetechnicalswr) | **GET** /crypto/prices/technicals/wr | Williams %R
-*CryptoApi* | [**GetCryptoPrices**](docs/CryptoApi.md#getcryptoprices) | **GET** /crypto/prices | Crypto Prices
-*CryptoApi* | [**GetCryptoSnapshot**](docs/CryptoApi.md#getcryptosnapshot) | **GET** /crypto/snapshot | Crypto Snapshot
-*CryptoApi* | [**GetCryptoStats**](docs/CryptoApi.md#getcryptostats) | **GET** /crypto/stats | Crypto Stats
 *DataPointApi* | [**GetDataPointNumber**](docs/DataPointApi.md#getdatapointnumber) | **GET** /data_point/{identifier}/{tag}/number | Data Point (Number)
 *DataPointApi* | [**GetDataPointText**](docs/DataPointApi.md#getdatapointtext) | **GET** /data_point/{identifier}/{tag}/text | Data Point (Text)
 *DataTagApi* | [**GetAllDataTags**](docs/DataTagApi.md#getalldatatags) | **GET** /data_tags | All Data Tags
@@ -269,37 +229,6 @@ Class | Method | HTTP request | Description
 *StockExchangeApi* | [**GetStockExchangePrices**](docs/StockExchangeApi.md#getstockexchangeprices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
 *StockExchangeApi* | [**GetStockExchangeRealtimePrices**](docs/StockExchangeApi.md#getstockexchangerealtimeprices) | **GET** /stock_exchanges/{identifier}/prices/realtime | Realtime Stock Prices by Exchange
 *StockExchangeApi* | [**GetStockExchangeSecurities**](docs/StockExchangeApi.md#getstockexchangesecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
-*TechnicalApi* | [**GetCryptoPriceTechnicalsAdi**](docs/TechnicalApi.md#getcryptopricetechnicalsadi) | **GET** /crypto/prices/technicals/adi | Accumulation/Distribution Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsAdtv**](docs/TechnicalApi.md#getcryptopricetechnicalsadtv) | **GET** /crypto/prices/technicals/adtv | Average Daily Trading Volume
-*TechnicalApi* | [**GetCryptoPriceTechnicalsAdx**](docs/TechnicalApi.md#getcryptopricetechnicalsadx) | **GET** /crypto/prices/technicals/adx | Average Directional Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsAo**](docs/TechnicalApi.md#getcryptopricetechnicalsao) | **GET** /crypto/prices/technicals/ao | Awesome Oscillator
-*TechnicalApi* | [**GetCryptoPriceTechnicalsAtr**](docs/TechnicalApi.md#getcryptopricetechnicalsatr) | **GET** /crypto/prices/technicals/atr | Average True Range
-*TechnicalApi* | [**GetCryptoPriceTechnicalsBb**](docs/TechnicalApi.md#getcryptopricetechnicalsbb) | **GET** /crypto/prices/technicals/bb | Bollinger Bands
-*TechnicalApi* | [**GetCryptoPriceTechnicalsCci**](docs/TechnicalApi.md#getcryptopricetechnicalscci) | **GET** /crypto/prices/technicals/cci | Commodity Channel Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsCmf**](docs/TechnicalApi.md#getcryptopricetechnicalscmf) | **GET** /crypto/prices/technicals/cmf | Chaikin Money Flow
-*TechnicalApi* | [**GetCryptoPriceTechnicalsDc**](docs/TechnicalApi.md#getcryptopricetechnicalsdc) | **GET** /crypto/prices/technicals/dc | Donchian Channel
-*TechnicalApi* | [**GetCryptoPriceTechnicalsDpo**](docs/TechnicalApi.md#getcryptopricetechnicalsdpo) | **GET** /crypto/prices/technicals/dpo | Detrended Price Oscillator
-*TechnicalApi* | [**GetCryptoPriceTechnicalsEom**](docs/TechnicalApi.md#getcryptopricetechnicalseom) | **GET** /crypto/prices/technicals/eom | Ease of Movement
-*TechnicalApi* | [**GetCryptoPriceTechnicalsFi**](docs/TechnicalApi.md#getcryptopricetechnicalsfi) | **GET** /crypto/prices/technicals/fi | Force Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsIchimoku**](docs/TechnicalApi.md#getcryptopricetechnicalsichimoku) | **GET** /crypto/prices/technicals/ichimoku | Ichimoku Kinko Hyo
-*TechnicalApi* | [**GetCryptoPriceTechnicalsKc**](docs/TechnicalApi.md#getcryptopricetechnicalskc) | **GET** /crypto/prices/technicals/kc | Keltner Channel
-*TechnicalApi* | [**GetCryptoPriceTechnicalsKst**](docs/TechnicalApi.md#getcryptopricetechnicalskst) | **GET** /crypto/prices/technicals/kst | Know Sure Thing
-*TechnicalApi* | [**GetCryptoPriceTechnicalsMacd**](docs/TechnicalApi.md#getcryptopricetechnicalsmacd) | **GET** /crypto/prices/technicals/macd | Moving Average Convergence Divergence
-*TechnicalApi* | [**GetCryptoPriceTechnicalsMfi**](docs/TechnicalApi.md#getcryptopricetechnicalsmfi) | **GET** /crypto/prices/technicals/mfi | Money Flow Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsMi**](docs/TechnicalApi.md#getcryptopricetechnicalsmi) | **GET** /crypto/prices/technicals/mi | Mass Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsNvi**](docs/TechnicalApi.md#getcryptopricetechnicalsnvi) | **GET** /crypto/prices/technicals/nvi | Negative Volume Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsObv**](docs/TechnicalApi.md#getcryptopricetechnicalsobv) | **GET** /crypto/prices/technicals/obv | On-balance Volume
-*TechnicalApi* | [**GetCryptoPriceTechnicalsObvMean**](docs/TechnicalApi.md#getcryptopricetechnicalsobvmean) | **GET** /crypto/prices/technicals/obv_mean | On-balance Volume Mean
-*TechnicalApi* | [**GetCryptoPriceTechnicalsRsi**](docs/TechnicalApi.md#getcryptopricetechnicalsrsi) | **GET** /crypto/prices/technicals/rsi | Relative Strength Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsSma**](docs/TechnicalApi.md#getcryptopricetechnicalssma) | **GET** /crypto/prices/technicals/sma | Simple Moving Average
-*TechnicalApi* | [**GetCryptoPriceTechnicalsSr**](docs/TechnicalApi.md#getcryptopricetechnicalssr) | **GET** /crypto/prices/technicals/sr | Stochastic Oscillator
-*TechnicalApi* | [**GetCryptoPriceTechnicalsTrix**](docs/TechnicalApi.md#getcryptopricetechnicalstrix) | **GET** /crypto/prices/technicals/trix | Triple Exponential Average
-*TechnicalApi* | [**GetCryptoPriceTechnicalsTsi**](docs/TechnicalApi.md#getcryptopricetechnicalstsi) | **GET** /crypto/prices/technicals/tsi | True Strength Index
-*TechnicalApi* | [**GetCryptoPriceTechnicalsUo**](docs/TechnicalApi.md#getcryptopricetechnicalsuo) | **GET** /crypto/prices/technicals/uo | Ultimate Oscillator
-*TechnicalApi* | [**GetCryptoPriceTechnicalsVi**](docs/TechnicalApi.md#getcryptopricetechnicalsvi) | **GET** /crypto/prices/technicals/vi | Vortex Indicator
-*TechnicalApi* | [**GetCryptoPriceTechnicalsVpt**](docs/TechnicalApi.md#getcryptopricetechnicalsvpt) | **GET** /crypto/prices/technicals/vpt | Volume-price Trend
-*TechnicalApi* | [**GetCryptoPriceTechnicalsVwap**](docs/TechnicalApi.md#getcryptopricetechnicalsvwap) | **GET** /crypto/prices/technicals/vwap | Volume Weighted Average Price
-*TechnicalApi* | [**GetCryptoPriceTechnicalsWr**](docs/TechnicalApi.md#getcryptopricetechnicalswr) | **GET** /crypto/prices/technicals/wr | Williams %R
 *TechnicalApi* | [**GetSecurityPriceTechnicalsAdi**](docs/TechnicalApi.md#getsecuritypricetechnicalsadi) | **GET** /securities/{identifier}/prices/technicals/adi | Accumulation/Distribution Index
 *TechnicalApi* | [**GetSecurityPriceTechnicalsAdtv**](docs/TechnicalApi.md#getsecuritypricetechnicalsadtv) | **GET** /securities/{identifier}/prices/technicals/adtv | Average Daily Trading Volume
 *TechnicalApi* | [**GetSecurityPriceTechnicalsAdx**](docs/TechnicalApi.md#getsecuritypricetechnicalsadx) | **GET** /securities/{identifier}/prices/technicals/adx | Average Directional Index
@@ -347,46 +276,6 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
  - [Model.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
  - [Model.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)
- - [Model.ApiResponseCryptoAccumulationDistributionIndex](docs/ApiResponseCryptoAccumulationDistributionIndex.md)
- - [Model.ApiResponseCryptoAverageDailyTradingVolume](docs/ApiResponseCryptoAverageDailyTradingVolume.md)
- - [Model.ApiResponseCryptoAverageDirectionalIndex](docs/ApiResponseCryptoAverageDirectionalIndex.md)
- - [Model.ApiResponseCryptoAverageTrueRange](docs/ApiResponseCryptoAverageTrueRange.md)
- - [Model.ApiResponseCryptoAwesomeOscillator](docs/ApiResponseCryptoAwesomeOscillator.md)
- - [Model.ApiResponseCryptoBollingerBands](docs/ApiResponseCryptoBollingerBands.md)
- - [Model.ApiResponseCryptoBook](docs/ApiResponseCryptoBook.md)
- - [Model.ApiResponseCryptoBookAsks](docs/ApiResponseCryptoBookAsks.md)
- - [Model.ApiResponseCryptoBookBids](docs/ApiResponseCryptoBookBids.md)
- - [Model.ApiResponseCryptoChaikinMoneyFlow](docs/ApiResponseCryptoChaikinMoneyFlow.md)
- - [Model.ApiResponseCryptoCommodityChannelIndex](docs/ApiResponseCryptoCommodityChannelIndex.md)
- - [Model.ApiResponseCryptoCurrencies](docs/ApiResponseCryptoCurrencies.md)
- - [Model.ApiResponseCryptoDetrendedPriceOscillator](docs/ApiResponseCryptoDetrendedPriceOscillator.md)
- - [Model.ApiResponseCryptoDonchianChannel](docs/ApiResponseCryptoDonchianChannel.md)
- - [Model.ApiResponseCryptoEaseOfMovement](docs/ApiResponseCryptoEaseOfMovement.md)
- - [Model.ApiResponseCryptoExchanges](docs/ApiResponseCryptoExchanges.md)
- - [Model.ApiResponseCryptoForceIndex](docs/ApiResponseCryptoForceIndex.md)
- - [Model.ApiResponseCryptoIchimokuKinkoHyo](docs/ApiResponseCryptoIchimokuKinkoHyo.md)
- - [Model.ApiResponseCryptoKeltnerChannel](docs/ApiResponseCryptoKeltnerChannel.md)
- - [Model.ApiResponseCryptoKnowSureThing](docs/ApiResponseCryptoKnowSureThing.md)
- - [Model.ApiResponseCryptoMassIndex](docs/ApiResponseCryptoMassIndex.md)
- - [Model.ApiResponseCryptoMoneyFlowIndex](docs/ApiResponseCryptoMoneyFlowIndex.md)
- - [Model.ApiResponseCryptoMovingAverageConvergenceDivergence](docs/ApiResponseCryptoMovingAverageConvergenceDivergence.md)
- - [Model.ApiResponseCryptoNegativeVolumeIndex](docs/ApiResponseCryptoNegativeVolumeIndex.md)
- - [Model.ApiResponseCryptoOnBalanceVolume](docs/ApiResponseCryptoOnBalanceVolume.md)
- - [Model.ApiResponseCryptoOnBalanceVolumeMean](docs/ApiResponseCryptoOnBalanceVolumeMean.md)
- - [Model.ApiResponseCryptoPairs](docs/ApiResponseCryptoPairs.md)
- - [Model.ApiResponseCryptoPrices](docs/ApiResponseCryptoPrices.md)
- - [Model.ApiResponseCryptoRelativeStrengthIndex](docs/ApiResponseCryptoRelativeStrengthIndex.md)
- - [Model.ApiResponseCryptoSimpleMovingAverage](docs/ApiResponseCryptoSimpleMovingAverage.md)
- - [Model.ApiResponseCryptoSnapshot](docs/ApiResponseCryptoSnapshot.md)
- - [Model.ApiResponseCryptoStats](docs/ApiResponseCryptoStats.md)
- - [Model.ApiResponseCryptoStochasticOscillator](docs/ApiResponseCryptoStochasticOscillator.md)
- - [Model.ApiResponseCryptoTripleExponentialAverage](docs/ApiResponseCryptoTripleExponentialAverage.md)
- - [Model.ApiResponseCryptoTrueStrengthIndex](docs/ApiResponseCryptoTrueStrengthIndex.md)
- - [Model.ApiResponseCryptoUltimateOscillator](docs/ApiResponseCryptoUltimateOscillator.md)
- - [Model.ApiResponseCryptoVolumePriceTrend](docs/ApiResponseCryptoVolumePriceTrend.md)
- - [Model.ApiResponseCryptoVolumeWeightedAveragePrice](docs/ApiResponseCryptoVolumeWeightedAveragePrice.md)
- - [Model.ApiResponseCryptoVortexIndicator](docs/ApiResponseCryptoVortexIndicator.md)
- - [Model.ApiResponseCryptoWilliamsR](docs/ApiResponseCryptoWilliamsR.md)
  - [Model.ApiResponseDataTags](docs/ApiResponseDataTags.md)
  - [Model.ApiResponseDataTagsSearch](docs/ApiResponseDataTagsSearch.md)
  - [Model.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
@@ -478,17 +367,6 @@ Class | Method | HTTP request | Description
  - [Model.CompanyNews](docs/CompanyNews.md)
  - [Model.CompanyNewsSummary](docs/CompanyNewsSummary.md)
  - [Model.CompanySummary](docs/CompanySummary.md)
- - [Model.CryptoAsk](docs/CryptoAsk.md)
- - [Model.CryptoBid](docs/CryptoBid.md)
- - [Model.CryptoBookEntry](docs/CryptoBookEntry.md)
- - [Model.CryptoCurrency](docs/CryptoCurrency.md)
- - [Model.CryptoExchange](docs/CryptoExchange.md)
- - [Model.CryptoExchangeSummary](docs/CryptoExchangeSummary.md)
- - [Model.CryptoPair](docs/CryptoPair.md)
- - [Model.CryptoPairSummary](docs/CryptoPairSummary.md)
- - [Model.CryptoPrice](docs/CryptoPrice.md)
- - [Model.CryptoSnapshot](docs/CryptoSnapshot.md)
- - [Model.CryptoStat](docs/CryptoStat.md)
  - [Model.DataTag](docs/DataTag.md)
  - [Model.DataTagSummary](docs/DataTagSummary.md)
  - [Model.DetrendedPriceOscillatorTechnicalValue](docs/DetrendedPriceOscillatorTechnicalValue.md)

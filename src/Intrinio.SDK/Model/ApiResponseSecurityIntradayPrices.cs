@@ -33,13 +33,13 @@ namespace Intrinio.SDK.Model
             /// <summary>
             /// Enum Iex for value: iex
             /// </summary>
-            [EnumMember(Value = iex)]
+            [EnumMember(Value = "iex")]
             Iex = 1,
             
             /// <summary>
             /// Enum Bats for value: bats
             /// </summary>
-            [EnumMember(Value = bats)]
+            [EnumMember(Value = "bats")]
             Bats = 2
         }
 

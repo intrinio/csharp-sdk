@@ -33,13 +33,13 @@ namespace Intrinio.SDK.Model
             /// <summary>
             /// Enum Financial for value: financial
             /// </summary>
-            [EnumMember(Value = financial)]
+            [EnumMember(Value = "financial")]
             Financial = 1,
             
             /// <summary>
             /// Enum Industrial for value: industrial
             /// </summary>
-            [EnumMember(Value = industrial)]
+            [EnumMember(Value = "industrial")]
             Industrial = 2
         }
 

@@ -33,37 +33,37 @@ namespace Intrinio.SDK.Model
             /// <summary>
             /// Enum Eq for value: eq
             /// </summary>
-            [EnumMember(Value = eq)]
+            [EnumMember(Value = "eq")]
             Eq = 1,
             
             /// <summary>
             /// Enum Gt for value: gt
             /// </summary>
-            [EnumMember(Value = gt)]
+            [EnumMember(Value = "gt")]
             Gt = 2,
             
             /// <summary>
             /// Enum Gte for value: gte
             /// </summary>
-            [EnumMember(Value = gte)]
+            [EnumMember(Value = "gte")]
             Gte = 3,
             
             /// <summary>
             /// Enum Lt for value: lt
             /// </summary>
-            [EnumMember(Value = lt)]
+            [EnumMember(Value = "lt")]
             Lt = 4,
             
             /// <summary>
             /// Enum Lte for value: lte
             /// </summary>
-            [EnumMember(Value = lte)]
+            [EnumMember(Value = "lte")]
             Lte = 5,
             
             /// <summary>
             /// Enum Contains for value: contains
             /// </summary>
-            [EnumMember(Value = contains)]
+            [EnumMember(Value = "contains")]
             Contains = 6
         }
 

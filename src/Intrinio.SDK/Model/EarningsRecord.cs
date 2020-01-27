@@ -33,25 +33,25 @@ namespace Intrinio.SDK.Model
             /// <summary>
             /// Enum BeforeMarket for value: Before Market
             /// </summary>
-            [EnumMember(Value = Before Market)]
+            [EnumMember(Value = "Before Market")]
             BeforeMarket = 1,
             
             /// <summary>
             /// Enum DuringMarket for value: During Market
             /// </summary>
-            [EnumMember(Value = During Market)]
+            [EnumMember(Value = "During Market")]
             DuringMarket = 2,
             
             /// <summary>
             /// Enum AfterMarket for value: After Market
             /// </summary>
-            [EnumMember(Value = After Market)]
+            [EnumMember(Value = "After Market")]
             AfterMarket = 3,
             
             /// <summary>
             /// Enum Unspecified for value: Unspecified
             /// </summary>
-            [EnumMember(Value = Unspecified)]
+            [EnumMember(Value = "Unspecified")]
             Unspecified = 4
         }
 
@@ -72,13 +72,13 @@ namespace Intrinio.SDK.Model
             /// <summary>
             /// Enum B for value: B
             /// </summary>
-            [EnumMember(Value = B)]
+            [EnumMember(Value = "B")]
             B = 1,
             
             /// <summary>
             /// Enum S for value: S
             /// </summary>
-            [EnumMember(Value = S)]
+            [EnumMember(Value = "S")]
             S = 2
         }
 
@@ -99,19 +99,19 @@ namespace Intrinio.SDK.Model
             /// <summary>
             /// Enum V for value: V
             /// </summary>
-            [EnumMember(Value = V)]
+            [EnumMember(Value = "V")]
             V = 1,
             
             /// <summary>
             /// Enum T for value: T
             /// </summary>
-            [EnumMember(Value = T)]
+            [EnumMember(Value = "T")]
             T = 2,
             
             /// <summary>
             /// Enum I for value: I
             /// </summary>
-            [EnumMember(Value = I)]
+            [EnumMember(Value = "I")]
             I = 3
         }
 

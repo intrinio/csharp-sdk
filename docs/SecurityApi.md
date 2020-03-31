@@ -4459,7 +4459,7 @@ namespace Example
 
       var securityApi = new SecurityApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var date = "";  // string | Lookup a historical snapshot on the given date (optional) 
+      var date = DateTime.Parse("";  // string | Lookup a historical snapshot on the given date (optional) 
 
       try
       {

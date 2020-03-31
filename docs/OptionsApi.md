@@ -174,7 +174,7 @@ namespace Example
       var optionsApi = new OptionsApi();
       var symbol = "MSFT";  // string | The option symbol, corresponding to the underlying security.
       var expiration = "2019-04-05";  // string | The expiration date of the options contract
-      var date = "2019-04-05");  // DateTime? | The date of the option price. Returns option prices on this date. (optional) 
+      var date = DateTime.Parse("2019-04-05");  // DateTime? | The date of the option price. Returns option prices on this date. (optional) 
       var type = "put";  // string | The option contract type. (optional) 
       var strike = 170.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional) 
       var strikeGreaterThan = 190.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional) 

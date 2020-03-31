@@ -253,7 +253,7 @@ namespace Example
 
       var stockExchangeApi = new StockExchangeApi();
       var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var date = "2018-08-14");  // DateTime? | The date for which to return price adjustments (optional) 
+      var date = DateTime.Parse("2018-08-14");  // DateTime? | The date for which to return price adjustments (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
@@ -349,7 +349,7 @@ namespace Example
 
       var stockExchangeApi = new StockExchangeApi();
       var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var date = "2018-08-14");  // DateTime? | The date for which to return prices (optional) 
+      var date = DateTime.Parse("2018-08-14");  // DateTime? | The date for which to return prices (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 

@@ -17,7 +17,7 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Bulk Downloads
+        /// All Links
         /// </summary>
         /// <remarks>
         /// Returns all active bulk downloads for your account with links to download.
@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Api
         ApiResponseBulkDownloadLinks GetBulkDownloadLinks ();
 
         /// <summary>
-        /// Bulk Downloads
+        /// All Links
         /// </summary>
         /// <remarks>
         /// Returns all active bulk downloads for your account with links to download.
@@ -38,7 +38,7 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Bulk Downloads
+        /// All Links
         /// </summary>
         /// <remarks>
         /// Returns all active bulk downloads for your account with links to download.
@@ -48,7 +48,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseBulkDownloadLinks> GetBulkDownloadLinksAsync ();
 
         /// <summary>
-        /// Bulk Downloads
+        /// All Links
         /// </summary>
         /// <remarks>
         /// Returns all active bulk downloads for your account with links to download.
@@ -157,7 +157,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bulk Downloads Returns all active bulk downloads for your account with links to download.
+        /// All Links Returns all active bulk downloads for your account with links to download.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponseBulkDownloadLinks</returns>
@@ -168,7 +168,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bulk Downloads Returns all active bulk downloads for your account with links to download.
+        /// All Links Returns all active bulk downloads for your account with links to download.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseBulkDownloadLinks</returns>
@@ -222,7 +222,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bulk Downloads Returns all active bulk downloads for your account with links to download.
+        /// All Links Returns all active bulk downloads for your account with links to download.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponseBulkDownloadLinks</returns>
@@ -234,7 +234,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bulk Downloads Returns all active bulk downloads for your account with links to download.
+        /// All Links Returns all active bulk downloads for your account with links to download.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ApiResponseBulkDownloadLinks)</returns>

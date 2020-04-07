@@ -4,7 +4,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetBulkDownloadLinks**](BulkDownloadsApi.md#getbulkdownloadlinks) | **GET** /bulk_downloads/links | Bulk Downloads
+[**GetBulkDownloadLinks**](BulkDownloadsApi.md#getbulkdownloadlinks) | **GET** /bulk_downloads/links | All Links
 
 
 
@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 > ApiResponseBulkDownloadLinks GetBulkDownloadLinks ()
 
-#### Bulk Downloads
+#### All Links
 
 Returns all active bulk downloads for your account with links to download.
 

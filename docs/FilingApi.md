@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**GetAllNotes**](FilingApi.md#getallnotes) | **GET** /filings/notes | All Filing Notes
 [**GetFilingById**](FilingApi.md#getfilingbyid) | **GET** /filings/{id} | Lookup Filing
 [**GetFilingFundamentals**](FilingApi.md#getfilingfundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
+[**GetFilingHtml**](FilingApi.md#getfilinghtml) | **GET** /filings/{identifier}/html | Filing Html
+[**GetFilingText**](FilingApi.md#getfilingtext) | **GET** /filings/{identifier}/text | Filing Text
 [**GetNote**](FilingApi.md#getnote) | **GET** /filings/notes/{identifier} | Filing Note by ID
 [**GetNoteHtml**](FilingApi.md#getnotehtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
 [**GetNoteText**](FilingApi.md#getnotetext) | **GET** /filings/notes/{identifier}/text | Filing Note Text
@@ -40,7 +42,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+> ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null)
 
 #### All Filings
 
@@ -72,12 +74,14 @@ namespace Example
       var reportType = "";  // string | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>. (optional) 
       var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Filed on or after the given date (optional) 
       var endDate = DateTime.Now;  // DateTime? | Filed before or after the given date (optional) 
+      var industryCategory = "";  // string | Return companies in the given industry category (optional) 
+      var industryGroup = "";  // string | Return companies in the given industry group (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
       try
       {
-        ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, pageSize, nextPage);
+        ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, pageSize, nextPage);
         Console.WriteLine(result.ToJson());
       }
       catch (Exception e)
@@ -102,6 +106,8 @@ Name | Type | Description  | Notes
  **reportType** | string| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
  **startDate** | DateTime?| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | DateTime?| Filed before or after the given date | [optional]  &nbsp;
+ **industryCategory** | string| Return companies in the given industry category | [optional]  &nbsp;
+ **industryGroup** | string| Return companies in the given industry group | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -409,6 +415,184 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseFilingFundamentals**](ApiResponseFilingFundamentals.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetFilingHtml)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
+
+[//]: # (OPERATION:GetFilingHtml_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/html)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#getfilinghtml)
+
+<a name="getfilinghtml"></a>
+## **GetFilingHtml**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFilingHtml_v2)
+
+[//]: # (START_OVERVIEW)
+
+> string GetFilingHtml (string identifier)
+
+#### Filing Html
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetFilingHtmlExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var filingApi = new FilingApi();
+      var identifier = "fil_B73xBG";  // string | A Filing identifier
+
+      try
+      {
+        string result = filingApi.GetFilingHtml(identifier);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling FilingApi.GetFilingHtml: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Filing identifier |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+**string**
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetFilingText)
+
+[//]: # (RETURN_TYPE:string)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
+
+[//]: # (OPERATION:GetFilingText_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/text)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#getfilingtext)
+
+<a name="getfilingtext"></a>
+## **GetFilingText**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFilingText_v2)
+
+[//]: # (START_OVERVIEW)
+
+> string GetFilingText (string identifier)
+
+#### Filing Text
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetFilingTextExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var filingApi = new FilingApi();
+      var identifier = "fil_B73xBG";  // string | A Filing identifier
+
+      try
+      {
+        string result = filingApi.GetFilingText(identifier);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling FilingApi.GetFilingText: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Filing identifier |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+**string**
 
 [//]: # (END_OPERATION)
 

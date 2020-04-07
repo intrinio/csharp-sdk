@@ -34,8 +34,11 @@ namespace Intrinio.SDK.Model
         /// <param name="FilingUrl">The URL to the filing page on the SEC site.</param>
         /// <param name="ReportUrl">The URL to the actual report on the SEC site.</param>
         /// <param name="InstanceUrl">The URL for the XBRL filing for the report.</param>
+        /// <param name="IndustryCategory">The company&#39;s operating industry category.</param>
+        /// <param name="IndustryGroup">The company&#39;s operating industry group.</param>
+        /// <param name="WordCount">The number of words in the filing.</param>
         /// <param name="Company">Company.</param>
-        public Filing(string Id = default(string), DateTime? FilingDate = default(DateTime?), DateTime? AcceptedDate = default(DateTime?), DateTime? PeriodEndDate = default(DateTime?), string ReportType = default(string), string SecUniqueId = default(string), string FilingUrl = default(string), string ReportUrl = default(string), string InstanceUrl = default(string), CompanySummary Company = default(CompanySummary))
+        public Filing(string Id = default(string), DateTime? FilingDate = default(DateTime?), DateTime? AcceptedDate = default(DateTime?), DateTime? PeriodEndDate = default(DateTime?), string ReportType = default(string), string SecUniqueId = default(string), string FilingUrl = default(string), string ReportUrl = default(string), string InstanceUrl = default(string), string IndustryCategory = default(string), string IndustryGroup = default(string), int? WordCount = default(int?), CompanySummary Company = default(CompanySummary))
         {
             this.Id = Id;
             this.FilingDate = FilingDate;
@@ -46,6 +49,9 @@ namespace Intrinio.SDK.Model
             this.FilingUrl = FilingUrl;
             this.ReportUrl = ReportUrl;
             this.InstanceUrl = InstanceUrl;
+            this.IndustryCategory = IndustryCategory;
+            this.IndustryGroup = IndustryGroup;
+            this.WordCount = WordCount;
             this.Company = Company;
         }
         
@@ -115,6 +121,27 @@ namespace Intrinio.SDK.Model
         public string InstanceUrl { get; set; }
 
         /// <summary>
+        /// The company&#39;s operating industry category
+        /// </summary>
+        /// <value>The company&#39;s operating industry category</value>
+        [DataMember(Name="industry_category", EmitDefaultValue=false)]
+        public string IndustryCategory { get; set; }
+
+        /// <summary>
+        /// The company&#39;s operating industry group
+        /// </summary>
+        /// <value>The company&#39;s operating industry group</value>
+        [DataMember(Name="industry_group", EmitDefaultValue=false)]
+        public string IndustryGroup { get; set; }
+
+        /// <summary>
+        /// The number of words in the filing
+        /// </summary>
+        /// <value>The number of words in the filing</value>
+        [DataMember(Name="word_count", EmitDefaultValue=false)]
+        public int? WordCount { get; set; }
+
+        /// <summary>
         /// Gets or Sets Company
         /// </summary>
         [DataMember(Name="company", EmitDefaultValue=false)]
@@ -137,6 +164,9 @@ namespace Intrinio.SDK.Model
             sb.Append("  FilingUrl: ").Append(FilingUrl).Append("\n");
             sb.Append("  ReportUrl: ").Append(ReportUrl).Append("\n");
             sb.Append("  InstanceUrl: ").Append(InstanceUrl).Append("\n");
+            sb.Append("  IndustryCategory: ").Append(IndustryCategory).Append("\n");
+            sb.Append("  IndustryGroup: ").Append(IndustryGroup).Append("\n");
+            sb.Append("  WordCount: ").Append(WordCount).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -218,6 +248,21 @@ namespace Intrinio.SDK.Model
                     this.InstanceUrl.Equals(input.InstanceUrl))
                 ) && 
                 (
+                    this.IndustryCategory == input.IndustryCategory ||
+                    (this.IndustryCategory != null &&
+                    this.IndustryCategory.Equals(input.IndustryCategory))
+                ) && 
+                (
+                    this.IndustryGroup == input.IndustryGroup ||
+                    (this.IndustryGroup != null &&
+                    this.IndustryGroup.Equals(input.IndustryGroup))
+                ) && 
+                (
+                    this.WordCount == input.WordCount ||
+                    (this.WordCount != null &&
+                    this.WordCount.Equals(input.WordCount))
+                ) && 
+                (
                     this.Company == input.Company ||
                     (this.Company != null &&
                     this.Company.Equals(input.Company))
@@ -251,6 +296,12 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.ReportUrl.GetHashCode();
                 if (this.InstanceUrl != null)
                     hashCode = hashCode * 59 + this.InstanceUrl.GetHashCode();
+                if (this.IndustryCategory != null)
+                    hashCode = hashCode * 59 + this.IndustryCategory.GetHashCode();
+                if (this.IndustryGroup != null)
+                    hashCode = hashCode * 59 + this.IndustryGroup.GetHashCode();
+                if (this.WordCount != null)
+                    hashCode = hashCode * 59 + this.WordCount.GetHashCode();
                 if (this.Company != null)
                     hashCode = hashCode * 59 + this.Company.GetHashCode();
                 return hashCode;

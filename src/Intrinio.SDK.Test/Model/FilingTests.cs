@@ -131,6 +131,30 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'InstanceUrl'
         }
         /// <summary>
+        /// Test the property 'IndustryCategory'
+        /// </summary>
+        [Test]
+        public void IndustryCategoryTest()
+        {
+            // TODO unit test for the property 'IndustryCategory'
+        }
+        /// <summary>
+        /// Test the property 'IndustryGroup'
+        /// </summary>
+        [Test]
+        public void IndustryGroupTest()
+        {
+            // TODO unit test for the property 'IndustryGroup'
+        }
+        /// <summary>
+        /// Test the property 'WordCount'
+        /// </summary>
+        [Test]
+        public void WordCountTest()
+        {
+            // TODO unit test for the property 'WordCount'
+        }
+        /// <summary>
         /// Test the property 'Company'
         /// </summary>
         [Test]

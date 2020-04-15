@@ -60,8 +60,8 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //string startDate = null;
-            //string endDate = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
             //decimal? meanGreater = null;
             //decimal? meanLess = null;
             //int? strongBuysGreater = null;
@@ -83,14 +83,50 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetZacksEpsEstimates
+        /// </summary>
+        [Test]
+        public void GetZacksEpsEstimatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //int? fiscalYear = null;
+            //string fiscalPeriod = null;
+            //int? calendarYear = null;
+            //string calendarPeriod = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksEpsEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksEPSEstimates> (response, "response is ApiResponseZacksEPSEstimates");
+        }
+        
+        /// <summary>
+        /// Test GetZacksEpsGrowthRates
+        /// </summary>
+        [Test]
+        public void GetZacksEpsGrowthRatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string company = null;
+            //string industryGroupName = null;
+            //string industryGroupNumber = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksEpsGrowthRates(company, industryGroupName, industryGroupNumber, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksEPSGrowthRates> (response, "response is ApiResponseZacksEPSGrowthRates");
+        }
+        
+        /// <summary>
         /// Test GetZacksEpsSurprises
         /// </summary>
         [Test]
         public void GetZacksEpsSurprisesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string startDate = null;
-            //string endDate = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
             //decimal? epsActualGreater = null;
             //decimal? epsActualLess = null;
             //decimal? epsMeanEstimateGreater = null;
@@ -110,14 +146,28 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetZacksLongTermGrowthRates
+        /// </summary>
+        [Test]
+        public void GetZacksLongTermGrowthRatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksLongTermGrowthRates(identifier, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksLongTermGrowthRates> (response, "response is ApiResponseZacksLongTermGrowthRates");
+        }
+        
+        /// <summary>
         /// Test GetZacksSalesSurprises
         /// </summary>
         [Test]
         public void GetZacksSalesSurprisesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string startDate = null;
-            //string endDate = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
             //decimal? salesActualGreater = null;
             //decimal? salesActualLess = null;
             //decimal? salesMeanEstimateGreater = null;
@@ -134,6 +184,21 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //var response = instance.GetZacksSalesSurprises(startDate, endDate, salesActualGreater, salesActualLess, salesMeanEstimateGreater, salesMeanEstimateLess, salesAmountDiffGreater, salesAmountDiffLess, salesPercentDiffGreater, salesPercentDiffLess, salesCountEstimateGreater, salesCountEstimateLess, salesStdDevEstimateGreater, salesStdDevEstimateLess, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseZacksSalesSurprises> (response, "response is ApiResponseZacksSalesSurprises");
+        }
+        
+        /// <summary>
+        /// Test GetZacksTargetPriceConsensuses
+        /// </summary>
+        [Test]
+        public void GetZacksTargetPriceConsensusesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string industryGroupNumber = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksTargetPriceConsensuses(identifier, industryGroupNumber, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksTargetPriceConsensuses> (response, "response is ApiResponseZacksTargetPriceConsensuses");
         }
         
     }

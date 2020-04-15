@@ -5,8 +5,12 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetZacksAnalystRatings**](ZacksApi.md#getzacksanalystratings) | **GET** /zacks/analyst_ratings | Zacks Analyst Ratings
+[**GetZacksEpsEstimates**](ZacksApi.md#getzacksepsestimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
+[**GetZacksEpsGrowthRates**](ZacksApi.md#getzacksepsgrowthrates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**GetZacksEpsSurprises**](ZacksApi.md#getzacksepssurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
+[**GetZacksLongTermGrowthRates**](ZacksApi.md#getzackslongtermgrowthrates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
 [**GetZacksSalesSurprises**](ZacksApi.md#getzackssalessurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
+[**GetZacksTargetPriceConsensuses**](ZacksApi.md#getzackstargetpriceconsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
 
 
 
@@ -35,7 +39,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseZacksAnalystRatings GetZacksAnalystRatings (string identifier = null, string startDate = null, string endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null, string nextPage = null)
+> ApiResponseZacksAnalystRatings GetZacksAnalystRatings (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null, string nextPage = null)
 
 #### Zacks Analyst Ratings
 
@@ -64,8 +68,8 @@ namespace Example
 
       var zacksApi = new ZacksApi();
       var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional) 
-      var startDate = DateTime.Parse("";  // string | Limit ratings to those on or after this date (optional) 
-      var endDate = DateTime.Parse("";  // string | Limit ratings to those on or before this date (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Limit ratings to those on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Limit ratings to those on or before this date (optional) 
       var meanGreater = "";  // decimal? | Return only records with a mean (average) higher than this value (optional) 
       var meanLess = "";  // decimal? | Return only records with a mean (average) lower than this value (optional) 
       var strongBuysGreater = "";  // int? | Return only records with more than this many Strong Buy recommendations (optional) 
@@ -107,8 +111,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | [optional]  &nbsp;
- **startDate** | string| Limit ratings to those on or after this date | [optional]  &nbsp;
- **endDate** | string| Limit ratings to those on or before this date | [optional]  &nbsp;
+ **startDate** | DateTime?| Limit ratings to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit ratings to those on or before this date | [optional]  &nbsp;
  **meanGreater** | decimal?| Return only records with a mean (average) higher than this value | [optional]  &nbsp;
  **meanLess** | decimal?| Return only records with a mean (average) lower than this value | [optional]  &nbsp;
  **strongBuysGreater** | int?| Return only records with more than this many Strong Buy recommendations | [optional]  &nbsp;
@@ -140,6 +144,210 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
 
+[//]: # (METHOD:GetZacksEpsEstimates)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksEPSEstimates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEPSEstimates.md)
+
+[//]: # (OPERATION:GetZacksEpsEstimates_v2)
+
+[//]: # (ENDPOINT:/zacks/eps_estimates)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksepsestimates)
+
+<a name="getzacksepsestimates"></a>
+## **GetZacksEpsEstimates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksEpsEstimates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksEPSEstimates GetZacksEpsEstimates (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks EPS Estimates
+
+Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksEpsEstimatesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Limit EPS estimates to those on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Limit EPS estimates to those on or before this date (optional) 
+      var fiscalYear = "";  // int? | Only for the given fiscal year (optional) 
+      var fiscalPeriod = "";  // string | The fiscal period (optional) 
+      var calendarYear = "";  // int? | Only for the given calendar year (optional) 
+      var calendarPeriod = "";  // string | The calendar period (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksEPSEstimates result = zacksApi.GetZacksEpsEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksEpsEstimates: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **startDate** | DateTime?| Limit EPS estimates to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit EPS estimates to those on or before this date | [optional]  &nbsp;
+ **fiscalYear** | int?| Only for the given fiscal year | [optional]  &nbsp;
+ **fiscalPeriod** | string| The fiscal period | [optional]  &nbsp;
+ **calendarYear** | int?| Only for the given calendar year | [optional]  &nbsp;
+ **calendarPeriod** | string| The calendar period | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksEPSEstimates**](ApiResponseZacksEPSEstimates.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksEpsGrowthRates)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksEPSGrowthRates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEPSGrowthRates.md)
+
+[//]: # (OPERATION:GetZacksEpsGrowthRates_v2)
+
+[//]: # (ENDPOINT:/zacks/eps_growth_rates)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksepsgrowthrates)
+
+<a name="getzacksepsgrowthrates"></a>
+## **GetZacksEpsGrowthRates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksEpsGrowthRates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksEPSGrowthRates GetZacksEpsGrowthRates (string company = null, string industryGroupName = null, string industryGroupNumber = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks EPS Growth Rates
+
+Returns the latest Zacks EPS growth rates
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksEpsGrowthRatesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID) (optional) 
+      var industryGroupName = "";  // string | Return only growth rates for companies in the given Zacks industry group name (optional) 
+      var industryGroupNumber = "";  // string | Return only growth rates for companies in the given Zacks industry group number (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksEPSGrowthRates result = zacksApi.GetZacksEpsGrowthRates(company, industryGroupName, industryGroupNumber, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksEpsGrowthRates: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company** | string| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **industryGroupName** | string| Return only growth rates for companies in the given Zacks industry group name | [optional]  &nbsp;
+ **industryGroupNumber** | string| Return only growth rates for companies in the given Zacks industry group number | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksEPSGrowthRates**](ApiResponseZacksEPSGrowthRates.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
 [//]: # (METHOD:GetZacksEpsSurprises)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksEPSSurprises)
@@ -161,7 +369,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseZacksEPSSurprises GetZacksEpsSurprises (string startDate = null, string endDate = null, decimal? epsActualGreater = null, decimal? epsActualLess = null, decimal? epsMeanEstimateGreater = null, decimal? epsMeanEstimateLess = null, decimal? epsAmountDiffGreater = null, decimal? epsAmountDiffLess = null, decimal? epsPercentDiffGreater = null, decimal? epsPercentDiffLess = null, decimal? epsCountEstimateGreater = null, decimal? epsCountEstimateLess = null, decimal? epsStdDevEstimateGreater = null, decimal? epsStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
+> ApiResponseZacksEPSSurprises GetZacksEpsSurprises (DateTime? startDate = null, DateTime? endDate = null, decimal? epsActualGreater = null, decimal? epsActualLess = null, decimal? epsMeanEstimateGreater = null, decimal? epsMeanEstimateLess = null, decimal? epsAmountDiffGreater = null, decimal? epsAmountDiffLess = null, decimal? epsPercentDiffGreater = null, decimal? epsPercentDiffLess = null, decimal? epsCountEstimateGreater = null, decimal? epsCountEstimateLess = null, decimal? epsStdDevEstimateGreater = null, decimal? epsStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
 
 #### Zacks EPS Surprises
 
@@ -189,8 +397,8 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var zacksApi = new ZacksApi();
-      var startDate = DateTime.Parse("";  // string | Limit EPS surprises to those on or after this date (optional) 
-      var endDate = DateTime.Parse("";  // string | Limit EPS surprises to those on or before this date (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Limit EPS surprises to those on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Limit EPS surprises to those on or before this date (optional) 
       var epsActualGreater = "";  // decimal? | Return only records with an actual EPS higher than this value (optional) 
       var epsActualLess = "";  // decimal? | Return only records with an actual EPS lower than this value (optional) 
       var epsMeanEstimateGreater = "";  // decimal? | Return only records with an EPS mean estimate greater than this value (optional) 
@@ -229,8 +437,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | string| Limit EPS surprises to those on or after this date | [optional]  &nbsp;
- **endDate** | string| Limit EPS surprises to those on or before this date | [optional]  &nbsp;
+ **startDate** | DateTime?| Limit EPS surprises to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit EPS surprises to those on or before this date | [optional]  &nbsp;
  **epsActualGreater** | decimal?| Return only records with an actual EPS higher than this value | [optional]  &nbsp;
  **epsActualLess** | decimal?| Return only records with an actual EPS lower than this value | [optional]  &nbsp;
  **epsMeanEstimateGreater** | decimal?| Return only records with an EPS mean estimate greater than this value | [optional]  &nbsp;
@@ -260,6 +468,100 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
 
+[//]: # (METHOD:GetZacksLongTermGrowthRates)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksLongTermGrowthRates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksLongTermGrowthRates.md)
+
+[//]: # (OPERATION:GetZacksLongTermGrowthRates_v2)
+
+[//]: # (ENDPOINT:/zacks/long_term_growth_rates)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzackslongtermgrowthrates)
+
+<a name="getzackslongtermgrowthrates"></a>
+## **GetZacksLongTermGrowthRates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksLongTermGrowthRates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksLongTermGrowthRates GetZacksLongTermGrowthRates (string identifier = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks Long Term Growth Rates
+
+Returns the latest Zacks long term growth rates
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksLongTermGrowthRatesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksLongTermGrowthRates result = zacksApi.GetZacksLongTermGrowthRates(identifier, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksLongTermGrowthRates: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksLongTermGrowthRates**](ApiResponseZacksLongTermGrowthRates.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
 [//]: # (METHOD:GetZacksSalesSurprises)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksSalesSurprises)
@@ -281,7 +583,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseZacksSalesSurprises GetZacksSalesSurprises (string startDate = null, string endDate = null, decimal? salesActualGreater = null, decimal? salesActualLess = null, decimal? salesMeanEstimateGreater = null, decimal? salesMeanEstimateLess = null, decimal? salesAmountDiffGreater = null, decimal? salesAmountDiffLess = null, decimal? salesPercentDiffGreater = null, decimal? salesPercentDiffLess = null, decimal? salesCountEstimateGreater = null, decimal? salesCountEstimateLess = null, decimal? salesStdDevEstimateGreater = null, decimal? salesStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
+> ApiResponseZacksSalesSurprises GetZacksSalesSurprises (DateTime? startDate = null, DateTime? endDate = null, decimal? salesActualGreater = null, decimal? salesActualLess = null, decimal? salesMeanEstimateGreater = null, decimal? salesMeanEstimateLess = null, decimal? salesAmountDiffGreater = null, decimal? salesAmountDiffLess = null, decimal? salesPercentDiffGreater = null, decimal? salesPercentDiffLess = null, decimal? salesCountEstimateGreater = null, decimal? salesCountEstimateLess = null, decimal? salesStdDevEstimateGreater = null, decimal? salesStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
 
 #### Zacks Sales Surprises
 
@@ -309,8 +611,8 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var zacksApi = new ZacksApi();
-      var startDate = DateTime.Parse("";  // string | Limit sales surprises to those on or after this date (optional) 
-      var endDate = DateTime.Parse("";  // string | Limit sales surprises to those on or before this date (optional) 
+      var startDate = DateTime.Now;  // DateTime? | Limit sales surprises to those on or after this date (optional) 
+      var endDate = DateTime.Now;  // DateTime? | Limit sales surprises to those on or before this date (optional) 
       var salesActualGreater = "";  // decimal? | Return only records with an actual sales higher than this value (optional) 
       var salesActualLess = "";  // decimal? | Return only records with an actual sales lower than this value (optional) 
       var salesMeanEstimateGreater = "";  // decimal? | Return only records with a sales mean estimate greater than this value (optional) 
@@ -349,8 +651,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | string| Limit sales surprises to those on or after this date | [optional]  &nbsp;
- **endDate** | string| Limit sales surprises to those on or before this date | [optional]  &nbsp;
+ **startDate** | DateTime?| Limit sales surprises to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit sales surprises to those on or before this date | [optional]  &nbsp;
  **salesActualGreater** | decimal?| Return only records with an actual sales higher than this value | [optional]  &nbsp;
  **salesActualLess** | decimal?| Return only records with an actual sales lower than this value | [optional]  &nbsp;
  **salesMeanEstimateGreater** | decimal?| Return only records with a sales mean estimate greater than this value | [optional]  &nbsp;
@@ -372,6 +674,102 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksSalesSurprises**](ApiResponseZacksSalesSurprises.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksTargetPriceConsensuses)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksTargetPriceConsensuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksTargetPriceConsensuses.md)
+
+[//]: # (OPERATION:GetZacksTargetPriceConsensuses_v2)
+
+[//]: # (ENDPOINT:/zacks/target_price_consensuses)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzackstargetpriceconsensuses)
+
+<a name="getzackstargetpriceconsensuses"></a>
+## **GetZacksTargetPriceConsensuses**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksTargetPriceConsensuses_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksTargetPriceConsensuses GetZacksTargetPriceConsensuses (string identifier = null, string industryGroupNumber = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks Target Price Consensuses
+
+Returns the latest Zacks target price consensus data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksTargetPriceConsensusesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var identifier = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID) (optional) 
+      var industryGroupNumber = "";  // string | Return only growth rates for companies in the given Zacks industry group number (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksTargetPriceConsensuses result = zacksApi.GetZacksTargetPriceConsensuses(identifier, industryGroupNumber, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksTargetPriceConsensuses: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **industryGroupNumber** | string| Return only growth rates for companies in the given Zacks industry group number | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksTargetPriceConsensuses**](ApiResponseZacksTargetPriceConsensuses.md)
 
 [//]: # (END_OPERATION)
 

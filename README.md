@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.10.0
-- Package version: 5.3.0
+- API version: 2.11.0
+- Package version: 5.4.0
 
 
 <a name="frameworks-supported"></a>
@@ -264,8 +264,12 @@ Class | Method | HTTP request | Description
 *TechnicalApi* | [**GetSecurityPriceTechnicalsVwap**](docs/TechnicalApi.md#getsecuritypricetechnicalsvwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 *TechnicalApi* | [**GetSecurityPriceTechnicalsWr**](docs/TechnicalApi.md#getsecuritypricetechnicalswr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 *ZacksApi* | [**GetZacksAnalystRatings**](docs/ZacksApi.md#getzacksanalystratings) | **GET** /zacks/analyst_ratings | Zacks Analyst Ratings
+*ZacksApi* | [**GetZacksEpsEstimates**](docs/ZacksApi.md#getzacksepsestimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
+*ZacksApi* | [**GetZacksEpsGrowthRates**](docs/ZacksApi.md#getzacksepsgrowthrates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 *ZacksApi* | [**GetZacksEpsSurprises**](docs/ZacksApi.md#getzacksepssurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
+*ZacksApi* | [**GetZacksLongTermGrowthRates**](docs/ZacksApi.md#getzackslongtermgrowthrates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
 *ZacksApi* | [**GetZacksSalesSurprises**](docs/ZacksApi.md#getzackssalessurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
+*ZacksApi* | [**GetZacksTargetPriceConsensuses**](docs/ZacksApi.md#getzackstargetpriceconsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
 
 
 <a name="documentation-for-models"></a>
@@ -356,8 +360,12 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
  - [Model.ApiResponseStockMarketIndicesSearch](docs/ApiResponseStockMarketIndicesSearch.md)
  - [Model.ApiResponseZacksAnalystRatings](docs/ApiResponseZacksAnalystRatings.md)
+ - [Model.ApiResponseZacksEPSEstimates](docs/ApiResponseZacksEPSEstimates.md)
+ - [Model.ApiResponseZacksEPSGrowthRates](docs/ApiResponseZacksEPSGrowthRates.md)
  - [Model.ApiResponseZacksEPSSurprises](docs/ApiResponseZacksEPSSurprises.md)
+ - [Model.ApiResponseZacksLongTermGrowthRates](docs/ApiResponseZacksLongTermGrowthRates.md)
  - [Model.ApiResponseZacksSalesSurprises](docs/ApiResponseZacksSalesSurprises.md)
+ - [Model.ApiResponseZacksTargetPriceConsensuses](docs/ApiResponseZacksTargetPriceConsensuses.md)
  - [Model.AverageDailyTradingVolumeTechnicalValue](docs/AverageDailyTradingVolumeTechnicalValue.md)
  - [Model.AverageDirectionalIndexTechnicalValue](docs/AverageDirectionalIndexTechnicalValue.md)
  - [Model.AverageTrueRangeTechnicalValue](docs/AverageTrueRangeTechnicalValue.md)
@@ -443,8 +451,12 @@ Class | Method | HTTP request | Description
  - [Model.ZacksAnalystRating](docs/ZacksAnalystRating.md)
  - [Model.ZacksAnalystRatingSnapshot](docs/ZacksAnalystRatingSnapshot.md)
  - [Model.ZacksAnalystRatingSummary](docs/ZacksAnalystRatingSummary.md)
+ - [Model.ZacksEPSEstimate](docs/ZacksEPSEstimate.md)
+ - [Model.ZacksEPSGrowthRate](docs/ZacksEPSGrowthRate.md)
  - [Model.ZacksEPSSurprise](docs/ZacksEPSSurprise.md)
  - [Model.ZacksEPSSurpriseSummary](docs/ZacksEPSSurpriseSummary.md)
+ - [Model.ZacksLongTermGrowthRate](docs/ZacksLongTermGrowthRate.md)
  - [Model.ZacksSalesSurprise](docs/ZacksSalesSurprise.md)
  - [Model.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
+ - [Model.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
 

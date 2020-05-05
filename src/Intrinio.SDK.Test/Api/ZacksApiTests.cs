@@ -146,6 +146,66 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetZacksEtfHoldings
+        /// </summary>
+        [Test]
+        public void GetZacksEtfHoldingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string etfTicker = null;
+            //string holdingSymbol = null;
+            //decimal? weightGreater = null;
+            //decimal? weightLess = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksEtfHoldings(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksETFHoldings> (response, "response is ApiResponseZacksETFHoldings");
+        }
+        
+        /// <summary>
+        /// Test GetZacksInstitutionalHoldingCompanies
+        /// </summary>
+        [Test]
+        public void GetZacksInstitutionalHoldingCompaniesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ticker = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksInstitutionalHoldingCompanies(ticker, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksInstitutionalHoldingCompanies> (response, "response is ApiResponseZacksInstitutionalHoldingCompanies");
+        }
+        
+        /// <summary>
+        /// Test GetZacksInstitutionalHoldingOwners
+        /// </summary>
+        [Test]
+        public void GetZacksInstitutionalHoldingOwnersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string cik = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksInstitutionalHoldingOwners(cik, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksInstitutionalHoldingOwners> (response, "response is ApiResponseZacksInstitutionalHoldingOwners");
+        }
+        
+        /// <summary>
+        /// Test GetZacksInstitutionalHoldings
+        /// </summary>
+        [Test]
+        public void GetZacksInstitutionalHoldingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ticker = null;
+            //string ownerCik = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksInstitutionalHoldings(ticker, ownerCik, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksInstitutionalHoldings> (response, "response is ApiResponseZacksInstitutionalHoldings");
+        }
+        
+        /// <summary>
         /// Test GetZacksLongTermGrowthRates
         /// </summary>
         [Test]

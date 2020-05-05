@@ -8,6 +8,10 @@ Method | HTTP request | Description
 [**GetZacksEpsEstimates**](ZacksApi.md#getzacksepsestimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
 [**GetZacksEpsGrowthRates**](ZacksApi.md#getzacksepsgrowthrates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**GetZacksEpsSurprises**](ZacksApi.md#getzacksepssurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
+[**GetZacksEtfHoldings**](ZacksApi.md#getzacksetfholdings) | **GET** /zacks/etf_holdings | Zacks ETF Holdings
+[**GetZacksInstitutionalHoldingCompanies**](ZacksApi.md#getzacksinstitutionalholdingcompanies) | **GET** /zacks/institutional_holdings/companies | Zacks Institutional Holding Companies
+[**GetZacksInstitutionalHoldingOwners**](ZacksApi.md#getzacksinstitutionalholdingowners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
+[**GetZacksInstitutionalHoldings**](ZacksApi.md#getzacksinstitutionalholdings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
 [**GetZacksLongTermGrowthRates**](ZacksApi.md#getzackslongtermgrowthrates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
 [**GetZacksSalesSurprises**](ZacksApi.md#getzackssalessurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
 [**GetZacksTargetPriceConsensuses**](ZacksApi.md#getzackstargetpriceconsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
@@ -460,6 +464,390 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksEPSSurprises**](ApiResponseZacksEPSSurprises.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksEtfHoldings)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksETFHoldings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksETFHoldings.md)
+
+[//]: # (OPERATION:GetZacksEtfHoldings_v2)
+
+[//]: # (ENDPOINT:/zacks/etf_holdings)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksetfholdings)
+
+<a name="getzacksetfholdings"></a>
+## **GetZacksEtfHoldings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksEtfHoldings_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksETFHoldings GetZacksEtfHoldings (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks ETF Holdings
+
+Returns Zacks ETF holdings data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksEtfHoldingsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var etfTicker = "";  // string | Return holdings of the ETF with the given ticker (optional) 
+      var holdingSymbol = "";  // string | Return holdings where the instrument being held has the given trading symbol (optional) 
+      var weightGreater = "";  // decimal? | Return on the holdings with a weight greater than (optional) 
+      var weightLess = "";  // decimal? | Return on the holdings with a weight less than (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksETFHoldings result = zacksApi.GetZacksEtfHoldings(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksEtfHoldings: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **etfTicker** | string| Return holdings of the ETF with the given ticker | [optional]  &nbsp;
+ **holdingSymbol** | string| Return holdings where the instrument being held has the given trading symbol | [optional]  &nbsp;
+ **weightGreater** | decimal?| Return on the holdings with a weight greater than | [optional]  &nbsp;
+ **weightLess** | decimal?| Return on the holdings with a weight less than | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksETFHoldings**](ApiResponseZacksETFHoldings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksInstitutionalHoldingCompanies)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksInstitutionalHoldingCompanies)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldingCompanies.md)
+
+[//]: # (OPERATION:GetZacksInstitutionalHoldingCompanies_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings/companies)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksinstitutionalholdingcompanies)
+
+<a name="getzacksinstitutionalholdingcompanies"></a>
+## **GetZacksInstitutionalHoldingCompanies**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksInstitutionalHoldingCompanies_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldingCompanies GetZacksInstitutionalHoldingCompanies (string ticker = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks Institutional Holding Companies
+
+Returns Zacks institutional holding companies data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksInstitutionalHoldingCompaniesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var ticker = "";  // string | Return companies with the given ticker (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksInstitutionalHoldingCompanies result = zacksApi.GetZacksInstitutionalHoldingCompanies(ticker, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksInstitutionalHoldingCompanies: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | string| Return companies with the given ticker | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldingCompanies**](ApiResponseZacksInstitutionalHoldingCompanies.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksInstitutionalHoldingOwners)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksInstitutionalHoldingOwners)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldingOwners.md)
+
+[//]: # (OPERATION:GetZacksInstitutionalHoldingOwners_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings/owners)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksinstitutionalholdingowners)
+
+<a name="getzacksinstitutionalholdingowners"></a>
+## **GetZacksInstitutionalHoldingOwners**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksInstitutionalHoldingOwners_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldingOwners GetZacksInstitutionalHoldingOwners (string cik = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks Institutional Holding Owners
+
+Returns Zacks institutional holding owners data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksInstitutionalHoldingOwnersExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var cik = "";  // string | Return owners with the given Central Index Key (CIK) (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksInstitutionalHoldingOwners result = zacksApi.GetZacksInstitutionalHoldingOwners(cik, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksInstitutionalHoldingOwners: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cik** | string| Return owners with the given Central Index Key (CIK) | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldingOwners**](ApiResponseZacksInstitutionalHoldingOwners.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksInstitutionalHoldings)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksInstitutionalHoldings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldings.md)
+
+[//]: # (OPERATION:GetZacksInstitutionalHoldings_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksinstitutionalholdings)
+
+<a name="getzacksinstitutionalholdings"></a>
+## **GetZacksInstitutionalHoldings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksInstitutionalHoldings_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldings GetZacksInstitutionalHoldings (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null)
+
+#### Zacks Institutional Holdings
+
+Returns Zacks institutional holdings data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+
+namespace Example
+{
+  public class GetZacksInstitutionalHoldingsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+
+      var zacksApi = new ZacksApi();
+      var ticker = "";  // string | Return holdings where the company being held has the given ticker (optional) 
+      var ownerCik = "";  // string | Return holdings where the owner/holder has the given Central Index Key (CIK) (optional) 
+      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+
+      try
+      {
+        ApiResponseZacksInstitutionalHoldings result = zacksApi.GetZacksInstitutionalHoldings(ticker, ownerCik, pageSize, nextPage);
+        Console.WriteLine(result.ToJson());
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception when calling ZacksApi.GetZacksInstitutionalHoldings: " + e.Message );
+      }
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | string| Return holdings where the company being held has the given ticker | [optional]  &nbsp;
+ **ownerCik** | string| Return holdings where the owner/holder has the given Central Index Key (CIK) | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldings**](ApiResponseZacksInstitutionalHoldings.md)
 
 [//]: # (END_OPERATION)
 

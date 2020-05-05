@@ -191,6 +191,114 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseZacksEPSSurprises</returns>
         ApiResponse<ApiResponseZacksEPSSurprises> GetZacksEpsSurprisesWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, decimal? epsActualGreater = null, decimal? epsActualLess = null, decimal? epsMeanEstimateGreater = null, decimal? epsMeanEstimateLess = null, decimal? epsAmountDiffGreater = null, decimal? epsAmountDiffLess = null, decimal? epsPercentDiffGreater = null, decimal? epsPercentDiffLess = null, decimal? epsCountEstimateGreater = null, decimal? epsCountEstimateLess = null, decimal? epsStdDevEstimateGreater = null, decimal? epsStdDevEstimateLess = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Zacks ETF Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks ETF holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksETFHoldings</returns>
+        ApiResponseZacksETFHoldings GetZacksEtfHoldings (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks ETF Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks ETF holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksETFHoldings</returns>
+        ApiResponse<ApiResponseZacksETFHoldings> GetZacksEtfHoldingsWithHttpInfo (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Institutional Holding Companies
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding companies data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksInstitutionalHoldingCompanies</returns>
+        ApiResponseZacksInstitutionalHoldingCompanies GetZacksInstitutionalHoldingCompanies (string ticker = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Institutional Holding Companies
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding companies data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldingCompanies</returns>
+        ApiResponse<ApiResponseZacksInstitutionalHoldingCompanies> GetZacksInstitutionalHoldingCompaniesWithHttpInfo (string ticker = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Institutional Holding Owners
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding owners data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksInstitutionalHoldingOwners</returns>
+        ApiResponseZacksInstitutionalHoldingOwners GetZacksInstitutionalHoldingOwners (string cik = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Institutional Holding Owners
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding owners data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldingOwners</returns>
+        ApiResponse<ApiResponseZacksInstitutionalHoldingOwners> GetZacksInstitutionalHoldingOwnersWithHttpInfo (string cik = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Institutional Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksInstitutionalHoldings</returns>
+        ApiResponseZacksInstitutionalHoldings GetZacksInstitutionalHoldings (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Institutional Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldings</returns>
+        ApiResponse<ApiResponseZacksInstitutionalHoldings> GetZacksInstitutionalHoldingsWithHttpInfo (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
         /// Zacks Long Term Growth Rates
         /// </summary>
         /// <remarks>
@@ -469,6 +577,114 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseZacksEPSSurprises)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksEPSSurprises>> GetZacksEpsSurprisesAsyncWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, decimal? epsActualGreater = null, decimal? epsActualLess = null, decimal? epsMeanEstimateGreater = null, decimal? epsMeanEstimateLess = null, decimal? epsAmountDiffGreater = null, decimal? epsAmountDiffLess = null, decimal? epsPercentDiffGreater = null, decimal? epsPercentDiffLess = null, decimal? epsCountEstimateGreater = null, decimal? epsCountEstimateLess = null, decimal? epsStdDevEstimateGreater = null, decimal? epsStdDevEstimateLess = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks ETF Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks ETF holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksETFHoldings</returns>
+        System.Threading.Tasks.Task<ApiResponseZacksETFHoldings> GetZacksEtfHoldingsAsync (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks ETF Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks ETF holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksETFHoldings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksETFHoldings>> GetZacksEtfHoldingsAsyncWithHttpInfo (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Institutional Holding Companies
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding companies data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksInstitutionalHoldingCompanies</returns>
+        System.Threading.Tasks.Task<ApiResponseZacksInstitutionalHoldingCompanies> GetZacksInstitutionalHoldingCompaniesAsync (string ticker = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Institutional Holding Companies
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding companies data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksInstitutionalHoldingCompanies)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksInstitutionalHoldingCompanies>> GetZacksInstitutionalHoldingCompaniesAsyncWithHttpInfo (string ticker = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Institutional Holding Owners
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding owners data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksInstitutionalHoldingOwners</returns>
+        System.Threading.Tasks.Task<ApiResponseZacksInstitutionalHoldingOwners> GetZacksInstitutionalHoldingOwnersAsync (string cik = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Institutional Holding Owners
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holding owners data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksInstitutionalHoldingOwners)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksInstitutionalHoldingOwners>> GetZacksInstitutionalHoldingOwnersAsyncWithHttpInfo (string cik = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Institutional Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksInstitutionalHoldings</returns>
+        System.Threading.Tasks.Task<ApiResponseZacksInstitutionalHoldings> GetZacksInstitutionalHoldingsAsync (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks Institutional Holdings
+        /// </summary>
+        /// <remarks>
+        /// Returns Zacks institutional holdings data
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksInstitutionalHoldings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksInstitutionalHoldings>> GetZacksInstitutionalHoldingsAsyncWithHttpInfo (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Long Term Growth Rates
         /// </summary>
@@ -1488,6 +1704,626 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseZacksEPSSurprises>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseZacksEPSSurprises) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksEPSSurprises)));
+        }
+
+        /// <summary>
+        /// Zacks ETF Holdings Returns Zacks ETF holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksETFHoldings</returns>
+        public ApiResponseZacksETFHoldings GetZacksEtfHoldings (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksETFHoldings> localVarResponse = GetZacksEtfHoldingsWithHttpInfo(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks ETF Holdings Returns Zacks ETF holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksETFHoldings</returns>
+        public ApiResponse< ApiResponseZacksETFHoldings > GetZacksEtfHoldingsWithHttpInfo (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/etf_holdings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (etfTicker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "etf_ticker", etfTicker)); // query parameter
+            if (holdingSymbol != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "holding_symbol", holdingSymbol)); // query parameter
+            if (weightGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "weight_greater", weightGreater)); // query parameter
+            if (weightLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "weight_less", weightLess)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksEtfHoldings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksETFHoldings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksETFHoldings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksETFHoldings)));
+        }
+
+        /// <summary>
+        /// Zacks ETF Holdings Returns Zacks ETF holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksETFHoldings</returns>
+        public async System.Threading.Tasks.Task<ApiResponseZacksETFHoldings> GetZacksEtfHoldingsAsync (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksETFHoldings> localVarResponse = await GetZacksEtfHoldingsAsyncWithHttpInfo(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks ETF Holdings Returns Zacks ETF holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="etfTicker">Return holdings of the ETF with the given ticker (optional)</param>
+        /// <param name="holdingSymbol">Return holdings where the instrument being held has the given trading symbol (optional)</param>
+        /// <param name="weightGreater">Return on the holdings with a weight greater than (optional)</param>
+        /// <param name="weightLess">Return on the holdings with a weight less than (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksETFHoldings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksETFHoldings>> GetZacksEtfHoldingsAsyncWithHttpInfo (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/etf_holdings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (etfTicker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "etf_ticker", etfTicker)); // query parameter
+            if (holdingSymbol != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "holding_symbol", holdingSymbol)); // query parameter
+            if (weightGreater != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "weight_greater", weightGreater)); // query parameter
+            if (weightLess != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "weight_less", weightLess)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksEtfHoldings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksETFHoldings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksETFHoldings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksETFHoldings)));
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Companies Returns Zacks institutional holding companies data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksInstitutionalHoldingCompanies</returns>
+        public ApiResponseZacksInstitutionalHoldingCompanies GetZacksInstitutionalHoldingCompanies (string ticker = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksInstitutionalHoldingCompanies> localVarResponse = GetZacksInstitutionalHoldingCompaniesWithHttpInfo(ticker, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Companies Returns Zacks institutional holding companies data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldingCompanies</returns>
+        public ApiResponse< ApiResponseZacksInstitutionalHoldingCompanies > GetZacksInstitutionalHoldingCompaniesWithHttpInfo (string ticker = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/institutional_holdings/companies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksInstitutionalHoldingCompanies", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksInstitutionalHoldingCompanies>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksInstitutionalHoldingCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksInstitutionalHoldingCompanies)));
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Companies Returns Zacks institutional holding companies data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksInstitutionalHoldingCompanies</returns>
+        public async System.Threading.Tasks.Task<ApiResponseZacksInstitutionalHoldingCompanies> GetZacksInstitutionalHoldingCompaniesAsync (string ticker = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksInstitutionalHoldingCompanies> localVarResponse = await GetZacksInstitutionalHoldingCompaniesAsyncWithHttpInfo(ticker, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Companies Returns Zacks institutional holding companies data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return companies with the given ticker (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksInstitutionalHoldingCompanies)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksInstitutionalHoldingCompanies>> GetZacksInstitutionalHoldingCompaniesAsyncWithHttpInfo (string ticker = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/institutional_holdings/companies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksInstitutionalHoldingCompanies", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksInstitutionalHoldingCompanies>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksInstitutionalHoldingCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksInstitutionalHoldingCompanies)));
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Owners Returns Zacks institutional holding owners data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksInstitutionalHoldingOwners</returns>
+        public ApiResponseZacksInstitutionalHoldingOwners GetZacksInstitutionalHoldingOwners (string cik = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksInstitutionalHoldingOwners> localVarResponse = GetZacksInstitutionalHoldingOwnersWithHttpInfo(cik, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Owners Returns Zacks institutional holding owners data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldingOwners</returns>
+        public ApiResponse< ApiResponseZacksInstitutionalHoldingOwners > GetZacksInstitutionalHoldingOwnersWithHttpInfo (string cik = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/institutional_holdings/owners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (cik != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "cik", cik)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksInstitutionalHoldingOwners", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksInstitutionalHoldingOwners>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksInstitutionalHoldingOwners) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksInstitutionalHoldingOwners)));
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Owners Returns Zacks institutional holding owners data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksInstitutionalHoldingOwners</returns>
+        public async System.Threading.Tasks.Task<ApiResponseZacksInstitutionalHoldingOwners> GetZacksInstitutionalHoldingOwnersAsync (string cik = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksInstitutionalHoldingOwners> localVarResponse = await GetZacksInstitutionalHoldingOwnersAsyncWithHttpInfo(cik, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holding Owners Returns Zacks institutional holding owners data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cik">Return owners with the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksInstitutionalHoldingOwners)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksInstitutionalHoldingOwners>> GetZacksInstitutionalHoldingOwnersAsyncWithHttpInfo (string cik = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/institutional_holdings/owners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (cik != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "cik", cik)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksInstitutionalHoldingOwners", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksInstitutionalHoldingOwners>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksInstitutionalHoldingOwners) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksInstitutionalHoldingOwners)));
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holdings Returns Zacks institutional holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksInstitutionalHoldings</returns>
+        public ApiResponseZacksInstitutionalHoldings GetZacksInstitutionalHoldings (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksInstitutionalHoldings> localVarResponse = GetZacksInstitutionalHoldingsWithHttpInfo(ticker, ownerCik, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holdings Returns Zacks institutional holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldings</returns>
+        public ApiResponse< ApiResponseZacksInstitutionalHoldings > GetZacksInstitutionalHoldingsWithHttpInfo (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/institutional_holdings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
+            if (ownerCik != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "owner_cik", ownerCik)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksInstitutionalHoldings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksInstitutionalHoldings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksInstitutionalHoldings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksInstitutionalHoldings)));
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holdings Returns Zacks institutional holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksInstitutionalHoldings</returns>
+        public async System.Threading.Tasks.Task<ApiResponseZacksInstitutionalHoldings> GetZacksInstitutionalHoldingsAsync (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksInstitutionalHoldings> localVarResponse = await GetZacksInstitutionalHoldingsAsyncWithHttpInfo(ticker, ownerCik, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Institutional Holdings Returns Zacks institutional holdings data
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">Return holdings where the company being held has the given ticker (optional)</param>
+        /// <param name="ownerCik">Return holdings where the owner/holder has the given Central Index Key (CIK) (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksInstitutionalHoldings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksInstitutionalHoldings>> GetZacksInstitutionalHoldingsAsyncWithHttpInfo (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/institutional_holdings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
+            if (ownerCik != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "owner_cik", ownerCik)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksInstitutionalHoldings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksInstitutionalHoldings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseZacksInstitutionalHoldings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksInstitutionalHoldings)));
         }
 
         /// <summary>

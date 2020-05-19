@@ -103,11 +103,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_number_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>decimal?</returns>
         decimal? GetCompanyDataPointNumber (string identifier, string tag);
 
@@ -115,22 +115,22 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_number_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_text_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>string</returns>
         string GetCompanyDataPointText (string identifier, string tag);
 
@@ -138,11 +138,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_text_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetCompanyDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
@@ -221,11 +221,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -240,11 +240,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -476,11 +476,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_number_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of decimal?</returns>
         System.Threading.Tasks.Task<decimal?> GetCompanyDataPointNumberAsync (string identifier, string tag);
 
@@ -488,22 +488,22 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_number_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_text_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> GetCompanyDataPointTextAsync (string identifier, string tag);
 
@@ -511,11 +511,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_data_point_text_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
@@ -594,11 +594,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -613,11 +613,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -1338,11 +1338,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company $$v2_company_data_point_number_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>decimal?</returns>
         public decimal? GetCompanyDataPointNumber (string identifier, string tag)
         {
@@ -1351,11 +1351,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company $$v2_company_data_point_number_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of decimal?</returns>
         public ApiResponse< decimal? > GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag)
         {
@@ -1415,11 +1415,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company $$v2_company_data_point_number_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of decimal?</returns>
         public async System.Threading.Tasks.Task<decimal?> GetCompanyDataPointNumberAsync (string identifier, string tag)
         {
@@ -1429,11 +1429,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company $$v2_company_data_point_number_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
@@ -1493,11 +1493,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company $$v2_company_data_point_text_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>string</returns>
         public string GetCompanyDataPointText (string identifier, string tag)
         {
@@ -1506,11 +1506,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company $$v2_company_data_point_text_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > GetCompanyDataPointTextWithHttpInfo (string identifier, string tag)
         {
@@ -1570,11 +1570,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company $$v2_company_data_point_text_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> GetCompanyDataPointTextAsync (string identifier, string tag)
         {
@@ -1584,11 +1584,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company $$v2_company_data_point_text_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {
@@ -2024,11 +2024,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -2044,11 +2044,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -2122,11 +2122,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -2143,11 +2143,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>

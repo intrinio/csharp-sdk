@@ -31,16 +31,10 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum Iex for value: iex
+            /// Enum V2stockpriceintradaysourcesenum for value: $$v2_stock_price_intraday_sources_enum$$
             /// </summary>
-            [EnumMember(Value = "iex")]
-            Iex = 1,
-            
-            /// <summary>
-            /// Enum Bats for value: bats
-            /// </summary>
-            [EnumMember(Value = "bats")]
-            Bats = 2
+            [EnumMember(Value = "$$v2_stock_price_intraday_sources_enum$$")]
+            V2stockpriceintradaysourcesenum = 1
         }
 
         /// <summary>

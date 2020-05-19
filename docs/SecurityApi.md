@@ -232,7 +232,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
       try
       {
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 #### Data Point (Number) for Security
 
-Returns a numeric value for the given `tag` for the Security with the given `identifier`
+$$v2_security_data_point_number_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -322,8 +322,8 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var tag = "close_price";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+      var identifier = "$$v2_security_data_point_identifier_default$$";  // string | $$v2_security_data_point_identifier_description$$
+      var tag = "$$v2_security_data_point_item_number_default$$";  // string | $$v2_security_data_point_item_description$$
 
       try
       {
@@ -348,8 +348,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_security_data_point_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_security_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 #### Data Point (Text) for Security
 
-Returns a text value for the given `tag` for the Security with the given `identifier`
+$$v2_security_data_point_text_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -414,8 +414,8 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var tag = "figi";  // string | An Intrinio data tag ID or code-name
+      var identifier = "$$v2_security_data_point_identifier_default$$";  // string | $$v2_security_data_point_identifier_description$$
+      var tag = "$$v2_security_data_point_item_text_default$$";  // string | An Intrinio data tag ID or code-name
 
       try
       {
@@ -440,7 +440,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **identifier** | string| $$v2_security_data_point_identifier_description$$ |  &nbsp;
  **tag** | string| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
 
@@ -482,7 +482,7 @@ Name | Type | Description  | Notes
 
 #### Historical Data for Security
 
-Returns historical values for the given `tag` and the Security with the given `identifier`
+$$v2_security_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -506,8 +506,8 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var tag = "adj_close_price";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+      var identifier = "$$v2_security_historical_data_identifier_default$$";  // string | $$v2_security_historical_data_identifier_description$$
+      var tag = "$$v2_security_historical_data_item_default$$";  // string | $$v2_security_data_point_item_description$$
       var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
       var type = "";  // string | Filter by type, when applicable (optional) 
       var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
@@ -539,8 +539,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_security_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_security_data_point_item_description$$ |  &nbsp;
  **frequency** | string| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | string| Filter by type, when applicable | [optional]  &nbsp;
  **startDate** | DateTime?| Get historical data on or after this date | [optional]  &nbsp;
@@ -588,7 +588,7 @@ Name | Type | Description  | Notes
 
 #### Intraday Stock Prices for Security
 
-Return intraday stock prices for the Security with the given `identifier`
+$$v2_security_intraday_prices_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -612,7 +612,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var source = "";  // string | Return intraday prices from the specified data source (optional) 
       var startDate = DateTime.Now;  // DateTime? | Return intraday prices starting at the specified date (optional) 
       var startTime = "";  // string | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC) (optional) 
@@ -716,7 +716,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
       try
       {
@@ -806,7 +806,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
       try
       {
@@ -896,7 +896,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -994,7 +994,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 22;  // int? | The number of observations, per period, to calculate Average Daily Trading Volume (optional)  (default to 22)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -1094,7 +1094,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Average Directional Index (optional)  (default to 14)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -1194,7 +1194,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var shortPeriod = 5;  // int? | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator (optional)  (default to 5)
       var longPeriod = 34;  // int? | The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator (optional)  (default to 34)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -1296,7 +1296,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Average True Range (optional)  (default to 14)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -1396,7 +1396,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Bollinger Bands (optional)  (default to 20)
       var standardDeviations = 2.0;  // float? | The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands (optional)  (default to 2.0)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Bollinger Bands (optional)  (default to close)
@@ -1500,7 +1500,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Commodity Channel Index (optional)  (default to 20)
       var constant = 0.015;  // float? | The number of observations, per period, to calculate Commodity Channel Index (optional)  (default to 0.015)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -1602,7 +1602,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Chaikin Money Flow (optional)  (default to 20)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -1702,7 +1702,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Donchian Channel (optional)  (default to 20)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Donchian Channel (optional)  (default to close)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -1804,7 +1804,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Detrended Price Oscillator (optional)  (default to 20)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Detrended Price Oscillator (optional)  (default to close)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -1906,7 +1906,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Ease of Movement (optional)  (default to 20)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -2006,7 +2006,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -2104,7 +2104,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var lowPeriod = 9;  // int? | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo (optional)  (default to 9)
       var mediumPeriod = 26;  // int? | The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo (optional)  (default to 26)
       var highPeriod = 52;  // int? | The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo (optional)  (default to 52)
@@ -2208,7 +2208,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 10;  // int? | The number of observations, per period, to calculate Kelter Channel (optional)  (default to 10)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -2308,7 +2308,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var roc1 = 10;  // int? | The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional)  (default to 10)
       var roc2 = 15;  // int? | The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional)  (default to 15)
       var roc3 = 20;  // int? | The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional)  (default to 20)
@@ -2424,7 +2424,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var fastPeriod = 12;  // int? | The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence (optional)  (default to 12)
       var slowPeriod = 26;  // int? | The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence (optional)  (default to 26)
       var signalPeriod = 9;  // int? | The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence (optional)  (default to 9)
@@ -2530,7 +2530,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Money Flow Index (optional)  (default to 14)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -2630,7 +2630,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var emaPeriod = 9;  // int? | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index (optional)  (default to 9)
       var sumPeriod = 25;  // int? | The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index (optional)  (default to 25)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -2732,7 +2732,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -2830,7 +2830,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -2928,7 +2928,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 10;  // int? | The number of observations, per period, to calculate On-balance Volume Mean (optional)  (default to 10)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -3028,7 +3028,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Relative Strength Index (optional)  (default to 14)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Relative Strength Index (optional)  (default to close)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -3130,7 +3130,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 20;  // int? | The number of observations, per period, to calculate Simple Moving Average (optional)  (default to 20)
       var priceKey = "close";  // string | The Stock Price field to use when calculating Simple Moving Average (optional)  (default to close)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -3232,7 +3232,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate %K of Stochastic Oscillator (optional)  (default to 14)
       var signalPeriod = 3;  // int? | The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator (optional)  (default to 3)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
@@ -3334,7 +3334,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 15;  // int? | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average (optional)  (default to 15)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -3434,7 +3434,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var lowPeriod = 13;  // int? | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index (optional)  (default to 13)
       var highPeriod = 25;  // int? | The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index (optional)  (default to 25)
       var priceKey = "close";  // string | The Stock Price field to use when calculating True Strength Index (optional)  (default to close)
@@ -3538,7 +3538,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var shortPeriod = 7;  // int? | The number of observations, per period, to calculate the short period for Ultimate Oscillator (optional)  (default to 7)
       var mediumPeriod = 14;  // int? | The number of observations, per period, to calculate the medium period for Ultimate Oscillator (optional)  (default to 14)
       var longPeriod = 28;  // int? | The number of observations, per period, to calculate the long period for Ultimate Oscillator (optional)  (default to 28)
@@ -3648,7 +3648,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to calculate Vortex Indicator (optional)  (default to 14)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -3748,7 +3748,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -3846,7 +3846,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -3944,7 +3944,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var period = 14;  // int? | The number of observations, per period, to look-back when calculating Williams %R (optional)  (default to 14)
       var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
@@ -4044,7 +4044,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var source = "";  // string | Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional) 
 
       try
@@ -4136,7 +4136,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Return price adjustments on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01");  // DateTime? | Return price adjustments on or before the date (optional) 
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
@@ -4234,7 +4234,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Return prices on or after the date (optional) 
       var endDate = DateTime.Parse("2019-01-01");  // DateTime? | Return prices on or before the date (optional) 
       var frequency = "daily";  // string | Return stock prices in the given frequency (optional)  (default to daily)
@@ -4334,7 +4334,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var startDate = DateTime.Parse("";  // string | Limit ratings to those on or after this date (optional) 
       var endDate = DateTime.Parse("";  // string | Limit ratings to those on or before this date (optional) 
       var meanGreater = "";  // decimal? | Return only records with a mean (average) higher than this value (optional) 
@@ -4458,7 +4458,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var date = DateTime.Parse("";  // string | Lookup a historical snapshot on the given date (optional) 
 
       try
@@ -4550,7 +4550,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 
@@ -4644,7 +4644,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
       var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
       var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
 

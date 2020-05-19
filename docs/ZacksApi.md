@@ -71,7 +71,7 @@ namespace Example
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
 
       var zacksApi = new ZacksApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional) 
+      var identifier = "$$v2_ticker_default$$";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional) 
       var startDate = DateTime.Now;  // DateTime? | Limit ratings to those on or after this date (optional) 
       var endDate = DateTime.Now;  // DateTime? | Limit ratings to those on or before this date (optional) 
       var meanGreater = "";  // decimal? | Return only records with a mean (average) higher than this value (optional) 

@@ -96,11 +96,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>decimal?</returns>
         decimal? GetSecurityDataPointNumber (string identifier, string tag);
 
@@ -108,21 +108,21 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetSecurityDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>string</returns>
         string GetSecurityDataPointText (string identifier, string tag);
@@ -131,10 +131,10 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetSecurityDataPointTextWithHttpInfo (string identifier, string tag);
@@ -142,11 +142,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_historical_data_description$$
+        /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -161,11 +161,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_historical_data_description$$
+        /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -179,7 +179,7 @@ namespace Intrinio.SDK.Api
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_intraday_prices_description$$
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -197,7 +197,7 @@ namespace Intrinio.SDK.Api
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_intraday_prices_description$$
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1606,11 +1606,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of decimal?</returns>
         System.Threading.Tasks.Task<decimal?> GetSecurityDataPointNumberAsync (string identifier, string tag);
 
@@ -1618,21 +1618,21 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSecurityDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> GetSecurityDataPointTextAsync (string identifier, string tag);
@@ -1641,10 +1641,10 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetSecurityDataPointTextAsyncWithHttpInfo (string identifier, string tag);
@@ -1652,11 +1652,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_historical_data_description$$
+        /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -1671,11 +1671,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_historical_data_description$$
+        /// Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -1689,7 +1689,7 @@ namespace Intrinio.SDK.Api
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_intraday_prices_description$$
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1707,7 +1707,7 @@ namespace Intrinio.SDK.Api
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// $$v2_security_intraday_prices_description$$
+        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3517,11 +3517,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Security $$v2_security_data_point_number_description$$
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>decimal?</returns>
         public decimal? GetSecurityDataPointNumber (string identifier, string tag)
         {
@@ -3530,11 +3530,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Security $$v2_security_data_point_number_description$$
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of decimal?</returns>
         public ApiResponse< decimal? > GetSecurityDataPointNumberWithHttpInfo (string identifier, string tag)
         {
@@ -3594,11 +3594,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Security $$v2_security_data_point_number_description$$
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of decimal?</returns>
         public async System.Threading.Tasks.Task<decimal?> GetSecurityDataPointNumberAsync (string identifier, string tag)
         {
@@ -3608,11 +3608,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Security $$v2_security_data_point_number_description$$
+        /// Data Point (Number) for Security Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetSecurityDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
@@ -3672,10 +3672,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Security $$v2_security_data_point_text_description$$
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>string</returns>
         public string GetSecurityDataPointText (string identifier, string tag)
@@ -3685,10 +3685,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Security $$v2_security_data_point_text_description$$
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > GetSecurityDataPointTextWithHttpInfo (string identifier, string tag)
@@ -3749,10 +3749,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Security $$v2_security_data_point_text_description$$
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> GetSecurityDataPointTextAsync (string identifier, string tag)
@@ -3763,10 +3763,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Security $$v2_security_data_point_text_description$$
+        /// Data Point (Text) for Security Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_data_point_identifier_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code-name</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetSecurityDataPointTextAsyncWithHttpInfo (string identifier, string tag)
@@ -3827,11 +3827,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Security $$v2_security_historical_data_description$$
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -3847,11 +3847,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Security $$v2_security_historical_data_description$$
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -3925,11 +3925,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Security $$v2_security_historical_data_description$$
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -3946,11 +3946,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Security $$v2_security_historical_data_description$$
+        /// Historical Data for Security Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_security_historical_data_identifier_description$$</param>
-        /// <param name="tag">$$v2_security_data_point_item_description$$</param>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -4024,7 +4024,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security $$v2_security_intraday_prices_description$$
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -4043,7 +4043,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security $$v2_security_intraday_prices_description$$
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -4116,7 +4116,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security $$v2_security_intraday_prices_description$$
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -4136,7 +4136,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security $$v2_security_intraday_prices_description$$
+        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>

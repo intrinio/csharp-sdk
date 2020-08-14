@@ -50,9 +50,12 @@ Returns all Data Tags. Returns Data Tags matching parameters when specified.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -61,25 +64,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var dataTagApi = new DataTagApi();
-      var tag = "";  // string | Tag (optional) 
-      var type = "";  // string | Type (optional) 
-      var parent = "";  // string | ID of tag parent (optional) 
-      var statementCode = "income_statement";  // string | Statement Code (optional) 
-      var fsTemplate = "";  // string | Template (optional)  (default to industrial)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string tag = "";
 
-      try
-      {
-        ApiResponseDataTags result = dataTagApi.GetAllDataTags(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling DataTagApi.GetAllDataTags: " + e.Message );
-      }
+      string type = "";
+
+      string parent = "";
+
+      string statementCode = "income_statement";
+
+      string fsTemplate = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseDataTags result = dataTagApi.GetAllDataTags(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -152,9 +156,12 @@ Returns the Data Tag with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -163,19 +170,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var dataTagApi = new DataTagApi();
-      var identifier = "marketcap";  // string | The Intrinio ID or the code-name of the Data Tag
+      
+      string identifier = "marketcap";
 
-      try
-      {
-        DataTag result = dataTagApi.GetDataTagById(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling DataTagApi.GetDataTagById: " + e.Message );
-      }
+      
+      DataTag result = dataTagApi.GetDataTagById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -242,9 +244,12 @@ Searches for Data Tags matching the text `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -253,20 +258,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var dataTagApi = new DataTagApi();
-      var query = "revenue";  // string | 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string query = "revenue";
 
-      try
-      {
-        ApiResponseDataTagsSearch result = dataTagApi.SearchDataTags(query, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling DataTagApi.SearchDataTags: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      
+      ApiResponseDataTagsSearch result = dataTagApi.SearchDataTags(query, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

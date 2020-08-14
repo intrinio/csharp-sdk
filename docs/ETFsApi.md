@@ -53,9 +53,12 @@ Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -64,21 +67,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var eTFsApi = new ETFsApi();
-      var exchange = "XNAS";  // string |  (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string exchange = "XNAS";
 
-      try
-      {
-        ApiResponseETFs result = eTFsApi.GetAllEtfs(exchange, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ETFsApi.GetAllEtfs: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseETFs result = eTFsApi.GetAllEtfs(exchange, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -147,9 +147,12 @@ Returns the Exchange Traded Fund (ETF) with the given identifier
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -158,19 +161,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var eTFsApi = new ETFsApi();
-      var identifier = "SPY";  // string | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
+      
+      string identifier = "SPY";
 
-      try
-      {
-        ETF result = eTFsApi.GetEtf(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ETFsApi.GetEtf: " + e.Message );
-      }
+      
+      ETF result = eTFsApi.GetEtf(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -237,9 +235,12 @@ Returns analytics for the Exchange Traded Fund (ETF) including volume, market ca
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -248,19 +249,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var eTFsApi = new ETFsApi();
-      var identifier = "SPY";  // string | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
+      
+      string identifier = "SPY";
 
-      try
-      {
-        ETFAnalytics result = eTFsApi.GetEtfAnalytics(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ETFsApi.GetEtfAnalytics: " + e.Message );
-      }
+      
+      ETFAnalytics result = eTFsApi.GetEtfAnalytics(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -327,9 +323,12 @@ Returns the holdings sorted by weight descending and the Exchange Traded Fund (E
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -338,21 +337,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var eTFsApi = new ETFsApi();
-      var identifier = "SPY";  // string | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "SPY";
 
-      try
-      {
-        ApiResponseETFHoldings result = eTFsApi.GetEtfHoldings(identifier, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ETFsApi.GetEtfHoldings: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseETFHoldings result = eTFsApi.GetEtfHoldings(identifier, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -421,9 +417,12 @@ Returns daily stats for the Exchange Traded Fund (ETF) including net asset value
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -432,19 +431,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var eTFsApi = new ETFsApi();
-      var identifier = "SPY";  // string | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
+      
+      string identifier = "SPY";
 
-      try
-      {
-        ETFStats result = eTFsApi.GetEtfStats(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ETFsApi.GetEtfStats: " + e.Message );
-      }
+      
+      ETFStats result = eTFsApi.GetEtfStats(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -511,9 +505,12 @@ Searches for Exchange Traded Funds (ETFs) matching the text `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -522,19 +519,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var eTFsApi = new ETFsApi();
-      var query = "iShares";  // string | 
+      
+      string query = "iShares";
 
-      try
-      {
-        ApiResponseETFs result = eTFsApi.SearchEtfs(query);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ETFsApi.SearchEtfs: " + e.Message );
-      }
+      
+      ApiResponseETFs result = eTFsApi.SearchEtfs(query);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

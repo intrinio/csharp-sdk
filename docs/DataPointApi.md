@@ -49,9 +49,12 @@ Returns a numeric value for the given `tag` and the entity with the given `ident
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -60,20 +63,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var dataPointApi = new DataPointApi();
-      var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-      var tag = "marketcap";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        decimal? result = dataPointApi.GetDataPointNumber(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling DataPointApi.GetDataPointNumber: " + e.Message );
-      }
+      string tag = "marketcap";
+
+      
+      decimal? result = dataPointApi.GetDataPointNumber(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -141,9 +140,12 @@ Returns a text value for the given `tag` for the Security with the given `identi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -152,20 +154,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var dataPointApi = new DataPointApi();
-      var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-      var tag = "ceo";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        string result = dataPointApi.GetDataPointText(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling DataPointApi.GetDataPointText: " + e.Message );
-      }
+      string tag = "ceo";
+
+      
+      string result = dataPointApi.GetDataPointText(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

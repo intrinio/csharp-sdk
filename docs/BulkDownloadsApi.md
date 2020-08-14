@@ -48,9 +48,12 @@ Returns all active bulk downloads for your account with links to download.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -59,18 +62,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var bulkDownloadsApi = new BulkDownloadsApi();
-
-      try
-      {
-        ApiResponseBulkDownloadLinks result = bulkDownloadsApi.GetBulkDownloadLinks();
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling BulkDownloadsApi.GetBulkDownloadLinks: " + e.Message );
-      }
+      
+      
+      ApiResponseBulkDownloadLinks result = bulkDownloadsApi.GetBulkDownloadLinks();
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

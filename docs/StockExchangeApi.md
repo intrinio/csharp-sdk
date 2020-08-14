@@ -53,9 +53,12 @@ Returns all Stock Exchanges matching the specified parameters
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -64,22 +67,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var stockExchangeApi = new StockExchangeApi();
-      var city = "New York";  // string | Filter by city (optional) 
-      var country = "UNITED STATES OF AMERICA";  // string | Filter by country (optional) 
-      var countryCode = "US";  // string | Filter by ISO country code (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string city = "New York";
 
-      try
-      {
-        ApiResponseStockExchanges result = stockExchangeApi.GetAllStockExchanges(city, country, countryCode, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling StockExchangeApi.GetAllStockExchanges: " + e.Message );
-      }
+      string country = "UNITED STATES OF AMERICA";
+
+      string countryCode = "US";
+
+      int? pageSize = 100;
+
+      
+      ApiResponseStockExchanges result = stockExchangeApi.GetAllStockExchanges(city, country, countryCode, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -149,9 +150,12 @@ Returns the Stock Exchange with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -160,19 +164,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var stockExchangeApi = new StockExchangeApi();
-      var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
+      
+      string identifier = "USCOMP";
 
-      try
-      {
-        StockExchange result = stockExchangeApi.GetStockExchangeById(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangeById: " + e.Message );
-      }
+      
+      StockExchange result = stockExchangeApi.GetStockExchangeById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -239,9 +238,12 @@ Returns stock price adjustments for the Stock Exchange with the given `identifie
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -250,22 +252,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var stockExchangeApi = new StockExchangeApi();
-      var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var date = DateTime.Parse("2018-08-14");  // DateTime? | The date for which to return price adjustments (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "USCOMP";
 
-      try
-      {
-        ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangePriceAdjustments: " + e.Message );
-      }
+      DateTime? date = DateTime.Parse("2018-08-14");
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -335,9 +335,12 @@ Returns end-of-day stock prices for Securities on the Stock Exchange with `ident
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -346,22 +349,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var stockExchangeApi = new StockExchangeApi();
-      var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var date = DateTime.Parse("2018-08-14");  // DateTime? | The date for which to return prices (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "USCOMP";
 
-      try
-      {
-        ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangePrices: " + e.Message );
-      }
+      DateTime? date = DateTime.Parse("2018-08-14");
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -431,9 +432,12 @@ Returns realtime stock prices for the Stock Exchange with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -442,22 +446,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var stockExchangeApi = new StockExchangeApi();
-      var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var source = "";  // string | Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "USCOMP";
 
-      try
-      {
-        ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangeRealtimePrices: " + e.Message );
-      }
+      string source = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -527,9 +529,12 @@ Returns Securities traded on the Stock Exchange with `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -538,21 +543,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var stockExchangeApi = new StockExchangeApi();
-      var identifier = "USCOMP";  // string | A Stock Exchange identifier (MIC or Intrinio ID)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "USCOMP";
 
-      try
-      {
-        ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling StockExchangeApi.GetStockExchangeSecurities: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

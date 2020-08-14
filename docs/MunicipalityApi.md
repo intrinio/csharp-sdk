@@ -49,9 +49,12 @@ Method | HTTP request | Description
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -60,31 +63,38 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var municipalityApi = new MunicipalityApi();
-      var hasFinancials = true;  // bool? | Return municipalities with financials (optional) 
-      var governmentName = "";  // string | Return municipalities with a government name matching the given query (optional) 
-      var governmentType = "";  // string | Return municipalities with the given government type (optional) 
-      var areaName = "";  // string | Return municipalities with an area name matching the given query (optional) 
-      var areaType = "";  // string | Return municipalities with the given area type (optional) 
-      var city = "";  // string | Return municipalities in the given city (optional) 
-      var state = "";  // string | Return municipalities in the given state (optional) 
-      var zipcode = "";  // decimal? | Return municipalities in the given zipcode (optional) 
-      var populationGreaterThan = "";  // decimal? | Return municipalities with a population greater than the given number (optional) 
-      var populationLessThan = "";  // decimal? | Return municipalities with a population less than the given number (optional) 
-      var enrollmentGreaterThan = "";  // decimal? | Return municipalities with an enrollment greater than the given number (optional) 
-      var enrollmentLessThan = "";  // decimal? | Return municipalities with an enrollment less than the given number (optional) 
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      bool? hasFinancials = true;
 
-      try
-      {
-        ApiResponseMunicipalities result = municipalityApi.GetAllMunicipalities(hasFinancials, governmentName, governmentType, areaName, areaType, city, state, zipcode, populationGreaterThan, populationLessThan, enrollmentGreaterThan, enrollmentLessThan, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling MunicipalityApi.GetAllMunicipalities: " + e.Message );
-      }
+      string governmentName = "";
+
+      string governmentType = "";
+
+      string areaName = "";
+
+      string areaType = "";
+
+      string city = "";
+
+      string state = "";
+
+      decimal? zipcode = null;
+
+      decimal? populationGreaterThan = null;
+
+      decimal? populationLessThan = null;
+
+      decimal? enrollmentGreaterThan = null;
+
+      decimal? enrollmentLessThan = null;
+
+      string nextPage = "";
+
+      
+      ApiResponseMunicipalities result = municipalityApi.GetAllMunicipalities(hasFinancials, governmentName, governmentType, areaName, areaType, city, state, zipcode, populationGreaterThan, populationLessThan, enrollmentGreaterThan, enrollmentLessThan, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -163,9 +173,12 @@ Returns the Municipality with the given ID
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -174,19 +187,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var municipalityApi = new MunicipalityApi();
-      var id = "mun_Xn7x4z";  // string | An Intrinio ID of a Municipality
+      
+      string id = "mun_Xn7x4z";
 
-      try
-      {
-        Municipality result = municipalityApi.GetMunicipalityById(id);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling MunicipalityApi.GetMunicipalityById: " + e.Message );
-      }
+      
+      Municipality result = municipalityApi.GetMunicipalityById(id);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -253,9 +261,12 @@ Returns financial statement data for the Municipality with the given ID
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -264,20 +275,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var municipalityApi = new MunicipalityApi();
-      var id = "mun_Xn7x4z";  // string | An Intrinio ID of a Municipality
-      var fiscalYear = 2017;  // decimal? | Return financials for the given fiscal year (optional) 
+      
+      string id = "mun_Xn7x4z";
 
-      try
-      {
-        ApiResponseMunicipalitiyFinancials result = municipalityApi.GetMunicipalityFinancials(id, fiscalYear);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling MunicipalityApi.GetMunicipalityFinancials: " + e.Message );
-      }
+      decimal? fiscalYear = 2017;
+
+      
+      ApiResponseMunicipalitiyFinancials result = municipalityApi.GetMunicipalityFinancials(id, fiscalYear);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

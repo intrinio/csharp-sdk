@@ -60,9 +60,12 @@ Returns all Companies. When parameters are specified, returns matching companies
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -71,28 +74,32 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var latestFilingDate = DateTime.Now;  // DateTime? | Return companies whose latest 10-Q or 10-K was filed on or after this date (optional) 
-      var sic = "";  // string | Return companies with the given Standard Industrial Classification code (optional) 
-      var template = "";  // string | Return companies with the given financial statement template (optional) 
-      var sector = "";  // string | Return companies in the given industry sector (optional) 
-      var industryCategory = "";  // string | Return companies in the given industry category (optional) 
-      var industryGroup = "";  // string | Return companies in the given industry group (optional) 
-      var hasFundamentals = true;  // bool? | Return only companies that have fundamentals when true (optional) 
-      var hasStockPrices = true;  // bool? | Return only companies that have stock prices when true (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      DateTime? latestFilingDate = null;
 
-      try
-      {
-        ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetAllCompanies: " + e.Message );
-      }
+      string sic = "";
+
+      string template = "";
+
+      string sector = "";
+
+      string industryCategory = "";
+
+      string industryGroup = "";
+
+      bool? hasFundamentals = true;
+
+      bool? hasStockPrices = true;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -168,9 +175,12 @@ Returns all News for all Companies
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -179,20 +189,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      int? pageSize = 100;
 
-      try
-      {
-        ApiResponseNews result = companyApi.GetAllCompanyNews(pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetAllCompanyNews: " + e.Message );
-      }
+      string nextPage = "";
+
+      
+      ApiResponseNews result = companyApi.GetAllCompanyNews(pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -260,9 +266,12 @@ Returns the Company with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -271,19 +280,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        Company result = companyApi.GetCompany(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompany: " + e.Message );
-      }
+      
+      Company result = companyApi.GetCompany(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -350,9 +354,12 @@ Returns a numeric value for the given `tag` for the Company with the given `iden
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -361,20 +368,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var tag = "marketcap";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        decimal? result = companyApi.GetCompanyDataPointNumber(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanyDataPointNumber: " + e.Message );
-      }
+      string tag = "marketcap";
+
+      
+      decimal? result = companyApi.GetCompanyDataPointNumber(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -442,9 +445,12 @@ Returns a text value for the given `tag` for the Company with the given `identif
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -453,20 +459,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var tag = "ceo";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        string result = companyApi.GetCompanyDataPointText(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanyDataPointText: " + e.Message );
-      }
+      string tag = "ceo";
+
+      
+      string result = companyApi.GetCompanyDataPointText(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -534,9 +536,12 @@ Returns a complete list of SEC filings for the Company with the given `identifie
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -545,24 +550,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var reportType = "";  // string | Filter by <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types. (optional) 
-      var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Filed on or after the given date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Filed before or after the given date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanyFilings: " + e.Message );
-      }
+      string reportType = "";
+
+      DateTime? startDate = DateTime.Parse("2015-01-01");
+
+      DateTime? endDate = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -634,9 +639,12 @@ Returns all Fundamentals for the Company with the given `identifier`. Returns Fu
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -645,29 +653,34 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var filedAfter = DateTime.Now;  // DateTime? | Filed on or after this date (optional) 
-      var filedBefore = DateTime.Now;  // DateTime? | Filed on or before this date (optional) 
-      var reportedOnly = false;  // bool? | Only as-reported fundamentals (optional) 
-      var fiscalYear = "";  // int? | Only for the given fiscal year (optional) 
-      var statementCode = "";  // string | Only of the given statement code (optional) 
-      var type = "";  // string | Only of the given type (optional) 
-      var startDate = DateTime.Now;  // DateTime? | Only on or after the given date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Only on or before the given date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanyFundamentals: " + e.Message );
-      }
+      DateTime? filedAfter = null;
+
+      DateTime? filedBefore = null;
+
+      bool? reportedOnly = false;
+
+      int? fiscalYear = null;
+
+      string statementCode = "";
+
+      string type = "";
+
+      DateTime? startDate = null;
+
+      DateTime? endDate = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -744,9 +757,12 @@ Returns historical values for the given `tag` and the Company with the given `id
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -755,27 +771,30 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var tag = "marketcap";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-      var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
-      var type = "";  // string | Return historical data for given fiscal period type (optional) 
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Return historical data on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Return historical data on or before this date (optional) 
-      var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanyHistoricalData: " + e.Message );
-      }
+      string tag = "marketcap";
+
+      string frequency = "daily";
+
+      string type = "";
+
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+
+      DateTime? endDate = null;
+
+      string sortOrder = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -850,9 +869,12 @@ Returns initial public offerings (IPOs). An IPO is a public offering of private 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -861,26 +883,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var ticker = "";  // string | Return IPOs with the given ticker (typically the IPO for the company) (optional) 
-      var status = "";  // string | Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional) 
-      var startDate = DateTime.Now;  // DateTime? | Return IPOs on or after the given date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Return IPOs on or before the given date (optional) 
-      var offerAmountGreaterThan = "";  // int? | Return IPOs with an offer dollar amount greater than the given amount (optional) 
-      var offerAmountLessThan = "";  // int? | Return IPOs with an offer dollar amount less than the given amount (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string ticker = "";
 
-      try
-      {
-        ApiResponseInitialPublicOfferings result = companyApi.GetCompanyIpos(ticker, status, startDate, endDate, offerAmountGreaterThan, offerAmountLessThan, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanyIpos: " + e.Message );
-      }
+      string status = "";
+
+      DateTime? startDate = null;
+
+      DateTime? endDate = null;
+
+      int? offerAmountGreaterThan = null;
+
+      int? offerAmountLessThan = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseInitialPublicOfferings result = companyApi.GetCompanyIpos(ticker, status, startDate, endDate, offerAmountGreaterThan, offerAmountLessThan, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -954,9 +978,12 @@ Returns news for the Company with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -965,21 +992,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanyNews: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1048,9 +1072,12 @@ Returns Securities for the Company with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1059,20 +1086,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseCompanySecurities result = companyApi.GetCompanySecurities(identifier, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.GetCompanySecurities: " + e.Message );
-      }
+      string nextPage = "";
+
+      
+      ApiResponseCompanySecurities result = companyApi.GetCompanySecurities(identifier, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1140,9 +1163,12 @@ Returns the Fundamental for the Company with the given `identifier` and with the
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1151,22 +1177,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var statementCode = "income_statement";  // string | The statement code
-      var fiscalPeriod = "FY";  // string | The fiscal period
-      var fiscalYear = 2017;  // int? | The fiscal year
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        Fundamental result = companyApi.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.LookupCompanyFundamental: " + e.Message );
-      }
+      string statementCode = "income_statement";
+
+      string fiscalPeriod = "FY";
+
+      int? fiscalYear = 2017;
+
+      
+      Fundamental result = companyApi.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1236,9 +1260,12 @@ Searches for Companies matching the text `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1247,20 +1274,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var companyApi = new CompanyApi();
-      var query = "Apple";  // string | Search parameters
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string query = "Apple";
 
-      try
-      {
-        ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling CompanyApi.SearchCompanies: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      
+      ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

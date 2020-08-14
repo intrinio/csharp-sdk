@@ -48,9 +48,12 @@ Returns historical values for the given `tag` and the entity represented by the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -59,27 +62,30 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var historicalDataApi = new HistoricalDataApi();
-      var identifier = "AAPL";  // string | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-      var tag = "marketcap";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-      var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
-      var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Get historical date on or before this date (optional) 
-      var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling HistoricalDataApi.GetHistoricalData: " + e.Message );
-      }
+      string tag = "marketcap";
+
+      string frequency = "daily";
+
+      string type = "";
+
+      DateTime? startDate = DateTime.Parse("2015-01-01");
+
+      DateTime? endDate = null;
+
+      string sortOrder = "desc";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

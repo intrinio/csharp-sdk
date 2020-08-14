@@ -50,9 +50,12 @@ Returns a list of forex currencies for which prices are available.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -61,18 +64,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var forexApi = new ForexApi();
-
-      try
-      {
-        ApiResponseForexCurrencies result = forexApi.GetForexCurrencies();
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ForexApi.GetForexCurrencies: " + e.Message );
-      }
+      
+      
+      ApiResponseForexCurrencies result = forexApi.GetForexCurrencies();
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -136,9 +133,12 @@ Returns a list of currency pairs used to request foreign exchange (forex) market
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -147,18 +147,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var forexApi = new ForexApi();
-
-      try
-      {
-        ApiResponseForexPairs result = forexApi.GetForexPairs();
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ForexApi.GetForexPairs: " + e.Message );
-      }
+      
+      
+      ApiResponseForexPairs result = forexApi.GetForexPairs();
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -222,9 +216,12 @@ Provides a list of forex price quotes for a given forex currency pair and timefr
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -233,27 +230,30 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var forexApi = new ForexApi();
-      var pair = "EURUSD";  // string | The Forex Currency Pair code
-      var timeframe = "D1";  // string | The time interval for the quotes
-      var timezone = "UTC";  // string | Returns trading times in this timezone (optional)  (default to UTC)
-      var startDate = DateTime.Now;  // DateTime? | Return Forex Prices on or after this date (optional) 
-      var startTime = "";  // string | Return Forex Prices at or after this time (24-hour) (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Return Forex Prices on or before this date (optional) 
-      var endTime = "";  // string | Return Forex Prices at or before this time (24-hour) (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string pair = "EURUSD";
 
-      try
-      {
-        ApiResponseForexPrices result = forexApi.GetForexPrices(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ForexApi.GetForexPrices: " + e.Message );
-      }
+      string timeframe = "D1";
+
+      string timezone = "UTC";
+
+      DateTime? startDate = null;
+
+      string startTime = "";
+
+      DateTime? endDate = null;
+
+      string endTime = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseForexPrices result = forexApi.GetForexPrices(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

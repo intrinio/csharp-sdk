@@ -64,9 +64,12 @@ Method | HTTP request | Description
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -75,20 +78,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      int? pageSize = 100;
 
-      try
-      {
-        ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetAllEconomicIndices: " + e.Message );
-      }
+      string nextPage = "";
+
+      
+      ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -155,9 +154,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -166,20 +168,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      int? pageSize = 100;
 
-      try
-      {
-        ApiResponseSICIndices result = indexApi.GetAllSicIndices(pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetAllSicIndices: " + e.Message );
-      }
+      string nextPage = "";
+
+      
+      ApiResponseSICIndices result = indexApi.GetAllSicIndices(pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -246,9 +244,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -257,20 +258,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      int? pageSize = 100;
 
-      try
-      {
-        ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetAllStockMarketIndices: " + e.Message );
-      }
+      string nextPage = "";
+
+      
+      ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -337,9 +334,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -348,19 +348,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
+      
+      string identifier = "$GDP";
 
-      try
-      {
-        EconomicIndex result = indexApi.GetEconomicIndexById(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexById: " + e.Message );
-      }
+      
+      EconomicIndex result = indexApi.GetEconomicIndexById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -427,9 +422,12 @@ Returns a numeric value for the given `tag` for the Economic Index with the give
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -438,20 +436,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag <a href='https://data.intrinio.com/data-tags/economic'>reference</a>
+      
+      string identifier = "$GDP";
 
-      try
-      {
-        decimal? result = indexApi.GetEconomicIndexDataPointNumber(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexDataPointNumber: " + e.Message );
-      }
+      string tag = "level";
+
+      
+      decimal? result = indexApi.GetEconomicIndexDataPointNumber(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -519,9 +513,12 @@ Returns a text value for the given `tag` for the Economic Index with the given `
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -530,20 +527,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag ID or code-name
+      
+      string identifier = "$GDP";
 
-      try
-      {
-        string result = indexApi.GetEconomicIndexDataPointText(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexDataPointText: " + e.Message );
-      }
+      string tag = "level";
+
+      
+      string result = indexApi.GetEconomicIndexDataPointText(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -611,9 +604,12 @@ Returns historical values for the given `tag` and the Economic Index with the gi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -622,26 +618,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$GDP";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag <a href='https://data.intrinio.com/data-tags/economic'>reference</a>
-      var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Get historical data on or before this date (optional) 
-      var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "$GDP";
 
-      try
-      {
-        ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetEconomicIndexHistoricalData: " + e.Message );
-      }
+      string tag = "level";
+
+      string type = "";
+
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+
+      DateTime? endDate = null;
+
+      string sortOrder = "desc";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -714,9 +712,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -725,19 +726,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
+      
+      string identifier = "$SIC.1";
 
-      try
-      {
-        SICIndex result = indexApi.GetSicIndexById(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetSicIndexById: " + e.Message );
-      }
+      
+      SICIndex result = indexApi.GetSicIndexById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -804,9 +800,12 @@ Returns a numeric value for the given `tag` for the SIC Index with the given `id
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -815,20 +814,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag ID or code-name
+      
+      string identifier = "$SIC.1";
 
-      try
-      {
-        decimal? result = indexApi.GetSicIndexDataPointNumber(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetSicIndexDataPointNumber: " + e.Message );
-      }
+      string tag = "level";
+
+      
+      decimal? result = indexApi.GetSicIndexDataPointNumber(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -896,9 +891,12 @@ Returns a text value for the given `tag` for the SIC Index with the given `ident
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -907,20 +905,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag ID or code-name
+      
+      string identifier = "$SIC.1";
 
-      try
-      {
-        string result = indexApi.GetSicIndexDataPointText(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetSicIndexDataPointText: " + e.Message );
-      }
+      string tag = "level";
+
+      
+      string result = indexApi.GetSicIndexDataPointText(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -988,9 +982,12 @@ Returns historical values for the given `tag` and the SIC Index with the given `
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -999,26 +996,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$SIC.1";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "marketcap";  // string | An Intrinio data tag ID or code-name
-      var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Get historical data on or before this date (optional) 
-      var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "$SIC.1";
 
-      try
-      {
-        ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetSicIndexHistoricalData: " + e.Message );
-      }
+      string tag = "marketcap";
+
+      string type = "";
+
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+
+      DateTime? endDate = null;
+
+      string sortOrder = "desc";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1091,9 +1090,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1102,19 +1104,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
+      
+      string identifier = "$DJI";
 
-      try
-      {
-        StockMarketIndex result = indexApi.GetStockMarketIndexById(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexById: " + e.Message );
-      }
+      
+      StockMarketIndex result = indexApi.GetStockMarketIndexById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1181,9 +1178,12 @@ Returns a numeric value for the given `tag` for the Stock Market Index with the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1192,20 +1192,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag ID or code-name
+      
+      string identifier = "$DJI";
 
-      try
-      {
-        decimal? result = indexApi.GetStockMarketIndexDataPointNumber(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexDataPointNumber: " + e.Message );
-      }
+      string tag = "level";
+
+      
+      decimal? result = indexApi.GetStockMarketIndexDataPointNumber(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1273,9 +1269,12 @@ Returns a text value for the given `tag` for the Stock Market Index with the giv
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1284,20 +1283,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag ID or code-name
+      
+      string identifier = "$DJI";
 
-      try
-      {
-        string result = indexApi.GetStockMarketIndexDataPointText(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexDataPointText: " + e.Message );
-      }
+      string tag = "level";
+
+      
+      string result = indexApi.GetStockMarketIndexDataPointText(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1365,9 +1360,12 @@ Returns historical values for the given `tag` and the Stock Market Index with th
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1376,26 +1374,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var identifier = "$DJI";  // string | An Index Identifier (symbol, Intrinio ID)
-      var tag = "level";  // string | An Intrinio data tag ID or code-name
-      var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Get historical data on or before this date (optional) 
-      var sortOrder = "desc";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "$DJI";
 
-      try
-      {
-        ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.GetStockMarketIndexHistoricalData: " + e.Message );
-      }
+      string tag = "level";
+
+      string type = "";
+
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+
+      DateTime? endDate = null;
+
+      string sortOrder = "desc";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1469,9 +1469,12 @@ Searches for indices using the text in `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1480,20 +1483,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var query = "GDP";  // string | Search query
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string query = "GDP";
 
-      try
-      {
-        ApiResponseEconomicIndicesSearch result = indexApi.SearchEconomicIndices(query, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.SearchEconomicIndices: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      
+      ApiResponseEconomicIndicesSearch result = indexApi.SearchEconomicIndices(query, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1561,9 +1560,12 @@ Searches for indices using the text in `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1572,20 +1574,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var query = "agriculture";  // string | Search query
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string query = "agriculture";
 
-      try
-      {
-        ApiResponseSICIndicesSearch result = indexApi.SearchSicIndices(query, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.SearchSicIndices: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      
+      ApiResponseSICIndicesSearch result = indexApi.SearchSicIndices(query, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1653,9 +1651,12 @@ Searches for indices using the text in `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1664,20 +1665,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var indexApi = new IndexApi();
-      var query = "dow";  // string | Search query
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string query = "dow";
 
-      try
-      {
-        ApiResponseStockMarketIndicesSearch result = indexApi.SearchStockMarketsIndices(query, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling IndexApi.SearchStockMarketsIndices: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      
+      ApiResponseStockMarketIndicesSearch result = indexApi.SearchStockMarketsIndices(query, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

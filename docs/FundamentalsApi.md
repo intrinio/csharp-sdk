@@ -51,9 +51,12 @@ Returns detailed fundamental data for the given `id`.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -62,19 +65,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var fundamentalsApi = new FundamentalsApi();
-      var id = "fun_ge9LlE";  // string | The Intrinio ID for the Fundamental
+      
+      string id = "fun_ge9LlE";
 
-      try
-      {
-        Fundamental result = fundamentalsApi.GetFundamentalById(id);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FundamentalsApi.GetFundamentalById: " + e.Message );
-      }
+      
+      Fundamental result = fundamentalsApi.GetFundamentalById(id);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -141,9 +139,12 @@ Returns the As-Reported Financials directly from the financial statements of the
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -152,19 +153,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var fundamentalsApi = new FundamentalsApi();
-      var id = "AAPL-income_statement-2018-Q1";  // string | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
+      
+      string id = "AAPL-income_statement-2018-Q1";
 
-      try
-      {
-        ApiResponseReportedFinancials result = fundamentalsApi.GetFundamentalReportedFinancials(id);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FundamentalsApi.GetFundamentalReportedFinancials: " + e.Message );
-      }
+      
+      ApiResponseReportedFinancials result = fundamentalsApi.GetFundamentalReportedFinancials(id);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -231,9 +227,12 @@ Returns professional-grade historical financial data. This data is standardized,
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -242,19 +241,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var fundamentalsApi = new FundamentalsApi();
-      var id = "AAPL-income_statement-2018-Q1";  // string | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
+      
+      string id = "AAPL-income_statement-2018-Q1";
 
-      try
-      {
-        ApiResponseStandardizedFinancials result = fundamentalsApi.GetFundamentalStandardizedFinancials(id);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FundamentalsApi.GetFundamentalStandardizedFinancials: " + e.Message );
-      }
+      
+      ApiResponseStandardizedFinancials result = fundamentalsApi.GetFundamentalStandardizedFinancials(id);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -321,9 +315,12 @@ Returns the Fundamental for the Company with the given `identifier` and with the
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -332,22 +329,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var fundamentalsApi = new FundamentalsApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-      var statementCode = "income_statement";  // string | The statement code
-      var fiscalYear = 2017;  // int? | The fiscal year
-      var fiscalPeriod = "FY";  // string | The fiscal period
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        Fundamental result = fundamentalsApi.LookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FundamentalsApi.LookupFundamental: " + e.Message );
-      }
+      string statementCode = "income_statement";
+
+      int? fiscalYear = 2017;
+
+      string fiscalPeriod = "FY";
+
+      
+      Fundamental result = fundamentalsApi.LookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

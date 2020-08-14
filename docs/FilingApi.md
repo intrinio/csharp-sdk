@@ -57,9 +57,12 @@ Returns all Filings. Returns Filings matching parameters when supplied.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -68,26 +71,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-      var reportType = "";  // string | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>. (optional) 
-      var startDate = DateTime.Parse("2015-01-01");  // DateTime? | Filed on or after the given date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Filed before or after the given date (optional) 
-      var industryCategory = "";  // string | Return companies in the given industry category (optional) 
-      var industryGroup = "";  // string | Return companies in the given industry group (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string company = "AAPL";
 
-      try
-      {
-        ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetAllFilings: " + e.Message );
-      }
+      string reportType = "";
+
+      DateTime? startDate = DateTime.Parse("2015-01-01");
+
+      DateTime? endDate = null;
+
+      string industryCategory = "";
+
+      string industryGroup = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -161,9 +166,12 @@ Return all Notes from all Filings, most-recent first. Returns notes matching par
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -172,26 +180,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var company = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional) 
-      var reportType = "10-Q";  // string | Notes contained in filings that match the given <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a> (optional) 
-      var filingStartDate = DateTime.Now;  // DateTime? | Limit search to filings on or after this date (optional) 
-      var filingEndDate = DateTime.Now;  // DateTime? | Limit search to filings on or before this date (optional) 
-      var periodEndedStartDate = DateTime.Now;  // DateTime? | Limit search to filings with a period end date on or after this date (optional) 
-      var periodEndedEndDate = DateTime.Now;  // DateTime? | Limit search to filings with a period end date on or before this date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string company = "AAPL";
 
-      try
-      {
-        ApiResponseFilingNotes result = filingApi.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetAllNotes: " + e.Message );
-      }
+      string reportType = "10-Q";
+
+      DateTime? filingStartDate = null;
+
+      DateTime? filingEndDate = null;
+
+      DateTime? periodEndedStartDate = null;
+
+      DateTime? periodEndedEndDate = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseFilingNotes result = filingApi.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -265,9 +275,12 @@ Returns the Filing with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -276,19 +289,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var id = "fil_7Kn2P6";  // string | The Intrinio ID of the Filing
+      
+      string id = "fil_7Kn2P6";
 
-      try
-      {
-        Filing result = filingApi.GetFilingById(id);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetFilingById: " + e.Message );
-      }
+      
+      Filing result = filingApi.GetFilingById(id);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -355,9 +363,12 @@ Returns all Fundamentals for the SEC Filing with the given `identifier`. Returns
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -366,26 +377,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var identifier = "fil_B73xBG";  // string | A Filing identifier
-      var statementCode = "";  // string | Filters fundamentals by statement code (optional) 
-      var type = "";  // string | Filters fundamentals by type (optional) 
-      var fiscalYear = "";  // int? | Filters fundamentals by fiscal year (optional) 
-      var fiscalPeriod = "";  // string | Filters fundamentals by fiscal period (optional) 
-      var startDate = DateTime.Now;  // DateTime? | Returns fundamentals on or after the given date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Returns fundamentals on or before the given date (optional) 
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "fil_B73xBG";
 
-      try
-      {
-        ApiResponseFilingFundamentals result = filingApi.GetFilingFundamentals(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetFilingFundamentals: " + e.Message );
-      }
+      string statementCode = "";
+
+      string type = "";
+
+      int? fiscalYear = null;
+
+      string fiscalPeriod = "";
+
+      DateTime? startDate = null;
+
+      DateTime? endDate = null;
+
+      string nextPage = "";
+
+      
+      ApiResponseFilingFundamentals result = filingApi.GetFilingFundamentals(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -458,9 +471,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -469,19 +485,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var identifier = "fil_B73xBG";  // string | A Filing identifier
+      
+      string identifier = "fil_B73xBG";
 
-      try
-      {
-        string result = filingApi.GetFilingHtml(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetFilingHtml: " + e.Message );
-      }
+      
+      string result = filingApi.GetFilingHtml(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -547,9 +558,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -558,19 +572,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var identifier = "fil_B73xBG";  // string | A Filing identifier
+      
+      string identifier = "fil_B73xBG";
 
-      try
-      {
-        string result = filingApi.GetFilingText(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetFilingText: " + e.Message );
-      }
+      
+      string result = filingApi.GetFilingText(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -636,9 +645,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -647,20 +659,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var identifier = "xbn_ydK3QL";  // string | The Intrinio ID of the filing note
-      var contentFormat = "text";  // string | Returns content in html (as filed) or plain text (optional)  (default to text)
+      
+      string identifier = "xbn_ydK3QL";
 
-      try
-      {
-        FilingNote result = filingApi.GetNote(identifier, contentFormat);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetNote: " + e.Message );
-      }
+      string contentFormat = "text";
+
+      
+      FilingNote result = filingApi.GetNote(identifier, contentFormat);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -727,9 +735,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -738,19 +749,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var identifier = "xbn_ydK3QL";  // string | The Intrinio ID of the filing note
+      
+      string identifier = "xbn_ydK3QL";
 
-      try
-      {
-        string result = filingApi.GetNoteHtml(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetNoteHtml: " + e.Message );
-      }
+      
+      string result = filingApi.GetNoteHtml(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -816,9 +822,12 @@ Name | Type | Description  | Notes
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -827,19 +836,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var identifier = "xbn_ydK3QL";  // string | The Intrinio ID of the filing note
+      
+      string identifier = "xbn_ydK3QL";
 
-      try
-      {
-        string result = filingApi.GetNoteText(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.GetNoteText: " + e.Message );
-      }
+      
+      string result = filingApi.GetNoteText(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -906,9 +910,12 @@ Searches for Filing Notes using the `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -917,22 +924,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var filingApi = new FilingApi();
-      var query = "inflation";  // string | Search for notes that contain all or parts of this text
-      var filingStartDate = DateTime.Parse("2018-07-15");  // DateTime? | Limit search to filings on or after this date (optional) 
-      var filingEndDate = DateTime.Parse("2018-11-30");  // DateTime? | Limit search to filings on or before this date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string query = "inflation";
 
-      try
-      {
-        ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling FilingApi.SearchNotes: " + e.Message );
-      }
+      DateTime? filingStartDate = DateTime.Parse("2018-07-15");
+
+      DateTime? filingEndDate = DateTime.Parse("2018-11-30");
+
+      int? pageSize = 100;
+
+      
+      ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

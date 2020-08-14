@@ -58,9 +58,12 @@ Returns buy, sell, and hold recommendations from analysts at brokerages for all 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -69,37 +72,50 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional) 
-      var startDate = DateTime.Now;  // DateTime? | Limit ratings to those on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Limit ratings to those on or before this date (optional) 
-      var meanGreater = "";  // decimal? | Return only records with a mean (average) higher than this value (optional) 
-      var meanLess = "";  // decimal? | Return only records with a mean (average) lower than this value (optional) 
-      var strongBuysGreater = "";  // int? | Return only records with more than this many Strong Buy recommendations (optional) 
-      var strongBuysLess = "";  // int? | Return only records with fewer than this many Strong Buy recommendations (optional) 
-      var buysGreater = "";  // int? | Return only records with more than this many Buy recommendations (optional) 
-      var buysLess = "";  // int? | Return only records with fewer than this many Buy recommendations (optional) 
-      var holdsGreater = "";  // int? | Return only records with more than this many Hold recommendations (optional) 
-      var holdsLess = "";  // int? | Return only records with fewer than this many Hold recommendations (optional) 
-      var sellsGreater = "";  // int? | Return only records with more than this many Sell recommendations (optional) 
-      var sellsLess = "";  // int? | Return only records with fewer than this many Sell recommendations (optional) 
-      var strongSellsGreater = "";  // int? | Return only records with more than this many Strong Sell recommendations (optional) 
-      var strongSellsLess = "";  // int? | Return only records with fewer than this many Strong Sell recommendations (optional) 
-      var totalGreater = "";  // int? | Return only records with more than this many recommendations, regardless of type (optional) 
-      var totalLess = "";  // int? | Return only records with fewer than this many recommendations, regardless of type (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseZacksAnalystRatings result = zacksApi.GetZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksAnalystRatings: " + e.Message );
-      }
+      DateTime? startDate = null;
+
+      DateTime? endDate = null;
+
+      decimal? meanGreater = null;
+
+      decimal? meanLess = null;
+
+      int? strongBuysGreater = null;
+
+      int? strongBuysLess = null;
+
+      int? buysGreater = null;
+
+      int? buysLess = null;
+
+      int? holdsGreater = null;
+
+      int? holdsLess = null;
+
+      int? sellsGreater = null;
+
+      int? sellsLess = null;
+
+      int? strongSellsGreater = null;
+
+      int? strongSellsLess = null;
+
+      int? totalGreater = null;
+
+      int? totalLess = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksAnalystRatings result = zacksApi.GetZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -184,9 +200,12 @@ Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -195,27 +214,30 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var identifier = "AAPL";  // string | A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional) 
-      var startDate = DateTime.Now;  // DateTime? | Limit EPS estimates to those on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Limit EPS estimates to those on or before this date (optional) 
-      var fiscalYear = "";  // int? | Only for the given fiscal year (optional) 
-      var fiscalPeriod = "";  // string | The fiscal period (optional) 
-      var calendarYear = "";  // int? | Only for the given calendar year (optional) 
-      var calendarPeriod = "";  // string | The calendar period (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseZacksEPSEstimates result = zacksApi.GetZacksEpsEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksEpsEstimates: " + e.Message );
-      }
+      DateTime? startDate = null;
+
+      DateTime? endDate = null;
+
+      int? fiscalYear = null;
+
+      string fiscalPeriod = "";
+
+      int? calendarYear = null;
+
+      string calendarPeriod = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksEPSEstimates result = zacksApi.GetZacksEpsEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -290,9 +312,12 @@ Returns the latest Zacks EPS growth rates
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -301,23 +326,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var company = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID) (optional) 
-      var industryGroupName = "";  // string | Return only growth rates for companies in the given Zacks industry group name (optional) 
-      var industryGroupNumber = "";  // string | Return only growth rates for companies in the given Zacks industry group number (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string company = "AAPL";
 
-      try
-      {
-        ApiResponseZacksEPSGrowthRates result = zacksApi.GetZacksEpsGrowthRates(company, industryGroupName, industryGroupNumber, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksEpsGrowthRates: " + e.Message );
-      }
+      string industryGroupName = "";
+
+      string industryGroupNumber = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksEPSGrowthRates result = zacksApi.GetZacksEpsGrowthRates(company, industryGroupName, industryGroupNumber, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -388,9 +412,12 @@ Returns Zacks eps surprise data for all Securities.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -399,34 +426,44 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var startDate = DateTime.Now;  // DateTime? | Limit EPS surprises to those on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Limit EPS surprises to those on or before this date (optional) 
-      var epsActualGreater = "";  // decimal? | Return only records with an actual EPS higher than this value (optional) 
-      var epsActualLess = "";  // decimal? | Return only records with an actual EPS lower than this value (optional) 
-      var epsMeanEstimateGreater = "";  // decimal? | Return only records with an EPS mean estimate greater than this value (optional) 
-      var epsMeanEstimateLess = "";  // decimal? | Return only records with an EPS mean estimate lower than this value (optional) 
-      var epsAmountDiffGreater = "";  // decimal? | Return only records with an EPS amount difference greater than this value (optional) 
-      var epsAmountDiffLess = "";  // decimal? | Return only records with an EPS amount difference less than this value (optional) 
-      var epsPercentDiffGreater = "";  // decimal? | Return only records with an EPS percent difference greater than this value (optional) 
-      var epsPercentDiffLess = "";  // decimal? | Return only records with an EPS percent difference less than this value (optional) 
-      var epsCountEstimateGreater = "";  // decimal? | Return only records with an EPS count estimate greater than this value (optional) 
-      var epsCountEstimateLess = "";  // decimal? | Return only records with an EPS count estimate less than this value (optional) 
-      var epsStdDevEstimateGreater = "";  // decimal? | Return only records with an EPS standard deviation greater than this value (optional) 
-      var epsStdDevEstimateLess = "";  // decimal? | Return only records with an EPS standard deviation less than this value (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      DateTime? startDate = null;
 
-      try
-      {
-        ApiResponseZacksEPSSurprises result = zacksApi.GetZacksEpsSurprises(startDate, endDate, epsActualGreater, epsActualLess, epsMeanEstimateGreater, epsMeanEstimateLess, epsAmountDiffGreater, epsAmountDiffLess, epsPercentDiffGreater, epsPercentDiffLess, epsCountEstimateGreater, epsCountEstimateLess, epsStdDevEstimateGreater, epsStdDevEstimateLess, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksEpsSurprises: " + e.Message );
-      }
+      DateTime? endDate = null;
+
+      decimal? epsActualGreater = null;
+
+      decimal? epsActualLess = null;
+
+      decimal? epsMeanEstimateGreater = null;
+
+      decimal? epsMeanEstimateLess = null;
+
+      decimal? epsAmountDiffGreater = null;
+
+      decimal? epsAmountDiffLess = null;
+
+      decimal? epsPercentDiffGreater = null;
+
+      decimal? epsPercentDiffLess = null;
+
+      decimal? epsCountEstimateGreater = null;
+
+      decimal? epsCountEstimateLess = null;
+
+      decimal? epsStdDevEstimateGreater = null;
+
+      decimal? epsStdDevEstimateLess = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksEPSSurprises result = zacksApi.GetZacksEpsSurprises(startDate, endDate, epsActualGreater, epsActualLess, epsMeanEstimateGreater, epsMeanEstimateLess, epsAmountDiffGreater, epsAmountDiffLess, epsPercentDiffGreater, epsPercentDiffLess, epsCountEstimateGreater, epsCountEstimateLess, epsStdDevEstimateGreater, epsStdDevEstimateLess, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -508,9 +545,12 @@ Returns Zacks ETF holdings data
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -519,24 +559,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var etfTicker = "";  // string | Return holdings of the ETF with the given ticker (optional) 
-      var holdingSymbol = "";  // string | Return holdings where the instrument being held has the given trading symbol (optional) 
-      var weightGreater = "";  // decimal? | Return on the holdings with a weight greater than (optional) 
-      var weightLess = "";  // decimal? | Return on the holdings with a weight less than (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string etfTicker = "";
 
-      try
-      {
-        ApiResponseZacksETFHoldings result = zacksApi.GetZacksEtfHoldings(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksEtfHoldings: " + e.Message );
-      }
+      string holdingSymbol = "";
+
+      decimal? weightGreater = null;
+
+      decimal? weightLess = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksETFHoldings result = zacksApi.GetZacksEtfHoldings(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -608,9 +648,12 @@ Returns Zacks institutional holding companies data
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -619,21 +662,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var ticker = "";  // string | Return companies with the given ticker (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string ticker = "";
 
-      try
-      {
-        ApiResponseZacksInstitutionalHoldingCompanies result = zacksApi.GetZacksInstitutionalHoldingCompanies(ticker, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksInstitutionalHoldingCompanies: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksInstitutionalHoldingCompanies result = zacksApi.GetZacksInstitutionalHoldingCompanies(ticker, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -702,9 +742,12 @@ Returns Zacks institutional holding owners data
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -713,21 +756,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var cik = "";  // string | Return owners with the given Central Index Key (CIK) (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string cik = "";
 
-      try
-      {
-        ApiResponseZacksInstitutionalHoldingOwners result = zacksApi.GetZacksInstitutionalHoldingOwners(cik, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksInstitutionalHoldingOwners: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksInstitutionalHoldingOwners result = zacksApi.GetZacksInstitutionalHoldingOwners(cik, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -796,9 +836,12 @@ Returns Zacks institutional holdings data
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -807,22 +850,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var ticker = "";  // string | Return holdings where the company being held has the given ticker (optional) 
-      var ownerCik = "";  // string | Return holdings where the owner/holder has the given Central Index Key (CIK) (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string ticker = "";
 
-      try
-      {
-        ApiResponseZacksInstitutionalHoldings result = zacksApi.GetZacksInstitutionalHoldings(ticker, ownerCik, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksInstitutionalHoldings: " + e.Message );
-      }
+      string ownerCik = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksInstitutionalHoldings result = zacksApi.GetZacksInstitutionalHoldings(ticker, ownerCik, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -892,9 +933,12 @@ Returns the latest Zacks long term growth rates
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -903,21 +947,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseZacksLongTermGrowthRates result = zacksApi.GetZacksLongTermGrowthRates(identifier, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksLongTermGrowthRates: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksLongTermGrowthRates result = zacksApi.GetZacksLongTermGrowthRates(identifier, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -986,9 +1027,12 @@ Returns Zacks sales surprise data for all Securities.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -997,34 +1041,44 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var startDate = DateTime.Now;  // DateTime? | Limit sales surprises to those on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Limit sales surprises to those on or before this date (optional) 
-      var salesActualGreater = "";  // decimal? | Return only records with an actual sales higher than this value (optional) 
-      var salesActualLess = "";  // decimal? | Return only records with an actual sales lower than this value (optional) 
-      var salesMeanEstimateGreater = "";  // decimal? | Return only records with a sales mean estimate greater than this value (optional) 
-      var salesMeanEstimateLess = "";  // decimal? | Return only records with a sales mean estimate lower than this value (optional) 
-      var salesAmountDiffGreater = "";  // decimal? | Return only records with a sales amount difference greater than this value (optional) 
-      var salesAmountDiffLess = "";  // decimal? | Return only records with a sales amount difference less than this value (optional) 
-      var salesPercentDiffGreater = "";  // decimal? | Return only records with a sales percent difference greater than this value (optional) 
-      var salesPercentDiffLess = "";  // decimal? | Return only records with a sales percent difference less than this value (optional) 
-      var salesCountEstimateGreater = "";  // decimal? | Return only records with a sales count estimate greater than this value (optional) 
-      var salesCountEstimateLess = "";  // decimal? | Return only records with a sales count estimate less than this value (optional) 
-      var salesStdDevEstimateGreater = "";  // decimal? | Return only records with a sales standard deviation greater than this value (optional) 
-      var salesStdDevEstimateLess = "";  // decimal? | Return only records with a sales standard deviation less than this value (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      DateTime? startDate = null;
 
-      try
-      {
-        ApiResponseZacksSalesSurprises result = zacksApi.GetZacksSalesSurprises(startDate, endDate, salesActualGreater, salesActualLess, salesMeanEstimateGreater, salesMeanEstimateLess, salesAmountDiffGreater, salesAmountDiffLess, salesPercentDiffGreater, salesPercentDiffLess, salesCountEstimateGreater, salesCountEstimateLess, salesStdDevEstimateGreater, salesStdDevEstimateLess, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksSalesSurprises: " + e.Message );
-      }
+      DateTime? endDate = null;
+
+      decimal? salesActualGreater = null;
+
+      decimal? salesActualLess = null;
+
+      decimal? salesMeanEstimateGreater = null;
+
+      decimal? salesMeanEstimateLess = null;
+
+      decimal? salesAmountDiffGreater = null;
+
+      decimal? salesAmountDiffLess = null;
+
+      decimal? salesPercentDiffGreater = null;
+
+      decimal? salesPercentDiffLess = null;
+
+      decimal? salesCountEstimateGreater = null;
+
+      decimal? salesCountEstimateLess = null;
+
+      decimal? salesStdDevEstimateGreater = null;
+
+      decimal? salesStdDevEstimateLess = null;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksSalesSurprises result = zacksApi.GetZacksSalesSurprises(startDate, endDate, salesActualGreater, salesActualLess, salesMeanEstimateGreater, salesMeanEstimateLess, salesAmountDiffGreater, salesAmountDiffLess, salesPercentDiffGreater, salesPercentDiffLess, salesCountEstimateGreater, salesCountEstimateLess, salesStdDevEstimateGreater, salesStdDevEstimateLess, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1106,9 +1160,12 @@ Returns the latest Zacks target price consensus data
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1117,22 +1174,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var zacksApi = new ZacksApi();
-      var identifier = "AAPL";  // string | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID) (optional) 
-      var industryGroupNumber = "";  // string | Return only growth rates for companies in the given Zacks industry group number (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseZacksTargetPriceConsensuses result = zacksApi.GetZacksTargetPriceConsensuses(identifier, industryGroupNumber, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling ZacksApi.GetZacksTargetPriceConsensuses: " + e.Message );
-      }
+      string industryGroupNumber = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseZacksTargetPriceConsensuses result = zacksApi.GetZacksTargetPriceConsensuses(identifier, industryGroupNumber, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

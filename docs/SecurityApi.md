@@ -95,9 +95,12 @@ Returns all Securities to which you have access. When parameters are specified, 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -106,36 +109,48 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var active = true;  // bool? | When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional) 
-      var delisted = false;  // bool? | When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. (optional) 
-      var code = "";  // string | Return securities classified with the given code (<a href=\"https://docs.intrinio.com/documentation/security_codes\" target=\"_blank\">reference</a>). (optional) 
-      var currency = "";  // string | Return securities traded in the given 3-digit ISO 4217 currency code (<a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">reference</a>). (optional) 
-      var ticker = "";  // string | Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. (optional) 
-      var name = "";  // string | Return securities with the given text in their name (not case sensitive). (optional) 
-      var compositeMic = "";  // string | Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  (optional) 
-      var exchangeMic = "";  // string | The MIC code of the exchange where the security is actually traded. (optional) 
-      var stockPricesAfter = DateTime.Now;  // DateTime? | Return securities with end-of-day stock prices on or after this date. (optional) 
-      var stockPricesBefore = DateTime.Now;  // DateTime? | Return securities with end-of-day stock prices on or before this date. (optional) 
-      var cik = "";  // string | Return securities belonging to the company with the given Central Index Key (CIK). (optional) 
-      var figi = "";  // string | Return securities with the given Exchange Level FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>). (optional) 
-      var compositeFigi = "";  // string | Return securities with the given Country Composite FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>). (optional) 
-      var shareClassFigi = "";  // string | Return securities with the given Global Share Class FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>). (optional) 
-      var figiUniqueId = "";  // string | Return securities with the given FIGI Unique ID (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>). (optional) 
-      var includeNonFigi = false;  // bool? | When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional)  (default to false)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      bool? active = true;
 
-      try
-      {
-        ApiResponseSecurities result = securityApi.GetAllSecurities(active, delisted, code, currency, ticker, name, compositeMic, exchangeMic, stockPricesAfter, stockPricesBefore, cik, figi, compositeFigi, shareClassFigi, figiUniqueId, includeNonFigi, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetAllSecurities: " + e.Message );
-      }
+      bool? delisted = false;
+
+      string code = "";
+
+      string currency = "";
+
+      string ticker = "";
+
+      string name = "";
+
+      string compositeMic = "";
+
+      string exchangeMic = "";
+
+      DateTime? stockPricesAfter = null;
+
+      DateTime? stockPricesBefore = null;
+
+      string cik = "";
+
+      string figi = "";
+
+      string compositeFigi = "";
+
+      string shareClassFigi = "";
+
+      string figiUniqueId = "";
+
+      bool? includeNonFigi = false;
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurities result = securityApi.GetAllSecurities(active, delisted, code, currency, ticker, name, compositeMic, exchangeMic, stockPricesAfter, stockPricesBefore, cik, figi, compositeFigi, shareClassFigi, figiUniqueId, includeNonFigi, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -219,9 +234,12 @@ Returns the Security with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -230,19 +248,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        Security result = securityApi.GetSecurityById(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityById: " + e.Message );
-      }
+      
+      Security result = securityApi.GetSecurityById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -309,9 +322,12 @@ Returns a numeric value for the given `tag` for the Security with the given `ide
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -320,20 +336,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var tag = "close_price";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        decimal? result = securityApi.GetSecurityDataPointNumber(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityDataPointNumber: " + e.Message );
-      }
+      string tag = "close_price";
+
+      
+      decimal? result = securityApi.GetSecurityDataPointNumber(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -401,9 +413,12 @@ Returns a text value for the given `tag` for the Security with the given `identi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -412,20 +427,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var tag = "figi";  // string | An Intrinio data tag ID or code-name
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        string result = securityApi.GetSecurityDataPointText(identifier, tag);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityDataPointText: " + e.Message );
-      }
+      string tag = "figi";
+
+      
+      string result = securityApi.GetSecurityDataPointText(identifier, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -493,9 +504,12 @@ Returns historical values for the given `tag` and the Security with the given `i
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -504,27 +518,30 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var tag = "adj_close_price";  // string | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-      var frequency = "daily";  // string | Return historical data in the given frequency (optional)  (default to daily)
-      var type = "";  // string | Filter by type, when applicable (optional) 
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Get historical data on or after this date (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Get historical date on or before this date (optional) 
-      var sortOrder = "";  // string | Sort by date `asc` or `desc` (optional)  (default to desc)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityHistoricalData result = securityApi.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityHistoricalData: " + e.Message );
-      }
+      string tag = "adj_close_price";
+
+      string frequency = "daily";
+
+      string type = "";
+
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+
+      DateTime? endDate = null;
+
+      string sortOrder = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityHistoricalData result = securityApi.GetSecurityHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -599,9 +616,12 @@ Return intraday stock prices for the Security with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -610,26 +630,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var source = "";  // string | Return intraday prices from the specified data source (optional) 
-      var startDate = DateTime.Now;  // DateTime? | Return intraday prices starting at the specified date (optional) 
-      var startTime = "";  // string | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC) (optional) 
-      var endDate = DateTime.Now;  // DateTime? | Return intraday prices stopping at the specified date (optional) 
-      var endTime = "";  // string | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC) (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityIntradayPrices result = securityApi.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityIntradayPrices: " + e.Message );
-      }
+      string source = "";
+
+      DateTime? startDate = null;
+
+      string startTime = "";
+
+      DateTime? endDate = null;
+
+      string endTime = "";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityIntradayPrices result = securityApi.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -703,9 +725,12 @@ Returns the latest available dividend information for the Security with the give
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -714,19 +739,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        DividendRecord result = securityApi.GetSecurityLatestDividendRecord(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityLatestDividendRecord: " + e.Message );
-      }
+      
+      DividendRecord result = securityApi.GetSecurityLatestDividendRecord(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -793,9 +813,12 @@ Returns latest available earnings information for the Security with the given `i
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -804,19 +827,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        EarningsRecord result = securityApi.GetSecurityLatestEarningsRecord(identifier);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityLatestEarningsRecord: " + e.Message );
-      }
+      
+      EarningsRecord result = securityApi.GetSecurityLatestEarningsRecord(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -883,9 +901,12 @@ Returns the Accumulation/Distribution Index values of Stock Prices for the Secur
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -894,23 +915,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityAccumulationDistributionIndex result = securityApi.GetSecurityPriceTechnicalsAdi(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsAdi: " + e.Message );
-      }
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityAccumulationDistributionIndex result = securityApi.GetSecurityPriceTechnicalsAdi(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -981,9 +1001,12 @@ Returns the Average Daily Trading Volume values of Stock Prices for the Security
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -992,24 +1015,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 22;  // int? | The number of observations, per period, to calculate Average Daily Trading Volume (optional)  (default to 22)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityAverageDailyTradingVolume result = securityApi.GetSecurityPriceTechnicalsAdtv(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsAdtv: " + e.Message );
-      }
+      int? period = 22;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityAverageDailyTradingVolume result = securityApi.GetSecurityPriceTechnicalsAdtv(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1081,9 +1104,12 @@ Returns the Average Directional Index values of Stock Prices for the Security wi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1092,24 +1118,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 14;  // int? | The number of observations, per period, to calculate Average Directional Index (optional)  (default to 14)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityAverageDirectionalIndex result = securityApi.GetSecurityPriceTechnicalsAdx(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsAdx: " + e.Message );
-      }
+      int? period = 14;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityAverageDirectionalIndex result = securityApi.GetSecurityPriceTechnicalsAdx(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1181,9 +1207,12 @@ Returns the Awesome Oscillator values of Stock Prices for the Security with the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1192,25 +1221,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var shortPeriod = 5;  // int? | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator (optional)  (default to 5)
-      var longPeriod = 34;  // int? | The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator (optional)  (default to 34)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityAwesomeOscillator result = securityApi.GetSecurityPriceTechnicalsAo(identifier, shortPeriod, longPeriod, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsAo: " + e.Message );
-      }
+      int? shortPeriod = 5;
+
+      int? longPeriod = 34;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityAwesomeOscillator result = securityApi.GetSecurityPriceTechnicalsAo(identifier, shortPeriod, longPeriod, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1283,9 +1313,12 @@ Returns the Average True Range values of Stock Prices for the Security with the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1294,24 +1327,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 14;  // int? | The number of observations, per period, to calculate Average True Range (optional)  (default to 14)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityAverageTrueRange result = securityApi.GetSecurityPriceTechnicalsAtr(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsAtr: " + e.Message );
-      }
+      int? period = 14;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityAverageTrueRange result = securityApi.GetSecurityPriceTechnicalsAtr(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1383,9 +1416,12 @@ Returns the Bollinger Bands values of Stock Prices for the Security with the giv
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1394,26 +1430,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 20;  // int? | The number of observations, per period, to calculate Bollinger Bands (optional)  (default to 20)
-      var standardDeviations = 2.0;  // float? | The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands (optional)  (default to 2.0)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating Bollinger Bands (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityBollingerBands result = securityApi.GetSecurityPriceTechnicalsBb(identifier, period, standardDeviations, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsBb: " + e.Message );
-      }
+      int? period = 20;
+
+      float? standardDeviations = 2.0;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityBollingerBands result = securityApi.GetSecurityPriceTechnicalsBb(identifier, period, standardDeviations, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1487,9 +1525,12 @@ Returns the Commodity Channel Index values of Stock Prices for the Security with
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1498,25 +1539,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 20;  // int? | The number of observations, per period, to calculate Commodity Channel Index (optional)  (default to 20)
-      var constant = 0.015;  // float? | The number of observations, per period, to calculate Commodity Channel Index (optional)  (default to 0.015)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityCommodityChannelIndex result = securityApi.GetSecurityPriceTechnicalsCci(identifier, period, constant, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsCci: " + e.Message );
-      }
+      int? period = 20;
+
+      float? constant = 0.015;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityCommodityChannelIndex result = securityApi.GetSecurityPriceTechnicalsCci(identifier, period, constant, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1589,9 +1631,12 @@ Returns the Chaikin Money Flow values of Stock Prices for the Security with the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1600,24 +1645,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 20;  // int? | The number of observations, per period, to calculate Chaikin Money Flow (optional)  (default to 20)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityChaikinMoneyFlow result = securityApi.GetSecurityPriceTechnicalsCmf(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsCmf: " + e.Message );
-      }
+      int? period = 20;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityChaikinMoneyFlow result = securityApi.GetSecurityPriceTechnicalsCmf(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1689,9 +1734,12 @@ Returns the Donchian Channel values of Stock Prices for the Security with the gi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1700,25 +1748,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 20;  // int? | The number of observations, per period, to calculate Donchian Channel (optional)  (default to 20)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating Donchian Channel (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityDonchianChannel result = securityApi.GetSecurityPriceTechnicalsDc(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsDc: " + e.Message );
-      }
+      int? period = 20;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityDonchianChannel result = securityApi.GetSecurityPriceTechnicalsDc(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1791,9 +1840,12 @@ Returns the Detrended Price Oscillator values of Stock Prices for the Security w
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1802,25 +1854,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 20;  // int? | The number of observations, per period, to calculate Detrended Price Oscillator (optional)  (default to 20)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating Detrended Price Oscillator (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityDetrendedPriceOscillator result = securityApi.GetSecurityPriceTechnicalsDpo(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsDpo: " + e.Message );
-      }
+      int? period = 20;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityDetrendedPriceOscillator result = securityApi.GetSecurityPriceTechnicalsDpo(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1893,9 +1946,12 @@ Returns the Ease of Movement values of Stock Prices for the Security with the gi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -1904,24 +1960,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 20;  // int? | The number of observations, per period, to calculate Ease of Movement (optional)  (default to 20)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityEaseOfMovement result = securityApi.GetSecurityPriceTechnicalsEom(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsEom: " + e.Message );
-      }
+      int? period = 20;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityEaseOfMovement result = securityApi.GetSecurityPriceTechnicalsEom(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -1993,9 +2049,12 @@ Returns the Force Index values of Stock Prices for the Security with the given `
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2004,23 +2063,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityForceIndex result = securityApi.GetSecurityPriceTechnicalsFi(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsFi: " + e.Message );
-      }
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityForceIndex result = securityApi.GetSecurityPriceTechnicalsFi(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2091,9 +2149,12 @@ Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2102,26 +2163,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var lowPeriod = 9;  // int? | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo (optional)  (default to 9)
-      var mediumPeriod = 26;  // int? | The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo (optional)  (default to 26)
-      var highPeriod = 52;  // int? | The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo (optional)  (default to 52)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityIchimokuKinkoHyo result = securityApi.GetSecurityPriceTechnicalsIchimoku(identifier, lowPeriod, mediumPeriod, highPeriod, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsIchimoku: " + e.Message );
-      }
+      int? lowPeriod = 9;
+
+      int? mediumPeriod = 26;
+
+      int? highPeriod = 52;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityIchimokuKinkoHyo result = securityApi.GetSecurityPriceTechnicalsIchimoku(identifier, lowPeriod, mediumPeriod, highPeriod, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2195,9 +2258,12 @@ Returns the Keltner Channel values of Stock Prices for the Security with the giv
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2206,24 +2272,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 10;  // int? | The number of observations, per period, to calculate Kelter Channel (optional)  (default to 10)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityKeltnerChannel result = securityApi.GetSecurityPriceTechnicalsKc(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsKc: " + e.Message );
-      }
+      int? period = 10;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityKeltnerChannel result = securityApi.GetSecurityPriceTechnicalsKc(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2295,9 +2361,12 @@ Returns the Know Sure Thing values of Stock Prices for the Security with the giv
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2306,32 +2375,40 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var roc1 = 10;  // int? | The number of observations, per period, to calculate the rate-of-change for RCMA1 (optional)  (default to 10)
-      var roc2 = 15;  // int? | The number of observations, per period, to calculate the rate-of-change for RCMA2 (optional)  (default to 15)
-      var roc3 = 20;  // int? | The number of observations, per period, to calculate the rate-of-change for RCMA3 (optional)  (default to 20)
-      var roc4 = 30;  // int? | The number of observations, per period, to calculate the rate-of-change for RCMA4 (optional)  (default to 30)
-      var sma1 = 10;  // int? | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (optional)  (default to 10)
-      var sma2 = 10;  // int? | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (optional)  (default to 10)
-      var sma3 = 10;  // int? | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (optional)  (default to 10)
-      var sma4 = 15;  // int? | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 (optional)  (default to 15)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating Know Sure Thing (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityKnowSureThing result = securityApi.GetSecurityPriceTechnicalsKst(identifier, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsKst: " + e.Message );
-      }
+      int? roc1 = 10;
+
+      int? roc2 = 15;
+
+      int? roc3 = 20;
+
+      int? roc4 = 30;
+
+      int? sma1 = 10;
+
+      int? sma2 = 10;
+
+      int? sma3 = 10;
+
+      int? sma4 = 15;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityKnowSureThing result = securityApi.GetSecurityPriceTechnicalsKst(identifier, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2411,9 +2488,12 @@ Returns the Moving Average Convergence Divergence values of Stock Prices for the
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2422,27 +2502,30 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var fastPeriod = 12;  // int? | The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence (optional)  (default to 12)
-      var slowPeriod = 26;  // int? | The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence (optional)  (default to 26)
-      var signalPeriod = 9;  // int? | The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence (optional)  (default to 9)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating Moving Average Convergence Divergence (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityMovingAverageConvergenceDivergence result = securityApi.GetSecurityPriceTechnicalsMacd(identifier, fastPeriod, slowPeriod, signalPeriod, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsMacd: " + e.Message );
-      }
+      int? fastPeriod = 12;
+
+      int? slowPeriod = 26;
+
+      int? signalPeriod = 9;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityMovingAverageConvergenceDivergence result = securityApi.GetSecurityPriceTechnicalsMacd(identifier, fastPeriod, slowPeriod, signalPeriod, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2517,9 +2600,12 @@ Returns the Money Flow Index values of Stock Prices for the Security with the gi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2528,24 +2614,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 14;  // int? | The number of observations, per period, to calculate Money Flow Index (optional)  (default to 14)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityMoneyFlowIndex result = securityApi.GetSecurityPriceTechnicalsMfi(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsMfi: " + e.Message );
-      }
+      int? period = 14;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityMoneyFlowIndex result = securityApi.GetSecurityPriceTechnicalsMfi(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2617,9 +2703,12 @@ Returns the Mass Index values of Stock Prices for the Security with the given `i
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2628,25 +2717,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var emaPeriod = 9;  // int? | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index (optional)  (default to 9)
-      var sumPeriod = 25;  // int? | The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index (optional)  (default to 25)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityMassIndex result = securityApi.GetSecurityPriceTechnicalsMi(identifier, emaPeriod, sumPeriod, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsMi: " + e.Message );
-      }
+      int? emaPeriod = 9;
+
+      int? sumPeriod = 25;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityMassIndex result = securityApi.GetSecurityPriceTechnicalsMi(identifier, emaPeriod, sumPeriod, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2719,9 +2809,12 @@ Returns the Negative Volume Index values of Stock Prices for the Security with t
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2730,23 +2823,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityNegativeVolumeIndex result = securityApi.GetSecurityPriceTechnicalsNvi(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsNvi: " + e.Message );
-      }
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityNegativeVolumeIndex result = securityApi.GetSecurityPriceTechnicalsNvi(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2817,9 +2909,12 @@ Returns the On-balance Volume values of Stock Prices for the Security with the g
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2828,23 +2923,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityOnBalanceVolume result = securityApi.GetSecurityPriceTechnicalsObv(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsObv: " + e.Message );
-      }
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityOnBalanceVolume result = securityApi.GetSecurityPriceTechnicalsObv(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -2915,9 +3009,12 @@ Returns the On-balance Volume Mean values of Stock Prices for the Security with 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -2926,24 +3023,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 10;  // int? | The number of observations, per period, to calculate On-balance Volume Mean (optional)  (default to 10)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityOnBalanceVolumeMean result = securityApi.GetSecurityPriceTechnicalsObvMean(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsObvMean: " + e.Message );
-      }
+      int? period = 10;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityOnBalanceVolumeMean result = securityApi.GetSecurityPriceTechnicalsObvMean(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3015,9 +3112,12 @@ Returns the Relative Strength Index values of Stock Prices for the Security with
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3026,25 +3126,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 14;  // int? | The number of observations, per period, to calculate Relative Strength Index (optional)  (default to 14)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating Relative Strength Index (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityRelativeStrengthIndex result = securityApi.GetSecurityPriceTechnicalsRsi(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsRsi: " + e.Message );
-      }
+      int? period = 14;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityRelativeStrengthIndex result = securityApi.GetSecurityPriceTechnicalsRsi(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3117,9 +3218,12 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3128,25 +3232,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 20;  // int? | The number of observations, per period, to calculate Simple Moving Average (optional)  (default to 20)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating Simple Moving Average (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecuritySimpleMovingAverage result = securityApi.GetSecurityPriceTechnicalsSma(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsSma: " + e.Message );
-      }
+      int? period = 20;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecuritySimpleMovingAverage result = securityApi.GetSecurityPriceTechnicalsSma(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3219,9 +3324,12 @@ Returns the Stochastic Oscillator values of Stock Prices for the Security with t
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3230,25 +3338,26 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 14;  // int? | The number of observations, per period, to calculate %K of Stochastic Oscillator (optional)  (default to 14)
-      var signalPeriod = 3;  // int? | The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator (optional)  (default to 3)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityStochasticOscillator result = securityApi.GetSecurityPriceTechnicalsSr(identifier, period, signalPeriod, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsSr: " + e.Message );
-      }
+      int? period = 14;
+
+      int? signalPeriod = 3;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityStochasticOscillator result = securityApi.GetSecurityPriceTechnicalsSr(identifier, period, signalPeriod, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3321,9 +3430,12 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3332,24 +3444,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 15;  // int? | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average (optional)  (default to 15)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityTripleExponentialAverage result = securityApi.GetSecurityPriceTechnicalsTrix(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsTrix: " + e.Message );
-      }
+      int? period = 15;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityTripleExponentialAverage result = securityApi.GetSecurityPriceTechnicalsTrix(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3421,9 +3533,12 @@ Returns the True Strength Index values of Stock Prices for the Security with the
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3432,26 +3547,28 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var lowPeriod = 13;  // int? | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index (optional)  (default to 13)
-      var highPeriod = 25;  // int? | The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index (optional)  (default to 25)
-      var priceKey = "close";  // string | The Stock Price field to use when calculating True Strength Index (optional)  (default to close)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityTrueStrengthIndex result = securityApi.GetSecurityPriceTechnicalsTsi(identifier, lowPeriod, highPeriod, priceKey, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsTsi: " + e.Message );
-      }
+      int? lowPeriod = 13;
+
+      int? highPeriod = 25;
+
+      string priceKey = "close";
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityTrueStrengthIndex result = securityApi.GetSecurityPriceTechnicalsTsi(identifier, lowPeriod, highPeriod, priceKey, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3525,9 +3642,12 @@ Returns the Ultimate Oscillator values of Stock Prices for the Security with the
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3536,29 +3656,34 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var shortPeriod = 7;  // int? | The number of observations, per period, to calculate the short period for Ultimate Oscillator (optional)  (default to 7)
-      var mediumPeriod = 14;  // int? | The number of observations, per period, to calculate the medium period for Ultimate Oscillator (optional)  (default to 14)
-      var longPeriod = 28;  // int? | The number of observations, per period, to calculate the long period for Ultimate Oscillator (optional)  (default to 28)
-      var shortWeight = 4.0;  // float? | The weight of short Buying Pressure average for Ultimate Oscillator (optional)  (default to 4.0)
-      var mediumWeight = 2.0;  // float? | The weight of medium Buying Pressure average for Ultimate Oscillator (optional)  (default to 2.0)
-      var longWeight = 1.0;  // float? | The weight of long Buying Pressure average for Ultimate Oscillator (optional)  (default to 1.0)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityUltimateOscillator result = securityApi.GetSecurityPriceTechnicalsUo(identifier, shortPeriod, mediumPeriod, longPeriod, shortWeight, mediumWeight, longWeight, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsUo: " + e.Message );
-      }
+      int? shortPeriod = 7;
+
+      int? mediumPeriod = 14;
+
+      int? longPeriod = 28;
+
+      float? shortWeight = 4.0;
+
+      float? mediumWeight = 2.0;
+
+      float? longWeight = 1.0;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityUltimateOscillator result = securityApi.GetSecurityPriceTechnicalsUo(identifier, shortPeriod, mediumPeriod, longPeriod, shortWeight, mediumWeight, longWeight, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3635,9 +3760,12 @@ Returns the Vortex Indicator values of Stock Prices for the Security with the gi
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3646,24 +3774,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 14;  // int? | The number of observations, per period, to calculate Vortex Indicator (optional)  (default to 14)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityVortexIndicator result = securityApi.GetSecurityPriceTechnicalsVi(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsVi: " + e.Message );
-      }
+      int? period = 14;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityVortexIndicator result = securityApi.GetSecurityPriceTechnicalsVi(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3735,9 +3863,12 @@ Returns the Volume-price Trend values of Stock Prices for the Security with the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3746,23 +3877,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityVolumePriceTrend result = securityApi.GetSecurityPriceTechnicalsVpt(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsVpt: " + e.Message );
-      }
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityVolumePriceTrend result = securityApi.GetSecurityPriceTechnicalsVpt(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3833,9 +3963,12 @@ Returns the Volume Weighted Average Price values of Stock Prices for the Securit
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3844,23 +3977,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityVolumeWeightedAveragePrice result = securityApi.GetSecurityPriceTechnicalsVwap(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsVwap: " + e.Message );
-      }
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityVolumeWeightedAveragePrice result = securityApi.GetSecurityPriceTechnicalsVwap(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -3931,9 +4063,12 @@ Returns the Williams %R values of Stock Prices for the Security with the given `
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -3942,24 +4077,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var period = 14;  // int? | The number of observations, per period, to look-back when calculating Williams %R (optional)  (default to 14)
-      var startDate = DateTime.Parse("2018-01-01";  // string | Return technical indicator values on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01";  // string | Return technical indicator values on or before the date (optional) 
-      var pageSize = 100;  // decimal? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityWilliamsR result = securityApi.GetSecurityPriceTechnicalsWr(identifier, period, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityPriceTechnicalsWr: " + e.Message );
-      }
+      int? period = 14;
+
+      string startDate = "2018-01-01";
+
+      string endDate = "2019-01-01";
+
+      decimal? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityWilliamsR result = securityApi.GetSecurityPriceTechnicalsWr(identifier, period, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4031,9 +4166,12 @@ Return the realtime stock price for the Security with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4042,20 +4180,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var source = "";  // string | Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        RealtimeStockPrice result = securityApi.GetSecurityRealtimePrice(identifier, source);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityRealtimePrice: " + e.Message );
-      }
+      string source = "";
+
+      
+      RealtimeStockPrice result = securityApi.GetSecurityRealtimePrice(identifier, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4123,9 +4257,12 @@ Returns stock price adjustments for the Security with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4134,23 +4271,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Return price adjustments on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01");  // DateTime? | Return price adjustments on or before the date (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityStockPriceAdjustments: " + e.Message );
-      }
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4221,9 +4357,12 @@ Return end-of-day stock prices for the Security with the given `identifier`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4232,24 +4371,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("2018-01-01");  // DateTime? | Return prices on or after the date (optional) 
-      var endDate = DateTime.Parse("2019-01-01");  // DateTime? | Return prices on or before the date (optional) 
-      var frequency = "daily";  // string | Return stock prices in the given frequency (optional)  (default to daily)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityStockPrices result = securityApi.GetSecurityStockPrices(identifier, startDate, endDate, frequency, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityStockPrices: " + e.Message );
-      }
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+
+      string frequency = "daily";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityStockPrices result = securityApi.GetSecurityStockPrices(identifier, startDate, endDate, frequency, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4321,9 +4460,12 @@ Returns buy, sell, and hold recommendations from analysts at brokerages for the 
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4332,36 +4474,48 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var startDate = DateTime.Parse("";  // string | Limit ratings to those on or after this date (optional) 
-      var endDate = DateTime.Parse("";  // string | Limit ratings to those on or before this date (optional) 
-      var meanGreater = "";  // decimal? | Return only records with a mean (average) higher than this value (optional) 
-      var meanLess = "";  // decimal? | Return only records with a mean (average) lower than this value (optional) 
-      var strongBuysGreater = "";  // int? | Return only records with more than this many Strong Buy recommendations (optional) 
-      var strongBuysLess = "";  // int? | Return only records with fewer than this many Strong Buy recommendations (optional) 
-      var buysGreater = "";  // int? | Return only records with more than this many Buy recommendations (optional) 
-      var buysLess = "";  // int? | Return only records with fewer than this many Buy recommendations (optional) 
-      var holdsGreater = "";  // int? | Return only records with more than this many Hold recommendations (optional) 
-      var holdsLess = "";  // int? | Return only records with fewer than this many Hold recommendations (optional) 
-      var sellsGreater = "";  // int? | Return only records with more than this many Sell recommendations (optional) 
-      var sellsLess = "";  // int? | Return only records with fewer than this many Sell recommendations (optional) 
-      var strongSellsGreater = "";  // int? | Return only records with more than this many Strong Sell recommendations (optional) 
-      var strongSellsLess = "";  // int? | Return only records with fewer than this many Strong Sell recommendations (optional) 
-      var totalGreater = "";  // int? | Return only records with more than this many recommendations, regardless of type (optional) 
-      var totalLess = "";  // int? | Return only records with fewer than this many recommendations, regardless of type (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityZacksAnalystRatings result = securityApi.GetSecurityZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityZacksAnalystRatings: " + e.Message );
-      }
+      string startDate = "";
+
+      string endDate = "";
+
+      decimal? meanGreater = null;
+
+      decimal? meanLess = null;
+
+      int? strongBuysGreater = null;
+
+      int? strongBuysLess = null;
+
+      int? buysGreater = null;
+
+      int? buysLess = null;
+
+      int? holdsGreater = null;
+
+      int? holdsLess = null;
+
+      int? sellsGreater = null;
+
+      int? sellsLess = null;
+
+      int? strongSellsGreater = null;
+
+      int? strongSellsLess = null;
+
+      int? totalGreater = null;
+
+      int? totalLess = null;
+
+      int? pageSize = 100;
+
+      
+      ApiResponseSecurityZacksAnalystRatings result = securityApi.GetSecurityZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4445,9 +4599,12 @@ Returns a snapshot of ratings data compared with previous timeframes for the Sec
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4456,20 +4613,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var date = DateTime.Parse("";  // string | Lookup a historical snapshot on the given date (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityZacksAnalystRatingsSnapshot result = securityApi.GetSecurityZacksAnalystRatingsSnapshot(identifier, date);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityZacksAnalystRatingsSnapshot: " + e.Message );
-      }
+      string date = "";
+
+      
+      ApiResponseSecurityZacksAnalystRatingsSnapshot result = securityApi.GetSecurityZacksAnalystRatingsSnapshot(identifier, date);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4537,9 +4690,12 @@ Return Zacks EPS surprises for the Security with the given `identifier`.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4548,21 +4704,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityZacksEPSSurprises result = securityApi.GetSecurityZacksEpsSurprises(identifier, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityZacksEpsSurprises: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityZacksEPSSurprises result = securityApi.GetSecurityZacksEpsSurprises(identifier, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4631,9 +4784,12 @@ Return Zacks sales surprises for the Security with the given `identifier`.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4642,21 +4798,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var identifier = "AAPL";  // string | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = "AAPL";
 
-      try
-      {
-        ApiResponseSecurityZacksSalesSurprises result = securityApi.GetSecurityZacksSalesSurprises(identifier, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.GetSecurityZacksSalesSurprises: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseSecurityZacksSalesSurprises result = securityApi.GetSecurityZacksSalesSurprises(identifier, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4725,9 +4878,12 @@ Screen Securities using complex logic
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4736,23 +4892,36 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var logic = new SecurityScreenGroup(); // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"https://docs.intrinio.com/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions. (optional) 
-      var orderColumn = "marketcap";  // string | Results returned sorted by this column (optional) 
-      var orderDirection = "asc";  // string | Sort order to use with the order_column (optional)  (default to asc)
-      var primaryOnly = false;  // bool? | Return only primary securities (optional)  (default to false)
-      var pageSize = 100;  // int? | The number of results to return. Maximum for this endpoint is 50000. (optional)  (default to 100)
+      
+      var logic = new SecurityScreenGroup();
+            
+      var orderColumn = "marketcap";
+      var orderDirection = "asc";
+      var primaryOnly = false;
+      var pageSize = 100;
 
-      try
-      {
-        List&lt;SecurityScreenResult&gt; result = securityApi.ScreenSecurities(logic, orderColumn, orderDirection, primaryOnly, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.ScreenSecurities: " + e.Message );
-      }
+      logic.Operator = "AND";
+
+      var clauseOne = new SecurityScreenClause();
+      clauseOne.Field = "marketcap";
+      clauseOne.Operator = SecurityScreenClause.OperatorEnum.Gt;
+      clauseOne.Value = "100000000";
+
+      var clauseTwo = new SecurityScreenClause();
+      clauseTwo.Field = "beta";
+      clauseTwo.Operator = SecurityScreenClause.OperatorEnum.Lt;
+      clauseTwo.Value = "5";
+
+      List<SecurityScreenClause> clauses = new List<SecurityScreenClause>();
+      clauses.Add(clauseOne);
+      clauses.Add(clauseTwo);
+
+      logic.Clauses = clauses;
+      
+      List<SecurityScreenResult> result = securityApi.ScreenSecurities(logic, orderColumn, orderDirection, primaryOnly, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -4823,9 +4992,12 @@ Searches for Securities matching the text `query`
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -4834,20 +5006,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var securityApi = new SecurityApi();
-      var query = "Apple";  // string | 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string query = "Apple";
 
-      try
-      {
-        ApiResponseSecuritiesSearch result = securityApi.SearchSecurities(query, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling SecurityApi.SearchSecurities: " + e.Message );
-      }
+      int? pageSize = 100;
+
+      
+      ApiResponseSecuritiesSearch result = securityApi.SearchSecurities(query, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

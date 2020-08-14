@@ -51,9 +51,12 @@ Returns the master list of option contracts for a given symbol.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -62,28 +65,32 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var optionsApi = new OptionsApi();
-      var symbol = "MSFT";  // string | The option symbol, corresponding to the underlying security.
-      var type = "put";  // string | The option contract type. (optional) 
-      var strike = 170.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional) 
-      var strikeGreaterThan = 190.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional) 
-      var strikeLessThan = 150.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional) 
-      var expiration = "2019-03-01";  // string | The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional) 
-      var expirationAfter = "2019-01-01";  // string | The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional) 
-      var expirationBefore = "2019-12-31";  // string | The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string symbol = "MSFT";
 
-      try
-      {
-        ApiResponseOptions result = optionsApi.GetOptions(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling OptionsApi.GetOptions: " + e.Message );
-      }
+      string type = "put";
+
+      decimal? strike = 170.0;
+
+      decimal? strikeGreaterThan = 190.0;
+
+      decimal? strikeLessThan = 150.0;
+
+      string expiration = "2019-03-01";
+
+      string expirationAfter = "2019-01-01";
+
+      string expirationBefore = "2019-12-31";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseOptions result = optionsApi.GetOptions(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -159,9 +166,12 @@ Returns all options contracts and their prices for the given symbol and expirati
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -170,27 +180,30 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var optionsApi = new OptionsApi();
-      var symbol = "MSFT";  // string | The option symbol, corresponding to the underlying security.
-      var expiration = "2019-04-05";  // string | The expiration date of the options contract
-      var date = DateTime.Parse("2019-04-05");  // DateTime? | The date of the option price. Returns option prices on this date. (optional) 
-      var type = "put";  // string | The option contract type. (optional) 
-      var strike = 170.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional) 
-      var strikeGreaterThan = 190.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional) 
-      var strikeLessThan = 150.0;  // decimal? | The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional) 
-      var moneyness = "in_the_money";  // string | The moneyness of the options contracts to return. 'all' will return all options contracts. 'in_the_money' will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). 'out_of_they_money' will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). 'near_the_money' will return options contracts that are $0.50 or less away from being in the money. (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
+      
+      string symbol = "MSFT";
 
-      try
-      {
-        ApiResponseOptionsChain result = optionsApi.GetOptionsChain(symbol, expiration, date, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling OptionsApi.GetOptionsChain: " + e.Message );
-      }
+      string expiration = "2019-04-05";
+
+      DateTime? date = DateTime.Parse("2019-04-05");
+
+      string type = "put";
+
+      decimal? strike = 170.0;
+
+      decimal? strikeGreaterThan = 190.0;
+
+      decimal? strikeLessThan = 150.0;
+
+      string moneyness = "in_the_money";
+
+      int? pageSize = 100;
+
+      
+      ApiResponseOptionsChain result = optionsApi.GetOptionsChain(symbol, expiration, date, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -265,9 +278,12 @@ Returns all option contract expiration dates for a given symbol.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -276,21 +292,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var optionsApi = new OptionsApi();
-      var symbol = "MSFT";  // string | The option symbol, corresponding to the underlying security.
-      var after = "2019-01-01";  // string | Return option contract expiration dates after this date. (optional) 
-      var before = "2019-12-31";  // string | Return option contract expiration dates before this date. (optional) 
+      
+      string symbol = "MSFT";
 
-      try
-      {
-        ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirations(symbol, after, before);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling OptionsApi.GetOptionsExpirations: " + e.Message );
-      }
+      string after = "2019-01-01";
+
+      string before = "2019-12-31";
+
+      
+      ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirations(symbol, after, before);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }
@@ -359,9 +372,12 @@ Returns all option prices for a given option contract identifier.
 ```csharp
 using System;
 using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using Intrinio.SDK.Api;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
+using Newtonsoft.Json;
 
 namespace Example
 {
@@ -370,23 +386,22 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-
+      
       var optionsApi = new OptionsApi();
-      var identifier = identifier_example;  // string | The Intrinio ID or code of the options contract to request prices for.
-      var startDate = DateTime.Parse("2019-01-01";  // string | Return option contract prices on or after this date. (optional) 
-      var endDate = DateTime.Parse("2019-12-31";  // string | Return option contract prices on or before this date. (optional) 
-      var pageSize = 100;  // int? | The number of results to return (optional)  (default to 100)
-      var nextPage = "";  // string | Gets the next page of data from a previous API call (optional) 
+      
+      string identifier = identifier_example;
 
-      try
-      {
-        ApiResponseOptionPrices result = optionsApi.GetOptionsPrices(identifier, startDate, endDate, pageSize, nextPage);
-        Console.WriteLine(result.ToJson());
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine("Exception when calling OptionsApi.GetOptionsPrices: " + e.Message );
-      }
+      string startDate = "2019-01-01";
+
+      string endDate = "2019-12-31";
+
+      int? pageSize = 100;
+
+      string nextPage = "";
+
+      
+      ApiResponseOptionPrices result = optionsApi.GetOptionsPrices(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
 }

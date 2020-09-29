@@ -64,23 +64,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var dataTagApi = new DataTagApi();
       
-      string tag = "";
-
-      string type = "";
-
-      string parent = "";
-
+      string tag = null;
+      string type = null;
+      string parent = null;
       string statementCode = "income_statement";
-
-      string fsTemplate = "";
-
+      string fsTemplate = null;
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseDataTags result = dataTagApi.GetAllDataTags(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -170,11 +164,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var dataTagApi = new DataTagApi();
       
       string identifier = "marketcap";
-
       
       DataTag result = dataTagApi.GetDataTagById(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -258,13 +252,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var dataTagApi = new DataTagApi();
       
       string query = "revenue";
-
       int? pageSize = 100;
-
       
       ApiResponseDataTagsSearch result = dataTagApi.SearchDataTags(query, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

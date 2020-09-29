@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using RestSharp;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
@@ -20,7 +21,7 @@ namespace Intrinio.SDK.Api
         /// All Municipalities
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -43,7 +44,7 @@ namespace Intrinio.SDK.Api
         /// All Municipalities
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -111,7 +112,7 @@ namespace Intrinio.SDK.Api
         /// All Municipalities
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -134,7 +135,7 @@ namespace Intrinio.SDK.Api
         /// All Municipalities
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -297,7 +298,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Municipalities 
+        /// All Municipalities Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -321,7 +322,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Municipalities 
+        /// All Municipalities Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -338,6 +339,8 @@ namespace Intrinio.SDK.Api
         /// <param name="enrollmentLessThan">Return municipalities with an enrollment less than the given number (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseMunicipalities</returns>
+        
+        
         public ApiResponse< ApiResponseMunicipalities > GetAllMunicipalitiesWithHttpInfo (bool? hasFinancials = null, string governmentName = null, string governmentType = null, string areaName = null, string areaType = null, string city = null, string state = null, decimal? zipcode = null, decimal? populationGreaterThan = null, decimal? populationLessThan = null, decimal? enrollmentGreaterThan = null, decimal? enrollmentLessThan = null, string nextPage = null)
         {
 
@@ -361,7 +364,8 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
+            
+            
             if (hasFinancials != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_financials", hasFinancials)); // query parameter
             if (governmentName != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "government_name", governmentName)); // query parameter
             if (governmentType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "government_type", governmentType)); // query parameter
@@ -401,7 +405,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Municipalities 
+        /// All Municipalities Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -426,7 +430,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Municipalities 
+        /// All Municipalities Returns all Municipalities. When parameters are specified, returns matching municipalities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="hasFinancials">Return municipalities with financials (optional)</param>
@@ -466,6 +470,7 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
 
             if (hasFinancials != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_financials", hasFinancials)); // query parameter
             if (governmentName != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "government_name", governmentName)); // query parameter
@@ -523,6 +528,8 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">An Intrinio ID of a Municipality</param>
         /// <returns>ApiResponse of Municipality</returns>
+        
+        
         public ApiResponse< Municipality > GetMunicipalityByIdWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
@@ -549,7 +556,8 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
+            
+            
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (ApiKeyAuth) required
@@ -621,6 +629,7 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
@@ -668,6 +677,8 @@ namespace Intrinio.SDK.Api
         /// <param name="id">An Intrinio ID of a Municipality</param>
         /// <param name="fiscalYear">Return financials for the given fiscal year (optional)</param>
         /// <returns>ApiResponse of ApiResponseMunicipalitiyFinancials</returns>
+        
+        
         public ApiResponse< ApiResponseMunicipalitiyFinancials > GetMunicipalityFinancialsWithHttpInfo (string id, decimal? fiscalYear = null)
         {
             // verify the required parameter 'id' is set
@@ -694,7 +705,8 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
+            
+            
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
 
@@ -769,6 +781,7 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter

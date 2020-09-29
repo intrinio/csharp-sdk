@@ -27,6 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="LastPrice">The price of the last trade..</param>
         /// <param name="LastTime">The date and time when the last trade occurred..</param>
+        /// <param name="LastSize">The size of the last trade..</param>
         /// <param name="BidPrice">The price of the top bid order..</param>
         /// <param name="BidSize">The size of the top bid order..</param>
         /// <param name="AskPrice">The price of the top ask order..</param>
@@ -39,10 +40,11 @@ namespace Intrinio.SDK.Model
         /// <param name="UpdatedOn">The date and time when the data was last updated..</param>
         /// <param name="Source">The source of the data..</param>
         /// <param name="Security">Security.</param>
-        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), decimal? OpenPrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
+        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? LastSize = default(decimal?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), decimal? OpenPrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
         {
             this.LastPrice = LastPrice;
             this.LastTime = LastTime;
+            this.LastSize = LastSize;
             this.BidPrice = BidPrice;
             this.BidSize = BidSize;
             this.AskPrice = AskPrice;
@@ -70,6 +72,13 @@ namespace Intrinio.SDK.Model
         /// <value>The date and time when the last trade occurred.</value>
         [DataMember(Name="last_time", EmitDefaultValue=false)]
         public DateTime? LastTime { get; set; }
+
+        /// <summary>
+        /// The size of the last trade.
+        /// </summary>
+        /// <value>The size of the last trade.</value>
+        [DataMember(Name="last_size", EmitDefaultValue=false)]
+        public decimal? LastSize { get; set; }
 
         /// <summary>
         /// The price of the top bid order.
@@ -164,6 +173,7 @@ namespace Intrinio.SDK.Model
             sb.Append("class RealtimeStockPrice {\n");
             sb.Append("  LastPrice: ").Append(LastPrice).Append("\n");
             sb.Append("  LastTime: ").Append(LastTime).Append("\n");
+            sb.Append("  LastSize: ").Append(LastSize).Append("\n");
             sb.Append("  BidPrice: ").Append(BidPrice).Append("\n");
             sb.Append("  BidSize: ").Append(BidSize).Append("\n");
             sb.Append("  AskPrice: ").Append(AskPrice).Append("\n");
@@ -219,6 +229,11 @@ namespace Intrinio.SDK.Model
                     this.LastTime == input.LastTime ||
                     (this.LastTime != null &&
                     this.LastTime.Equals(input.LastTime))
+                ) && 
+                (
+                    this.LastSize == input.LastSize ||
+                    (this.LastSize != null &&
+                    this.LastSize.Equals(input.LastSize))
                 ) && 
                 (
                     this.BidPrice == input.BidPrice ||
@@ -295,6 +310,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.LastPrice.GetHashCode();
                 if (this.LastTime != null)
                     hashCode = hashCode * 59 + this.LastTime.GetHashCode();
+                if (this.LastSize != null)
+                    hashCode = hashCode * 59 + this.LastSize.GetHashCode();
                 if (this.BidPrice != null)
                     hashCode = hashCode * 59 + this.BidPrice.GetHashCode();
                 if (this.BidSize != null)

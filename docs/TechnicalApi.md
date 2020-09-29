@@ -92,19 +92,15 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityAccumulationDistributionIndex result = technicalApi.GetSecurityPriceTechnicalsAdi(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -192,21 +188,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 22;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityAverageDailyTradingVolume result = technicalApi.GetSecurityPriceTechnicalsAdtv(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -295,21 +286,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 14;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityAverageDirectionalIndex result = technicalApi.GetSecurityPriceTechnicalsAdx(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -398,23 +384,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? shortPeriod = 5;
-
       int? longPeriod = 34;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityAwesomeOscillator result = technicalApi.GetSecurityPriceTechnicalsAo(identifier, shortPeriod, longPeriod, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -504,21 +484,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 14;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityAverageTrueRange result = technicalApi.GetSecurityPriceTechnicalsAtr(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -607,25 +582,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 20;
-
-      float? standardDeviations = 2.0;
-
+      float? standardDeviations = 2.0f;
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityBollingerBands result = technicalApi.GetSecurityPriceTechnicalsBb(identifier, period, standardDeviations, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -716,23 +684,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 20;
-
-      float? constant = 0.015;
-
+      float? constant = 0.015f;
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityCommodityChannelIndex result = technicalApi.GetSecurityPriceTechnicalsCci(identifier, period, constant, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -822,21 +784,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 20;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityChaikinMoneyFlow result = technicalApi.GetSecurityPriceTechnicalsCmf(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -925,23 +882,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 20;
-
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityDonchianChannel result = technicalApi.GetSecurityPriceTechnicalsDc(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1031,23 +982,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 20;
-
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityDetrendedPriceOscillator result = technicalApi.GetSecurityPriceTechnicalsDpo(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1137,21 +1082,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 20;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityEaseOfMovement result = technicalApi.GetSecurityPriceTechnicalsEom(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1240,19 +1180,15 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityForceIndex result = technicalApi.GetSecurityPriceTechnicalsFi(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1340,25 +1276,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? lowPeriod = 9;
-
       int? mediumPeriod = 26;
-
       int? highPeriod = 52;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityIchimokuKinkoHyo result = technicalApi.GetSecurityPriceTechnicalsIchimoku(identifier, lowPeriod, mediumPeriod, highPeriod, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1449,21 +1378,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 10;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityKeltnerChannel result = technicalApi.GetSecurityPriceTechnicalsKc(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1552,37 +1476,24 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? roc1 = 10;
-
       int? roc2 = 15;
-
       int? roc3 = 20;
-
       int? roc4 = 30;
-
       int? sma1 = 10;
-
       int? sma2 = 10;
-
       int? sma3 = 10;
-
       int? sma4 = 15;
-
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityKnowSureThing result = technicalApi.GetSecurityPriceTechnicalsKst(identifier, roc1, roc2, roc3, roc4, sma1, sma2, sma3, sma4, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1679,27 +1590,19 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? fastPeriod = 12;
-
       int? slowPeriod = 26;
-
       int? signalPeriod = 9;
-
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityMovingAverageConvergenceDivergence result = technicalApi.GetSecurityPriceTechnicalsMacd(identifier, fastPeriod, slowPeriod, signalPeriod, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1791,21 +1694,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 14;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityMoneyFlowIndex result = technicalApi.GetSecurityPriceTechnicalsMfi(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1894,23 +1792,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? emaPeriod = 9;
-
       int? sumPeriod = 25;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityMassIndex result = technicalApi.GetSecurityPriceTechnicalsMi(identifier, emaPeriod, sumPeriod, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2000,19 +1892,15 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityNegativeVolumeIndex result = technicalApi.GetSecurityPriceTechnicalsNvi(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2100,19 +1988,15 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityOnBalanceVolume result = technicalApi.GetSecurityPriceTechnicalsObv(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2200,21 +2084,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 10;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityOnBalanceVolumeMean result = technicalApi.GetSecurityPriceTechnicalsObvMean(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2303,23 +2182,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 14;
-
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityRelativeStrengthIndex result = technicalApi.GetSecurityPriceTechnicalsRsi(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2409,23 +2282,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 20;
-
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecuritySimpleMovingAverage result = technicalApi.GetSecurityPriceTechnicalsSma(identifier, period, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2515,23 +2382,17 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 14;
-
       int? signalPeriod = 3;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityStochasticOscillator result = technicalApi.GetSecurityPriceTechnicalsSr(identifier, period, signalPeriod, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2621,21 +2482,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 15;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityTripleExponentialAverage result = technicalApi.GetSecurityPriceTechnicalsTrix(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2724,25 +2580,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? lowPeriod = 13;
-
       int? highPeriod = 25;
-
       string priceKey = "close";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityTrueStrengthIndex result = technicalApi.GetSecurityPriceTechnicalsTsi(identifier, lowPeriod, highPeriod, priceKey, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2833,31 +2682,21 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? shortPeriod = 7;
-
       int? mediumPeriod = 14;
-
       int? longPeriod = 28;
-
-      float? shortWeight = 4.0;
-
-      float? mediumWeight = 2.0;
-
-      float? longWeight = 1.0;
-
+      float? shortWeight = 4.0f;
+      float? mediumWeight = 2.0f;
+      float? longWeight = 1.0f;
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityUltimateOscillator result = technicalApi.GetSecurityPriceTechnicalsUo(identifier, shortPeriod, mediumPeriod, longPeriod, shortWeight, mediumWeight, longWeight, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2951,21 +2790,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 14;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityVortexIndicator result = technicalApi.GetSecurityPriceTechnicalsVi(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -3054,19 +2888,15 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityVolumePriceTrend result = technicalApi.GetSecurityPriceTechnicalsVpt(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -3154,19 +2984,15 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityVolumeWeightedAveragePrice result = technicalApi.GetSecurityPriceTechnicalsVwap(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -3254,21 +3080,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var technicalApi = new TechnicalApi();
       
       string identifier = "AAPL";
-
       int? period = 14;
-
       string startDate = "2018-01-01";
-
       string endDate = "2019-01-01";
-
       decimal? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSecurityWilliamsR result = technicalApi.GetSecurityPriceTechnicalsWr(identifier, period, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

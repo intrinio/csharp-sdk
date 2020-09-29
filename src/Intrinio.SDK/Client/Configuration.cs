@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "5.6.2";
+        public const string Version = "5.6.3";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -106,11 +106,12 @@ namespace Intrinio.SDK.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "Swagger-Codegen/5.6.2/csharp";
+            UserAgent = "Swagger-Codegen/5.6.3/csharp";
             BasePath = "https://api-v2.intrinio.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
+            AllowRetries = true;
 
             // Setting Timeout has side effects (forces ApiClient creation).
             Timeout = 100000;
@@ -166,6 +167,7 @@ namespace Intrinio.SDK.Client
         /// <param name="dateTimeFormat">DateTime format string</param>
         /// <param name="timeout">HTTP connection timeout (in milliseconds)</param>
         /// <param name="userAgent">HTTP user agent</param>
+        /// <param name="allowRetries">Allow API call retries</param>
         [Obsolete("Use explicit object construction and setting of properties.", true)]
         public Configuration(
             // ReSharper disable UnusedParameter.Local
@@ -179,7 +181,8 @@ namespace Intrinio.SDK.Client
             string tempFolderPath = null,
             string dateTimeFormat = null,
             int timeout = 100000,
-            string userAgent = "Swagger-Codegen/5.6.2/csharp"
+            bool allowRetries = true,
+            string userAgent = "Swagger-Codegen/5.6.3/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -244,6 +247,11 @@ namespace Intrinio.SDK.Client
             get { return ApiClient.RestClient.Timeout; }
             set { ApiClient.RestClient.Timeout = value; }
         }
+        
+        /// <summary>
+        /// Get or Set the condition for allowing API call retries.
+        /// </summary>
+        public virtual bool AllowRetries { get; set; }
 
         /// <summary>
         /// Gets or sets the HTTP user agent.
@@ -413,8 +421,8 @@ namespace Intrinio.SDK.Client
             String report = "C# SDK (Intrinio.SDK) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 2.14.2\n";
-            report += "    SDK Package Version: 5.6.2\n";
+            report += "    Version of the API: 2.15.3\n";
+            report += "    SDK Package Version: 5.6.3\n";
 
             return report;
         }

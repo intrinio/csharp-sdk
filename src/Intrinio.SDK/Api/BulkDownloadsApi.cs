@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using RestSharp;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
@@ -172,6 +173,8 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseBulkDownloadLinks</returns>
+        
+        
         public ApiResponse< ApiResponseBulkDownloadLinks > GetBulkDownloadLinksWithHttpInfo ()
         {
 
@@ -195,7 +198,8 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
+            
+            
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -261,6 +265,7 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
 
 
             // authentication (ApiKeyAuth) required

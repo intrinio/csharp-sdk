@@ -64,6 +64,7 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var forexApi = new ForexApi();
       
@@ -147,6 +148,7 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var forexApi = new ForexApi();
       
@@ -230,27 +232,19 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var forexApi = new ForexApi();
       
       string pair = "EURUSD";
-
       string timeframe = "D1";
-
       string timezone = "UTC";
-
-      DateTime? startDate = null;
-
-      string startTime = "";
-
-      DateTime? endDate = null;
-
-      string endTime = "";
-
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      string startTime = null;
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+      string endTime = null;
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseForexPrices result = forexApi.GetForexPrices(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -272,9 +266,9 @@ Name | Type | Description  | Notes
  **timeframe** | string| The time interval for the quotes |  &nbsp;
  **timezone** | string| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **startDate** | DateTime?| Return Forex Prices on or after this date | [optional]  &nbsp;
- **startTime** | string| Return Forex Prices at or after this time (24-hour) | [optional]  &nbsp;
+ **startTime** | string| Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **endDate** | DateTime?| Return Forex Prices on or before this date | [optional]  &nbsp;
- **endTime** | string| Return Forex Prices at or before this time (24-hour) | [optional]  &nbsp;
+ **endTime** | string| Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

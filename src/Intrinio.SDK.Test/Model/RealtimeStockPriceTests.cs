@@ -75,6 +75,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'LastTime'
         }
         /// <summary>
+        /// Test the property 'LastSize'
+        /// </summary>
+        [Test]
+        public void LastSizeTest()
+        {
+            // TODO unit test for the property 'LastSize'
+        }
+        /// <summary>
         /// Test the property 'BidPrice'
         /// </summary>
         [Test]

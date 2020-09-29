@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using RestSharp;
 using Intrinio.SDK.Client;
 using Intrinio.SDK.Model;
@@ -65,9 +66,9 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseForexPrices</returns>
@@ -84,9 +85,9 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseForexPrices</returns>
@@ -142,9 +143,9 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseForexPrices</returns>
@@ -161,9 +162,9 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseForexPrices)</returns>
@@ -284,6 +285,8 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseForexCurrencies</returns>
+        
+        
         public ApiResponse< ApiResponseForexCurrencies > GetForexCurrenciesWithHttpInfo ()
         {
 
@@ -307,7 +310,8 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
+            
+            
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -373,6 +377,7 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
 
 
             // authentication (ApiKeyAuth) required
@@ -415,6 +420,8 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseForexPairs</returns>
+        
+        
         public ApiResponse< ApiResponseForexPairs > GetForexPairsWithHttpInfo ()
         {
 
@@ -438,7 +445,8 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
+            
+            
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -504,6 +512,7 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
 
 
             // authentication (ApiKeyAuth) required
@@ -538,9 +547,9 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseForexPrices</returns>
@@ -558,12 +567,24 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseForexPrices</returns>
+        
+        private static bool validateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+      		Regex validTimeRegex = new Regex(validTimePattern);
+      		bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+      		  return true;
+        }
+        
         public ApiResponse< ApiResponseForexPrices > GetForexPricesWithHttpInfo (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'pair' is set
@@ -593,7 +614,21 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
+            
+            if (startTime != null && startDate != null) {
+              if (validateTimeParam(startTime)) {
+                var startTimeSpan = TimeSpan.Parse(startTime);
+                startDate = startDate.Value.Add(startTimeSpan);
+              }
+            }
+              
+            if (endTime != null && endDate != null) {
+              if (validateTimeParam(endTime)) {
+                var endTimeSpan = TimeSpan.Parse(endTime);
+                endDate = endDate.Value.Add(endTimeSpan);
+              }  
+            }
+            
             if (pair != null) localVarPathParams.Add("pair", Configuration.ApiClient.ParameterToString(pair)); // path parameter
             if (timeframe != null) localVarPathParams.Add("timeframe", Configuration.ApiClient.ParameterToString(timeframe)); // path parameter
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
@@ -636,9 +671,9 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseForexPrices</returns>
@@ -657,9 +692,9 @@ namespace Intrinio.SDK.Api
         /// <param name="timeframe">The time interval for the quotes</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="startDate">Return Forex Prices on or after this date (optional)</param>
-        /// <param name="startTime">Return Forex Prices at or after this time (24-hour) (optional)</param>
+        /// <param name="startTime">Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="endDate">Return Forex Prices on or before this date (optional)</param>
-        /// <param name="endTime">Return Forex Prices at or before this time (24-hour) (optional)</param>
+        /// <param name="endTime">Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseForexPrices)</returns>
@@ -692,6 +727,20 @@ namespace Intrinio.SDK.Api
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+            if (startTime != null && startDate != null) {
+              if (validateTimeParam(startTime)) {
+                var startTimeSpan = TimeSpan.Parse(startTime);
+                startDate = startDate.Value.Add(startTimeSpan);
+              }
+            }
+              
+            if (endTime != null && endDate != null) {
+              if (validateTimeParam(endTime)) {
+                var endTimeSpan = TimeSpan.Parse(endTime);
+                endDate = endDate.Value.Add(endTimeSpan);
+              }  
+            }
 
             if (pair != null) localVarPathParams.Add("pair", Configuration.ApiClient.ParameterToString(pair)); // path parameter
             if (timeframe != null) localVarPathParams.Add("timeframe", Configuration.ApiClient.ParameterToString(timeframe)); // path parameter

@@ -13,6 +13,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
+using Polly;
 
 namespace Intrinio.SDK.Client
 {
@@ -167,11 +168,28 @@ namespace Intrinio.SDK.Client
             // set user agent
             RestClient.UserAgent = Configuration.UserAgent;
 
+            var allowRetries = Intrinio.SDK.Client.Configuration.Default.AllowRetries;
+            var retryCount = 0;
+            if (allowRetries is true)
+                retryCount = 4;
+                
+            var retryPolicy = Policy
+              .HandleResult<IRestResponse>((result) =>
+              {
+                  return result.StatusCode == HttpStatusCode.BadRequest;
+              })
+              .WaitAndRetry(retryCount, retryAttempt =>
+                TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
+              );
+              
             InterceptRequest(request);
-            var response = RestClient.Execute(request);
+            
+            var response = retryPolicy.Execute(() =>
+            {
+                return RestClient.Execute(request);
+            });
             InterceptResponse(request, response);
-
-            return (Object) response;
+            return (Object)response;
         }
         /// <summary>
         /// Makes the asynchronous HTTP request.
@@ -195,8 +213,26 @@ namespace Intrinio.SDK.Client
             var request = PrepareRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, contentType);
+            
+            var retryCount = Intrinio.SDK.Client.Configuration.Default.AllowRetries ? 4 : 0;
+            
+            var retryPolicy = Policy
+              .HandleResult<IRestResponse>((result) =>
+              {
+                  return result.StatusCode == HttpStatusCode.BadRequest;
+              })
+              .WaitAndRetryAsync(retryCount, retryAttempt =>
+                TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
+              );
+              
             InterceptRequest(request);
-            var response = await RestClient.ExecuteTaskAsync(request);
+            
+            var response = await retryPolicy.ExecuteAsync(async () =>
+            {
+              Console.WriteLine("Calling Intrinio API...");
+              return await RestClient.ExecuteTaskAsync(request);
+            });
+             
             InterceptResponse(request, response);
             return (Object)response;
         }

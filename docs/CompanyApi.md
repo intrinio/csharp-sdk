@@ -74,29 +74,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       DateTime? latestFilingDate = null;
-
-      string sic = "";
-
-      string template = "";
-
-      string sector = "";
-
-      string industryCategory = "";
-
-      string industryGroup = "";
-
+      string sic = null;
+      string template = null;
+      string sector = null;
+      string industryCategory = null;
+      string industryGroup = null;
       bool? hasFundamentals = true;
-
       bool? hasStockPrices = true;
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -189,13 +180,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseNews result = companyApi.GetAllCompanyNews(pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -280,11 +270,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
       
       Company result = companyApi.GetCompany(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -368,13 +358,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
       string tag = "marketcap";
-
       
       decimal? result = companyApi.GetCompanyDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -459,13 +448,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
       string tag = "ceo";
-
       
       string result = companyApi.GetCompanyDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -550,21 +538,16 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
-      string reportType = "";
-
+      string reportType = null;
       DateTime? startDate = DateTime.Parse("2015-01-01");
-
       DateTime? endDate = null;
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -653,31 +636,21 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
       DateTime? filedAfter = null;
-
       DateTime? filedBefore = null;
-
       bool? reportedOnly = false;
-
       int? fiscalYear = null;
-
-      string statementCode = "";
-
-      string type = "";
-
+      string statementCode = null;
+      string type = null;
       DateTime? startDate = null;
-
       DateTime? endDate = null;
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -771,27 +744,19 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
       string tag = "marketcap";
-
       string frequency = "daily";
-
-      string type = "";
-
+      string type = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
-
       DateTime? endDate = null;
-
-      string sortOrder = "";
-
+      string sortOrder = null;
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -883,25 +848,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
-      string ticker = "";
-
-      string status = "";
-
+      string ticker = "UBER";
+      string status = null;
       DateTime? startDate = null;
-
       DateTime? endDate = null;
-
       int? offerAmountGreaterThan = null;
-
       int? offerAmountLessThan = null;
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseInitialPublicOfferings result = companyApi.GetCompanyIpos(ticker, status, startDate, endDate, offerAmountGreaterThan, offerAmountLessThan, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -992,15 +950,13 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1086,13 +1042,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseCompanySecurities result = companyApi.GetCompanySecurities(identifier, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1177,17 +1132,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-
       string statementCode = "income_statement";
-
       string fiscalPeriod = "FY";
-
       int? fiscalYear = 2017;
-
       
       Fundamental result = companyApi.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1274,13 +1226,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var companyApi = new CompanyApi();
       
       string query = "Apple";
-
       int? pageSize = 100;
-
       
       ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

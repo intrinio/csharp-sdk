@@ -63,13 +63,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var dataPointApi = new DataPointApi();
       
       string identifier = "AAPL";
-
       string tag = "marketcap";
-
       
       decimal? result = dataPointApi.GetDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -154,13 +153,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var dataPointApi = new DataPointApi();
       
       string identifier = "AAPL";
-
       string tag = "ceo";
-
       
       string result = dataPointApi.GetDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

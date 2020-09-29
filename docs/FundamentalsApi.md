@@ -65,11 +65,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var fundamentalsApi = new FundamentalsApi();
       
       string id = "fun_ge9LlE";
-
       
       Fundamental result = fundamentalsApi.GetFundamentalById(id);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -153,11 +153,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var fundamentalsApi = new FundamentalsApi();
       
       string id = "AAPL-income_statement-2018-Q1";
-
       
       ApiResponseReportedFinancials result = fundamentalsApi.GetFundamentalReportedFinancials(id);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -241,11 +241,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var fundamentalsApi = new FundamentalsApi();
       
       string id = "AAPL-income_statement-2018-Q1";
-
       
       ApiResponseStandardizedFinancials result = fundamentalsApi.GetFundamentalStandardizedFinancials(id);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -329,17 +329,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var fundamentalsApi = new FundamentalsApi();
       
       string identifier = "AAPL";
-
       string statementCode = "income_statement";
-
       int? fiscalYear = 2017;
-
       string fiscalPeriod = "FY";
-
       
       Fundamental result = fundamentalsApi.LookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

@@ -65,29 +65,20 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var optionsApi = new OptionsApi();
       
-      string symbol = "MSFT";
-
+      string symbol = "AAPL";
       string type = "put";
-
-      decimal? strike = 170.0;
-
-      decimal? strikeGreaterThan = 190.0;
-
-      decimal? strikeLessThan = 150.0;
-
+      decimal? strike = 170;
+      decimal? strikeGreaterThan = 150;
+      decimal? strikeLessThan = 190;
       string expiration = "2019-03-01";
-
       string expirationAfter = "2019-01-01";
-
       string expirationBefore = "2019-12-31";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseOptions result = optionsApi.GetOptions(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -180,27 +171,19 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var optionsApi = new OptionsApi();
       
       string symbol = "MSFT";
-
       string expiration = "2019-04-05";
-
-      DateTime? date = DateTime.Parse("2019-04-05");
-
-      string type = "put";
-
-      decimal? strike = 170.0;
-
-      decimal? strikeGreaterThan = 190.0;
-
-      decimal? strikeLessThan = 150.0;
-
-      string moneyness = "in_the_money";
-
-      int? pageSize = 100;
-
+      DateTime? date = null;
+      string type = null;
+      decimal? strike = null;
+      decimal? strikeGreaterThan = null;
+      decimal? strikeLessThan = null;
+      string moneyness = null;
+      int? pageSize = null;
       
       ApiResponseOptionsChain result = optionsApi.GetOptionsChain(symbol, expiration, date, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -292,15 +275,13 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var optionsApi = new OptionsApi();
       
       string symbol = "MSFT";
-
       string after = "2019-01-01";
-
       string before = "2019-12-31";
-
       
       ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirations(symbol, after, before);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -386,19 +367,15 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var optionsApi = new OptionsApi();
       
-      string identifier = identifier_example;
-
+      string identifier = "MSFT190405C00118000";
       string startDate = "2019-01-01";
-
       string endDate = "2019-12-31";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseOptionPrices result = optionsApi.GetOptionsPrices(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

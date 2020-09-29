@@ -39,6 +39,7 @@ Method | HTTP request | Description
 
 #### All Municipalities
 
+Returns all Municipalities. When parameters are specified, returns matching municipalities.
 
 [//]: # (END_OVERVIEW)
 
@@ -63,35 +64,23 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var municipalityApi = new MunicipalityApi();
       
-      bool? hasFinancials = true;
-
-      string governmentName = "";
-
-      string governmentType = "";
-
-      string areaName = "";
-
-      string areaType = "";
-
-      string city = "";
-
-      string state = "";
-
+      bool? hasFinancials = null;
+      string governmentName = null;
+      string governmentType = null;
+      string areaName = null;
+      string areaType = null;
+      string city = null;
+      string state = null;
       decimal? zipcode = null;
-
       decimal? populationGreaterThan = null;
-
       decimal? populationLessThan = null;
-
       decimal? enrollmentGreaterThan = null;
-
       decimal? enrollmentLessThan = null;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseMunicipalities result = municipalityApi.GetAllMunicipalities(hasFinancials, governmentName, governmentType, areaName, areaType, city, state, zipcode, populationGreaterThan, populationLessThan, enrollmentGreaterThan, enrollmentLessThan, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -187,11 +176,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var municipalityApi = new MunicipalityApi();
       
       string id = "mun_Xn7x4z";
-
       
       Municipality result = municipalityApi.GetMunicipalityById(id);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -275,13 +264,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var municipalityApi = new MunicipalityApi();
       
       string id = "mun_Xn7x4z";
-
       decimal? fiscalYear = 2017;
-
       
       ApiResponseMunicipalitiyFinancials result = municipalityApi.GetMunicipalityFinancials(id, fiscalYear);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

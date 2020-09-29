@@ -62,6 +62,7 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var bulkDownloadsApi = new BulkDownloadsApi();
       

@@ -67,15 +67,13 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var eTFsApi = new ETFsApi();
       
       string exchange = "XNAS";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseETFs result = eTFsApi.GetAllEtfs(exchange, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -161,11 +159,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var eTFsApi = new ETFsApi();
       
       string identifier = "SPY";
-
       
       ETF result = eTFsApi.GetEtf(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -249,11 +247,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var eTFsApi = new ETFsApi();
       
       string identifier = "SPY";
-
       
       ETFAnalytics result = eTFsApi.GetEtfAnalytics(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -337,15 +335,13 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var eTFsApi = new ETFsApi();
       
       string identifier = "SPY";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseETFHoldings result = eTFsApi.GetEtfHoldings(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -431,11 +427,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var eTFsApi = new ETFsApi();
       
       string identifier = "SPY";
-
       
       ETFStats result = eTFsApi.GetEtfStats(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -519,11 +515,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var eTFsApi = new ETFsApi();
       
       string query = "iShares";
-
       
       ApiResponseETFs result = eTFsApi.SearchEtfs(query);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

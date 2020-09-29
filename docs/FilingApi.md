@@ -71,25 +71,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string company = "AAPL";
-
-      string reportType = "";
-
+      string reportType = "10-Q";
       DateTime? startDate = DateTime.Parse("2015-01-01");
-
       DateTime? endDate = null;
-
-      string industryCategory = "";
-
-      string industryGroup = "";
-
+      string industryCategory = null;
+      string industryGroup = null;
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -180,25 +173,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string company = "AAPL";
-
       string reportType = "10-Q";
-
       DateTime? filingStartDate = null;
-
       DateTime? filingEndDate = null;
-
       DateTime? periodEndedStartDate = null;
-
       DateTime? periodEndedEndDate = null;
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseFilingNotes result = filingApi.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -289,11 +275,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string id = "fil_7Kn2P6";
-
       
       Filing result = filingApi.GetFilingById(id);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -377,25 +363,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string identifier = "fil_B73xBG";
-
-      string statementCode = "";
-
-      string type = "";
-
+      string statementCode = null;
+      string type = null;
       int? fiscalYear = null;
-
-      string fiscalPeriod = "";
-
+      string fiscalPeriod = null;
       DateTime? startDate = null;
-
       DateTime? endDate = null;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseFilingFundamentals result = filingApi.GetFilingFundamentals(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -485,11 +464,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string identifier = "fil_B73xBG";
-
       
       string result = filingApi.GetFilingHtml(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -572,11 +551,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string identifier = "fil_B73xBG";
-
       
       string result = filingApi.GetFilingText(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -659,13 +638,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string identifier = "xbn_ydK3QL";
-
       string contentFormat = "text";
-
       
       FilingNote result = filingApi.GetNote(identifier, contentFormat);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -749,11 +727,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string identifier = "xbn_ydK3QL";
-
       
       string result = filingApi.GetNoteHtml(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -836,11 +814,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string identifier = "xbn_ydK3QL";
-
       
       string result = filingApi.GetNoteText(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -924,17 +902,14 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var filingApi = new FilingApi();
       
       string query = "inflation";
-
       DateTime? filingStartDate = DateTime.Parse("2018-07-15");
-
       DateTime? filingEndDate = DateTime.Parse("2018-11-30");
-
       int? pageSize = 100;
-
       
       ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

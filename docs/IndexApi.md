@@ -78,13 +78,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -168,13 +167,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSICIndices result = indexApi.GetAllSicIndices(pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -258,13 +256,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -348,11 +345,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$GDP";
-
       
       EconomicIndex result = indexApi.GetEconomicIndexById(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -436,13 +433,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$GDP";
-
       string tag = "level";
-
       
       decimal? result = indexApi.GetEconomicIndexDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -527,13 +523,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$GDP";
-
       string tag = "level";
-
       
       string result = indexApi.GetEconomicIndexDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -618,25 +613,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$GDP";
-
       string tag = "level";
-
-      string type = "";
-
+      string type = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
-
       DateTime? endDate = null;
-
       string sortOrder = "desc";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -726,11 +714,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
-      string identifier = "$SIC.1";
-
+      string identifier = "$SIC.2911";
       
       SICIndex result = indexApi.GetSicIndexById(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -814,13 +802,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
-      string identifier = "$SIC.1";
-
-      string tag = "level";
-
+      string identifier = "$SIC.2911";
+      string tag = "marketcap";
       
       decimal? result = indexApi.GetSicIndexDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -905,13 +892,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
-      string identifier = "$SIC.1";
-
-      string tag = "level";
-
+      string identifier = "$SIC.2911";
+      string tag = "marketcap";
       
       string result = indexApi.GetSicIndexDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -996,25 +982,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$SIC.1";
-
       string tag = "marketcap";
-
-      string type = "";
-
+      string type = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
-
       DateTime? endDate = null;
-
       string sortOrder = "desc";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1104,11 +1083,11 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$DJI";
-
       
       StockMarketIndex result = indexApi.GetStockMarketIndexById(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1192,13 +1171,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$DJI";
-
       string tag = "level";
-
       
       decimal? result = indexApi.GetStockMarketIndexDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1283,13 +1261,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$DJI";
-
       string tag = "level";
-
       
       string result = indexApi.GetStockMarketIndexDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1374,25 +1351,18 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string identifier = "$DJI";
-
       string tag = "level";
-
-      string type = "";
-
+      string type = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
-
       DateTime? endDate = null;
-
       string sortOrder = "desc";
-
       int? pageSize = 100;
-
-      string nextPage = "";
-
+      string nextPage = null;
       
       ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1483,13 +1453,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string query = "GDP";
-
       int? pageSize = 100;
-
       
       ApiResponseEconomicIndicesSearch result = indexApi.SearchEconomicIndices(query, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1574,13 +1543,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string query = "agriculture";
-
       int? pageSize = 100;
-
       
       ApiResponseSICIndicesSearch result = indexApi.SearchSicIndices(query, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1665,13 +1633,12 @@ namespace Example
     public static void Main()
     {
       Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
       
       var indexApi = new IndexApi();
       
       string query = "dow";
-
       int? pageSize = 100;
-
       
       ApiResponseStockMarketIndicesSearch result = indexApi.SearchStockMarketsIndices(query, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

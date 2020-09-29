@@ -11,6 +11,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **LastPrice** | decimal? | The price of the last trade. &nbsp;
 **LastTime** | DateTime? | The date and time when the last trade occurred. &nbsp;
+**LastSize** | decimal? | The size of the last trade. &nbsp;
 **BidPrice** | decimal? | The price of the top bid order. &nbsp;
 **BidSize** | decimal? | The size of the top bid order. &nbsp;
 **AskPrice** | decimal? | The price of the top ask order. &nbsp;

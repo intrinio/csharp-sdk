@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.14.2
-- Package version: 5.6.2
+- API version: 2.15.3
+- Package version: 5.6.3
 
 
 <a name="frameworks-supported"></a>
@@ -28,12 +28,14 @@ Alternatively, you can download the required DLLs from the [Releases page](https
 - [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0 or later
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
 - [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
+- [Polly](https://www.nuget.org/packages/Polly) - 7.2.1 or later
 
 The DLLs included in the package may not be the latest version. We recommend using [NuGet] (https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
 Install-Package RestSharp
 Install-Package Newtonsoft.Json
 Install-Package JsonSubTypes
+Install-Package Polly
 ```
 
 
@@ -79,8 +81,9 @@ namespace Example
   {
     public static void Main()
     {
-      Configuration.Default.AddApiKey("api_key", "OmJiN2MyNjU4ZDFjMmFlMTc2M2ZmNjJjM2U5NWQ0NmVh");
-
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
       var companyApi = new CompanyApi();
       var latestFilingDate = "";  // DateTime? | Last filing date (optional) 
       var sic = "";  // string | Standard Industrial Classification code (optional) 
@@ -104,6 +107,12 @@ namespace Example
   }
 }
 ```
+
+## Retries
+
+By default, automatic retries are enabled for the C# SDK. Retries can be enabled/disabled by setting `AllowRetries` on the default configuration to `true`/`false` as seen in the code example above.
+
+If set to `true`, all calls to the API will attempt a successful completion up to 5 times with exponential backoff before failing. If set to `false`, calls to the API will attempt one successful call.
 
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
@@ -190,8 +199,8 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**GetSecurityDataPointText**](docs/SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 *SecurityApi* | [**GetSecurityHistoricalData**](docs/SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
 *SecurityApi* | [**GetSecurityIntradayPrices**](docs/SecurityApi.md#getsecurityintradayprices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
-*SecurityApi* | [**GetSecurityLatestDividendRecord**](docs/SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
-*SecurityApi* | [**GetSecurityLatestEarningsRecord**](docs/SecurityApi.md#getsecuritylatestearningsrecord) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
+*SecurityApi* | [**GetSecurityLatestDividendRecord**](docs/SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
+*SecurityApi* | [**GetSecurityLatestEarningsRecord**](docs/SecurityApi.md#getsecuritylatestearningsrecord) | **GET** /securities/{identifier}/earnings/latest | Latest Earnings Record for Security
 *SecurityApi* | [**GetSecurityPriceTechnicalsAdi**](docs/SecurityApi.md#getsecuritypricetechnicalsadi) | **GET** /securities/{identifier}/prices/technicals/adi | Accumulation/Distribution Index
 *SecurityApi* | [**GetSecurityPriceTechnicalsAdtv**](docs/SecurityApi.md#getsecuritypricetechnicalsadtv) | **GET** /securities/{identifier}/prices/technicals/adtv | Average Daily Trading Volume
 *SecurityApi* | [**GetSecurityPriceTechnicalsAdx**](docs/SecurityApi.md#getsecuritypricetechnicalsadx) | **GET** /securities/{identifier}/prices/technicals/adx | Average Directional Index

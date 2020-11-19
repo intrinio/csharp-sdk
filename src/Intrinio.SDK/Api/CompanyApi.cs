@@ -373,9 +373,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseCompaniesSearch</returns>
-        ApiResponseCompaniesSearch SearchCompanies (string query, int? pageSize = null);
+        ApiResponseCompaniesSearch SearchCompanies (string query, bool? active = null, int? pageSize = null);
 
         /// <summary>
         /// Search Companies
@@ -385,9 +386,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseCompaniesSearch</returns>
-        ApiResponse<ApiResponseCompaniesSearch> SearchCompaniesWithHttpInfo (string query, int? pageSize = null);
+        ApiResponse<ApiResponseCompaniesSearch> SearchCompaniesWithHttpInfo (string query, bool? active = null, int? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -746,9 +748,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseCompaniesSearch</returns>
-        System.Threading.Tasks.Task<ApiResponseCompaniesSearch> SearchCompaniesAsync (string query, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponseCompaniesSearch> SearchCompaniesAsync (string query, bool? active = null, int? pageSize = null);
 
         /// <summary>
         /// Search Companies
@@ -758,9 +761,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompaniesSearch)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompaniesSearch>> SearchCompaniesAsyncWithHttpInfo (string query, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompaniesSearch>> SearchCompaniesAsyncWithHttpInfo (string query, bool? active = null, int? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -2936,11 +2940,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponseCompaniesSearch</returns>
-        public ApiResponseCompaniesSearch SearchCompanies (string query, int? pageSize = null)
+        public ApiResponseCompaniesSearch SearchCompanies (string query, bool? active = null, int? pageSize = null)
         {
-             ApiResponse<ApiResponseCompaniesSearch> localVarResponse = SearchCompaniesWithHttpInfo(query, pageSize);
+             ApiResponse<ApiResponseCompaniesSearch> localVarResponse = SearchCompaniesWithHttpInfo(query, active, pageSize);
              return localVarResponse.Data;
         }
 
@@ -2949,11 +2954,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseCompaniesSearch</returns>
         
         
-        public ApiResponse< ApiResponseCompaniesSearch > SearchCompaniesWithHttpInfo (string query, int? pageSize = null)
+        public ApiResponse< ApiResponseCompaniesSearch > SearchCompaniesWithHttpInfo (string query, bool? active = null, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -2982,6 +2988,7 @@ namespace Intrinio.SDK.Api
             
             
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (active != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active", active)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -3013,11 +3020,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponseCompaniesSearch</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompaniesSearch> SearchCompaniesAsync (string query, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponseCompaniesSearch> SearchCompaniesAsync (string query, bool? active = null, int? pageSize = null)
         {
-             ApiResponse<ApiResponseCompaniesSearch> localVarResponse = await SearchCompaniesAsyncWithHttpInfo(query, pageSize);
+             ApiResponse<ApiResponseCompaniesSearch> localVarResponse = await SearchCompaniesAsyncWithHttpInfo(query, active, pageSize);
              return localVarResponse.Data;
 
         }
@@ -3027,9 +3035,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
+        /// <param name="active">When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompaniesSearch)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompaniesSearch>> SearchCompaniesAsyncWithHttpInfo (string query, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompaniesSearch>> SearchCompaniesAsyncWithHttpInfo (string query, bool? active = null, int? pageSize = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -3058,6 +3067,7 @@ namespace Intrinio.SDK.Api
               
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (active != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active", active)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
 
             // authentication (ApiKeyAuth) required

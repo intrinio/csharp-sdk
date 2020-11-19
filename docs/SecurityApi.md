@@ -4622,7 +4622,7 @@ Name | Type | Description  | Notes
 
 #### Screen Securities
 
-Screen Securities using complex logic
+Screen Securities using complex logic. Use POST only. See <a href=\"https://docs.intrinio.com/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
 
 [//]: # (END_OVERVIEW)
 
@@ -4692,7 +4692,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
  **orderColumn** | string| Results returned sorted by this column | [optional]  &nbsp;
  **orderDirection** | string| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
  **primaryOnly** | bool?| Return only primary securities | [optional] [default to false] &nbsp;

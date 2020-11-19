@@ -26,6 +26,8 @@ namespace Intrinio.SDK.Client
         {
             ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
         };
+        
+        private const int maxRetryMilliSeconds = 60000;
 
         /// <summary>
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
@@ -176,7 +178,31 @@ namespace Intrinio.SDK.Client
             var retryPolicy = Policy
               .HandleResult<IRestResponse>((result) =>
               {
-                  return result.StatusCode == HttpStatusCode.BadRequest;
+                  bool shouldRetry = false;
+                  List<Parameter> responseHeaders = result.Headers.ToList();
+                  
+                  // Retry if server error or rate limit error
+                  if ((int)result.StatusCode >= 500)
+                  {
+                      shouldRetry = true;
+                  }
+                  else if (result.StatusCode == (HttpStatusCode)429)
+                  {
+                      Parameter rateLimitHeader = responseHeaders.Find(x => x.Name == "retry-after");
+                      if (rateLimitHeader != null)
+                      {
+                          int rateLimitElapsesIn = Int32.Parse(rateLimitHeader.Value.ToString()) * 1000;
+                          
+                          // If the rate limit elapse milliseconds is less than the maximum allowed retry time limit, sleep program until rate limit has elapsed. Then retry.
+                          if (rateLimitElapsesIn < maxRetryMilliSeconds)
+                          {
+                              System.Threading.Thread.Sleep((int)rateLimitElapsesIn);
+                              shouldRetry = true;
+                          }
+                      }
+                  }
+
+                  return shouldRetry;
               })
               .WaitAndRetry(retryCount, retryAttempt =>
                 TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
@@ -219,7 +245,33 @@ namespace Intrinio.SDK.Client
             var retryPolicy = Policy
               .HandleResult<IRestResponse>((result) =>
               {
-                  return result.StatusCode == HttpStatusCode.BadRequest;
+
+                  bool shouldRetry = false;
+                  List<Parameter> responseHeaders = result.Headers.ToList();
+                  
+                  // Retry if server error or rate limit error
+                  if ((int)result.StatusCode >= 500)
+                  {
+                      shouldRetry = true;
+                  }
+                  else if (result.StatusCode == (HttpStatusCode)429)
+                  {
+                      Parameter rateLimitHeader = responseHeaders.Find(x => x.Name == "retry-after");
+                      
+                      if (rateLimitHeader != null)
+                      {
+                          int rateLimitElapsesIn = Int32.Parse(rateLimitHeader.Value.ToString()) * 1000;
+                          
+                          // If the rate limit elapse milliseconds is less than the maximum allowed retry time limit, sleep program until rate limit has elapsed. Then retry.
+                          if (rateLimitElapsesIn < maxRetryMilliSeconds)
+                          {
+                              System.Threading.Thread.Sleep((int)rateLimitElapsesIn);
+                              shouldRetry = true;
+                          }
+                      }
+                  }
+
+                  return shouldRetry;
               })
               .WaitAndRetryAsync(retryCount, retryAttempt =>
                 TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))

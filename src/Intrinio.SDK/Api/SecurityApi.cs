@@ -1477,10 +1477,10 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen Securities using complex logic
+        /// Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -1492,10 +1492,10 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen Securities using complex logic
+        /// Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -2987,10 +2987,10 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen Securities using complex logic
+        /// Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -3002,10 +3002,10 @@ namespace Intrinio.SDK.Api
         /// Screen Securities
         /// </summary>
         /// <remarks>
-        /// Screen Securities using complex logic
+        /// Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -11416,10 +11416,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen Securities using complex logic
+        /// Screen Securities Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -11432,10 +11432,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen Securities using complex logic
+        /// Screen Securities Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -11507,10 +11507,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen Securities using complex logic
+        /// Screen Securities Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>
@@ -11524,10 +11524,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Screen Securities Screen Securities using complex logic
+        /// Screen Securities Screen Securities using complex logic. Use POST only. See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
+        /// <param name="logic">The logic to screen with, consisting of operators, clauses, and nested groups. &lt;/br&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. (optional)</param>
         /// <param name="orderColumn">Results returned sorted by this column (optional)</param>
         /// <param name="orderDirection">Sort order to use with the order_column (optional, default to asc)</param>
         /// <param name="primaryOnly">Return only primary securities (optional, default to false)</param>

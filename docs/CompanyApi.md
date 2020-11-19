@@ -1197,7 +1197,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompaniesSearch SearchCompanies (string query, int? pageSize = null)
+> ApiResponseCompaniesSearch SearchCompanies (string query, bool? active = null, int? pageSize = null)
 
 #### Search Companies
 
@@ -1231,9 +1231,10 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string query = "Apple";
+      bool? active = true;
       int? pageSize = 100;
       
-      ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, pageSize);
+      ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, active, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1250,6 +1251,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | string| Search parameters |  &nbsp;
+ **active** | bool?| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
 

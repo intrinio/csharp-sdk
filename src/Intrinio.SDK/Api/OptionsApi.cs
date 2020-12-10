@@ -199,8 +199,8 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>ApiResponseOptionPricesRealtime</returns>
-        ApiResponseOptionPricesRealtime GetOptionsPricesRealtime (string identifier, string source = null);
+        /// <returns>ApiResponseOptionsPriceRealtime</returns>
+        ApiResponseOptionsPriceRealtime GetOptionsPricesRealtime (string identifier, string source = null);
 
         /// <summary>
         /// Option Prices Realtime
@@ -211,8 +211,31 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>ApiResponse of ApiResponseOptionPricesRealtime</returns>
-        ApiResponse<ApiResponseOptionPricesRealtime> GetOptionsPricesRealtimeWithHttpInfo (string identifier, string source = null);
+        /// <returns>ApiResponse of ApiResponseOptionsPriceRealtime</returns>
+        ApiResponse<ApiResponseOptionsPriceRealtime> GetOptionsPricesRealtimeWithHttpInfo (string identifier, string source = null);
+        /// <summary>
+        /// Option Stats Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsStatsRealtime</returns>
+        ApiResponseOptionsStatsRealtime GetOptionsStatsRealtime (string identifier, string source = null);
+
+        /// <summary>
+        /// Option Stats Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsStatsRealtime</returns>
+        ApiResponse<ApiResponseOptionsStatsRealtime> GetOptionsStatsRealtimeWithHttpInfo (string identifier, string source = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -397,8 +420,8 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>Task of ApiResponseOptionPricesRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionPricesRealtime> GetOptionsPricesRealtimeAsync (string identifier, string source = null);
+        /// <returns>Task of ApiResponseOptionsPriceRealtime</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsPriceRealtime> GetOptionsPricesRealtimeAsync (string identifier, string source = null);
 
         /// <summary>
         /// Option Prices Realtime
@@ -409,8 +432,31 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseOptionPricesRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionPricesRealtime>> GetOptionsPricesRealtimeAsyncWithHttpInfo (string identifier, string source = null);
+        /// <returns>Task of ApiResponse (ApiResponseOptionsPriceRealtime)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPriceRealtime>> GetOptionsPricesRealtimeAsyncWithHttpInfo (string identifier, string source = null);
+        /// <summary>
+        /// Option Stats Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsStatsRealtime</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsStatsRealtime> GetOptionsStatsRealtimeAsync (string identifier, string source = null);
+
+        /// <summary>
+        /// Option Stats Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsStatsRealtime)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsStatsRealtime>> GetOptionsStatsRealtimeAsyncWithHttpInfo (string identifier, string source = null);
         #endregion Asynchronous Operations
     }
 
@@ -1468,10 +1514,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>ApiResponseOptionPricesRealtime</returns>
-        public ApiResponseOptionPricesRealtime GetOptionsPricesRealtime (string identifier, string source = null)
+        /// <returns>ApiResponseOptionsPriceRealtime</returns>
+        public ApiResponseOptionsPriceRealtime GetOptionsPricesRealtime (string identifier, string source = null)
         {
-             ApiResponse<ApiResponseOptionPricesRealtime> localVarResponse = GetOptionsPricesRealtimeWithHttpInfo(identifier, source);
+             ApiResponse<ApiResponseOptionsPriceRealtime> localVarResponse = GetOptionsPricesRealtimeWithHttpInfo(identifier, source);
              return localVarResponse.Data;
         }
 
@@ -1481,10 +1527,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>ApiResponse of ApiResponseOptionPricesRealtime</returns>
+        /// <returns>ApiResponse of ApiResponseOptionsPriceRealtime</returns>
         
         
-        public ApiResponse< ApiResponseOptionPricesRealtime > GetOptionsPricesRealtimeWithHttpInfo (string identifier, string source = null)
+        public ApiResponse< ApiResponseOptionsPriceRealtime > GetOptionsPricesRealtimeWithHttpInfo (string identifier, string source = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1534,9 +1580,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseOptionPricesRealtime>(localVarStatusCode,
+            return new ApiResponse<ApiResponseOptionsPriceRealtime>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseOptionPricesRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionPricesRealtime)));
+                (ApiResponseOptionsPriceRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsPriceRealtime)));
         }
 
         /// <summary>
@@ -1545,10 +1591,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>Task of ApiResponseOptionPricesRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionPricesRealtime> GetOptionsPricesRealtimeAsync (string identifier, string source = null)
+        /// <returns>Task of ApiResponseOptionsPriceRealtime</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsPriceRealtime> GetOptionsPricesRealtimeAsync (string identifier, string source = null)
         {
-             ApiResponse<ApiResponseOptionPricesRealtime> localVarResponse = await GetOptionsPricesRealtimeAsyncWithHttpInfo(identifier, source);
+             ApiResponse<ApiResponseOptionsPriceRealtime> localVarResponse = await GetOptionsPricesRealtimeAsyncWithHttpInfo(identifier, source);
              return localVarResponse.Data;
 
         }
@@ -1559,8 +1605,8 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseOptionPricesRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionPricesRealtime>> GetOptionsPricesRealtimeAsyncWithHttpInfo (string identifier, string source = null)
+        /// <returns>Task of ApiResponse (ApiResponseOptionsPriceRealtime)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPriceRealtime>> GetOptionsPricesRealtimeAsyncWithHttpInfo (string identifier, string source = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1610,9 +1656,162 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseOptionPricesRealtime>(localVarStatusCode,
+            return new ApiResponse<ApiResponseOptionsPriceRealtime>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ApiResponseOptionPricesRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionPricesRealtime)));
+                (ApiResponseOptionsPriceRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsPriceRealtime)));
+        }
+
+        /// <summary>
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsStatsRealtime</returns>
+        public ApiResponseOptionsStatsRealtime GetOptionsStatsRealtime (string identifier, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsStatsRealtime> localVarResponse = GetOptionsStatsRealtimeWithHttpInfo(identifier, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsStatsRealtime</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsStatsRealtime > GetOptionsStatsRealtimeWithHttpInfo (string identifier, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionsStatsRealtime");
+
+            var localVarPath = "/options/prices/{identifier}/realtime/stats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsStatsRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsStatsRealtime>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsStatsRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsStatsRealtime)));
+        }
+
+        /// <summary>
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsStatsRealtime</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsStatsRealtime> GetOptionsStatsRealtimeAsync (string identifier, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsStatsRealtime> localVarResponse = await GetOptionsStatsRealtimeAsyncWithHttpInfo(identifier, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsStatsRealtime)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsStatsRealtime>> GetOptionsStatsRealtimeAsyncWithHttpInfo (string identifier, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionsStatsRealtime");
+
+            var localVarPath = "/options/prices/{identifier}/realtime/stats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsStatsRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsStatsRealtime>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsStatsRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsStatsRealtime)));
         }
 
     }

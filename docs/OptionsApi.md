@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**GetOptionsPrices**](OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 [**GetOptionsPricesRealtime**](OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+[**GetOptionsStatsRealtime**](OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 
 
 
@@ -282,7 +283,7 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string symbol = "MSFT";
-      string expiration = "2021-01-08";
+      string expiration = "2023-01-20";
       string source = null;
       string type = null;
       decimal? strike = null;
@@ -527,11 +528,11 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:GetOptionsPricesRealtime)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionPricesRealtime)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsPriceRealtime)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
-[//]: # (RETURN_TYPE_DOC:ApiResponseOptionPricesRealtime.md)
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPriceRealtime.md)
 
 [//]: # (OPERATION:GetOptionsPricesRealtime_v2)
 
@@ -546,7 +547,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionPricesRealtime GetOptionsPricesRealtime (string identifier, string source = null)
+> ApiResponseOptionsPriceRealtime GetOptionsPricesRealtime (string identifier, string source = null)
 
 #### Option Prices Realtime
 
@@ -582,7 +583,7 @@ namespace Example
       string identifier = "AAPL230120C00090000";
       string source = null;
       
-      ApiResponseOptionPricesRealtime result = optionsApi.GetOptionsPricesRealtime(identifier, source);
+      ApiResponseOptionsPriceRealtime result = optionsApi.GetOptionsPricesRealtime(identifier, source);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -606,7 +607,97 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseOptionPricesRealtime**](ApiResponseOptionPricesRealtime.md)
+[**ApiResponseOptionsPriceRealtime**](ApiResponseOptionsPriceRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsStatsRealtime)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsStatsRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsStatsRealtime.md)
+
+[//]: # (OPERATION:GetOptionsStatsRealtime_v2)
+
+[//]: # (ENDPOINT:/options/prices/{identifier}/realtime/stats)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsstatsrealtime)
+
+<a name="getoptionsstatsrealtime"></a>
+## **GetOptionsStatsRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsStatsRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsStatsRealtime GetOptionsStatsRealtime (string identifier, string source = null)
+
+#### Option Stats Realtime
+
+Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsStatsRealtimeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string identifier = "AAPL230120C00090000";
+      string source = null;
+      
+      ApiResponseOptionsStatsRealtime result = optionsApi.GetOptionsStatsRealtime(identifier, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsStatsRealtime**](ApiResponseOptionsStatsRealtime.md)
 
 [//]: # (END_OPERATION)
 

@@ -19,6 +19,7 @@ Name | Type | Description
 **Figi** | string | The OpenFIGI identifier &nbsp;
 **CompositeFigi** | string | The country-composite OpenFIGI identifier &nbsp;
 **ShareClassFigi** | string | The global-composite OpenFIGI identifier &nbsp;
+**PrimaryListing** | bool? | If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange &nbsp;
 
 [//]: # (END_DEFINITION)
 

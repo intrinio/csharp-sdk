@@ -17,30 +17,24 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// An realtime option chain contains an options contract and corresponding price data for that contract on a given date.
+    /// ApiResponseOptionsPriceRealtime
     /// </summary>
     [DataContract]
-    public partial class OptionChainRealtime :  IEquatable<OptionChainRealtime>, IValidatableObject
+    public partial class ApiResponseOptionsPriceRealtime :  IEquatable<ApiResponseOptionsPriceRealtime>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OptionChainRealtime" /> class.
+        /// Initializes a new instance of the <see cref="ApiResponseOptionsPriceRealtime" /> class.
         /// </summary>
-        /// <param name="Option">Option.</param>
         /// <param name="Price">Price.</param>
         /// <param name="Stats">Stats.</param>
-        public OptionChainRealtime(OptionRealtime Option = default(OptionRealtime), OptionPriceRealtime Price = default(OptionPriceRealtime), OptionStatsRealtime Stats = default(OptionStatsRealtime))
+        /// <param name="Option">Option.</param>
+        public ApiResponseOptionsPriceRealtime(OptionPriceRealtime Price = default(OptionPriceRealtime), OptionStatsRealtime Stats = default(OptionStatsRealtime), OptionRealtime Option = default(OptionRealtime))
         {
-            this.Option = Option;
             this.Price = Price;
             this.Stats = Stats;
+            this.Option = Option;
         }
         
-        /// <summary>
-        /// Gets or Sets Option
-        /// </summary>
-        [DataMember(Name="option", EmitDefaultValue=false)]
-        public OptionRealtime Option { get; set; }
-
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
@@ -54,16 +48,22 @@ namespace Intrinio.SDK.Model
         public OptionStatsRealtime Stats { get; set; }
 
         /// <summary>
+        /// Gets or Sets Option
+        /// </summary>
+        [DataMember(Name="option", EmitDefaultValue=false)]
+        public OptionRealtime Option { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OptionChainRealtime {\n");
-            sb.Append("  Option: ").Append(Option).Append("\n");
+            sb.Append("class ApiResponseOptionsPriceRealtime {\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  Stats: ").Append(Stats).Append("\n");
+            sb.Append("  Option: ").Append(Option).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,25 +84,20 @@ namespace Intrinio.SDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OptionChainRealtime);
+            return this.Equals(input as ApiResponseOptionsPriceRealtime);
         }
 
         /// <summary>
-        /// Returns true if OptionChainRealtime instances are equal
+        /// Returns true if ApiResponseOptionsPriceRealtime instances are equal
         /// </summary>
-        /// <param name="input">Instance of OptionChainRealtime to be compared</param>
+        /// <param name="input">Instance of ApiResponseOptionsPriceRealtime to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OptionChainRealtime input)
+        public bool Equals(ApiResponseOptionsPriceRealtime input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.Option == input.Option ||
-                    (this.Option != null &&
-                    this.Option.Equals(input.Option))
-                ) && 
                 (
                     this.Price == input.Price ||
                     (this.Price != null &&
@@ -112,6 +107,11 @@ namespace Intrinio.SDK.Model
                     this.Stats == input.Stats ||
                     (this.Stats != null &&
                     this.Stats.Equals(input.Stats))
+                ) && 
+                (
+                    this.Option == input.Option ||
+                    (this.Option != null &&
+                    this.Option.Equals(input.Option))
                 );
         }
 
@@ -124,12 +124,12 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Option != null)
-                    hashCode = hashCode * 59 + this.Option.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
                 if (this.Stats != null)
                     hashCode = hashCode * 59 + this.Stats.GetHashCode();
+                if (this.Option != null)
+                    hashCode = hashCode * 59 + this.Option.GetHashCode();
                 return hashCode;
             }
         }

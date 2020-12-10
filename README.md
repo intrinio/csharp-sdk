@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.16.4
-- Package version: 5.6.4
+- API version: 2.17.0
+- Package version: 5.7.0
 
 
 <a name="frameworks-supported"></a>
@@ -195,6 +195,7 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsExpirations**](docs/OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 *OptionsApi* | [**GetOptionsPrices**](docs/OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 *OptionsApi* | [**GetOptionsPricesRealtime**](docs/OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+*OptionsApi* | [**GetOptionsStatsRealtime**](docs/OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 *SecurityApi* | [**GetAllSecurities**](docs/SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
 *SecurityApi* | [**GetSecurityById**](docs/SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Lookup Security
 *SecurityApi* | [**GetSecurityDataPointNumber**](docs/SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
@@ -325,11 +326,12 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [Model.ApiResponseNews](docs/ApiResponseNews.md)
  - [Model.ApiResponseOptionPrices](docs/ApiResponseOptionPrices.md)
- - [Model.ApiResponseOptionPricesRealtime](docs/ApiResponseOptionPricesRealtime.md)
  - [Model.ApiResponseOptions](docs/ApiResponseOptions.md)
  - [Model.ApiResponseOptionsChain](docs/ApiResponseOptionsChain.md)
  - [Model.ApiResponseOptionsChainRealtime](docs/ApiResponseOptionsChainRealtime.md)
  - [Model.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
+ - [Model.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
+ - [Model.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
  - [Model.ApiResponseReportedFinancials](docs/ApiResponseReportedFinancials.md)
  - [Model.ApiResponseSICIndexHistoricalData](docs/ApiResponseSICIndexHistoricalData.md)
  - [Model.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
@@ -451,9 +453,11 @@ Class | Method | HTTP request | Description
  - [Model.Option](docs/Option.md)
  - [Model.OptionChain](docs/OptionChain.md)
  - [Model.OptionChainRealtime](docs/OptionChainRealtime.md)
+ - [Model.OptionFactorsRealtime](docs/OptionFactorsRealtime.md)
  - [Model.OptionPrice](docs/OptionPrice.md)
  - [Model.OptionPriceRealtime](docs/OptionPriceRealtime.md)
  - [Model.OptionRealtime](docs/OptionRealtime.md)
+ - [Model.OptionStatsRealtime](docs/OptionStatsRealtime.md)
  - [Model.RealtimeStockPrice](docs/RealtimeStockPrice.md)
  - [Model.RealtimeStockPriceSecurity](docs/RealtimeStockPriceSecurity.md)
  - [Model.RelativeStrengthIndexTechnicalValue](docs/RelativeStrengthIndexTechnicalValue.md)

@@ -138,6 +138,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'ShareClassFigi'
         }
+        /// <summary>
+        /// Test the property 'PrimaryListing'
+        /// </summary>
+        [Test]
+        public void PrimaryListingTest()
+        {
+            // TODO unit test for the property 'PrimaryListing'
+        }
 
     }
 

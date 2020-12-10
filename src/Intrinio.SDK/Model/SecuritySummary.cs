@@ -35,7 +35,8 @@ namespace Intrinio.SDK.Model
         /// <param name="Figi">The OpenFIGI identifier.</param>
         /// <param name="CompositeFigi">The country-composite OpenFIGI identifier.</param>
         /// <param name="ShareClassFigi">The global-composite OpenFIGI identifier.</param>
-        public SecuritySummary(string Id = default(string), string CompanyId = default(string), string Name = default(string), string Code = default(string), string Currency = default(string), string Ticker = default(string), string CompositeTicker = default(string), string Figi = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string))
+        /// <param name="PrimaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.</param>
+        public SecuritySummary(string Id = default(string), string CompanyId = default(string), string Name = default(string), string Code = default(string), string Currency = default(string), string Ticker = default(string), string CompositeTicker = default(string), string Figi = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), bool? PrimaryListing = default(bool?))
         {
             this.Id = Id;
             this.CompanyId = CompanyId;
@@ -47,6 +48,7 @@ namespace Intrinio.SDK.Model
             this.Figi = Figi;
             this.CompositeFigi = CompositeFigi;
             this.ShareClassFigi = ShareClassFigi;
+            this.PrimaryListing = PrimaryListing;
         }
         
         /// <summary>
@@ -120,6 +122,13 @@ namespace Intrinio.SDK.Model
         public string ShareClassFigi { get; set; }
 
         /// <summary>
+        /// If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange
+        /// </summary>
+        /// <value>If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange</value>
+        [DataMember(Name="primary_listing", EmitDefaultValue=false)]
+        public bool? PrimaryListing { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -137,6 +146,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Figi: ").Append(Figi).Append("\n");
             sb.Append("  CompositeFigi: ").Append(CompositeFigi).Append("\n");
             sb.Append("  ShareClassFigi: ").Append(ShareClassFigi).Append("\n");
+            sb.Append("  PrimaryListing: ").Append(PrimaryListing).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,6 +230,11 @@ namespace Intrinio.SDK.Model
                     this.ShareClassFigi == input.ShareClassFigi ||
                     (this.ShareClassFigi != null &&
                     this.ShareClassFigi.Equals(input.ShareClassFigi))
+                ) && 
+                (
+                    this.PrimaryListing == input.PrimaryListing ||
+                    (this.PrimaryListing != null &&
+                    this.PrimaryListing.Equals(input.PrimaryListing))
                 );
         }
 
@@ -252,6 +267,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.CompositeFigi.GetHashCode();
                 if (this.ShareClassFigi != null)
                     hashCode = hashCode * 59 + this.ShareClassFigi.GetHashCode();
+                if (this.PrimaryListing != null)
+                    hashCode = hashCode * 59 + this.PrimaryListing.GetHashCode();
                 return hashCode;
             }
         }

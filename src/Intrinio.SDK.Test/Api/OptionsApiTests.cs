@@ -156,7 +156,20 @@ namespace Intrinio.SDK.Test
             //string identifier = null;
             //string source = null;
             //var response = instance.GetOptionsPricesRealtime(identifier, source);
-            //Assert.IsInstanceOf<ApiResponseOptionPricesRealtime> (response, "response is ApiResponseOptionPricesRealtime");
+            //Assert.IsInstanceOf<ApiResponseOptionsPriceRealtime> (response, "response is ApiResponseOptionsPriceRealtime");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsStatsRealtime
+        /// </summary>
+        [Test]
+        public void GetOptionsStatsRealtimeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //var response = instance.GetOptionsStatsRealtime(identifier, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsStatsRealtime> (response, "response is ApiResponseOptionsStatsRealtime");
         }
         
     }

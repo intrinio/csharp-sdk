@@ -76,8 +76,9 @@ namespace Intrinio.SDK.Test
             //string figiUniqueId = null;
             //bool? includeNonFigi = null;
             //int? pageSize = null;
+            //bool? primaryListing = null;
             //string nextPage = null;
-            //var response = instance.GetAllSecurities(active, delisted, code, currency, ticker, name, compositeMic, exchangeMic, stockPricesAfter, stockPricesBefore, cik, figi, compositeFigi, shareClassFigi, figiUniqueId, includeNonFigi, pageSize, nextPage);
+            //var response = instance.GetAllSecurities(active, delisted, code, currency, ticker, name, compositeMic, exchangeMic, stockPricesAfter, stockPricesBefore, cik, figi, compositeFigi, shareClassFigi, figiUniqueId, includeNonFigi, pageSize, primaryListing, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurities> (response, "response is ApiResponseSecurities");
         }
         

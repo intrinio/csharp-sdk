@@ -22,6 +22,13 @@ Name | Type | Description
 **AdjLow** | decimal? | The lowest price over the span of the period, adjusted for splits and dividends &nbsp;
 **AdjClose** | decimal? | The price at the end of the period, adjusted for splits and dividends &nbsp;
 **AdjVolume** | decimal? | The number of shares exchanged during the period, adjusted for splits and dividends &nbsp;
+**Factor** | decimal? | The factor by which to multiply stock prices before this date, in order to calculate historically-adjusted stock prices. &nbsp;
+**SplitRatio** | decimal? | The ratio of the stock split, if a stock split occurred. &nbsp;
+**Dividend** | decimal? | The dividend amount, if a dividend was paid. &nbsp;
+**Change** | decimal? | The difference in price from the last price for this frequency &nbsp;
+**PercentChange** | decimal? | The percent difference in price from the last price for this frequency &nbsp;
+**FiftyTwoWeekHigh** | decimal? | The 52 week high price (daily only) &nbsp;
+**FiftyTwoWeekLow** | decimal? | The 52 week low price (daily only) &nbsp;
 **Security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price &nbsp;
 
 [//]: # (END_DEFINITION)

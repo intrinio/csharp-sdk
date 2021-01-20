@@ -123,6 +123,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'OpenPrice'
         }
         /// <summary>
+        /// Test the property 'ClosePrice'
+        /// </summary>
+        [Test]
+        public void ClosePriceTest()
+        {
+            // TODO unit test for the property 'ClosePrice'
+        }
+        /// <summary>
         /// Test the property 'HighPrice'
         /// </summary>
         [Test]

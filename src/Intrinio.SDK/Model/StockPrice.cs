@@ -83,8 +83,15 @@ namespace Intrinio.SDK.Model
         /// <param name="AdjLow">The lowest price over the span of the period, adjusted for splits and dividends.</param>
         /// <param name="AdjClose">The price at the end of the period, adjusted for splits and dividends.</param>
         /// <param name="AdjVolume">The number of shares exchanged during the period, adjusted for splits and dividends.</param>
+        /// <param name="Factor">The factor by which to multiply stock prices before this date, in order to calculate historically-adjusted stock prices..</param>
+        /// <param name="SplitRatio">The ratio of the stock split, if a stock split occurred..</param>
+        /// <param name="Dividend">The dividend amount, if a dividend was paid..</param>
+        /// <param name="Change">The difference in price from the last price for this frequency.</param>
+        /// <param name="PercentChange">The percent difference in price from the last price for this frequency.</param>
+        /// <param name="FiftyTwoWeekHigh">The 52 week high price (daily only).</param>
+        /// <param name="FiftyTwoWeekLow">The 52 week low price (daily only).</param>
         /// <param name="Security">The Security of the stock price.</param>
-        public StockPrice(DateTime? Date = default(DateTime?), bool? Intraperiod = default(bool?), FrequencyEnum? Frequency = default(FrequencyEnum?), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Close = default(decimal?), decimal? Volume = default(decimal?), decimal? AdjOpen = default(decimal?), decimal? AdjHigh = default(decimal?), decimal? AdjLow = default(decimal?), decimal? AdjClose = default(decimal?), decimal? AdjVolume = default(decimal?), SecuritySummary Security = default(SecuritySummary))
+        public StockPrice(DateTime? Date = default(DateTime?), bool? Intraperiod = default(bool?), FrequencyEnum? Frequency = default(FrequencyEnum?), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Close = default(decimal?), decimal? Volume = default(decimal?), decimal? AdjOpen = default(decimal?), decimal? AdjHigh = default(decimal?), decimal? AdjLow = default(decimal?), decimal? AdjClose = default(decimal?), decimal? AdjVolume = default(decimal?), decimal? Factor = default(decimal?), decimal? SplitRatio = default(decimal?), decimal? Dividend = default(decimal?), decimal? Change = default(decimal?), decimal? PercentChange = default(decimal?), decimal? FiftyTwoWeekHigh = default(decimal?), decimal? FiftyTwoWeekLow = default(decimal?), SecuritySummary Security = default(SecuritySummary))
         {
             this.Date = Date;
             this.Intraperiod = Intraperiod;
@@ -99,6 +106,13 @@ namespace Intrinio.SDK.Model
             this.AdjLow = AdjLow;
             this.AdjClose = AdjClose;
             this.AdjVolume = AdjVolume;
+            this.Factor = Factor;
+            this.SplitRatio = SplitRatio;
+            this.Dividend = Dividend;
+            this.Change = Change;
+            this.PercentChange = PercentChange;
+            this.FiftyTwoWeekHigh = FiftyTwoWeekHigh;
+            this.FiftyTwoWeekLow = FiftyTwoWeekLow;
             this.Security = Security;
         }
         
@@ -189,6 +203,55 @@ namespace Intrinio.SDK.Model
         public decimal? AdjVolume { get; set; }
 
         /// <summary>
+        /// The factor by which to multiply stock prices before this date, in order to calculate historically-adjusted stock prices.
+        /// </summary>
+        /// <value>The factor by which to multiply stock prices before this date, in order to calculate historically-adjusted stock prices.</value>
+        [DataMember(Name="factor", EmitDefaultValue=false)]
+        public decimal? Factor { get; set; }
+
+        /// <summary>
+        /// The ratio of the stock split, if a stock split occurred.
+        /// </summary>
+        /// <value>The ratio of the stock split, if a stock split occurred.</value>
+        [DataMember(Name="split_ratio", EmitDefaultValue=false)]
+        public decimal? SplitRatio { get; set; }
+
+        /// <summary>
+        /// The dividend amount, if a dividend was paid.
+        /// </summary>
+        /// <value>The dividend amount, if a dividend was paid.</value>
+        [DataMember(Name="dividend", EmitDefaultValue=false)]
+        public decimal? Dividend { get; set; }
+
+        /// <summary>
+        /// The difference in price from the last price for this frequency
+        /// </summary>
+        /// <value>The difference in price from the last price for this frequency</value>
+        [DataMember(Name="change", EmitDefaultValue=false)]
+        public decimal? Change { get; set; }
+
+        /// <summary>
+        /// The percent difference in price from the last price for this frequency
+        /// </summary>
+        /// <value>The percent difference in price from the last price for this frequency</value>
+        [DataMember(Name="percent_change", EmitDefaultValue=false)]
+        public decimal? PercentChange { get; set; }
+
+        /// <summary>
+        /// The 52 week high price (daily only)
+        /// </summary>
+        /// <value>The 52 week high price (daily only)</value>
+        [DataMember(Name="fifty_two_week_high", EmitDefaultValue=false)]
+        public decimal? FiftyTwoWeekHigh { get; set; }
+
+        /// <summary>
+        /// The 52 week low price (daily only)
+        /// </summary>
+        /// <value>The 52 week low price (daily only)</value>
+        [DataMember(Name="fifty_two_week_low", EmitDefaultValue=false)]
+        public decimal? FiftyTwoWeekLow { get; set; }
+
+        /// <summary>
         /// The Security of the stock price
         /// </summary>
         /// <value>The Security of the stock price</value>
@@ -216,6 +279,13 @@ namespace Intrinio.SDK.Model
             sb.Append("  AdjLow: ").Append(AdjLow).Append("\n");
             sb.Append("  AdjClose: ").Append(AdjClose).Append("\n");
             sb.Append("  AdjVolume: ").Append(AdjVolume).Append("\n");
+            sb.Append("  Factor: ").Append(Factor).Append("\n");
+            sb.Append("  SplitRatio: ").Append(SplitRatio).Append("\n");
+            sb.Append("  Dividend: ").Append(Dividend).Append("\n");
+            sb.Append("  Change: ").Append(Change).Append("\n");
+            sb.Append("  PercentChange: ").Append(PercentChange).Append("\n");
+            sb.Append("  FiftyTwoWeekHigh: ").Append(FiftyTwoWeekHigh).Append("\n");
+            sb.Append("  FiftyTwoWeekLow: ").Append(FiftyTwoWeekLow).Append("\n");
             sb.Append("  Security: ").Append(Security).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -317,6 +387,41 @@ namespace Intrinio.SDK.Model
                     this.AdjVolume.Equals(input.AdjVolume))
                 ) && 
                 (
+                    this.Factor == input.Factor ||
+                    (this.Factor != null &&
+                    this.Factor.Equals(input.Factor))
+                ) && 
+                (
+                    this.SplitRatio == input.SplitRatio ||
+                    (this.SplitRatio != null &&
+                    this.SplitRatio.Equals(input.SplitRatio))
+                ) && 
+                (
+                    this.Dividend == input.Dividend ||
+                    (this.Dividend != null &&
+                    this.Dividend.Equals(input.Dividend))
+                ) && 
+                (
+                    this.Change == input.Change ||
+                    (this.Change != null &&
+                    this.Change.Equals(input.Change))
+                ) && 
+                (
+                    this.PercentChange == input.PercentChange ||
+                    (this.PercentChange != null &&
+                    this.PercentChange.Equals(input.PercentChange))
+                ) && 
+                (
+                    this.FiftyTwoWeekHigh == input.FiftyTwoWeekHigh ||
+                    (this.FiftyTwoWeekHigh != null &&
+                    this.FiftyTwoWeekHigh.Equals(input.FiftyTwoWeekHigh))
+                ) && 
+                (
+                    this.FiftyTwoWeekLow == input.FiftyTwoWeekLow ||
+                    (this.FiftyTwoWeekLow != null &&
+                    this.FiftyTwoWeekLow.Equals(input.FiftyTwoWeekLow))
+                ) && 
+                (
                     this.Security == input.Security ||
                     (this.Security != null &&
                     this.Security.Equals(input.Security))
@@ -358,6 +463,20 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.AdjClose.GetHashCode();
                 if (this.AdjVolume != null)
                     hashCode = hashCode * 59 + this.AdjVolume.GetHashCode();
+                if (this.Factor != null)
+                    hashCode = hashCode * 59 + this.Factor.GetHashCode();
+                if (this.SplitRatio != null)
+                    hashCode = hashCode * 59 + this.SplitRatio.GetHashCode();
+                if (this.Dividend != null)
+                    hashCode = hashCode * 59 + this.Dividend.GetHashCode();
+                if (this.Change != null)
+                    hashCode = hashCode * 59 + this.Change.GetHashCode();
+                if (this.PercentChange != null)
+                    hashCode = hashCode * 59 + this.PercentChange.GetHashCode();
+                if (this.FiftyTwoWeekHigh != null)
+                    hashCode = hashCode * 59 + this.FiftyTwoWeekHigh.GetHashCode();
+                if (this.FiftyTwoWeekLow != null)
+                    hashCode = hashCode * 59 + this.FiftyTwoWeekLow.GetHashCode();
                 if (this.Security != null)
                     hashCode = hashCode * 59 + this.Security.GetHashCode();
                 return hashCode;

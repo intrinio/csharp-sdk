@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**GetSecurityHistoricalData**](SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**GetSecurityIntervalPrices**](SecurityApi.md#getsecurityintervalprices) | **GET** /securities/{identifier}/prices/intervals | Interval Stock Prices for Security
 [**GetSecurityIntradayPrices**](SecurityApi.md#getsecurityintradayprices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 [**GetSecurityLatestDividendRecord**](SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
 [**GetSecurityLatestEarningsRecord**](SecurityApi.md#getsecuritylatestearningsrecord) | **GET** /securities/{identifier}/earnings/latest | Latest Earnings Record for Security
@@ -166,7 +167,7 @@ Name | Type | Description  | Notes
  **figiUniqueId** | string| Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **includeNonFigi** | bool?| When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. | [optional] [default to false] &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
- **primaryListing** | bool?| If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange | [optional]  &nbsp;
+ **primaryListing** | bool?| If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -547,6 +548,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityIntervalPrices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityIntervalPrices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityIntervalPrices.md)
+
+[//]: # (OPERATION:GetSecurityIntervalPrices_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/intervals)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityintervalprices)
+
+<a name="getsecurityintervalprices"></a>
+## **GetSecurityIntervalPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityIntervalPrices_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+
+#### Interval Stock Prices for Security
+
+Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given `identifier`
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityIntervalPricesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "AAPL";
+      string source = null;
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      string startTime = null;
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+      string endTime = null;
+      string timezone = "UTC";
+      string intervalSize = "1d";
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseSecurityIntervalPrices result = securityApi.GetSecurityIntervalPrices(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **source** | string| Return intervals from the specified data source | [optional]  &nbsp;
+ **startDate** | DateTime?| Return intervals starting at the specified date | [optional]  &nbsp;
+ **startTime** | string| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
+ **endDate** | DateTime?| Return intervals stopping at the specified date | [optional]  &nbsp;
+ **endTime** | string| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
+ **timezone** | string| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
+ **intervalSize** | string| The interval for which to return stock prices | [optional] [default to 1d] &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityIntervalPrices**](ApiResponseSecurityIntervalPrices.md)
 
 [//]: # (END_OPERATION)
 

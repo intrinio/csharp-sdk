@@ -141,6 +141,27 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecurityIntervalPrices
+        /// </summary>
+        [Test]
+        public void GetSecurityIntervalPricesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //DateTime? startDate = null;
+            //string startTime = null;
+            //DateTime? endDate = null;
+            //string endTime = null;
+            //string timezone = null;
+            //string intervalSize = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityIntervalPrices(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityIntervalPrices> (response, "response is ApiResponseSecurityIntervalPrices");
+        }
+        
+        /// <summary>
         /// Test GetSecurityIntradayPrices
         /// </summary>
         [Test]

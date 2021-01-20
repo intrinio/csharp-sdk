@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.17.0
-- Package version: 5.7.0
+- API version: 2.18.0
+- Package version: 5.8.0
 
 
 <a name="frameworks-supported"></a>
@@ -201,6 +201,7 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**GetSecurityDataPointNumber**](docs/SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 *SecurityApi* | [**GetSecurityDataPointText**](docs/SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 *SecurityApi* | [**GetSecurityHistoricalData**](docs/SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+*SecurityApi* | [**GetSecurityIntervalPrices**](docs/SecurityApi.md#getsecurityintervalprices) | **GET** /securities/{identifier}/prices/intervals | Interval Stock Prices for Security
 *SecurityApi* | [**GetSecurityIntradayPrices**](docs/SecurityApi.md#getsecurityintradayprices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 *SecurityApi* | [**GetSecurityLatestDividendRecord**](docs/SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
 *SecurityApi* | [**GetSecurityLatestEarningsRecord**](docs/SecurityApi.md#getsecuritylatestearningsrecord) | **GET** /securities/{identifier}/earnings/latest | Latest Earnings Record for Security
@@ -352,6 +353,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSecurityForceIndex](docs/ApiResponseSecurityForceIndex.md)
  - [Model.ApiResponseSecurityHistoricalData](docs/ApiResponseSecurityHistoricalData.md)
  - [Model.ApiResponseSecurityIchimokuKinkoHyo](docs/ApiResponseSecurityIchimokuKinkoHyo.md)
+ - [Model.ApiResponseSecurityIntervalPrices](docs/ApiResponseSecurityIntervalPrices.md)
  - [Model.ApiResponseSecurityIntradayPrices](docs/ApiResponseSecurityIntradayPrices.md)
  - [Model.ApiResponseSecurityKeltnerChannel](docs/ApiResponseSecurityKeltnerChannel.md)
  - [Model.ApiResponseSecurityKnowSureThing](docs/ApiResponseSecurityKnowSureThing.md)
@@ -480,6 +482,7 @@ Class | Method | HTTP request | Description
  - [Model.StockPrice](docs/StockPrice.md)
  - [Model.StockPriceAdjustment](docs/StockPriceAdjustment.md)
  - [Model.StockPriceAdjustmentSummary](docs/StockPriceAdjustmentSummary.md)
+ - [Model.StockPriceInterval](docs/StockPriceInterval.md)
  - [Model.StockPriceSummary](docs/StockPriceSummary.md)
  - [Model.TechnicalIndicator](docs/TechnicalIndicator.md)
  - [Model.TripleExponentialAverageTechnicalValue](docs/TripleExponentialAverageTechnicalValue.md)

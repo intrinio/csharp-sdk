@@ -41,7 +41,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
         ApiResponseSecurities GetAllSecurities (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
@@ -70,7 +70,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
         ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
@@ -178,6 +178,45 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
         ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Interval Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityIntervalPrices</returns>
+        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Interval Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
+        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -1553,7 +1592,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
         System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
@@ -1582,7 +1621,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
@@ -1690,6 +1729,45 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Interval Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Interval Stock Prices for Security
+        /// </summary>
+        /// <remarks>
+        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -3160,7 +3238,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurities</returns>
         public ApiResponseSecurities GetAllSecurities (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null)
@@ -3190,7 +3268,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
         
@@ -3285,7 +3363,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurities</returns>
         public async System.Threading.Tasks.Task<ApiResponseSecurities> GetAllSecuritiesAsync (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null)
@@ -3316,7 +3394,7 @@ namespace Intrinio.SDK.Api
         /// <param name="figiUniqueId">Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). (optional)</param>
         /// <param name="includeNonFigi">When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. (optional, default to false)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange (optional)</param>
+        /// <param name="primaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.  Returns both if omitted. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null)
@@ -4052,6 +4130,243 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurityHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseSecurityHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityHistoricalData)));
+        }
+
+        /// <summary>
+        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityIntervalPrices</returns>
+        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
+        
+        private static bool validateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+      		Regex validTimeRegex = new Regex(validTimePattern);
+      		bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+      		  return true;
+        }
+        
+        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityIntervalPrices");
+
+            var localVarPath = "/securities/{identifier}/prices/intervals";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            if (startTime != null && startDate != null) {
+              if (validateTimeParam(startTime)) {
+                var startTimeSpan = TimeSpan.Parse(startTime);
+                startDate = startDate.Value.Add(startTimeSpan);
+              }
+            }
+              
+            if (endTime != null && endDate != null) {
+              if (validateTimeParam(endTime)) {
+                var endTimeSpan = TimeSpan.Parse(endTime);
+                endDate = endDate.Value.Add(endTimeSpan);
+              }  
+            }
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityIntervalPrices>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityIntervalPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityIntervalPrices)));
+        }
+
+        /// <summary>
+        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityIntervalPrices");
+
+            var localVarPath = "/securities/{identifier}/prices/intervals";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+            if (startTime != null && startDate != null) {
+              if (validateTimeParam(startTime)) {
+                var startTimeSpan = TimeSpan.Parse(startTime);
+                startDate = startDate.Value.Add(startTimeSpan);
+              }
+            }
+              
+            if (endTime != null && endDate != null) {
+              if (validateTimeParam(endTime)) {
+                var endTimeSpan = TimeSpan.Parse(endTime);
+                endDate = endDate.Value.Add(endTimeSpan);
+              }  
+            }
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityIntervalPrices>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseSecurityIntervalPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityIntervalPrices)));
         }
 
         /// <summary>

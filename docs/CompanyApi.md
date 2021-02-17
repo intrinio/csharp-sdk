@@ -15,6 +15,8 @@ Method | HTTP request | Description
 [**GetCompanyIpos**](CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 [**GetCompanyNews**](CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
 [**GetCompanySecurities**](CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
+[**InsiderTransactionFilingsByCompany**](CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
+[**LatestInsiderTransactionFilingByCompany**](CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 [**LookupCompanyFundamental**](CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 [**SearchCompanies**](CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 
@@ -1074,6 +1076,202 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanySecurities**](ApiResponseCompanySecurities.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:InsiderTransactionFilingsByCompany)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseInsiderTransactionFilings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseInsiderTransactionFilings.md)
+
+[//]: # (OPERATION:InsiderTransactionFilingsByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/insider_transaction_filings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#insidertransactionfilingsbycompany)
+
+<a name="insidertransactionfilingsbycompany"></a>
+## **InsiderTransactionFilingsByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/InsiderTransactionFilingsByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+
+#### Insider Transaction Filings by Company
+
+Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class InsiderTransactionFilingsByCompanyExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string identifier = "AAPL";
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+      string ownershipType = "D";
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseInsiderTransactionFilings result = companyApi.InsiderTransactionFilingsByCompany(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **startDate** | DateTime?| Return Company&#39;s insider transaction filings on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
+ **ownershipType** | string| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseInsiderTransactionFilings**](ApiResponseInsiderTransactionFilings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:LatestInsiderTransactionFilingByCompany)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.InsiderTransactionFiling)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:InsiderTransactionFiling.md)
+
+[//]: # (OPERATION:LatestInsiderTransactionFilingByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/insider_transaction_filings/latest)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#latestinsidertransactionfilingbycompany)
+
+<a name="latestinsidertransactionfilingbycompany"></a>
+## **LatestInsiderTransactionFilingByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/LatestInsiderTransactionFilingByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> InsiderTransactionFiling LatestInsiderTransactionFilingByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+
+#### Latest Insider Transaction Filing by Company
+
+Returns the latest insider transaction filing for a company.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class LatestInsiderTransactionFilingByCompanyExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string identifier = "AAPL";
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+      string ownershipType = "D";
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      InsiderTransactionFiling result = companyApi.LatestInsiderTransactionFilingByCompany(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **startDate** | DateTime?| Return Company&#39;s insider transaction filings on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
+ **ownershipType** | string| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**InsiderTransactionFiling**](InsiderTransactionFiling.md)
 
 [//]: # (END_OPERATION)
 

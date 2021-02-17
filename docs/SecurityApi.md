@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**GetSecurityHistoricalData**](SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**GetSecurityInsiderOwnership**](SecurityApi.md#getsecurityinsiderownership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
 [**GetSecurityIntervalPrices**](SecurityApi.md#getsecurityintervalprices) | **GET** /securities/{identifier}/prices/intervals | Interval Stock Prices for Security
 [**GetSecurityIntradayPrices**](SecurityApi.md#getsecurityintradayprices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 [**GetSecurityLatestDividendRecord**](SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
@@ -548,6 +549,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityInsiderOwnership)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityInstitutionalOwnership)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityInstitutionalOwnership.md)
+
+[//]: # (OPERATION:GetSecurityInsiderOwnership_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/institutional_ownership)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityinsiderownership)
+
+<a name="getsecurityinsiderownership"></a>
+## **GetSecurityInsiderOwnership**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityInsiderOwnership_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityInstitutionalOwnership GetSecurityInsiderOwnership (string identifier)
+
+#### Institutional Ownership by Security
+
+Returns a list of all institutional owners of a given security.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityInsiderOwnershipExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "AAPL";
+      
+      ApiResponseSecurityInstitutionalOwnership result = securityApi.GetSecurityInsiderOwnership(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityInstitutionalOwnership**](ApiResponseSecurityInstitutionalOwnership.md)
 
 [//]: # (END_OPERATION)
 

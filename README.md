@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.18.0
-- Package version: 5.8.0
+- API version: 2.19.0
+- Package version: 5.9.0
 
 
 <a name="frameworks-supported"></a>
@@ -137,6 +137,8 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetCompanyIpos**](docs/CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 *CompanyApi* | [**GetCompanyNews**](docs/CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
 *CompanyApi* | [**GetCompanySecurities**](docs/CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
+*CompanyApi* | [**InsiderTransactionFilingsByCompany**](docs/CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
+*CompanyApi* | [**LatestInsiderTransactionFilingByCompany**](docs/CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 *CompanyApi* | [**LookupCompanyFundamental**](docs/CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 *CompanyApi* | [**SearchCompanies**](docs/CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 *DataPointApi* | [**GetDataPointNumber**](docs/DataPointApi.md#getdatapointnumber) | **GET** /data_point/{identifier}/{tag}/number | Data Point (Number)
@@ -186,6 +188,7 @@ Class | Method | HTTP request | Description
 *IndexApi* | [**SearchEconomicIndices**](docs/IndexApi.md#searcheconomicindices) | **GET** /indices/economic/search | Search Economic Indices
 *IndexApi* | [**SearchSicIndices**](docs/IndexApi.md#searchsicindices) | **GET** /indices/sic/search | Search SIC Indices
 *IndexApi* | [**SearchStockMarketsIndices**](docs/IndexApi.md#searchstockmarketsindices) | **GET** /indices/stock_market/search | Search Stock Market Indices
+*InsiderTransactionFilingsApi* | [**GetAllInsiderTransactionFilings**](docs/InsiderTransactionFilingsApi.md#getallinsidertransactionfilings) | **GET** /insider_transaction_filings | All Insider Transactions Filings
 *MunicipalityApi* | [**GetAllMunicipalities**](docs/MunicipalityApi.md#getallmunicipalities) | **GET** /municipalities | All Municipalities
 *MunicipalityApi* | [**GetMunicipalityById**](docs/MunicipalityApi.md#getmunicipalitybyid) | **GET** /municipalities/{id} | Municipality by ID
 *MunicipalityApi* | [**GetMunicipalityFinancials**](docs/MunicipalityApi.md#getmunicipalityfinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
@@ -196,11 +199,17 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsPrices**](docs/OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 *OptionsApi* | [**GetOptionsPricesRealtime**](docs/OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 *OptionsApi* | [**GetOptionsStatsRealtime**](docs/OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
+*OwnersApi* | [**GetAllOwners**](docs/OwnersApi.md#getallowners) | **GET** /owners | All Owners
+*OwnersApi* | [**GetOwnerById**](docs/OwnersApi.md#getownerbyid) | **GET** /owners/{identifier} | Owner by ID
+*OwnersApi* | [**InsiderTransactionFilingsByOwner**](docs/OwnersApi.md#insidertransactionfilingsbyowner) | **GET** /owners/{identifier}/insider_transaction_filings | Insider Transaction Filings by Owner
+*OwnersApi* | [**InstitutionalHoldingsByOwner**](docs/OwnersApi.md#institutionalholdingsbyowner) | **GET** /owners/{identifier}/institutional_holdings | Institutional Holdings by Owner
+*OwnersApi* | [**SearchOwners**](docs/OwnersApi.md#searchowners) | **GET** /owners/search | Search Owners
 *SecurityApi* | [**GetAllSecurities**](docs/SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
 *SecurityApi* | [**GetSecurityById**](docs/SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Lookup Security
 *SecurityApi* | [**GetSecurityDataPointNumber**](docs/SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 *SecurityApi* | [**GetSecurityDataPointText**](docs/SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 *SecurityApi* | [**GetSecurityHistoricalData**](docs/SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+*SecurityApi* | [**GetSecurityInsiderOwnership**](docs/SecurityApi.md#getsecurityinsiderownership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
 *SecurityApi* | [**GetSecurityIntervalPrices**](docs/SecurityApi.md#getsecurityintervalprices) | **GET** /securities/{identifier}/prices/intervals | Interval Stock Prices for Security
 *SecurityApi* | [**GetSecurityIntradayPrices**](docs/SecurityApi.md#getsecurityintradayprices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 *SecurityApi* | [**GetSecurityLatestDividendRecord**](docs/SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
@@ -305,6 +314,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
  - [Model.ApiResponseCompanyFundamentals](docs/ApiResponseCompanyFundamentals.md)
  - [Model.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
+ - [Model.ApiResponseCompanyInsiderTransactionFilings](docs/ApiResponseCompanyInsiderTransactionFilings.md)
  - [Model.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
  - [Model.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)
  - [Model.ApiResponseDataTags](docs/ApiResponseDataTags.md)
@@ -323,6 +333,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseForexPrices](docs/ApiResponseForexPrices.md)
  - [Model.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
  - [Model.ApiResponseInitialPublicOfferings](docs/ApiResponseInitialPublicOfferings.md)
+ - [Model.ApiResponseInsiderTransactionFilings](docs/ApiResponseInsiderTransactionFilings.md)
  - [Model.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
  - [Model.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [Model.ApiResponseNews](docs/ApiResponseNews.md)
@@ -333,6 +344,9 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
  - [Model.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
  - [Model.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
+ - [Model.ApiResponseOwnerInsiderTransactionFilings](docs/ApiResponseOwnerInsiderTransactionFilings.md)
+ - [Model.ApiResponseOwnerInstitutionalHoldings](docs/ApiResponseOwnerInstitutionalHoldings.md)
+ - [Model.ApiResponseOwners](docs/ApiResponseOwners.md)
  - [Model.ApiResponseReportedFinancials](docs/ApiResponseReportedFinancials.md)
  - [Model.ApiResponseSICIndexHistoricalData](docs/ApiResponseSICIndexHistoricalData.md)
  - [Model.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
@@ -353,6 +367,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSecurityForceIndex](docs/ApiResponseSecurityForceIndex.md)
  - [Model.ApiResponseSecurityHistoricalData](docs/ApiResponseSecurityHistoricalData.md)
  - [Model.ApiResponseSecurityIchimokuKinkoHyo](docs/ApiResponseSecurityIchimokuKinkoHyo.md)
+ - [Model.ApiResponseSecurityInstitutionalOwnership](docs/ApiResponseSecurityInstitutionalOwnership.md)
  - [Model.ApiResponseSecurityIntervalPrices](docs/ApiResponseSecurityIntervalPrices.md)
  - [Model.ApiResponseSecurityIntradayPrices](docs/ApiResponseSecurityIntradayPrices.md)
  - [Model.ApiResponseSecurityKeltnerChannel](docs/ApiResponseSecurityKeltnerChannel.md)
@@ -441,6 +456,10 @@ Class | Method | HTTP request | Description
  - [Model.FundamentalSummary](docs/FundamentalSummary.md)
  - [Model.HistoricalData](docs/HistoricalData.md)
  - [Model.IchimokuKinkoHyoTechnicalValue](docs/IchimokuKinkoHyoTechnicalValue.md)
+ - [Model.InsiderTransaction](docs/InsiderTransaction.md)
+ - [Model.InsiderTransactionFiling](docs/InsiderTransactionFiling.md)
+ - [Model.InstitutionalHolding](docs/InstitutionalHolding.md)
+ - [Model.InstitutionalOwnership](docs/InstitutionalOwnership.md)
  - [Model.IntradayStockPrice](docs/IntradayStockPrice.md)
  - [Model.KeltnerChannelTechnicalValue](docs/KeltnerChannelTechnicalValue.md)
  - [Model.KnowSureThingTechnicalValue](docs/KnowSureThingTechnicalValue.md)
@@ -460,6 +479,8 @@ Class | Method | HTTP request | Description
  - [Model.OptionPriceRealtime](docs/OptionPriceRealtime.md)
  - [Model.OptionRealtime](docs/OptionRealtime.md)
  - [Model.OptionStatsRealtime](docs/OptionStatsRealtime.md)
+ - [Model.Owner](docs/Owner.md)
+ - [Model.OwnerSummary](docs/OwnerSummary.md)
  - [Model.RealtimeStockPrice](docs/RealtimeStockPrice.md)
  - [Model.RealtimeStockPriceSecurity](docs/RealtimeStockPriceSecurity.md)
  - [Model.RelativeStrengthIndexTechnicalValue](docs/RelativeStrengthIndexTechnicalValue.md)

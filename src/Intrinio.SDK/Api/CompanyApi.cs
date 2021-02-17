@@ -339,6 +339,68 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseCompanySecurities</returns>
         ApiResponse<ApiResponseCompanySecurities> GetCompanySecuritiesWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
+        /// Insider Transaction Filings by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseInsiderTransactionFilings</returns>
+        ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Insider Transaction Filings by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseInsiderTransactionFilings</returns>
+        ApiResponse<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest insider transaction filing for a company.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>InsiderTransactionFiling</returns>
+        InsiderTransactionFiling LatestInsiderTransactionFilingByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest insider transaction filing for a company.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of InsiderTransactionFiling</returns>
+        ApiResponse<InsiderTransactionFiling> LatestInsiderTransactionFilingByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
         /// Lookup Fundamental by Company
         /// </summary>
         /// <remarks>
@@ -713,6 +775,68 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanySecurities)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySecurities>> GetCompanySecuritiesAsyncWithHttpInfo (string identifier, string nextPage = null);
+        /// <summary>
+        /// Insider Transaction Filings by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseInsiderTransactionFilings</returns>
+        System.Threading.Tasks.Task<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Insider Transaction Filings by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseInsiderTransactionFilings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInsiderTransactionFilings>> InsiderTransactionFilingsByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest insider transaction filing for a company.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of InsiderTransactionFiling</returns>
+        System.Threading.Tasks.Task<InsiderTransactionFiling> LatestInsiderTransactionFilingByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest insider transaction filing for a company.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (InsiderTransactionFiling)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InsiderTransactionFiling>> LatestInsiderTransactionFilingByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Fundamental by Company
         /// </summary>
@@ -2750,6 +2874,360 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseCompanySecurities>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseCompanySecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanySecurities)));
+        }
+
+        /// <summary>
+        /// Insider Transaction Filings by Company Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseInsiderTransactionFilings</returns>
+        public ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseInsiderTransactionFilings> localVarResponse = InsiderTransactionFilingsByCompanyWithHttpInfo(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insider Transaction Filings by Company Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseInsiderTransactionFilings</returns>
+        
+        
+        public ApiResponse< ApiResponseInsiderTransactionFilings > InsiderTransactionFilingsByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->InsiderTransactionFilingsByCompany");
+
+            var localVarPath = "/companies/{identifier}/insider_transaction_filings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (ownershipType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ownership_type", ownershipType)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("InsiderTransactionFilingsByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseInsiderTransactionFilings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseInsiderTransactionFilings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseInsiderTransactionFilings)));
+        }
+
+        /// <summary>
+        /// Insider Transaction Filings by Company Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseInsiderTransactionFilings</returns>
+        public async System.Threading.Tasks.Task<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseInsiderTransactionFilings> localVarResponse = await InsiderTransactionFilingsByCompanyAsyncWithHttpInfo(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insider Transaction Filings by Company Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseInsiderTransactionFilings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInsiderTransactionFilings>> InsiderTransactionFilingsByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->InsiderTransactionFilingsByCompany");
+
+            var localVarPath = "/companies/{identifier}/insider_transaction_filings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (ownershipType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ownership_type", ownershipType)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("InsiderTransactionFilingsByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseInsiderTransactionFilings>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseInsiderTransactionFilings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseInsiderTransactionFilings)));
+        }
+
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company Returns the latest insider transaction filing for a company.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>InsiderTransactionFiling</returns>
+        public InsiderTransactionFiling LatestInsiderTransactionFilingByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<InsiderTransactionFiling> localVarResponse = LatestInsiderTransactionFilingByCompanyWithHttpInfo(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company Returns the latest insider transaction filing for a company.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of InsiderTransactionFiling</returns>
+        
+        
+        public ApiResponse< InsiderTransactionFiling > LatestInsiderTransactionFilingByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->LatestInsiderTransactionFilingByCompany");
+
+            var localVarPath = "/companies/{identifier}/insider_transaction_filings/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (ownershipType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ownership_type", ownershipType)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LatestInsiderTransactionFilingByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsiderTransactionFiling>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsiderTransactionFiling) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsiderTransactionFiling)));
+        }
+
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company Returns the latest insider transaction filing for a company.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of InsiderTransactionFiling</returns>
+        public async System.Threading.Tasks.Task<InsiderTransactionFiling> LatestInsiderTransactionFilingByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<InsiderTransactionFiling> localVarResponse = await LatestInsiderTransactionFilingByCompanyAsyncWithHttpInfo(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Latest Insider Transaction Filing by Company Returns the latest insider transaction filing for a company.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
+        /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
+        /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (InsiderTransactionFiling)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InsiderTransactionFiling>> LatestInsiderTransactionFilingByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->LatestInsiderTransactionFilingByCompany");
+
+            var localVarPath = "/companies/{identifier}/insider_transaction_filings/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (ownershipType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ownership_type", ownershipType)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LatestInsiderTransactionFilingByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsiderTransactionFiling>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsiderTransactionFiling) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsiderTransactionFiling)));
         }
 
         /// <summary>

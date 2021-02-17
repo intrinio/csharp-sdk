@@ -141,6 +141,18 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecurityInsiderOwnership
+        /// </summary>
+        [Test]
+        public void GetSecurityInsiderOwnershipTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetSecurityInsiderOwnership(identifier);
+            //Assert.IsInstanceOf<ApiResponseSecurityInstitutionalOwnership> (response, "response is ApiResponseSecurityInstitutionalOwnership");
+        }
+        
+        /// <summary>
         /// Test GetSecurityIntervalPrices
         /// </summary>
         [Test]

@@ -230,6 +230,40 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test InsiderTransactionFilingsByCompany
+        /// </summary>
+        [Test]
+        public void InsiderTransactionFilingsByCompanyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string ownershipType = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.InsiderTransactionFilingsByCompany(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseInsiderTransactionFilings> (response, "response is ApiResponseInsiderTransactionFilings");
+        }
+        
+        /// <summary>
+        /// Test LatestInsiderTransactionFilingByCompany
+        /// </summary>
+        [Test]
+        public void LatestInsiderTransactionFilingByCompanyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string ownershipType = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.LatestInsiderTransactionFilingByCompany(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+            //Assert.IsInstanceOf<InsiderTransactionFiling> (response, "response is InsiderTransactionFiling");
+        }
+        
+        /// <summary>
         /// Test LookupCompanyFundamental
         /// </summary>
         [Test]

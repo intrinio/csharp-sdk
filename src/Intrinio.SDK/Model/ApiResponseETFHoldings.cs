@@ -28,7 +28,7 @@ namespace Intrinio.SDK.Model
         /// <param name="Holdings">Holdings.</param>
         /// <param name="Etf">Etf.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
-        public ApiResponseETFHoldings(Object Holdings = default(Object), ETFSummary Etf = default(ETFSummary), string NextPage = default(string))
+        public ApiResponseETFHoldings(List<ETFHolding> Holdings = default(List<ETFHolding>), ETFSummary Etf = default(ETFSummary), string NextPage = default(string))
         {
             this.Holdings = Holdings;
             this.Etf = Etf;
@@ -39,7 +39,7 @@ namespace Intrinio.SDK.Model
         /// Gets or Sets Holdings
         /// </summary>
         [DataMember(Name="holdings", EmitDefaultValue=false)]
-        public Object Holdings { get; set; }
+        public List<ETFHolding> Holdings { get; set; }
 
         /// <summary>
         /// Gets or Sets Etf
@@ -101,8 +101,8 @@ namespace Intrinio.SDK.Model
             return 
                 (
                     this.Holdings == input.Holdings ||
-                    (this.Holdings != null &&
-                    this.Holdings.Equals(input.Holdings))
+                    this.Holdings != null &&
+                    this.Holdings.SequenceEqual(input.Holdings)
                 ) && 
                 (
                     this.Etf == input.Etf ||

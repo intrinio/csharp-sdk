@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Etfs">Etfs.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
-        public ApiResponseETFs(Object Etfs = default(Object), string NextPage = default(string))
+        public ApiResponseETFs(List<ETFSummary> Etfs = default(List<ETFSummary>), string NextPage = default(string))
         {
             this.Etfs = Etfs;
             this.NextPage = NextPage;
@@ -37,7 +37,7 @@ namespace Intrinio.SDK.Model
         /// Gets or Sets Etfs
         /// </summary>
         [DataMember(Name="etfs", EmitDefaultValue=false)]
-        public Object Etfs { get; set; }
+        public List<ETFSummary> Etfs { get; set; }
 
         /// <summary>
         /// The token required to request the next page of the data. If null, no further results are available.
@@ -92,8 +92,8 @@ namespace Intrinio.SDK.Model
             return 
                 (
                     this.Etfs == input.Etfs ||
-                    (this.Etfs != null &&
-                    this.Etfs.Equals(input.Etfs))
+                    this.Etfs != null &&
+                    this.Etfs.SequenceEqual(input.Etfs)
                 ) && 
                 (
                     this.NextPage == input.NextPage ||

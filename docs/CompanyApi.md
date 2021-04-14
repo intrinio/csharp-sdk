@@ -1203,7 +1203,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> InsiderTransactionFiling LatestInsiderTransactionFilingByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string nextPage = null)
+> InsiderTransactionFiling LatestInsiderTransactionFilingByCompany (string identifier, string nextPage = null)
 
 #### Latest Insider Transaction Filing by Company
 
@@ -1237,13 +1237,9 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      DateTime? startDate = DateTime.Parse("2018-01-01");
-      DateTime? endDate = DateTime.Parse("2019-01-01");
-      string ownershipType = "D";
-      int? pageSize = 100;
       string nextPage = null;
       
-      InsiderTransactionFiling result = companyApi.LatestInsiderTransactionFilingByCompany(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+      InsiderTransactionFiling result = companyApi.LatestInsiderTransactionFilingByCompany(identifier, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1260,10 +1256,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **startDate** | DateTime?| Return Company&#39;s insider transaction filings on or after this date | [optional]  &nbsp;
- **endDate** | DateTime?| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
- **ownershipType** | string| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
- **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

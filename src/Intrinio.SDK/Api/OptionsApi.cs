@@ -18,6 +18,33 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Option Expirations Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsExpirations</returns>
+        ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null);
+
+        /// <summary>
+        /// Option Expirations Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
+        ApiResponse<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeWithHttpInfo (string symbol, string after = null, string before = null, string source = null);
+        /// <summary>
         /// Options
         /// </summary>
         /// <remarks>
@@ -56,6 +83,43 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptions</returns>
         ApiResponse<ApiResponseOptions> GetOptionsWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Options by Symbol Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns the master list of realtime option contracts for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsRealtime</returns>
+        ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
+
+        /// <summary>
+        /// Options by Symbol Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns the master list of realtime option contracts for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsRealtime</returns>
+        ApiResponse<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
         /// <summary>
         /// Options Chain
         /// </summary>
@@ -239,6 +303,33 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Option Expirations Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsExpirations</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeAsync (string symbol, string after = null, string before = null, string source = null);
+
+        /// <summary>
+        /// Option Expirations Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionExpirationsRealtimeAsyncWithHttpInfo (string symbol, string after = null, string before = null, string source = null);
+        /// <summary>
         /// Options
         /// </summary>
         /// <remarks>
@@ -277,6 +368,43 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptions)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptions>> GetOptionsAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Options by Symbol Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns the master list of realtime option contracts for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsRealtime</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
+
+        /// <summary>
+        /// Options by Symbol Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns the master list of realtime option contracts for a given symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsRealtime)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsRealtime>> GetOptionsBySymbolRealtimeAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
         /// <summary>
         /// Options Chain
         /// </summary>
@@ -558,6 +686,171 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsExpirations</returns>
+        public ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = GetOptionExpirationsRealtimeWithHttpInfo(symbol, after, before, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsExpirations > GetOptionExpirationsRealtimeWithHttpInfo (string symbol, string after = null, string before = null, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionExpirationsRealtime");
+
+            var localVarPath = "/options/expirations/{symbol}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
+            if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionExpirationsRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsExpirations>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsExpirations) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsExpirations)));
+        }
+
+        /// <summary>
+        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsExpirations</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeAsync (string symbol, string after = null, string before = null, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = await GetOptionExpirationsRealtimeAsyncWithHttpInfo(symbol, after, before, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionExpirationsRealtimeAsyncWithHttpInfo (string symbol, string after = null, string before = null, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionExpirationsRealtime");
+
+            var localVarPath = "/options/expirations/{symbol}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
+            if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionExpirationsRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsExpirations>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsExpirations) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsExpirations)));
+        }
+
+        /// <summary>
         /// Options Returns the master list of option contracts for a given symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -756,6 +1049,201 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseOptions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptions)));
+        }
+
+        /// <summary>
+        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsRealtime</returns>
+        public ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsRealtime> localVarResponse = GetOptionsBySymbolRealtimeWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsRealtime</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsRealtime > GetOptionsBySymbolRealtimeWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsBySymbolRealtime");
+
+            var localVarPath = "/options/{symbol}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
+            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (expiration != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration", expiration)); // query parameter
+            if (expirationAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_after", expirationAfter)); // query parameter
+            if (expirationBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_before", expirationBefore)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsBySymbolRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsRealtime>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsRealtime)));
+        }
+
+        /// <summary>
+        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsRealtime</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsRealtime> localVarResponse = await GetOptionsBySymbolRealtimeAsyncWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="expiration">The expiration date of the option contract. This will return options contracts with expiration dates on this date. (optional)</param>
+        /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
+        /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsRealtime)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsRealtime>> GetOptionsBySymbolRealtimeAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsBySymbolRealtime");
+
+            var localVarPath = "/options/{symbol}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
+            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (expiration != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration", expiration)); // query parameter
+            if (expirationAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_after", expirationAfter)); // query parameter
+            if (expirationBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_before", expirationBefore)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsBySymbolRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsRealtime>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsRealtime)));
         }
 
         /// <summary>

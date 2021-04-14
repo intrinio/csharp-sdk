@@ -4,7 +4,9 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**GetOptionExpirationsRealtime**](OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Option Expirations Realtime
 [**GetOptions**](OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
+[**GetOptionsBySymbolRealtime**](OptionsApi.md#getoptionsbysymbolrealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 [**GetOptionsChain**](OptionsApi.md#getoptionschain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
 [**GetOptionsChainRealtime**](OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
@@ -12,6 +14,100 @@ Method | HTTP request | Description
 [**GetOptionsPricesRealtime**](OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**GetOptionsStatsRealtime**](OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionExpirationsRealtime)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsExpirations)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsExpirations.md)
+
+[//]: # (OPERATION:GetOptionExpirationsRealtime_v2)
+
+[//]: # (ENDPOINT:/options/expirations/{symbol}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionexpirationsrealtime)
+
+<a name="getoptionexpirationsrealtime"></a>
+## **GetOptionExpirationsRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionExpirationsRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null)
+
+#### Option Expirations Realtime
+
+Returns all realtime option contract expiration dates for a given symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionExpirationsRealtimeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "MSFT";
+      string after = "2022-01-01";
+      string before = "2023-04-01";
+      string source = null;
+      
+      ApiResponseOptionsExpirations result = optionsApi.GetOptionExpirationsRealtime(symbol, after, before, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **after** | string| Return option contract expiration dates after this date. | [optional]  &nbsp;
+ **before** | string| Return option contract expiration dates before this date. | [optional]  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+[//]: # (END_OPERATION)
 
 
 [//]: # (START_OPERATION)
@@ -116,6 +212,110 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptions**](ApiResponseOptions.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsBySymbolRealtime)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsRealtime.md)
+
+[//]: # (OPERATION:GetOptionsBySymbolRealtime_v2)
+
+[//]: # (ENDPOINT:/options/{symbol}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsbysymbolrealtime)
+
+<a name="getoptionsbysymbolrealtime"></a>
+## **GetOptionsBySymbolRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsBySymbolRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+
+#### Options by Symbol Realtime
+
+Returns the master list of realtime option contracts for a given symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsBySymbolRealtimeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "AAPL";
+      string type = "put";
+      decimal? strike = 170;
+      decimal? strikeGreaterThan = 150;
+      decimal? strikeLessThan = 190;
+      string expiration = "2022-04-16";
+      string expirationAfter = "2022-01-01";
+      string expirationBefore = "2023-12-31";
+      string source = null;
+      
+      ApiResponseOptionsRealtime result = optionsApi.GetOptionsBySymbolRealtime(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **type** | string| The option contract type. | [optional]  &nbsp;
+ **strike** | decimal?| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strikeGreaterThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strikeLessThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **expiration** | string| The expiration date of the option contract. This will return options contracts with expiration dates on this date. | [optional]  &nbsp;
+ **expirationAfter** | string| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional]  &nbsp;
+ **expirationBefore** | string| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional]  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsRealtime**](ApiResponseOptionsRealtime.md)
 
 [//]: # (END_OPERATION)
 

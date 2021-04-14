@@ -254,12 +254,8 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string ownershipType = null;
-            //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.LatestInsiderTransactionFilingByCompany(identifier, startDate, endDate, ownershipType, pageSize, nextPage);
+            //var response = instance.LatestInsiderTransactionFilingByCompany(identifier, nextPage);
             //Assert.IsInstanceOf<InsiderTransactionFiling> (response, "response is InsiderTransactionFiling");
         }
         

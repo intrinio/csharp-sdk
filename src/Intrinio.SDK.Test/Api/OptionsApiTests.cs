@@ -53,6 +53,21 @@ namespace Intrinio.SDK.Test
 
         
         /// <summary>
+        /// Test GetOptionExpirationsRealtime
+        /// </summary>
+        [Test]
+        public void GetOptionExpirationsRealtimeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //string after = null;
+            //string before = null;
+            //string source = null;
+            //var response = instance.GetOptionExpirationsRealtime(symbol, after, before, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsExpirations> (response, "response is ApiResponseOptionsExpirations");
+        }
+        
+        /// <summary>
         /// Test GetOptions
         /// </summary>
         [Test]
@@ -71,6 +86,26 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //var response = instance.GetOptions(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseOptions> (response, "response is ApiResponseOptions");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsBySymbolRealtime
+        /// </summary>
+        [Test]
+        public void GetOptionsBySymbolRealtimeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //string type = null;
+            //decimal? strike = null;
+            //decimal? strikeGreaterThan = null;
+            //decimal? strikeLessThan = null;
+            //string expiration = null;
+            //string expirationAfter = null;
+            //string expirationBefore = null;
+            //string source = null;
+            //var response = instance.GetOptionsBySymbolRealtime(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsRealtime> (response, "response is ApiResponseOptionsRealtime");
         }
         
         /// <summary>

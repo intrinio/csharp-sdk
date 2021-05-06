@@ -781,9 +781,10 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      var body = new OptionContractsList();
       string source = null;
       
+      var body = new OptionContractsList();
+      body.Contracts = new List<string>(new string[] { "A220121P00055000", "A220121P00057500", "A220121P00060000" });
       ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }

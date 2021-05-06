@@ -33,7 +33,7 @@ namespace Intrinio.SDK.Model
         /// <param name="AskPrice">The price of the top ask order..</param>
         /// <param name="AskSize">The size of the top ask order..</param>
         /// <param name="OpenPrice">The price at the open of the trading day..</param>
-        /// <param name="ClosePrice">The price at the close of the trading day..</param>
+        /// <param name="ClosePrice">The price at the close of the trading day. (IEX only).</param>
         /// <param name="HighPrice">The high price for the trading day..</param>
         /// <param name="LowPrice">The low price for the trading day..</param>
         /// <param name="ExchangeVolume">The number of shares exchanged during the trading day on the exchange..</param>
@@ -118,9 +118,9 @@ namespace Intrinio.SDK.Model
         public decimal? OpenPrice { get; set; }
 
         /// <summary>
-        /// The price at the close of the trading day.
+        /// The price at the close of the trading day. (IEX only)
         /// </summary>
-        /// <value>The price at the close of the trading day.</value>
+        /// <value>The price at the close of the trading day. (IEX only)</value>
         [DataMember(Name="close_price", EmitDefaultValue=false)]
         public decimal? ClosePrice { get; set; }
 

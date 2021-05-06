@@ -17,7 +17,7 @@ Name | Type | Description
 **AskPrice** | decimal? | The price of the top ask order. &nbsp;
 **AskSize** | decimal? | The size of the top ask order. &nbsp;
 **OpenPrice** | decimal? | The price at the open of the trading day. &nbsp;
-**ClosePrice** | decimal? | The price at the close of the trading day. &nbsp;
+**ClosePrice** | decimal? | The price at the close of the trading day. (IEX only) &nbsp;
 **HighPrice** | decimal? | The high price for the trading day. &nbsp;
 **LowPrice** | decimal? | The low price for the trading day. &nbsp;
 **ExchangeVolume** | decimal? | The number of shares exchanged during the trading day on the exchange. &nbsp;

@@ -182,6 +182,19 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsPricesBatchRealtime
+        /// </summary>
+        [Test]
+        public void GetOptionsPricesBatchRealtimeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OptionContractsList body = null;
+            //string source = null;
+            //var response = instance.GetOptionsPricesBatchRealtime(body, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsPricesBatchRealtime> (response, "response is ApiResponseOptionsPricesBatchRealtime");
+        }
+        
+        /// <summary>
         /// Test GetOptionsPricesRealtime
         /// </summary>
         [Test]

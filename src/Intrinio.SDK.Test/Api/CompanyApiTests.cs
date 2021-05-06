@@ -288,6 +288,18 @@ namespace Intrinio.SDK.Test
             //Assert.IsInstanceOf<ApiResponseCompaniesSearch> (response, "response is ApiResponseCompaniesSearch");
         }
         
+        /// <summary>
+        /// Test SharesOutstandingByCompany
+        /// </summary>
+        [Test]
+        public void SharesOutstandingByCompanyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.SharesOutstandingByCompany(identifier);
+            //Assert.IsInstanceOf<ApiResponseCompanySharesOutstanding> (response, "response is ApiResponseCompanySharesOutstanding");
+        }
+        
     }
 
 }

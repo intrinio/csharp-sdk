@@ -255,6 +255,29 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionPrices</returns>
         ApiResponse<ApiResponseOptionPrices> GetOptionsPricesWithHttpInfo (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Option Prices Batch Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns options prices for a supplied list of option symbols.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsPricesBatchRealtime</returns>
+        ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null);
+
+        /// <summary>
+        /// Option Prices Batch Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns options prices for a supplied list of option symbols.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsPricesBatchRealtime</returns>
+        ApiResponse<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeWithHttpInfo (OptionContractsList body, string source = null);
+        /// <summary>
         /// Option Prices Realtime
         /// </summary>
         /// <remarks>
@@ -539,6 +562,29 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionPrices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionPrices>> GetOptionsPricesAsyncWithHttpInfo (string identifier, string startDate = null, string endDate = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Option Prices Batch Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns options prices for a supplied list of option symbols.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsPricesBatchRealtime</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeAsync (OptionContractsList body, string source = null);
+
+        /// <summary>
+        /// Option Prices Batch Realtime
+        /// </summary>
+        /// <remarks>
+        /// Returns options prices for a supplied list of option symbols.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsPricesBatchRealtime)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesBatchRealtime>> GetOptionsPricesBatchRealtimeAsyncWithHttpInfo (OptionContractsList body, string source = null);
         /// <summary>
         /// Option Prices Realtime
         /// </summary>
@@ -1994,6 +2040,175 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionPrices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseOptionPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionPrices)));
+        }
+
+        /// <summary>
+        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsPricesBatchRealtime</returns>
+        public ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsPricesBatchRealtime> localVarResponse = GetOptionsPricesBatchRealtimeWithHttpInfo(body, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsPricesBatchRealtime</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsPricesBatchRealtime > GetOptionsPricesBatchRealtimeWithHttpInfo (OptionContractsList body, string source = null)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OptionsApi->GetOptionsPricesBatchRealtime");
+
+            var localVarPath = "/options/prices/realtime/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsPricesBatchRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsPricesBatchRealtime>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsPricesBatchRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsPricesBatchRealtime)));
+        }
+
+        /// <summary>
+        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsPricesBatchRealtime</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeAsync (OptionContractsList body, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsPricesBatchRealtime> localVarResponse = await GetOptionsPricesBatchRealtimeAsyncWithHttpInfo(body, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contract symbols for which to return options prices for.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsPricesBatchRealtime)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesBatchRealtime>> GetOptionsPricesBatchRealtimeAsyncWithHttpInfo (OptionContractsList body, string source = null)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OptionsApi->GetOptionsPricesBatchRealtime");
+
+            var localVarPath = "/options/prices/realtime/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsPricesBatchRealtime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsPricesBatchRealtime>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsPricesBatchRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsPricesBatchRealtime)));
         }
 
         /// <summary>

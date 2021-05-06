@@ -444,6 +444,27 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseCompaniesSearch</returns>
         ApiResponse<ApiResponseCompaniesSearch> SearchCompaniesWithHttpInfo (string query, bool? active = null, int? pageSize = null);
+        /// <summary>
+        /// Shares Outstanding by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>ApiResponseCompanySharesOutstanding</returns>
+        ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier);
+
+        /// <summary>
+        /// Shares Outstanding by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>ApiResponse of ApiResponseCompanySharesOutstanding</returns>
+        ApiResponse<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyWithHttpInfo (string identifier);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -873,6 +894,27 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompaniesSearch)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompaniesSearch>> SearchCompaniesAsyncWithHttpInfo (string query, bool? active = null, int? pageSize = null);
+        /// <summary>
+        /// Shares Outstanding by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>Task of ApiResponseCompanySharesOutstanding</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyAsync (string identifier);
+
+        /// <summary>
+        /// Shares Outstanding by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanySharesOutstanding)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySharesOutstanding>> SharesOutstandingByCompanyAsyncWithHttpInfo (string identifier);
         #endregion Asynchronous Operations
     }
 
@@ -3530,6 +3572,153 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseCompaniesSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseCompaniesSearch) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompaniesSearch)));
+        }
+
+        /// <summary>
+        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>ApiResponseCompanySharesOutstanding</returns>
+        public ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier)
+        {
+             ApiResponse<ApiResponseCompanySharesOutstanding> localVarResponse = SharesOutstandingByCompanyWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>ApiResponse of ApiResponseCompanySharesOutstanding</returns>
+        
+        
+        public ApiResponse< ApiResponseCompanySharesOutstanding > SharesOutstandingByCompanyWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->SharesOutstandingByCompany");
+
+            var localVarPath = "/companies/{identifier}/shares_outstanding";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SharesOutstandingByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanySharesOutstanding>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCompanySharesOutstanding) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanySharesOutstanding)));
+        }
+
+        /// <summary>
+        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>Task of ApiResponseCompanySharesOutstanding</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyAsync (string identifier)
+        {
+             ApiResponse<ApiResponseCompanySharesOutstanding> localVarResponse = await SharesOutstandingByCompanyAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanySharesOutstanding)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySharesOutstanding>> SharesOutstandingByCompanyAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->SharesOutstandingByCompany");
+
+            var localVarPath = "/companies/{identifier}/shares_outstanding";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SharesOutstandingByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanySharesOutstanding>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCompanySharesOutstanding) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanySharesOutstanding)));
         }
 
     }

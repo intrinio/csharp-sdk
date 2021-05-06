@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**LatestInsiderTransactionFilingByCompany**](CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 [**LookupCompanyFundamental**](CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 [**SearchCompanies**](CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
+[**SharesOutstandingByCompany**](CompanyApi.md#sharesoutstandingbycompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
 
 
@@ -1450,6 +1451,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompaniesSearch**](ApiResponseCompaniesSearch.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:SharesOutstandingByCompany)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanySharesOutstanding)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanySharesOutstanding.md)
+
+[//]: # (OPERATION:SharesOutstandingByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/shares_outstanding)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#sharesoutstandingbycompany)
+
+<a name="sharesoutstandingbycompany"></a>
+## **SharesOutstandingByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/SharesOutstandingByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier)
+
+#### Shares Outstanding by Company
+
+Returns shares outstanding for the Company with the given `identifier`
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class SharesOutstandingByCompanyExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string identifier = "AAPL";
+      
+      ApiResponseCompanySharesOutstanding result = companyApi.SharesOutstandingByCompany(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanySharesOutstanding**](ApiResponseCompanySharesOutstanding.md)
 
 [//]: # (END_OPERATION)
 

@@ -18,6 +18,25 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Options Tickers
+        /// </summary>
+        /// <remarks>
+        /// Returns all tickers that have existing options contracts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponseOptionsTickers</returns>
+        ApiResponseOptionsTickers GetAllOptionsTickers ();
+
+        /// <summary>
+        /// Options Tickers
+        /// </summary>
+        /// <remarks>
+        /// Returns all tickers that have existing options contracts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ApiResponseOptionsTickers</returns>
+        ApiResponse<ApiResponseOptionsTickers> GetAllOptionsTickersWithHttpInfo ();
+        /// <summary>
         /// Option Expirations Realtime
         /// </summary>
         /// <remarks>
@@ -325,6 +344,25 @@ namespace Intrinio.SDK.Api
         ApiResponse<ApiResponseOptionsStatsRealtime> GetOptionsStatsRealtimeWithHttpInfo (string identifier, string source = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Options Tickers
+        /// </summary>
+        /// <remarks>
+        /// Returns all tickers that have existing options contracts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponseOptionsTickers</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsTickers> GetAllOptionsTickersAsync ();
+
+        /// <summary>
+        /// Options Tickers
+        /// </summary>
+        /// <remarks>
+        /// Returns all tickers that have existing options contracts.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsTickers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo ();
         /// <summary>
         /// Option Expirations Realtime
         /// </summary>
@@ -729,6 +767,141 @@ namespace Intrinio.SDK.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Options Tickers Returns all tickers that have existing options contracts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponseOptionsTickers</returns>
+        public ApiResponseOptionsTickers GetAllOptionsTickers ()
+        {
+             ApiResponse<ApiResponseOptionsTickers> localVarResponse = GetAllOptionsTickersWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Tickers Returns all tickers that have existing options contracts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ApiResponseOptionsTickers</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsTickers > GetAllOptionsTickersWithHttpInfo ()
+        {
+
+            var localVarPath = "/options/tickers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllOptionsTickers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsTickers>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsTickers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsTickers)));
+        }
+
+        /// <summary>
+        /// Options Tickers Returns all tickers that have existing options contracts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponseOptionsTickers</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsTickers> GetAllOptionsTickersAsync ()
+        {
+             ApiResponse<ApiResponseOptionsTickers> localVarResponse = await GetAllOptionsTickersAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Tickers Returns all tickers that have existing options contracts.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsTickers)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/options/tickers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllOptionsTickers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsTickers>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsTickers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsTickers)));
         }
 
         /// <summary>

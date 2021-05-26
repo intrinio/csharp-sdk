@@ -162,6 +162,62 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'AdjVolume'
         }
+        /// <summary>
+        /// Test the property 'Factor'
+        /// </summary>
+        [Test]
+        public void FactorTest()
+        {
+            // TODO unit test for the property 'Factor'
+        }
+        /// <summary>
+        /// Test the property 'SplitRatio'
+        /// </summary>
+        [Test]
+        public void SplitRatioTest()
+        {
+            // TODO unit test for the property 'SplitRatio'
+        }
+        /// <summary>
+        /// Test the property 'Dividend'
+        /// </summary>
+        [Test]
+        public void DividendTest()
+        {
+            // TODO unit test for the property 'Dividend'
+        }
+        /// <summary>
+        /// Test the property 'Change'
+        /// </summary>
+        [Test]
+        public void ChangeTest()
+        {
+            // TODO unit test for the property 'Change'
+        }
+        /// <summary>
+        /// Test the property 'PercentChange'
+        /// </summary>
+        [Test]
+        public void PercentChangeTest()
+        {
+            // TODO unit test for the property 'PercentChange'
+        }
+        /// <summary>
+        /// Test the property 'FiftyTwoWeekHigh'
+        /// </summary>
+        [Test]
+        public void FiftyTwoWeekHighTest()
+        {
+            // TODO unit test for the property 'FiftyTwoWeekHigh'
+        }
+        /// <summary>
+        /// Test the property 'FiftyTwoWeekLow'
+        /// </summary>
+        [Test]
+        public void FiftyTwoWeekLowTest()
+        {
+            // TODO unit test for the property 'FiftyTwoWeekLow'
+        }
 
     }
 

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**GetAllCompanies**](CompanyApi.md#getallcompanies) | **GET** /companies | All Companies
 [**GetAllCompanyNews**](CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
 [**GetCompany**](CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
+[**GetCompanyAnswers**](CompanyApi.md#getcompanyanswers) | **GET** /companies/{identifier}/answers | Company Answers
 [**GetCompanyDataPointNumber**](CompanyApi.md#getcompanydatapointnumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 [**GetCompanyDataPointText**](CompanyApi.md#getcompanydatapointtext) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
 [**GetCompanyFilings**](CompanyApi.md#getcompanyfilings) | **GET** /companies/{identifier}/filings | All Filings by Company
@@ -304,6 +305,96 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Company**](Company.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:GetCompanyAnswers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyAnswers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyAnswers.md)
+
+[//]: # (OPERATION:GetCompanyAnswers_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/answers)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getcompanyanswers)
+
+<a name="getcompanyanswers"></a>
+## **GetCompanyAnswers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyAnswers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyAnswers GetCompanyAnswers (string identifier, string query)
+
+#### Company Answers
+
+Returns answers for a question about the Company with the given `identifier`
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetCompanyAnswersExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string identifier = "AAPL";
+      string query = "Where is the company headquartered?";
+      
+      ApiResponseCompanyAnswers result = companyApi.GetCompanyAnswers(identifier, query);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **query** | string| The query to ask the Thea API |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyAnswers**](ApiResponseCompanyAnswers.md)
 
 [//]: # (END_OPERATION)
 

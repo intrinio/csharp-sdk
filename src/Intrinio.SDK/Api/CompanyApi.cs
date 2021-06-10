@@ -101,6 +101,29 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of Company</returns>
         ApiResponse<Company> GetCompanyWithHttpInfo (string identifier);
         /// <summary>
+        /// Company Answers
+        /// </summary>
+        /// <remarks>
+        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>ApiResponseCompanyAnswers</returns>
+        ApiResponseCompanyAnswers GetCompanyAnswers (string identifier, string query);
+
+        /// <summary>
+        /// Company Answers
+        /// </summary>
+        /// <remarks>
+        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>ApiResponse of ApiResponseCompanyAnswers</returns>
+        ApiResponse<ApiResponseCompanyAnswers> GetCompanyAnswersWithHttpInfo (string identifier, string query);
+        /// <summary>
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
@@ -571,6 +594,29 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <returns>Task of ApiResponse (Company)</returns>
         System.Threading.Tasks.Task<ApiResponse<Company>> GetCompanyAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Company Answers
+        /// </summary>
+        /// <remarks>
+        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>Task of ApiResponseCompanyAnswers</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyAnswers> GetCompanyAnswersAsync (string identifier, string query);
+
+        /// <summary>
+        /// Company Answers
+        /// </summary>
+        /// <remarks>
+        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyAnswers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyAnswers>> GetCompanyAnswersAsyncWithHttpInfo (string identifier, string query);
         /// <summary>
         /// Data Point (Number) for Company
         /// </summary>
@@ -1544,6 +1590,165 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<Company>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Company) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Company)));
+        }
+
+        /// <summary>
+        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>ApiResponseCompanyAnswers</returns>
+        public ApiResponseCompanyAnswers GetCompanyAnswers (string identifier, string query)
+        {
+             ApiResponse<ApiResponseCompanyAnswers> localVarResponse = GetCompanyAnswersWithHttpInfo(identifier, query);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>ApiResponse of ApiResponseCompanyAnswers</returns>
+        
+        
+        public ApiResponse< ApiResponseCompanyAnswers > GetCompanyAnswersWithHttpInfo (string identifier, string query)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->GetCompanyAnswers");
+            // verify the required parameter 'query' is set
+            if (query == null)
+                throw new ApiException(400, "Missing required parameter 'query' when calling CompanyApi->GetCompanyAnswers");
+
+            var localVarPath = "/companies/{identifier}/answers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyAnswers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyAnswers>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCompanyAnswers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyAnswers)));
+        }
+
+        /// <summary>
+        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>Task of ApiResponseCompanyAnswers</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyAnswers> GetCompanyAnswersAsync (string identifier, string query)
+        {
+             ApiResponse<ApiResponseCompanyAnswers> localVarResponse = await GetCompanyAnswersAsyncWithHttpInfo(identifier, query);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="query">The query to ask the Thea API</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyAnswers)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyAnswers>> GetCompanyAnswersAsyncWithHttpInfo (string identifier, string query)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->GetCompanyAnswers");
+            // verify the required parameter 'query' is set
+            if (query == null)
+                throw new ApiException(400, "Missing required parameter 'query' when calling CompanyApi->GetCompanyAnswers");
+
+            var localVarPath = "/companies/{identifier}/answers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyAnswers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyAnswers>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCompanyAnswers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyAnswers)));
         }
 
         /// <summary>

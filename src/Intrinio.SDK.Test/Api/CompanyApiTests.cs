@@ -99,6 +99,19 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetCompanyAnswers
+        /// </summary>
+        [Test]
+        public void GetCompanyAnswersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string query = null;
+            //var response = instance.GetCompanyAnswers(identifier, query);
+            //Assert.IsInstanceOf<ApiResponseCompanyAnswers> (response, "response is ApiResponseCompanyAnswers");
+        }
+        
+        /// <summary>
         /// Test GetCompanyDataPointNumber
         /// </summary>
         [Test]

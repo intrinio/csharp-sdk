@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetAllCompanies**](docs/CompanyApi.md#getallcompanies) | **GET** /companies | All Companies
 *CompanyApi* | [**GetAllCompanyNews**](docs/CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
 *CompanyApi* | [**GetCompany**](docs/CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
+*CompanyApi* | [**GetCompanyAnswers**](docs/CompanyApi.md#getcompanyanswers) | **GET** /companies/{identifier}/answers | Company Answers
 *CompanyApi* | [**GetCompanyDataPointNumber**](docs/CompanyApi.md#getcompanydatapointnumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 *CompanyApi* | [**GetCompanyDataPointText**](docs/CompanyApi.md#getcompanydatapointtext) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
 *CompanyApi* | [**GetCompanyFilings**](docs/CompanyApi.md#getcompanyfilings) | **GET** /companies/{identifier}/filings | All Filings by Company
@@ -317,6 +318,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [Model.ApiResponseCompanies](docs/ApiResponseCompanies.md)
  - [Model.ApiResponseCompaniesSearch](docs/ApiResponseCompaniesSearch.md)
+ - [Model.ApiResponseCompanyAnswers](docs/ApiResponseCompanyAnswers.md)
  - [Model.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
  - [Model.ApiResponseCompanyFundamentals](docs/ApiResponseCompanyFundamentals.md)
  - [Model.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
@@ -520,6 +522,9 @@ Class | Method | HTTP request | Description
  - [Model.StockPriceInterval](docs/StockPriceInterval.md)
  - [Model.StockPriceSummary](docs/StockPriceSummary.md)
  - [Model.TechnicalIndicator](docs/TechnicalIndicator.md)
+ - [Model.TheaEntityAnswer](docs/TheaEntityAnswer.md)
+ - [Model.TheaSourceDocument](docs/TheaSourceDocument.md)
+ - [Model.TheaSourceDocumentTags](docs/TheaSourceDocumentTags.md)
  - [Model.TripleExponentialAverageTechnicalValue](docs/TripleExponentialAverageTechnicalValue.md)
  - [Model.TrueStrengthIndexTechnicalValue](docs/TrueStrengthIndexTechnicalValue.md)
  - [Model.UltimateOscillatorTechnicalValue](docs/UltimateOscillatorTechnicalValue.md)

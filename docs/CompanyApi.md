@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**InsiderTransactionFilingsByCompany**](CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 [**LatestInsiderTransactionFilingByCompany**](CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 [**LookupCompanyFundamental**](CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
+[**RecognizeCompany**](CompanyApi.md#recognizecompany) | **GET** /companies/recognize | Recognize Company
 [**SearchCompanies**](CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 [**SharesOutstandingByCompany**](CompanyApi.md#sharesoutstandingbycompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
@@ -1359,6 +1360,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Fundamental**](Fundamental.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:RecognizeCompany)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyRecognize)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyRecognize.md)
+
+[//]: # (OPERATION:RecognizeCompany_v2)
+
+[//]: # (ENDPOINT:/companies/recognize)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#recognizecompany)
+
+<a name="recognizecompany"></a>
+## **RecognizeCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/RecognizeCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyRecognize RecognizeCompany (string text)
+
+#### Recognize Company
+
+Returns a list of companies recognized by the Thea API in the given `text` query string parameter.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class RecognizeCompanyExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string text = text_example;
+      
+      ApiResponseCompanyRecognize result = companyApi.RecognizeCompany(text);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **text** | string| The text sent to the Thea API to analyze | [default to Apple] &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyRecognize**](ApiResponseCompanyRecognize.md)
 
 [//]: # (END_OPERATION)
 

@@ -420,6 +420,27 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of Fundamental</returns>
         ApiResponse<Fundamental> LookupCompanyFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
         /// <summary>
+        /// Recognize Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>ApiResponseCompanyRecognize</returns>
+        ApiResponseCompanyRecognize RecognizeCompany (string text);
+
+        /// <summary>
+        /// Recognize Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>ApiResponse of ApiResponseCompanyRecognize</returns>
+        ApiResponse<ApiResponseCompanyRecognize> RecognizeCompanyWithHttpInfo (string text);
+        /// <summary>
         /// Search Companies
         /// </summary>
         /// <remarks>
@@ -869,6 +890,27 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalYear">The fiscal year</param>
         /// <returns>Task of ApiResponse (Fundamental)</returns>
         System.Threading.Tasks.Task<ApiResponse<Fundamental>> LookupCompanyFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
+        /// <summary>
+        /// Recognize Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>Task of ApiResponseCompanyRecognize</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyRecognize> RecognizeCompanyAsync (string text);
+
+        /// <summary>
+        /// Recognize Company
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyRecognize)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyRecognize>> RecognizeCompanyAsyncWithHttpInfo (string text);
         /// <summary>
         /// Search Companies
         /// </summary>
@@ -3413,6 +3455,153 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<Fundamental>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
+        }
+
+        /// <summary>
+        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>ApiResponseCompanyRecognize</returns>
+        public ApiResponseCompanyRecognize RecognizeCompany (string text)
+        {
+             ApiResponse<ApiResponseCompanyRecognize> localVarResponse = RecognizeCompanyWithHttpInfo(text);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>ApiResponse of ApiResponseCompanyRecognize</returns>
+        
+        
+        public ApiResponse< ApiResponseCompanyRecognize > RecognizeCompanyWithHttpInfo (string text)
+        {
+            // verify the required parameter 'text' is set
+            if (text == null)
+                throw new ApiException(400, "Missing required parameter 'text' when calling CompanyApi->RecognizeCompany");
+
+            var localVarPath = "/companies/recognize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (text != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "text", text)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyRecognize>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCompanyRecognize) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyRecognize)));
+        }
+
+        /// <summary>
+        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>Task of ApiResponseCompanyRecognize</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyRecognize> RecognizeCompanyAsync (string text)
+        {
+             ApiResponse<ApiResponseCompanyRecognize> localVarResponse = await RecognizeCompanyAsyncWithHttpInfo(text);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="text">The text sent to the Thea API to analyze</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyRecognize)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyRecognize>> RecognizeCompanyAsyncWithHttpInfo (string text)
+        {
+            // verify the required parameter 'text' is set
+            if (text == null)
+                throw new ApiException(400, "Missing required parameter 'text' when calling CompanyApi->RecognizeCompany");
+
+            var localVarPath = "/companies/recognize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (text != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "text", text)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyRecognize>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseCompanyRecognize) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyRecognize)));
         }
 
         /// <summary>

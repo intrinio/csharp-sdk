@@ -275,6 +275,18 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test RecognizeCompany
+        /// </summary>
+        [Test]
+        public void RecognizeCompanyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string text = null;
+            //var response = instance.RecognizeCompany(text);
+            //Assert.IsInstanceOf<ApiResponseCompanyRecognize> (response, "response is ApiResponseCompanyRecognize");
+        }
+        
+        /// <summary>
         /// Test SearchCompanies
         /// </summary>
         [Test]

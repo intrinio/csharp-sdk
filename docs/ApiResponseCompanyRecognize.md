@@ -9,11 +9,11 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**Companies** | [**List&lt;DefinitionsCompanySummary&gt;**](DefinitionsCompanySummary.md) |  &nbsp;
+**Companies** | [**List&lt;CompanySummary&gt;**](CompanySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
 
 
-[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.DefinitionsCompanySummary)
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CompanySummary)
 
 

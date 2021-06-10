@@ -26,7 +26,7 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="ApiResponseCompanyRecognize" /> class.
         /// </summary>
         /// <param name="Companies">Companies.</param>
-        public ApiResponseCompanyRecognize(List<DefinitionsCompanySummary> Companies = default(List<DefinitionsCompanySummary>))
+        public ApiResponseCompanyRecognize(List<CompanySummary> Companies = default(List<CompanySummary>))
         {
             this.Companies = Companies;
         }
@@ -35,7 +35,7 @@ namespace Intrinio.SDK.Model
         /// Gets or Sets Companies
         /// </summary>
         [DataMember(Name="companies", EmitDefaultValue=false)]
-        public List<DefinitionsCompanySummary> Companies { get; set; }
+        public List<CompanySummary> Companies { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

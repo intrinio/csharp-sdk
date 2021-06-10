@@ -1422,7 +1422,7 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string text = text_example;
+      string text = "Apple";
       
       ApiResponseCompanyRecognize result = companyApi.RecognizeCompany(text);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1440,7 +1440,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | string| The text sent to the Thea API to analyze | [default to Apple] &nbsp;
+ **text** | string| The text sent to the Thea API to analyze |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

@@ -28,11 +28,13 @@ namespace Intrinio.SDK.Model
         /// <param name="Source">The organziation the answer data was sourced from.</param>
         /// <param name="Query">The query posed to the Thea API.</param>
         /// <param name="Answers">Answers.</param>
-        public ApiResponseCompanyAnswers(string Source = default(string), string Query = default(string), List<TheaEntityAnswer> Answers = default(List<TheaEntityAnswer>))
+        /// <param name="Companies">Companies.</param>
+        public ApiResponseCompanyAnswers(string Source = default(string), string Query = default(string), List<TheaEntityAnswer> Answers = default(List<TheaEntityAnswer>), List<CompanySummary> Companies = default(List<CompanySummary>))
         {
             this.Source = Source;
             this.Query = Query;
             this.Answers = Answers;
+            this.Companies = Companies;
         }
         
         /// <summary>
@@ -56,6 +58,12 @@ namespace Intrinio.SDK.Model
         public List<TheaEntityAnswer> Answers { get; set; }
 
         /// <summary>
+        /// Gets or Sets Companies
+        /// </summary>
+        [DataMember(Name="companies", EmitDefaultValue=false)]
+        public List<CompanySummary> Companies { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -66,6 +74,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
+            sb.Append("  Companies: ").Append(Companies).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,6 +123,11 @@ namespace Intrinio.SDK.Model
                     this.Answers == input.Answers ||
                     this.Answers != null &&
                     this.Answers.SequenceEqual(input.Answers)
+                ) && 
+                (
+                    this.Companies == input.Companies ||
+                    this.Companies != null &&
+                    this.Companies.SequenceEqual(input.Companies)
                 );
         }
 
@@ -132,6 +146,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Query.GetHashCode();
                 if (this.Answers != null)
                     hashCode = hashCode * 59 + this.Answers.GetHashCode();
+                if (this.Companies != null)
+                    hashCode = hashCode * 59 + this.Companies.GetHashCode();
                 return hashCode;
             }
         }

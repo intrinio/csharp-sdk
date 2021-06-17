@@ -82,6 +82,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Answers'
         }
+        /// <summary>
+        /// Test the property 'Companies'
+        /// </summary>
+        [Test]
+        public void CompaniesTest()
+        {
+            // TODO unit test for the property 'Companies'
+        }
 
     }
 

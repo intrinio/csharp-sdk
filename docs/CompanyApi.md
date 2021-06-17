@@ -368,7 +368,7 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      string query = "Where is the company headquartered?";
+      string query = "What do they believe in?";
       
       ApiResponseCompanyAnswers result = companyApi.GetCompanyAnswers(identifier, query);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

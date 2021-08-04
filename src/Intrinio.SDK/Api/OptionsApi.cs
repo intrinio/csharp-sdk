@@ -342,6 +342,29 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsStatsRealtime</returns>
         ApiResponse<ApiResponseOptionsStatsRealtime> GetOptionsStatsRealtimeWithHttpInfo (string identifier, string source = null);
+        /// <summary>
+        /// Options Unusual Activity
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsUnusualActivity</returns>
+        ApiResponseOptionsUnusualActivity GetUnusualActivity (string symbol, string source = null);
+
+        /// <summary>
+        /// Options Unusual Activity
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
+        ApiResponse<ApiResponseOptionsUnusualActivity> GetUnusualActivityWithHttpInfo (string symbol, string source = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -669,6 +692,29 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsStatsRealtime)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsStatsRealtime>> GetOptionsStatsRealtimeAsyncWithHttpInfo (string identifier, string source = null);
+        /// <summary>
+        /// Options Unusual Activity
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsUnusualActivity</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsUnusualActivity> GetUnusualActivityAsync (string symbol, string source = null);
+
+        /// <summary>
+        /// Options Unusual Activity
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityAsyncWithHttpInfo (string symbol, string source = null);
         #endregion Asynchronous Operations
     }
 
@@ -2688,6 +2734,159 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsStatsRealtime>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseOptionsStatsRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsStatsRealtime)));
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponseOptionsUnusualActivity</returns>
+        public ApiResponseOptionsUnusualActivity GetUnusualActivity (string symbol, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsUnusualActivity> localVarResponse = GetUnusualActivityWithHttpInfo(symbol, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsUnusualActivity > GetUnusualActivityWithHttpInfo (string symbol, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetUnusualActivity");
+
+            var localVarPath = "/options/unusual_activity/{symbol}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUnusualActivity", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsUnusualActivity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsUnusualActivity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsUnusualActivity)));
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsUnusualActivity</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsUnusualActivity> GetUnusualActivityAsync (string symbol, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsUnusualActivity> localVarResponse = await GetUnusualActivityAsyncWithHttpInfo(symbol, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityAsyncWithHttpInfo (string symbol, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetUnusualActivity");
+
+            var localVarPath = "/options/unusual_activity/{symbol}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUnusualActivity", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsUnusualActivity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsUnusualActivity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsUnusualActivity)));
         }
 
     }

@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "5.13.2";
+        public const string Version = "5.14.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -106,7 +106,7 @@ namespace Intrinio.SDK.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "Swagger-Codegen/5.13.2/csharp";
+            UserAgent = "Swagger-Codegen/5.14.0/csharp";
             BasePath = "https://api-v2.intrinio.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -182,7 +182,7 @@ namespace Intrinio.SDK.Client
             string dateTimeFormat = null,
             int timeout = 100000,
             bool allowRetries = true,
-            string userAgent = "Swagger-Codegen/5.13.2/csharp"
+            string userAgent = "Swagger-Codegen/5.14.0/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -421,8 +421,8 @@ namespace Intrinio.SDK.Client
             String report = "C# SDK (Intrinio.SDK) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 2.23.0\n";
-            report += "    SDK Package Version: 5.13.2\n";
+            report += "    Version of the API: 2.25.0\n";
+            report += "    SDK Package Version: 5.14.0\n";
 
             return report;
         }

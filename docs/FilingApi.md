@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllFilings**](FilingApi.md#getallfilings) | **GET** /filings | All Filings
 [**GetAllNotes**](FilingApi.md#getallnotes) | **GET** /filings/notes | All Filing Notes
+[**GetFilingAnswers**](FilingApi.md#getfilinganswers) | **GET** /filings/{identifier}/answers | Filing Answers
 [**GetFilingById**](FilingApi.md#getfilingbyid) | **GET** /filings/{id} | Lookup Filing
 [**GetFilingFundamentals**](FilingApi.md#getfilingfundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 [**GetFilingHtml**](FilingApi.md#getfilinghtml) | **GET** /filings/{identifier}/html | Filing Html
@@ -42,7 +43,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, int? pageSize = null, string nextPage = null)
+> ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
 
 #### All Filings
 
@@ -81,10 +82,11 @@ namespace Example
       DateTime? endDate = null;
       string industryCategory = null;
       string industryGroup = null;
+      bool? theaEnabled = null;
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, pageSize, nextPage);
+      ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -106,6 +108,7 @@ Name | Type | Description  | Notes
  **endDate** | DateTime?| Filed before or after the given date | [optional]  &nbsp;
  **industryCategory** | string| Return companies in the given industry category | [optional]  &nbsp;
  **industryGroup** | string| Return companies in the given industry group | [optional]  &nbsp;
+ **theaEnabled** | bool?| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -217,6 +220,95 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FilingApi)
+
+[//]: # (METHOD:GetFilingAnswers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseFilingAnswers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseFilingAnswers.md)
+
+[//]: # (OPERATION:GetFilingAnswers_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/answers)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#getfilinganswers)
+
+<a name="getfilinganswers"></a>
+## **GetFilingAnswers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFilingAnswers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseFilingAnswers GetFilingAnswers (string identifier, string query)
+
+#### Filing Answers
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetFilingAnswersExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var filingApi = new FilingApi();
+      
+      string identifier = "fil_B73xBG";
+      string query = "What do they believe in?";
+      
+      ApiResponseFilingAnswers result = filingApi.GetFilingAnswers(identifier, query);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Filing identifier |  &nbsp;
+ **query** | string| The query to ask the Thea API |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseFilingAnswers**](ApiResponseFilingAnswers.md)
 
 [//]: # (END_OPERATION)
 

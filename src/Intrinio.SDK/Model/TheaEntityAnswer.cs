@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Answer">The summarized answer returned from Thea.</param>
         /// <param name="Content">The underlying content the answer was sourced from.</param>
-        /// <param name="SourceDocuments">SourceDocuments.</param>
+        /// <param name="SourceDocuments">The documents from which Thea answer data is sourced.</param>
         public TheaEntityAnswer(string Answer = default(string), string Content = default(string), List<TheaSourceDocument> SourceDocuments = default(List<TheaSourceDocument>))
         {
             this.Answer = Answer;
@@ -50,8 +50,9 @@ namespace Intrinio.SDK.Model
         public string Content { get; set; }
 
         /// <summary>
-        /// Gets or Sets SourceDocuments
+        /// The documents from which Thea answer data is sourced
         /// </summary>
+        /// <value>The documents from which Thea answer data is sourced</value>
         [DataMember(Name="source_documents", EmitDefaultValue=false)]
         public List<TheaSourceDocument> SourceDocuments { get; set; }
 

@@ -148,9 +148,10 @@ namespace Intrinio.SDK.Test
             //string reportType = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //bool? theaEnabled = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
+            //var response = instance.GetCompanyFilings(identifier, reportType, startDate, endDate, theaEnabled, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyFilings> (response, "response is ApiResponseCompanyFilings");
         }
         

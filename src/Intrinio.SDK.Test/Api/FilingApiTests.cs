@@ -65,9 +65,10 @@ namespace Intrinio.SDK.Test
             //DateTime? endDate = null;
             //string industryCategory = null;
             //string industryGroup = null;
+            //bool? theaEnabled = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, pageSize, nextPage);
+            //var response = instance.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseFilings> (response, "response is ApiResponseFilings");
         }
         
@@ -88,6 +89,19 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //var response = instance.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseFilingNotes> (response, "response is ApiResponseFilingNotes");
+        }
+        
+        /// <summary>
+        /// Test GetFilingAnswers
+        /// </summary>
+        [Test]
+        public void GetFilingAnswersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string query = null;
+            //var response = instance.GetFilingAnswers(identifier, query);
+            //Assert.IsInstanceOf<ApiResponseFilingAnswers> (response, "response is ApiResponseFilingAnswers");
         }
         
         /// <summary>

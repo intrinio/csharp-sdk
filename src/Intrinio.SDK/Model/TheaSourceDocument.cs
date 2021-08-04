@@ -27,7 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Id">The unique id for the Thea source document.</param>
         /// <param name="Tags">Entity identifying tags associated with the source document.</param>
-        public TheaSourceDocument(string Id = default(string), List<TheaSourceDocumentTags> Tags = default(List<TheaSourceDocumentTags>))
+        public TheaSourceDocument(string Id = default(string), List<Object> Tags = default(List<Object>))
         {
             this.Id = Id;
             this.Tags = Tags;
@@ -45,7 +45,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>Entity identifying tags associated with the source document</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
-        public List<TheaSourceDocumentTags> Tags { get; set; }
+        public List<Object> Tags { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -231,6 +231,19 @@ namespace Intrinio.SDK.Test
             //Assert.IsInstanceOf<ApiResponseOptionsStatsRealtime> (response, "response is ApiResponseOptionsStatsRealtime");
         }
         
+        /// <summary>
+        /// Test GetUnusualActivity
+        /// </summary>
+        [Test]
+        public void GetUnusualActivityTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //string source = null;
+            //var response = instance.GetUnusualActivity(symbol, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
+        }
+        
     }
 
 }

@@ -17,35 +17,26 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// TheaSourceDocumentTags
+    /// ApiResponseOptionsUnusualActivity
     /// </summary>
     [DataContract]
-    public partial class TheaSourceDocumentTags :  IEquatable<TheaSourceDocumentTags>, IValidatableObject
+    public partial class ApiResponseOptionsUnusualActivity :  IEquatable<ApiResponseOptionsUnusualActivity>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TheaSourceDocumentTags" /> class.
+        /// Initializes a new instance of the <see cref="ApiResponseOptionsUnusualActivity" /> class.
         /// </summary>
-        /// <param name="Key">Defintes whether the tag is a key or a value.</param>
-        /// <param name="Value">The value of the tag.</param>
-        public TheaSourceDocumentTags(string Key = default(string), string Value = default(string))
+        /// <param name="Trades">A list of unusual trades for a given company identifier.</param>
+        public ApiResponseOptionsUnusualActivity(List<OptionUnusualTrade> Trades = default(List<OptionUnusualTrade>))
         {
-            this.Key = Key;
-            this.Value = Value;
+            this.Trades = Trades;
         }
         
         /// <summary>
-        /// Defintes whether the tag is a key or a value
+        /// A list of unusual trades for a given company identifier
         /// </summary>
-        /// <value>Defintes whether the tag is a key or a value</value>
-        [DataMember(Name="key", EmitDefaultValue=false)]
-        public string Key { get; set; }
-
-        /// <summary>
-        /// The value of the tag
-        /// </summary>
-        /// <value>The value of the tag</value>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
+        /// <value>A list of unusual trades for a given company identifier</value>
+        [DataMember(Name="trades", EmitDefaultValue=false)]
+        public List<OptionUnusualTrade> Trades { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,9 +45,8 @@ namespace Intrinio.SDK.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TheaSourceDocumentTags {\n");
-            sb.Append("  Key: ").Append(Key).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("class ApiResponseOptionsUnusualActivity {\n");
+            sb.Append("  Trades: ").Append(Trades).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,29 +67,24 @@ namespace Intrinio.SDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TheaSourceDocumentTags);
+            return this.Equals(input as ApiResponseOptionsUnusualActivity);
         }
 
         /// <summary>
-        /// Returns true if TheaSourceDocumentTags instances are equal
+        /// Returns true if ApiResponseOptionsUnusualActivity instances are equal
         /// </summary>
-        /// <param name="input">Instance of TheaSourceDocumentTags to be compared</param>
+        /// <param name="input">Instance of ApiResponseOptionsUnusualActivity to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TheaSourceDocumentTags input)
+        public bool Equals(ApiResponseOptionsUnusualActivity input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Key == input.Key ||
-                    (this.Key != null &&
-                    this.Key.Equals(input.Key))
-                ) && 
-                (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
+                    this.Trades == input.Trades ||
+                    this.Trades != null &&
+                    this.Trades.SequenceEqual(input.Trades)
                 );
         }
 
@@ -112,10 +97,8 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Key != null)
-                    hashCode = hashCode * 59 + this.Key.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
+                if (this.Trades != null)
+                    hashCode = hashCode * 59 + this.Trades.GetHashCode();
                 return hashCode;
             }
         }

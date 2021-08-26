@@ -32,10 +32,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanies</returns>
-        ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
+        ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Companies
@@ -52,10 +53,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
-        ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All News
         /// </summary>
@@ -528,10 +530,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanies</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Companies
@@ -548,10 +551,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All News
         /// </summary>
@@ -1119,12 +1123,13 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanies</returns>
-        public ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanies> localVarResponse = GetAllCompaniesWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = GetAllCompaniesWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1140,12 +1145,13 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
         
         
-        public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -1178,6 +1184,7 @@ namespace Intrinio.SDK.Api
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
             if (hasFundamentals != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_fundamentals", hasFundamentals)); // query parameter
             if (hasStockPrices != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_stock_prices", hasStockPrices)); // query parameter
+            if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -1217,12 +1224,13 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanies</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanies> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1239,10 +1247,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
+        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -1275,6 +1284,7 @@ namespace Intrinio.SDK.Api
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
             if (hasFundamentals != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_fundamentals", hasFundamentals)); // query parameter
             if (hasStockPrices != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_stock_prices", hasStockPrices)); // query parameter
+            if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 

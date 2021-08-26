@@ -23,51 +23,24 @@ namespace Intrinio.SDK.Model
     public partial class OptionUnusualTrade :  IEquatable<OptionUnusualTrade>, IValidatableObject
     {
         /// <summary>
-        /// The type of Option (put or call)
-        /// </summary>
-        /// <value>The type of Option (put or call)</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ContractTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Put for value: put
-            /// </summary>
-            [EnumMember(Value = "put")]
-            Put = 1,
-            
-            /// <summary>
-            /// Enum Call for value: call
-            /// </summary>
-            [EnumMember(Value = "call")]
-            Call = 2
-        }
-
-        /// <summary>
-        /// The type of Option (put or call)
-        /// </summary>
-        /// <value>The type of Option (put or call)</value>
-        [DataMember(Name="contract_type", EmitDefaultValue=false)]
-        public ContractTypeEnum? ContractType { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="OptionUnusualTrade" /> class.
         /// </summary>
         /// <param name="Symbol">The underlying option security symbol for the trade.</param>
         /// <param name="Timestamp">The UTC timestamp of order placement.</param>
         /// <param name="Type">The type of unusual trade.</param>
-        /// <param name="TotalValue">The aggregated value of all option contract premiums included in the trade.</param>
-        /// <param name="ContractType">The type of Option (put or call).</param>
-        /// <param name="ContractExpiration">The expiration date for the options contract.</param>
-        /// <param name="ContractStrike">The strike price of the option contract.</param>
-        public OptionUnusualTrade(string Symbol = default(string), DateTime? Timestamp = default(DateTime?), string Type = default(string), decimal? TotalValue = default(decimal?), ContractTypeEnum? ContractType = default(ContractTypeEnum?), DateTime? ContractExpiration = default(DateTime?), decimal? ContractStrike = default(decimal?))
+        /// <param name="TotalValue">The aggregated value of all option contract premiums included in the trade\\.</param>
+        /// <param name="TotalSize">The total number of contracts involved in a single transaction.</param>
+        /// <param name="AveragePrice">The average premium paid per option contract.</param>
+        /// <param name="Contract">Contract.</param>
+        public OptionUnusualTrade(string Symbol = default(string), DateTime? Timestamp = default(DateTime?), string Type = default(string), decimal? TotalValue = default(decimal?), decimal? TotalSize = default(decimal?), decimal? AveragePrice = default(decimal?), string Contract = default(string))
         {
             this.Symbol = Symbol;
             this.Timestamp = Timestamp;
             this.Type = Type;
             this.TotalValue = TotalValue;
-            this.ContractType = ContractType;
-            this.ContractExpiration = ContractExpiration;
-            this.ContractStrike = ContractStrike;
+            this.TotalSize = TotalSize;
+            this.AveragePrice = AveragePrice;
+            this.Contract = Contract;
         }
         
         /// <summary>
@@ -93,27 +66,31 @@ namespace Intrinio.SDK.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// The aggregated value of all option contract premiums included in the trade
+        /// The aggregated value of all option contract premiums included in the trade\\
         /// </summary>
-        /// <value>The aggregated value of all option contract premiums included in the trade</value>
+        /// <value>The aggregated value of all option contract premiums included in the trade\\</value>
         [DataMember(Name="total_value", EmitDefaultValue=false)]
         public decimal? TotalValue { get; set; }
 
+        /// <summary>
+        /// The total number of contracts involved in a single transaction
+        /// </summary>
+        /// <value>The total number of contracts involved in a single transaction</value>
+        [DataMember(Name="total_size", EmitDefaultValue=false)]
+        public decimal? TotalSize { get; set; }
 
         /// <summary>
-        /// The expiration date for the options contract
+        /// The average premium paid per option contract
         /// </summary>
-        /// <value>The expiration date for the options contract</value>
-        [DataMember(Name="contract_expiration", EmitDefaultValue=false)]
-        [JsonConverter(typeof(SwaggerDateConverter))]
-        public DateTime? ContractExpiration { get; set; }
+        /// <value>The average premium paid per option contract</value>
+        [DataMember(Name="average_price", EmitDefaultValue=false)]
+        public decimal? AveragePrice { get; set; }
 
         /// <summary>
-        /// The strike price of the option contract
+        /// Gets or Sets Contract
         /// </summary>
-        /// <value>The strike price of the option contract</value>
-        [DataMember(Name="contract_strike", EmitDefaultValue=false)]
-        public decimal? ContractStrike { get; set; }
+        [DataMember(Name="contract", EmitDefaultValue=false)]
+        public string Contract { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -127,9 +104,9 @@ namespace Intrinio.SDK.Model
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  TotalValue: ").Append(TotalValue).Append("\n");
-            sb.Append("  ContractType: ").Append(ContractType).Append("\n");
-            sb.Append("  ContractExpiration: ").Append(ContractExpiration).Append("\n");
-            sb.Append("  ContractStrike: ").Append(ContractStrike).Append("\n");
+            sb.Append("  TotalSize: ").Append(TotalSize).Append("\n");
+            sb.Append("  AveragePrice: ").Append(AveragePrice).Append("\n");
+            sb.Append("  Contract: ").Append(Contract).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -185,19 +162,19 @@ namespace Intrinio.SDK.Model
                     this.TotalValue.Equals(input.TotalValue))
                 ) && 
                 (
-                    this.ContractType == input.ContractType ||
-                    (this.ContractType != null &&
-                    this.ContractType.Equals(input.ContractType))
+                    this.TotalSize == input.TotalSize ||
+                    (this.TotalSize != null &&
+                    this.TotalSize.Equals(input.TotalSize))
                 ) && 
                 (
-                    this.ContractExpiration == input.ContractExpiration ||
-                    (this.ContractExpiration != null &&
-                    this.ContractExpiration.Equals(input.ContractExpiration))
+                    this.AveragePrice == input.AveragePrice ||
+                    (this.AveragePrice != null &&
+                    this.AveragePrice.Equals(input.AveragePrice))
                 ) && 
                 (
-                    this.ContractStrike == input.ContractStrike ||
-                    (this.ContractStrike != null &&
-                    this.ContractStrike.Equals(input.ContractStrike))
+                    this.Contract == input.Contract ||
+                    (this.Contract != null &&
+                    this.Contract.Equals(input.Contract))
                 );
         }
 
@@ -218,12 +195,12 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.TotalValue != null)
                     hashCode = hashCode * 59 + this.TotalValue.GetHashCode();
-                if (this.ContractType != null)
-                    hashCode = hashCode * 59 + this.ContractType.GetHashCode();
-                if (this.ContractExpiration != null)
-                    hashCode = hashCode * 59 + this.ContractExpiration.GetHashCode();
-                if (this.ContractStrike != null)
-                    hashCode = hashCode * 59 + this.ContractStrike.GetHashCode();
+                if (this.TotalSize != null)
+                    hashCode = hashCode * 59 + this.TotalSize.GetHashCode();
+                if (this.AveragePrice != null)
+                    hashCode = hashCode * 59 + this.AveragePrice.GetHashCode();
+                if (this.Contract != null)
+                    hashCode = hashCode * 59 + this.Contract.GetHashCode();
                 return hashCode;
             }
         }

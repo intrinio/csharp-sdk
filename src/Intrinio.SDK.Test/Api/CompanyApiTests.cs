@@ -67,9 +67,10 @@ namespace Intrinio.SDK.Test
             //string industryGroup = null;
             //bool? hasFundamentals = null;
             //bool? hasStockPrices = null;
+            //bool? theaEnabled = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
+            //var response = instance.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanies> (response, "response is ApiResponseCompanies");
         }
         

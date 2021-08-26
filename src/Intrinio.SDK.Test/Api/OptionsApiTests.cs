@@ -79,6 +79,19 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionStrikesRealtime
+        /// </summary>
+        [Test]
+        public void GetOptionStrikesRealtimeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //decimal? strike = null;
+            //var response = instance.GetOptionStrikesRealtime(symbol, strike);
+            //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
+        }
+        
+        /// <summary>
         /// Test GetOptions
         /// </summary>
         [Test]
@@ -241,6 +254,18 @@ namespace Intrinio.SDK.Test
             //string symbol = null;
             //string source = null;
             //var response = instance.GetUnusualActivity(symbol, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
+        }
+        
+        /// <summary>
+        /// Test GetUnusualActivityUniversal
+        /// </summary>
+        [Test]
+        public void GetUnusualActivityUniversalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //var response = instance.GetUnusualActivityUniversal(source);
             //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
         }
         

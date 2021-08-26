@@ -50,7 +50,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
+> ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
 
 #### All Companies
 
@@ -91,10 +91,11 @@ namespace Example
       string industryGroup = null;
       bool? hasFundamentals = true;
       bool? hasStockPrices = true;
+      bool? theaEnabled = null;
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
+      ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -118,6 +119,7 @@ Name | Type | Description  | Notes
  **industryGroup** | string| Return companies in the given industry group | [optional]  &nbsp;
  **hasFundamentals** | bool?| Return only companies that have fundamentals when true | [optional]  &nbsp;
  **hasStockPrices** | bool?| Return only companies that have stock prices when true | [optional]  &nbsp;
+ **theaEnabled** | bool?| Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

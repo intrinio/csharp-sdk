@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllOptionsTickers**](OptionsApi.md#getalloptionstickers) | **GET** /options/tickers | Options Tickers
 [**GetOptionExpirationsRealtime**](OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Option Expirations Realtime
+[**GetOptionStrikesRealtime**](OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
 [**GetOptions**](OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
 [**GetOptionsBySymbolRealtime**](OptionsApi.md#getoptionsbysymbolrealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 [**GetOptionsChain**](OptionsApi.md#getoptionschain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
@@ -16,6 +17,7 @@ Method | HTTP request | Description
 [**GetOptionsPricesRealtime**](OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**GetOptionsStatsRealtime**](OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 [**GetUnusualActivity**](OptionsApi.md#getunusualactivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
+[**GetUnusualActivityUniversal**](OptionsApi.md#getunusualactivityuniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
 
 
 
@@ -193,6 +195,96 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionStrikesRealtime)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsChainRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsChainRealtime.md)
+
+[//]: # (OPERATION:GetOptionStrikesRealtime_v2)
+
+[//]: # (ENDPOINT:/options/strikes/{symbol}/{strike}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionstrikesrealtime)
+
+<a name="getoptionstrikesrealtime"></a>
+## **GetOptionStrikesRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionStrikesRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike)
+
+#### Option Strikes Realtime
+
+Returns all realtime options contracts and their prices for the given symbol and strike.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionStrikesRealtimeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "MSFT";
+      decimal? strike = 95;
+      
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **strike** | decimal?| The strike price of the option contract. This will return options contracts with strike price equal to this price. |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsChainRealtime**](ApiResponseOptionsChainRealtime.md)
 
 [//]: # (END_OPERATION)
 
@@ -1158,6 +1250,94 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetUnusualActivityUniversal)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:GetUnusualActivityUniversal_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getunusualactivityuniversal)
+
+<a name="getunusualactivityuniversal"></a>
+## **GetUnusualActivityUniversal**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetUnusualActivityUniversal_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity GetUnusualActivityUniversal (string source = null)
+
+#### Options Unusual Activity Universal
+
+Returns nusual trades for all underlying security symbols.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetUnusualActivityUniversalExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string source = null;
+      
+      ApiResponseOptionsUnusualActivity result = optionsApi.GetUnusualActivityUniversal(source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
 <br/>
 

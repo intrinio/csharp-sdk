@@ -91,28 +91,28 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'TotalValue'
         }
         /// <summary>
-        /// Test the property 'ContractType'
+        /// Test the property 'TotalSize'
         /// </summary>
         [Test]
-        public void ContractTypeTest()
+        public void TotalSizeTest()
         {
-            // TODO unit test for the property 'ContractType'
+            // TODO unit test for the property 'TotalSize'
         }
         /// <summary>
-        /// Test the property 'ContractExpiration'
+        /// Test the property 'AveragePrice'
         /// </summary>
         [Test]
-        public void ContractExpirationTest()
+        public void AveragePriceTest()
         {
-            // TODO unit test for the property 'ContractExpiration'
+            // TODO unit test for the property 'AveragePrice'
         }
         /// <summary>
-        /// Test the property 'ContractStrike'
+        /// Test the property 'Contract'
         /// </summary>
         [Test]
-        public void ContractStrikeTest()
+        public void ContractTest()
         {
-            // TODO unit test for the property 'ContractStrike'
+            // TODO unit test for the property 'Contract'
         }
 
     }

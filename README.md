@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.25.6
-- Package version: 5.15.0
+- API version: 2.26.1
+- Package version: 5.16.0
 
 
 <a name="frameworks-supported"></a>
@@ -202,10 +202,12 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptions**](docs/OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
 *OptionsApi* | [**GetOptionsBySymbolRealtime**](docs/OptionsApi.md#getoptionsbysymbolrealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 *OptionsApi* | [**GetOptionsChain**](docs/OptionsApi.md#getoptionschain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
+*OptionsApi* | [**GetOptionsChainEod**](docs/OptionsApi.md#getoptionschaineod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 *OptionsApi* | [**GetOptionsChainRealtime**](docs/OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *OptionsApi* | [**GetOptionsExpirations**](docs/OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 *OptionsApi* | [**GetOptionsPrices**](docs/OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 *OptionsApi* | [**GetOptionsPricesBatchRealtime**](docs/OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
+*OptionsApi* | [**GetOptionsPricesEod**](docs/OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
 *OptionsApi* | [**GetOptionsPricesRealtime**](docs/OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 *OptionsApi* | [**GetOptionsStatsRealtime**](docs/OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 *OptionsApi* | [**GetUnusualActivity**](docs/OptionsApi.md#getunusualactivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
@@ -355,10 +357,12 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseOptionPrices](docs/ApiResponseOptionPrices.md)
  - [Model.ApiResponseOptions](docs/ApiResponseOptions.md)
  - [Model.ApiResponseOptionsChain](docs/ApiResponseOptionsChain.md)
+ - [Model.ApiResponseOptionsChainEod](docs/ApiResponseOptionsChainEod.md)
  - [Model.ApiResponseOptionsChainRealtime](docs/ApiResponseOptionsChainRealtime.md)
  - [Model.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
  - [Model.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
  - [Model.ApiResponseOptionsPricesBatchRealtime](docs/ApiResponseOptionsPricesBatchRealtime.md)
+ - [Model.ApiResponseOptionsPricesEod](docs/ApiResponseOptionsPricesEod.md)
  - [Model.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
  - [Model.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
  - [Model.ApiResponseOptionsTickers](docs/ApiResponseOptionsTickers.md)
@@ -493,11 +497,14 @@ Class | Method | HTTP request | Description
  - [Model.OnBalanceVolumeTechnicalValue](docs/OnBalanceVolumeTechnicalValue.md)
  - [Model.Option](docs/Option.md)
  - [Model.OptionChain](docs/OptionChain.md)
+ - [Model.OptionChainEod](docs/OptionChainEod.md)
  - [Model.OptionChainRealtime](docs/OptionChainRealtime.md)
  - [Model.OptionContractsList](docs/OptionContractsList.md)
+ - [Model.OptionEod](docs/OptionEod.md)
  - [Model.OptionFactorsRealtime](docs/OptionFactorsRealtime.md)
  - [Model.OptionPrice](docs/OptionPrice.md)
  - [Model.OptionPriceBatchRealtime](docs/OptionPriceBatchRealtime.md)
+ - [Model.OptionPriceEod](docs/OptionPriceEod.md)
  - [Model.OptionPriceRealtime](docs/OptionPriceRealtime.md)
  - [Model.OptionRealtime](docs/OptionRealtime.md)
  - [Model.OptionStatsRealtime](docs/OptionStatsRealtime.md)

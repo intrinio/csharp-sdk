@@ -153,6 +153,23 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsChainEod
+        /// </summary>
+        [Test]
+        public void GetOptionsChainEodTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //string expiration = null;
+            //string type = null;
+            //decimal? strike = null;
+            //decimal? strikeGreaterThan = null;
+            //decimal? strikeLessThan = null;
+            //var response = instance.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan);
+            //Assert.IsInstanceOf<ApiResponseOptionsChainEod> (response, "response is ApiResponseOptionsChainEod");
+        }
+        
+        /// <summary>
         /// Test GetOptionsChainRealtime
         /// </summary>
         [Test]
@@ -216,6 +233,18 @@ namespace Intrinio.SDK.Test
             //string source = null;
             //var response = instance.GetOptionsPricesBatchRealtime(body, source);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesBatchRealtime> (response, "response is ApiResponseOptionsPricesBatchRealtime");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsPricesEod
+        /// </summary>
+        [Test]
+        public void GetOptionsPricesEodTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetOptionsPricesEod(identifier);
+            //Assert.IsInstanceOf<ApiResponseOptionsPricesEod> (response, "response is ApiResponseOptionsPricesEod");
         }
         
         /// <summary>

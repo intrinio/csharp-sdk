@@ -89,6 +89,19 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetFundamentalStandardizedFinancialsDimensions
+        /// </summary>
+        [Test]
+        public void GetFundamentalStandardizedFinancialsDimensionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //string tag = null;
+            //var response = instance.GetFundamentalStandardizedFinancialsDimensions(id, tag);
+            //Assert.IsInstanceOf<ApiResponseStandardizedFinancialsDimensions> (response, "response is ApiResponseStandardizedFinancialsDimensions");
+        }
+        
+        /// <summary>
         /// Test LookupFundamental
         /// </summary>
         [Test]

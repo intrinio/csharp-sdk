@@ -23,6 +23,39 @@ namespace Intrinio.SDK.Model
     public partial class OptionUnusualTrade :  IEquatable<OptionUnusualTrade>, IValidatableObject
     {
         /// <summary>
+        /// Bullish, Bearish, or Neutral Sentiment is estimated based on whether the trade was executed at the bid, ask, or mark price.
+        /// </summary>
+        /// <value>Bullish, Bearish, or Neutral Sentiment is estimated based on whether the trade was executed at the bid, ask, or mark price.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SentimentEnum
+        {
+            
+            /// <summary>
+            /// Enum Bullish for value: bullish
+            /// </summary>
+            [EnumMember(Value = "bullish")]
+            Bullish = 1,
+            
+            /// <summary>
+            /// Enum Bearish for value: bearish
+            /// </summary>
+            [EnumMember(Value = "bearish")]
+            Bearish = 2,
+            
+            /// <summary>
+            /// Enum Neutral for value: neutral
+            /// </summary>
+            [EnumMember(Value = "neutral")]
+            Neutral = 3
+        }
+
+        /// <summary>
+        /// Bullish, Bearish, or Neutral Sentiment is estimated based on whether the trade was executed at the bid, ask, or mark price.
+        /// </summary>
+        /// <value>Bullish, Bearish, or Neutral Sentiment is estimated based on whether the trade was executed at the bid, ask, or mark price.</value>
+        [DataMember(Name="sentiment", EmitDefaultValue=false)]
+        public SentimentEnum? Sentiment { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OptionUnusualTrade" /> class.
         /// </summary>
         /// <param name="Symbol">The underlying option security symbol for the trade.</param>
@@ -31,8 +64,12 @@ namespace Intrinio.SDK.Model
         /// <param name="TotalValue">The aggregated value of all option contract premiums included in the trade\\.</param>
         /// <param name="TotalSize">The total number of contracts involved in a single transaction.</param>
         /// <param name="AveragePrice">The average premium paid per option contract.</param>
-        /// <param name="Contract">Contract.</param>
-        public OptionUnusualTrade(string Symbol = default(string), DateTime? Timestamp = default(DateTime?), string Type = default(string), decimal? TotalValue = default(decimal?), decimal? TotalSize = default(decimal?), decimal? AveragePrice = default(decimal?), string Contract = default(string))
+        /// <param name="Contract">The option contract symbol.</param>
+        /// <param name="AskAtExecution">Ask price at execution.</param>
+        /// <param name="BidAtExecution">Bid price at execution.</param>
+        /// <param name="Sentiment">Bullish, Bearish, or Neutral Sentiment is estimated based on whether the trade was executed at the bid, ask, or mark price..</param>
+        /// <param name="UnderlyingPriceAtExecution">Price of the underlying security at execution of trade.</param>
+        public OptionUnusualTrade(string Symbol = default(string), DateTime? Timestamp = default(DateTime?), string Type = default(string), decimal? TotalValue = default(decimal?), decimal? TotalSize = default(decimal?), decimal? AveragePrice = default(decimal?), string Contract = default(string), decimal? AskAtExecution = default(decimal?), decimal? BidAtExecution = default(decimal?), SentimentEnum? Sentiment = default(SentimentEnum?), decimal? UnderlyingPriceAtExecution = default(decimal?))
         {
             this.Symbol = Symbol;
             this.Timestamp = Timestamp;
@@ -41,6 +78,10 @@ namespace Intrinio.SDK.Model
             this.TotalSize = TotalSize;
             this.AveragePrice = AveragePrice;
             this.Contract = Contract;
+            this.AskAtExecution = AskAtExecution;
+            this.BidAtExecution = BidAtExecution;
+            this.Sentiment = Sentiment;
+            this.UnderlyingPriceAtExecution = UnderlyingPriceAtExecution;
         }
         
         /// <summary>
@@ -87,10 +128,33 @@ namespace Intrinio.SDK.Model
         public decimal? AveragePrice { get; set; }
 
         /// <summary>
-        /// Gets or Sets Contract
+        /// The option contract symbol
         /// </summary>
+        /// <value>The option contract symbol</value>
         [DataMember(Name="contract", EmitDefaultValue=false)]
         public string Contract { get; set; }
+
+        /// <summary>
+        /// Ask price at execution
+        /// </summary>
+        /// <value>Ask price at execution</value>
+        [DataMember(Name="ask_at_execution", EmitDefaultValue=false)]
+        public decimal? AskAtExecution { get; set; }
+
+        /// <summary>
+        /// Bid price at execution
+        /// </summary>
+        /// <value>Bid price at execution</value>
+        [DataMember(Name="bid_at_execution", EmitDefaultValue=false)]
+        public decimal? BidAtExecution { get; set; }
+
+
+        /// <summary>
+        /// Price of the underlying security at execution of trade
+        /// </summary>
+        /// <value>Price of the underlying security at execution of trade</value>
+        [DataMember(Name="underlying_price_at_execution", EmitDefaultValue=false)]
+        public decimal? UnderlyingPriceAtExecution { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -107,6 +171,10 @@ namespace Intrinio.SDK.Model
             sb.Append("  TotalSize: ").Append(TotalSize).Append("\n");
             sb.Append("  AveragePrice: ").Append(AveragePrice).Append("\n");
             sb.Append("  Contract: ").Append(Contract).Append("\n");
+            sb.Append("  AskAtExecution: ").Append(AskAtExecution).Append("\n");
+            sb.Append("  BidAtExecution: ").Append(BidAtExecution).Append("\n");
+            sb.Append("  Sentiment: ").Append(Sentiment).Append("\n");
+            sb.Append("  UnderlyingPriceAtExecution: ").Append(UnderlyingPriceAtExecution).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,6 +243,26 @@ namespace Intrinio.SDK.Model
                     this.Contract == input.Contract ||
                     (this.Contract != null &&
                     this.Contract.Equals(input.Contract))
+                ) && 
+                (
+                    this.AskAtExecution == input.AskAtExecution ||
+                    (this.AskAtExecution != null &&
+                    this.AskAtExecution.Equals(input.AskAtExecution))
+                ) && 
+                (
+                    this.BidAtExecution == input.BidAtExecution ||
+                    (this.BidAtExecution != null &&
+                    this.BidAtExecution.Equals(input.BidAtExecution))
+                ) && 
+                (
+                    this.Sentiment == input.Sentiment ||
+                    (this.Sentiment != null &&
+                    this.Sentiment.Equals(input.Sentiment))
+                ) && 
+                (
+                    this.UnderlyingPriceAtExecution == input.UnderlyingPriceAtExecution ||
+                    (this.UnderlyingPriceAtExecution != null &&
+                    this.UnderlyingPriceAtExecution.Equals(input.UnderlyingPriceAtExecution))
                 );
         }
 
@@ -201,6 +289,14 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.AveragePrice.GetHashCode();
                 if (this.Contract != null)
                     hashCode = hashCode * 59 + this.Contract.GetHashCode();
+                if (this.AskAtExecution != null)
+                    hashCode = hashCode * 59 + this.AskAtExecution.GetHashCode();
+                if (this.BidAtExecution != null)
+                    hashCode = hashCode * 59 + this.BidAtExecution.GetHashCode();
+                if (this.Sentiment != null)
+                    hashCode = hashCode * 59 + this.Sentiment.GetHashCode();
+                if (this.UnderlyingPriceAtExecution != null)
+                    hashCode = hashCode * 59 + this.UnderlyingPriceAtExecution.GetHashCode();
                 return hashCode;
             }
         }

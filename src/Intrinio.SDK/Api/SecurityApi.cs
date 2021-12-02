@@ -1466,7 +1466,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings Snapshot
         /// </summary>
         /// <remarks>
-        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1478,7 +1478,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings Snapshot
         /// </summary>
         /// <remarks>
-        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1489,7 +1489,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1502,7 +1502,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1514,7 +1514,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1527,7 +1527,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3038,7 +3038,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings Snapshot
         /// </summary>
         /// <remarks>
-        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3050,7 +3050,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings Snapshot
         /// </summary>
         /// <remarks>
-        /// Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3061,7 +3061,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3074,7 +3074,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3086,7 +3086,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3099,7 +3099,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises for Security
         /// </summary>
         /// <remarks>
-        /// Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11423,7 +11423,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// Zacks Analyst Ratings Snapshot This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11436,7 +11436,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// Zacks Analyst Ratings Snapshot This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11500,7 +11500,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// Zacks Analyst Ratings Snapshot This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11514,7 +11514,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Snapshot Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+        /// Zacks Analyst Ratings Snapshot This database offers current and historical consensus analyst recommendation snapshots for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11576,7 +11576,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks EPS Surprises for Security Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11590,7 +11590,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks EPS Surprises for Security Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11656,7 +11656,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks EPS Surprises for Security Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11671,7 +11671,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises for Security Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks EPS Surprises for Security Returns historical estimated and actual earnings, guidance, and announcement dates for a specified symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11735,7 +11735,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks Sales Surprises for Security This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11749,7 +11749,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks Sales Surprises for Security This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11815,7 +11815,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks Sales Surprises for Security This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11830,7 +11830,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises for Security Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+        /// Zacks Sales Surprises for Security This database returns historical estimated and actual sales, guidance, and announcement dates for a specified US or Canadian company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>

@@ -81,6 +81,29 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStandardizedFinancials</returns>
         ApiResponse<ApiResponseStandardizedFinancials> GetFundamentalStandardizedFinancialsWithHttpInfo (string id);
         /// <summary>
+        /// Standardized Financials Dimensions
+        /// </summary>
+        /// <remarks>
+        /// Returns as reported dimensionality of a data tag
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>ApiResponseStandardizedFinancialsDimensions</returns>
+        ApiResponseStandardizedFinancialsDimensions GetFundamentalStandardizedFinancialsDimensions (string id, string tag);
+
+        /// <summary>
+        /// Standardized Financials Dimensions
+        /// </summary>
+        /// <remarks>
+        /// Returns as reported dimensionality of a data tag
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>ApiResponse of ApiResponseStandardizedFinancialsDimensions</returns>
+        ApiResponse<ApiResponseStandardizedFinancialsDimensions> GetFundamentalStandardizedFinancialsDimensionsWithHttpInfo (string id, string tag);
+        /// <summary>
         /// Lookup Fundamental
         /// </summary>
         /// <remarks>
@@ -172,6 +195,29 @@ namespace Intrinio.SDK.Api
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
         /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancials)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancials>> GetFundamentalStandardizedFinancialsAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Standardized Financials Dimensions
+        /// </summary>
+        /// <remarks>
+        /// Returns as reported dimensionality of a data tag
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>Task of ApiResponseStandardizedFinancialsDimensions</returns>
+        System.Threading.Tasks.Task<ApiResponseStandardizedFinancialsDimensions> GetFundamentalStandardizedFinancialsDimensionsAsync (string id, string tag);
+
+        /// <summary>
+        /// Standardized Financials Dimensions
+        /// </summary>
+        /// <remarks>
+        /// Returns as reported dimensionality of a data tag
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancialsDimensions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancialsDimensions>> GetFundamentalStandardizedFinancialsDimensionsAsyncWithHttpInfo (string id, string tag);
         /// <summary>
         /// Lookup Fundamental
         /// </summary>
@@ -738,6 +784,165 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseStandardizedFinancials>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseStandardizedFinancials) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStandardizedFinancials)));
+        }
+
+        /// <summary>
+        /// Standardized Financials Dimensions Returns as reported dimensionality of a data tag
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>ApiResponseStandardizedFinancialsDimensions</returns>
+        public ApiResponseStandardizedFinancialsDimensions GetFundamentalStandardizedFinancialsDimensions (string id, string tag)
+        {
+             ApiResponse<ApiResponseStandardizedFinancialsDimensions> localVarResponse = GetFundamentalStandardizedFinancialsDimensionsWithHttpInfo(id, tag);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Standardized Financials Dimensions Returns as reported dimensionality of a data tag
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>ApiResponse of ApiResponseStandardizedFinancialsDimensions</returns>
+        
+        
+        public ApiResponse< ApiResponseStandardizedFinancialsDimensions > GetFundamentalStandardizedFinancialsDimensionsWithHttpInfo (string id, string tag)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FundamentalsApi->GetFundamentalStandardizedFinancialsDimensions");
+            // verify the required parameter 'tag' is set
+            if (tag == null)
+                throw new ApiException(400, "Missing required parameter 'tag' when calling FundamentalsApi->GetFundamentalStandardizedFinancialsDimensions");
+
+            var localVarPath = "/fundamentals/{id}/standardized_financials/dimensions/{tag}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (tag != null) localVarPathParams.Add("tag", Configuration.ApiClient.ParameterToString(tag)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFundamentalStandardizedFinancialsDimensions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStandardizedFinancialsDimensions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseStandardizedFinancialsDimensions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStandardizedFinancialsDimensions)));
+        }
+
+        /// <summary>
+        /// Standardized Financials Dimensions Returns as reported dimensionality of a data tag
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>Task of ApiResponseStandardizedFinancialsDimensions</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStandardizedFinancialsDimensions> GetFundamentalStandardizedFinancialsDimensionsAsync (string id, string tag)
+        {
+             ApiResponse<ApiResponseStandardizedFinancialsDimensions> localVarResponse = await GetFundamentalStandardizedFinancialsDimensionsAsyncWithHttpInfo(id, tag);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Standardized Financials Dimensions Returns as reported dimensionality of a data tag
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancialsDimensions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancialsDimensions>> GetFundamentalStandardizedFinancialsDimensionsAsyncWithHttpInfo (string id, string tag)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FundamentalsApi->GetFundamentalStandardizedFinancialsDimensions");
+            // verify the required parameter 'tag' is set
+            if (tag == null)
+                throw new ApiException(400, "Missing required parameter 'tag' when calling FundamentalsApi->GetFundamentalStandardizedFinancialsDimensions");
+
+            var localVarPath = "/fundamentals/{id}/standardized_financials/dimensions/{tag}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (tag != null) localVarPathParams.Add("tag", Configuration.ApiClient.ParameterToString(tag)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFundamentalStandardizedFinancialsDimensions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStandardizedFinancialsDimensions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseStandardizedFinancialsDimensions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStandardizedFinancialsDimensions)));
         }
 
         /// <summary>

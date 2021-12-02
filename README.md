@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.26.1
-- Package version: 5.16.0
+- API version: 2.26.6
+- Package version: 5.17.0
 
 
 <a name="frameworks-supported"></a>
@@ -172,6 +172,7 @@ Class | Method | HTTP request | Description
 *FundamentalsApi* | [**GetFundamentalById**](docs/FundamentalsApi.md#getfundamentalbyid) | **GET** /fundamentals/{id} | Fundamental by ID
 *FundamentalsApi* | [**GetFundamentalReportedFinancials**](docs/FundamentalsApi.md#getfundamentalreportedfinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 *FundamentalsApi* | [**GetFundamentalStandardizedFinancials**](docs/FundamentalsApi.md#getfundamentalstandardizedfinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
+*FundamentalsApi* | [**GetFundamentalStandardizedFinancialsDimensions**](docs/FundamentalsApi.md#getfundamentalstandardizedfinancialsdimensions) | **GET** /fundamentals/{id}/standardized_financials/dimensions/{tag} | Standardized Financials Dimensions
 *FundamentalsApi* | [**LookupFundamental**](docs/FundamentalsApi.md#lookupfundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 *HistoricalDataApi* | [**GetHistoricalData**](docs/HistoricalDataApi.md#gethistoricaldata) | **GET** /historical_data/{identifier}/{tag} | Historical Data
 *IndexApi* | [**GetAllEconomicIndices**](docs/IndexApi.md#getalleconomicindices) | **GET** /indices/economic | All Economic Indices
@@ -418,6 +419,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSecurityZacksEPSSurprises](docs/ApiResponseSecurityZacksEPSSurprises.md)
  - [Model.ApiResponseSecurityZacksSalesSurprises](docs/ApiResponseSecurityZacksSalesSurprises.md)
  - [Model.ApiResponseStandardizedFinancials](docs/ApiResponseStandardizedFinancials.md)
+ - [Model.ApiResponseStandardizedFinancialsDimensions](docs/ApiResponseStandardizedFinancialsDimensions.md)
  - [Model.ApiResponseStockExchangeRealtimeStockPrices](docs/ApiResponseStockExchangeRealtimeStockPrices.md)
  - [Model.ApiResponseStockExchangeSecurities](docs/ApiResponseStockExchangeSecurities.md)
  - [Model.ApiResponseStockExchangeStockPriceAdjustments](docs/ApiResponseStockExchangeStockPriceAdjustments.md)
@@ -526,6 +528,7 @@ Class | Method | HTTP request | Description
  - [Model.SecuritySummary](docs/SecuritySummary.md)
  - [Model.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)
  - [Model.StandardizedFinancial](docs/StandardizedFinancial.md)
+ - [Model.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)
  - [Model.StochasticOscillatorTechnicalValue](docs/StochasticOscillatorTechnicalValue.md)
  - [Model.StockExchange](docs/StockExchange.md)
  - [Model.StockMarketIndex](docs/StockMarketIndex.md)

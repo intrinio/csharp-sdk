@@ -114,6 +114,38 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Contract'
         }
+        /// <summary>
+        /// Test the property 'AskAtExecution'
+        /// </summary>
+        [Test]
+        public void AskAtExecutionTest()
+        {
+            // TODO unit test for the property 'AskAtExecution'
+        }
+        /// <summary>
+        /// Test the property 'BidAtExecution'
+        /// </summary>
+        [Test]
+        public void BidAtExecutionTest()
+        {
+            // TODO unit test for the property 'BidAtExecution'
+        }
+        /// <summary>
+        /// Test the property 'Sentiment'
+        /// </summary>
+        [Test]
+        public void SentimentTest()
+        {
+            // TODO unit test for the property 'Sentiment'
+        }
+        /// <summary>
+        /// Test the property 'UnderlyingPriceAtExecution'
+        /// </summary>
+        [Test]
+        public void UnderlyingPriceAtExecutionTest()
+        {
+            // TODO unit test for the property 'UnderlyingPriceAtExecution'
+        }
 
     }
 

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**GetFundamentalById**](FundamentalsApi.md#getfundamentalbyid) | **GET** /fundamentals/{id} | Fundamental by ID
 [**GetFundamentalReportedFinancials**](FundamentalsApi.md#getfundamentalreportedfinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 [**GetFundamentalStandardizedFinancials**](FundamentalsApi.md#getfundamentalstandardizedfinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
+[**GetFundamentalStandardizedFinancialsDimensions**](FundamentalsApi.md#getfundamentalstandardizedfinancialsdimensions) | **GET** /fundamentals/{id}/standardized_financials/dimensions/{tag} | Standardized Financials Dimensions
 [**LookupFundamental**](FundamentalsApi.md#lookupfundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 
 
@@ -271,6 +272,96 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FundamentalsApi)
+
+[//]: # (METHOD:GetFundamentalStandardizedFinancialsDimensions)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStandardizedFinancialsDimensions)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStandardizedFinancialsDimensions.md)
+
+[//]: # (OPERATION:GetFundamentalStandardizedFinancialsDimensions_v2)
+
+[//]: # (ENDPOINT:/fundamentals/{id}/standardized_financials/dimensions/{tag})
+
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#getfundamentalstandardizedfinancialsdimensions)
+
+<a name="getfundamentalstandardizedfinancialsdimensions"></a>
+## **GetFundamentalStandardizedFinancialsDimensions**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetFundamentalStandardizedFinancialsDimensions_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStandardizedFinancialsDimensions GetFundamentalStandardizedFinancialsDimensions (string id, string tag)
+
+#### Standardized Financials Dimensions
+
+Returns as reported dimensionality of a data tag
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetFundamentalStandardizedFinancialsDimensionsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var fundamentalsApi = new FundamentalsApi();
+      
+      string id = "AAPL-income_statement-2020-FY";
+      string tag = "ceo";
+      
+      ApiResponseStandardizedFinancialsDimensions result = fundamentalsApi.GetFundamentalStandardizedFinancialsDimensions(id, tag);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | string| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
+ **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStandardizedFinancialsDimensions**](ApiResponseStandardizedFinancialsDimensions.md)
 
 [//]: # (END_OPERATION)
 

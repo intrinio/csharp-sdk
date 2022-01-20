@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -50,7 +50,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -78,7 +78,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Estimates
         /// </summary>
         /// <remarks>
-        /// Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -97,7 +97,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Estimates
         /// </summary>
         /// <remarks>
-        /// Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -115,7 +115,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks EPS growth rates
+        /// This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -130,7 +130,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks EPS growth rates
+        /// This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -144,7 +144,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks eps surprise data for all Securities.
+        /// This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -170,7 +170,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks eps surprise data for all Securities.
+        /// This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -303,7 +303,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Long Term Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks long term growth rates
+        /// This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -316,7 +316,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Long Term Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks long term growth rates
+        /// This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -328,7 +328,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks sales surprise data for all Securities.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>
@@ -354,7 +354,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks sales surprise data for all Securities.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>
@@ -408,7 +408,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -437,7 +437,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -465,7 +465,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Estimates
         /// </summary>
         /// <remarks>
-        /// Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -484,7 +484,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Estimates
         /// </summary>
         /// <remarks>
-        /// Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -502,7 +502,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks EPS growth rates
+        /// This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -517,7 +517,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks EPS growth rates
+        /// This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -531,7 +531,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks eps surprise data for all Securities.
+        /// This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -557,7 +557,7 @@ namespace Intrinio.SDK.Api
         /// Zacks EPS Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks eps surprise data for all Securities.
+        /// This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -690,7 +690,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Long Term Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks long term growth rates
+        /// This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -703,7 +703,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Long Term Growth Rates
         /// </summary>
         /// <remarks>
-        /// Returns the latest Zacks long term growth rates
+        /// This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -715,7 +715,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks sales surprise data for all Securities.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>
@@ -741,7 +741,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Sales Surprises
         /// </summary>
         /// <remarks>
-        /// Returns Zacks sales surprise data for all Securities.
+        /// This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>
@@ -890,7 +890,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -920,7 +920,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -1015,7 +1015,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -1046,7 +1046,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -1139,7 +1139,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Estimates Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// Zacks EPS Estimates This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1159,7 +1159,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Estimates Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// Zacks EPS Estimates This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1234,7 +1234,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Estimates Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// Zacks EPS Estimates This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1255,7 +1255,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Estimates Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+        /// Zacks EPS Estimates This database offers consensus earnings estimates for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1328,7 +1328,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Growth Rates Returns the latest Zacks EPS growth rates
+        /// Zacks EPS Growth Rates This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1344,7 +1344,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Growth Rates Returns the latest Zacks EPS growth rates
+        /// Zacks EPS Growth Rates This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1411,7 +1411,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Growth Rates Returns the latest Zacks EPS growth rates
+        /// Zacks EPS Growth Rates This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1428,7 +1428,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Growth Rates Returns the latest Zacks EPS growth rates
+        /// Zacks EPS Growth Rates This database offers consensus EPS growth rate estimates, comparing company estimates to historical company estimates, industry estimates, and S&amp;P 500 index estimates.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1493,7 +1493,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises Returns Zacks eps surprise data for all Securities.
+        /// Zacks EPS Surprises This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -1520,7 +1520,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises Returns Zacks eps surprise data for all Securities.
+        /// Zacks EPS Surprises This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -1609,7 +1609,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises Returns Zacks eps surprise data for all Securities.
+        /// Zacks EPS Surprises This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -1637,7 +1637,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks EPS Surprises Returns Zacks eps surprise data for all Securities.
+        /// Zacks EPS Surprises This database returns historical estimated and actual earnings, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit EPS surprises to those on or after this date (optional)</param>
@@ -2360,7 +2360,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Long Term Growth Rates Returns the latest Zacks long term growth rates
+        /// Zacks Long Term Growth Rates This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -2374,7 +2374,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Long Term Growth Rates Returns the latest Zacks long term growth rates
+        /// Zacks Long Term Growth Rates This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -2437,7 +2437,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Long Term Growth Rates Returns the latest Zacks long term growth rates
+        /// Zacks Long Term Growth Rates This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -2452,7 +2452,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Long Term Growth Rates Returns the latest Zacks long term growth rates
+        /// Zacks Long Term Growth Rates This database offers consensus long term growth rate estimates, including insight into changes in estimates and revisions over time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) (optional)</param>
@@ -2513,7 +2513,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises Returns Zacks sales surprise data for all Securities.
+        /// Zacks Sales Surprises This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>
@@ -2540,7 +2540,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises Returns Zacks sales surprise data for all Securities.
+        /// Zacks Sales Surprises This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>
@@ -2629,7 +2629,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises Returns Zacks sales surprise data for all Securities.
+        /// Zacks Sales Surprises This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>
@@ -2657,7 +2657,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Sales Surprises Returns Zacks sales surprise data for all Securities.
+        /// Zacks Sales Surprises This database returns historical estimated and actual sales, guidance, and announcement dates for 17,000+ US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">Limit sales surprises to those on or after this date (optional)</param>

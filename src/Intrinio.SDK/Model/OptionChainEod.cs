@@ -26,11 +26,11 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="OptionChainEod" /> class.
         /// </summary>
         /// <param name="Option">Option.</param>
-        /// <param name="Price">Price.</param>
-        public OptionChainEod(OptionEod Option = default(OptionEod), OptionPriceEod Price = default(OptionPriceEod))
+        /// <param name="Prices">Prices.</param>
+        public OptionChainEod(OptionEod Option = default(OptionEod), OptionPriceEod Prices = default(OptionPriceEod))
         {
             this.Option = Option;
-            this.Price = Price;
+            this.Prices = Prices;
         }
         
         /// <summary>
@@ -40,10 +40,10 @@ namespace Intrinio.SDK.Model
         public OptionEod Option { get; set; }
 
         /// <summary>
-        /// Gets or Sets Price
+        /// Gets or Sets Prices
         /// </summary>
-        [DataMember(Name="price", EmitDefaultValue=false)]
-        public OptionPriceEod Price { get; set; }
+        [DataMember(Name="prices", EmitDefaultValue=false)]
+        public OptionPriceEod Prices { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +54,7 @@ namespace Intrinio.SDK.Model
             var sb = new StringBuilder();
             sb.Append("class OptionChainEod {\n");
             sb.Append("  Option: ").Append(Option).Append("\n");
-            sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  Prices: ").Append(Prices).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,9 +95,9 @@ namespace Intrinio.SDK.Model
                     this.Option.Equals(input.Option))
                 ) && 
                 (
-                    this.Price == input.Price ||
-                    (this.Price != null &&
-                    this.Price.Equals(input.Price))
+                    this.Prices == input.Prices ||
+                    (this.Prices != null &&
+                    this.Prices.Equals(input.Prices))
                 );
         }
 
@@ -112,8 +112,8 @@ namespace Intrinio.SDK.Model
                 int hashCode = 41;
                 if (this.Option != null)
                     hashCode = hashCode * 59 + this.Option.GetHashCode();
-                if (this.Price != null)
-                    hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.Prices != null)
+                    hashCode = hashCode * 59 + this.Prices.GetHashCode();
                 return hashCode;
             }
         }

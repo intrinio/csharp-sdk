@@ -41,7 +41,12 @@ namespace Intrinio.SDK.Model
         /// <param name="AskLow">The lowest ask over the span of the period.</param>
         /// <param name="BidHigh">The highest bid over the span of the period.</param>
         /// <param name="BidLow">The lowest bid over the span of the period.</param>
-        public OptionPriceEod(string Date = default(string), decimal? Close = default(decimal?), decimal? CloseBid = default(decimal?), decimal? CloseAsk = default(decimal?), int? Volume = default(int?), decimal? Open = default(decimal?), decimal? OpenAsk = default(decimal?), decimal? OpenBid = default(decimal?), int? OpenInterest = default(int?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Mark = default(decimal?), decimal? AskHigh = default(decimal?), decimal? AskLow = default(decimal?), decimal? BidHigh = default(decimal?), Object BidLow = default(Object))
+        /// <param name="ImpliedVolatility">The implied volatility of the contract calculated using the Black-Scholes Model..</param>
+        /// <param name="Delta">Delta represents the rate of change between the option&#39;s price and a $1 change in the underlying asset&#39;s price..</param>
+        /// <param name="Gamma">Gamma represents the rate of change between an option&#39;s delta and the underlying asset&#39;s price..</param>
+        /// <param name="Theta">Theta represents the rate of change between the option price and time, or time sensitivity - sometimes known as an option&#39;s time decay..</param>
+        /// <param name="Vega">Vega represents the rate of change between an option&#39;s value and the underlying asset&#39;s implied volatility..</param>
+        public OptionPriceEod(string Date = default(string), decimal? Close = default(decimal?), decimal? CloseBid = default(decimal?), decimal? CloseAsk = default(decimal?), int? Volume = default(int?), decimal? Open = default(decimal?), decimal? OpenAsk = default(decimal?), decimal? OpenBid = default(decimal?), int? OpenInterest = default(int?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Mark = default(decimal?), decimal? AskHigh = default(decimal?), decimal? AskLow = default(decimal?), decimal? BidHigh = default(decimal?), Object BidLow = default(Object), decimal? ImpliedVolatility = default(decimal?), decimal? Delta = default(decimal?), decimal? Gamma = default(decimal?), decimal? Theta = default(decimal?), decimal? Vega = default(decimal?))
         {
             this.Date = Date;
             this.Close = Close;
@@ -59,6 +64,11 @@ namespace Intrinio.SDK.Model
             this.AskLow = AskLow;
             this.BidHigh = BidHigh;
             this.BidLow = BidLow;
+            this.ImpliedVolatility = ImpliedVolatility;
+            this.Delta = Delta;
+            this.Gamma = Gamma;
+            this.Theta = Theta;
+            this.Vega = Vega;
         }
         
         /// <summary>
@@ -174,6 +184,41 @@ namespace Intrinio.SDK.Model
         public Object BidLow { get; set; }
 
         /// <summary>
+        /// The implied volatility of the contract calculated using the Black-Scholes Model.
+        /// </summary>
+        /// <value>The implied volatility of the contract calculated using the Black-Scholes Model.</value>
+        [DataMember(Name="implied_volatility", EmitDefaultValue=false)]
+        public decimal? ImpliedVolatility { get; set; }
+
+        /// <summary>
+        /// Delta represents the rate of change between the option&#39;s price and a $1 change in the underlying asset&#39;s price.
+        /// </summary>
+        /// <value>Delta represents the rate of change between the option&#39;s price and a $1 change in the underlying asset&#39;s price.</value>
+        [DataMember(Name="delta", EmitDefaultValue=false)]
+        public decimal? Delta { get; set; }
+
+        /// <summary>
+        /// Gamma represents the rate of change between an option&#39;s delta and the underlying asset&#39;s price.
+        /// </summary>
+        /// <value>Gamma represents the rate of change between an option&#39;s delta and the underlying asset&#39;s price.</value>
+        [DataMember(Name="gamma", EmitDefaultValue=false)]
+        public decimal? Gamma { get; set; }
+
+        /// <summary>
+        /// Theta represents the rate of change between the option price and time, or time sensitivity - sometimes known as an option&#39;s time decay.
+        /// </summary>
+        /// <value>Theta represents the rate of change between the option price and time, or time sensitivity - sometimes known as an option&#39;s time decay.</value>
+        [DataMember(Name="theta", EmitDefaultValue=false)]
+        public decimal? Theta { get; set; }
+
+        /// <summary>
+        /// Vega represents the rate of change between an option&#39;s value and the underlying asset&#39;s implied volatility.
+        /// </summary>
+        /// <value>Vega represents the rate of change between an option&#39;s value and the underlying asset&#39;s implied volatility.</value>
+        [DataMember(Name="vega", EmitDefaultValue=false)]
+        public decimal? Vega { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -197,6 +242,11 @@ namespace Intrinio.SDK.Model
             sb.Append("  AskLow: ").Append(AskLow).Append("\n");
             sb.Append("  BidHigh: ").Append(BidHigh).Append("\n");
             sb.Append("  BidLow: ").Append(BidLow).Append("\n");
+            sb.Append("  ImpliedVolatility: ").Append(ImpliedVolatility).Append("\n");
+            sb.Append("  Delta: ").Append(Delta).Append("\n");
+            sb.Append("  Gamma: ").Append(Gamma).Append("\n");
+            sb.Append("  Theta: ").Append(Theta).Append("\n");
+            sb.Append("  Vega: ").Append(Vega).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -310,6 +360,31 @@ namespace Intrinio.SDK.Model
                     this.BidLow == input.BidLow ||
                     (this.BidLow != null &&
                     this.BidLow.Equals(input.BidLow))
+                ) && 
+                (
+                    this.ImpliedVolatility == input.ImpliedVolatility ||
+                    (this.ImpliedVolatility != null &&
+                    this.ImpliedVolatility.Equals(input.ImpliedVolatility))
+                ) && 
+                (
+                    this.Delta == input.Delta ||
+                    (this.Delta != null &&
+                    this.Delta.Equals(input.Delta))
+                ) && 
+                (
+                    this.Gamma == input.Gamma ||
+                    (this.Gamma != null &&
+                    this.Gamma.Equals(input.Gamma))
+                ) && 
+                (
+                    this.Theta == input.Theta ||
+                    (this.Theta != null &&
+                    this.Theta.Equals(input.Theta))
+                ) && 
+                (
+                    this.Vega == input.Vega ||
+                    (this.Vega != null &&
+                    this.Vega.Equals(input.Vega))
                 );
         }
 
@@ -354,6 +429,16 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.BidHigh.GetHashCode();
                 if (this.BidLow != null)
                     hashCode = hashCode * 59 + this.BidLow.GetHashCode();
+                if (this.ImpliedVolatility != null)
+                    hashCode = hashCode * 59 + this.ImpliedVolatility.GetHashCode();
+                if (this.Delta != null)
+                    hashCode = hashCode * 59 + this.Delta.GetHashCode();
+                if (this.Gamma != null)
+                    hashCode = hashCode * 59 + this.Gamma.GetHashCode();
+                if (this.Theta != null)
+                    hashCode = hashCode * 59 + this.Theta.GetHashCode();
+                if (this.Vega != null)
+                    hashCode = hashCode * 59 + this.Vega.GetHashCode();
                 return hashCode;
             }
         }

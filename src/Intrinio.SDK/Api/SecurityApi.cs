@@ -1411,7 +1411,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings for Security
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1439,7 +1439,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings for Security
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2983,7 +2983,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings for Security
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3011,7 +3011,7 @@ namespace Intrinio.SDK.Api
         /// Zacks Analyst Ratings for Security
         /// </summary>
         /// <remarks>
-        /// Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11174,7 +11174,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings for Security Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings for Security This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11203,7 +11203,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings for Security Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings for Security This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11299,7 +11299,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings for Security Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings for Security This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11329,7 +11329,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Zacks Analyst Ratings for Security Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+        /// Zacks Analyst Ratings for Security This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>

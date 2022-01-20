@@ -186,6 +186,46 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'BidLow'
         }
+        /// <summary>
+        /// Test the property 'ImpliedVolatility'
+        /// </summary>
+        [Test]
+        public void ImpliedVolatilityTest()
+        {
+            // TODO unit test for the property 'ImpliedVolatility'
+        }
+        /// <summary>
+        /// Test the property 'Delta'
+        /// </summary>
+        [Test]
+        public void DeltaTest()
+        {
+            // TODO unit test for the property 'Delta'
+        }
+        /// <summary>
+        /// Test the property 'Gamma'
+        /// </summary>
+        [Test]
+        public void GammaTest()
+        {
+            // TODO unit test for the property 'Gamma'
+        }
+        /// <summary>
+        /// Test the property 'Theta'
+        /// </summary>
+        [Test]
+        public void ThetaTest()
+        {
+            // TODO unit test for the property 'Theta'
+        }
+        /// <summary>
+        /// Test the property 'Vega'
+        /// </summary>
+        [Test]
+        public void VegaTest()
+        {
+            // TODO unit test for the property 'Vega'
+        }
 
     }
 

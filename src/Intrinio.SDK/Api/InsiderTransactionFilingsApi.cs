@@ -27,9 +27,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOwnerInsiderTransactionFilings</returns>
-        ApiResponseOwnerInsiderTransactionFilings GetAllInsiderTransactionFilings (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
+        ApiResponseOwnerInsiderTransactionFilings GetAllInsiderTransactionFilings (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null);
 
         /// <summary>
         /// All Insider Transactions Filings
@@ -41,9 +42,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOwnerInsiderTransactionFilings</returns>
-        ApiResponse<ApiResponseOwnerInsiderTransactionFilings> GetAllInsiderTransactionFilingsWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseOwnerInsiderTransactionFilings> GetAllInsiderTransactionFilingsWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -56,9 +58,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOwnerInsiderTransactionFilings</returns>
-        System.Threading.Tasks.Task<ApiResponseOwnerInsiderTransactionFilings> GetAllInsiderTransactionFilingsAsync (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseOwnerInsiderTransactionFilings> GetAllInsiderTransactionFilingsAsync (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null);
 
         /// <summary>
         /// All Insider Transactions Filings
@@ -70,9 +73,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOwnerInsiderTransactionFilings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInsiderTransactionFilings>> GetAllInsiderTransactionFilingsAsyncWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInsiderTransactionFilings>> GetAllInsiderTransactionFilingsAsyncWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -180,11 +184,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOwnerInsiderTransactionFilings</returns>
-        public ApiResponseOwnerInsiderTransactionFilings GetAllInsiderTransactionFilings (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseOwnerInsiderTransactionFilings GetAllInsiderTransactionFilings (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseOwnerInsiderTransactionFilings> localVarResponse = GetAllInsiderTransactionFilingsWithHttpInfo(startDate, endDate, pageSize, nextPage);
+             ApiResponse<ApiResponseOwnerInsiderTransactionFilings> localVarResponse = GetAllInsiderTransactionFilingsWithHttpInfo(startDate, endDate, pageSize, sortBy, nextPage);
              return localVarResponse.Data;
         }
 
@@ -195,11 +200,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOwnerInsiderTransactionFilings</returns>
         
         
-        public ApiResponse< ApiResponseOwnerInsiderTransactionFilings > GetAllInsiderTransactionFilingsWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseOwnerInsiderTransactionFilings > GetAllInsiderTransactionFilingsWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null)
         {
 
             var localVarPath = "/insider_transaction_filings";
@@ -227,6 +233,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_by", sortBy)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -260,11 +267,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOwnerInsiderTransactionFilings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOwnerInsiderTransactionFilings> GetAllInsiderTransactionFilingsAsync (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseOwnerInsiderTransactionFilings> GetAllInsiderTransactionFilingsAsync (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseOwnerInsiderTransactionFilings> localVarResponse = await GetAllInsiderTransactionFilingsAsyncWithHttpInfo(startDate, endDate, pageSize, nextPage);
+             ApiResponse<ApiResponseOwnerInsiderTransactionFilings> localVarResponse = await GetAllInsiderTransactionFilingsAsyncWithHttpInfo(startDate, endDate, pageSize, sortBy, nextPage);
              return localVarResponse.Data;
 
         }
@@ -276,9 +284,10 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOwnerInsiderTransactionFilings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInsiderTransactionFilings>> GetAllInsiderTransactionFilingsAsyncWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInsiderTransactionFilings>> GetAllInsiderTransactionFilingsAsyncWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null)
         {
 
             var localVarPath = "/insider_transaction_filings";
@@ -306,6 +315,7 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_by", sortBy)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

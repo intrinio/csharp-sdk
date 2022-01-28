@@ -10,7 +10,7 @@
 Name | Type | Description
 ------------ | ------------- | -------------
 **Option** | [**OptionEod**](OptionEod.md) |  &nbsp;
-**Prices** | [**OptionPriceEod**](OptionPriceEod.md) |  &nbsp;
+**Price** | [**OptionPriceEod**](OptionPriceEod.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
 

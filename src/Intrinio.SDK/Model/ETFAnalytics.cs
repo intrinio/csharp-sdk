@@ -25,6 +25,7 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ETFAnalytics" /> class.
         /// </summary>
+        /// <param name="Date">The calendar date these analytics represent..</param>
         /// <param name="FiftyTwoWeekHigh">Highest trading price for the security in the preceding 52 weeks.</param>
         /// <param name="FiftyTwoWeekLow">Lowest trading price for the security in the preceding 52 weeks.</param>
         /// <param name="VolumeTraded">The total quantity of shares traded on the latest trading day.</param>
@@ -34,8 +35,9 @@ namespace Intrinio.SDK.Model
         /// <param name="MarketCap">The market capitalization for the Exchange Traded Fund (ETF).</param>
         /// <param name="SharesOutstanding">The number of shares outstanding for the Exchange Traded Fund (ETF).</param>
         /// <param name="Etf">Etf.</param>
-        public ETFAnalytics(decimal? FiftyTwoWeekHigh = default(decimal?), decimal? FiftyTwoWeekLow = default(decimal?), decimal? VolumeTraded = default(decimal?), decimal? AverageDailyVolumeOneMonth = default(decimal?), decimal? AverageDailyVolumeThreeMonth = default(decimal?), decimal? AverageDailyVolumeSixMonth = default(decimal?), decimal? MarketCap = default(decimal?), decimal? SharesOutstanding = default(decimal?), ETFSummary Etf = default(ETFSummary))
+        public ETFAnalytics(DateTime? Date = default(DateTime?), decimal? FiftyTwoWeekHigh = default(decimal?), decimal? FiftyTwoWeekLow = default(decimal?), decimal? VolumeTraded = default(decimal?), decimal? AverageDailyVolumeOneMonth = default(decimal?), decimal? AverageDailyVolumeThreeMonth = default(decimal?), decimal? AverageDailyVolumeSixMonth = default(decimal?), decimal? MarketCap = default(decimal?), decimal? SharesOutstanding = default(decimal?), ETFSummary Etf = default(ETFSummary))
         {
+            this.Date = Date;
             this.FiftyTwoWeekHigh = FiftyTwoWeekHigh;
             this.FiftyTwoWeekLow = FiftyTwoWeekLow;
             this.VolumeTraded = VolumeTraded;
@@ -47,6 +49,14 @@ namespace Intrinio.SDK.Model
             this.Etf = Etf;
         }
         
+        /// <summary>
+        /// The calendar date these analytics represent.
+        /// </summary>
+        /// <value>The calendar date these analytics represent.</value>
+        [DataMember(Name="date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? Date { get; set; }
+
         /// <summary>
         /// Highest trading price for the security in the preceding 52 weeks
         /// </summary>
@@ -117,6 +127,7 @@ namespace Intrinio.SDK.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ETFAnalytics {\n");
+            sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  FiftyTwoWeekHigh: ").Append(FiftyTwoWeekHigh).Append("\n");
             sb.Append("  FiftyTwoWeekLow: ").Append(FiftyTwoWeekLow).Append("\n");
             sb.Append("  VolumeTraded: ").Append(VolumeTraded).Append("\n");
@@ -160,6 +171,11 @@ namespace Intrinio.SDK.Model
                 return false;
 
             return 
+                (
+                    this.Date == input.Date ||
+                    (this.Date != null &&
+                    this.Date.Equals(input.Date))
+                ) && 
                 (
                     this.FiftyTwoWeekHigh == input.FiftyTwoWeekHigh ||
                     (this.FiftyTwoWeekHigh != null &&
@@ -216,6 +232,8 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Date != null)
+                    hashCode = hashCode * 59 + this.Date.GetHashCode();
                 if (this.FiftyTwoWeekHigh != null)
                     hashCode = hashCode * 59 + this.FiftyTwoWeekHigh.GetHashCode();
                 if (this.FiftyTwoWeekLow != null)

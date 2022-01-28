@@ -9,6 +9,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
+**Date** | DateTime? | The calendar date these analytics represent. &nbsp;
 **FiftyTwoWeekHigh** | decimal? | Highest trading price for the security in the preceding 52 weeks &nbsp;
 **FiftyTwoWeekLow** | decimal? | Lowest trading price for the security in the preceding 52 weeks &nbsp;
 **VolumeTraded** | decimal? | The total quantity of shares traded on the latest trading day &nbsp;

@@ -67,12 +67,12 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Option'
         }
         /// <summary>
-        /// Test the property 'Prices'
+        /// Test the property 'Price'
         /// </summary>
         [Test]
-        public void PricesTest()
+        public void PriceTest()
         {
-            // TODO unit test for the property 'Prices'
+            // TODO unit test for the property 'Price'
         }
 
     }

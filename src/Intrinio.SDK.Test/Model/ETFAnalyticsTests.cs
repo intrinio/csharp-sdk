@@ -59,6 +59,14 @@ namespace Intrinio.SDK.Test
 
 
         /// <summary>
+        /// Test the property 'Date'
+        /// </summary>
+        [Test]
+        public void DateTest()
+        {
+            // TODO unit test for the property 'Date'
+        }
+        /// <summary>
         /// Test the property 'FiftyTwoWeekHigh'
         /// </summary>
         [Test]

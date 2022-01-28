@@ -33,7 +33,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOwnerInsiderTransactionFilings GetAllInsiderTransactionFilings (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+> ApiResponseOwnerInsiderTransactionFilings GetAllInsiderTransactionFilings (DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string sortBy = null, string nextPage = null)
 
 #### All Insider Transactions Filings
 
@@ -69,9 +69,10 @@ namespace Example
       DateTime? startDate = DateTime.Parse("2015-01-01");
       DateTime? endDate = null;
       int? pageSize = 100;
+      string sortBy = "updated_on";
       string nextPage = null;
       
-      ApiResponseOwnerInsiderTransactionFilings result = insiderTransactionFilingsApi.GetAllInsiderTransactionFilings(startDate, endDate, pageSize, nextPage);
+      ApiResponseOwnerInsiderTransactionFilings result = insiderTransactionFilingsApi.GetAllInsiderTransactionFilings(startDate, endDate, pageSize, sortBy, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -90,6 +91,7 @@ Name | Type | Description  | Notes
  **startDate** | DateTime?| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | DateTime?| Filed before or after the given date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **sortBy** | string| The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

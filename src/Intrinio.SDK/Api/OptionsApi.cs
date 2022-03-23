@@ -441,6 +441,43 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
         ApiResponse<ApiResponseOptionsUnusualActivity> GetUnusualActivityWithHttpInfo (string symbol, string source = null);
         /// <summary>
+        /// Options Unusual Activity Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponseOptionsUnusualActivity</returns>
+        ApiResponseOptionsUnusualActivity GetUnusualActivityIntraday (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
+
+        /// <summary>
+        /// Options Unusual Activity Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
+        ApiResponse<ApiResponseOptionsUnusualActivity> GetUnusualActivityIntradayWithHttpInfo (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
+        /// <summary>
         /// Options Unusual Activity Universal
         /// </summary>
         /// <remarks>
@@ -461,6 +498,41 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
         ApiResponse<ApiResponseOptionsUnusualActivity> GetUnusualActivityUniversalWithHttpInfo (string source = null);
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponseOptionsUnusualActivity</returns>
+        ApiResponseOptionsUnusualActivity GetUnusualActivityUniversalIntraday (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
+
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
+        ApiResponse<ApiResponseOptionsUnusualActivity> GetUnusualActivityUniversalIntradayWithHttpInfo (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -887,6 +959,43 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityAsyncWithHttpInfo (string symbol, string source = null);
         /// <summary>
+        /// Options Unusual Activity Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsUnusualActivity</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsUnusualActivity> GetUnusualActivityIntradayAsync (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
+
+        /// <summary>
+        /// Options Unusual Activity Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for a given identifier within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityIntradayAsyncWithHttpInfo (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
+        /// <summary>
         /// Options Unusual Activity Universal
         /// </summary>
         /// <remarks>
@@ -907,6 +1016,41 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityUniversalAsyncWithHttpInfo (string source = null);
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsUnusualActivity</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsUnusualActivity> GetUnusualActivityUniversalIntradayAsync (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
+
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday
+        /// </summary>
+        /// <remarks>
+        /// Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityUniversalIntradayAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
         #endregion Asynchronous Operations
     }
 
@@ -3571,6 +3715,201 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// Options Unusual Activity Intraday Returns unusual trades for a given identifier within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponseOptionsUnusualActivity</returns>
+        public ApiResponseOptionsUnusualActivity GetUnusualActivityIntraday (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+             ApiResponse<ApiResponseOptionsUnusualActivity> localVarResponse = GetUnusualActivityIntradayWithHttpInfo(symbol, nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Intraday Returns unusual trades for a given identifier within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsUnusualActivity > GetUnusualActivityIntradayWithHttpInfo (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetUnusualActivityIntraday");
+
+            var localVarPath = "/options/unusual_activity/{symbol}/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (activityType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "activity_type", activityType)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (minimumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "minimum_total_value", minimumTotalValue)); // query parameter
+            if (maximumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "maximum_total_value", maximumTotalValue)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUnusualActivityIntraday", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsUnusualActivity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsUnusualActivity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsUnusualActivity)));
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Intraday Returns unusual trades for a given identifier within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsUnusualActivity</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsUnusualActivity> GetUnusualActivityIntradayAsync (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+             ApiResponse<ApiResponseOptionsUnusualActivity> localVarResponse = await GetUnusualActivityIntradayAsyncWithHttpInfo(symbol, nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Intraday Returns unusual trades for a given identifier within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityIntradayAsyncWithHttpInfo (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetUnusualActivityIntraday");
+
+            var localVarPath = "/options/unusual_activity/{symbol}/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (activityType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "activity_type", activityType)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (minimumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "minimum_total_value", minimumTotalValue)); // query parameter
+            if (maximumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "maximum_total_value", maximumTotalValue)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUnusualActivityIntraday", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsUnusualActivity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsUnusualActivity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsUnusualActivity)));
+        }
+
+        /// <summary>
         /// Options Unusual Activity Universal Returns nusual trades for all underlying security symbols.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3703,6 +4042,189 @@ namespace Intrinio.SDK.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetUnusualActivityUniversal", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsUnusualActivity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsUnusualActivity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsUnusualActivity)));
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponseOptionsUnusualActivity</returns>
+        public ApiResponseOptionsUnusualActivity GetUnusualActivityUniversalIntraday (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+             ApiResponse<ApiResponseOptionsUnusualActivity> localVarResponse = GetUnusualActivityUniversalIntradayWithHttpInfo(nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsUnusualActivity > GetUnusualActivityUniversalIntradayWithHttpInfo (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+
+            var localVarPath = "/options/unusual_activity/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (activityType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "activity_type", activityType)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (minimumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "minimum_total_value", minimumTotalValue)); // query parameter
+            if (maximumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "maximum_total_value", maximumTotalValue)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUnusualActivityUniversalIntraday", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsUnusualActivity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseOptionsUnusualActivity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsUnusualActivity)));
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsUnusualActivity</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsUnusualActivity> GetUnusualActivityUniversalIntradayAsync (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+             ApiResponse<ApiResponseOptionsUnusualActivity> localVarResponse = await GetUnusualActivityUniversalIntradayAsyncWithHttpInfo(nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Unusual Activity Universal Intraday Returns unusual trades for all underlying security symbols within the query parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="activityType">The unusual activity type to query for. (optional)</param>
+        /// <param name="sentiment">The sentiment type to query for. (optional)</param>
+        /// <param name="startDate">Return unusual activity on or after this date. (optional)</param>
+        /// <param name="endDate">Return unusual activity on or before this date. (optional)</param>
+        /// <param name="minimumTotalValue">The inclusive minimum total value for the unusual activity. (optional)</param>
+        /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityUniversalIntradayAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+        {
+
+            var localVarPath = "/options/unusual_activity/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (activityType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "activity_type", activityType)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (minimumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "minimum_total_value", minimumTotalValue)); // query parameter
+            if (maximumTotalValue != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "maximum_total_value", maximumTotalValue)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUnusualActivityUniversalIntraday", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -19,7 +19,9 @@ Method | HTTP request | Description
 [**GetOptionsPricesRealtime**](OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**GetOptionsStatsRealtime**](OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 [**GetUnusualActivity**](OptionsApi.md#getunusualactivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
+[**GetUnusualActivityIntraday**](OptionsApi.md#getunusualactivityintraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 [**GetUnusualActivityUniversal**](OptionsApi.md#getunusualactivityuniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
+[**GetUnusualActivityUniversalIntraday**](OptionsApi.md#getunusualactivityuniversalintraday) | **GET** /options/unusual_activity/intraday | Options Unusual Activity Universal Intraday
 
 
 
@@ -1454,6 +1456,110 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
 
+[//]: # (METHOD:GetUnusualActivityIntraday)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:GetUnusualActivityIntraday_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity/{symbol}/intraday)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getunusualactivityintraday)
+
+<a name="getunusualactivityintraday"></a>
+## **GetUnusualActivityIntraday**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetUnusualActivityIntraday_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity GetUnusualActivityIntraday (string symbol, string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+
+#### Options Unusual Activity Intraday
+
+Returns unusual trades for a given identifier within the query parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetUnusualActivityIntradayExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "AAPL";
+      string nextPage = null;
+      int? pageSize = 100;
+      string activityType = null;
+      string sentiment = null;
+      DateTime? startDate = DateTime.Parse("2022-02-01");
+      DateTime? endDate = DateTime.Parse("2022-02-03");
+      var minimumTotalValue = new Object();
+      var maximumTotalValue = new Object();
+      
+      ApiResponseOptionsUnusualActivity result = optionsApi.GetUnusualActivityIntraday(symbol, nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 1000] &nbsp;
+ **activityType** | string| The unusual activity type to query for. | [optional]  &nbsp;
+ **sentiment** | string| The sentiment type to query for. | [optional]  &nbsp;
+ **startDate** | DateTime?| Return unusual activity on or after this date. | [optional]  &nbsp;
+ **endDate** | DateTime?| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **minimumTotalValue** | [**Object**](Object.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
+ **maximumTotalValue** | [**Object**](Object.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
 [//]: # (METHOD:GetUnusualActivityUniversal)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsUnusualActivity)
@@ -1527,6 +1633,108 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetUnusualActivityUniversalIntraday)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:GetUnusualActivityUniversalIntraday_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity/intraday)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getunusualactivityuniversalintraday)
+
+<a name="getunusualactivityuniversalintraday"></a>
+## **GetUnusualActivityUniversalIntraday**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetUnusualActivityUniversalIntraday_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity GetUnusualActivityUniversalIntraday (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null)
+
+#### Options Unusual Activity Universal Intraday
+
+Returns unusual trades for all underlying security symbols within the query parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetUnusualActivityUniversalIntradayExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string nextPage = null;
+      int? pageSize = 100;
+      string activityType = null;
+      string sentiment = null;
+      DateTime? startDate = DateTime.Parse("2022-02-01");
+      DateTime? endDate = DateTime.Parse("2022-02-03");
+      var minimumTotalValue = new Object();
+      var maximumTotalValue = new Object();
+      
+      ApiResponseOptionsUnusualActivity result = optionsApi.GetUnusualActivityUniversalIntraday(nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 1000] &nbsp;
+ **activityType** | string| The unusual activity type to query for. | [optional]  &nbsp;
+ **sentiment** | string| The sentiment type to query for. | [optional]  &nbsp;
+ **startDate** | DateTime?| Return unusual activity on or after this date. | [optional]  &nbsp;
+ **endDate** | DateTime?| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **minimumTotalValue** | [**Object**](Object.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
+ **maximumTotalValue** | [**Object**](Object.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

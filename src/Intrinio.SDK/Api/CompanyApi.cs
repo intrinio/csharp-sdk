@@ -376,11 +376,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseInsiderTransactionFilings</returns>
-        ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null);
+        ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null);
 
         /// <summary>
         /// Insider Transaction Filings by Company
@@ -393,11 +394,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseInsiderTransactionFilings</returns>
-        ApiResponse<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null);
+        ApiResponse<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null);
         /// <summary>
         /// Latest Insider Transaction Filing by Company
         /// </summary>
@@ -876,11 +878,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseInsiderTransactionFilings</returns>
-        System.Threading.Tasks.Task<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null);
 
         /// <summary>
         /// Insider Transaction Filings by Company
@@ -893,11 +896,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseInsiderTransactionFilings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInsiderTransactionFilings>> InsiderTransactionFilingsByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInsiderTransactionFilings>> InsiderTransactionFilingsByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null);
         /// <summary>
         /// Latest Insider Transaction Filing by Company
         /// </summary>
@@ -3181,13 +3185,14 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseInsiderTransactionFilings</returns>
-        public ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null)
+        public ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseInsiderTransactionFilings> localVarResponse = InsiderTransactionFilingsByCompanyWithHttpInfo(identifier, startDate, endDate, ownershipType, pageSize, sortBy, nextPage);
+             ApiResponse<ApiResponseInsiderTransactionFilings> localVarResponse = InsiderTransactionFilingsByCompanyWithHttpInfo(identifier, startDate, endDate, ownershipType, nextPage, pageSize, sortBy, nextPage2);
              return localVarResponse.Data;
         }
 
@@ -3199,13 +3204,14 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseInsiderTransactionFilings</returns>
         
         
-        public ApiResponse< ApiResponseInsiderTransactionFilings > InsiderTransactionFilingsByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null)
+        public ApiResponse< ApiResponseInsiderTransactionFilings > InsiderTransactionFilingsByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3237,9 +3243,10 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (ownershipType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ownership_type", ownershipType)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (sortBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_by", sortBy)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3273,13 +3280,14 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseInsiderTransactionFilings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseInsiderTransactionFilings> InsiderTransactionFilingsByCompanyAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseInsiderTransactionFilings> localVarResponse = await InsiderTransactionFilingsByCompanyAsyncWithHttpInfo(identifier, startDate, endDate, ownershipType, pageSize, sortBy, nextPage);
+             ApiResponse<ApiResponseInsiderTransactionFilings> localVarResponse = await InsiderTransactionFilingsByCompanyAsyncWithHttpInfo(identifier, startDate, endDate, ownershipType, nextPage, pageSize, sortBy, nextPage2);
              return localVarResponse.Data;
 
         }
@@ -3292,11 +3300,12 @@ namespace Intrinio.SDK.Api
         /// <param name="startDate">Return Company&#39;s insider transaction filings on or after this date (optional)</param>
         /// <param name="endDate">Return Company&#39;s insider transaction filings on or before this date (optional)</param>
         /// <param name="ownershipType">The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. (optional)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 1000)</param>
+        /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseInsiderTransactionFilings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInsiderTransactionFilings>> InsiderTransactionFilingsByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInsiderTransactionFilings>> InsiderTransactionFilingsByCompanyAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3328,9 +3337,10 @@ namespace Intrinio.SDK.Api
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (ownershipType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ownership_type", ownershipType)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (sortBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_by", sortBy)); // query parameter
-            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

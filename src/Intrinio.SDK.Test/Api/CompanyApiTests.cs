@@ -255,10 +255,11 @@ namespace Intrinio.SDK.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string ownershipType = null;
+            //string nextPage = null;
             //int? pageSize = null;
             //string sortBy = null;
-            //string nextPage = null;
-            //var response = instance.InsiderTransactionFilingsByCompany(identifier, startDate, endDate, ownershipType, pageSize, sortBy, nextPage);
+            //string nextPage2 = null;
+            //var response = instance.InsiderTransactionFilingsByCompany(identifier, startDate, endDate, ownershipType, nextPage, pageSize, sortBy, nextPage2);
             //Assert.IsInstanceOf<ApiResponseInsiderTransactionFilings> (response, "response is ApiResponseInsiderTransactionFilings");
         }
         

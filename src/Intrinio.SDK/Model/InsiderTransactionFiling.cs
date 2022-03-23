@@ -26,12 +26,18 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="InsiderTransactionFiling" /> class.
         /// </summary>
         /// <param name="FilingUrl">The URL of the filing with the SEC.</param>
+        /// <param name="IssuerTicker">The ticker of the issuing company..</param>
+        /// <param name="IssuerCik">The Central Index Key (CIK) of the issuing company..</param>
+        /// <param name="IssuerCompany">The name of the issuing company..</param>
         /// <param name="Transactions">The insider transactions associated with the filing.</param>
         /// <param name="Company">The company associated with the filing.</param>
         /// <param name="Owner">The owner associated with the filing.</param>
-        public InsiderTransactionFiling(string FilingUrl = default(string), List<InsiderTransaction> Transactions = default(List<InsiderTransaction>), CompanySummary Company = default(CompanySummary), OwnerSummary Owner = default(OwnerSummary))
+        public InsiderTransactionFiling(string FilingUrl = default(string), string IssuerTicker = default(string), string IssuerCik = default(string), string IssuerCompany = default(string), List<InsiderTransaction> Transactions = default(List<InsiderTransaction>), CompanySummary Company = default(CompanySummary), OwnerSummary Owner = default(OwnerSummary))
         {
             this.FilingUrl = FilingUrl;
+            this.IssuerTicker = IssuerTicker;
+            this.IssuerCik = IssuerCik;
+            this.IssuerCompany = IssuerCompany;
             this.Transactions = Transactions;
             this.Company = Company;
             this.Owner = Owner;
@@ -43,6 +49,27 @@ namespace Intrinio.SDK.Model
         /// <value>The URL of the filing with the SEC</value>
         [DataMember(Name="filing_url", EmitDefaultValue=false)]
         public string FilingUrl { get; set; }
+
+        /// <summary>
+        /// The ticker of the issuing company.
+        /// </summary>
+        /// <value>The ticker of the issuing company.</value>
+        [DataMember(Name="issuer_ticker", EmitDefaultValue=false)]
+        public string IssuerTicker { get; set; }
+
+        /// <summary>
+        /// The Central Index Key (CIK) of the issuing company.
+        /// </summary>
+        /// <value>The Central Index Key (CIK) of the issuing company.</value>
+        [DataMember(Name="issuer_cik", EmitDefaultValue=false)]
+        public string IssuerCik { get; set; }
+
+        /// <summary>
+        /// The name of the issuing company.
+        /// </summary>
+        /// <value>The name of the issuing company.</value>
+        [DataMember(Name="issuer_company", EmitDefaultValue=false)]
+        public string IssuerCompany { get; set; }
 
         /// <summary>
         /// The insider transactions associated with the filing
@@ -74,6 +101,9 @@ namespace Intrinio.SDK.Model
             var sb = new StringBuilder();
             sb.Append("class InsiderTransactionFiling {\n");
             sb.Append("  FilingUrl: ").Append(FilingUrl).Append("\n");
+            sb.Append("  IssuerTicker: ").Append(IssuerTicker).Append("\n");
+            sb.Append("  IssuerCik: ").Append(IssuerCik).Append("\n");
+            sb.Append("  IssuerCompany: ").Append(IssuerCompany).Append("\n");
             sb.Append("  Transactions: ").Append(Transactions).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("  Owner: ").Append(Owner).Append("\n");
@@ -117,6 +147,21 @@ namespace Intrinio.SDK.Model
                     this.FilingUrl.Equals(input.FilingUrl))
                 ) && 
                 (
+                    this.IssuerTicker == input.IssuerTicker ||
+                    (this.IssuerTicker != null &&
+                    this.IssuerTicker.Equals(input.IssuerTicker))
+                ) && 
+                (
+                    this.IssuerCik == input.IssuerCik ||
+                    (this.IssuerCik != null &&
+                    this.IssuerCik.Equals(input.IssuerCik))
+                ) && 
+                (
+                    this.IssuerCompany == input.IssuerCompany ||
+                    (this.IssuerCompany != null &&
+                    this.IssuerCompany.Equals(input.IssuerCompany))
+                ) && 
+                (
                     this.Transactions == input.Transactions ||
                     this.Transactions != null &&
                     this.Transactions.SequenceEqual(input.Transactions)
@@ -144,6 +189,12 @@ namespace Intrinio.SDK.Model
                 int hashCode = 41;
                 if (this.FilingUrl != null)
                     hashCode = hashCode * 59 + this.FilingUrl.GetHashCode();
+                if (this.IssuerTicker != null)
+                    hashCode = hashCode * 59 + this.IssuerTicker.GetHashCode();
+                if (this.IssuerCik != null)
+                    hashCode = hashCode * 59 + this.IssuerCik.GetHashCode();
+                if (this.IssuerCompany != null)
+                    hashCode = hashCode * 59 + this.IssuerCompany.GetHashCode();
                 if (this.Transactions != null)
                     hashCode = hashCode * 59 + this.Transactions.GetHashCode();
                 if (this.Company != null)

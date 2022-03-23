@@ -287,6 +287,26 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetUnusualActivityIntraday
+        /// </summary>
+        [Test]
+        public void GetUnusualActivityIntradayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //string nextPage = null;
+            //int? pageSize = null;
+            //string activityType = null;
+            //string sentiment = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //Object minimumTotalValue = null;
+            //Object maximumTotalValue = null;
+            //var response = instance.GetUnusualActivityIntraday(symbol, nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
+            //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
+        }
+        
+        /// <summary>
         /// Test GetUnusualActivityUniversal
         /// </summary>
         [Test]
@@ -295,6 +315,25 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string source = null;
             //var response = instance.GetUnusualActivityUniversal(source);
+            //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
+        }
+        
+        /// <summary>
+        /// Test GetUnusualActivityUniversalIntraday
+        /// </summary>
+        [Test]
+        public void GetUnusualActivityUniversalIntradayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string nextPage = null;
+            //int? pageSize = null;
+            //string activityType = null;
+            //string sentiment = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //Object minimumTotalValue = null;
+            //Object maximumTotalValue = null;
+            //var response = instance.GetUnusualActivityUniversalIntraday(nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
             //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
         }
         

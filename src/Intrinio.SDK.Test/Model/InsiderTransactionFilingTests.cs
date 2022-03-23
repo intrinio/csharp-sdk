@@ -67,6 +67,30 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'FilingUrl'
         }
         /// <summary>
+        /// Test the property 'IssuerTicker'
+        /// </summary>
+        [Test]
+        public void IssuerTickerTest()
+        {
+            // TODO unit test for the property 'IssuerTicker'
+        }
+        /// <summary>
+        /// Test the property 'IssuerCik'
+        /// </summary>
+        [Test]
+        public void IssuerCikTest()
+        {
+            // TODO unit test for the property 'IssuerCik'
+        }
+        /// <summary>
+        /// Test the property 'IssuerCompany'
+        /// </summary>
+        [Test]
+        public void IssuerCompanyTest()
+        {
+            // TODO unit test for the property 'IssuerCompany'
+        }
+        /// <summary>
         /// Test the property 'Transactions'
         /// </summary>
         [Test]

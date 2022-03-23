@@ -1202,7 +1202,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, int? pageSize = null, string sortBy = null, string nextPage = null)
+> ApiResponseInsiderTransactionFilings InsiderTransactionFilingsByCompany (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null)
 
 #### Insider Transaction Filings by Company
 
@@ -1239,11 +1239,12 @@ namespace Example
       DateTime? startDate = DateTime.Parse("2018-01-01");
       DateTime? endDate = DateTime.Parse("2019-01-01");
       string ownershipType = "D";
+      string nextPage = null;
       int? pageSize = 100;
       string sortBy = "updated_on";
-      string nextPage = null;
+      string nextPage2 = "";
       
-      ApiResponseInsiderTransactionFilings result = companyApi.InsiderTransactionFilingsByCompany(identifier, startDate, endDate, ownershipType, pageSize, sortBy, nextPage);
+      ApiResponseInsiderTransactionFilings result = companyApi.InsiderTransactionFilingsByCompany(identifier, startDate, endDate, ownershipType, nextPage, pageSize, sortBy, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1263,9 +1264,10 @@ Name | Type | Description  | Notes
  **startDate** | DateTime?| Return Company&#39;s insider transaction filings on or after this date | [optional]  &nbsp;
  **endDate** | DateTime?| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
  **ownershipType** | string| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
- **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
- **sortBy** | string| The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 1000] &nbsp;
+ **sortBy** | string| The field to sort by.  Default is &#39;filing_date&#39;. | [optional]  &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

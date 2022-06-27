@@ -53,6 +53,27 @@ namespace Intrinio.SDK.Test
 
         
         /// <summary>
+        /// Test FilterFundamental
+        /// </summary>
+        [Test]
+        public void FilterFundamentalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DateTime? filedAfter = null;
+            //DateTime? filedBefore = null;
+            //bool? reportedOnly = null;
+            //int? fiscalYear = null;
+            //string statementCode = null;
+            //string type = null;
+            //string fiscalPeriod = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string nextPage = null;
+            //var response = instance.FilterFundamental(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+            //Assert.IsInstanceOf<Fundamental> (response, "response is Fundamental");
+        }
+        
+        /// <summary>
         /// Test GetFundamentalById
         /// </summary>
         [Test]

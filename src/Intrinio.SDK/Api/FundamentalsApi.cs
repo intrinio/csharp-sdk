@@ -18,10 +18,49 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Filter Fundamental
+        /// </summary>
+        /// <remarks>
+        /// Returns fundamentals that meet the set of filters specified in parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Fundamental</returns>
+        Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+
+        /// <summary>
+        /// Filter Fundamental
+        /// </summary>
+        /// <remarks>
+        /// Returns fundamentals that meet the set of filters specified in parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of Fundamental</returns>
+        ApiResponse<Fundamental> FilterFundamentalWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <summary>
         /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -32,7 +71,7 @@ namespace Intrinio.SDK.Api
         /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -42,7 +81,7 @@ namespace Intrinio.SDK.Api
         /// Reported Financials
         /// </summary>
         /// <remarks>
-        /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -53,7 +92,7 @@ namespace Intrinio.SDK.Api
         /// Reported Financials
         /// </summary>
         /// <remarks>
-        /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -63,7 +102,7 @@ namespace Intrinio.SDK.Api
         /// Standardized Financials
         /// </summary>
         /// <remarks>
-        /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -74,7 +113,7 @@ namespace Intrinio.SDK.Api
         /// Standardized Financials
         /// </summary>
         /// <remarks>
-        /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -107,7 +146,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Fundamental
         /// </summary>
         /// <remarks>
-        /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -121,7 +160,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Fundamental
         /// </summary>
         /// <remarks>
-        /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -133,10 +172,49 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Filter Fundamental
+        /// </summary>
+        /// <remarks>
+        /// Returns fundamentals that meet the set of filters specified in parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of Fundamental</returns>
+        System.Threading.Tasks.Task<Fundamental> FilterFundamentalAsync (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+
+        /// <summary>
+        /// Filter Fundamental
+        /// </summary>
+        /// <remarks>
+        /// Returns fundamentals that meet the set of filters specified in parameters.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (Fundamental)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Fundamental>> FilterFundamentalAsyncWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <summary>
         /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -147,7 +225,7 @@ namespace Intrinio.SDK.Api
         /// Fundamental by ID
         /// </summary>
         /// <remarks>
-        /// Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -157,7 +235,7 @@ namespace Intrinio.SDK.Api
         /// Reported Financials
         /// </summary>
         /// <remarks>
-        /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -168,7 +246,7 @@ namespace Intrinio.SDK.Api
         /// Reported Financials
         /// </summary>
         /// <remarks>
-        /// Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -178,7 +256,7 @@ namespace Intrinio.SDK.Api
         /// Standardized Financials
         /// </summary>
         /// <remarks>
-        /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -189,7 +267,7 @@ namespace Intrinio.SDK.Api
         /// Standardized Financials
         /// </summary>
         /// <remarks>
-        /// Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -222,7 +300,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Fundamental
         /// </summary>
         /// <remarks>
-        /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -236,7 +314,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Fundamental
         /// </summary>
         /// <remarks>
-        /// Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -346,7 +424,202 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Filter Fundamental Returns fundamentals that meet the set of filters specified in parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Fundamental</returns>
+        public Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+             ApiResponse<Fundamental> localVarResponse = FilterFundamentalWithHttpInfo(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Filter Fundamental Returns fundamentals that meet the set of filters specified in parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of Fundamental</returns>
+        
+        
+        public ApiResponse< Fundamental > FilterFundamentalWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+
+            var localVarPath = "/fundamentals";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (filedAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filed_after", filedAfter)); // query parameter
+            if (filedBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filed_before", filedBefore)); // query parameter
+            if (reportedOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "reported_only", reportedOnly)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FilterFundamental", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Fundamental>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
+        }
+
+        /// <summary>
+        /// Filter Fundamental Returns fundamentals that meet the set of filters specified in parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of Fundamental</returns>
+        public async System.Threading.Tasks.Task<Fundamental> FilterFundamentalAsync (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+             ApiResponse<Fundamental> localVarResponse = await FilterFundamentalAsyncWithHttpInfo(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Filter Fundamental Returns fundamentals that meet the set of filters specified in parameters.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filedAfter">Only include fundamentals that were filed on or after this date. (optional)</param>
+        /// <param name="filedBefore">Only include fundamentals that were filed on or before this date. (optional)</param>
+        /// <param name="reportedOnly">Only as-reported fundamentals (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="statementCode">Only of the given statement code (optional)</param>
+        /// <param name="type">Only of the given type (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
+        /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (Fundamental)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Fundamental>> FilterFundamentalAsyncWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+
+            var localVarPath = "/fundamentals";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (filedAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filed_after", filedAfter)); // query parameter
+            if (filedBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filed_before", filedBefore)); // query parameter
+            if (reportedOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "reported_only", reportedOnly)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (statementCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "statement_code", statementCode)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FilterFundamental", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Fundamental>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
+        }
+
+        /// <summary>
+        /// Fundamental by ID Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -358,7 +631,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Fundamental by ID Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -420,7 +693,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Fundamental by ID Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -433,7 +706,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Fundamental by ID Returns detailed fundamental data for the given &#x60;id&#x60;.
+        /// Fundamental by ID Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
@@ -493,7 +766,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -505,7 +778,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -567,7 +840,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -580,7 +853,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Reported Financials Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+        /// Reported Financials Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -640,7 +913,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Standardized Financials Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -652,7 +925,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Standardized Financials Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -714,7 +987,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Standardized Financials Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -727,7 +1000,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Standardized Financials Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+        /// Standardized Financials Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
@@ -946,7 +1219,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -961,7 +1234,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1038,7 +1311,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1054,7 +1327,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Fundamental Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+        /// Lookup Fundamental Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>

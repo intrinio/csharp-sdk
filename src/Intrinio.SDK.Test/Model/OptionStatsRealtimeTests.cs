@@ -98,6 +98,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Vega'
         }
+        /// <summary>
+        /// Test the property 'UnderlyingPrice'
+        /// </summary>
+        [Test]
+        public void UnderlyingPriceTest()
+        {
+            // TODO unit test for the property 'UnderlyingPrice'
+        }
 
     }
 

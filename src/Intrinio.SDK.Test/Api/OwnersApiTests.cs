@@ -103,7 +103,7 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //int? pageSize = null;
-            //Object asOfDate = null;
+            //DateTime? asOfDate = null;
             //string nextPage = null;
             //var response = instance.InstitutionalHoldingsByOwner(identifier, pageSize, asOfDate, nextPage);
             //Assert.IsInstanceOf<ApiResponseOwnerInstitutionalHoldings> (response, "response is ApiResponseOwnerInstitutionalHoldings");

@@ -21,10 +21,10 @@ namespace Intrinio.SDK.Api
         /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns all Filings. Returns Filings matching parameters when supplied.
+        /// Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -34,16 +34,16 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilings</returns>
-        ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns all Filings. Returns Filings matching parameters when supplied.
+        /// Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -53,12 +53,12 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilings</returns>
-        ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -76,7 +76,7 @@ namespace Intrinio.SDK.Api
         /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -137,7 +137,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Filing
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -155,7 +155,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Filing
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -172,7 +172,7 @@ namespace Intrinio.SDK.Api
         /// Filing Html
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a SEC filing in HTML Format for a specified filing ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -183,7 +183,7 @@ namespace Intrinio.SDK.Api
         /// Filing Html
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a SEC filing in HTML Format for a specified filing ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -214,7 +214,7 @@ namespace Intrinio.SDK.Api
         /// Filing Note by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -226,7 +226,7 @@ namespace Intrinio.SDK.Api
         /// Filing Note by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -279,7 +279,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -293,7 +293,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -308,10 +308,10 @@ namespace Intrinio.SDK.Api
         /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns all Filings. Returns Filings matching parameters when supplied.
+        /// Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -321,16 +321,16 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilings</returns>
-        System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Filings
         /// </summary>
         /// <remarks>
-        /// Returns all Filings. Returns Filings matching parameters when supplied.
+        /// Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -340,12 +340,12 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -363,7 +363,7 @@ namespace Intrinio.SDK.Api
         /// All Filing Notes
         /// </summary>
         /// <remarks>
-        /// Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -424,7 +424,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Filing
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -442,7 +442,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Filing
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -459,7 +459,7 @@ namespace Intrinio.SDK.Api
         /// Filing Html
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a SEC filing in HTML Format for a specified filing ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -470,7 +470,7 @@ namespace Intrinio.SDK.Api
         /// Filing Html
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a SEC filing in HTML Format for a specified filing ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -501,7 +501,7 @@ namespace Intrinio.SDK.Api
         /// Filing Note by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -513,7 +513,7 @@ namespace Intrinio.SDK.Api
         /// Filing Note by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -566,7 +566,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -580,7 +580,7 @@ namespace Intrinio.SDK.Api
         /// Search Filing Notes
         /// </summary>
         /// <remarks>
-        /// Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -690,10 +690,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
+        /// All Filings Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -703,17 +703,17 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilings</returns>
-        public ApiResponseFilings GetAllFilings (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseFilings> localVarResponse = GetAllFilingsWithHttpInfo(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
+        /// All Filings Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -725,11 +725,8 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseFilings</returns>
         
         
-        public ApiResponse< ApiResponseFilings > GetAllFilingsWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseFilings > GetAllFilingsWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
-            // verify the required parameter 'company' is set
-            if (company == null)
-                throw new ApiException(400, "Missing required parameter 'company' when calling FilingApi->GetAllFilings");
 
             var localVarPath = "/filings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -788,10 +785,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
+        /// All Filings Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -801,7 +798,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseFilings> localVarResponse = await GetAllFilingsAsyncWithHttpInfo(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
              return localVarResponse.Data;
@@ -809,10 +806,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filings Returns all Filings. Returns Filings matching parameters when supplied.
+        /// All Filings Returns pertinent filing reference data for a specific company filing or latest filings for all companies. Useful for tracking the latest filings submitted and updating your database accordingly with the new information.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="company">Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="reportType">Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
@@ -822,11 +819,8 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
-            // verify the required parameter 'company' is set
-            if (company == null)
-                throw new ApiException(400, "Missing required parameter 'company' when calling FilingApi->GetAllFilings");
 
             var localVarPath = "/filings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -885,7 +879,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// All Filing Notes Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -904,7 +898,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// All Filing Notes Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -977,7 +971,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// All Filing Notes Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -997,7 +991,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Filing Notes Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
+        /// All Filing Notes Returns a list of the latest XBRL filing note sections from the SEC 10-K and 10-Q statements. The returned Intrinio XBRL filing note ID can then be utilized with the “Filing Note by ID” endpoint to retrieve the contents of the note in HTML or text format.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="company">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
@@ -1374,7 +1368,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Filing Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1393,7 +1387,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Filing Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1469,7 +1463,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Filing Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1489,7 +1483,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Filing Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Filing Returns a list of fundamentals with unique fundamental IDs associated with a particular &#x60;Intrinio Filing ID&#x60; (if applicable) that have been updated or created as a result of a company&#x60;s latest SEC filing. Useful to ensure your database is up to date with the latest fundamentals.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1563,7 +1557,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Html 
+        /// Filing Html Returns a SEC filing in HTML Format for a specified filing ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1575,7 +1569,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Html 
+        /// Filing Html Returns a SEC filing in HTML Format for a specified filing ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1637,7 +1631,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Html 
+        /// Filing Html Returns a SEC filing in HTML Format for a specified filing ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1650,7 +1644,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Html 
+        /// Filing Html Returns a SEC filing in HTML Format for a specified filing ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Filing identifier</param>
@@ -1857,7 +1851,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Note by ID 
+        /// Filing Note by ID Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1870,7 +1864,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Note by ID 
+        /// Filing Note by ID Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1934,7 +1928,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Note by ID 
+        /// Filing Note by ID Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -1948,7 +1942,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Filing Note by ID 
+        /// Filing Note by ID Returns the XBRL filing note contents in HTML or text format for a specified Intrinio XBRL filing note ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID of the filing note</param>
@@ -2304,7 +2298,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search Filing Notes Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -2319,7 +2313,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search Filing Notes Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -2387,7 +2381,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search Filing Notes Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>
@@ -2403,7 +2397,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Filing Notes Searches for Filing Notes using the &#x60;query&#x60;
+        /// Search Filing Notes Search the XBRL note database and return a list of XBRL note sections containing text from the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search for notes that contain all or parts of this text</param>

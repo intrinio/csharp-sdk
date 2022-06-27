@@ -14,6 +14,7 @@ Name | Type | Description
 **Gamma** | decimal? | Gamma represents the rate of change between an option&#39;s delta and the underlying asset&#39;s price. &nbsp;
 **Theta** | decimal? | Theta represents the rate of change between the option price and time, or time sensitivity - sometimes known as an option&#39;s time decay. &nbsp;
 **Vega** | decimal? | Vega represents the rate of change between an option&#39;s value and the underlying asset&#39;s implied volatility. &nbsp;
+**UnderlyingPrice** | decimal? | The most recent trade price of the underlying asset. &nbsp;
 
 [//]: # (END_DEFINITION)
 

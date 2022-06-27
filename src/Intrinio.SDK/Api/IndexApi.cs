@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -33,7 +33,7 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -90,7 +90,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Economic Index
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -101,7 +101,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Economic Index
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -111,7 +111,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -123,7 +123,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -157,7 +157,7 @@ namespace Intrinio.SDK.Api
         /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -175,7 +175,7 @@ namespace Intrinio.SDK.Api
         /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -396,7 +396,7 @@ namespace Intrinio.SDK.Api
         /// Search Economic Indices
         /// </summary>
         /// <remarks>
-        /// Searches for indices using the text in &#x60;query&#x60;
+        /// Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
@@ -408,7 +408,7 @@ namespace Intrinio.SDK.Api
         /// Search Economic Indices
         /// </summary>
         /// <remarks>
-        /// Searches for indices using the text in &#x60;query&#x60;
+        /// Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
@@ -467,7 +467,7 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -479,7 +479,7 @@ namespace Intrinio.SDK.Api
         /// All Economic Indices
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -536,7 +536,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Economic Index
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -547,7 +547,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Economic Index
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -557,7 +557,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -569,7 +569,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -603,7 +603,7 @@ namespace Intrinio.SDK.Api
         /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -621,7 +621,7 @@ namespace Intrinio.SDK.Api
         /// Historical Data for an Economic Index
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -842,7 +842,7 @@ namespace Intrinio.SDK.Api
         /// Search Economic Indices
         /// </summary>
         /// <remarks>
-        /// Searches for indices using the text in &#x60;query&#x60;
+        /// Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
@@ -854,7 +854,7 @@ namespace Intrinio.SDK.Api
         /// Search Economic Indices
         /// </summary>
         /// <remarks>
-        /// Searches for indices using the text in &#x60;query&#x60;
+        /// Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
@@ -1008,7 +1008,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Economic Indices 
+        /// All Economic Indices Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1021,7 +1021,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Economic Indices 
+        /// All Economic Indices Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1082,7 +1082,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Economic Indices 
+        /// All Economic Indices Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1096,7 +1096,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Economic Indices 
+        /// All Economic Indices Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1449,7 +1449,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Economic Index 
+        /// Lookup Economic Index Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1461,7 +1461,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Economic Index 
+        /// Lookup Economic Index Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1523,7 +1523,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Economic Index 
+        /// Lookup Economic Index Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1536,7 +1536,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Economic Index 
+        /// Lookup Economic Index Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1596,7 +1596,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1609,7 +1609,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1676,7 +1676,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1690,7 +1690,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for an Economic Index Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for an Economic Index Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1914,7 +1914,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -1933,7 +1933,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2012,7 +2012,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -2032,7 +2032,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for an Economic Index Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
+        /// Historical Data for an Economic Index Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Index Identifier (symbol, Intrinio ID)</param>
@@ -3429,7 +3429,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Economic Indices Searches for indices using the text in &#x60;query&#x60;
+        /// Search Economic Indices Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
@@ -3442,7 +3442,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Economic Indices Searches for indices using the text in &#x60;query&#x60;
+        /// Search Economic Indices Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
@@ -3506,7 +3506,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Economic Indices Searches for indices using the text in &#x60;query&#x60;
+        /// Search Economic Indices Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>
@@ -3520,7 +3520,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Economic Indices Searches for indices using the text in &#x60;query&#x60;
+        /// Search Economic Indices Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search query</param>

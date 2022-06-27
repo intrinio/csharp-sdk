@@ -40,7 +40,7 @@ namespace Intrinio.SDK.Api
         /// Option Expirations Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -54,7 +54,7 @@ namespace Intrinio.SDK.Api
         /// Option Expirations Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -67,7 +67,7 @@ namespace Intrinio.SDK.Api
         /// Option Strikes Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -79,7 +79,7 @@ namespace Intrinio.SDK.Api
         /// Option Strikes Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -90,7 +90,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns the master list of option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -110,7 +110,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns the master list of option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -129,7 +129,7 @@ namespace Intrinio.SDK.Api
         /// Options by Symbol Realtime
         /// </summary>
         /// <remarks>
-        /// Returns the master list of realtime option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -148,7 +148,7 @@ namespace Intrinio.SDK.Api
         /// Options by Symbol Realtime
         /// </summary>
         /// <remarks>
-        /// Returns the master list of realtime option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -166,7 +166,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -185,7 +185,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -212,8 +212,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>ApiResponseOptionsChainEod</returns>
-        ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null);
+        ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
 
         /// <summary>
         /// Options Chain EOD
@@ -228,13 +229,14 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainEod</returns>
-        ApiResponse<ApiResponseOptionsChainEod> GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null);
+        ApiResponse<ApiResponseOptionsChainEod> GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
         /// <summary>
         /// Options Chain Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -256,7 +258,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -277,7 +279,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns all option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -290,7 +292,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns all option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -302,7 +304,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices
         /// </summary>
         /// <remarks>
-        /// Returns all option prices for a given option contract identifier.
+        /// Returns all price data from inception to expiration for a particular contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -317,7 +319,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices
         /// </summary>
         /// <remarks>
-        /// Returns all option prices for a given option contract identifier.
+        /// Returns all price data from inception to expiration for a particular contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -331,7 +333,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices Batch Realtime
         /// </summary>
         /// <remarks>
-        /// Returns options prices for a supplied list of option symbols.
+        /// Returns a list of latest price data for up to 250 option contracts per request.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -343,7 +345,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices Batch Realtime
         /// </summary>
         /// <remarks>
-        /// Returns options prices for a supplied list of option symbols.
+        /// Returns a list of latest price data for up to 250 option contracts per request.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -398,7 +400,7 @@ namespace Intrinio.SDK.Api
         /// Option Stats Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -410,7 +412,7 @@ namespace Intrinio.SDK.Api
         /// Option Stats Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -421,7 +423,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity
         /// </summary>
         /// <remarks>
-        /// Returns unusual trades for a given identifier.
+        /// Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -433,7 +435,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity
         /// </summary>
         /// <remarks>
-        /// Returns unusual trades for a given identifier.
+        /// Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -481,7 +483,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity Universal
         /// </summary>
         /// <remarks>
-        /// Returns nusual trades for all underlying security symbols.
+        /// Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
@@ -492,7 +494,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity Universal
         /// </summary>
         /// <remarks>
-        /// Returns nusual trades for all underlying security symbols.
+        /// Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
@@ -558,7 +560,7 @@ namespace Intrinio.SDK.Api
         /// Option Expirations Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -572,7 +574,7 @@ namespace Intrinio.SDK.Api
         /// Option Expirations Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -585,7 +587,7 @@ namespace Intrinio.SDK.Api
         /// Option Strikes Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -597,7 +599,7 @@ namespace Intrinio.SDK.Api
         /// Option Strikes Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -608,7 +610,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns the master list of option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -628,7 +630,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns the master list of option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -647,7 +649,7 @@ namespace Intrinio.SDK.Api
         /// Options by Symbol Realtime
         /// </summary>
         /// <remarks>
-        /// Returns the master list of realtime option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -666,7 +668,7 @@ namespace Intrinio.SDK.Api
         /// Options by Symbol Realtime
         /// </summary>
         /// <remarks>
-        /// Returns the master list of realtime option contracts for a given symbol.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -684,7 +686,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -703,7 +705,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -730,8 +732,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainEod</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
 
         /// <summary>
         /// Options Chain EOD
@@ -746,13 +749,14 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainEod)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
         /// <summary>
         /// Options Chain Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -774,7 +778,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -795,7 +799,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns all option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -808,7 +812,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns all option contract expiration dates for a given symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -820,7 +824,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices
         /// </summary>
         /// <remarks>
-        /// Returns all option prices for a given option contract identifier.
+        /// Returns all price data from inception to expiration for a particular contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -835,7 +839,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices
         /// </summary>
         /// <remarks>
-        /// Returns all option prices for a given option contract identifier.
+        /// Returns all price data from inception to expiration for a particular contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -849,7 +853,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices Batch Realtime
         /// </summary>
         /// <remarks>
-        /// Returns options prices for a supplied list of option symbols.
+        /// Returns a list of latest price data for up to 250 option contracts per request.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -861,7 +865,7 @@ namespace Intrinio.SDK.Api
         /// Option Prices Batch Realtime
         /// </summary>
         /// <remarks>
-        /// Returns options prices for a supplied list of option symbols.
+        /// Returns a list of latest price data for up to 250 option contracts per request.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -916,7 +920,7 @@ namespace Intrinio.SDK.Api
         /// Option Stats Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -928,7 +932,7 @@ namespace Intrinio.SDK.Api
         /// Option Stats Realtime
         /// </summary>
         /// <remarks>
-        /// Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -939,7 +943,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity
         /// </summary>
         /// <remarks>
-        /// Returns unusual trades for a given identifier.
+        /// Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -951,7 +955,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity
         /// </summary>
         /// <remarks>
-        /// Returns unusual trades for a given identifier.
+        /// Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -999,7 +1003,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity Universal
         /// </summary>
         /// <remarks>
-        /// Returns nusual trades for all underlying security symbols.
+        /// Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
@@ -1010,7 +1014,7 @@ namespace Intrinio.SDK.Api
         /// Options Unusual Activity Universal
         /// </summary>
         /// <remarks>
-        /// Returns nusual trades for all underlying security symbols.
+        /// Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
@@ -1287,7 +1291,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1302,7 +1306,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1370,7 +1374,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1386,7 +1390,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns all realtime option contract expiration dates for a given symbol.
+        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1452,7 +1456,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Strikes Realtime Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Option Strikes Realtime Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1465,7 +1469,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Strikes Realtime Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Option Strikes Realtime Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1532,7 +1536,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Strikes Realtime Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Option Strikes Realtime Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1546,7 +1550,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Strikes Realtime Returns all realtime options contracts and their prices for the given symbol and strike.
+        /// Option Strikes Realtime Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1611,7 +1615,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns the master list of option contracts for a given symbol.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1632,7 +1636,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns the master list of option contracts for a given symbol.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1712,7 +1716,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns the master list of option contracts for a given symbol.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1734,7 +1738,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns the master list of option contracts for a given symbol.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1812,7 +1816,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// Options by Symbol Realtime Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1832,7 +1836,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// Options by Symbol Realtime Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1910,7 +1914,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// Options by Symbol Realtime Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1931,7 +1935,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options by Symbol Realtime Returns the master list of realtime option contracts for a given symbol.
+        /// Options by Symbol Realtime Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2007,7 +2011,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2027,7 +2031,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2108,7 +2112,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2129,7 +2133,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns all options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2217,10 +2221,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>ApiResponseOptionsChainEod</returns>
-        public ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null)
+        public ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
         {
-             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = GetOptionsChainEodWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan);
+             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = GetOptionsChainEodWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date);
              return localVarResponse.Data;
         }
 
@@ -2234,10 +2239,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainEod</returns>
         
         
-        public ApiResponse< ApiResponseOptionsChainEod > GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null)
+        public ApiResponse< ApiResponseOptionsChainEod > GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -2274,6 +2280,7 @@ namespace Intrinio.SDK.Api
             if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2309,10 +2316,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainEod</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
         {
-             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = await GetOptionsChainEodAsyncWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan);
+             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = await GetOptionsChainEodAsyncWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date);
              return localVarResponse.Data;
 
         }
@@ -2327,8 +2335,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="date">The the date to retrieve prices for (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainEod)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -2365,6 +2374,7 @@ namespace Intrinio.SDK.Api
             if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2391,7 +2401,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Realtime Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Realtime Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2414,7 +2424,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Realtime Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Realtime Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2501,7 +2511,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Realtime Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Realtime Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2525,7 +2535,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Realtime Returns all realtime options contracts and their prices for the given symbol and expiration date.
+        /// Options Chain Realtime Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2610,7 +2620,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns all option contract expiration dates for a given symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2624,7 +2634,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns all option contract expiration dates for a given symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2690,7 +2700,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns all option contract expiration dates for a given symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2705,7 +2715,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns all option contract expiration dates for a given symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2769,7 +2779,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Returns all option prices for a given option contract identifier.
+        /// Option Prices Returns all price data from inception to expiration for a particular contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -2785,7 +2795,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Returns all option prices for a given option contract identifier.
+        /// Option Prices Returns all price data from inception to expiration for a particular contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -2855,7 +2865,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Returns all option prices for a given option contract identifier.
+        /// Option Prices Returns all price data from inception to expiration for a particular contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -2872,7 +2882,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Returns all option prices for a given option contract identifier.
+        /// Option Prices Returns all price data from inception to expiration for a particular contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -2940,7 +2950,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// Option Prices Batch Realtime Returns a list of latest price data for up to 250 option contracts per request.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -2953,7 +2963,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// Option Prices Batch Realtime Returns a list of latest price data for up to 250 option contracts per request.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -3025,7 +3035,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// Option Prices Batch Realtime Returns a list of latest price data for up to 250 option contracts per request.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -3039,7 +3049,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Prices Batch Realtime Returns options prices for a supplied list of option symbols.
+        /// Option Prices Batch Realtime Returns a list of latest price data for up to 250 option contracts per request.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
@@ -3409,7 +3419,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -3422,7 +3432,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -3486,7 +3496,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -3500,7 +3510,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+        /// Option Stats Realtime Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request prices for.</param>
@@ -3562,7 +3572,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// Options Unusual Activity Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -3575,7 +3585,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// Options Unusual Activity Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -3639,7 +3649,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// Options Unusual Activity Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -3653,7 +3663,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Returns unusual trades for a given identifier.
+        /// Options Unusual Activity Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -3910,7 +3920,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Universal Returns nusual trades for all underlying security symbols.
+        /// Options Unusual Activity Universal Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
@@ -3922,7 +3932,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Universal Returns nusual trades for all underlying security symbols.
+        /// Options Unusual Activity Universal Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
@@ -3981,7 +3991,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Universal Returns nusual trades for all underlying security symbols.
+        /// Options Unusual Activity Universal Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
@@ -3994,7 +4004,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Unusual Activity Universal Returns nusual trades for all underlying security symbols.
+        /// Options Unusual Activity Universal Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>

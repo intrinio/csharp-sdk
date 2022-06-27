@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Api
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// Returns a list of all securities available. Delisted securities included.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -50,7 +50,7 @@ namespace Intrinio.SDK.Api
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// Returns a list of all securities available. Delisted securities included.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -78,7 +78,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// Returns the Security with the given &#x60;identifier&#x60;
+        /// Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -89,7 +89,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// Returns the Security with the given &#x60;identifier&#x60;
+        /// Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -319,7 +319,7 @@ namespace Intrinio.SDK.Api
         /// Accumulation/Distribution Index
         /// </summary>
         /// <remarks>
-        /// Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -334,7 +334,7 @@ namespace Intrinio.SDK.Api
         /// Accumulation/Distribution Index
         /// </summary>
         /// <remarks>
-        /// Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -348,7 +348,7 @@ namespace Intrinio.SDK.Api
         /// Average Daily Trading Volume
         /// </summary>
         /// <remarks>
-        /// Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -364,7 +364,7 @@ namespace Intrinio.SDK.Api
         /// Average Daily Trading Volume
         /// </summary>
         /// <remarks>
-        /// Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -379,7 +379,7 @@ namespace Intrinio.SDK.Api
         /// Average Directional Index
         /// </summary>
         /// <remarks>
-        /// Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -395,7 +395,7 @@ namespace Intrinio.SDK.Api
         /// Average Directional Index
         /// </summary>
         /// <remarks>
-        /// Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -410,7 +410,7 @@ namespace Intrinio.SDK.Api
         /// Awesome Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -427,7 +427,7 @@ namespace Intrinio.SDK.Api
         /// Awesome Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -443,7 +443,7 @@ namespace Intrinio.SDK.Api
         /// Average True Range
         /// </summary>
         /// <remarks>
-        /// Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -459,7 +459,7 @@ namespace Intrinio.SDK.Api
         /// Average True Range
         /// </summary>
         /// <remarks>
-        /// Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -474,7 +474,7 @@ namespace Intrinio.SDK.Api
         /// Bollinger Bands
         /// </summary>
         /// <remarks>
-        /// Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -492,7 +492,7 @@ namespace Intrinio.SDK.Api
         /// Bollinger Bands
         /// </summary>
         /// <remarks>
-        /// Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -509,7 +509,7 @@ namespace Intrinio.SDK.Api
         /// Commodity Channel Index
         /// </summary>
         /// <remarks>
-        /// Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -526,7 +526,7 @@ namespace Intrinio.SDK.Api
         /// Commodity Channel Index
         /// </summary>
         /// <remarks>
-        /// Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -542,7 +542,7 @@ namespace Intrinio.SDK.Api
         /// Chaikin Money Flow
         /// </summary>
         /// <remarks>
-        /// Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -558,7 +558,7 @@ namespace Intrinio.SDK.Api
         /// Chaikin Money Flow
         /// </summary>
         /// <remarks>
-        /// Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -573,7 +573,7 @@ namespace Intrinio.SDK.Api
         /// Donchian Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -590,7 +590,7 @@ namespace Intrinio.SDK.Api
         /// Donchian Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -606,7 +606,7 @@ namespace Intrinio.SDK.Api
         /// Detrended Price Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -623,7 +623,7 @@ namespace Intrinio.SDK.Api
         /// Detrended Price Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -639,7 +639,7 @@ namespace Intrinio.SDK.Api
         /// Ease of Movement
         /// </summary>
         /// <remarks>
-        /// Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -655,7 +655,7 @@ namespace Intrinio.SDK.Api
         /// Ease of Movement
         /// </summary>
         /// <remarks>
-        /// Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -670,7 +670,7 @@ namespace Intrinio.SDK.Api
         /// Force Index
         /// </summary>
         /// <remarks>
-        /// Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -685,7 +685,7 @@ namespace Intrinio.SDK.Api
         /// Force Index
         /// </summary>
         /// <remarks>
-        /// Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -699,7 +699,7 @@ namespace Intrinio.SDK.Api
         /// Ichimoku Kinko Hyo
         /// </summary>
         /// <remarks>
-        /// Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -717,7 +717,7 @@ namespace Intrinio.SDK.Api
         /// Ichimoku Kinko Hyo
         /// </summary>
         /// <remarks>
-        /// Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -734,7 +734,7 @@ namespace Intrinio.SDK.Api
         /// Keltner Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -750,7 +750,7 @@ namespace Intrinio.SDK.Api
         /// Keltner Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -765,7 +765,7 @@ namespace Intrinio.SDK.Api
         /// Know Sure Thing
         /// </summary>
         /// <remarks>
-        /// Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -789,7 +789,7 @@ namespace Intrinio.SDK.Api
         /// Know Sure Thing
         /// </summary>
         /// <remarks>
-        /// Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -812,7 +812,7 @@ namespace Intrinio.SDK.Api
         /// Moving Average Convergence Divergence
         /// </summary>
         /// <remarks>
-        /// Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -831,7 +831,7 @@ namespace Intrinio.SDK.Api
         /// Moving Average Convergence Divergence
         /// </summary>
         /// <remarks>
-        /// Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -849,7 +849,7 @@ namespace Intrinio.SDK.Api
         /// Money Flow Index
         /// </summary>
         /// <remarks>
-        /// Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -865,7 +865,7 @@ namespace Intrinio.SDK.Api
         /// Money Flow Index
         /// </summary>
         /// <remarks>
-        /// Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -880,7 +880,7 @@ namespace Intrinio.SDK.Api
         /// Mass Index
         /// </summary>
         /// <remarks>
-        /// Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -897,7 +897,7 @@ namespace Intrinio.SDK.Api
         /// Mass Index
         /// </summary>
         /// <remarks>
-        /// Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -913,7 +913,7 @@ namespace Intrinio.SDK.Api
         /// Negative Volume Index
         /// </summary>
         /// <remarks>
-        /// Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -928,7 +928,7 @@ namespace Intrinio.SDK.Api
         /// Negative Volume Index
         /// </summary>
         /// <remarks>
-        /// Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -942,7 +942,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -957,7 +957,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -971,7 +971,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume Mean
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -987,7 +987,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume Mean
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1002,7 +1002,7 @@ namespace Intrinio.SDK.Api
         /// Relative Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1019,7 +1019,7 @@ namespace Intrinio.SDK.Api
         /// Relative Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1035,7 +1035,7 @@ namespace Intrinio.SDK.Api
         /// Simple Moving Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1052,7 +1052,7 @@ namespace Intrinio.SDK.Api
         /// Simple Moving Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1068,7 +1068,7 @@ namespace Intrinio.SDK.Api
         /// Stochastic Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1085,7 +1085,7 @@ namespace Intrinio.SDK.Api
         /// Stochastic Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1101,7 +1101,7 @@ namespace Intrinio.SDK.Api
         /// Triple Exponential Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1117,7 +1117,7 @@ namespace Intrinio.SDK.Api
         /// Triple Exponential Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1132,7 +1132,7 @@ namespace Intrinio.SDK.Api
         /// True Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1150,7 +1150,7 @@ namespace Intrinio.SDK.Api
         /// True Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1167,7 +1167,7 @@ namespace Intrinio.SDK.Api
         /// Ultimate Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1188,7 +1188,7 @@ namespace Intrinio.SDK.Api
         /// Ultimate Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1208,7 +1208,7 @@ namespace Intrinio.SDK.Api
         /// Vortex Indicator
         /// </summary>
         /// <remarks>
-        /// Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1224,7 +1224,7 @@ namespace Intrinio.SDK.Api
         /// Vortex Indicator
         /// </summary>
         /// <remarks>
-        /// Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1239,7 +1239,7 @@ namespace Intrinio.SDK.Api
         /// Volume-price Trend
         /// </summary>
         /// <remarks>
-        /// Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1254,7 +1254,7 @@ namespace Intrinio.SDK.Api
         /// Volume-price Trend
         /// </summary>
         /// <remarks>
-        /// Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1268,7 +1268,7 @@ namespace Intrinio.SDK.Api
         /// Volume Weighted Average Price
         /// </summary>
         /// <remarks>
-        /// Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1283,7 +1283,7 @@ namespace Intrinio.SDK.Api
         /// Volume Weighted Average Price
         /// </summary>
         /// <remarks>
-        /// Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1297,7 +1297,7 @@ namespace Intrinio.SDK.Api
         /// Williams %R
         /// </summary>
         /// <remarks>
-        /// Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1313,7 +1313,7 @@ namespace Intrinio.SDK.Api
         /// Williams %R
         /// </summary>
         /// <remarks>
-        /// Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1568,7 +1568,7 @@ namespace Intrinio.SDK.Api
         /// Search Securities
         /// </summary>
         /// <remarks>
-        /// Searches for Securities matching the text &#x60;query&#x60;
+        /// Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -1580,7 +1580,7 @@ namespace Intrinio.SDK.Api
         /// Search Securities
         /// </summary>
         /// <remarks>
-        /// Searches for Securities matching the text &#x60;query&#x60;
+        /// Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -1593,7 +1593,7 @@ namespace Intrinio.SDK.Api
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// Returns a list of all securities available. Delisted securities included.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -1622,7 +1622,7 @@ namespace Intrinio.SDK.Api
         /// All Securities
         /// </summary>
         /// <remarks>
-        /// Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// Returns a list of all securities available. Delisted securities included.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -1650,7 +1650,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// Returns the Security with the given &#x60;identifier&#x60;
+        /// Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1661,7 +1661,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Security
         /// </summary>
         /// <remarks>
-        /// Returns the Security with the given &#x60;identifier&#x60;
+        /// Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1891,7 +1891,7 @@ namespace Intrinio.SDK.Api
         /// Accumulation/Distribution Index
         /// </summary>
         /// <remarks>
-        /// Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1906,7 +1906,7 @@ namespace Intrinio.SDK.Api
         /// Accumulation/Distribution Index
         /// </summary>
         /// <remarks>
-        /// Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1920,7 +1920,7 @@ namespace Intrinio.SDK.Api
         /// Average Daily Trading Volume
         /// </summary>
         /// <remarks>
-        /// Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1936,7 +1936,7 @@ namespace Intrinio.SDK.Api
         /// Average Daily Trading Volume
         /// </summary>
         /// <remarks>
-        /// Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1951,7 +1951,7 @@ namespace Intrinio.SDK.Api
         /// Average Directional Index
         /// </summary>
         /// <remarks>
-        /// Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1967,7 +1967,7 @@ namespace Intrinio.SDK.Api
         /// Average Directional Index
         /// </summary>
         /// <remarks>
-        /// Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1982,7 +1982,7 @@ namespace Intrinio.SDK.Api
         /// Awesome Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1999,7 +1999,7 @@ namespace Intrinio.SDK.Api
         /// Awesome Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2015,7 +2015,7 @@ namespace Intrinio.SDK.Api
         /// Average True Range
         /// </summary>
         /// <remarks>
-        /// Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2031,7 +2031,7 @@ namespace Intrinio.SDK.Api
         /// Average True Range
         /// </summary>
         /// <remarks>
-        /// Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2046,7 +2046,7 @@ namespace Intrinio.SDK.Api
         /// Bollinger Bands
         /// </summary>
         /// <remarks>
-        /// Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2064,7 +2064,7 @@ namespace Intrinio.SDK.Api
         /// Bollinger Bands
         /// </summary>
         /// <remarks>
-        /// Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2081,7 +2081,7 @@ namespace Intrinio.SDK.Api
         /// Commodity Channel Index
         /// </summary>
         /// <remarks>
-        /// Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2098,7 +2098,7 @@ namespace Intrinio.SDK.Api
         /// Commodity Channel Index
         /// </summary>
         /// <remarks>
-        /// Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2114,7 +2114,7 @@ namespace Intrinio.SDK.Api
         /// Chaikin Money Flow
         /// </summary>
         /// <remarks>
-        /// Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2130,7 +2130,7 @@ namespace Intrinio.SDK.Api
         /// Chaikin Money Flow
         /// </summary>
         /// <remarks>
-        /// Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2145,7 +2145,7 @@ namespace Intrinio.SDK.Api
         /// Donchian Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2162,7 +2162,7 @@ namespace Intrinio.SDK.Api
         /// Donchian Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2178,7 +2178,7 @@ namespace Intrinio.SDK.Api
         /// Detrended Price Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2195,7 +2195,7 @@ namespace Intrinio.SDK.Api
         /// Detrended Price Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2211,7 +2211,7 @@ namespace Intrinio.SDK.Api
         /// Ease of Movement
         /// </summary>
         /// <remarks>
-        /// Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2227,7 +2227,7 @@ namespace Intrinio.SDK.Api
         /// Ease of Movement
         /// </summary>
         /// <remarks>
-        /// Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2242,7 +2242,7 @@ namespace Intrinio.SDK.Api
         /// Force Index
         /// </summary>
         /// <remarks>
-        /// Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2257,7 +2257,7 @@ namespace Intrinio.SDK.Api
         /// Force Index
         /// </summary>
         /// <remarks>
-        /// Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2271,7 +2271,7 @@ namespace Intrinio.SDK.Api
         /// Ichimoku Kinko Hyo
         /// </summary>
         /// <remarks>
-        /// Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2289,7 +2289,7 @@ namespace Intrinio.SDK.Api
         /// Ichimoku Kinko Hyo
         /// </summary>
         /// <remarks>
-        /// Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2306,7 +2306,7 @@ namespace Intrinio.SDK.Api
         /// Keltner Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2322,7 +2322,7 @@ namespace Intrinio.SDK.Api
         /// Keltner Channel
         /// </summary>
         /// <remarks>
-        /// Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2337,7 +2337,7 @@ namespace Intrinio.SDK.Api
         /// Know Sure Thing
         /// </summary>
         /// <remarks>
-        /// Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2361,7 +2361,7 @@ namespace Intrinio.SDK.Api
         /// Know Sure Thing
         /// </summary>
         /// <remarks>
-        /// Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2384,7 +2384,7 @@ namespace Intrinio.SDK.Api
         /// Moving Average Convergence Divergence
         /// </summary>
         /// <remarks>
-        /// Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2403,7 +2403,7 @@ namespace Intrinio.SDK.Api
         /// Moving Average Convergence Divergence
         /// </summary>
         /// <remarks>
-        /// Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2421,7 +2421,7 @@ namespace Intrinio.SDK.Api
         /// Money Flow Index
         /// </summary>
         /// <remarks>
-        /// Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2437,7 +2437,7 @@ namespace Intrinio.SDK.Api
         /// Money Flow Index
         /// </summary>
         /// <remarks>
-        /// Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2452,7 +2452,7 @@ namespace Intrinio.SDK.Api
         /// Mass Index
         /// </summary>
         /// <remarks>
-        /// Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2469,7 +2469,7 @@ namespace Intrinio.SDK.Api
         /// Mass Index
         /// </summary>
         /// <remarks>
-        /// Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2485,7 +2485,7 @@ namespace Intrinio.SDK.Api
         /// Negative Volume Index
         /// </summary>
         /// <remarks>
-        /// Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2500,7 +2500,7 @@ namespace Intrinio.SDK.Api
         /// Negative Volume Index
         /// </summary>
         /// <remarks>
-        /// Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2514,7 +2514,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2529,7 +2529,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2543,7 +2543,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume Mean
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2559,7 +2559,7 @@ namespace Intrinio.SDK.Api
         /// On-balance Volume Mean
         /// </summary>
         /// <remarks>
-        /// Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2574,7 +2574,7 @@ namespace Intrinio.SDK.Api
         /// Relative Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2591,7 +2591,7 @@ namespace Intrinio.SDK.Api
         /// Relative Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2607,7 +2607,7 @@ namespace Intrinio.SDK.Api
         /// Simple Moving Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2624,7 +2624,7 @@ namespace Intrinio.SDK.Api
         /// Simple Moving Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2640,7 +2640,7 @@ namespace Intrinio.SDK.Api
         /// Stochastic Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2657,7 +2657,7 @@ namespace Intrinio.SDK.Api
         /// Stochastic Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2673,7 +2673,7 @@ namespace Intrinio.SDK.Api
         /// Triple Exponential Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2689,7 +2689,7 @@ namespace Intrinio.SDK.Api
         /// Triple Exponential Average
         /// </summary>
         /// <remarks>
-        /// Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2704,7 +2704,7 @@ namespace Intrinio.SDK.Api
         /// True Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2722,7 +2722,7 @@ namespace Intrinio.SDK.Api
         /// True Strength Index
         /// </summary>
         /// <remarks>
-        /// Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2739,7 +2739,7 @@ namespace Intrinio.SDK.Api
         /// Ultimate Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2760,7 +2760,7 @@ namespace Intrinio.SDK.Api
         /// Ultimate Oscillator
         /// </summary>
         /// <remarks>
-        /// Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2780,7 +2780,7 @@ namespace Intrinio.SDK.Api
         /// Vortex Indicator
         /// </summary>
         /// <remarks>
-        /// Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2796,7 +2796,7 @@ namespace Intrinio.SDK.Api
         /// Vortex Indicator
         /// </summary>
         /// <remarks>
-        /// Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2811,7 +2811,7 @@ namespace Intrinio.SDK.Api
         /// Volume-price Trend
         /// </summary>
         /// <remarks>
-        /// Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2826,7 +2826,7 @@ namespace Intrinio.SDK.Api
         /// Volume-price Trend
         /// </summary>
         /// <remarks>
-        /// Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2840,7 +2840,7 @@ namespace Intrinio.SDK.Api
         /// Volume Weighted Average Price
         /// </summary>
         /// <remarks>
-        /// Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2855,7 +2855,7 @@ namespace Intrinio.SDK.Api
         /// Volume Weighted Average Price
         /// </summary>
         /// <remarks>
-        /// Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2869,7 +2869,7 @@ namespace Intrinio.SDK.Api
         /// Williams %R
         /// </summary>
         /// <remarks>
-        /// Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2885,7 +2885,7 @@ namespace Intrinio.SDK.Api
         /// Williams %R
         /// </summary>
         /// <remarks>
-        /// Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3140,7 +3140,7 @@ namespace Intrinio.SDK.Api
         /// Search Securities
         /// </summary>
         /// <remarks>
-        /// Searches for Securities matching the text &#x60;query&#x60;
+        /// Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -3152,7 +3152,7 @@ namespace Intrinio.SDK.Api
         /// Search Securities
         /// </summary>
         /// <remarks>
-        /// Searches for Securities matching the text &#x60;query&#x60;
+        /// Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -3260,7 +3260,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// All Securities Returns a list of all securities available. Delisted securities included.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -3290,7 +3290,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// All Securities Returns a list of all securities available. Delisted securities included.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -3385,7 +3385,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// All Securities Returns a list of all securities available. Delisted securities included.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -3416,7 +3416,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
+        /// All Securities Returns a list of all securities available. Delisted securities included.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="active">When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)</param>
@@ -3509,7 +3509,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
+        /// Lookup Security Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3521,7 +3521,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
+        /// Lookup Security Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3583,7 +3583,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
+        /// Lookup Security Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3596,7 +3596,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Security Returns the Security with the given &#x60;identifier&#x60;
+        /// Lookup Security Returns security reference data such as ticker, FIGI, primary exchange, CIK, and a unique security identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5042,7 +5042,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Accumulation/Distribution Index The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5058,7 +5058,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Accumulation/Distribution Index The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5128,7 +5128,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Accumulation/Distribution Index The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5145,7 +5145,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Accumulation/Distribution Index Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Accumulation/Distribution Index The Accumulation / Distribution Indicator is a volume-based technical indicator which uses the relationship between the stock&#x60;s price and volume flow to determine the underlying trend of a stock, up, down, or sideways trend of a stock.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5213,7 +5213,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5230,7 +5230,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5302,7 +5302,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5320,7 +5320,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Daily Trading Volume Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Daily Trading Volume Average Daily Trading Volume is the average number of shares traded over a given period, usually between 20 to 30 trading days.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5390,7 +5390,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Directional Index Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Directional Index The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5407,7 +5407,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Directional Index Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Directional Index The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5479,7 +5479,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Directional Index Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Directional Index The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5497,7 +5497,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average Directional Index Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average Directional Index The Average Directional Index indicator is often used to identify decreasing or increasing price momentum for an underlying security, it is composed of a total of three indicators, the current trendline (adx), a positive directional indicator (di_pos), and a negative directional indicator (di_neg).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5567,7 +5567,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Awesome Oscillator Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Awesome Oscillator The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5585,7 +5585,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Awesome Oscillator Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Awesome Oscillator The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5659,7 +5659,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Awesome Oscillator Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Awesome Oscillator The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5678,7 +5678,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Awesome Oscillator Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Awesome Oscillator The Awesome Oscillator (ao) is a momentum indicator and is calculated by taking the difference between the latest 5 period simple moving average and the 34 period simple moving average. Rather than using the closing price like other indicators, the Awesome Oscillator uses the latest period&#x60;s midpoint value (period_high - period_low / 2). The Awesome Oscillator is useful in identifying and trading, zero-line crossovers, twin-peaks trading, and bullish/bearish saucers - Awesome Oscillator is often aggregated with additional technical indicators.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5750,7 +5750,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average True Range Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average True Range The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5767,7 +5767,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average True Range Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average True Range The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5839,7 +5839,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average True Range Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average True Range The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5857,7 +5857,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Average True Range Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Average True Range The Average True Range (ATR) is a non-directional market volatility indicator often used to generate stop-out or entry indications. An increasing or expanding ATR typically indicates higher volatility, and a decreasing ATR indicates sideways price action and lower volatility.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5927,7 +5927,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bollinger Bands Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5946,7 +5946,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bollinger Bands Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6022,7 +6022,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bollinger Bands Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6042,7 +6042,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Bollinger Bands Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Bollinger Bands Bollinger Bands can be a useful technical analysis tool for generating oversold or overbought indicators. Bollinger Bands are composed of three lines, a simple moving average (middle band) and an upper and lower band – the upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but can be modified. Traders typically consider an underlying security to be overbought as the underlying&#x60;s price moves towards the upper band and oversold as the underlying price moves towards the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6116,7 +6116,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Commodity Channel Index Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Commodity Channel Index The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6134,7 +6134,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Commodity Channel Index Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Commodity Channel Index The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6208,7 +6208,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Commodity Channel Index Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Commodity Channel Index The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6227,7 +6227,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Commodity Channel Index Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Commodity Channel Index The Commodity Channel Index (CCI) is a technical indicator used to generate buy and sell signals by indicating periods of strength and weakness in the market. CCI signals that fall below -100 are often perceived as weakness in the underlying price movement and CCI signals that rise above 100 indicate strength behind the underlying price movement.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6299,7 +6299,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Chaikin Money Flow The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6316,7 +6316,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Chaikin Money Flow The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6388,7 +6388,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Chaikin Money Flow The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6406,7 +6406,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Chaikin Money Flow Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Chaikin Money Flow The Chaikin Money Flow (CMF) utilizes exponential moving averages as an indicator to monitor the flow of money and momentum. The CMF indicator oscillates around a midrange 0-line and ranges between 100 and -100.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6476,7 +6476,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Donchian Channel Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Donchian Channel The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6494,7 +6494,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Donchian Channel Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Donchian Channel The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6568,7 +6568,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Donchian Channel Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Donchian Channel The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6587,7 +6587,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Donchian Channel Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Donchian Channel The Donchian Channel consists of an Upper Bound (upper_bound) and Lower Bound (lower_bound) that track the recent highs and lows and is often used to signal entry and exit points for a position. As the price of the underlying symbol increases the Upper Bound raises, if the price becomes range bound the Upper Bound will remain flat and if the price begins to decrease, the Upper Bound will fall (and vice-versa for the Lower Bound).
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6659,7 +6659,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Detrended Price Oscillator The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6677,7 +6677,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Detrended Price Oscillator The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6751,7 +6751,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Detrended Price Oscillator The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6770,7 +6770,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Detrended Price Oscillator Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Detrended Price Oscillator The Detrended Price Oscillator (DPO) signals the peaks and troughs of the underlying symbol’s price for a set period of time and is often used by traders to estimate future peaks and troughs using this as guidance to enter or exit a position.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6842,7 +6842,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ease of Movement Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ease of Movement The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6859,7 +6859,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ease of Movement Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ease of Movement The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6931,7 +6931,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ease of Movement Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ease of Movement The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -6949,7 +6949,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ease of Movement Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ease of Movement The Ease of Movement (EOM) is a volume based oscillator that fluctuates around a midrange 0-line into positive and negative values. Positive values indicate that the underlying symbol&#x60;s price is rising with relative ease and negative value indicates the underlying symbol&#x60;s price is failing with relative ease.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7019,7 +7019,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Force Index Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Force Index The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7035,7 +7035,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Force Index Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Force Index The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7105,7 +7105,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Force Index Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Force Index The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7122,7 +7122,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Force Index Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Force Index The Force Index (FI) is an oscillator that takes into account the intensity of an underlying symbol&#x60;s price movement and its corresponding volume. It is used to confirm price breakouts and signal underlying trends.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7190,7 +7190,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ichimoku Kinko Hyo The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7209,7 +7209,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ichimoku Kinko Hyo The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7285,7 +7285,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ichimoku Kinko Hyo The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7305,7 +7305,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ichimoku Kinko Hyo Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ichimoku Kinko Hyo The Ichimoku Kinko Hyo was designed to be an all-in-one trading indicator that could help traders determine momentum, support, and resistance.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7379,7 +7379,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Keltner Channel Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Keltner Channel The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7396,7 +7396,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Keltner Channel Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Keltner Channel The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7468,7 +7468,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Keltner Channel Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Keltner Channel The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7486,7 +7486,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Keltner Channel Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Keltner Channel The Keltner Channel is a volatility based signal, with upper, middle, and lower bands. It is often used at market open, when the largest moves tend to occur. In general, traders tend to buy if the price breaks up above the upper band or sell short if the price drops below the lower band.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7556,7 +7556,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Know Sure Thing Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Know Sure Thing The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7581,7 +7581,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Know Sure Thing Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Know Sure Thing The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7669,7 +7669,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Know Sure Thing Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Know Sure Thing The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7695,7 +7695,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Know Sure Thing Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Know Sure Thing The Know Sure Thing indicator (KST) is a momentum based oscillator that is calculated by measuring the momentum of four separate price cycles. KST fluctuates above and below a zero line and is used to identify overbought and oversold conditions, and is often used with additional indicators to boost signal strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7781,7 +7781,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving Average Convergence Divergence Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7801,7 +7801,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving Average Convergence Divergence Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7879,7 +7879,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving Average Convergence Divergence Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7900,7 +7900,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Moving Average Convergence Divergence Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Moving Average Convergence Divergence Moving average convergence divergence (MACD) is a trend-following momentum oscillator that consists of three indicators: (1) a 12 period short-term exponential moving average (EMA) a 26 period long-term EMA and a 9 period EMA signal line. Traders using MACD often look for signal line crossovers, centerline crossovers, and EMA divergences to indicate the momentum and underlying trend of a security&#x60;s price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7976,7 +7976,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Money Flow Index Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Money Flow Index The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -7993,7 +7993,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Money Flow Index Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Money Flow Index The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8065,7 +8065,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Money Flow Index Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Money Flow Index The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8083,7 +8083,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Money Flow Index Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Money Flow Index The Money Flow Index (MFI) is a technical oscillator that incorporates both price and volume, moving between 0 and 100. Traders often consider a MFI above 80 as overbought conditions and below 20 as oversold conditions.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8153,7 +8153,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Mass Index Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Mass Index The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8171,7 +8171,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Mass Index Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Mass Index The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8245,7 +8245,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Mass Index Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Mass Index The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8264,7 +8264,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Mass Index Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Mass Index The mass index (MI) is a technical indicator used by traders to predict trend reversals. A trend reversal signal is said to occur when the 25-day MI reaches 27.0 and then falls below 26.0.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8336,7 +8336,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Negative Volume Index Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Negative Volume Index The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8352,7 +8352,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Negative Volume Index Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Negative Volume Index The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8422,7 +8422,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Negative Volume Index Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Negative Volume Index The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8439,7 +8439,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Negative Volume Index Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Negative Volume Index The negative volume index (NVI) is often referred to as the &#x60;smart money indicator.&#x60; It works by the assumption that smart money (institutional money) is at work when volume decreases and vice versa when volume increases. NVI starts at 1000 and increases in regard to the percentage price change when volume decreases over a 255-day EMA period. Traders often use this technical indicator when researching broder markets and indices.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8507,7 +8507,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8523,7 +8523,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8593,7 +8593,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8610,7 +8610,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume On-balance volume (OBV) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. When both OBV and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8678,7 +8678,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume Mean On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8695,7 +8695,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume Mean On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8767,7 +8767,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume Mean On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8785,7 +8785,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// On-balance Volume Mean Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// On-balance Volume Mean On-balance volume mean (OBVM) is a leading momentum indicator that uses the increase/decrease flow in volume to predict upcoming stock price changes. The difference between OBV and OBVM is that OBVM takes the mean average of a provided period.  When both OBVM and a security&#x60;s price are making higher highs, it is presumed the upward trend is likely to continue and vice versa.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8855,7 +8855,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Relative Strength Index Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative Strength Index Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8873,7 +8873,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Relative Strength Index Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative Strength Index Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8947,7 +8947,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Relative Strength Index Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative Strength Index Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -8966,7 +8966,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Relative Strength Index Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Relative Strength Index Relative strength index (RSI) is a momentum oscillator that ranges between 0 and 100. Traders believe that an RSI value over 70 indicates that a security is overbought and an RSI under 30 indicates that a security is oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9038,7 +9038,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Simple Moving Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Simple Moving Average A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9056,7 +9056,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Simple Moving Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Simple Moving Average A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9130,7 +9130,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Simple Moving Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Simple Moving Average A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9149,7 +9149,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Simple Moving Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Simple Moving Average A simple moving average (SMA) adds recent prices for a specified period and divides the total by that same number of periods. SMA is typically used to indicate whether a security is in an uptrend or downtrend and can also be combined with a long-term moving average to improve the signal&#x60;s abilities.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9221,7 +9221,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Stochastic Oscillator The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9239,7 +9239,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Stochastic Oscillator The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9313,7 +9313,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Stochastic Oscillator The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9332,7 +9332,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Stochastic Oscillator Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Stochastic Oscillator The Stochastic Oscillator (SO) is a range-bound momentum indicator that ranges from 0 to 100 and follows the velocity of the momentum itself, not the underlying price or volume. When SO is above 80 it indicates that a security is trading at the high end of its period&#x60;s high-low range and vice versa if the reading is below 20.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9404,7 +9404,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Triple Exponential Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Triple Exponential Average The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9421,7 +9421,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Triple Exponential Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Triple Exponential Average The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9493,7 +9493,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Triple Exponential Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Triple Exponential Average The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9511,7 +9511,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Triple Exponential Average Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Triple Exponential Average The Triple Exponential Average (TEA) is a momentum indicator used to identify when a security is oversold and overbought. By exponentially smoothing out the underlying security&#x60;s moving average, the TEA  filters out insignificant price movements. A positive TEA is often believed to indicate momentum is increasing and a negative TEA indicates that momentum is decreasing.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9581,7 +9581,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// True Strength Index Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// True Strength Index The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9600,7 +9600,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// True Strength Index Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// True Strength Index The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9676,7 +9676,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// True Strength Index Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// True Strength Index The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9696,7 +9696,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// True Strength Index Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// True Strength Index The True Strength Index (TSI) is a momentum oscillator used to identify building trends and trend reversals, typically by signalling overbought and oversold conditions. TSI fluctuates between positive and negative values, and traders typically combine its signal with other momentum oscillators to increase its strength. When TSI crosses the signal line into positive territory it is presumed to be an entrance opportunity and vice versa when the TSI crosses into negative territory.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9770,7 +9770,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ultimate Oscillator The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9792,7 +9792,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ultimate Oscillator The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9874,7 +9874,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ultimate Oscillator The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9897,7 +9897,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Ultimate Oscillator Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Ultimate Oscillator The Ultimate Oscillator (UO) is a range bound technical indicator that moves between 0 and 100 and is calculated with 3 timeframes, typically 7, 14, and 28 day periods. When UO&#x60;s value is above 70 a security is categorized as overbought and when UO&#x60;s value is below 30 a security is categorized as oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9977,7 +9977,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Vortex Indicator Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Vortex Indicator The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -9994,7 +9994,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Vortex Indicator Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Vortex Indicator The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10066,7 +10066,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Vortex Indicator Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Vortex Indicator The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10084,7 +10084,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Vortex Indicator Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Vortex Indicator The Vortex Indicator (VI) is composed of an uptrend line (VI+) and a downtrend line (VI-). When VI+ crosses VI- from below it typically indicates an entry into a given security. When VI- crosses VI+ from below it typically triggers an exit and that the current trend is reversing course.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10154,7 +10154,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume-price Trend Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume-price Trend The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10170,7 +10170,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume-price Trend Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume-price Trend The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10240,7 +10240,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume-price Trend Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume-price Trend The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10257,7 +10257,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume-price Trend Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume-price Trend The volume price trend (VPT) is a technical indicator that uses price &amp; volume to determine whether a trend is established. Typically, when a security is trending upwards, there is more volume on positive days than negative ones, and as a result VPT should be increasing on these days as well. However, if VPT fails to increase past its previous high during an outbreak, this is suggested to indicate the rally is losing strength.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10325,7 +10325,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10341,7 +10341,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10411,7 +10411,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10428,7 +10428,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Volume Weighted Average Price Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Volume Weighted Average Price Volume Weighted Average Price (VWAP) is a lagging technical indicator that is used in combination with a security&#x60;s price. When the underlying price rises above its VWAP, it is often interpreted as a bullish signal, and vice versa in the opposite direction.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10496,7 +10496,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Williams %R Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10513,7 +10513,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Williams %R Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10585,7 +10585,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Williams %R Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -10603,7 +10603,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Williams %R Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
+        /// Williams %R Williams %R is a momentum indicator used to determine overbought and oversold environments for a security and fluctuates between 0 and -100. When Williams %R is above -20 the security is considered to be overbought and when Williams %R is under -80 the security is considered to be oversold.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -12075,7 +12075,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Securities Searches for Securities matching the text &#x60;query&#x60;
+        /// Search Securities Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -12088,7 +12088,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Securities Searches for Securities matching the text &#x60;query&#x60;
+        /// Search Securities Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -12152,7 +12152,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Securities Searches for Securities matching the text &#x60;query&#x60;
+        /// Search Securities Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -12166,7 +12166,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Securities Searches for Securities matching the text &#x60;query&#x60;
+        /// Search Securities Search the securities database and return a list of securities matching the text query parameter passed through. Query parameter searches across the security ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>

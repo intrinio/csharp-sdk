@@ -165,7 +165,8 @@ namespace Intrinio.SDK.Test
             //decimal? strike = null;
             //decimal? strikeGreaterThan = null;
             //decimal? strikeLessThan = null;
-            //var response = instance.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan);
+            //DateTime? date = null;
+            //var response = instance.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date);
             //Assert.IsInstanceOf<ApiResponseOptionsChainEod> (response, "response is ApiResponseOptionsChainEod");
         }
         

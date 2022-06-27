@@ -30,13 +30,15 @@ namespace Intrinio.SDK.Model
         /// <param name="Gamma">Gamma represents the rate of change between an option&#39;s delta and the underlying asset&#39;s price..</param>
         /// <param name="Theta">Theta represents the rate of change between the option price and time, or time sensitivity - sometimes known as an option&#39;s time decay..</param>
         /// <param name="Vega">Vega represents the rate of change between an option&#39;s value and the underlying asset&#39;s implied volatility..</param>
-        public OptionStatsRealtime(decimal? ImpliedVolatility = default(decimal?), decimal? Delta = default(decimal?), decimal? Gamma = default(decimal?), decimal? Theta = default(decimal?), decimal? Vega = default(decimal?))
+        /// <param name="UnderlyingPrice">The most recent trade price of the underlying asset..</param>
+        public OptionStatsRealtime(decimal? ImpliedVolatility = default(decimal?), decimal? Delta = default(decimal?), decimal? Gamma = default(decimal?), decimal? Theta = default(decimal?), decimal? Vega = default(decimal?), decimal? UnderlyingPrice = default(decimal?))
         {
             this.ImpliedVolatility = ImpliedVolatility;
             this.Delta = Delta;
             this.Gamma = Gamma;
             this.Theta = Theta;
             this.Vega = Vega;
+            this.UnderlyingPrice = UnderlyingPrice;
         }
         
         /// <summary>
@@ -75,6 +77,13 @@ namespace Intrinio.SDK.Model
         public decimal? Vega { get; set; }
 
         /// <summary>
+        /// The most recent trade price of the underlying asset.
+        /// </summary>
+        /// <value>The most recent trade price of the underlying asset.</value>
+        [DataMember(Name="underlying_price", EmitDefaultValue=false)]
+        public decimal? UnderlyingPrice { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -87,6 +96,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Gamma: ").Append(Gamma).Append("\n");
             sb.Append("  Theta: ").Append(Theta).Append("\n");
             sb.Append("  Vega: ").Append(Vega).Append("\n");
+            sb.Append("  UnderlyingPrice: ").Append(UnderlyingPrice).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,6 +155,11 @@ namespace Intrinio.SDK.Model
                     this.Vega == input.Vega ||
                     (this.Vega != null &&
                     this.Vega.Equals(input.Vega))
+                ) && 
+                (
+                    this.UnderlyingPrice == input.UnderlyingPrice ||
+                    (this.UnderlyingPrice != null &&
+                    this.UnderlyingPrice.Equals(input.UnderlyingPrice))
                 );
         }
 
@@ -167,6 +182,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Theta.GetHashCode();
                 if (this.Vega != null)
                     hashCode = hashCode * 59 + this.Vega.GetHashCode();
+                if (this.UnderlyingPrice != null)
+                    hashCode = hashCode * 59 + this.UnderlyingPrice.GetHashCode();
                 return hashCode;
             }
         }

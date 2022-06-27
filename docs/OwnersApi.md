@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOwnerInstitutionalHoldings InstitutionalHoldingsByOwner (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null)
+> ApiResponseOwnerInstitutionalHoldings InstitutionalHoldingsByOwner (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null)
 
 #### Institutional Holdings by Owner
 
@@ -348,7 +348,7 @@ namespace Example
       
       string identifier = 430692;
       int? pageSize = 100;
-      var asOfDate = new Object();
+      DateTime? asOfDate = DateTime.Parse("2021-01-05");
       string nextPage = null;
       
       ApiResponseOwnerInstitutionalHoldings result = ownersApi.InstitutionalHoldingsByOwner(identifier, pageSize, asOfDate, nextPage);
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| The Central Index Key issued by the SEC, which is the unique identifier all owner filings are issued under. |  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
- **asOfDate** | [**Object**](Object.md)| Return only holdings filed before this date. | [optional]  &nbsp;
+ **asOfDate** | DateTime?| Return only holdings filed before this date. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

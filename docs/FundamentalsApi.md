@@ -4,12 +4,119 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**FilterFundamental**](FundamentalsApi.md#filterfundamental) | **GET** /fundamentals | Filter Fundamental
 [**GetFundamentalById**](FundamentalsApi.md#getfundamentalbyid) | **GET** /fundamentals/{id} | Fundamental by ID
 [**GetFundamentalReportedFinancials**](FundamentalsApi.md#getfundamentalreportedfinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 [**GetFundamentalStandardizedFinancials**](FundamentalsApi.md#getfundamentalstandardizedfinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
 [**GetFundamentalStandardizedFinancialsDimensions**](FundamentalsApi.md#getfundamentalstandardizedfinancialsdimensions) | **GET** /fundamentals/{id}/standardized_financials/dimensions/{tag} | Standardized Financials Dimensions
 [**LookupFundamental**](FundamentalsApi.md#lookupfundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.FundamentalsApi)
+
+[//]: # (METHOD:FilterFundamental)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.Fundamental)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:Fundamental.md)
+
+[//]: # (OPERATION:FilterFundamental_v2)
+
+[//]: # (ENDPOINT:/fundamentals)
+
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#filterfundamental)
+
+<a name="filterfundamental"></a>
+## **FilterFundamental**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/FilterFundamental_v2)
+
+[//]: # (START_OVERVIEW)
+
+> Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+
+#### Filter Fundamental
+
+Returns fundamentals that meet the set of filters specified in parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class FilterFundamentalExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var fundamentalsApi = new FundamentalsApi();
+      
+      DateTime? filedAfter = DateTime.Parse("2022-01-01");
+      DateTime? filedBefore = DateTime.Parse("2022-12-01");
+      bool? reportedOnly = false;
+      int? fiscalYear = 2017;
+      string statementCode = null;
+      string type = false;
+      string fiscalPeriod = "FY";
+      DateTime? startDate = DateTime.Parse("2022-01-01");
+      DateTime? endDate = DateTime.Parse("2022-12-01");
+      string nextPage = null;
+      
+      Fundamental result = fundamentalsApi.FilterFundamental(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filedAfter** | DateTime?| Only include fundamentals that were filed on or after this date. | [optional]  &nbsp;
+ **filedBefore** | DateTime?| Only include fundamentals that were filed on or before this date. | [optional]  &nbsp;
+ **reportedOnly** | bool?| Only as-reported fundamentals | [optional]  &nbsp;
+ **fiscalYear** | int?| Only for the given fiscal year | [optional]  &nbsp;
+ **statementCode** | string| Only of the given statement code | [optional]  &nbsp;
+ **type** | string| Only of the given type | [optional]  &nbsp;
+ **fiscalPeriod** | string| The fiscal period | [optional]  &nbsp;
+ **startDate** | DateTime?| Only include fundamentals where covered period is on or after this date. | [optional]  &nbsp;
+ **endDate** | DateTime?| Only include fundamentals where covered period is on or before this date. | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**Fundamental**](Fundamental.md)
+
+[//]: # (END_OPERATION)
 
 
 [//]: # (START_OPERATION)
@@ -41,7 +148,7 @@ Method | HTTP request | Description
 
 #### Fundamental by ID
 
-Returns detailed fundamental data for the given `id`.
+Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
 
 [//]: # (END_OVERVIEW)
 
@@ -129,7 +236,7 @@ Name | Type | Description  | Notes
 
 #### Reported Financials
 
-Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
 
 [//]: # (END_OVERVIEW)
 
@@ -217,7 +324,7 @@ Name | Type | Description  | Notes
 
 #### Standardized Financials
 
-Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies' fundamentals.
+Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
 
 [//]: # (END_OVERVIEW)
 
@@ -395,7 +502,7 @@ Name | Type | Description  | Notes
 
 #### Lookup Fundamental
 
-Returns the Fundamental for the Company with the given `identifier` and with the given parameters
+Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
 
 [//]: # (END_OVERVIEW)
 

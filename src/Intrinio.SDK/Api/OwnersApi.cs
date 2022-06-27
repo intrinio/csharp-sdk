@@ -104,7 +104,7 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOwnerInstitutionalHoldings</returns>
-        ApiResponseOwnerInstitutionalHoldings InstitutionalHoldingsByOwner (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null);
+        ApiResponseOwnerInstitutionalHoldings InstitutionalHoldingsByOwner (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null);
 
         /// <summary>
         /// Institutional Holdings by Owner
@@ -118,7 +118,7 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOwnerInstitutionalHoldings</returns>
-        ApiResponse<ApiResponseOwnerInstitutionalHoldings> InstitutionalHoldingsByOwnerWithHttpInfo (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null);
+        ApiResponse<ApiResponseOwnerInstitutionalHoldings> InstitutionalHoldingsByOwnerWithHttpInfo (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null);
         /// <summary>
         /// Search Owners
         /// </summary>
@@ -235,7 +235,7 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOwnerInstitutionalHoldings</returns>
-        System.Threading.Tasks.Task<ApiResponseOwnerInstitutionalHoldings> InstitutionalHoldingsByOwnerAsync (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseOwnerInstitutionalHoldings> InstitutionalHoldingsByOwnerAsync (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null);
 
         /// <summary>
         /// Institutional Holdings by Owner
@@ -249,7 +249,7 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOwnerInstitutionalHoldings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInstitutionalHoldings>> InstitutionalHoldingsByOwnerAsyncWithHttpInfo (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInstitutionalHoldings>> InstitutionalHoldingsByOwnerAsyncWithHttpInfo (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null);
         /// <summary>
         /// Search Owners
         /// </summary>
@@ -857,7 +857,7 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOwnerInstitutionalHoldings</returns>
-        public ApiResponseOwnerInstitutionalHoldings InstitutionalHoldingsByOwner (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null)
+        public ApiResponseOwnerInstitutionalHoldings InstitutionalHoldingsByOwner (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null)
         {
              ApiResponse<ApiResponseOwnerInstitutionalHoldings> localVarResponse = InstitutionalHoldingsByOwnerWithHttpInfo(identifier, pageSize, asOfDate, nextPage);
              return localVarResponse.Data;
@@ -874,7 +874,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOwnerInstitutionalHoldings</returns>
         
         
-        public ApiResponse< ApiResponseOwnerInstitutionalHoldings > InstitutionalHoldingsByOwnerWithHttpInfo (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null)
+        public ApiResponse< ApiResponseOwnerInstitutionalHoldings > InstitutionalHoldingsByOwnerWithHttpInfo (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -940,7 +940,7 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOwnerInstitutionalHoldings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOwnerInstitutionalHoldings> InstitutionalHoldingsByOwnerAsync (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseOwnerInstitutionalHoldings> InstitutionalHoldingsByOwnerAsync (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null)
         {
              ApiResponse<ApiResponseOwnerInstitutionalHoldings> localVarResponse = await InstitutionalHoldingsByOwnerAsyncWithHttpInfo(identifier, pageSize, asOfDate, nextPage);
              return localVarResponse.Data;
@@ -956,7 +956,7 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOwnerInstitutionalHoldings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInstitutionalHoldings>> InstitutionalHoldingsByOwnerAsyncWithHttpInfo (string identifier, int? pageSize = null, Object asOfDate = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOwnerInstitutionalHoldings>> InstitutionalHoldingsByOwnerAsyncWithHttpInfo (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)

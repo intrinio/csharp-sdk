@@ -62,7 +62,7 @@ namespace Intrinio.SDK.Api
         /// All News
         /// </summary>
         /// <remarks>
-        /// Returns all News for all Companies
+        /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -74,7 +74,7 @@ namespace Intrinio.SDK.Api
         /// All News
         /// </summary>
         /// <remarks>
-        /// Returns all News for all Companies
+        /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -85,7 +85,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Company
         /// </summary>
         /// <remarks>
-        /// Returns the Company with the given &#x60;identifier&#x60;
+        /// Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -96,7 +96,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Company
         /// </summary>
         /// <remarks>
-        /// Returns the Company with the given &#x60;identifier&#x60;
+        /// Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -129,7 +129,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -141,7 +141,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -152,7 +152,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -164,7 +164,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -208,7 +208,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Company
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -229,7 +229,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Company
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -286,11 +286,11 @@ namespace Intrinio.SDK.Api
         /// IPOs
         /// </summary>
         /// <remarks>
-        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -304,11 +304,11 @@ namespace Intrinio.SDK.Api
         /// IPOs
         /// </summary>
         /// <remarks>
-        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -321,7 +321,7 @@ namespace Intrinio.SDK.Api
         /// All News by Company
         /// </summary>
         /// <remarks>
-        /// Returns news for the Company with the given &#x60;identifier&#x60;
+        /// Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -334,7 +334,7 @@ namespace Intrinio.SDK.Api
         /// All News by Company
         /// </summary>
         /// <remarks>
-        /// Returns news for the Company with the given &#x60;identifier&#x60;
+        /// Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -346,7 +346,7 @@ namespace Intrinio.SDK.Api
         /// All Securities by Company
         /// </summary>
         /// <remarks>
-        /// Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -358,7 +358,7 @@ namespace Intrinio.SDK.Api
         /// All Securities by Company
         /// </summary>
         /// <remarks>
-        /// Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -475,7 +475,7 @@ namespace Intrinio.SDK.Api
         /// Search Companies
         /// </summary>
         /// <remarks>
-        /// Searches for Companies matching the text &#x60;query&#x60;
+        /// Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -488,7 +488,7 @@ namespace Intrinio.SDK.Api
         /// Search Companies
         /// </summary>
         /// <remarks>
-        /// Searches for Companies matching the text &#x60;query&#x60;
+        /// Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -500,7 +500,7 @@ namespace Intrinio.SDK.Api
         /// Shares Outstanding by Company
         /// </summary>
         /// <remarks>
-        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -511,7 +511,7 @@ namespace Intrinio.SDK.Api
         /// Shares Outstanding by Company
         /// </summary>
         /// <remarks>
-        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -564,7 +564,7 @@ namespace Intrinio.SDK.Api
         /// All News
         /// </summary>
         /// <remarks>
-        /// Returns all News for all Companies
+        /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -576,7 +576,7 @@ namespace Intrinio.SDK.Api
         /// All News
         /// </summary>
         /// <remarks>
-        /// Returns all News for all Companies
+        /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -587,7 +587,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Company
         /// </summary>
         /// <remarks>
-        /// Returns the Company with the given &#x60;identifier&#x60;
+        /// Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -598,7 +598,7 @@ namespace Intrinio.SDK.Api
         /// Lookup Company
         /// </summary>
         /// <remarks>
-        /// Returns the Company with the given &#x60;identifier&#x60;
+        /// Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -631,7 +631,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -643,7 +643,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -654,7 +654,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -666,7 +666,7 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company
         /// </summary>
         /// <remarks>
-        /// Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -710,7 +710,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Company
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -731,7 +731,7 @@ namespace Intrinio.SDK.Api
         /// All Fundamentals by Company
         /// </summary>
         /// <remarks>
-        /// Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -788,11 +788,11 @@ namespace Intrinio.SDK.Api
         /// IPOs
         /// </summary>
         /// <remarks>
-        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -806,11 +806,11 @@ namespace Intrinio.SDK.Api
         /// IPOs
         /// </summary>
         /// <remarks>
-        /// Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -823,7 +823,7 @@ namespace Intrinio.SDK.Api
         /// All News by Company
         /// </summary>
         /// <remarks>
-        /// Returns news for the Company with the given &#x60;identifier&#x60;
+        /// Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -836,7 +836,7 @@ namespace Intrinio.SDK.Api
         /// All News by Company
         /// </summary>
         /// <remarks>
-        /// Returns news for the Company with the given &#x60;identifier&#x60;
+        /// Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -848,7 +848,7 @@ namespace Intrinio.SDK.Api
         /// All Securities by Company
         /// </summary>
         /// <remarks>
-        /// Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -860,7 +860,7 @@ namespace Intrinio.SDK.Api
         /// All Securities by Company
         /// </summary>
         /// <remarks>
-        /// Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -977,7 +977,7 @@ namespace Intrinio.SDK.Api
         /// Search Companies
         /// </summary>
         /// <remarks>
-        /// Searches for Companies matching the text &#x60;query&#x60;
+        /// Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -990,7 +990,7 @@ namespace Intrinio.SDK.Api
         /// Search Companies
         /// </summary>
         /// <remarks>
-        /// Searches for Companies matching the text &#x60;query&#x60;
+        /// Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -1002,7 +1002,7 @@ namespace Intrinio.SDK.Api
         /// Shares Outstanding by Company
         /// </summary>
         /// <remarks>
-        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1013,7 +1013,7 @@ namespace Intrinio.SDK.Api
         /// Shares Outstanding by Company
         /// </summary>
         /// <remarks>
-        /// Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1321,7 +1321,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News Returns all News for all Companies
+        /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1334,7 +1334,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News Returns all News for all Companies
+        /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1395,7 +1395,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News Returns all News for all Companies
+        /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1409,7 +1409,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News Returns all News for all Companies
+        /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
@@ -1468,7 +1468,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Company Returns the Company with the given &#x60;identifier&#x60;
+        /// Lookup Company Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1480,7 +1480,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Company Returns the Company with the given &#x60;identifier&#x60;
+        /// Lookup Company Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1542,7 +1542,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Company Returns the Company with the given &#x60;identifier&#x60;
+        /// Lookup Company Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1555,7 +1555,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup Company Returns the Company with the given &#x60;identifier&#x60;
+        /// Lookup Company Returns company reference and metadata such as tickers, CIK, and a unique company identifier, as well as company metadata such as business description, employee count, and company URL.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1774,7 +1774,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1787,7 +1787,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1854,7 +1854,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1868,7 +1868,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) for Company Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1933,7 +1933,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -1946,7 +1946,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2013,7 +2013,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2027,7 +2027,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) for Company Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
+        /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2275,7 +2275,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Company Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Company Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2297,7 +2297,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Company Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Company Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2379,7 +2379,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Company Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Company Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2402,7 +2402,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Fundamentals by Company Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
+        /// All Fundamentals by Company Returns a list of fundamentals with unique fundamental IDs associated with a particular company. Useful to obtain all historical and/or latest fundamental IDs for a given company to then use to loop through and pull all fundamental data available.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2683,11 +2683,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// IPOs Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -2702,11 +2702,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// IPOs Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -2775,11 +2775,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// IPOs Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -2795,11 +2795,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// IPOs Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+        /// IPOs Returns a list of historical, current, and upcoming initial public offerings (IPOs) across the major US Exchanges. Includes relevant information such as the IPO status, the offer amount, the total share count and target share price.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ticker">Return IPOs with the given ticker (typically the IPO for the company) (optional)</param>
-        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
+        /// <param name="status">Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occurred and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)</param>
         /// <param name="startDate">Return IPOs on or after the given date (optional)</param>
         /// <param name="endDate">Return IPOs on or before the given date (optional)</param>
         /// <param name="offerAmountGreaterThan">Return IPOs with an offer dollar amount greater than the given amount (optional)</param>
@@ -2866,7 +2866,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News by Company Returns news for the Company with the given &#x60;identifier&#x60;
+        /// All News by Company Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2880,7 +2880,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News by Company Returns news for the Company with the given &#x60;identifier&#x60;
+        /// All News by Company Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2946,7 +2946,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News by Company Returns news for the Company with the given &#x60;identifier&#x60;
+        /// All News by Company Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -2961,7 +2961,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All News by Company Returns news for the Company with the given &#x60;identifier&#x60;
+        /// All News by Company Returns the latest and historical news article links, headlines and summaries for a specified US traded company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -3025,7 +3025,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities by Company Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// All Securities by Company Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -3038,7 +3038,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities by Company Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// All Securities by Company Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -3102,7 +3102,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities by Company Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// All Securities by Company Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -3116,7 +3116,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All Securities by Company Returns Securities for the Company with the given &#x60;identifier&#x60;
+        /// All Securities by Company Returns a list of underlying securities with associated reference data tied to a given company identifier.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -3850,7 +3850,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Companies Searches for Companies matching the text &#x60;query&#x60;
+        /// Search Companies Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -3864,7 +3864,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Companies Searches for Companies matching the text &#x60;query&#x60;
+        /// Search Companies Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -3930,7 +3930,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Companies Searches for Companies matching the text &#x60;query&#x60;
+        /// Search Companies Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -3945,7 +3945,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search Companies Searches for Companies matching the text &#x60;query&#x60;
+        /// Search Companies Search the companies database and return a list of companies matching the text query parameter passed through. Query parameter searches across the company ticker and name.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Search parameters</param>
@@ -4009,7 +4009,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Shares Outstanding by Company Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -4021,7 +4021,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Shares Outstanding by Company Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -4083,7 +4083,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Shares Outstanding by Company Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
@@ -4096,7 +4096,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Shares Outstanding by Company Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+        /// Shares Outstanding by Company Returns the shares outstanding reported on the front cover of the SEC 10-K and 10-Q filings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>

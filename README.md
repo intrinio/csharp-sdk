@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.27.5
-- Package version: 5.20.0
+- API version: 2.28.0
+- Package version: 5.21.0
 
 
 <a name="frameworks-supported"></a>
@@ -149,6 +149,9 @@ Class | Method | HTTP request | Description
 *DataTagApi* | [**GetAllDataTags**](docs/DataTagApi.md#getalldatatags) | **GET** /data_tags | All Data Tags
 *DataTagApi* | [**GetDataTagById**](docs/DataTagApi.md#getdatatagbyid) | **GET** /data_tags/{identifier} | Lookup Data Tag
 *DataTagApi* | [**SearchDataTags**](docs/DataTagApi.md#searchdatatags) | **GET** /data_tags/search | Search Data Tags
+*ESGApi* | [**GetEsgCompanies**](docs/ESGApi.md#getesgcompanies) | **GET** /esg/companies | ESG Companies
+*ESGApi* | [**GetEsgCompanyRatings**](docs/ESGApi.md#getesgcompanyratings) | **GET** /esg/{identifier} | ESG Company Ratings History
+*ESGApi* | [**GetEsgLatest**](docs/ESGApi.md#getesglatest) | **GET** /esg | ESG Latest
 *ETFsApi* | [**GetAllEtfs**](docs/ETFsApi.md#getalletfs) | **GET** /etfs | All ETFs
 *ETFsApi* | [**GetEtf**](docs/ETFsApi.md#getetf) | **GET** /etfs/{identifier} | Lookup ETF
 *ETFsApi* | [**GetEtfAnalytics**](docs/ETFsApi.md#getetfanalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
@@ -169,6 +172,7 @@ Class | Method | HTTP request | Description
 *ForexApi* | [**GetForexCurrencies**](docs/ForexApi.md#getforexcurrencies) | **GET** /forex/currencies | Forex Currencies
 *ForexApi* | [**GetForexPairs**](docs/ForexApi.md#getforexpairs) | **GET** /forex/pairs | Forex Currency Pairs
 *ForexApi* | [**GetForexPrices**](docs/ForexApi.md#getforexprices) | **GET** /forex/prices/{pair}/{timeframe} | Forex Currency Prices
+*FundamentalsApi* | [**FilterFundamental**](docs/FundamentalsApi.md#filterfundamental) | **GET** /fundamentals | Filter Fundamental
 *FundamentalsApi* | [**GetFundamentalById**](docs/FundamentalsApi.md#getfundamentalbyid) | **GET** /fundamentals/{id} | Fundamental by ID
 *FundamentalsApi* | [**GetFundamentalReportedFinancials**](docs/FundamentalsApi.md#getfundamentalreportedfinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 *FundamentalsApi* | [**GetFundamentalStandardizedFinancials**](docs/FundamentalsApi.md#getfundamentalstandardizedfinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
@@ -338,6 +342,9 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseCompanySharesOutstanding](docs/ApiResponseCompanySharesOutstanding.md)
  - [Model.ApiResponseDataTags](docs/ApiResponseDataTags.md)
  - [Model.ApiResponseDataTagsSearch](docs/ApiResponseDataTagsSearch.md)
+ - [Model.ApiResponseESGCompanies](docs/ApiResponseESGCompanies.md)
+ - [Model.ApiResponseESGCompanyRatingHistory](docs/ApiResponseESGCompanyRatingHistory.md)
+ - [Model.ApiResponseESGLatest](docs/ApiResponseESGLatest.md)
  - [Model.ApiResponseETFHoldings](docs/ApiResponseETFHoldings.md)
  - [Model.ApiResponseETFs](docs/ApiResponseETFs.md)
  - [Model.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
@@ -462,6 +469,9 @@ Class | Method | HTTP request | Description
  - [Model.DetrendedPriceOscillatorTechnicalValue](docs/DetrendedPriceOscillatorTechnicalValue.md)
  - [Model.DividendRecord](docs/DividendRecord.md)
  - [Model.DonchianChannelTechnicalValue](docs/DonchianChannelTechnicalValue.md)
+ - [Model.ESGCompanySummary](docs/ESGCompanySummary.md)
+ - [Model.ESGRating](docs/ESGRating.md)
+ - [Model.ESGRatingWithCompany](docs/ESGRatingWithCompany.md)
  - [Model.ETF](docs/ETF.md)
  - [Model.ETFAnalytics](docs/ETFAnalytics.md)
  - [Model.ETFHolding](docs/ETFHolding.md)

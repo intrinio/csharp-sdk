@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Api
         /// All ETFs
         /// </summary>
         /// <remarks>
-        /// Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -34,7 +34,7 @@ namespace Intrinio.SDK.Api
         /// All ETFs
         /// </summary>
         /// <remarks>
-        /// Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -46,7 +46,7 @@ namespace Intrinio.SDK.Api
         /// Lookup ETF
         /// </summary>
         /// <remarks>
-        /// Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -57,7 +57,7 @@ namespace Intrinio.SDK.Api
         /// Lookup ETF
         /// </summary>
         /// <remarks>
-        /// Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -67,7 +67,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -78,7 +78,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -88,7 +88,7 @@ namespace Intrinio.SDK.Api
         /// ETF Holdings
         /// </summary>
         /// <remarks>
-        /// Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -101,7 +101,7 @@ namespace Intrinio.SDK.Api
         /// ETF Holdings
         /// </summary>
         /// <remarks>
-        /// Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -113,7 +113,7 @@ namespace Intrinio.SDK.Api
         /// Exchange Traded Fund (ETF) stats
         /// </summary>
         /// <remarks>
-        /// Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -124,7 +124,7 @@ namespace Intrinio.SDK.Api
         /// Exchange Traded Fund (ETF) stats
         /// </summary>
         /// <remarks>
-        /// Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -134,7 +134,7 @@ namespace Intrinio.SDK.Api
         /// Search ETFs
         /// </summary>
         /// <remarks>
-        /// Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -145,7 +145,7 @@ namespace Intrinio.SDK.Api
         /// Search ETFs
         /// </summary>
         /// <remarks>
-        /// Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -157,7 +157,7 @@ namespace Intrinio.SDK.Api
         /// All ETFs
         /// </summary>
         /// <remarks>
-        /// Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -170,7 +170,7 @@ namespace Intrinio.SDK.Api
         /// All ETFs
         /// </summary>
         /// <remarks>
-        /// Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -182,7 +182,7 @@ namespace Intrinio.SDK.Api
         /// Lookup ETF
         /// </summary>
         /// <remarks>
-        /// Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -193,7 +193,7 @@ namespace Intrinio.SDK.Api
         /// Lookup ETF
         /// </summary>
         /// <remarks>
-        /// Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -203,7 +203,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -214,7 +214,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -224,7 +224,7 @@ namespace Intrinio.SDK.Api
         /// ETF Holdings
         /// </summary>
         /// <remarks>
-        /// Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -237,7 +237,7 @@ namespace Intrinio.SDK.Api
         /// ETF Holdings
         /// </summary>
         /// <remarks>
-        /// Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -249,7 +249,7 @@ namespace Intrinio.SDK.Api
         /// Exchange Traded Fund (ETF) stats
         /// </summary>
         /// <remarks>
-        /// Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -260,7 +260,7 @@ namespace Intrinio.SDK.Api
         /// Exchange Traded Fund (ETF) stats
         /// </summary>
         /// <remarks>
-        /// Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -270,7 +270,7 @@ namespace Intrinio.SDK.Api
         /// Search ETFs
         /// </summary>
         /// <remarks>
-        /// Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -281,7 +281,7 @@ namespace Intrinio.SDK.Api
         /// Search ETFs
         /// </summary>
         /// <remarks>
-        /// Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -388,7 +388,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All ETFs Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// All ETFs Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -402,7 +402,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All ETFs Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// All ETFs Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -465,7 +465,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All ETFs Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// All ETFs Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -480,7 +480,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// All ETFs Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
+        /// All ETFs Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchange"> (optional)</param>
@@ -541,7 +541,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup ETF Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Lookup ETF Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -553,7 +553,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup ETF Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Lookup ETF Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -615,7 +615,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup ETF Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Lookup ETF Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -628,7 +628,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Lookup ETF Returns the Exchange Traded Fund (ETF) with the given identifier
+        /// Lookup ETF Returns classifications and reference data which consists of ~90 columns that give detailed information about an ETF. These granular details include asset class, expense ratio, index name, index weighting scheme, smart beta type and specific investment objectives.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -688,7 +688,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -700,7 +700,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -762,7 +762,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -775,7 +775,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns analytics for the Exchange Traded Fund (ETF) including volume, market cap, 52 week high, and 52 week low
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -835,7 +835,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Holdings Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// ETF Holdings Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -849,7 +849,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Holdings Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// ETF Holdings Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -915,7 +915,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Holdings Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// ETF Holdings Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -930,7 +930,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Holdings Returns the holdings sorted by weight descending and the Exchange Traded Fund (ETF) summary
+        /// ETF Holdings Returns holdings data that details all the constituent securities in each ETF with names, identifiers, and the weights for each security providing granular level transparency.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -994,7 +994,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1006,7 +1006,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1068,7 +1068,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1081,7 +1081,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns daily stats for the Exchange Traded Fund (ETF) including net asset value, beta vs spy, returns, and volatility
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1141,7 +1141,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search ETFs Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Search ETFs Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -1153,7 +1153,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search ETFs Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Search ETFs Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -1215,7 +1215,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search ETFs Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Search ETFs Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
@@ -1228,7 +1228,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Search ETFs Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
+        /// Search ETFs Accepts a string of keyword combinations, and searches across the ETF name and ticker and returns a list of ETFs with related keywords.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>

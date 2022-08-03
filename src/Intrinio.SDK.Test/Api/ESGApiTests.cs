@@ -60,10 +60,26 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string country = null;
+            //string industry = null;
+            //string ticker = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetEsgCompanies(country, pageSize, nextPage);
+            //var response = instance.GetEsgCompanies(country, industry, ticker, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseESGCompanies> (response, "response is ApiResponseESGCompanies");
+        }
+        
+        /// <summary>
+        /// Test GetEsgCompanyComprehensiveRatings
+        /// </summary>
+        [Test]
+        public void GetEsgCompanyComprehensiveRatingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetEsgCompanyComprehensiveRatings(identifier, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseESGCompanyComprehensiveRatingHistory> (response, "response is ApiResponseESGCompanyComprehensiveRatingHistory");
         }
         
         /// <summary>
@@ -88,11 +104,24 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string country = null;
-            //string country2 = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetEsgLatest(country, country2, pageSize, nextPage);
+            //var response = instance.GetEsgLatest(country, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseESGLatest> (response, "response is ApiResponseESGLatest");
+        }
+        
+        /// <summary>
+        /// Test GetEsgLatestComprehensive
+        /// </summary>
+        [Test]
+        public void GetEsgLatestComprehensiveTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string country = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetEsgLatestComprehensive(country, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseESGLatestComprehensive> (response, "response is ApiResponseESGLatestComprehensive");
         }
         
     }

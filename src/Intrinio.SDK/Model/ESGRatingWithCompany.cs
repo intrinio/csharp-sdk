@@ -25,11 +25,11 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ESGRatingWithCompany" /> class.
         /// </summary>
-        /// <param name="Date">Date.</param>
-        /// <param name="CommunityRating">CommunityRating.</param>
-        /// <param name="EmployeeRating">EmployeeRating.</param>
-        /// <param name="EnvironmentRating">EnvironmentRating.</param>
-        /// <param name="GovernanceRating">GovernanceRating.</param>
+        /// <param name="Date">Indicates the date on which the ESG Rating was calculated..</param>
+        /// <param name="CommunityRating">The Community Category reflects a company&#39;s citizenship, charitable giving, and volunteerism. This category covers the company’s human rights record and treatment of its supply chain. It also covers the environmental and social impacts of the companys products and services, and the development of sustainable products, processes and technologies..</param>
+        /// <param name="EmployeeRating">The Employees category includes disclosure of policies, programs, and performance in diversity, labor relations and labor rights. The evaluation focuses on the quality of policies and programs, compliance with national laws and regulations, and proactive management initiatives. The category includes evaluation of inclusive diversity policies, fair treatment of all employees, robust diversity (EEO-1) programs and training..</param>
+        /// <param name="EnvironmentRating">The Environment category data covers a company’s interactions with the environment at large, including use of natural resources. The category evaluates corporate environmental performance, compliance with environmental regulations, and mitigation of environmental footprint. It also includes leadership in addressing climate change through appropriate policies and strategies..</param>
+        /// <param name="GovernanceRating">Corporate governance refers to leadership structure and the values that determine corporate direction, ethics and performance. The Governance category covers disclosure of policies and procedures, board independence and diversity, executive compensation, attention to stakeholder concerns, and evaluation of a company’s culture of ethical leadership and compliance..</param>
         /// <param name="Company">Company.</param>
         public ESGRatingWithCompany(DateTime? Date = default(DateTime?), decimal? CommunityRating = default(decimal?), decimal? EmployeeRating = default(decimal?), decimal? EnvironmentRating = default(decimal?), decimal? GovernanceRating = default(decimal?), ESGCompanySummary Company = default(ESGCompanySummary))
         {
@@ -42,33 +42,38 @@ namespace Intrinio.SDK.Model
         }
         
         /// <summary>
-        /// Gets or Sets Date
+        /// Indicates the date on which the ESG Rating was calculated.
         /// </summary>
+        /// <value>Indicates the date on which the ESG Rating was calculated.</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         [JsonConverter(typeof(SwaggerDateConverter))]
         public DateTime? Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets CommunityRating
+        /// The Community Category reflects a company&#39;s citizenship, charitable giving, and volunteerism. This category covers the company’s human rights record and treatment of its supply chain. It also covers the environmental and social impacts of the companys products and services, and the development of sustainable products, processes and technologies.
         /// </summary>
+        /// <value>The Community Category reflects a company&#39;s citizenship, charitable giving, and volunteerism. This category covers the company’s human rights record and treatment of its supply chain. It also covers the environmental and social impacts of the companys products and services, and the development of sustainable products, processes and technologies.</value>
         [DataMember(Name="community_rating", EmitDefaultValue=false)]
         public decimal? CommunityRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmployeeRating
+        /// The Employees category includes disclosure of policies, programs, and performance in diversity, labor relations and labor rights. The evaluation focuses on the quality of policies and programs, compliance with national laws and regulations, and proactive management initiatives. The category includes evaluation of inclusive diversity policies, fair treatment of all employees, robust diversity (EEO-1) programs and training.
         /// </summary>
+        /// <value>The Employees category includes disclosure of policies, programs, and performance in diversity, labor relations and labor rights. The evaluation focuses on the quality of policies and programs, compliance with national laws and regulations, and proactive management initiatives. The category includes evaluation of inclusive diversity policies, fair treatment of all employees, robust diversity (EEO-1) programs and training.</value>
         [DataMember(Name="employee_rating", EmitDefaultValue=false)]
         public decimal? EmployeeRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnvironmentRating
+        /// The Environment category data covers a company’s interactions with the environment at large, including use of natural resources. The category evaluates corporate environmental performance, compliance with environmental regulations, and mitigation of environmental footprint. It also includes leadership in addressing climate change through appropriate policies and strategies.
         /// </summary>
+        /// <value>The Environment category data covers a company’s interactions with the environment at large, including use of natural resources. The category evaluates corporate environmental performance, compliance with environmental regulations, and mitigation of environmental footprint. It also includes leadership in addressing climate change through appropriate policies and strategies.</value>
         [DataMember(Name="environment_rating", EmitDefaultValue=false)]
         public decimal? EnvironmentRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets GovernanceRating
+        /// Corporate governance refers to leadership structure and the values that determine corporate direction, ethics and performance. The Governance category covers disclosure of policies and procedures, board independence and diversity, executive compensation, attention to stakeholder concerns, and evaluation of a company’s culture of ethical leadership and compliance.
         /// </summary>
+        /// <value>Corporate governance refers to leadership structure and the values that determine corporate direction, ethics and performance. The Governance category covers disclosure of policies and procedures, board independence and diversity, executive compensation, attention to stakeholder concerns, and evaluation of a company’s culture of ethical leadership and compliance.</value>
         [DataMember(Name="governance_rating", EmitDefaultValue=false)]
         public decimal? GovernanceRating { get; set; }
 

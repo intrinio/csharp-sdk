@@ -781,6 +781,18 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecuritySnapshots
+        /// </summary>
+        [Test]
+        public void GetSecuritySnapshotsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DateTime? atDatetime = null;
+            //var response = instance.GetSecuritySnapshots(atDatetime);
+            //Assert.IsInstanceOf<SecuritySnapshotsResult> (response, "response is SecuritySnapshotsResult");
+        }
+        
+        /// <summary>
         /// Test GetSecurityStockPriceAdjustments
         /// </summary>
         [Test]

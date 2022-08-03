@@ -5,8 +5,10 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetEsgCompanies**](ESGApi.md#getesgcompanies) | **GET** /esg/companies | ESG Companies
+[**GetEsgCompanyComprehensiveRatings**](ESGApi.md#getesgcompanycomprehensiveratings) | **GET** /esg/{identifier}/comprehensive | ESG Company Comprehensive Ratings History
 [**GetEsgCompanyRatings**](ESGApi.md#getesgcompanyratings) | **GET** /esg/{identifier} | ESG Company Ratings History
 [**GetEsgLatest**](ESGApi.md#getesglatest) | **GET** /esg | ESG Latest
+[**GetEsgLatestComprehensive**](ESGApi.md#getesglatestcomprehensive) | **GET** /esg/comprehensive | ESG Latest Comprehensive
 
 
 
@@ -35,7 +37,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseESGCompanies GetEsgCompanies (string country = null, int? pageSize = null, string nextPage = null)
+> ApiResponseESGCompanies GetEsgCompanies (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null)
 
 #### ESG Companies
 
@@ -67,11 +69,13 @@ namespace Example
       
       var eSGApi = new ESGApi();
       
-      string country = "USA";
+      string country = "Canada";
+      string industry = "Retail";
+      string ticker = "SHOP";
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseESGCompanies result = eSGApi.GetEsgCompanies(country, pageSize, nextPage);
+      ApiResponseESGCompanies result = eSGApi.GetEsgCompanies(country, industry, ticker, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -88,6 +92,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country** | string|  | [optional]  &nbsp;
+ **industry** | string|  | [optional]  &nbsp;
+ **ticker** | string|  | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -97,6 +103,97 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseESGCompanies**](ApiResponseESGCompanies.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ESGApi)
+
+[//]: # (METHOD:GetEsgCompanyComprehensiveRatings)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseESGCompanyComprehensiveRatingHistory)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseESGCompanyComprehensiveRatingHistory.md)
+
+[//]: # (OPERATION:GetEsgCompanyComprehensiveRatings_v2)
+
+[//]: # (ENDPOINT:/esg/{identifier}/comprehensive)
+
+[//]: # (DOCUMENT_LINK:ESGApi.md#getesgcompanycomprehensiveratings)
+
+<a name="getesgcompanycomprehensiveratings"></a>
+## **GetEsgCompanyComprehensiveRatings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEsgCompanyComprehensiveRatings_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseESGCompanyComprehensiveRatingHistory GetEsgCompanyComprehensiveRatings (string identifier, int? pageSize = null, string nextPage = null)
+
+#### ESG Company Comprehensive Ratings History
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetEsgCompanyComprehensiveRatingsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var eSGApi = new ESGApi();
+      
+      string identifier = "AAPL";
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseESGCompanyComprehensiveRatingHistory result = eSGApi.GetEsgCompanyComprehensiveRatings(identifier, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| ISIN, Intrinio ID, or Ticker |  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseESGCompanyComprehensiveRatingHistory**](ApiResponseESGCompanyComprehensiveRatingHistory.md)
 
 [//]: # (END_OPERATION)
 
@@ -217,7 +314,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseESGLatest GetEsgLatest (string country = null, string country2 = null, int? pageSize = null, string nextPage = null)
+> ApiResponseESGLatest GetEsgLatest (string country = null, int? pageSize = null, string nextPage = null)
 
 #### ESG Latest
 
@@ -250,11 +347,10 @@ namespace Example
       var eSGApi = new ESGApi();
       
       string country = "USA";
-      string country2 = "USA";
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseESGLatest result = eSGApi.GetEsgLatest(country, country2, pageSize, nextPage);
+      ApiResponseESGLatest result = eSGApi.GetEsgLatest(country, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -271,7 +367,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country** | string|  | [optional]  &nbsp;
- **country2** | string|  | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -281,6 +376,97 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseESGLatest**](ApiResponseESGLatest.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ESGApi)
+
+[//]: # (METHOD:GetEsgLatestComprehensive)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseESGLatestComprehensive)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseESGLatestComprehensive.md)
+
+[//]: # (OPERATION:GetEsgLatestComprehensive_v2)
+
+[//]: # (ENDPOINT:/esg/comprehensive)
+
+[//]: # (DOCUMENT_LINK:ESGApi.md#getesglatestcomprehensive)
+
+<a name="getesglatestcomprehensive"></a>
+## **GetEsgLatestComprehensive**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEsgLatestComprehensive_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseESGLatestComprehensive GetEsgLatestComprehensive (string country = null, int? pageSize = null, string nextPage = null)
+
+#### ESG Latest Comprehensive
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetEsgLatestComprehensiveExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var eSGApi = new ESGApi();
+      
+      string country = "USA";
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseESGLatestComprehensive result = eSGApi.GetEsgLatestComprehensive(country, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **country** | string|  | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseESGLatestComprehensive**](ApiResponseESGLatestComprehensive.md)
 
 [//]: # (END_OPERATION)
 

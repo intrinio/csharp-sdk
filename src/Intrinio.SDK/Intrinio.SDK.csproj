@@ -1,85 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-Intrinio API
+<Project Sdk="Microsoft.NET.Sdk">
+    <!--
+        Intrinio API
 
-Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
+        Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-OpenAPI spec version: 2.28.0
+        OpenAPI spec version: 2.28.4
+        
+    -->
 
--->
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AFD2E0CC-91D6-47DE-92DC-AA93318717BE}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intrinio.SDK</RootNamespace>
-    <AssemblyName>Intrinio.SDK</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\packages')">..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\..\packages')">..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="JsonSubTypes">
-      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-      <HintPath Condition="Exists('..\packages')">..\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-      <HintPath Condition="Exists('..\..\packages')">..\..\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp">
-        <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-        <HintPath Condition="Exists('..\packages')">..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-        <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Polly">
-        <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\Polly.7.2.1\lib\\Polly.dll</HintPath>
-        <HintPath Condition="Exists('..\packages')">..\packages\Polly.7.2.1\lib\net472\Polly.dll</HintPath>
-        <HintPath Condition="Exists('..\..\packages')">..\..\packages\Polly.7.2.1\lib\net472\Polly.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\Polly.7.2.1\lib\net472\Polly.dll</HintPath>
-    </Reference>
-    
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="**\*.cs"
-             Exclude="obj\**" />
-  </ItemGroup>
-  <ItemGroup>
-      <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="JsonSubTypes" Version="1.9.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="Polly" Version="7.2.3" />
+      <PackageReference Include="RestSharp" Version="105.2.3" />
+    </ItemGroup>
+
 </Project>
+
 

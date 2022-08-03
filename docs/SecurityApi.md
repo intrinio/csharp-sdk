@@ -46,6 +46,7 @@ Method | HTTP request | Description
 [**GetSecurityPriceTechnicalsVwap**](SecurityApi.md#getsecuritypricetechnicalsvwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 [**GetSecurityPriceTechnicalsWr**](SecurityApi.md#getsecuritypricetechnicalswr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 [**GetSecurityRealtimePrice**](SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+[**GetSecuritySnapshots**](SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**GetSecurityStockPriceAdjustments**](SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**GetSecurityStockPrices**](SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**GetSecurityZacksAnalystRatings**](SecurityApi.md#getsecurityzacksanalystratings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
@@ -4197,6 +4198,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RealtimeStockPrice**](RealtimeStockPrice.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecuritySnapshots)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecuritySnapshotsResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecuritySnapshotsResult.md)
+
+[//]: # (OPERATION:GetSecuritySnapshots_v2)
+
+[//]: # (ENDPOINT:/securities/snapshots)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritysnapshots)
+
+<a name="getsecuritysnapshots"></a>
+## **GetSecuritySnapshots**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecuritySnapshots_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecuritySnapshotsResult GetSecuritySnapshots (DateTime? atDatetime = null)
+
+#### Realtime Stock Prices Snapshot
+
+Returns all security snapshots for the queried interval with links to download.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecuritySnapshotsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      DateTime? atDatetime = null;
+      
+      SecuritySnapshotsResult result = securityApi.GetSecuritySnapshots(atDatetime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **atDatetime** | DateTime?| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecuritySnapshotsResult**](SecuritySnapshotsResult.md)
 
 [//]: # (END_OPERATION)
 

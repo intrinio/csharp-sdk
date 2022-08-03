@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**GetOptionsPricesEod**](OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
 [**GetOptionsPricesRealtime**](OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**GetOptionsStatsRealtime**](OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
+[**GetSecuritySnapshots**](OptionsApi.md#getsecuritysnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
 [**GetUnusualActivity**](OptionsApi.md#getunusualactivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
 [**GetUnusualActivityIntraday**](OptionsApi.md#getunusualactivityintraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 [**GetUnusualActivityUniversal**](OptionsApi.md#getunusualactivityuniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
@@ -1360,6 +1361,96 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsStatsRealtime**](ApiResponseOptionsStatsRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetSecuritySnapshots)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionSnapshotsResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionSnapshotsResult.md)
+
+[//]: # (OPERATION:GetSecuritySnapshots_v2)
+
+[//]: # (ENDPOINT:/options/snapshots)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getsecuritysnapshots)
+
+<a name="getsecuritysnapshots"></a>
+## **GetSecuritySnapshots**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecuritySnapshots_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionSnapshotsResult GetSecuritySnapshots (string source = null, DateTime? atDatetime = null)
+
+#### Option Prices Realtime Snapshot
+
+Returns all options snapshots for the queried interval with links to download.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecuritySnapshotsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string source = null;
+      DateTime? atDatetime = null;
+      
+      OptionSnapshotsResult result = optionsApi.GetSecuritySnapshots(source, atDatetime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **atDatetime** | DateTime?| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionSnapshotsResult**](OptionSnapshotsResult.md)
 
 [//]: # (END_OPERATION)
 

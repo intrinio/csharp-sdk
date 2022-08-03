@@ -25,10 +25,12 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseESGCompanies</returns>
-        ApiResponseESGCompanies GetEsgCompanies (string country = null, int? pageSize = null, string nextPage = null);
+        ApiResponseESGCompanies GetEsgCompanies (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// ESG Companies
@@ -38,10 +40,37 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGCompanies</returns>
-        ApiResponse<ApiResponseESGCompanies> GetEsgCompaniesWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseESGCompanies> GetEsgCompaniesWithHttpInfo (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseESGCompanyComprehensiveRatingHistory</returns>
+        ApiResponseESGCompanyComprehensiveRatingHistory GetEsgCompanyComprehensiveRatings (string identifier, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseESGCompanyComprehensiveRatingHistory</returns>
+        ApiResponse<ApiResponseESGCompanyComprehensiveRatingHistory> GetEsgCompanyComprehensiveRatingsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// ESG Company Ratings History
         /// </summary>
@@ -75,11 +104,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseESGLatest</returns>
-        ApiResponseESGLatest GetEsgLatest (string country = null, string country2 = null, int? pageSize = null, string nextPage = null);
+        ApiResponseESGLatest GetEsgLatest (string country = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// ESG Latest
@@ -89,11 +117,35 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGLatest</returns>
-        ApiResponse<ApiResponseESGLatest> GetEsgLatestWithHttpInfo (string country = null, string country2 = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseESGLatest> GetEsgLatestWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// ESG Latest Comprehensive
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseESGLatestComprehensive</returns>
+        ApiResponseESGLatestComprehensive GetEsgLatestComprehensive (string country = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// ESG Latest Comprehensive
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseESGLatestComprehensive</returns>
+        ApiResponse<ApiResponseESGLatestComprehensive> GetEsgLatestComprehensiveWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -104,10 +156,12 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseESGCompanies</returns>
-        System.Threading.Tasks.Task<ApiResponseESGCompanies> GetEsgCompaniesAsync (string country = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseESGCompanies> GetEsgCompaniesAsync (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// ESG Companies
@@ -117,10 +171,37 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseESGCompanies)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseESGCompanies>> GetEsgCompaniesAsyncWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseESGCompanies>> GetEsgCompaniesAsyncWithHttpInfo (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseESGCompanyComprehensiveRatingHistory</returns>
+        System.Threading.Tasks.Task<ApiResponseESGCompanyComprehensiveRatingHistory> GetEsgCompanyComprehensiveRatingsAsync (string identifier, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseESGCompanyComprehensiveRatingHistory)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseESGCompanyComprehensiveRatingHistory>> GetEsgCompanyComprehensiveRatingsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// ESG Company Ratings History
         /// </summary>
@@ -154,11 +235,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseESGLatest</returns>
-        System.Threading.Tasks.Task<ApiResponseESGLatest> GetEsgLatestAsync (string country = null, string country2 = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseESGLatest> GetEsgLatestAsync (string country = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// ESG Latest
@@ -168,11 +248,35 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseESGLatest)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseESGLatest>> GetEsgLatestAsyncWithHttpInfo (string country = null, string country2 = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseESGLatest>> GetEsgLatestAsyncWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// ESG Latest Comprehensive
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseESGLatestComprehensive</returns>
+        System.Threading.Tasks.Task<ApiResponseESGLatestComprehensive> GetEsgLatestComprehensiveAsync (string country = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// ESG Latest Comprehensive
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseESGLatestComprehensive)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseESGLatestComprehensive>> GetEsgLatestComprehensiveAsyncWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -278,12 +382,14 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseESGCompanies</returns>
-        public ApiResponseESGCompanies GetEsgCompanies (string country = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseESGCompanies GetEsgCompanies (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseESGCompanies> localVarResponse = GetEsgCompaniesWithHttpInfo(country, pageSize, nextPage);
+             ApiResponse<ApiResponseESGCompanies> localVarResponse = GetEsgCompaniesWithHttpInfo(country, industry, ticker, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -292,12 +398,14 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGCompanies</returns>
         
         
-        public ApiResponse< ApiResponseESGCompanies > GetEsgCompaniesWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseESGCompanies > GetEsgCompaniesWithHttpInfo (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/esg/companies";
@@ -323,6 +431,8 @@ namespace Intrinio.SDK.Api
             
             
             if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
+            if (industry != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry", industry)); // query parameter
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -355,12 +465,14 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseESGCompanies</returns>
-        public async System.Threading.Tasks.Task<ApiResponseESGCompanies> GetEsgCompaniesAsync (string country = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseESGCompanies> GetEsgCompaniesAsync (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseESGCompanies> localVarResponse = await GetEsgCompaniesAsyncWithHttpInfo(country, pageSize, nextPage);
+             ApiResponse<ApiResponseESGCompanies> localVarResponse = await GetEsgCompaniesAsyncWithHttpInfo(country, industry, ticker, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -370,10 +482,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
+        /// <param name="industry"> (optional)</param>
+        /// <param name="ticker"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseESGCompanies)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseESGCompanies>> GetEsgCompaniesAsyncWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseESGCompanies>> GetEsgCompaniesAsyncWithHttpInfo (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/esg/companies";
@@ -399,6 +513,8 @@ namespace Intrinio.SDK.Api
               
 
             if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
+            if (industry != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry", industry)); // query parameter
+            if (ticker != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ticker", ticker)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -424,6 +540,165 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseESGCompanies>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseESGCompanies) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseESGCompanies)));
+        }
+
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseESGCompanyComprehensiveRatingHistory</returns>
+        public ApiResponseESGCompanyComprehensiveRatingHistory GetEsgCompanyComprehensiveRatings (string identifier, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseESGCompanyComprehensiveRatingHistory> localVarResponse = GetEsgCompanyComprehensiveRatingsWithHttpInfo(identifier, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseESGCompanyComprehensiveRatingHistory</returns>
+        
+        
+        public ApiResponse< ApiResponseESGCompanyComprehensiveRatingHistory > GetEsgCompanyComprehensiveRatingsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling ESGApi->GetEsgCompanyComprehensiveRatings");
+
+            var localVarPath = "/esg/{identifier}/comprehensive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEsgCompanyComprehensiveRatings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseESGCompanyComprehensiveRatingHistory>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseESGCompanyComprehensiveRatingHistory) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseESGCompanyComprehensiveRatingHistory)));
+        }
+
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseESGCompanyComprehensiveRatingHistory</returns>
+        public async System.Threading.Tasks.Task<ApiResponseESGCompanyComprehensiveRatingHistory> GetEsgCompanyComprehensiveRatingsAsync (string identifier, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseESGCompanyComprehensiveRatingHistory> localVarResponse = await GetEsgCompanyComprehensiveRatingsAsyncWithHttpInfo(identifier, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// ESG Company Comprehensive Ratings History 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">ISIN, Intrinio ID, or Ticker</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseESGCompanyComprehensiveRatingHistory)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseESGCompanyComprehensiveRatingHistory>> GetEsgCompanyComprehensiveRatingsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling ESGApi->GetEsgCompanyComprehensiveRatings");
+
+            var localVarPath = "/esg/{identifier}/comprehensive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEsgCompanyComprehensiveRatings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseESGCompanyComprehensiveRatingHistory>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseESGCompanyComprehensiveRatingHistory) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseESGCompanyComprehensiveRatingHistory)));
         }
 
         /// <summary>
@@ -590,13 +865,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseESGLatest</returns>
-        public ApiResponseESGLatest GetEsgLatest (string country = null, string country2 = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseESGLatest GetEsgLatest (string country = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseESGLatest> localVarResponse = GetEsgLatestWithHttpInfo(country, country2, pageSize, nextPage);
+             ApiResponse<ApiResponseESGLatest> localVarResponse = GetEsgLatestWithHttpInfo(country, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -605,13 +879,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGLatest</returns>
         
         
-        public ApiResponse< ApiResponseESGLatest > GetEsgLatestWithHttpInfo (string country = null, string country2 = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseESGLatest > GetEsgLatestWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/esg";
@@ -637,7 +910,6 @@ namespace Intrinio.SDK.Api
             
             
             if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
-            if (country2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country2)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -670,13 +942,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseESGLatest</returns>
-        public async System.Threading.Tasks.Task<ApiResponseESGLatest> GetEsgLatestAsync (string country = null, string country2 = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseESGLatest> GetEsgLatestAsync (string country = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseESGLatest> localVarResponse = await GetEsgLatestAsyncWithHttpInfo(country, country2, pageSize, nextPage);
+             ApiResponse<ApiResponseESGLatest> localVarResponse = await GetEsgLatestAsyncWithHttpInfo(country, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -686,11 +957,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country"> (optional)</param>
-        /// <param name="country2"> (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseESGLatest)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseESGLatest>> GetEsgLatestAsyncWithHttpInfo (string country = null, string country2 = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseESGLatest>> GetEsgLatestAsyncWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/esg";
@@ -716,7 +986,6 @@ namespace Intrinio.SDK.Api
               
 
             if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
-            if (country2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country2)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -742,6 +1011,159 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseESGLatest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApiResponseESGLatest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseESGLatest)));
+        }
+
+        /// <summary>
+        /// ESG Latest Comprehensive 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseESGLatestComprehensive</returns>
+        public ApiResponseESGLatestComprehensive GetEsgLatestComprehensive (string country = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseESGLatestComprehensive> localVarResponse = GetEsgLatestComprehensiveWithHttpInfo(country, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ESG Latest Comprehensive 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseESGLatestComprehensive</returns>
+        
+        
+        public ApiResponse< ApiResponseESGLatestComprehensive > GetEsgLatestComprehensiveWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/esg/comprehensive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEsgLatestComprehensive", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseESGLatestComprehensive>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseESGLatestComprehensive) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseESGLatestComprehensive)));
+        }
+
+        /// <summary>
+        /// ESG Latest Comprehensive 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseESGLatestComprehensive</returns>
+        public async System.Threading.Tasks.Task<ApiResponseESGLatestComprehensive> GetEsgLatestComprehensiveAsync (string country = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseESGLatestComprehensive> localVarResponse = await GetEsgLatestComprehensiveAsyncWithHttpInfo(country, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// ESG Latest Comprehensive 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="country"> (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseESGLatestComprehensive)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseESGLatestComprehensive>> GetEsgLatestComprehensiveAsyncWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/esg/comprehensive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (country != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "country", country)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEsgLatestComprehensive", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseESGLatestComprehensive>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ApiResponseESGLatestComprehensive) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseESGLatestComprehensive)));
         }
 
     }

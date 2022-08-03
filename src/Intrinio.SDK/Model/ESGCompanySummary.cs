@@ -25,12 +25,12 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ESGCompanySummary" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Ticker">Ticker.</param>
-        /// <param name="Isin">Isin.</param>
-        /// <param name="PrimaryIndustry">PrimaryIndustry.</param>
-        /// <param name="Country">Country.</param>
+        /// <param name="Id">The Intrinio ID of the company..</param>
+        /// <param name="Name">The company’s common name..</param>
+        /// <param name="Ticker">The stock market ticker symbol associated with the company’s common stock security..</param>
+        /// <param name="Isin">The company&#39;s common securities identification 12-digit alphanumeric code..</param>
+        /// <param name="PrimaryIndustry">The primary industry associated with the company based on their main revenue generating operations..</param>
+        /// <param name="Country">The country in which the company&#39;s headquarters or primary place of business is located..</param>
         public ESGCompanySummary(string Id = default(string), string Name = default(string), string Ticker = default(string), string Isin = default(string), string PrimaryIndustry = default(string), string Country = default(string))
         {
             this.Id = Id;
@@ -42,38 +42,44 @@ namespace Intrinio.SDK.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The Intrinio ID of the company.
         /// </summary>
+        /// <value>The Intrinio ID of the company.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The company’s common name.
         /// </summary>
+        /// <value>The company’s common name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Ticker
+        /// The stock market ticker symbol associated with the company’s common stock security.
         /// </summary>
+        /// <value>The stock market ticker symbol associated with the company’s common stock security.</value>
         [DataMember(Name="ticker", EmitDefaultValue=false)]
         public string Ticker { get; set; }
 
         /// <summary>
-        /// Gets or Sets Isin
+        /// The company&#39;s common securities identification 12-digit alphanumeric code.
         /// </summary>
+        /// <value>The company&#39;s common securities identification 12-digit alphanumeric code.</value>
         [DataMember(Name="isin", EmitDefaultValue=false)]
         public string Isin { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryIndustry
+        /// The primary industry associated with the company based on their main revenue generating operations.
         /// </summary>
+        /// <value>The primary industry associated with the company based on their main revenue generating operations.</value>
         [DataMember(Name="primary_industry", EmitDefaultValue=false)]
         public string PrimaryIndustry { get; set; }
 
         /// <summary>
-        /// Gets or Sets Country
+        /// The country in which the company&#39;s headquarters or primary place of business is located.
         /// </summary>
+        /// <value>The country in which the company&#39;s headquarters or primary place of business is located.</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
 

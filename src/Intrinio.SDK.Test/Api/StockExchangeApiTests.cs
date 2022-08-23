@@ -118,9 +118,10 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string source = null;
+            //bool? activeOnly = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetStockExchangeRealtimePrices(identifier, source, pageSize, nextPage);
+            //var response = instance.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockExchangeRealtimeStockPrices> (response, "response is ApiResponseStockExchangeRealtimeStockPrices");
         }
         

@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, int? pageSize = null, string nextPage = null)
+> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null)
 
 #### Realtime Stock Prices by Exchange
 
@@ -443,10 +443,11 @@ namespace Example
       
       string identifier = "USCOMP";
       string source = null;
+      bool? activeOnly = null;
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, pageSize, nextPage);
+      ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -464,6 +465,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
  **source** | string| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
+ **activeOnly** | bool?| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

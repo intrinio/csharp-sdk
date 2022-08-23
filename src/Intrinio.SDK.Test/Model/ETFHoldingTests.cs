@@ -99,6 +99,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'CompositeFigi'
         }
         /// <summary>
+        /// Test the property 'ShareClassFigi'
+        /// </summary>
+        [Test]
+        public void ShareClassFigiTest()
+        {
+            // TODO unit test for the property 'ShareClassFigi'
+        }
+        /// <summary>
         /// Test the property 'Isin'
         /// </summary>
         [Test]

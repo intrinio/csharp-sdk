@@ -29,7 +29,8 @@ namespace Intrinio.SDK.Model
         /// <param name="Name">The common name for the holding.</param>
         /// <param name="Ticker">The common exchange ticker for the holding.</param>
         /// <param name="Type">The type of instrument for this holding.  Examples (Bond &#x3D; &#39;BOND&#39;, Equity &#x3D; &#39;EQUI&#39;, Options &#x3D; &#39;OPTN&#39;).</param>
-        /// <param name="CompositeFigi">The OpenFIGI ticker for the holding.</param>
+        /// <param name="CompositeFigi">DEPRECATED.</param>
+        /// <param name="ShareClassFigi">The OpenFIGI symbol for the holding.</param>
         /// <param name="Isin">International Securities Identification Number (ISIN) for the holding.</param>
         /// <param name="Ric">Reuters Instrument Code (RIC) for the holding.</param>
         /// <param name="Sedol">Stock Exchange Daily Official List (SEDOL) for the holding.</param>
@@ -43,13 +44,14 @@ namespace Intrinio.SDK.Model
         /// <param name="QuantityUnits">The unit of the &#x60;quanity_held&#x60; field. Examples (&#39;oz&#39;, &#39;shares&#39;, &#39;contracts&#39;).</param>
         /// <param name="QuantityPerShare">Number of units of the security held per units of shares outstanding of the Exchange Traded Fund (ETF), if available.</param>
         /// <param name="ContractExpiryDate">Expiry date for the futures contract held in the Exchange Traded Fund (ETF) or Exchange Traded Note (ETN).</param>
-        public ETFHolding(DateTime? AsOfDate = default(DateTime?), string Name = default(string), string Ticker = default(string), string Type = default(string), string CompositeFigi = default(string), string Isin = default(string), string Ric = default(string), string Sedol = default(string), decimal? Face = default(decimal?), decimal? Coupon = default(decimal?), decimal? MarketValueHeld = default(decimal?), decimal? NotionalValue = default(decimal?), DateTime? Maturity = default(DateTime?), decimal? QuantityHeld = default(decimal?), decimal? Weighting = default(decimal?), decimal? QuantityUnits = default(decimal?), decimal? QuantityPerShare = default(decimal?), DateTime? ContractExpiryDate = default(DateTime?))
+        public ETFHolding(DateTime? AsOfDate = default(DateTime?), string Name = default(string), string Ticker = default(string), string Type = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), string Isin = default(string), string Ric = default(string), string Sedol = default(string), decimal? Face = default(decimal?), decimal? Coupon = default(decimal?), decimal? MarketValueHeld = default(decimal?), decimal? NotionalValue = default(decimal?), DateTime? Maturity = default(DateTime?), decimal? QuantityHeld = default(decimal?), decimal? Weighting = default(decimal?), decimal? QuantityUnits = default(decimal?), decimal? QuantityPerShare = default(decimal?), DateTime? ContractExpiryDate = default(DateTime?))
         {
             this.AsOfDate = AsOfDate;
             this.Name = Name;
             this.Ticker = Ticker;
             this.Type = Type;
             this.CompositeFigi = CompositeFigi;
+            this.ShareClassFigi = ShareClassFigi;
             this.Isin = Isin;
             this.Ric = Ric;
             this.Sedol = Sedol;
@@ -95,11 +97,18 @@ namespace Intrinio.SDK.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// The OpenFIGI ticker for the holding
+        /// DEPRECATED
         /// </summary>
-        /// <value>The OpenFIGI ticker for the holding</value>
+        /// <value>DEPRECATED</value>
         [DataMember(Name="composite_figi", EmitDefaultValue=false)]
         public string CompositeFigi { get; set; }
+
+        /// <summary>
+        /// The OpenFIGI symbol for the holding
+        /// </summary>
+        /// <value>The OpenFIGI symbol for the holding</value>
+        [DataMember(Name="share_class_figi", EmitDefaultValue=false)]
+        public string ShareClassFigi { get; set; }
 
         /// <summary>
         /// International Securities Identification Number (ISIN) for the holding
@@ -207,6 +216,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Ticker: ").Append(Ticker).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CompositeFigi: ").Append(CompositeFigi).Append("\n");
+            sb.Append("  ShareClassFigi: ").Append(ShareClassFigi).Append("\n");
             sb.Append("  Isin: ").Append(Isin).Append("\n");
             sb.Append("  Ric: ").Append(Ric).Append("\n");
             sb.Append("  Sedol: ").Append(Sedol).Append("\n");
@@ -278,6 +288,11 @@ namespace Intrinio.SDK.Model
                     this.CompositeFigi == input.CompositeFigi ||
                     (this.CompositeFigi != null &&
                     this.CompositeFigi.Equals(input.CompositeFigi))
+                ) && 
+                (
+                    this.ShareClassFigi == input.ShareClassFigi ||
+                    (this.ShareClassFigi != null &&
+                    this.ShareClassFigi.Equals(input.ShareClassFigi))
                 ) && 
                 (
                     this.Isin == input.Isin ||
@@ -365,6 +380,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.CompositeFigi != null)
                     hashCode = hashCode * 59 + this.CompositeFigi.GetHashCode();
+                if (this.ShareClassFigi != null)
+                    hashCode = hashCode * 59 + this.ShareClassFigi.GetHashCode();
                 if (this.Isin != null)
                     hashCode = hashCode * 59 + this.Isin.GetHashCode();
                 if (this.Ric != null)

@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.28.4
-- Package version: 6.21.0
+- API version: 2.29.0
+- Package version: 6.21.1
 
 
 <a name="frameworks-supported"></a>
@@ -215,8 +215,8 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsPricesBatchRealtime**](docs/OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 *OptionsApi* | [**GetOptionsPricesEod**](docs/OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
 *OptionsApi* | [**GetOptionsPricesRealtime**](docs/OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+*OptionsApi* | [**GetOptionsSnapshots**](docs/OptionsApi.md#getoptionssnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
 *OptionsApi* | [**GetOptionsStatsRealtime**](docs/OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
-*OptionsApi* | [**GetSecuritySnapshots**](docs/OptionsApi.md#getsecuritysnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
 *OptionsApi* | [**GetUnusualActivity**](docs/OptionsApi.md#getunusualactivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
 *OptionsApi* | [**GetUnusualActivityIntraday**](docs/OptionsApi.md#getunusualactivityintraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 *OptionsApi* | [**GetUnusualActivityUniversal**](docs/OptionsApi.md#getunusualactivityuniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal

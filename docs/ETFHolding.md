@@ -13,7 +13,8 @@ Name | Type | Description
 **Name** | string | The common name for the holding &nbsp;
 **Ticker** | string | The common exchange ticker for the holding &nbsp;
 **Type** | string | The type of instrument for this holding.  Examples (Bond &#x3D; &#39;BOND&#39;, Equity &#x3D; &#39;EQUI&#39;, Options &#x3D; &#39;OPTN&#39;) &nbsp;
-**CompositeFigi** | string | The OpenFIGI ticker for the holding &nbsp;
+**CompositeFigi** | string | DEPRECATED &nbsp;
+**ShareClassFigi** | string | The OpenFIGI symbol for the holding &nbsp;
 **Isin** | string | International Securities Identification Number (ISIN) for the holding &nbsp;
 **Ric** | string | Reuters Instrument Code (RIC) for the holding &nbsp;
 **Sedol** | string | Stock Exchange Daily Official List (SEDOL) for the holding &nbsp;

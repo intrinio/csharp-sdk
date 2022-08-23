@@ -262,6 +262,19 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsSnapshots
+        /// </summary>
+        [Test]
+        public void GetOptionsSnapshotsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? atDatetime = null;
+            //var response = instance.GetOptionsSnapshots(source, atDatetime);
+            //Assert.IsInstanceOf<OptionSnapshotsResult> (response, "response is OptionSnapshotsResult");
+        }
+        
+        /// <summary>
         /// Test GetOptionsStatsRealtime
         /// </summary>
         [Test]
@@ -272,19 +285,6 @@ namespace Intrinio.SDK.Test
             //string source = null;
             //var response = instance.GetOptionsStatsRealtime(identifier, source);
             //Assert.IsInstanceOf<ApiResponseOptionsStatsRealtime> (response, "response is ApiResponseOptionsStatsRealtime");
-        }
-        
-        /// <summary>
-        /// Test GetSecuritySnapshots
-        /// </summary>
-        [Test]
-        public void GetSecuritySnapshotsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string source = null;
-            //DateTime? atDatetime = null;
-            //var response = instance.GetSecuritySnapshots(source, atDatetime);
-            //Assert.IsInstanceOf<OptionSnapshotsResult> (response, "response is OptionSnapshotsResult");
         }
         
         /// <summary>

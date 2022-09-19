@@ -33,14 +33,14 @@ namespace Intrinio.SDK.Client
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
-        partial void InterceptRequest(IRestRequest request);
+        partial void InterceptRequest(RestRequest request);
 
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
         /// <param name="response">The RestSharp response object</param>
-        partial void InterceptResponse(IRestRequest request, IRestResponse response);
+        partial void InterceptResponse(RestRequest request, RestResponse response);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
@@ -130,7 +130,7 @@ namespace Intrinio.SDK.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);
+                request.AddFile(param.Value.Name, param.Value.GetFile, param.Value.FileName, param.Value.ContentType);
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
@@ -166,9 +166,9 @@ namespace Intrinio.SDK.Client
 
             // set timeout
             
-            RestClient.Timeout = Configuration.Timeout;
+            RestClient.Options.MaxTimeout = Configuration.Timeout;
             // set user agent
-            RestClient.UserAgent = Configuration.UserAgent;
+            RestClient.Options.UserAgent = Configuration.UserAgent;
 
             var allowRetries = Intrinio.SDK.Client.Configuration.Default.AllowRetries;
             var retryCount = 0;
@@ -176,10 +176,10 @@ namespace Intrinio.SDK.Client
                 retryCount = 4;
                 
             var retryPolicy = Policy
-              .HandleResult<IRestResponse>((result) =>
+              .HandleResult<RestResponse>((result) =>
               {
                   bool shouldRetry = false;
-                  List<Parameter> responseHeaders = result.Headers.ToList();
+                  List<HeaderParameter> responseHeaders = result.Headers.ToList();
                   
                   // Retry if server error or rate limit error
                   if ((int)result.StatusCode >= 500)
@@ -243,11 +243,11 @@ namespace Intrinio.SDK.Client
             var retryCount = Intrinio.SDK.Client.Configuration.Default.AllowRetries ? 4 : 0;
             
             var retryPolicy = Policy
-              .HandleResult<IRestResponse>((result) =>
+              .HandleResult<RestResponse>((result) =>
               {
 
                   bool shouldRetry = false;
-                  List<Parameter> responseHeaders = result.Headers.ToList();
+                  List<HeaderParameter> responseHeaders = result.Headers.ToList();
                   
                   // Retry if server error or rate limit error
                   if ((int)result.StatusCode >= 500)
@@ -282,7 +282,7 @@ namespace Intrinio.SDK.Client
             var response = await retryPolicy.ExecuteAsync(async () =>
             {
               Console.WriteLine("Calling Intrinio API...");
-              return await RestClient.ExecuteTaskAsync(request);
+              return await RestClient.ExecuteAsync(request);
             });
              
             InterceptResponse(request, response);
@@ -355,9 +355,9 @@ namespace Intrinio.SDK.Client
         /// <param name="response">The HTTP response.</param>
         /// <param name="type">Object type.</param>
         /// <returns>Object representation of the JSON string.</returns>
-        public object Deserialize(IRestResponse response, Type type)
+        public object Deserialize(RestResponse response, Type type)
         {
-            IList<Parameter> headers = response.Headers;
+            IReadOnlyCollection<HeaderParameter>? headers = response.Headers;
             if (type == typeof(byte[])) // return byte array
             {
                 return response.RawBytes;

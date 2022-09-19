@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "6.21.2";
+        public const string Version = "6.22.2";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -106,7 +106,7 @@ namespace Intrinio.SDK.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "Swagger-Codegen/6.21.2/csharp";
+            UserAgent = "Swagger-Codegen/6.22.2/csharp";
             BasePath = "https://api-v2.intrinio.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -182,7 +182,7 @@ namespace Intrinio.SDK.Client
             string dateTimeFormat = null,
             int timeout = 100000,
             bool allowRetries = true,
-            string userAgent = "Swagger-Codegen/6.21.2/csharp"
+            string userAgent = "Swagger-Codegen/6.22.2/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -228,7 +228,7 @@ namespace Intrinio.SDK.Client
                 _basePath = value;
                 // pass-through to ApiClient if it's set.
                 if(_apiClient != null) {
-                    _apiClient.RestClient.BaseUrl = new Uri(_basePath);
+                    _apiClient.RestClient.Options.BaseUrl = new Uri(_basePath);
                 }
             }
         }
@@ -244,8 +244,8 @@ namespace Intrinio.SDK.Client
         public virtual int Timeout
         {
             
-            get { return ApiClient.RestClient.Timeout; }
-            set { ApiClient.RestClient.Timeout = value; }
+            get { return ApiClient.RestClient.Options.MaxTimeout; }
+            set { ApiClient.RestClient.Options.MaxTimeout = value; }
         }
         
         /// <summary>
@@ -422,7 +422,7 @@ namespace Intrinio.SDK.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.30.0\n";
-            report += "    SDK Package Version: 6.21.2\n";
+            report += "    SDK Package Version: 6.22.2\n";
 
             return report;
         }

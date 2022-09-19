@@ -42,7 +42,7 @@ ${nuget_cmd} install src/Intrinio.SDK/packages.config -o packages;
 echo "[INFO] Copy DLLs to the 'bin' folder"
 mkdir -p bin;
 cp packages/Newtonsoft.Json.13.0.1/lib/net45/Newtonsoft.Json.dll bin/Newtonsoft.Json.dll;
-cp packages/RestSharp.106.12.0/lib/net45/RestSharp.dll bin/RestSharp.dll;
+cp packages/RestSharp.108.0.1/lib/net45/RestSharp.dll bin/RestSharp.dll;
 cp packages/JsonSubTypes.1.9.0/lib/net45/JsonSubTypes.dll bin/JsonSubTypes.dll
 cp packages/Polly.7.2.3/lib/net472/Polly.dll bin/Polly.dll
 

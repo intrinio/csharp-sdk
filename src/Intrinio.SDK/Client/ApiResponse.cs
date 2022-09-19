@@ -20,7 +20,7 @@ namespace Intrinio.SDK.Client
         /// Gets or sets the HTTP headers
         /// </summary>
         /// <value>HTTP headers</value>
-        public IDictionary<string, string> Headers { get; private set; }
+        public IList<KeyValuePair<string, string>> Headers { get; private set; }
 
         /// <summary>
         /// Gets or sets the data (parsed HTTP body)
@@ -34,7 +34,7 @@ namespace Intrinio.SDK.Client
         /// <param name="statusCode">HTTP status code.</param>
         /// <param name="headers">HTTP headers.</param>
         /// <param name="data">Data (parsed HTTP body)</param>
-        public ApiResponse(int statusCode, IDictionary<string, string> headers, T data)
+        public ApiResponse(int statusCode, IList<KeyValuePair<string, string>> headers, T data)
         {
             this.StatusCode= statusCode;
             this.Headers = headers;

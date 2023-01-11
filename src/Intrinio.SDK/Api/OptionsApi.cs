@@ -301,6 +301,104 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsWithHttpInfo (string symbol, string after = null, string before = null);
         /// <summary>
+        /// Options intervals by contract
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of interval data points for a contract.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>OptionIntervalsResult</returns>
+        OptionIntervalsResult GetOptionsIntervalByContract (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null);
+
+        /// <summary>
+        /// Options intervals by contract
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of interval data points for a contract.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsResult</returns>
+        ApiResponse<OptionIntervalsResult> GetOptionsIntervalByContractWithHttpInfo (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null);
+        /// <summary>
+        /// Options Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>OptionIntervalsMoversResult</returns>
+        OptionIntervalsMoversResult GetOptionsIntervalMovers (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Options Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsMoversResult</returns>
+        ApiResponse<OptionIntervalsMoversResult> GetOptionsIntervalMoversWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Options Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>OptionIntervalsMoversResult</returns>
+        OptionIntervalsMoversResult GetOptionsIntervalMoversChange (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Options Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsMoversResult</returns>
+        ApiResponse<OptionIntervalsMoversResult> GetOptionsIntervalMoversChangeWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Options Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>OptionIntervalsMoversResult</returns>
+        OptionIntervalsMoversResult GetOptionsIntervalMoversVolume (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Options Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsMoversResult</returns>
+        ApiResponse<OptionIntervalsMoversResult> GetOptionsIntervalMoversVolumeWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
         /// Option Prices
         /// </summary>
         /// <remarks>
@@ -843,6 +941,104 @@ namespace Intrinio.SDK.Api
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsAsyncWithHttpInfo (string symbol, string after = null, string before = null);
+        /// <summary>
+        /// Options intervals by contract
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of interval data points for a contract.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>Task of OptionIntervalsResult</returns>
+        System.Threading.Tasks.Task<OptionIntervalsResult> GetOptionsIntervalByContractAsync (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null);
+
+        /// <summary>
+        /// Options intervals by contract
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of interval data points for a contract.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OptionIntervalsResult>> GetOptionsIntervalByContractAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null);
+        /// <summary>
+        /// Options Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of OptionIntervalsMoversResult</returns>
+        System.Threading.Tasks.Task<OptionIntervalsMoversResult> GetOptionsIntervalMoversAsync (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Options Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsMoversResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OptionIntervalsMoversResult>> GetOptionsIntervalMoversAsyncWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Options Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of OptionIntervalsMoversResult</returns>
+        System.Threading.Tasks.Task<OptionIntervalsMoversResult> GetOptionsIntervalMoversChangeAsync (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Options Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsMoversResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OptionIntervalsMoversResult>> GetOptionsIntervalMoversChangeAsyncWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Options Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of OptionIntervalsMoversResult</returns>
+        System.Threading.Tasks.Task<OptionIntervalsMoversResult> GetOptionsIntervalMoversVolumeAsync (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Options Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsMoversResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OptionIntervalsMoversResult>> GetOptionsIntervalMoversVolumeAsyncWithHttpInfo (string source = null, DateTime? openTime = null);
         /// <summary>
         /// Option Prices
         /// </summary>
@@ -2822,6 +3018,624 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsExpirations>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseOptionsExpirations) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsExpirations)));
+        }
+
+        /// <summary>
+        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>OptionIntervalsResult</returns>
+        public OptionIntervalsResult GetOptionsIntervalByContract (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null)
+        {
+             ApiResponse<OptionIntervalsResult> localVarResponse = GetOptionsIntervalByContractWithHttpInfo(identifier, intervalSize, source, pageSize, endTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsResult</returns>
+        
+        
+        public ApiResponse< OptionIntervalsResult > GetOptionsIntervalByContractWithHttpInfo (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionsIntervalByContract");
+            // verify the required parameter 'intervalSize' is set
+            if (intervalSize == null)
+                throw new ApiException(400, "Missing required parameter 'intervalSize' when calling OptionsApi->GetOptionsIntervalByContract");
+
+            var localVarPath = "/options/interval/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalByContract", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsResult)));
+        }
+
+        /// <summary>
+        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>Task of OptionIntervalsResult</returns>
+        public async System.Threading.Tasks.Task<OptionIntervalsResult> GetOptionsIntervalByContractAsync (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null)
+        {
+             ApiResponse<OptionIntervalsResult> localVarResponse = await GetOptionsIntervalByContractAsyncWithHttpInfo(identifier, intervalSize, source, pageSize, endTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
+        /// <param name="intervalSize">The time length of the interval.</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="endTime">The inclusive UTC date and time the intervals end at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OptionIntervalsResult>> GetOptionsIntervalByContractAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionsIntervalByContract");
+            // verify the required parameter 'intervalSize' is set
+            if (intervalSize == null)
+                throw new ApiException(400, "Missing required parameter 'intervalSize' when calling OptionsApi->GetOptionsIntervalByContract");
+
+            var localVarPath = "/options/interval/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalByContract", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsResult)));
+        }
+
+        /// <summary>
+        /// Options Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>OptionIntervalsMoversResult</returns>
+        public OptionIntervalsMoversResult GetOptionsIntervalMovers (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<OptionIntervalsMoversResult> localVarResponse = GetOptionsIntervalMoversWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsMoversResult</returns>
+        
+        
+        public ApiResponse< OptionIntervalsMoversResult > GetOptionsIntervalMoversWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/options/interval/movers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalMovers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Options Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of OptionIntervalsMoversResult</returns>
+        public async System.Threading.Tasks.Task<OptionIntervalsMoversResult> GetOptionsIntervalMoversAsync (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<OptionIntervalsMoversResult> localVarResponse = await GetOptionsIntervalMoversAsyncWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsMoversResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OptionIntervalsMoversResult>> GetOptionsIntervalMoversAsyncWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/options/interval/movers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalMovers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>OptionIntervalsMoversResult</returns>
+        public OptionIntervalsMoversResult GetOptionsIntervalMoversChange (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<OptionIntervalsMoversResult> localVarResponse = GetOptionsIntervalMoversChangeWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsMoversResult</returns>
+        
+        
+        public ApiResponse< OptionIntervalsMoversResult > GetOptionsIntervalMoversChangeWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/options/interval/movers/change";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalMoversChange", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of OptionIntervalsMoversResult</returns>
+        public async System.Threading.Tasks.Task<OptionIntervalsMoversResult> GetOptionsIntervalMoversChangeAsync (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<OptionIntervalsMoversResult> localVarResponse = await GetOptionsIntervalMoversChangeAsyncWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsMoversResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OptionIntervalsMoversResult>> GetOptionsIntervalMoversChangeAsyncWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/options/interval/movers/change";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalMoversChange", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>OptionIntervalsMoversResult</returns>
+        public OptionIntervalsMoversResult GetOptionsIntervalMoversVolume (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<OptionIntervalsMoversResult> localVarResponse = GetOptionsIntervalMoversVolumeWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of OptionIntervalsMoversResult</returns>
+        
+        
+        public ApiResponse< OptionIntervalsMoversResult > GetOptionsIntervalMoversVolumeWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/options/interval/movers/volume";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalMoversVolume", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of OptionIntervalsMoversResult</returns>
+        public async System.Threading.Tasks.Task<OptionIntervalsMoversResult> GetOptionsIntervalMoversVolumeAsync (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<OptionIntervalsMoversResult> localVarResponse = await GetOptionsIntervalMoversVolumeAsyncWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (OptionIntervalsMoversResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OptionIntervalsMoversResult>> GetOptionsIntervalMoversVolumeAsyncWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/options/interval/movers/volume";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsIntervalMoversVolume", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsMoversResult)));
         }
 
         /// <summary>

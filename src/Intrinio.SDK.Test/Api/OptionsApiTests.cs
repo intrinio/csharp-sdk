@@ -208,6 +208,61 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsIntervalByContract
+        /// </summary>
+        [Test]
+        public void GetOptionsIntervalByContractTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string intervalSize = null;
+            //string source = null;
+            //int? pageSize = null;
+            //DateTime? endTime = null;
+            //var response = instance.GetOptionsIntervalByContract(identifier, intervalSize, source, pageSize, endTime);
+            //Assert.IsInstanceOf<OptionIntervalsResult> (response, "response is OptionIntervalsResult");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsIntervalMovers
+        /// </summary>
+        [Test]
+        public void GetOptionsIntervalMoversTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? openTime = null;
+            //var response = instance.GetOptionsIntervalMovers(source, openTime);
+            //Assert.IsInstanceOf<OptionIntervalsMoversResult> (response, "response is OptionIntervalsMoversResult");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsIntervalMoversChange
+        /// </summary>
+        [Test]
+        public void GetOptionsIntervalMoversChangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? openTime = null;
+            //var response = instance.GetOptionsIntervalMoversChange(source, openTime);
+            //Assert.IsInstanceOf<OptionIntervalsMoversResult> (response, "response is OptionIntervalsMoversResult");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsIntervalMoversVolume
+        /// </summary>
+        [Test]
+        public void GetOptionsIntervalMoversVolumeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? openTime = null;
+            //var response = instance.GetOptionsIntervalMoversVolume(source, openTime);
+            //Assert.IsInstanceOf<OptionIntervalsMoversResult> (response, "response is OptionIntervalsMoversResult");
+        }
+        
+        /// <summary>
         /// Test GetOptionsPrices
         /// </summary>
         [Test]

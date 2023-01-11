@@ -281,7 +281,6 @@ namespace Intrinio.SDK.Client
             
             var response = await retryPolicy.ExecuteAsync(async () =>
             {
-              Console.WriteLine("Calling Intrinio API...");
               return await RestClient.ExecuteAsync(request);
             });
              

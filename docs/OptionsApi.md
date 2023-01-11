@@ -13,6 +13,10 @@ Method | HTTP request | Description
 [**GetOptionsChainEod**](OptionsApi.md#getoptionschaineod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 [**GetOptionsChainRealtime**](OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
+[**GetOptionsIntervalByContract**](OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options intervals by contract
+[**GetOptionsIntervalMovers**](OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
+[**GetOptionsIntervalMoversChange**](OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
+[**GetOptionsIntervalMoversVolume**](OptionsApi.md#getoptionsintervalmoversvolume) | **GET** /options/interval/movers/volume | Options Intervals Movers By Volume
 [**GetOptionsPrices**](OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 [**GetOptionsPricesBatchRealtime**](OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**GetOptionsPricesEod**](OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
@@ -906,6 +910,372 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsIntervalByContract)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionIntervalsResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsResult.md)
+
+[//]: # (OPERATION:GetOptionsIntervalByContract_v2)
+
+[//]: # (ENDPOINT:/options/interval/{identifier})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsintervalbycontract)
+
+<a name="getoptionsintervalbycontract"></a>
+## **GetOptionsIntervalByContract**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsIntervalByContract_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsResult GetOptionsIntervalByContract (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null)
+
+#### Options intervals by contract
+
+Returns a list of interval data points for a contract.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsIntervalByContractExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string identifier = "SPY___230103P00380000";
+      string intervalSize = "5m";
+      string source = null;
+      int? pageSize = 100;
+      DateTime? endTime = null;
+      
+      OptionIntervalsResult result = optionsApi.GetOptionsIntervalByContract(identifier, intervalSize, source, pageSize, endTime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The Intrinio ID or code of the options contract to request intervals for. |  &nbsp;
+ **intervalSize** | string| The time length of the interval. |  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **endTime** | DateTime?| The inclusive UTC date and time the intervals end at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsResult**](OptionIntervalsResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsIntervalMovers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsMoversResult.md)
+
+[//]: # (OPERATION:GetOptionsIntervalMovers_v2)
+
+[//]: # (ENDPOINT:/options/interval/movers)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsintervalmovers)
+
+<a name="getoptionsintervalmovers"></a>
+## **GetOptionsIntervalMovers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsIntervalMovers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsMoversResult GetOptionsIntervalMovers (string source = null, DateTime? openTime = null)
+
+#### Options Intervals Movers
+
+Returns a list of intervals for the biggest movers over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsIntervalMoversExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string source = null;
+      DateTime? openTime = null;
+      
+      OptionIntervalsMoversResult result = optionsApi.GetOptionsIntervalMovers(source, openTime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | DateTime?| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsMoversResult**](OptionIntervalsMoversResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsIntervalMoversChange)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsMoversResult.md)
+
+[//]: # (OPERATION:GetOptionsIntervalMoversChange_v2)
+
+[//]: # (ENDPOINT:/options/interval/movers/change)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsintervalmoverschange)
+
+<a name="getoptionsintervalmoverschange"></a>
+## **GetOptionsIntervalMoversChange**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsIntervalMoversChange_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsMoversResult GetOptionsIntervalMoversChange (string source = null, DateTime? openTime = null)
+
+#### Options Intervals Movers By Change
+
+Returns a list of intervals for the biggest movers by change over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsIntervalMoversChangeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string source = null;
+      DateTime? openTime = null;
+      
+      OptionIntervalsMoversResult result = optionsApi.GetOptionsIntervalMoversChange(source, openTime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | DateTime?| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsMoversResult**](OptionIntervalsMoversResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsIntervalMoversVolume)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsMoversResult.md)
+
+[//]: # (OPERATION:GetOptionsIntervalMoversVolume_v2)
+
+[//]: # (ENDPOINT:/options/interval/movers/volume)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsintervalmoversvolume)
+
+<a name="getoptionsintervalmoversvolume"></a>
+## **GetOptionsIntervalMoversVolume**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsIntervalMoversVolume_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsMoversResult GetOptionsIntervalMoversVolume (string source = null, DateTime? openTime = null)
+
+#### Options Intervals Movers By Volume
+
+Returns a list of intervals for the biggest movers by volume over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsIntervalMoversVolumeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string source = null;
+      DateTime? openTime = null;
+      
+      OptionIntervalsMoversResult result = optionsApi.GetOptionsIntervalMoversVolume(source, openTime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | DateTime?| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsMoversResult**](OptionIntervalsMoversResult.md)
 
 [//]: # (END_OPERATION)
 

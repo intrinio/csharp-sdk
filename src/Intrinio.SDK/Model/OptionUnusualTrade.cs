@@ -61,7 +61,7 @@ namespace Intrinio.SDK.Model
         /// <param name="Symbol">The underlying option security symbol for the trade.</param>
         /// <param name="Timestamp">The UTC timestamp of order placement.</param>
         /// <param name="Type">The type of unusual trade.</param>
-        /// <param name="TotalValue">The aggregated value of all option contract premiums included in the trade\\.</param>
+        /// <param name="TotalValue">The aggregated value of all option contract premiums included in the trade.</param>
         /// <param name="TotalSize">The total number of contracts involved in a single transaction.</param>
         /// <param name="AveragePrice">The average premium paid per option contract.</param>
         /// <param name="Contract">The option contract symbol.</param>
@@ -107,9 +107,9 @@ namespace Intrinio.SDK.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// The aggregated value of all option contract premiums included in the trade\\
+        /// The aggregated value of all option contract premiums included in the trade
         /// </summary>
-        /// <value>The aggregated value of all option contract premiums included in the trade\\</value>
+        /// <value>The aggregated value of all option contract premiums included in the trade</value>
         [DataMember(Name="total_value", EmitDefaultValue=false)]
         public decimal? TotalValue { get; set; }
 

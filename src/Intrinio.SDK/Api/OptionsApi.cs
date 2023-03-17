@@ -301,7 +301,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsWithHttpInfo (string symbol, string after = null, string before = null);
         /// <summary>
-        /// Options intervals by contract
+        /// Options Intervals By Contract
         /// </summary>
         /// <remarks>
         /// Returns a list of interval data points for a contract.
@@ -316,7 +316,7 @@ namespace Intrinio.SDK.Api
         OptionIntervalsResult GetOptionsIntervalByContract (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null);
 
         /// <summary>
-        /// Options intervals by contract
+        /// Options Intervals By Contract
         /// </summary>
         /// <remarks>
         /// Returns a list of interval data points for a contract.
@@ -942,7 +942,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsAsyncWithHttpInfo (string symbol, string after = null, string before = null);
         /// <summary>
-        /// Options intervals by contract
+        /// Options Intervals By Contract
         /// </summary>
         /// <remarks>
         /// Returns a list of interval data points for a contract.
@@ -957,7 +957,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<OptionIntervalsResult> GetOptionsIntervalByContractAsync (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null);
 
         /// <summary>
-        /// Options intervals by contract
+        /// Options Intervals By Contract
         /// </summary>
         /// <remarks>
         /// Returns a list of interval data points for a contract.
@@ -3021,7 +3021,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// Options Intervals By Contract Returns a list of interval data points for a contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
@@ -3037,7 +3037,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// Options Intervals By Contract Returns a list of interval data points for a contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
@@ -3110,7 +3110,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// Options Intervals By Contract Returns a list of interval data points for a contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>
@@ -3127,7 +3127,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options intervals by contract Returns a list of interval data points for a contract.
+        /// Options Intervals By Contract Returns a list of interval data points for a contract.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The Intrinio ID or code of the options contract to request intervals for.</param>

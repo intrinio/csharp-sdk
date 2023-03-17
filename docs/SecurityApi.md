@@ -10,6 +10,9 @@ Method | HTTP request | Description
 [**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**GetSecurityHistoricalData**](SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
 [**GetSecurityInsiderOwnership**](SecurityApi.md#getsecurityinsiderownership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
+[**GetSecurityIntervalMovers**](SecurityApi.md#getsecurityintervalmovers) | **GET** /securities/market_movers | Security Intervals Movers
+[**GetSecurityIntervalMoversChange**](SecurityApi.md#getsecurityintervalmoverschange) | **GET** /securities/market_movers/change | Security Intervals Movers By Change
+[**GetSecurityIntervalMoversVolume**](SecurityApi.md#getsecurityintervalmoversvolume) | **GET** /securities/market_movers/volume | Security Intervals Movers By Volume
 [**GetSecurityIntervalPrices**](SecurityApi.md#getsecurityintervalprices) | **GET** /securities/{identifier}/prices/intervals | Interval Stock Prices for Security
 [**GetSecurityIntradayPrices**](SecurityApi.md#getsecurityintradayprices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 [**GetSecurityLatestDividendRecord**](SecurityApi.md#getsecuritylatestdividendrecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
@@ -646,6 +649,276 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
 
+[//]: # (METHOD:GetSecurityIntervalMovers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityIntervalsMoversResult.md)
+
+[//]: # (OPERATION:GetSecurityIntervalMovers_v2)
+
+[//]: # (ENDPOINT:/securities/market_movers)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityintervalmovers)
+
+<a name="getsecurityintervalmovers"></a>
+## **GetSecurityIntervalMovers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityIntervalMovers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityIntervalsMoversResult GetSecurityIntervalMovers (string source = null, DateTime? openTime = null)
+
+#### Security Intervals Movers
+
+Returns a list of intervals for the biggest movers over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityIntervalMoversExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      DateTime? openTime = null;
+      
+      SecurityIntervalsMoversResult result = securityApi.GetSecurityIntervalMovers(source, openTime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | DateTime?| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityIntervalsMoversResult**](SecurityIntervalsMoversResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityIntervalMoversChange)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityIntervalsMoversResult.md)
+
+[//]: # (OPERATION:GetSecurityIntervalMoversChange_v2)
+
+[//]: # (ENDPOINT:/securities/market_movers/change)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityintervalmoverschange)
+
+<a name="getsecurityintervalmoverschange"></a>
+## **GetSecurityIntervalMoversChange**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityIntervalMoversChange_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityIntervalsMoversResult GetSecurityIntervalMoversChange (string source = null, DateTime? openTime = null)
+
+#### Security Intervals Movers By Change
+
+Returns a list of intervals for the biggest movers by change over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityIntervalMoversChangeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      DateTime? openTime = null;
+      
+      SecurityIntervalsMoversResult result = securityApi.GetSecurityIntervalMoversChange(source, openTime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | DateTime?| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityIntervalsMoversResult**](SecurityIntervalsMoversResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityIntervalMoversVolume)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityIntervalsMoversResult.md)
+
+[//]: # (OPERATION:GetSecurityIntervalMoversVolume_v2)
+
+[//]: # (ENDPOINT:/securities/market_movers/volume)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityintervalmoversvolume)
+
+<a name="getsecurityintervalmoversvolume"></a>
+## **GetSecurityIntervalMoversVolume**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityIntervalMoversVolume_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityIntervalsMoversResult GetSecurityIntervalMoversVolume (string source = null, DateTime? openTime = null)
+
+#### Security Intervals Movers By Volume
+
+Returns a list of intervals for the biggest movers by volume over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityIntervalMoversVolumeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      DateTime? openTime = null;
+      
+      SecurityIntervalsMoversResult result = securityApi.GetSecurityIntervalMoversVolume(source, openTime);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | DateTime?| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityIntervalsMoversResult**](SecurityIntervalsMoversResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
 [//]: # (METHOD:GetSecurityIntervalPrices)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityIntervalPrices)
@@ -667,11 +940,11 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+> ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
 
 #### Interval Stock Prices for Security
 
-Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given `identifier`
+Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given `identifier`
 
 [//]: # (END_OVERVIEW)
 
@@ -701,17 +974,17 @@ namespace Example
       var securityApi = new SecurityApi();
       
       string identifier = "AAPL";
+      string intervalSize = "15m";
       string source = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
       string startTime = null;
       DateTime? endDate = DateTime.Parse("2019-01-01");
       string endTime = null;
       string timezone = "UTC";
-      string intervalSize = "1d";
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseSecurityIntervalPrices result = securityApi.GetSecurityIntervalPrices(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+      ApiResponseSecurityIntervalPrices result = securityApi.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -728,13 +1001,13 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **intervalSize** | string| The interval for which to return stock prices | [default to 15m] &nbsp;
  **source** | string| Return intervals from the specified data source | [optional]  &nbsp;
  **startDate** | DateTime?| Return intervals starting at the specified date | [optional]  &nbsp;
- **startTime** | string| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
+ **startTime** | string| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **endDate** | DateTime?| Return intervals stopping at the specified date | [optional]  &nbsp;
- **endTime** | string| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
+ **endTime** | string| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **timezone** | string| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
- **intervalSize** | string| The interval for which to return stock prices | [optional] [default to 1d] &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

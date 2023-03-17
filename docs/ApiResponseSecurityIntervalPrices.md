@@ -9,7 +9,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**Intervals** | [**List&lt;StockPriceInterval&gt;**](StockPriceInterval.md) | Open, High, Low, Close, and Volume for a particular interval &nbsp;
+**Intervals** | [**List&lt;StockPriceInterval&gt;**](StockPriceInterval.md) | Open, close, high, low, volume, average price, and change ratio for a particular interval &nbsp;
 **Security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
 **Source** | string | The source of the data &nbsp;
 **NextPage** | string | The token required to request the next page of the data. If null, no further results are available. &nbsp;

@@ -40,8 +40,13 @@ namespace Intrinio.SDK.Model
         /// <param name="MarketVolume">The number of shares exchanged during the trading day for the whole market..</param>
         /// <param name="UpdatedOn">The date and time when the data was last updated..</param>
         /// <param name="Source">The source of the data..</param>
+        /// <param name="ListingVenue">The venue the price came from..</param>
+        /// <param name="SalesConditions">The condition for the sale..</param>
+        /// <param name="QuoteConditions">The condition for the quote..</param>
+        /// <param name="MarketCenterCode">The market center character code..</param>
+        /// <param name="IsDarkpool">Whether or not the current trade is from a darkpool or not..</param>
         /// <param name="Security">Security.</param>
-        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? LastSize = default(decimal?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), decimal? OpenPrice = default(decimal?), decimal? ClosePrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
+        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? LastSize = default(decimal?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), decimal? OpenPrice = default(decimal?), decimal? ClosePrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), string ListingVenue = default(string), string SalesConditions = default(string), string QuoteConditions = default(string), string MarketCenterCode = default(string), bool? IsDarkpool = default(bool?), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
         {
             this.LastPrice = LastPrice;
             this.LastTime = LastTime;
@@ -58,6 +63,11 @@ namespace Intrinio.SDK.Model
             this.MarketVolume = MarketVolume;
             this.UpdatedOn = UpdatedOn;
             this.Source = Source;
+            this.ListingVenue = ListingVenue;
+            this.SalesConditions = SalesConditions;
+            this.QuoteConditions = QuoteConditions;
+            this.MarketCenterCode = MarketCenterCode;
+            this.IsDarkpool = IsDarkpool;
             this.Security = Security;
         }
         
@@ -167,6 +177,41 @@ namespace Intrinio.SDK.Model
         public string Source { get; set; }
 
         /// <summary>
+        /// The venue the price came from.
+        /// </summary>
+        /// <value>The venue the price came from.</value>
+        [DataMember(Name="listing_venue", EmitDefaultValue=false)]
+        public string ListingVenue { get; set; }
+
+        /// <summary>
+        /// The condition for the sale.
+        /// </summary>
+        /// <value>The condition for the sale.</value>
+        [DataMember(Name="sales_conditions", EmitDefaultValue=false)]
+        public string SalesConditions { get; set; }
+
+        /// <summary>
+        /// The condition for the quote.
+        /// </summary>
+        /// <value>The condition for the quote.</value>
+        [DataMember(Name="quote_conditions", EmitDefaultValue=false)]
+        public string QuoteConditions { get; set; }
+
+        /// <summary>
+        /// The market center character code.
+        /// </summary>
+        /// <value>The market center character code.</value>
+        [DataMember(Name="market_center_code", EmitDefaultValue=false)]
+        public string MarketCenterCode { get; set; }
+
+        /// <summary>
+        /// Whether or not the current trade is from a darkpool or not.
+        /// </summary>
+        /// <value>Whether or not the current trade is from a darkpool or not.</value>
+        [DataMember(Name="is_darkpool", EmitDefaultValue=false)]
+        public bool? IsDarkpool { get; set; }
+
+        /// <summary>
         /// Gets or Sets Security
         /// </summary>
         [DataMember(Name="security", EmitDefaultValue=false)]
@@ -195,6 +240,11 @@ namespace Intrinio.SDK.Model
             sb.Append("  MarketVolume: ").Append(MarketVolume).Append("\n");
             sb.Append("  UpdatedOn: ").Append(UpdatedOn).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  ListingVenue: ").Append(ListingVenue).Append("\n");
+            sb.Append("  SalesConditions: ").Append(SalesConditions).Append("\n");
+            sb.Append("  QuoteConditions: ").Append(QuoteConditions).Append("\n");
+            sb.Append("  MarketCenterCode: ").Append(MarketCenterCode).Append("\n");
+            sb.Append("  IsDarkpool: ").Append(IsDarkpool).Append("\n");
             sb.Append("  Security: ").Append(Security).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -306,6 +356,31 @@ namespace Intrinio.SDK.Model
                     this.Source.Equals(input.Source))
                 ) && 
                 (
+                    this.ListingVenue == input.ListingVenue ||
+                    (this.ListingVenue != null &&
+                    this.ListingVenue.Equals(input.ListingVenue))
+                ) && 
+                (
+                    this.SalesConditions == input.SalesConditions ||
+                    (this.SalesConditions != null &&
+                    this.SalesConditions.Equals(input.SalesConditions))
+                ) && 
+                (
+                    this.QuoteConditions == input.QuoteConditions ||
+                    (this.QuoteConditions != null &&
+                    this.QuoteConditions.Equals(input.QuoteConditions))
+                ) && 
+                (
+                    this.MarketCenterCode == input.MarketCenterCode ||
+                    (this.MarketCenterCode != null &&
+                    this.MarketCenterCode.Equals(input.MarketCenterCode))
+                ) && 
+                (
+                    this.IsDarkpool == input.IsDarkpool ||
+                    (this.IsDarkpool != null &&
+                    this.IsDarkpool.Equals(input.IsDarkpool))
+                ) && 
+                (
                     this.Security == input.Security ||
                     (this.Security != null &&
                     this.Security.Equals(input.Security))
@@ -351,6 +426,16 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.UpdatedOn.GetHashCode();
                 if (this.Source != null)
                     hashCode = hashCode * 59 + this.Source.GetHashCode();
+                if (this.ListingVenue != null)
+                    hashCode = hashCode * 59 + this.ListingVenue.GetHashCode();
+                if (this.SalesConditions != null)
+                    hashCode = hashCode * 59 + this.SalesConditions.GetHashCode();
+                if (this.QuoteConditions != null)
+                    hashCode = hashCode * 59 + this.QuoteConditions.GetHashCode();
+                if (this.MarketCenterCode != null)
+                    hashCode = hashCode * 59 + this.MarketCenterCode.GetHashCode();
+                if (this.IsDarkpool != null)
+                    hashCode = hashCode * 59 + this.IsDarkpool.GetHashCode();
                 if (this.Security != null)
                     hashCode = hashCode * 59 + this.Security.GetHashCode();
                 return hashCode;

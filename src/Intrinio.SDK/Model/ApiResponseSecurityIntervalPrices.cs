@@ -31,16 +31,16 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum Iex for value: iex
+            /// Enum Realtime for value: realtime
             /// </summary>
-            [EnumMember(Value = "iex")]
-            Iex = 1,
+            [EnumMember(Value = "realtime")]
+            Realtime = 1,
             
             /// <summary>
-            /// Enum Bats for value: bats
+            /// Enum Delayed for value: delayed
             /// </summary>
-            [EnumMember(Value = "bats")]
-            Bats = 2
+            [EnumMember(Value = "delayed")]
+            Delayed = 2
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiResponseSecurityIntervalPrices" /> class.
         /// </summary>
-        /// <param name="Intervals">Open, High, Low, Close, and Volume for a particular interval.</param>
+        /// <param name="Intervals">Open, close, high, low, volume, average price, and change ratio for a particular interval.</param>
         /// <param name="Security">The Security resolved from the given identifier.</param>
         /// <param name="Source">The source of the data.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
@@ -65,9 +65,9 @@ namespace Intrinio.SDK.Model
         }
         
         /// <summary>
-        /// Open, High, Low, Close, and Volume for a particular interval
+        /// Open, close, high, low, volume, average price, and change ratio for a particular interval
         /// </summary>
-        /// <value>Open, High, Low, Close, and Volume for a particular interval</value>
+        /// <value>Open, close, high, low, volume, average price, and change ratio for a particular interval</value>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
         public List<StockPriceInterval> Intervals { get; set; }
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**GetOptionsChainEod**](OptionsApi.md#getoptionschaineod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 [**GetOptionsChainRealtime**](OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
-[**GetOptionsIntervalByContract**](OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options intervals by contract
+[**GetOptionsIntervalByContract**](OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**GetOptionsIntervalMovers**](OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 [**GetOptionsIntervalMoversChange**](OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
 [**GetOptionsIntervalMoversVolume**](OptionsApi.md#getoptionsintervalmoversvolume) | **GET** /options/interval/movers/volume | Options Intervals Movers By Volume
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 
 > OptionIntervalsResult GetOptionsIntervalByContract (string identifier, string intervalSize, string source = null, int? pageSize = null, DateTime? endTime = null)
 
-#### Options intervals by contract
+#### Options Intervals By Contract
 
 Returns a list of interval data points for a contract.
 

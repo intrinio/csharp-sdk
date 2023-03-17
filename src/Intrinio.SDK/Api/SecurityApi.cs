@@ -200,44 +200,113 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurityInstitutionalOwnership</returns>
         ApiResponse<ApiResponseSecurityInstitutionalOwnership> GetSecurityInsiderOwnershipWithHttpInfo (string identifier);
         /// <summary>
+        /// Security Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>SecurityIntervalsMoversResult</returns>
+        SecurityIntervalsMoversResult GetSecurityIntervalMovers (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Security Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of SecurityIntervalsMoversResult</returns>
+        ApiResponse<SecurityIntervalsMoversResult> GetSecurityIntervalMoversWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Security Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>SecurityIntervalsMoversResult</returns>
+        SecurityIntervalsMoversResult GetSecurityIntervalMoversChange (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Security Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of SecurityIntervalsMoversResult</returns>
+        ApiResponse<SecurityIntervalsMoversResult> GetSecurityIntervalMoversChangeWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Security Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>SecurityIntervalsMoversResult</returns>
+        SecurityIntervalsMoversResult GetSecurityIntervalMoversVolume (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Security Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of SecurityIntervalsMoversResult</returns>
+        ApiResponse<SecurityIntervalsMoversResult> GetSecurityIntervalMoversVolumeWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
         /// Interval Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
         /// <param name="source">Return intervals from the specified data source (optional)</param>
         /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
+        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
         /// <param name="source">Return intervals from the specified data source (optional)</param>
         /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
-        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -1793,44 +1862,113 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseSecurityInstitutionalOwnership)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityInstitutionalOwnership>> GetSecurityInsiderOwnershipAsyncWithHttpInfo (string identifier);
         /// <summary>
+        /// Security Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of SecurityIntervalsMoversResult</returns>
+        System.Threading.Tasks.Task<SecurityIntervalsMoversResult> GetSecurityIntervalMoversAsync (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Security Intervals Movers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityIntervalsMoversResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityIntervalsMoversResult>> GetSecurityIntervalMoversAsyncWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Security Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of SecurityIntervalsMoversResult</returns>
+        System.Threading.Tasks.Task<SecurityIntervalsMoversResult> GetSecurityIntervalMoversChangeAsync (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Security Intervals Movers By Change
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityIntervalsMoversResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityIntervalsMoversResult>> GetSecurityIntervalMoversChangeAsyncWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Security Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of SecurityIntervalsMoversResult</returns>
+        System.Threading.Tasks.Task<SecurityIntervalsMoversResult> GetSecurityIntervalMoversVolumeAsync (string source = null, DateTime? openTime = null);
+
+        /// <summary>
+        /// Security Intervals Movers By Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityIntervalsMoversResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityIntervalsMoversResult>> GetSecurityIntervalMoversVolumeAsyncWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
         /// Interval Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
         /// <param name="source">Return intervals from the specified data source (optional)</param>
         /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
         /// <param name="source">Return intervals from the specified data source (optional)</param>
         /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -4364,48 +4502,492 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Security Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return intervals from the specified data source (optional)</param>
-        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
-        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>SecurityIntervalsMoversResult</returns>
+        public SecurityIntervalsMoversResult GetSecurityIntervalMovers (string source = null, DateTime? openTime = null)
         {
-             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+             ApiResponse<SecurityIntervalsMoversResult> localVarResponse = GetSecurityIntervalMoversWithHttpInfo(source, openTime);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Security Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of SecurityIntervalsMoversResult</returns>
+        
+        
+        public ApiResponse< SecurityIntervalsMoversResult > GetSecurityIntervalMoversWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/securities/market_movers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalMovers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Security Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of SecurityIntervalsMoversResult</returns>
+        public async System.Threading.Tasks.Task<SecurityIntervalsMoversResult> GetSecurityIntervalMoversAsync (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<SecurityIntervalsMoversResult> localVarResponse = await GetSecurityIntervalMoversAsyncWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Intervals Movers Returns a list of intervals for the biggest movers over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityIntervalsMoversResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityIntervalsMoversResult>> GetSecurityIntervalMoversAsyncWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/securities/market_movers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalMovers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>SecurityIntervalsMoversResult</returns>
+        public SecurityIntervalsMoversResult GetSecurityIntervalMoversChange (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<SecurityIntervalsMoversResult> localVarResponse = GetSecurityIntervalMoversChangeWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of SecurityIntervalsMoversResult</returns>
+        
+        
+        public ApiResponse< SecurityIntervalsMoversResult > GetSecurityIntervalMoversChangeWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/securities/market_movers/change";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalMoversChange", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of SecurityIntervalsMoversResult</returns>
+        public async System.Threading.Tasks.Task<SecurityIntervalsMoversResult> GetSecurityIntervalMoversChangeAsync (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<SecurityIntervalsMoversResult> localVarResponse = await GetSecurityIntervalMoversChangeAsyncWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Change Returns a list of intervals for the biggest movers by change over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityIntervalsMoversResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityIntervalsMoversResult>> GetSecurityIntervalMoversChangeAsyncWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/securities/market_movers/change";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalMoversChange", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>SecurityIntervalsMoversResult</returns>
+        public SecurityIntervalsMoversResult GetSecurityIntervalMoversVolume (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<SecurityIntervalsMoversResult> localVarResponse = GetSecurityIntervalMoversVolumeWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>ApiResponse of SecurityIntervalsMoversResult</returns>
+        
+        
+        public ApiResponse< SecurityIntervalsMoversResult > GetSecurityIntervalMoversVolumeWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/securities/market_movers/volume";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalMoversVolume", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of SecurityIntervalsMoversResult</returns>
+        public async System.Threading.Tasks.Task<SecurityIntervalsMoversResult> GetSecurityIntervalMoversVolumeAsync (string source = null, DateTime? openTime = null)
+        {
+             ApiResponse<SecurityIntervalsMoversResult> localVarResponse = await GetSecurityIntervalMoversVolumeAsyncWithHttpInfo(source, openTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Intervals Movers By Volume Returns a list of intervals for the biggest movers by volume over the last hour interval.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityIntervalsMoversResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityIntervalsMoversResult>> GetSecurityIntervalMoversVolumeAsyncWithHttpInfo (string source = null, DateTime? openTime = null)
+        {
+
+            var localVarPath = "/securities/market_movers/volume";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (openTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "open_time", openTime)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityIntervalMoversVolume", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityIntervalsMoversResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Interval Stock Prices for Security Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
         /// <param name="source">Return intervals from the specified data source (optional)</param>
         /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityIntervalPrices</returns>
+        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Interval Stock Prices for Security Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
+        /// <param name="source">Return intervals from the specified data source (optional)</param>
+        /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
+        /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
+        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
         
         
-        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
                 throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityIntervalPrices");
+            // verify the required parameter 'intervalSize' is set
+            if (intervalSize == null)
+                throw new ApiException(400, "Missing required parameter 'intervalSize' when calling SecurityApi->GetSecurityIntervalPrices");
 
             var localVarPath = "/securities/{identifier}/prices/intervals";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4465,47 +5047,50 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Interval Stock Prices for Security Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
         /// <param name="source">Return intervals from the specified data source (optional)</param>
         /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Interval Stock Prices for Security Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+        /// Interval Stock Prices for Security Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="intervalSize">The interval for which to return stock prices</param>
         /// <param name="source">Return intervals from the specified data source (optional)</param>
         /// <param name="startDate">Return intervals starting at the specified date (optional)</param>
-        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
-        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) (optional)</param>
+        /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
-        /// <param name="intervalSize">The interval for which to return stock prices (optional, default to 1d)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, string intervalSize = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
                 throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityIntervalPrices");
+            // verify the required parameter 'intervalSize' is set
+            if (intervalSize == null)
+                throw new ApiException(400, "Missing required parameter 'intervalSize' when calling SecurityApi->GetSecurityIntervalPrices");
 
             var localVarPath = "/securities/{identifier}/prices/intervals";
             var localVarPathParams = new Dictionary<String, String>();

@@ -27,10 +27,12 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Prices">A list of options prices with the given symbol.</param>
         /// <param name="Option">Option.</param>
-        public ApiResponseOptionsPricesEod(List<OptionPriceEod> Prices = default(List<OptionPriceEod>), OptionEod Option = default(OptionEod))
+        /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
+        public ApiResponseOptionsPricesEod(List<OptionPriceEod> Prices = default(List<OptionPriceEod>), OptionEod Option = default(OptionEod), string NextPage = default(string))
         {
             this.Prices = Prices;
             this.Option = Option;
+            this.NextPage = NextPage;
         }
         
         /// <summary>
@@ -47,6 +49,13 @@ namespace Intrinio.SDK.Model
         public OptionEod Option { get; set; }
 
         /// <summary>
+        /// The token required to request the next page of the data. If null, no further results are available.
+        /// </summary>
+        /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
+        [DataMember(Name="next_page", EmitDefaultValue=false)]
+        public string NextPage { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +65,7 @@ namespace Intrinio.SDK.Model
             sb.Append("class ApiResponseOptionsPricesEod {\n");
             sb.Append("  Prices: ").Append(Prices).Append("\n");
             sb.Append("  Option: ").Append(Option).Append("\n");
+            sb.Append("  NextPage: ").Append(NextPage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,6 +109,11 @@ namespace Intrinio.SDK.Model
                     this.Option == input.Option ||
                     (this.Option != null &&
                     this.Option.Equals(input.Option))
+                ) && 
+                (
+                    this.NextPage == input.NextPage ||
+                    (this.NextPage != null &&
+                    this.NextPage.Equals(input.NextPage))
                 );
         }
 
@@ -115,6 +130,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Prices.GetHashCode();
                 if (this.Option != null)
                     hashCode = hashCode * 59 + this.Option.GetHashCode();
+                if (this.NextPage != null)
+                    hashCode = hashCode * 59 + this.NextPage.GetHashCode();
                 return hashCode;
             }
         }

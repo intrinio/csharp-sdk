@@ -11,6 +11,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **Prices** | [**List&lt;OptionPriceEod&gt;**](OptionPriceEod.md) | A list of options prices with the given symbol &nbsp;
 **Option** | [**OptionEod**](OptionEod.md) |  &nbsp;
+**NextPage** | string | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

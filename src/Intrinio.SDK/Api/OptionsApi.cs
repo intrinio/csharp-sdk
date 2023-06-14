@@ -37,10 +37,10 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsTickers</returns>
         ApiResponse<ApiResponseOptionsTickers> GetAllOptionsTickersWithHttpInfo ();
         /// <summary>
-        /// Option Expirations Realtime
+        /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -51,10 +51,10 @@ namespace Intrinio.SDK.Api
         ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null);
 
         /// <summary>
-        /// Option Expirations Realtime
+        /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -90,7 +90,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -110,7 +110,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -166,7 +166,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -185,7 +185,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -279,7 +279,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -292,7 +292,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -300,6 +300,31 @@ namespace Intrinio.SDK.Api
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsWithHttpInfo (string symbol, string after = null, string before = null);
+        /// <summary>
+        /// Options Expirations
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>ApiResponseOptionsExpirations</returns>
+        ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null);
+
+        /// <summary>
+        /// Options Expirations
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
+        ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null);
         /// <summary>
         /// Options Intervals By Contract
         /// </summary>
@@ -678,10 +703,10 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsTickers)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo ();
         /// <summary>
-        /// Option Expirations Realtime
+        /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -692,10 +717,10 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeAsync (string symbol, string after = null, string before = null, string source = null);
 
         /// <summary>
-        /// Option Expirations Realtime
+        /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -731,7 +756,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -751,7 +776,7 @@ namespace Intrinio.SDK.Api
         /// Options
         /// </summary>
         /// <remarks>
-        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -807,7 +832,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -826,7 +851,7 @@ namespace Intrinio.SDK.Api
         /// Options Chain
         /// </summary>
         /// <remarks>
-        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -920,7 +945,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -933,7 +958,7 @@ namespace Intrinio.SDK.Api
         /// Options Expirations
         /// </summary>
         /// <remarks>
-        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -941,6 +966,31 @@ namespace Intrinio.SDK.Api
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsAsyncWithHttpInfo (string symbol, string after = null, string before = null);
+        /// <summary>
+        /// Options Expirations
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsExpirations</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionsExpirationsEodAsync (string symbol, string after = null, string before = null);
+
+        /// <summary>
+        /// Options Expirations
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null);
         /// <summary>
         /// Options Intervals By Contract
         /// </summary>
@@ -1533,7 +1583,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1548,7 +1598,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1616,7 +1666,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1632,7 +1682,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Option Expirations Realtime Returns a list of all current and upcoming expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1857,7 +1907,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1878,7 +1928,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1958,7 +2008,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -1980,7 +2030,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+        /// Options Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2253,7 +2303,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2273,7 +2323,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2354,7 +2404,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2375,7 +2425,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+        /// Options Chain Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2862,7 +2912,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2876,7 +2926,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2942,7 +2992,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -2957,7 +3007,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
@@ -3012,6 +3062,165 @@ namespace Intrinio.SDK.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetOptionsExpirations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsExpirations>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsExpirations) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsExpirations)));
+        }
+
+        /// <summary>
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>ApiResponseOptionsExpirations</returns>
+        public ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null)
+        {
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = GetOptionsExpirationsEodWithHttpInfo(symbol, after, before);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsExpirations > GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsExpirationsEod");
+
+            var localVarPath = "/options/expirations/{symbol}/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
+            if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsExpirationsEod", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsExpirations>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsExpirations) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsExpirations)));
+        }
+
+        /// <summary>
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsExpirations</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionsExpirationsEodAsync (string symbol, string after = null, string before = null)
+        {
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = await GetOptionsExpirationsEodAsyncWithHttpInfo(symbol, after, before);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Expirations Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
+        /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
+        /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsExpirationsEod");
+
+            var localVarPath = "/options/expirations/{symbol}/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
+            if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsExpirationsEod", localVarResponse);
                 if (exception != null) throw exception;
             }
 

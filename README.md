@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.39.2
-- Package version: 7.1.1
+- API version: 2.42.0
+- Package version: 7.2.0
 
 
 <a name="frameworks-supported"></a>
@@ -203,7 +203,7 @@ Class | Method | HTTP request | Description
 *MunicipalityApi* | [**GetMunicipalityById**](docs/MunicipalityApi.md#getmunicipalitybyid) | **GET** /municipalities/{id} | Municipality by ID
 *MunicipalityApi* | [**GetMunicipalityFinancials**](docs/MunicipalityApi.md#getmunicipalityfinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
 *OptionsApi* | [**GetAllOptionsTickers**](docs/OptionsApi.md#getalloptionstickers) | **GET** /options/tickers | Options Tickers
-*OptionsApi* | [**GetOptionExpirationsRealtime**](docs/OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Option Expirations Realtime
+*OptionsApi* | [**GetOptionExpirationsRealtime**](docs/OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 *OptionsApi* | [**GetOptionStrikesRealtime**](docs/OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
 *OptionsApi* | [**GetOptions**](docs/OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
 *OptionsApi* | [**GetOptionsBySymbolRealtime**](docs/OptionsApi.md#getoptionsbysymbolrealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
@@ -211,6 +211,7 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsChainEod**](docs/OptionsApi.md#getoptionschaineod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 *OptionsApi* | [**GetOptionsChainRealtime**](docs/OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *OptionsApi* | [**GetOptionsExpirations**](docs/OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
+*OptionsApi* | [**GetOptionsExpirationsEod**](docs/OptionsApi.md#getoptionsexpirationseod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
 *OptionsApi* | [**GetOptionsIntervalByContract**](docs/OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 *OptionsApi* | [**GetOptionsIntervalMovers**](docs/OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 *OptionsApi* | [**GetOptionsIntervalMoversChange**](docs/OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change

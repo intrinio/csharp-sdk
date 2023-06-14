@@ -9,7 +9,7 @@ if not exist ".\nuget.exe" powershell -Command "(new-object System.Net.WebClient
 
 if not exist ".\bin" mkdir bin
 
-copy packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
+copy packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
 copy packages\JsonSubTypes.1.9.0\lib\net45\JsonSubTypes.dll bin\JsonSubTypes.dll
 copy packages\RestSharp.108.0.1\lib\net45\RestSharp.dll bin\RestSharp.dll
 copy packages\Polly.7.2.3\lib\net472\Polly.dll bin\Polly.dll

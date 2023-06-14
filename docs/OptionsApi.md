@@ -5,7 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllOptionsTickers**](OptionsApi.md#getalloptionstickers) | **GET** /options/tickers | Options Tickers
-[**GetOptionExpirationsRealtime**](OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Option Expirations Realtime
+[**GetOptionExpirationsRealtime**](OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**GetOptionStrikesRealtime**](OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
 [**GetOptions**](OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
 [**GetOptionsBySymbolRealtime**](OptionsApi.md#getoptionsbysymbolrealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**GetOptionsChainEod**](OptionsApi.md#getoptionschaineod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 [**GetOptionsChainRealtime**](OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
+[**GetOptionsExpirationsEod**](OptionsApi.md#getoptionsexpirationseod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
 [**GetOptionsIntervalByContract**](OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**GetOptionsIntervalMovers**](OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 [**GetOptionsIntervalMoversChange**](OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -141,9 +142,9 @@ This endpoint does not need any parameter.
 
 > ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null)
 
-#### Option Expirations Realtime
+#### Options Expirations
 
-Returns a list of all current and upcoming expiration dates for a particular symbol.
+Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
 
 [//]: # (END_OVERVIEW)
 
@@ -327,7 +328,7 @@ Name | Type | Description  | Notes
 
 #### Options
 
-Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
 
 [//]: # (END_OVERVIEW)
 
@@ -537,7 +538,7 @@ Name | Type | Description  | Notes
 
 #### Options Chain
 
-Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
 
 [//]: # (END_OVERVIEW)
 
@@ -851,7 +852,7 @@ Name | Type | Description  | Notes
 
 #### Options Expirations
 
-Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
 
 [//]: # (END_OVERVIEW)
 
@@ -885,6 +886,98 @@ namespace Example
       string before = "2019-12-31";
       
       ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirations(symbol, after, before);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **after** | string| Return option contract expiration dates after this date. | [optional]  &nbsp;
+ **before** | string| Return option contract expiration dates before this date. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsExpirationsEod)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsExpirations)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsExpirations.md)
+
+[//]: # (OPERATION:GetOptionsExpirationsEod_v2)
+
+[//]: # (ENDPOINT:/options/expirations/{symbol}/eod)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsexpirationseod)
+
+<a name="getoptionsexpirationseod"></a>
+## **GetOptionsExpirationsEod**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsExpirationsEod_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null)
+
+#### Options Expirations
+
+Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsExpirationsEodExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "MSFT";
+      string after = "2019-01-01";
+      string before = "2019-12-31";
+      
+      ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirationsEod(symbol, after, before);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }

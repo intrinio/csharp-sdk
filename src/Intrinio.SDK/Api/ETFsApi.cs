@@ -67,7 +67,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -78,7 +78,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -203,7 +203,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -214,7 +214,7 @@ namespace Intrinio.SDK.Api
         /// ETF Analytics
         /// </summary>
         /// <remarks>
-        /// Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -688,7 +688,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -700,7 +700,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -762,7 +762,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -775,7 +775,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volumen, market cap, 52 week high, and 52 week low.
+        /// ETF Analytics Returns latest market analytics for a specified US ETF, including volume, trailing volume, market cap, 52 week high, and 52 week low.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>

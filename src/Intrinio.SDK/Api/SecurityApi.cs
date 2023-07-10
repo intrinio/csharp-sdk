@@ -1417,6 +1417,29 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of RealtimeStockPrice</returns>
         ApiResponse<RealtimeStockPrice> GetSecurityRealtimePriceWithHttpInfo (string identifier, string source = null);
         /// <summary>
+        /// Security Replay File
+        /// </summary>
+        /// <remarks>
+        /// Returns a url where the requested replay file may be downloaded from.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>SecurityReplayFileResult</returns>
+        SecurityReplayFileResult GetSecurityReplayFile (string subsource, DateTime? date);
+
+        /// <summary>
+        /// Security Replay File
+        /// </summary>
+        /// <remarks>
+        /// Returns a url where the requested replay file may be downloaded from.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>ApiResponse of SecurityReplayFileResult</returns>
+        ApiResponse<SecurityReplayFileResult> GetSecurityReplayFileWithHttpInfo (string subsource, DateTime? date);
+        /// <summary>
         /// Realtime Stock Prices Snapshot
         /// </summary>
         /// <remarks>
@@ -1497,6 +1520,76 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityStockPrices</returns>
         ApiResponse<ApiResponseSecurityStockPrices> GetSecurityStockPricesWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>SecurityTradesResult</returns>
+        SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of SecurityTradesResult</returns>
+        ApiResponse<SecurityTradesResult> GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trades By Symbol
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>SecurityTradesResult</returns>
+        SecurityTradesResult GetSecurityTradesBySymbol (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trades By Symbol
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of SecurityTradesResult</returns>
+        ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -3079,6 +3172,29 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (RealtimeStockPrice)</returns>
         System.Threading.Tasks.Task<ApiResponse<RealtimeStockPrice>> GetSecurityRealtimePriceAsyncWithHttpInfo (string identifier, string source = null);
         /// <summary>
+        /// Security Replay File
+        /// </summary>
+        /// <remarks>
+        /// Returns a url where the requested replay file may be downloaded from.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>Task of SecurityReplayFileResult</returns>
+        System.Threading.Tasks.Task<SecurityReplayFileResult> GetSecurityReplayFileAsync (string subsource, DateTime? date);
+
+        /// <summary>
+        /// Security Replay File
+        /// </summary>
+        /// <remarks>
+        /// Returns a url where the requested replay file may be downloaded from.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>Task of ApiResponse (SecurityReplayFileResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityReplayFileResult>> GetSecurityReplayFileAsyncWithHttpInfo (string subsource, DateTime? date);
+        /// <summary>
         /// Realtime Stock Prices Snapshot
         /// </summary>
         /// <remarks>
@@ -3159,6 +3275,76 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityStockPrices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityStockPrices>> GetSecurityStockPricesAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string frequency = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of SecurityTradesResult</returns>
+        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trades By Symbol
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of SecurityTradesResult</returns>
+        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trades By Symbol
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -11453,6 +11639,165 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// Security Replay File Returns a url where the requested replay file may be downloaded from.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>SecurityReplayFileResult</returns>
+        public SecurityReplayFileResult GetSecurityReplayFile (string subsource, DateTime? date)
+        {
+             ApiResponse<SecurityReplayFileResult> localVarResponse = GetSecurityReplayFileWithHttpInfo(subsource, date);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Replay File Returns a url where the requested replay file may be downloaded from.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>ApiResponse of SecurityReplayFileResult</returns>
+        
+        
+        public ApiResponse< SecurityReplayFileResult > GetSecurityReplayFileWithHttpInfo (string subsource, DateTime? date)
+        {
+            // verify the required parameter 'subsource' is set
+            if (subsource == null)
+                throw new ApiException(400, "Missing required parameter 'subsource' when calling SecurityApi->GetSecurityReplayFile");
+            // verify the required parameter 'date' is set
+            if (date == null)
+                throw new ApiException(400, "Missing required parameter 'date' when calling SecurityApi->GetSecurityReplayFile");
+
+            var localVarPath = "/securities/replay";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (subsource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "subsource", subsource)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityReplayFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityReplayFileResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityReplayFileResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityReplayFileResult)));
+        }
+
+        /// <summary>
+        /// Security Replay File Returns a url where the requested replay file may be downloaded from.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>Task of SecurityReplayFileResult</returns>
+        public async System.Threading.Tasks.Task<SecurityReplayFileResult> GetSecurityReplayFileAsync (string subsource, DateTime? date)
+        {
+             ApiResponse<SecurityReplayFileResult> localVarResponse = await GetSecurityReplayFileAsyncWithHttpInfo(subsource, date);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Replay File Returns a url where the requested replay file may be downloaded from.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subsource">The specific source of the data being requested.</param>
+        /// <param name="date">The date for the data being requested.</param>
+        /// <returns>Task of ApiResponse (SecurityReplayFileResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityReplayFileResult>> GetSecurityReplayFileAsyncWithHttpInfo (string subsource, DateTime? date)
+        {
+            // verify the required parameter 'subsource' is set
+            if (subsource == null)
+                throw new ApiException(400, "Missing required parameter 'subsource' when calling SecurityApi->GetSecurityReplayFile");
+            // verify the required parameter 'date' is set
+            if (date == null)
+                throw new ApiException(400, "Missing required parameter 'date' when calling SecurityApi->GetSecurityReplayFile");
+
+            var localVarPath = "/securities/replay";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (subsource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "subsource", subsource)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityReplayFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityReplayFileResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityReplayFileResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityReplayFileResult)));
+        }
+
+        /// <summary>
         /// Realtime Stock Prices Snapshot Returns all security snapshots for the queried interval with links to download.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11939,6 +12284,384 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurityStockPrices>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseSecurityStockPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityStockPrices)));
+        }
+
+        /// <summary>
+        /// Security Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>SecurityTradesResult</returns>
+        public SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of SecurityTradesResult</returns>
+        
+        
+        public ApiResponse< SecurityTradesResult > GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTrades");
+
+            var localVarPath = "/securities/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTrades", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityTradesResult)));
+        }
+
+        /// <summary>
+        /// Security Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of SecurityTradesResult</returns>
+        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesAsyncWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTrades");
+
+            var localVarPath = "/securities/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTrades", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityTradesResult)));
+        }
+
+        /// <summary>
+        /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>SecurityTradesResult</returns>
+        public SecurityTradesResult GetSecurityTradesBySymbol (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesBySymbolWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of SecurityTradesResult</returns>
+        
+        
+        public ApiResponse< SecurityTradesResult > GetSecurityTradesBySymbolWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradesBySymbol");
+
+            var localVarPath = "/securities/{identifier}/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradesBySymbol", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityTradesResult)));
+        }
+
+        /// <summary>
+        /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of SecurityTradesResult</returns>
+        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesBySymbolAsyncWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradesBySymbol");
+
+            var localVarPath = "/securities/{identifier}/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradesBySymbol", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityTradesResult)));
         }
 
         /// <summary>

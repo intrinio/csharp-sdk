@@ -4,7 +4,7 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.42.0
+- API version: 2.43.6
 - Package version: 7.2.0
 
 
@@ -276,9 +276,12 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**GetSecurityPriceTechnicalsVwap**](docs/SecurityApi.md#getsecuritypricetechnicalsvwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 *SecurityApi* | [**GetSecurityPriceTechnicalsWr**](docs/SecurityApi.md#getsecuritypricetechnicalswr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 *SecurityApi* | [**GetSecurityRealtimePrice**](docs/SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+*SecurityApi* | [**GetSecurityReplayFile**](docs/SecurityApi.md#getsecurityreplayfile) | **GET** /securities/replay | Security Replay File
 *SecurityApi* | [**GetSecuritySnapshots**](docs/SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 *SecurityApi* | [**GetSecurityStockPriceAdjustments**](docs/SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 *SecurityApi* | [**GetSecurityStockPrices**](docs/SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
+*SecurityApi* | [**GetSecurityTrades**](docs/SecurityApi.md#getsecuritytrades) | **GET** /securities/trades | Security Trades
+*SecurityApi* | [**GetSecurityTradesBySymbol**](docs/SecurityApi.md#getsecuritytradesbysymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
 *SecurityApi* | [**GetSecurityZacksAnalystRatings**](docs/SecurityApi.md#getsecurityzacksanalystratings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 *SecurityApi* | [**GetSecurityZacksAnalystRatingsSnapshot**](docs/SecurityApi.md#getsecurityzacksanalystratingssnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 *SecurityApi* | [**GetSecurityZacksEpsSurprises**](docs/SecurityApi.md#getsecurityzacksepssurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -556,6 +559,7 @@ Class | Method | HTTP request | Description
  - [Model.Security](docs/Security.md)
  - [Model.SecurityIntervalMover](docs/SecurityIntervalMover.md)
  - [Model.SecurityIntervalsMoversResult](docs/SecurityIntervalsMoversResult.md)
+ - [Model.SecurityReplayFileResult](docs/SecurityReplayFileResult.md)
  - [Model.SecurityScreenClause](docs/SecurityScreenClause.md)
  - [Model.SecurityScreenGroup](docs/SecurityScreenGroup.md)
  - [Model.SecurityScreenResult](docs/SecurityScreenResult.md)
@@ -563,6 +567,8 @@ Class | Method | HTTP request | Description
  - [Model.SecuritySnapshotGroup](docs/SecuritySnapshotGroup.md)
  - [Model.SecuritySnapshotsResult](docs/SecuritySnapshotsResult.md)
  - [Model.SecuritySummary](docs/SecuritySummary.md)
+ - [Model.SecurityTrades](docs/SecurityTrades.md)
+ - [Model.SecurityTradesResult](docs/SecurityTradesResult.md)
  - [Model.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)
  - [Model.StandardizedFinancial](docs/StandardizedFinancial.md)
  - [Model.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)

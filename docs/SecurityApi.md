@@ -49,9 +49,12 @@ Method | HTTP request | Description
 [**GetSecurityPriceTechnicalsVwap**](SecurityApi.md#getsecuritypricetechnicalsvwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 [**GetSecurityPriceTechnicalsWr**](SecurityApi.md#getsecuritypricetechnicalswr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 [**GetSecurityRealtimePrice**](SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+[**GetSecurityReplayFile**](SecurityApi.md#getsecurityreplayfile) | **GET** /securities/replay | Security Replay File
 [**GetSecuritySnapshots**](SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**GetSecurityStockPriceAdjustments**](SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**GetSecurityStockPrices**](SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
+[**GetSecurityTrades**](SecurityApi.md#getsecuritytrades) | **GET** /securities/trades | Security Trades
+[**GetSecurityTradesBySymbol**](SecurityApi.md#getsecuritytradesbysymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
 [**GetSecurityZacksAnalystRatings**](SecurityApi.md#getsecurityzacksanalystratings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 [**GetSecurityZacksAnalystRatingsSnapshot**](SecurityApi.md#getsecurityzacksanalystratingssnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 [**GetSecurityZacksEpsSurprises**](SecurityApi.md#getsecurityzacksepssurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -4479,6 +4482,96 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
 
+[//]: # (METHOD:GetSecurityReplayFile)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityReplayFileResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityReplayFileResult.md)
+
+[//]: # (OPERATION:GetSecurityReplayFile_v2)
+
+[//]: # (ENDPOINT:/securities/replay)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityreplayfile)
+
+<a name="getsecurityreplayfile"></a>
+## **GetSecurityReplayFile**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityReplayFile_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityReplayFileResult GetSecurityReplayFile (string subsource, DateTime? date)
+
+#### Security Replay File
+
+Returns a url where the requested replay file may be downloaded from.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityReplayFileExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string subsource = null;
+      DateTime? date = null;
+      
+      SecurityReplayFileResult result = securityApi.GetSecurityReplayFile(subsource, date);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subsource** | string| The specific source of the data being requested. |  &nbsp;
+ **date** | DateTime?| The date for the data being requested. |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityReplayFileResult**](SecurityReplayFileResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
 [//]: # (METHOD:GetSecuritySnapshots)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecuritySnapshotsResult)
@@ -4753,6 +4846,210 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityStockPrices**](ApiResponseSecurityStockPrices.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityTrades)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityTradesResult.md)
+
+[//]: # (OPERATION:GetSecurityTrades_v2)
+
+[//]: # (ENDPOINT:/securities/trades)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritytrades)
+
+<a name="getsecuritytrades"></a>
+## **GetSecurityTrades**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityTrades_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+
+#### Security Trades
+
+Returns all trades between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityTradesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      DateTime? startDate = null;
+      string startTime = null;
+      DateTime? endDate = null;
+      string endTime = null;
+      string timezone = "UTC";
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      SecurityTradesResult result = securityApi.GetSecurityTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| The specific source of the data being requested. |  &nbsp;
+ **startDate** | DateTime?| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | string| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | string| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | string| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityTradesResult**](SecurityTradesResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityTradesBySymbol)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityTradesResult.md)
+
+[//]: # (OPERATION:GetSecurityTradesBySymbol_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/trades)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritytradesbysymbol)
+
+<a name="getsecuritytradesbysymbol"></a>
+## **GetSecurityTradesBySymbol**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityTradesBySymbol_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityTradesResult GetSecurityTradesBySymbol (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+
+#### Security Trades By Symbol
+
+Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityTradesBySymbolExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      DateTime? startDate = null;
+      string startTime = null;
+      DateTime? endDate = null;
+      string endTime = null;
+      string timezone = "UTC";
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      SecurityTradesResult result = securityApi.GetSecurityTradesBySymbol(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| The specific source of the data being requested. |  &nbsp;
+ **startDate** | DateTime?| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | string| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | string| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | string| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityTradesResult**](SecurityTradesResult.md)
 
 [//]: # (END_OPERATION)
 

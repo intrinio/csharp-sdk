@@ -31,16 +31,22 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum Iex for value: iex
+            /// Enum Realtime for value: realtime
             /// </summary>
-            [EnumMember(Value = "iex")]
-            Iex = 1,
+            [EnumMember(Value = "realtime")]
+            Realtime = 1,
             
             /// <summary>
-            /// Enum Bats for value: bats
+            /// Enum Delayed for value: delayed
             /// </summary>
-            [EnumMember(Value = "bats")]
-            Bats = 2
+            [EnumMember(Value = "delayed")]
+            Delayed = 2,
+            
+            /// <summary>
+            /// Enum Nasdaqbasic for value: nasdaq_basic
+            /// </summary>
+            [EnumMember(Value = "nasdaq_basic")]
+            Nasdaqbasic = 3
         }
 
         /// <summary>

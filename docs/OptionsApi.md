@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike)
+> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string stockPriceSource = null, string model = null)
 
 #### Option Strikes Realtime
 
@@ -269,8 +269,10 @@ namespace Example
       
       string symbol = "MSFT";
       decimal? strike = 95;
+      string stockPriceSource = null;
+      string model = null;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, stockPriceSource, model);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -288,6 +290,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
  **strike** | decimal?| The strike price of the option contract. This will return options contracts with strike price equal to this price. |  &nbsp;
+ **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -738,7 +742,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null)
+> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null)
 
 #### Options Chain Realtime
 
@@ -783,8 +787,10 @@ namespace Example
       decimal? openInterestGreaterThan = null;
       decimal? openInterestLessThan = null;
       string moneyness = null;
+      string stockPriceSource = null;
+      string model = null;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -812,6 +818,8 @@ Name | Type | Description  | Notes
  **openInterestGreaterThan** | decimal?| The open interest of the option contract. This will return options contracts with open interest greater than this amount. | [optional]  &nbsp;
  **openInterestLessThan** | decimal?| The open interest of the option contract. This will return options contracts with open interest less than this amount. | [optional]  &nbsp;
  **moneyness** | string| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money.  Requires subscription to realtime stock price data. | [optional]  &nbsp;
+ **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1494,7 +1502,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null)
+> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, string stockPriceSource = null, string model = null)
 
 #### Option Prices Batch Realtime
 
@@ -1528,10 +1536,12 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string source = null;
+      string stockPriceSource = null;
+      string model = null;
       
       var body = new OptionContractsList();
       body.Contracts = new List<string>(new string[] { "A220121P00055000", "A220121P00057500", "A220121P00060000" });
-      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source);
+      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source, stockPriceSource, model);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1549,6 +1559,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1673,7 +1685,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPriceRealtime GetOptionsPricesRealtime (string identifier, string source = null)
+> ApiResponseOptionsPriceRealtime GetOptionsPricesRealtime (string identifier, string source = null, string stockPriceSource = null, string model = null)
 
 #### Option Prices Realtime
 
@@ -1708,8 +1720,10 @@ namespace Example
       
       string identifier = "AAPL230120C00090000";
       string source = null;
+      string stockPriceSource = null;
+      string model = null;
       
-      ApiResponseOptionsPriceRealtime result = optionsApi.GetOptionsPricesRealtime(identifier, source);
+      ApiResponseOptionsPriceRealtime result = optionsApi.GetOptionsPricesRealtime(identifier, source, stockPriceSource, model);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1727,6 +1741,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

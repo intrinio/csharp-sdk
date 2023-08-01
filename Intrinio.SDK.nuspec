@@ -36,8 +36,15 @@
     <files>
 
         <!-- A readme.txt will be displayed when the package is installed -->
-        <file src="..\..\README.md" target="" />
-        <file src="..\..\docs\**\*.*" target="docs" />
+        <file src="README.md" target="" />
+        <file src="docs/*.md" target="docs" />
+
+        <file src="src/Intrinio.SDK/bin/Release/net6.0/Intrinio.SDK.dll" target="lib/net6.0" />
+        <file src="src/Intrinio.SDK/bin/Release/net6.0/Intrinio.SDK.pdb" target="lib/net6.0" />
+        <file src="src/Intrinio.SDK/bin/Release/net6.0/Intrinio.SDK.deps.json" target="lib/net6.0" />
+        <file src="src/Intrinio.SDK.Test/bin/Release/net6.0/Intrinio.SDK.Test.dll" target="lib/net6.0" />
+        <file src="src/Intrinio.SDK.Test/bin/Release/net6.0/Intrinio.SDK.Test.pdb" target="lib/net6.0" />
+        <file src="src/Intrinio.SDK.Test/bin/Release/net6.0/Intrinio.SDK.Test.deps.json" target="lib/net6.0" />
 
     </files>
 </package>

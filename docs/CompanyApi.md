@@ -1668,7 +1668,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier)
+> ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null)
 
 #### Shares Outstanding by Company
 
@@ -1702,8 +1702,10 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
+      DateTime? endDateGreaterThan = null;
+      DateTime? endDateLessThan = null;
       
-      ApiResponseCompanySharesOutstanding result = companyApi.SharesOutstandingByCompany(identifier);
+      ApiResponseCompanySharesOutstanding result = companyApi.SharesOutstandingByCompany(identifier, endDateGreaterThan, endDateLessThan);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1720,6 +1722,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **endDateGreaterThan** | DateTime?| Returns shares outstanding after this date. | [optional]  &nbsp;
+ **endDateLessThan** | DateTime?| Returns shares outstanding before this date. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

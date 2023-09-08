@@ -585,7 +585,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityInstitutionalOwnership GetSecurityInsiderOwnership (string identifier)
+> ApiResponseSecurityInstitutionalOwnership GetSecurityInsiderOwnership (string identifier, string nextPage = null)
 
 #### Institutional Ownership by Security
 
@@ -619,8 +619,9 @@ namespace Example
       var securityApi = new SecurityApi();
       
       string identifier = "AAPL";
+      string nextPage = null;
       
-      ApiResponseSecurityInstitutionalOwnership result = securityApi.GetSecurityInsiderOwnership(identifier);
+      ApiResponseSecurityInstitutionalOwnership result = securityApi.GetSecurityInsiderOwnership(identifier, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -637,6 +638,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

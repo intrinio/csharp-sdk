@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.45.0
-- Package version: 7.3.0
+- API version: 2.46.0
+- Package version: 7.4.0
 
 
 <a name="frameworks-supported"></a>
@@ -199,6 +199,7 @@ Class | Method | HTTP request | Description
 *IndexApi* | [**SearchSicIndices**](docs/IndexApi.md#searchsicindices) | **GET** /indices/sic/search | Search SIC Indices
 *IndexApi* | [**SearchStockMarketsIndices**](docs/IndexApi.md#searchstockmarketsindices) | **GET** /indices/stock_market/search | Search Stock Market Indices
 *InsiderTransactionFilingsApi* | [**GetAllInsiderTransactionFilings**](docs/InsiderTransactionFilingsApi.md#getallinsidertransactionfilings) | **GET** /insider_transaction_filings | All Insider Transactions Filings
+*MarketApi* | [**GetMarketStatus**](docs/MarketApi.md#getmarketstatus) | **GET** /market/status | Market Status
 *MunicipalityApi* | [**GetAllMunicipalities**](docs/MunicipalityApi.md#getallmunicipalities) | **GET** /municipalities | All Municipalities
 *MunicipalityApi* | [**GetMunicipalityById**](docs/MunicipalityApi.md#getmunicipalitybyid) | **GET** /municipalities/{id} | Municipality by ID
 *MunicipalityApi* | [**GetMunicipalityFinancials**](docs/MunicipalityApi.md#getmunicipalityfinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
@@ -519,6 +520,7 @@ Class | Method | HTTP request | Description
  - [Model.IntradayStockPrice](docs/IntradayStockPrice.md)
  - [Model.KeltnerChannelTechnicalValue](docs/KeltnerChannelTechnicalValue.md)
  - [Model.KnowSureThingTechnicalValue](docs/KnowSureThingTechnicalValue.md)
+ - [Model.MarketStatusResult](docs/MarketStatusResult.md)
  - [Model.MassIndexTechnicalValue](docs/MassIndexTechnicalValue.md)
  - [Model.MoneyFlowIndexTechnicalValue](docs/MoneyFlowIndexTechnicalValue.md)
  - [Model.MovingAverageConvergenceDivergenceTechnicalValue](docs/MovingAverageConvergenceDivergenceTechnicalValue.md)

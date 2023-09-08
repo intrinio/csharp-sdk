@@ -504,8 +504,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>ApiResponseCompanySharesOutstanding</returns>
-        ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier);
+        ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null);
 
         /// <summary>
         /// Shares Outstanding by Company
@@ -515,8 +517,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanySharesOutstanding</returns>
-        ApiResponse<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyWithHttpInfo (string identifier);
+        ApiResponse<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyWithHttpInfo (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -1006,8 +1010,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>Task of ApiResponseCompanySharesOutstanding</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyAsync (string identifier);
+        System.Threading.Tasks.Task<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyAsync (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null);
 
         /// <summary>
         /// Shares Outstanding by Company
@@ -1017,8 +1023,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanySharesOutstanding)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySharesOutstanding>> SharesOutstandingByCompanyAsyncWithHttpInfo (string identifier);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySharesOutstanding>> SharesOutstandingByCompanyAsyncWithHttpInfo (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null);
         #endregion Asynchronous Operations
     }
 
@@ -4013,10 +4021,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>ApiResponseCompanySharesOutstanding</returns>
-        public ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier)
+        public ApiResponseCompanySharesOutstanding SharesOutstandingByCompany (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null)
         {
-             ApiResponse<ApiResponseCompanySharesOutstanding> localVarResponse = SharesOutstandingByCompanyWithHttpInfo(identifier);
+             ApiResponse<ApiResponseCompanySharesOutstanding> localVarResponse = SharesOutstandingByCompanyWithHttpInfo(identifier, endDateGreaterThan, endDateLessThan);
              return localVarResponse.Data;
         }
 
@@ -4025,10 +4035,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanySharesOutstanding</returns>
         
         
-        public ApiResponse< ApiResponseCompanySharesOutstanding > SharesOutstandingByCompanyWithHttpInfo (string identifier)
+        public ApiResponse< ApiResponseCompanySharesOutstanding > SharesOutstandingByCompanyWithHttpInfo (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4057,6 +4069,8 @@ namespace Intrinio.SDK.Api
             
             
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (endDateGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date_greater_than", endDateGreaterThan)); // query parameter
+            if (endDateLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date_less_than", endDateLessThan)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -4087,10 +4101,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>Task of ApiResponseCompanySharesOutstanding</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyAsync (string identifier)
+        public async System.Threading.Tasks.Task<ApiResponseCompanySharesOutstanding> SharesOutstandingByCompanyAsync (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null)
         {
-             ApiResponse<ApiResponseCompanySharesOutstanding> localVarResponse = await SharesOutstandingByCompanyAsyncWithHttpInfo(identifier);
+             ApiResponse<ApiResponseCompanySharesOutstanding> localVarResponse = await SharesOutstandingByCompanyAsyncWithHttpInfo(identifier, endDateGreaterThan, endDateLessThan);
              return localVarResponse.Data;
 
         }
@@ -4100,8 +4116,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
+        /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanySharesOutstanding)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySharesOutstanding>> SharesOutstandingByCompanyAsyncWithHttpInfo (string identifier)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanySharesOutstanding>> SharesOutstandingByCompanyAsyncWithHttpInfo (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4130,6 +4148,8 @@ namespace Intrinio.SDK.Api
               
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (endDateGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date_greater_than", endDateGreaterThan)); // query parameter
+            if (endDateLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date_less_than", endDateLessThan)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

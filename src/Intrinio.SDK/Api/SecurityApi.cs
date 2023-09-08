@@ -186,8 +186,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityInstitutionalOwnership</returns>
-        ApiResponseSecurityInstitutionalOwnership GetSecurityInsiderOwnership (string identifier);
+        ApiResponseSecurityInstitutionalOwnership GetSecurityInsiderOwnership (string identifier, string nextPage = null);
 
         /// <summary>
         /// Institutional Ownership by Security
@@ -197,8 +198,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityInstitutionalOwnership</returns>
-        ApiResponse<ApiResponseSecurityInstitutionalOwnership> GetSecurityInsiderOwnershipWithHttpInfo (string identifier);
+        ApiResponse<ApiResponseSecurityInstitutionalOwnership> GetSecurityInsiderOwnershipWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Security Intervals Movers
         /// </summary>
@@ -1941,8 +1943,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityInstitutionalOwnership</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityInstitutionalOwnership> GetSecurityInsiderOwnershipAsync (string identifier);
+        System.Threading.Tasks.Task<ApiResponseSecurityInstitutionalOwnership> GetSecurityInsiderOwnershipAsync (string identifier, string nextPage = null);
 
         /// <summary>
         /// Institutional Ownership by Security
@@ -1952,8 +1955,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityInstitutionalOwnership)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityInstitutionalOwnership>> GetSecurityInsiderOwnershipAsyncWithHttpInfo (string identifier);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityInstitutionalOwnership>> GetSecurityInsiderOwnershipAsyncWithHttpInfo (string identifier, string nextPage = null);
         /// <summary>
         /// Security Intervals Movers
         /// </summary>
@@ -4545,10 +4549,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityInstitutionalOwnership</returns>
-        public ApiResponseSecurityInstitutionalOwnership GetSecurityInsiderOwnership (string identifier)
+        public ApiResponseSecurityInstitutionalOwnership GetSecurityInsiderOwnership (string identifier, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityInstitutionalOwnership> localVarResponse = GetSecurityInsiderOwnershipWithHttpInfo(identifier);
+             ApiResponse<ApiResponseSecurityInstitutionalOwnership> localVarResponse = GetSecurityInsiderOwnershipWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
         }
 
@@ -4557,10 +4562,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityInstitutionalOwnership</returns>
         
         
-        public ApiResponse< ApiResponseSecurityInstitutionalOwnership > GetSecurityInsiderOwnershipWithHttpInfo (string identifier)
+        public ApiResponse< ApiResponseSecurityInstitutionalOwnership > GetSecurityInsiderOwnershipWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4589,6 +4595,7 @@ namespace Intrinio.SDK.Api
             
             
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -4619,10 +4626,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityInstitutionalOwnership</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityInstitutionalOwnership> GetSecurityInsiderOwnershipAsync (string identifier)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityInstitutionalOwnership> GetSecurityInsiderOwnershipAsync (string identifier, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityInstitutionalOwnership> localVarResponse = await GetSecurityInsiderOwnershipAsyncWithHttpInfo(identifier);
+             ApiResponse<ApiResponseSecurityInstitutionalOwnership> localVarResponse = await GetSecurityInsiderOwnershipAsyncWithHttpInfo(identifier, nextPage);
              return localVarResponse.Data;
 
         }
@@ -4632,8 +4640,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityInstitutionalOwnership)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityInstitutionalOwnership>> GetSecurityInsiderOwnershipAsyncWithHttpInfo (string identifier)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityInstitutionalOwnership>> GetSecurityInsiderOwnershipAsyncWithHttpInfo (string identifier, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4662,6 +4671,7 @@ namespace Intrinio.SDK.Api
               
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

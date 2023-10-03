@@ -325,7 +325,9 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //var response = instance.SharesOutstandingByCompany(identifier);
+            //DateTime? endDateGreaterThan = null;
+            //DateTime? endDateLessThan = null;
+            //var response = instance.SharesOutstandingByCompany(identifier, endDateGreaterThan, endDateLessThan);
             //Assert.IsInstanceOf<ApiResponseCompanySharesOutstanding> (response, "response is ApiResponseCompanySharesOutstanding");
         }
         

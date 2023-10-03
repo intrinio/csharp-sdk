@@ -106,6 +106,38 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Volume'
         }
+        /// <summary>
+        /// Test the property 'CloseTime'
+        /// </summary>
+        [Test]
+        public void CloseTimeTest()
+        {
+            // TODO unit test for the property 'CloseTime'
+        }
+        /// <summary>
+        /// Test the property 'Interval'
+        /// </summary>
+        [Test]
+        public void IntervalTest()
+        {
+            // TODO unit test for the property 'Interval'
+        }
+        /// <summary>
+        /// Test the property 'Average'
+        /// </summary>
+        [Test]
+        public void AverageTest()
+        {
+            // TODO unit test for the property 'Average'
+        }
+        /// <summary>
+        /// Test the property 'Change'
+        /// </summary>
+        [Test]
+        public void ChangeTest()
+        {
+            // TODO unit test for the property 'Change'
+        }
 
     }
 

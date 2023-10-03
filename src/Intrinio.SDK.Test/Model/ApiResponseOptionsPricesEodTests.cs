@@ -74,6 +74,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Option'
         }
+        /// <summary>
+        /// Test the property 'NextPage'
+        /// </summary>
+        [Test]
+        public void NextPageTest()
+        {
+            // TODO unit test for the property 'NextPage'
+        }
 
     }
 

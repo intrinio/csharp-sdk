@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string stockPriceSource = null, string model = null)
+> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null)
 
 #### Option Strikes Realtime
 
@@ -269,10 +269,11 @@ namespace Example
       
       string symbol = "MSFT";
       decimal? strike = 95;
+      string source = null;
       string stockPriceSource = null;
       string model = null;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, stockPriceSource, model);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -290,6 +291,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
  **strike** | decimal?| The strike price of the option contract. This will return options contracts with strike price equal to this price. |  &nbsp;
+ **source** | string| Realtime or delayed. | [optional]  &nbsp;
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
@@ -705,7 +707,7 @@ Name | Type | Description  | Notes
  **strike** | decimal?| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
  **strikeGreaterThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strikeLessThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
- **date** | DateTime?| The the date to retrieve prices for | [optional]  &nbsp;
+ **date** | DateTime?| The date to retrieve prices for | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1502,7 +1504,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, string stockPriceSource = null, string model = null)
+> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null)
 
 #### Option Prices Batch Realtime
 
@@ -1536,12 +1538,13 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string source = null;
+      bool? showStats = null;
       string stockPriceSource = null;
       string model = null;
       
       var body = new OptionContractsList();
       body.Contracts = new List<string>(new string[] { "A220121P00055000", "A220121P00057500", "A220121P00060000" });
-      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source, stockPriceSource, model);
+      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source, showStats, stockPriceSource, model);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1559,6 +1562,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **showStats** | bool?| Whether to include Greek calculations or not. | [optional]  &nbsp;
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
@@ -1597,7 +1601,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier)
+> ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null)
 
 #### Option Prices EOD
 
@@ -1631,8 +1635,11 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string identifier = "AAPL230616P00190000";
+      string nextPage = null;
+      DateTime? startDate = null;
+      DateTime? endDate = null;
       
-      ApiResponseOptionsPricesEod result = optionsApi.GetOptionsPricesEod(identifier);
+      ApiResponseOptionsPricesEod result = optionsApi.GetOptionsPricesEod(identifier, nextPage, startDate, endDate);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1649,6 +1656,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **startDate** | DateTime?| The start date to retrieve prices for | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date to retrieve prices for | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

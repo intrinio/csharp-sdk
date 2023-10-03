@@ -87,7 +87,10 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string symbol = null;
             //decimal? strike = null;
-            //var response = instance.GetOptionStrikesRealtime(symbol, strike);
+            //string source = null;
+            //string stockPriceSource = null;
+            //string model = null;
+            //var response = instance.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model);
             //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
         }
         
@@ -189,7 +192,9 @@ namespace Intrinio.SDK.Test
             //decimal? openInterestGreaterThan = null;
             //decimal? openInterestLessThan = null;
             //string moneyness = null;
-            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness);
+            //string stockPriceSource = null;
+            //string model = null;
+            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model);
             //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
         }
         
@@ -204,6 +209,20 @@ namespace Intrinio.SDK.Test
             //string after = null;
             //string before = null;
             //var response = instance.GetOptionsExpirations(symbol, after, before);
+            //Assert.IsInstanceOf<ApiResponseOptionsExpirations> (response, "response is ApiResponseOptionsExpirations");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsExpirationsEod
+        /// </summary>
+        [Test]
+        public void GetOptionsExpirationsEodTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //string after = null;
+            //string before = null;
+            //var response = instance.GetOptionsExpirationsEod(symbol, after, before);
             //Assert.IsInstanceOf<ApiResponseOptionsExpirations> (response, "response is ApiResponseOptionsExpirations");
         }
         
@@ -287,7 +306,10 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //OptionContractsList body = null;
             //string source = null;
-            //var response = instance.GetOptionsPricesBatchRealtime(body, source);
+            //bool? showStats = null;
+            //string stockPriceSource = null;
+            //string model = null;
+            //var response = instance.GetOptionsPricesBatchRealtime(body, source, showStats, stockPriceSource, model);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesBatchRealtime> (response, "response is ApiResponseOptionsPricesBatchRealtime");
         }
         
@@ -299,7 +321,10 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //var response = instance.GetOptionsPricesEod(identifier);
+            //string nextPage = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.GetOptionsPricesEod(identifier, nextPage, startDate, endDate);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesEod> (response, "response is ApiResponseOptionsPricesEod");
         }
         
@@ -312,7 +337,9 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string source = null;
-            //var response = instance.GetOptionsPricesRealtime(identifier, source);
+            //string stockPriceSource = null;
+            //string model = null;
+            //var response = instance.GetOptionsPricesRealtime(identifier, source, stockPriceSource, model);
             //Assert.IsInstanceOf<ApiResponseOptionsPriceRealtime> (response, "response is ApiResponseOptionsPriceRealtime");
         }
         

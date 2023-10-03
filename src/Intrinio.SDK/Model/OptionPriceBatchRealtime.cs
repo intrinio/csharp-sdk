@@ -25,25 +25,33 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OptionPriceBatchRealtime" /> class.
         /// </summary>
-        /// <param name="Option">Option.</param>
         /// <param name="Price">Price.</param>
-        public OptionPriceBatchRealtime(OptionRealtime Option = default(OptionRealtime), OptionPriceRealtime Price = default(OptionPriceRealtime))
+        /// <param name="Stats">Stats.</param>
+        /// <param name="Option">Option.</param>
+        public OptionPriceBatchRealtime(OptionPriceRealtime Price = default(OptionPriceRealtime), OptionStatsRealtime Stats = default(OptionStatsRealtime), OptionRealtime Option = default(OptionRealtime))
         {
-            this.Option = Option;
             this.Price = Price;
+            this.Stats = Stats;
+            this.Option = Option;
         }
         
-        /// <summary>
-        /// Gets or Sets Option
-        /// </summary>
-        [DataMember(Name="option", EmitDefaultValue=false)]
-        public OptionRealtime Option { get; set; }
-
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public OptionPriceRealtime Price { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Stats
+        /// </summary>
+        [DataMember(Name="stats", EmitDefaultValue=false)]
+        public OptionStatsRealtime Stats { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Option
+        /// </summary>
+        [DataMember(Name="option", EmitDefaultValue=false)]
+        public OptionRealtime Option { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +61,9 @@ namespace Intrinio.SDK.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OptionPriceBatchRealtime {\n");
-            sb.Append("  Option: ").Append(Option).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  Stats: ").Append(Stats).Append("\n");
+            sb.Append("  Option: ").Append(Option).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,14 +99,19 @@ namespace Intrinio.SDK.Model
 
             return 
                 (
-                    this.Option == input.Option ||
-                    (this.Option != null &&
-                    this.Option.Equals(input.Option))
-                ) && 
-                (
                     this.Price == input.Price ||
                     (this.Price != null &&
                     this.Price.Equals(input.Price))
+                ) && 
+                (
+                    this.Stats == input.Stats ||
+                    (this.Stats != null &&
+                    this.Stats.Equals(input.Stats))
+                ) && 
+                (
+                    this.Option == input.Option ||
+                    (this.Option != null &&
+                    this.Option.Equals(input.Option))
                 );
         }
 
@@ -110,10 +124,12 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Option != null)
-                    hashCode = hashCode * 59 + this.Option.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.Stats != null)
+                    hashCode = hashCode * 59 + this.Stats.GetHashCode();
+                if (this.Option != null)
+                    hashCode = hashCode * 59 + this.Option.GetHashCode();
                 return hashCode;
             }
         }

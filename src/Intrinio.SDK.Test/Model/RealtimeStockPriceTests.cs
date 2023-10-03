@@ -179,6 +179,46 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Source'
         }
         /// <summary>
+        /// Test the property 'ListingVenue'
+        /// </summary>
+        [Test]
+        public void ListingVenueTest()
+        {
+            // TODO unit test for the property 'ListingVenue'
+        }
+        /// <summary>
+        /// Test the property 'SalesConditions'
+        /// </summary>
+        [Test]
+        public void SalesConditionsTest()
+        {
+            // TODO unit test for the property 'SalesConditions'
+        }
+        /// <summary>
+        /// Test the property 'QuoteConditions'
+        /// </summary>
+        [Test]
+        public void QuoteConditionsTest()
+        {
+            // TODO unit test for the property 'QuoteConditions'
+        }
+        /// <summary>
+        /// Test the property 'MarketCenterCode'
+        /// </summary>
+        [Test]
+        public void MarketCenterCodeTest()
+        {
+            // TODO unit test for the property 'MarketCenterCode'
+        }
+        /// <summary>
+        /// Test the property 'IsDarkpool'
+        /// </summary>
+        [Test]
+        public void IsDarkpoolTest()
+        {
+            // TODO unit test for the property 'IsDarkpool'
+        }
+        /// <summary>
         /// Test the property 'Security'
         /// </summary>
         [Test]

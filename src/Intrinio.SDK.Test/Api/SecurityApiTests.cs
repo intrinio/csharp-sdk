@@ -148,8 +148,48 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //var response = instance.GetSecurityInsiderOwnership(identifier);
+            //string nextPage = null;
+            //var response = instance.GetSecurityInsiderOwnership(identifier, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityInstitutionalOwnership> (response, "response is ApiResponseSecurityInstitutionalOwnership");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityIntervalMovers
+        /// </summary>
+        [Test]
+        public void GetSecurityIntervalMoversTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? openTime = null;
+            //var response = instance.GetSecurityIntervalMovers(source, openTime);
+            //Assert.IsInstanceOf<SecurityIntervalsMoversResult> (response, "response is SecurityIntervalsMoversResult");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityIntervalMoversChange
+        /// </summary>
+        [Test]
+        public void GetSecurityIntervalMoversChangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? openTime = null;
+            //var response = instance.GetSecurityIntervalMoversChange(source, openTime);
+            //Assert.IsInstanceOf<SecurityIntervalsMoversResult> (response, "response is SecurityIntervalsMoversResult");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityIntervalMoversVolume
+        /// </summary>
+        [Test]
+        public void GetSecurityIntervalMoversVolumeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? openTime = null;
+            //var response = instance.GetSecurityIntervalMoversVolume(source, openTime);
+            //Assert.IsInstanceOf<SecurityIntervalsMoversResult> (response, "response is SecurityIntervalsMoversResult");
         }
         
         /// <summary>
@@ -160,16 +200,16 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
+            //string intervalSize = null;
             //string source = null;
             //DateTime? startDate = null;
             //string startTime = null;
             //DateTime? endDate = null;
             //string endTime = null;
             //string timezone = null;
-            //string intervalSize = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityIntervalPrices(identifier, source, startDate, startTime, endDate, endTime, timezone, intervalSize, pageSize, nextPage);
+            //var response = instance.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityIntervalPrices> (response, "response is ApiResponseSecurityIntervalPrices");
         }
         
@@ -781,6 +821,19 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecurityReplayFile
+        /// </summary>
+        [Test]
+        public void GetSecurityReplayFileTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string subsource = null;
+            //DateTime? date = null;
+            //var response = instance.GetSecurityReplayFile(subsource, date);
+            //Assert.IsInstanceOf<SecurityReplayFileResult> (response, "response is SecurityReplayFileResult");
+        }
+        
+        /// <summary>
         /// Test GetSecuritySnapshots
         /// </summary>
         [Test]
@@ -823,6 +876,44 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //var response = instance.GetSecurityStockPrices(identifier, startDate, endDate, frequency, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityStockPrices> (response, "response is ApiResponseSecurityStockPrices");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityTrades
+        /// </summary>
+        [Test]
+        public void GetSecurityTradesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? startDate = null;
+            //string startTime = null;
+            //DateTime? endDate = null;
+            //string endTime = null;
+            //string timezone = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+            //Assert.IsInstanceOf<SecurityTradesResult> (response, "response is SecurityTradesResult");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityTradesBySymbol
+        /// </summary>
+        [Test]
+        public void GetSecurityTradesBySymbolTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? startDate = null;
+            //string startTime = null;
+            //DateTime? endDate = null;
+            //string endTime = null;
+            //string timezone = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityTradesBySymbol(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+            //Assert.IsInstanceOf<SecurityTradesResult> (response, "response is SecurityTradesResult");
         }
         
         /// <summary>

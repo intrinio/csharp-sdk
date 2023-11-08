@@ -9,6 +9,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
+**FilingDate** | DateTime? | The date of the filing with the SEC made by the owner &nbsp;
 **FilingUrl** | string | The URL of the filing with the SEC &nbsp;
 **IssuerTicker** | string | The ticker of the issuing company. &nbsp;
 **IssuerCik** | string | The Central Index Key (CIK) of the issuing company. &nbsp;

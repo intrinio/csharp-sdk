@@ -75,6 +75,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'OwnerName'
         }
         /// <summary>
+        /// Test the property 'PeriodEnded'
+        /// </summary>
+        [Test]
+        public void PeriodEndedTest()
+        {
+            // TODO unit test for the property 'PeriodEnded'
+        }
+        /// <summary>
         /// Test the property 'Value'
         /// </summary>
         [Test]

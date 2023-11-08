@@ -131,6 +131,22 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'ConversionExercisePrice'
         }
         /// <summary>
+        /// Test the property 'TransactionDate'
+        /// </summary>
+        [Test]
+        public void TransactionDateTest()
+        {
+            // TODO unit test for the property 'TransactionDate'
+        }
+        /// <summary>
+        /// Test the property 'DeemedExecutionDate'
+        /// </summary>
+        [Test]
+        public void DeemedExecutionDateTest()
+        {
+            // TODO unit test for the property 'DeemedExecutionDate'
+        }
+        /// <summary>
         /// Test the property 'TransactionTypeCode'
         /// </summary>
         [Test]
@@ -153,6 +169,22 @@ namespace Intrinio.SDK.Test
         public void AmountOfSharesTest()
         {
             // TODO unit test for the property 'AmountOfShares'
+        }
+        /// <summary>
+        /// Test the property 'ExerciseDate'
+        /// </summary>
+        [Test]
+        public void ExerciseDateTest()
+        {
+            // TODO unit test for the property 'ExerciseDate'
+        }
+        /// <summary>
+        /// Test the property 'ExpirationDate'
+        /// </summary>
+        [Test]
+        public void ExpirationDateTest()
+        {
+            // TODO unit test for the property 'ExpirationDate'
         }
         /// <summary>
         /// Test the property 'UnderlyingSecurityTitle'

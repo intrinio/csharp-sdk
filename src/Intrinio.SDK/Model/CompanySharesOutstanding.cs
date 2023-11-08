@@ -27,14 +27,16 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="XbrlAxis">The xbrl concept axis member reported to the SEC..</param>
         /// <param name="XbrlMember">Provides information about the class of stock as reported in XBRL.</param>
+        /// <param name="EndDate">End date of the filing period.</param>
         /// <param name="TitleOfSecurity">The description of the security type.</param>
         /// <param name="TradingSymbol">The symbol under which the security is traded in the exchange.</param>
         /// <param name="SecurityExchangeName">The name of the secuirty exchange.</param>
         /// <param name="SharesOutstanding">The amount of stock currently held by all shareholders.</param>
-        public CompanySharesOutstanding(string XbrlAxis = default(string), string XbrlMember = default(string), string TitleOfSecurity = default(string), string TradingSymbol = default(string), string SecurityExchangeName = default(string), decimal? SharesOutstanding = default(decimal?))
+        public CompanySharesOutstanding(string XbrlAxis = default(string), string XbrlMember = default(string), DateTime? EndDate = default(DateTime?), string TitleOfSecurity = default(string), string TradingSymbol = default(string), string SecurityExchangeName = default(string), decimal? SharesOutstanding = default(decimal?))
         {
             this.XbrlAxis = XbrlAxis;
             this.XbrlMember = XbrlMember;
+            this.EndDate = EndDate;
             this.TitleOfSecurity = TitleOfSecurity;
             this.TradingSymbol = TradingSymbol;
             this.SecurityExchangeName = SecurityExchangeName;
@@ -54,6 +56,14 @@ namespace Intrinio.SDK.Model
         /// <value>Provides information about the class of stock as reported in XBRL</value>
         [DataMember(Name="xbrl_member", EmitDefaultValue=false)]
         public string XbrlMember { get; set; }
+
+        /// <summary>
+        /// End date of the filing period
+        /// </summary>
+        /// <value>End date of the filing period</value>
+        [DataMember(Name="end_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// The description of the security type
@@ -93,6 +103,7 @@ namespace Intrinio.SDK.Model
             sb.Append("class CompanySharesOutstanding {\n");
             sb.Append("  XbrlAxis: ").Append(XbrlAxis).Append("\n");
             sb.Append("  XbrlMember: ").Append(XbrlMember).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  TitleOfSecurity: ").Append(TitleOfSecurity).Append("\n");
             sb.Append("  TradingSymbol: ").Append(TradingSymbol).Append("\n");
             sb.Append("  SecurityExchangeName: ").Append(SecurityExchangeName).Append("\n");
@@ -142,6 +153,11 @@ namespace Intrinio.SDK.Model
                     this.XbrlMember.Equals(input.XbrlMember))
                 ) && 
                 (
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
+                ) && 
+                (
                     this.TitleOfSecurity == input.TitleOfSecurity ||
                     (this.TitleOfSecurity != null &&
                     this.TitleOfSecurity.Equals(input.TitleOfSecurity))
@@ -176,6 +192,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.XbrlAxis.GetHashCode();
                 if (this.XbrlMember != null)
                     hashCode = hashCode * 59 + this.XbrlMember.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.TitleOfSecurity != null)
                     hashCode = hashCode * 59 + this.TitleOfSecurity.GetHashCode();
                 if (this.TradingSymbol != null)

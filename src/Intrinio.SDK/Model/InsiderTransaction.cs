@@ -34,9 +34,13 @@ namespace Intrinio.SDK.Model
         /// <param name="Ticker">The ticker symbol for the company’s common stock.</param>
         /// <param name="SecurityTitle">The name of the derivative security transacted.</param>
         /// <param name="ConversionExercisePrice">The conversion or exercise price of the derivative security transacted.</param>
+        /// <param name="TransactionDate">The date of the transaction.</param>
+        /// <param name="DeemedExecutionDate">The date of the transaction had it not a directly identifiable date.</param>
         /// <param name="TransactionTypeCode">A symbol representing the transaction type; P &#x3D; Purchase | S &#x3D; Sale | A  &#x3D; Award | M &#x3D; Conversion to Common | C &#x3D; Conversion | X &#x3D; Exercise of Derivative More Transaction Codes.</param>
         /// <param name="AcquisitionDispositionCode">A symbol representing whether or not the derivative securities are Acquired or Disposed; A &#x3D; Acquisition | D &#x3D; Disposition.</param>
         /// <param name="AmountOfShares">The number of derivative securities involved in the subject transaction.</param>
+        /// <param name="ExerciseDate">The exercise date of the derivative securities.</param>
+        /// <param name="ExpirationDate">The expiration date of the derivative securities.</param>
         /// <param name="UnderlyingSecurityTitle">The name of the underlying non-derivative security related to this derivative transaction.</param>
         /// <param name="UnderlyingShares">The number of non-derivative shares involved in the subject transaction.</param>
         /// <param name="TransactionPrice">The price of the derivative securities.</param>
@@ -44,7 +48,7 @@ namespace Intrinio.SDK.Model
         /// <param name="OwnershipTypeCode">A symbol representing the ownership of the securities transacted; D &#x3D; Direct Ownership | I &#x3D; Indirect Ownership.</param>
         /// <param name="Company">The company associated with the filing.</param>
         /// <param name="Owner">The owner associated with the filing.</param>
-        public InsiderTransaction(bool? Director = default(bool?), bool? Officer = default(bool?), bool? TenPercentOwner = default(bool?), bool? OtherRelation = default(bool?), string OfficerTitle = default(string), bool? DerivativeTransaction = default(bool?), string Ticker = default(string), string SecurityTitle = default(string), decimal? ConversionExercisePrice = default(decimal?), string TransactionTypeCode = default(string), string AcquisitionDispositionCode = default(string), decimal? AmountOfShares = default(decimal?), string UnderlyingSecurityTitle = default(string), decimal? UnderlyingShares = default(decimal?), decimal? TransactionPrice = default(decimal?), decimal? TotalSharesOwned = default(decimal?), string OwnershipTypeCode = default(string), CompanySummary Company = default(CompanySummary), OwnerSummary Owner = default(OwnerSummary))
+        public InsiderTransaction(bool? Director = default(bool?), bool? Officer = default(bool?), bool? TenPercentOwner = default(bool?), bool? OtherRelation = default(bool?), string OfficerTitle = default(string), bool? DerivativeTransaction = default(bool?), string Ticker = default(string), string SecurityTitle = default(string), decimal? ConversionExercisePrice = default(decimal?), DateTime? TransactionDate = default(DateTime?), DateTime? DeemedExecutionDate = default(DateTime?), string TransactionTypeCode = default(string), string AcquisitionDispositionCode = default(string), decimal? AmountOfShares = default(decimal?), DateTime? ExerciseDate = default(DateTime?), DateTime? ExpirationDate = default(DateTime?), string UnderlyingSecurityTitle = default(string), decimal? UnderlyingShares = default(decimal?), decimal? TransactionPrice = default(decimal?), decimal? TotalSharesOwned = default(decimal?), string OwnershipTypeCode = default(string), CompanySummary Company = default(CompanySummary), OwnerSummary Owner = default(OwnerSummary))
         {
             this.Director = Director;
             this.Officer = Officer;
@@ -55,9 +59,13 @@ namespace Intrinio.SDK.Model
             this.Ticker = Ticker;
             this.SecurityTitle = SecurityTitle;
             this.ConversionExercisePrice = ConversionExercisePrice;
+            this.TransactionDate = TransactionDate;
+            this.DeemedExecutionDate = DeemedExecutionDate;
             this.TransactionTypeCode = TransactionTypeCode;
             this.AcquisitionDispositionCode = AcquisitionDispositionCode;
             this.AmountOfShares = AmountOfShares;
+            this.ExerciseDate = ExerciseDate;
+            this.ExpirationDate = ExpirationDate;
             this.UnderlyingSecurityTitle = UnderlyingSecurityTitle;
             this.UnderlyingShares = UnderlyingShares;
             this.TransactionPrice = TransactionPrice;
@@ -131,6 +139,22 @@ namespace Intrinio.SDK.Model
         public decimal? ConversionExercisePrice { get; set; }
 
         /// <summary>
+        /// The date of the transaction
+        /// </summary>
+        /// <value>The date of the transaction</value>
+        [DataMember(Name="transaction_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? TransactionDate { get; set; }
+
+        /// <summary>
+        /// The date of the transaction had it not a directly identifiable date
+        /// </summary>
+        /// <value>The date of the transaction had it not a directly identifiable date</value>
+        [DataMember(Name="deemed_execution_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? DeemedExecutionDate { get; set; }
+
+        /// <summary>
         /// A symbol representing the transaction type; P &#x3D; Purchase | S &#x3D; Sale | A  &#x3D; Award | M &#x3D; Conversion to Common | C &#x3D; Conversion | X &#x3D; Exercise of Derivative More Transaction Codes
         /// </summary>
         /// <value>A symbol representing the transaction type; P &#x3D; Purchase | S &#x3D; Sale | A  &#x3D; Award | M &#x3D; Conversion to Common | C &#x3D; Conversion | X &#x3D; Exercise of Derivative More Transaction Codes</value>
@@ -150,6 +174,22 @@ namespace Intrinio.SDK.Model
         /// <value>The number of derivative securities involved in the subject transaction</value>
         [DataMember(Name="amount_of_shares", EmitDefaultValue=false)]
         public decimal? AmountOfShares { get; set; }
+
+        /// <summary>
+        /// The exercise date of the derivative securities
+        /// </summary>
+        /// <value>The exercise date of the derivative securities</value>
+        [DataMember(Name="exercise_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? ExerciseDate { get; set; }
+
+        /// <summary>
+        /// The expiration date of the derivative securities
+        /// </summary>
+        /// <value>The expiration date of the derivative securities</value>
+        [DataMember(Name="expiration_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// The name of the underlying non-derivative security related to this derivative transaction
@@ -217,9 +257,13 @@ namespace Intrinio.SDK.Model
             sb.Append("  Ticker: ").Append(Ticker).Append("\n");
             sb.Append("  SecurityTitle: ").Append(SecurityTitle).Append("\n");
             sb.Append("  ConversionExercisePrice: ").Append(ConversionExercisePrice).Append("\n");
+            sb.Append("  TransactionDate: ").Append(TransactionDate).Append("\n");
+            sb.Append("  DeemedExecutionDate: ").Append(DeemedExecutionDate).Append("\n");
             sb.Append("  TransactionTypeCode: ").Append(TransactionTypeCode).Append("\n");
             sb.Append("  AcquisitionDispositionCode: ").Append(AcquisitionDispositionCode).Append("\n");
             sb.Append("  AmountOfShares: ").Append(AmountOfShares).Append("\n");
+            sb.Append("  ExerciseDate: ").Append(ExerciseDate).Append("\n");
+            sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
             sb.Append("  UnderlyingSecurityTitle: ").Append(UnderlyingSecurityTitle).Append("\n");
             sb.Append("  UnderlyingShares: ").Append(UnderlyingShares).Append("\n");
             sb.Append("  TransactionPrice: ").Append(TransactionPrice).Append("\n");
@@ -307,6 +351,16 @@ namespace Intrinio.SDK.Model
                     this.ConversionExercisePrice.Equals(input.ConversionExercisePrice))
                 ) && 
                 (
+                    this.TransactionDate == input.TransactionDate ||
+                    (this.TransactionDate != null &&
+                    this.TransactionDate.Equals(input.TransactionDate))
+                ) && 
+                (
+                    this.DeemedExecutionDate == input.DeemedExecutionDate ||
+                    (this.DeemedExecutionDate != null &&
+                    this.DeemedExecutionDate.Equals(input.DeemedExecutionDate))
+                ) && 
+                (
                     this.TransactionTypeCode == input.TransactionTypeCode ||
                     (this.TransactionTypeCode != null &&
                     this.TransactionTypeCode.Equals(input.TransactionTypeCode))
@@ -320,6 +374,16 @@ namespace Intrinio.SDK.Model
                     this.AmountOfShares == input.AmountOfShares ||
                     (this.AmountOfShares != null &&
                     this.AmountOfShares.Equals(input.AmountOfShares))
+                ) && 
+                (
+                    this.ExerciseDate == input.ExerciseDate ||
+                    (this.ExerciseDate != null &&
+                    this.ExerciseDate.Equals(input.ExerciseDate))
+                ) && 
+                (
+                    this.ExpirationDate == input.ExpirationDate ||
+                    (this.ExpirationDate != null &&
+                    this.ExpirationDate.Equals(input.ExpirationDate))
                 ) && 
                 (
                     this.UnderlyingSecurityTitle == input.UnderlyingSecurityTitle ||
@@ -385,12 +449,20 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.SecurityTitle.GetHashCode();
                 if (this.ConversionExercisePrice != null)
                     hashCode = hashCode * 59 + this.ConversionExercisePrice.GetHashCode();
+                if (this.TransactionDate != null)
+                    hashCode = hashCode * 59 + this.TransactionDate.GetHashCode();
+                if (this.DeemedExecutionDate != null)
+                    hashCode = hashCode * 59 + this.DeemedExecutionDate.GetHashCode();
                 if (this.TransactionTypeCode != null)
                     hashCode = hashCode * 59 + this.TransactionTypeCode.GetHashCode();
                 if (this.AcquisitionDispositionCode != null)
                     hashCode = hashCode * 59 + this.AcquisitionDispositionCode.GetHashCode();
                 if (this.AmountOfShares != null)
                     hashCode = hashCode * 59 + this.AmountOfShares.GetHashCode();
+                if (this.ExerciseDate != null)
+                    hashCode = hashCode * 59 + this.ExerciseDate.GetHashCode();
+                if (this.ExpirationDate != null)
+                    hashCode = hashCode * 59 + this.ExpirationDate.GetHashCode();
                 if (this.UnderlyingSecurityTitle != null)
                     hashCode = hashCode * 59 + this.UnderlyingSecurityTitle.GetHashCode();
                 if (this.UnderlyingShares != null)

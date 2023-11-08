@@ -75,6 +75,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'XbrlMember'
         }
         /// <summary>
+        /// Test the property 'EndDate'
+        /// </summary>
+        [Test]
+        public void EndDateTest()
+        {
+            // TODO unit test for the property 'EndDate'
+        }
+        /// <summary>
         /// Test the property 'TitleOfSecurity'
         /// </summary>
         [Test]

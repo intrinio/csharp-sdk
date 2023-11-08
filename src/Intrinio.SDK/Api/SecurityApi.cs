@@ -1564,6 +1564,7 @@ namespace Intrinio.SDK.Api
         /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -1573,7 +1574,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        SecurityTradesResult GetSecurityTradesBySymbol (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades By Symbol
@@ -1582,6 +1583,7 @@ namespace Intrinio.SDK.Api
         /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -1591,7 +1593,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of SecurityTradesResult</returns>
-        ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -3321,6 +3323,7 @@ namespace Intrinio.SDK.Api
         /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -3330,7 +3333,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades By Symbol
@@ -3339,6 +3342,7 @@ namespace Intrinio.SDK.Api
         /// Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -3348,7 +3352,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -12489,6 +12493,7 @@ namespace Intrinio.SDK.Api
         /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -12498,9 +12503,9 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        public SecurityTradesResult GetSecurityTradesBySymbol (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesBySymbolWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesBySymbolWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -12508,6 +12513,7 @@ namespace Intrinio.SDK.Api
         /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -12519,8 +12525,11 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of SecurityTradesResult</returns>
         
         
-        public ApiResponse< SecurityTradesResult > GetSecurityTradesBySymbolWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< SecurityTradesResult > GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
         {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityTradesBySymbol");
             // verify the required parameter 'source' is set
             if (source == null)
                 throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradesBySymbol");
@@ -12547,6 +12556,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
             
             
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
@@ -12584,6 +12594,7 @@ namespace Intrinio.SDK.Api
         /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -12593,9 +12604,9 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesBySymbolAsyncWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesBySymbolAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -12604,6 +12615,7 @@ namespace Intrinio.SDK.Api
         /// Security Trades By Symbol Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for which trades are being requested.</param>
         /// <param name="source">The specific source of the data being requested.</param>
         /// <param name="startDate">The start date for the data being requested. (optional)</param>
         /// <param name="startTime">The start time for the data being requested. (optional)</param>
@@ -12613,8 +12625,11 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
         {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityTradesBySymbol");
             // verify the required parameter 'source' is set
             if (source == null)
                 throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradesBySymbol");
@@ -12641,6 +12656,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
               
 
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter

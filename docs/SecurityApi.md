@@ -981,9 +981,9 @@ namespace Example
       string identifier = "AAPL";
       string intervalSize = "15m";
       string source = null;
-      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? startDate = DateTime.Parse("2023-01-01");
       string startTime = null;
-      DateTime? endDate = DateTime.Parse("2019-01-01");
+      DateTime? endDate = DateTime.Parse("2023-02-01");
       string endTime = null;
       string timezone = "UTC";
       int? pageSize = 100;
@@ -4979,7 +4979,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> SecurityTradesResult GetSecurityTradesBySymbol (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+> SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
 
 #### Security Trades By Symbol
 
@@ -5012,6 +5012,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
+      string identifier = "AAPL";
       string source = null;
       DateTime? startDate = null;
       string startTime = null;
@@ -5021,7 +5022,7 @@ namespace Example
       int? pageSize = 100;
       string nextPage = null;
       
-      SecurityTradesResult result = securityApi.GetSecurityTradesBySymbol(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+      SecurityTradesResult result = securityApi.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -5037,6 +5038,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **identifier** | string| The ticker symbol for which trades are being requested. |  &nbsp;
  **source** | string| The specific source of the data being requested. |  &nbsp;
  **startDate** | DateTime?| The start date for the data being requested. | [optional]  &nbsp;
  **startTime** | string| The start time for the data being requested. | [optional]  &nbsp;

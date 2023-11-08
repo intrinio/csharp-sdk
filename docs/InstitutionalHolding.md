@@ -15,6 +15,7 @@ Name | Type | Description
 **SecurityType** | string | The type of the security &nbsp;
 **TitleOfClass** | string | The class of stock held &nbsp;
 **StockExchange** | string | The stock exchange where the security is traded &nbsp;
+**PeriodEnded** | DateTime? | The date of the latest 13-F filing on record with the SEC. &nbsp;
 **FilingDate** | DateTime? | The date when the filing was submitted to the SEC by the company &nbsp;
 **Value** | decimal? | The market value in amount of dollars of the holding in the listed security &nbsp;
 **Amount** | decimal? | The number of shares held in the listed security &nbsp;

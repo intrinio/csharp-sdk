@@ -189,6 +189,27 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseEconomicIndexHistoricalData</returns>
         ApiResponse<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Realtime Index Price
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>RealtimeIndexPrice</returns>
+        RealtimeIndexPrice GetRealtimeIndexPriceById (string identifier);
+
+        /// <summary>
+        /// Realtime Index Price
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>ApiResponse of RealtimeIndexPrice</returns>
+        ApiResponse<RealtimeIndexPrice> GetRealtimeIndexPriceByIdWithHttpInfo (string identifier);
+        /// <summary>
         /// Lookup SIC Index
         /// </summary>
         /// <remarks>
@@ -634,6 +655,27 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndexHistoricalData)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Realtime Index Price
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>Task of RealtimeIndexPrice</returns>
+        System.Threading.Tasks.Task<RealtimeIndexPrice> GetRealtimeIndexPriceByIdAsync (string identifier);
+
+        /// <summary>
+        /// Realtime Index Price
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>Task of ApiResponse (RealtimeIndexPrice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RealtimeIndexPrice>> GetRealtimeIndexPriceByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
         /// Lookup SIC Index
         /// </summary>
@@ -2106,6 +2148,153 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseEconomicIndexHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseEconomicIndexHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndexHistoricalData)));
+        }
+
+        /// <summary>
+        /// Realtime Index Price 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>RealtimeIndexPrice</returns>
+        public RealtimeIndexPrice GetRealtimeIndexPriceById (string identifier)
+        {
+             ApiResponse<RealtimeIndexPrice> localVarResponse = GetRealtimeIndexPriceByIdWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realtime Index Price 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>ApiResponse of RealtimeIndexPrice</returns>
+        
+        
+        public ApiResponse< RealtimeIndexPrice > GetRealtimeIndexPriceByIdWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetRealtimeIndexPriceById");
+
+            var localVarPath = "/indices/{identifier}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetRealtimeIndexPriceById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RealtimeIndexPrice>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (RealtimeIndexPrice) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RealtimeIndexPrice)));
+        }
+
+        /// <summary>
+        /// Realtime Index Price 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>Task of RealtimeIndexPrice</returns>
+        public async System.Threading.Tasks.Task<RealtimeIndexPrice> GetRealtimeIndexPriceByIdAsync (string identifier)
+        {
+             ApiResponse<RealtimeIndexPrice> localVarResponse = await GetRealtimeIndexPriceByIdAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realtime Index Price 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <returns>Task of ApiResponse (RealtimeIndexPrice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RealtimeIndexPrice>> GetRealtimeIndexPriceByIdAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetRealtimeIndexPriceById");
+
+            var localVarPath = "/indices/{identifier}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetRealtimeIndexPriceById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RealtimeIndexPrice>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (RealtimeIndexPrice) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RealtimeIndexPrice)));
         }
 
         /// <summary>

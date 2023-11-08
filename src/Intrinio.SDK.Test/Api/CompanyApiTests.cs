@@ -232,6 +232,22 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetCompanyPublicFloat
+        /// </summary>
+        [Test]
+        public void GetCompanyPublicFloatTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? floatDateGreaterThan = null;
+            //DateTime? floatDateLessThan = null;
+            //string nextPage = null;
+            //string nextPage2 = null;
+            //var response = instance.GetCompanyPublicFloat(identifier, floatDateGreaterThan, floatDateLessThan, nextPage, nextPage2);
+            //Assert.IsInstanceOf<ApiResponseCompanyPublicFloatResult> (response, "response is ApiResponseCompanyPublicFloatResult");
+        }
+        
+        /// <summary>
         /// Test GetCompanySecurities
         /// </summary>
         [Test]

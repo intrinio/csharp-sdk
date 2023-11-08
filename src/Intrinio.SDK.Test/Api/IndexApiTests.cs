@@ -149,6 +149,18 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetRealtimeIndexPriceById
+        /// </summary>
+        [Test]
+        public void GetRealtimeIndexPriceByIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetRealtimeIndexPriceById(identifier);
+            //Assert.IsInstanceOf<RealtimeIndexPrice> (response, "response is RealtimeIndexPrice");
+        }
+        
+        /// <summary>
         /// Test GetSicIndexById
         /// </summary>
         [Test]

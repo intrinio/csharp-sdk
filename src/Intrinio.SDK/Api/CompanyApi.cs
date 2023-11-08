@@ -343,6 +343,35 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
         ApiResponse<ApiResponseCompanyNews> GetCompanyNewsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Get Company&#39;s public float
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of public float data tied to a given company identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyPublicFloatResult</returns>
+        ApiResponseCompanyPublicFloatResult GetCompanyPublicFloat (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Get Company&#39;s public float
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of public float data tied to a given company identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyPublicFloatResult</returns>
+        ApiResponse<ApiResponseCompanyPublicFloatResult> GetCompanyPublicFloatWithHttpInfo (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null);
+        /// <summary>
         /// All Securities by Company
         /// </summary>
         /// <remarks>
@@ -848,6 +877,35 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyNews)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Get Company&#39;s public float
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of public float data tied to a given company identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyPublicFloatResult</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyPublicFloatResult> GetCompanyPublicFloatAsync (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Get Company&#39;s public float
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of public float data tied to a given company identifier.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyPublicFloatResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyPublicFloatResult>> GetCompanyPublicFloatAsyncWithHttpInfo (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null);
         /// <summary>
         /// All Securities by Company
         /// </summary>
@@ -3030,6 +3088,177 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseCompanyNews>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseCompanyNews) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyNews)));
+        }
+
+        /// <summary>
+        /// Get Company&#39;s public float Returns a list of public float data tied to a given company identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyPublicFloatResult</returns>
+        public ApiResponseCompanyPublicFloatResult GetCompanyPublicFloat (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseCompanyPublicFloatResult> localVarResponse = GetCompanyPublicFloatWithHttpInfo(identifier, floatDateGreaterThan, floatDateLessThan, nextPage, nextPage2);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Company&#39;s public float Returns a list of public float data tied to a given company identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyPublicFloatResult</returns>
+        
+        
+        public ApiResponse< ApiResponseCompanyPublicFloatResult > GetCompanyPublicFloatWithHttpInfo (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->GetCompanyPublicFloat");
+
+            var localVarPath = "/companies/{identifier}/public_float";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (floatDateGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "float_date_greater_than", floatDateGreaterThan)); // query parameter
+            if (floatDateLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "float_date_less_than", floatDateLessThan)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyPublicFloat", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyPublicFloatResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyPublicFloatResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyPublicFloatResult)));
+        }
+
+        /// <summary>
+        /// Get Company&#39;s public float Returns a list of public float data tied to a given company identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyPublicFloatResult</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyPublicFloatResult> GetCompanyPublicFloatAsync (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseCompanyPublicFloatResult> localVarResponse = await GetCompanyPublicFloatAsyncWithHttpInfo(identifier, floatDateGreaterThan, floatDateLessThan, nextPage, nextPage2);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Company&#39;s public float Returns a list of public float data tied to a given company identifier.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="floatDateGreaterThan">The lower-bound date for the data being requested. (optional)</param>
+        /// <param name="floatDateLessThan">The upper-bound date for the data being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyPublicFloatResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyPublicFloatResult>> GetCompanyPublicFloatAsyncWithHttpInfo (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->GetCompanyPublicFloat");
+
+            var localVarPath = "/companies/{identifier}/public_float";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (floatDateGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "float_date_greater_than", floatDateGreaterThan)); // query parameter
+            if (floatDateLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "float_date_less_than", floatDateLessThan)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyPublicFloat", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyPublicFloatResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyPublicFloatResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyPublicFloatResult)));
         }
 
         /// <summary>

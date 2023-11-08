@@ -59,6 +59,14 @@ namespace Intrinio.SDK.Test
 
 
         /// <summary>
+        /// Test the property 'FilingDate'
+        /// </summary>
+        [Test]
+        public void FilingDateTest()
+        {
+            // TODO unit test for the property 'FilingDate'
+        }
+        /// <summary>
         /// Test the property 'FilingUrl'
         /// </summary>
         [Test]

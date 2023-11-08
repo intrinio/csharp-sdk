@@ -904,6 +904,7 @@ namespace Intrinio.SDK.Test
         public void GetSecurityTradesBySymbolTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
             //string source = null;
             //DateTime? startDate = null;
             //string startTime = null;
@@ -912,7 +913,7 @@ namespace Intrinio.SDK.Test
             //string timezone = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityTradesBySymbol(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+            //var response = instance.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
             //Assert.IsInstanceOf<SecurityTradesResult> (response, "response is SecurityTradesResult");
         }
         

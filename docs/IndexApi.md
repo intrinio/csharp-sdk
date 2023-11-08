@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**GetEconomicIndexDataPointNumber**](IndexApi.md#geteconomicindexdatapointnumber) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
 [**GetEconomicIndexDataPointText**](IndexApi.md#geteconomicindexdatapointtext) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 [**GetEconomicIndexHistoricalData**](IndexApi.md#geteconomicindexhistoricaldata) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
+[**GetRealtimeIndexPriceById**](IndexApi.md#getrealtimeindexpricebyid) | **GET** /indices/{identifier}/realtime | Realtime Index Price
 [**GetSicIndexById**](IndexApi.md#getsicindexbyid) | **GET** /indices/sic/{identifier} | Lookup SIC Index
 [**GetSicIndexDataPointNumber**](IndexApi.md#getsicindexdatapointnumber) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
 [**GetSicIndexDataPointText**](IndexApi.md#getsicindexdatapointtext) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
@@ -659,6 +660,93 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetRealtimeIndexPriceById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.RealtimeIndexPrice)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:RealtimeIndexPrice.md)
+
+[//]: # (OPERATION:GetRealtimeIndexPriceById_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier}/realtime)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getrealtimeindexpricebyid)
+
+<a name="getrealtimeindexpricebyid"></a>
+## **GetRealtimeIndexPriceById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetRealtimeIndexPriceById_v2)
+
+[//]: # (START_OVERVIEW)
+
+> RealtimeIndexPrice GetRealtimeIndexPriceById (string identifier)
+
+#### Realtime Index Price
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetRealtimeIndexPriceByIdExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var indexApi = new IndexApi();
+      
+      string identifier = "SPX";
+      
+      RealtimeIndexPrice result = indexApi.GetRealtimeIndexPriceById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The ticker symbol of the currently trading index |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**RealtimeIndexPrice**](RealtimeIndexPrice.md)
 
 [//]: # (END_OPERATION)
 

@@ -31,6 +31,7 @@ namespace Intrinio.SDK.Model
         /// <param name="SecurityType">The type of the security.</param>
         /// <param name="TitleOfClass">The class of stock held.</param>
         /// <param name="StockExchange">The stock exchange where the security is traded.</param>
+        /// <param name="PeriodEnded">The date of the latest 13-F filing on record with the SEC..</param>
         /// <param name="FilingDate">The date when the filing was submitted to the SEC by the company.</param>
         /// <param name="Value">The market value in amount of dollars of the holding in the listed security.</param>
         /// <param name="Amount">The number of shares held in the listed security.</param>
@@ -40,7 +41,7 @@ namespace Intrinio.SDK.Model
         /// <param name="SoleVotingAuthority">The number of shares where the insitutional holder has sole voting authority.</param>
         /// <param name="SharedVotingAuthority">The number of shares where the insitutional holder has shared voting authority.</param>
         /// <param name="NoVotingAuthority">The number of shares where the insitutional holder has no voting authority.</param>
-        public InstitutionalHolding(string Cusip = default(string), string Ticker = default(string), string SecurityName = default(string), string SecurityType = default(string), string TitleOfClass = default(string), string StockExchange = default(string), DateTime? FilingDate = default(DateTime?), decimal? Value = default(decimal?), decimal? Amount = default(decimal?), string Type = default(string), string InvestmentDiscretion = default(string), string OtherManager = default(string), decimal? SoleVotingAuthority = default(decimal?), decimal? SharedVotingAuthority = default(decimal?), decimal? NoVotingAuthority = default(decimal?))
+        public InstitutionalHolding(string Cusip = default(string), string Ticker = default(string), string SecurityName = default(string), string SecurityType = default(string), string TitleOfClass = default(string), string StockExchange = default(string), DateTime? PeriodEnded = default(DateTime?), DateTime? FilingDate = default(DateTime?), decimal? Value = default(decimal?), decimal? Amount = default(decimal?), string Type = default(string), string InvestmentDiscretion = default(string), string OtherManager = default(string), decimal? SoleVotingAuthority = default(decimal?), decimal? SharedVotingAuthority = default(decimal?), decimal? NoVotingAuthority = default(decimal?))
         {
             this.Cusip = Cusip;
             this.Ticker = Ticker;
@@ -48,6 +49,7 @@ namespace Intrinio.SDK.Model
             this.SecurityType = SecurityType;
             this.TitleOfClass = TitleOfClass;
             this.StockExchange = StockExchange;
+            this.PeriodEnded = PeriodEnded;
             this.FilingDate = FilingDate;
             this.Value = Value;
             this.Amount = Amount;
@@ -100,6 +102,14 @@ namespace Intrinio.SDK.Model
         /// <value>The stock exchange where the security is traded</value>
         [DataMember(Name="stock_exchange", EmitDefaultValue=false)]
         public string StockExchange { get; set; }
+
+        /// <summary>
+        /// The date of the latest 13-F filing on record with the SEC.
+        /// </summary>
+        /// <value>The date of the latest 13-F filing on record with the SEC.</value>
+        [DataMember(Name="period_ended", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? PeriodEnded { get; set; }
 
         /// <summary>
         /// The date when the filing was submitted to the SEC by the company
@@ -179,6 +189,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  SecurityType: ").Append(SecurityType).Append("\n");
             sb.Append("  TitleOfClass: ").Append(TitleOfClass).Append("\n");
             sb.Append("  StockExchange: ").Append(StockExchange).Append("\n");
+            sb.Append("  PeriodEnded: ").Append(PeriodEnded).Append("\n");
             sb.Append("  FilingDate: ").Append(FilingDate).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
@@ -253,6 +264,11 @@ namespace Intrinio.SDK.Model
                     this.StockExchange.Equals(input.StockExchange))
                 ) && 
                 (
+                    this.PeriodEnded == input.PeriodEnded ||
+                    (this.PeriodEnded != null &&
+                    this.PeriodEnded.Equals(input.PeriodEnded))
+                ) && 
+                (
                     this.FilingDate == input.FilingDate ||
                     (this.FilingDate != null &&
                     this.FilingDate.Equals(input.FilingDate))
@@ -320,6 +336,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.TitleOfClass.GetHashCode();
                 if (this.StockExchange != null)
                     hashCode = hashCode * 59 + this.StockExchange.GetHashCode();
+                if (this.PeriodEnded != null)
+                    hashCode = hashCode * 59 + this.PeriodEnded.GetHashCode();
                 if (this.FilingDate != null)
                     hashCode = hashCode * 59 + this.FilingDate.GetHashCode();
                 if (this.Value != null)

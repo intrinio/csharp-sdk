@@ -26,10 +26,12 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="TheaSourceDocument" /> class.
         /// </summary>
         /// <param name="Id">The unique id for the Thea source document.</param>
+        /// <param name="DateTime">The date at which the document was created.</param>
         /// <param name="Tags">Entity identifying tags associated with the source document.</param>
-        public TheaSourceDocument(string Id = default(string), List<Object> Tags = default(List<Object>))
+        public TheaSourceDocument(string Id = default(string), DateTime? DateTime = default(DateTime?), List<Object> Tags = default(List<Object>))
         {
             this.Id = Id;
+            this.DateTime = DateTime;
             this.Tags = Tags;
         }
         
@@ -39,6 +41,14 @@ namespace Intrinio.SDK.Model
         /// <value>The unique id for the Thea source document</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+        /// <summary>
+        /// The date at which the document was created
+        /// </summary>
+        /// <value>The date at which the document was created</value>
+        [DataMember(Name="date_time", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? DateTime { get; set; }
 
         /// <summary>
         /// Entity identifying tags associated with the source document
@@ -56,6 +66,7 @@ namespace Intrinio.SDK.Model
             var sb = new StringBuilder();
             sb.Append("class TheaSourceDocument {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  DateTime: ").Append(DateTime).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -97,6 +108,11 @@ namespace Intrinio.SDK.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.DateTime == input.DateTime ||
+                    (this.DateTime != null &&
+                    this.DateTime.Equals(input.DateTime))
+                ) && 
+                (
                     this.Tags == input.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(input.Tags)
@@ -114,6 +130,8 @@ namespace Intrinio.SDK.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.DateTime != null)
+                    hashCode = hashCode * 59 + this.DateTime.GetHashCode();
                 if (this.Tags != null)
                     hashCode = hashCode * 59 + this.Tags.GetHashCode();
                 return hashCode;

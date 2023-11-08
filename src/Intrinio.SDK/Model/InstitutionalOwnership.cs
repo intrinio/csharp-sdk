@@ -27,6 +27,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="OwnerCik">The Central Index Key issued by the SEC, which is the unique identifier all owner filings.</param>
         /// <param name="OwnerName">The name of the institutional owner.</param>
+        /// <param name="PeriodEnded">The date of the latest 13-F filing on record with the SEC..</param>
         /// <param name="Value">The market value in amount of dollars of the holding in the listed security.</param>
         /// <param name="Amount">The number of shares held in the listed security.</param>
         /// <param name="SoleVotingAuthority">The number of shares where the insitutional holder has sole voting authority.</param>
@@ -35,10 +36,11 @@ namespace Intrinio.SDK.Model
         /// <param name="PreviousAmount">The prior quarter number of shares held by the owner.</param>
         /// <param name="AmountChange">The change in number of shares held from the prior quarter.</param>
         /// <param name="AmountPercentChange">The percentage change in the number of shares held from the prior quarter.</param>
-        public InstitutionalOwnership(string OwnerCik = default(string), string OwnerName = default(string), decimal? Value = default(decimal?), decimal? Amount = default(decimal?), decimal? SoleVotingAuthority = default(decimal?), decimal? SharedVotingAuthority = default(decimal?), decimal? NoVotingAuthority = default(decimal?), decimal? PreviousAmount = default(decimal?), decimal? AmountChange = default(decimal?), decimal? AmountPercentChange = default(decimal?))
+        public InstitutionalOwnership(string OwnerCik = default(string), string OwnerName = default(string), DateTime? PeriodEnded = default(DateTime?), decimal? Value = default(decimal?), decimal? Amount = default(decimal?), decimal? SoleVotingAuthority = default(decimal?), decimal? SharedVotingAuthority = default(decimal?), decimal? NoVotingAuthority = default(decimal?), decimal? PreviousAmount = default(decimal?), decimal? AmountChange = default(decimal?), decimal? AmountPercentChange = default(decimal?))
         {
             this.OwnerCik = OwnerCik;
             this.OwnerName = OwnerName;
+            this.PeriodEnded = PeriodEnded;
             this.Value = Value;
             this.Amount = Amount;
             this.SoleVotingAuthority = SoleVotingAuthority;
@@ -62,6 +64,14 @@ namespace Intrinio.SDK.Model
         /// <value>The name of the institutional owner</value>
         [DataMember(Name="owner_name", EmitDefaultValue=false)]
         public string OwnerName { get; set; }
+
+        /// <summary>
+        /// The date of the latest 13-F filing on record with the SEC.
+        /// </summary>
+        /// <value>The date of the latest 13-F filing on record with the SEC.</value>
+        [DataMember(Name="period_ended", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? PeriodEnded { get; set; }
 
         /// <summary>
         /// The market value in amount of dollars of the holding in the listed security
@@ -129,6 +139,7 @@ namespace Intrinio.SDK.Model
             sb.Append("class InstitutionalOwnership {\n");
             sb.Append("  OwnerCik: ").Append(OwnerCik).Append("\n");
             sb.Append("  OwnerName: ").Append(OwnerName).Append("\n");
+            sb.Append("  PeriodEnded: ").Append(PeriodEnded).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  SoleVotingAuthority: ").Append(SoleVotingAuthority).Append("\n");
@@ -180,6 +191,11 @@ namespace Intrinio.SDK.Model
                     this.OwnerName == input.OwnerName ||
                     (this.OwnerName != null &&
                     this.OwnerName.Equals(input.OwnerName))
+                ) && 
+                (
+                    this.PeriodEnded == input.PeriodEnded ||
+                    (this.PeriodEnded != null &&
+                    this.PeriodEnded.Equals(input.PeriodEnded))
                 ) && 
                 (
                     this.Value == input.Value ||
@@ -236,6 +252,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.OwnerCik.GetHashCode();
                 if (this.OwnerName != null)
                     hashCode = hashCode * 59 + this.OwnerName.GetHashCode();
+                if (this.PeriodEnded != null)
+                    hashCode = hashCode * 59 + this.PeriodEnded.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 if (this.Amount != null)

@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**GetCompanyHistoricalData**](CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 [**GetCompanyIpos**](CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 [**GetCompanyNews**](CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
+[**GetCompanyPublicFloat**](CompanyApi.md#getcompanypublicfloat) | **GET** /companies/{identifier}/public_float | Get Company&#39;s public float
 [**GetCompanySecurities**](CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**InsiderTransactionFilingsByCompany**](CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 [**LatestInsiderTransactionFilingByCompany**](CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
@@ -1083,6 +1084,102 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:GetCompanyPublicFloat)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyPublicFloatResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyPublicFloatResult.md)
+
+[//]: # (OPERATION:GetCompanyPublicFloat_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/public_float)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getcompanypublicfloat)
+
+<a name="getcompanypublicfloat"></a>
+## **GetCompanyPublicFloat**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyPublicFloat_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyPublicFloatResult GetCompanyPublicFloat (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null)
+
+#### Get Company's public float
+
+Returns a list of public float data tied to a given company identifier.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetCompanyPublicFloatExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string identifier = "AAPL";
+      DateTime? floatDateGreaterThan = null;
+      DateTime? floatDateLessThan = null;
+      string nextPage = null;
+      string nextPage2 = "";
+      
+      ApiResponseCompanyPublicFloatResult result = companyApi.GetCompanyPublicFloat(identifier, floatDateGreaterThan, floatDateLessThan, nextPage, nextPage2);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **floatDateGreaterThan** | DateTime?| The lower-bound date for the data being requested. | [optional]  &nbsp;
+ **floatDateLessThan** | DateTime?| The upper-bound date for the data being requested. | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyPublicFloatResult**](ApiResponseCompanyPublicFloatResult.md)
 
 [//]: # (END_OPERATION)
 

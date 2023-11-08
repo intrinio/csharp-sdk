@@ -25,6 +25,7 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InsiderTransactionFiling" /> class.
         /// </summary>
+        /// <param name="FilingDate">The date of the filing with the SEC made by the owner.</param>
         /// <param name="FilingUrl">The URL of the filing with the SEC.</param>
         /// <param name="IssuerTicker">The ticker of the issuing company..</param>
         /// <param name="IssuerCik">The Central Index Key (CIK) of the issuing company..</param>
@@ -32,8 +33,9 @@ namespace Intrinio.SDK.Model
         /// <param name="Transactions">The insider transactions associated with the filing.</param>
         /// <param name="Company">The company associated with the filing.</param>
         /// <param name="Owner">The owner associated with the filing.</param>
-        public InsiderTransactionFiling(string FilingUrl = default(string), string IssuerTicker = default(string), string IssuerCik = default(string), string IssuerCompany = default(string), List<InsiderTransaction> Transactions = default(List<InsiderTransaction>), CompanySummary Company = default(CompanySummary), OwnerSummary Owner = default(OwnerSummary))
+        public InsiderTransactionFiling(DateTime? FilingDate = default(DateTime?), string FilingUrl = default(string), string IssuerTicker = default(string), string IssuerCik = default(string), string IssuerCompany = default(string), List<InsiderTransaction> Transactions = default(List<InsiderTransaction>), CompanySummary Company = default(CompanySummary), OwnerSummary Owner = default(OwnerSummary))
         {
+            this.FilingDate = FilingDate;
             this.FilingUrl = FilingUrl;
             this.IssuerTicker = IssuerTicker;
             this.IssuerCik = IssuerCik;
@@ -43,6 +45,14 @@ namespace Intrinio.SDK.Model
             this.Owner = Owner;
         }
         
+        /// <summary>
+        /// The date of the filing with the SEC made by the owner
+        /// </summary>
+        /// <value>The date of the filing with the SEC made by the owner</value>
+        [DataMember(Name="filing_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? FilingDate { get; set; }
+
         /// <summary>
         /// The URL of the filing with the SEC
         /// </summary>
@@ -100,6 +110,7 @@ namespace Intrinio.SDK.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InsiderTransactionFiling {\n");
+            sb.Append("  FilingDate: ").Append(FilingDate).Append("\n");
             sb.Append("  FilingUrl: ").Append(FilingUrl).Append("\n");
             sb.Append("  IssuerTicker: ").Append(IssuerTicker).Append("\n");
             sb.Append("  IssuerCik: ").Append(IssuerCik).Append("\n");
@@ -141,6 +152,11 @@ namespace Intrinio.SDK.Model
                 return false;
 
             return 
+                (
+                    this.FilingDate == input.FilingDate ||
+                    (this.FilingDate != null &&
+                    this.FilingDate.Equals(input.FilingDate))
+                ) && 
                 (
                     this.FilingUrl == input.FilingUrl ||
                     (this.FilingUrl != null &&
@@ -187,6 +203,8 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.FilingDate != null)
+                    hashCode = hashCode * 59 + this.FilingDate.GetHashCode();
                 if (this.FilingUrl != null)
                     hashCode = hashCode * 59 + this.FilingUrl.GetHashCode();
                 if (this.IssuerTicker != null)

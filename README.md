@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.47.3
-- Package version: 7.4.1
+- API version: 2.47.7
+- Package version: 7.4.2
 
 
 <a name="frameworks-supported"></a>
@@ -136,6 +136,7 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetCompanyHistoricalData**](docs/CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 *CompanyApi* | [**GetCompanyIpos**](docs/CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 *CompanyApi* | [**GetCompanyNews**](docs/CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
+*CompanyApi* | [**GetCompanyPublicFloat**](docs/CompanyApi.md#getcompanypublicfloat) | **GET** /companies/{identifier}/public_float | Get Company's public float
 *CompanyApi* | [**GetCompanySecurities**](docs/CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *CompanyApi* | [**InsiderTransactionFilingsByCompany**](docs/CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 *CompanyApi* | [**LatestInsiderTransactionFilingByCompany**](docs/CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
@@ -187,6 +188,7 @@ Class | Method | HTTP request | Description
 *IndexApi* | [**GetEconomicIndexDataPointNumber**](docs/IndexApi.md#geteconomicindexdatapointnumber) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
 *IndexApi* | [**GetEconomicIndexDataPointText**](docs/IndexApi.md#geteconomicindexdatapointtext) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 *IndexApi* | [**GetEconomicIndexHistoricalData**](docs/IndexApi.md#geteconomicindexhistoricaldata) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
+*IndexApi* | [**GetRealtimeIndexPriceById**](docs/IndexApi.md#getrealtimeindexpricebyid) | **GET** /indices/{identifier}/realtime | Realtime Index Price
 *IndexApi* | [**GetSicIndexById**](docs/IndexApi.md#getsicindexbyid) | **GET** /indices/sic/{identifier} | Lookup SIC Index
 *IndexApi* | [**GetSicIndexDataPointNumber**](docs/IndexApi.md#getsicindexdatapointnumber) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
 *IndexApi* | [**GetSicIndexDataPointText**](docs/IndexApi.md#getsicindexdatapointtext) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
@@ -352,6 +354,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
  - [Model.ApiResponseCompanyInsiderTransactionFilings](docs/ApiResponseCompanyInsiderTransactionFilings.md)
  - [Model.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
+ - [Model.ApiResponseCompanyPublicFloatResult](docs/ApiResponseCompanyPublicFloatResult.md)
  - [Model.ApiResponseCompanyRecognize](docs/ApiResponseCompanyRecognize.md)
  - [Model.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)
  - [Model.ApiResponseCompanySharesOutstanding](docs/ApiResponseCompanySharesOutstanding.md)
@@ -479,6 +482,7 @@ Class | Method | HTTP request | Description
  - [Model.CompanyInitialPublicOffering](docs/CompanyInitialPublicOffering.md)
  - [Model.CompanyNews](docs/CompanyNews.md)
  - [Model.CompanyNewsSummary](docs/CompanyNewsSummary.md)
+ - [Model.CompanyPublicFloat](docs/CompanyPublicFloat.md)
  - [Model.CompanySharesOutstanding](docs/CompanySharesOutstanding.md)
  - [Model.CompanySummary](docs/CompanySummary.md)
  - [Model.DataTag](docs/DataTag.md)
@@ -551,6 +555,8 @@ Class | Method | HTTP request | Description
  - [Model.OptionUnusualTrade](docs/OptionUnusualTrade.md)
  - [Model.Owner](docs/Owner.md)
  - [Model.OwnerSummary](docs/OwnerSummary.md)
+ - [Model.RealtimeIndexPrice](docs/RealtimeIndexPrice.md)
+ - [Model.RealtimeIndexPriceIndex](docs/RealtimeIndexPriceIndex.md)
  - [Model.RealtimeStockPrice](docs/RealtimeStockPrice.md)
  - [Model.RealtimeStockPriceSecurity](docs/RealtimeStockPriceSecurity.md)
  - [Model.RelativeStrengthIndexTechnicalValue](docs/RelativeStrengthIndexTechnicalValue.md)

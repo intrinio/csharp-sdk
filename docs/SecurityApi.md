@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**GetSecurityHistoricalData**](SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**GetSecurityHistoryByIdentifier**](SecurityApi.md#getsecurityhistorybyidentifier) | **GET** /securities/history-by-identifier/{identifier} | Security History By Identifier
+[**GetSecurityHistoryByTicker**](SecurityApi.md#getsecurityhistorybyticker) | **GET** /securities/history-by-ticker/{ticker} | Security History By Ticker
 [**GetSecurityInsiderOwnership**](SecurityApi.md#getsecurityinsiderownership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
 [**GetSecurityIntervalMovers**](SecurityApi.md#getsecurityintervalmovers) | **GET** /securities/market_movers | Security Intervals Movers
 [**GetSecurityIntervalMoversChange**](SecurityApi.md#getsecurityintervalmoverschange) | **GET** /securities/market_movers/change | Security Intervals Movers By Change
@@ -556,6 +558,182 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityHistoryByIdentifier)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityHistoryListResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityHistoryListResult.md)
+
+[//]: # (OPERATION:GetSecurityHistoryByIdentifier_v2)
+
+[//]: # (ENDPOINT:/securities/history-by-identifier/{identifier})
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityhistorybyidentifier)
+
+<a name="getsecurityhistorybyidentifier"></a>
+## **GetSecurityHistoryByIdentifier**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityHistoryByIdentifier_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityHistoryListResult GetSecurityHistoryByIdentifier (string identifier)
+
+#### Security History By Identifier
+
+Lists the tickers a company has used over time.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityHistoryByIdentifierExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "037833100";
+      
+      SecurityHistoryListResult result = securityApi.GetSecurityHistoryByIdentifier(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityHistoryListResult**](SecurityHistoryListResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityHistoryByTicker)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.SecurityHistoryListResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityHistoryListResult.md)
+
+[//]: # (OPERATION:GetSecurityHistoryByTicker_v2)
+
+[//]: # (ENDPOINT:/securities/history-by-ticker/{ticker})
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityhistorybyticker)
+
+<a name="getsecurityhistorybyticker"></a>
+## **GetSecurityHistoryByTicker**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityHistoryByTicker_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityHistoryListResult GetSecurityHistoryByTicker (string ticker)
+
+#### Security History By Ticker
+
+Lists the tickers a company has used over time.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityHistoryByTickerExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string ticker = "AAPL";
+      
+      SecurityHistoryListResult result = securityApi.GetSecurityHistoryByTicker(ticker);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | string| A Security ticker symbol |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityHistoryListResult**](SecurityHistoryListResult.md)
 
 [//]: # (END_OPERATION)
 

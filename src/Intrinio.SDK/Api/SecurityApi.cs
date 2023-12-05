@@ -179,6 +179,48 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurityHistoricalData</returns>
         ApiResponse<ApiResponseSecurityHistoricalData> GetSecurityHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Security History By Identifier
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>SecurityHistoryListResult</returns>
+        SecurityHistoryListResult GetSecurityHistoryByIdentifier (string identifier);
+
+        /// <summary>
+        /// Security History By Identifier
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>ApiResponse of SecurityHistoryListResult</returns>
+        ApiResponse<SecurityHistoryListResult> GetSecurityHistoryByIdentifierWithHttpInfo (string identifier);
+        /// <summary>
+        /// Security History By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>SecurityHistoryListResult</returns>
+        SecurityHistoryListResult GetSecurityHistoryByTicker (string ticker);
+
+        /// <summary>
+        /// Security History By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>ApiResponse of SecurityHistoryListResult</returns>
+        ApiResponse<SecurityHistoryListResult> GetSecurityHistoryByTickerWithHttpInfo (string ticker);
+        /// <summary>
         /// Institutional Ownership by Security
         /// </summary>
         /// <remarks>
@@ -1937,6 +1979,48 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityHistoricalData)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityHistoricalData>> GetSecurityHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security History By Identifier
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of SecurityHistoryListResult</returns>
+        System.Threading.Tasks.Task<SecurityHistoryListResult> GetSecurityHistoryByIdentifierAsync (string identifier);
+
+        /// <summary>
+        /// Security History By Identifier
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (SecurityHistoryListResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityHistoryListResult>> GetSecurityHistoryByIdentifierAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Security History By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>Task of SecurityHistoryListResult</returns>
+        System.Threading.Tasks.Task<SecurityHistoryListResult> GetSecurityHistoryByTickerAsync (string ticker);
+
+        /// <summary>
+        /// Security History By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Lists the tickers a company has used over time.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>Task of ApiResponse (SecurityHistoryListResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecurityHistoryListResult>> GetSecurityHistoryByTickerAsyncWithHttpInfo (string ticker);
         /// <summary>
         /// Institutional Ownership by Security
         /// </summary>
@@ -4546,6 +4630,300 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurityHistoricalData>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseSecurityHistoricalData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityHistoricalData)));
+        }
+
+        /// <summary>
+        /// Security History By Identifier Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>SecurityHistoryListResult</returns>
+        public SecurityHistoryListResult GetSecurityHistoryByIdentifier (string identifier)
+        {
+             ApiResponse<SecurityHistoryListResult> localVarResponse = GetSecurityHistoryByIdentifierWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security History By Identifier Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>ApiResponse of SecurityHistoryListResult</returns>
+        
+        
+        public ApiResponse< SecurityHistoryListResult > GetSecurityHistoryByIdentifierWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityHistoryByIdentifier");
+
+            var localVarPath = "/securities/history-by-identifier/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityHistoryByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityHistoryListResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityHistoryListResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityHistoryListResult)));
+        }
+
+        /// <summary>
+        /// Security History By Identifier Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of SecurityHistoryListResult</returns>
+        public async System.Threading.Tasks.Task<SecurityHistoryListResult> GetSecurityHistoryByIdentifierAsync (string identifier)
+        {
+             ApiResponse<SecurityHistoryListResult> localVarResponse = await GetSecurityHistoryByIdentifierAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security History By Identifier Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <returns>Task of ApiResponse (SecurityHistoryListResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityHistoryListResult>> GetSecurityHistoryByIdentifierAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityHistoryByIdentifier");
+
+            var localVarPath = "/securities/history-by-identifier/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityHistoryByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityHistoryListResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityHistoryListResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityHistoryListResult)));
+        }
+
+        /// <summary>
+        /// Security History By Ticker Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>SecurityHistoryListResult</returns>
+        public SecurityHistoryListResult GetSecurityHistoryByTicker (string ticker)
+        {
+             ApiResponse<SecurityHistoryListResult> localVarResponse = GetSecurityHistoryByTickerWithHttpInfo(ticker);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security History By Ticker Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>ApiResponse of SecurityHistoryListResult</returns>
+        
+        
+        public ApiResponse< SecurityHistoryListResult > GetSecurityHistoryByTickerWithHttpInfo (string ticker)
+        {
+            // verify the required parameter 'ticker' is set
+            if (ticker == null)
+                throw new ApiException(400, "Missing required parameter 'ticker' when calling SecurityApi->GetSecurityHistoryByTicker");
+
+            var localVarPath = "/securities/history-by-ticker/{ticker}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (ticker != null) localVarPathParams.Add("ticker", Configuration.ApiClient.ParameterToString(ticker)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityHistoryByTicker", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityHistoryListResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityHistoryListResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityHistoryListResult)));
+        }
+
+        /// <summary>
+        /// Security History By Ticker Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>Task of SecurityHistoryListResult</returns>
+        public async System.Threading.Tasks.Task<SecurityHistoryListResult> GetSecurityHistoryByTickerAsync (string ticker)
+        {
+             ApiResponse<SecurityHistoryListResult> localVarResponse = await GetSecurityHistoryByTickerAsyncWithHttpInfo(ticker);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security History By Ticker Lists the tickers a company has used over time.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ticker">A Security ticker symbol</param>
+        /// <returns>Task of ApiResponse (SecurityHistoryListResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityHistoryListResult>> GetSecurityHistoryByTickerAsyncWithHttpInfo (string ticker)
+        {
+            // verify the required parameter 'ticker' is set
+            if (ticker == null)
+                throw new ApiException(400, "Missing required parameter 'ticker' when calling SecurityApi->GetSecurityHistoryByTicker");
+
+            var localVarPath = "/securities/history-by-ticker/{ticker}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (ticker != null) localVarPathParams.Add("ticker", Configuration.ApiClient.ParameterToString(ticker)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityHistoryByTicker", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SecurityHistoryListResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (SecurityHistoryListResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityHistoryListResult)));
         }
 
         /// <summary>

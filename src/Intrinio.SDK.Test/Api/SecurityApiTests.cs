@@ -141,6 +141,30 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecurityHistoryByIdentifier
+        /// </summary>
+        [Test]
+        public void GetSecurityHistoryByIdentifierTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetSecurityHistoryByIdentifier(identifier);
+            //Assert.IsInstanceOf<SecurityHistoryListResult> (response, "response is SecurityHistoryListResult");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityHistoryByTicker
+        /// </summary>
+        [Test]
+        public void GetSecurityHistoryByTickerTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ticker = null;
+            //var response = instance.GetSecurityHistoryByTicker(ticker);
+            //Assert.IsInstanceOf<SecurityHistoryListResult> (response, "response is SecurityHistoryListResult");
+        }
+        
+        /// <summary>
         /// Test GetSecurityInsiderOwnership
         /// </summary>
         [Test]

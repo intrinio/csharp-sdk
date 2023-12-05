@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.47.7
-- Package version: 7.4.2
+- API version: 2.47.8
+- Package version: 7.4.3
 
 
 <a name="frameworks-supported"></a>
@@ -239,6 +239,8 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**GetSecurityDataPointNumber**](docs/SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 *SecurityApi* | [**GetSecurityDataPointText**](docs/SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 *SecurityApi* | [**GetSecurityHistoricalData**](docs/SecurityApi.md#getsecurityhistoricaldata) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+*SecurityApi* | [**GetSecurityHistoryByIdentifier**](docs/SecurityApi.md#getsecurityhistorybyidentifier) | **GET** /securities/history-by-identifier/{identifier} | Security History By Identifier
+*SecurityApi* | [**GetSecurityHistoryByTicker**](docs/SecurityApi.md#getsecurityhistorybyticker) | **GET** /securities/history-by-ticker/{ticker} | Security History By Ticker
 *SecurityApi* | [**GetSecurityInsiderOwnership**](docs/SecurityApi.md#getsecurityinsiderownership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
 *SecurityApi* | [**GetSecurityIntervalMovers**](docs/SecurityApi.md#getsecurityintervalmovers) | **GET** /securities/market_movers | Security Intervals Movers
 *SecurityApi* | [**GetSecurityIntervalMoversChange**](docs/SecurityApi.md#getsecurityintervalmoverschange) | **GET** /securities/market_movers/change | Security Intervals Movers By Change
@@ -565,6 +567,8 @@ Class | Method | HTTP request | Description
  - [Model.ReportedTag](docs/ReportedTag.md)
  - [Model.SICIndex](docs/SICIndex.md)
  - [Model.Security](docs/Security.md)
+ - [Model.SecurityHistory](docs/SecurityHistory.md)
+ - [Model.SecurityHistoryListResult](docs/SecurityHistoryListResult.md)
  - [Model.SecurityIntervalMover](docs/SecurityIntervalMover.md)
  - [Model.SecurityIntervalsMoversResult](docs/SecurityIntervalsMoversResult.md)
  - [Model.SecurityReplayFileResult](docs/SecurityReplayFileResult.md)

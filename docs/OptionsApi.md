@@ -1508,7 +1508,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null)
+> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
 
 #### Option Prices Batch Realtime
 
@@ -1542,14 +1542,14 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string source = null;
-      bool? showExtendedPrice = null;
+      bool? showStats = null;
       string stockPriceSource = null;
       string model = null;
-      bool? showExtendedPrice2 = "";
+      bool? showExtendedPrice = null;
       
       var body = new OptionContractsList();
       body.Contracts = new List<string>(new string[] { "A220121P00055000", "A220121P00057500", "A220121P00060000" });
-      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source, showExtendedPrice, stockPriceSource, model, showExtendedPrice2);
+      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source, showStats, stockPriceSource, model, showExtendedPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1567,10 +1567,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
- **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **showStats** | bool?| Whether to include Greek calculations or not. | [optional]  &nbsp;
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
- **showExtendedPrice2** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

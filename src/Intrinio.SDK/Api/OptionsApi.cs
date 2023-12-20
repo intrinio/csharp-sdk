@@ -475,12 +475,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>ApiResponseOptionsPricesBatchRealtime</returns>
-        ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null);
+        ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
 
         /// <summary>
         /// Option Prices Batch Realtime
@@ -491,12 +491,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesBatchRealtime</returns>
-        ApiResponse<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeWithHttpInfo (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null);
+        ApiResponse<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeWithHttpInfo (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
         /// <summary>
         /// Option Prices EOD
         /// </summary>
@@ -1177,12 +1177,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesBatchRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeAsync (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeAsync (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
 
         /// <summary>
         /// Option Prices Batch Realtime
@@ -1193,12 +1193,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesBatchRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesBatchRealtime>> GetOptionsPricesBatchRealtimeAsyncWithHttpInfo (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesBatchRealtime>> GetOptionsPricesBatchRealtimeAsyncWithHttpInfo (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
         /// <summary>
         /// Option Prices EOD
         /// </summary>
@@ -4138,14 +4138,14 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>ApiResponseOptionsPricesBatchRealtime</returns>
-        public ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null)
+        public ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
         {
-             ApiResponse<ApiResponseOptionsPricesBatchRealtime> localVarResponse = GetOptionsPricesBatchRealtimeWithHttpInfo(body, source, showExtendedPrice, stockPriceSource, model, showExtendedPrice2);
+             ApiResponse<ApiResponseOptionsPricesBatchRealtime> localVarResponse = GetOptionsPricesBatchRealtimeWithHttpInfo(body, source, showStats, stockPriceSource, model, showExtendedPrice);
              return localVarResponse.Data;
         }
 
@@ -4155,14 +4155,14 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesBatchRealtime</returns>
         
         
-        public ApiResponse< ApiResponseOptionsPricesBatchRealtime > GetOptionsPricesBatchRealtimeWithHttpInfo (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null)
+        public ApiResponse< ApiResponseOptionsPricesBatchRealtime > GetOptionsPricesBatchRealtimeWithHttpInfo (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4192,10 +4192,10 @@ namespace Intrinio.SDK.Api
             
             
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
-            if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
+            if (showStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_stats", showStats)); // query parameter
             if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
-            if (showExtendedPrice2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice2)); // query parameter
+            if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4235,14 +4235,14 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesBatchRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeAsync (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesBatchRealtime> GetOptionsPricesBatchRealtimeAsync (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
         {
-             ApiResponse<ApiResponseOptionsPricesBatchRealtime> localVarResponse = await GetOptionsPricesBatchRealtimeAsyncWithHttpInfo(body, source, showExtendedPrice, stockPriceSource, model, showExtendedPrice2);
+             ApiResponse<ApiResponseOptionsPricesBatchRealtime> localVarResponse = await GetOptionsPricesBatchRealtimeAsyncWithHttpInfo(body, source, showStats, stockPriceSource, model, showExtendedPrice);
              return localVarResponse.Data;
 
         }
@@ -4253,12 +4253,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The contract symbols for which to return options prices for.</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
-        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
-        /// <param name="showExtendedPrice2">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesBatchRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesBatchRealtime>> GetOptionsPricesBatchRealtimeAsyncWithHttpInfo (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesBatchRealtime>> GetOptionsPricesBatchRealtimeAsyncWithHttpInfo (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4288,10 +4288,10 @@ namespace Intrinio.SDK.Api
               
 
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
-            if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
+            if (showStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_stats", showStats)); // query parameter
             if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
-            if (showExtendedPrice2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice2)); // query parameter
+            if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter

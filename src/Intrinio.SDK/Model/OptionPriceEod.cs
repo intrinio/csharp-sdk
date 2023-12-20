@@ -46,7 +46,14 @@ namespace Intrinio.SDK.Model
         /// <param name="Gamma">Gamma represents the rate of change between an option&#39;s delta and the underlying asset&#39;s price..</param>
         /// <param name="Theta">Theta represents the rate of change between the option price and time, or time sensitivity - sometimes known as an option&#39;s time decay..</param>
         /// <param name="Vega">Vega represents the rate of change between an option&#39;s value and the underlying asset&#39;s implied volatility..</param>
-        public OptionPriceEod(string Date = default(string), decimal? Close = default(decimal?), decimal? CloseBid = default(decimal?), decimal? CloseAsk = default(decimal?), int? Volume = default(int?), decimal? Open = default(decimal?), decimal? OpenAsk = default(decimal?), decimal? OpenBid = default(decimal?), int? OpenInterest = default(int?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Mark = default(decimal?), decimal? AskHigh = default(decimal?), decimal? AskLow = default(decimal?), decimal? BidHigh = default(decimal?), Object BidLow = default(Object), decimal? ImpliedVolatility = default(decimal?), decimal? Delta = default(decimal?), decimal? Gamma = default(decimal?), decimal? Theta = default(decimal?), decimal? Vega = default(decimal?))
+        /// <param name="CloseTime">The time of the last trade before close..</param>
+        /// <param name="CloseSize">The size of the last trade before close..</param>
+        /// <param name="CloseBidTime">The time of the last bid before close..</param>
+        /// <param name="CloseBidSize">The size of the last bid before close..</param>
+        /// <param name="CloseAskTime">The time of the last ask before close..</param>
+        /// <param name="CloseAskSize">The size of the last ask before close..</param>
+        /// <param name="ExerciseStyle">The exercise style..</param>
+        public OptionPriceEod(string Date = default(string), decimal? Close = default(decimal?), decimal? CloseBid = default(decimal?), decimal? CloseAsk = default(decimal?), int? Volume = default(int?), decimal? Open = default(decimal?), decimal? OpenAsk = default(decimal?), decimal? OpenBid = default(decimal?), int? OpenInterest = default(int?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Mark = default(decimal?), decimal? AskHigh = default(decimal?), decimal? AskLow = default(decimal?), decimal? BidHigh = default(decimal?), decimal? BidLow = default(decimal?), decimal? ImpliedVolatility = default(decimal?), decimal? Delta = default(decimal?), decimal? Gamma = default(decimal?), decimal? Theta = default(decimal?), decimal? Vega = default(decimal?), DateTime? CloseTime = default(DateTime?), int? CloseSize = default(int?), DateTime? CloseBidTime = default(DateTime?), int? CloseBidSize = default(int?), DateTime? CloseAskTime = default(DateTime?), int? CloseAskSize = default(int?), string ExerciseStyle = default(string))
         {
             this.Date = Date;
             this.Close = Close;
@@ -69,6 +76,13 @@ namespace Intrinio.SDK.Model
             this.Gamma = Gamma;
             this.Theta = Theta;
             this.Vega = Vega;
+            this.CloseTime = CloseTime;
+            this.CloseSize = CloseSize;
+            this.CloseBidTime = CloseBidTime;
+            this.CloseBidSize = CloseBidSize;
+            this.CloseAskTime = CloseAskTime;
+            this.CloseAskSize = CloseAskSize;
+            this.ExerciseStyle = ExerciseStyle;
         }
         
         /// <summary>
@@ -181,7 +195,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The lowest bid over the span of the period</value>
         [DataMember(Name="bid_low", EmitDefaultValue=false)]
-        public Object BidLow { get; set; }
+        public decimal? BidLow { get; set; }
 
         /// <summary>
         /// The implied volatility of the contract calculated using the Black-Scholes Model.
@@ -219,6 +233,55 @@ namespace Intrinio.SDK.Model
         public decimal? Vega { get; set; }
 
         /// <summary>
+        /// The time of the last trade before close.
+        /// </summary>
+        /// <value>The time of the last trade before close.</value>
+        [DataMember(Name="close_time", EmitDefaultValue=false)]
+        public DateTime? CloseTime { get; set; }
+
+        /// <summary>
+        /// The size of the last trade before close.
+        /// </summary>
+        /// <value>The size of the last trade before close.</value>
+        [DataMember(Name="close_size", EmitDefaultValue=false)]
+        public int? CloseSize { get; set; }
+
+        /// <summary>
+        /// The time of the last bid before close.
+        /// </summary>
+        /// <value>The time of the last bid before close.</value>
+        [DataMember(Name="close_bid_time", EmitDefaultValue=false)]
+        public DateTime? CloseBidTime { get; set; }
+
+        /// <summary>
+        /// The size of the last bid before close.
+        /// </summary>
+        /// <value>The size of the last bid before close.</value>
+        [DataMember(Name="close_bid_size", EmitDefaultValue=false)]
+        public int? CloseBidSize { get; set; }
+
+        /// <summary>
+        /// The time of the last ask before close.
+        /// </summary>
+        /// <value>The time of the last ask before close.</value>
+        [DataMember(Name="close_ask_time", EmitDefaultValue=false)]
+        public DateTime? CloseAskTime { get; set; }
+
+        /// <summary>
+        /// The size of the last ask before close.
+        /// </summary>
+        /// <value>The size of the last ask before close.</value>
+        [DataMember(Name="close_ask_size", EmitDefaultValue=false)]
+        public int? CloseAskSize { get; set; }
+
+        /// <summary>
+        /// The exercise style.
+        /// </summary>
+        /// <value>The exercise style.</value>
+        [DataMember(Name="exercise_style", EmitDefaultValue=false)]
+        public string ExerciseStyle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -247,6 +310,13 @@ namespace Intrinio.SDK.Model
             sb.Append("  Gamma: ").Append(Gamma).Append("\n");
             sb.Append("  Theta: ").Append(Theta).Append("\n");
             sb.Append("  Vega: ").Append(Vega).Append("\n");
+            sb.Append("  CloseTime: ").Append(CloseTime).Append("\n");
+            sb.Append("  CloseSize: ").Append(CloseSize).Append("\n");
+            sb.Append("  CloseBidTime: ").Append(CloseBidTime).Append("\n");
+            sb.Append("  CloseBidSize: ").Append(CloseBidSize).Append("\n");
+            sb.Append("  CloseAskTime: ").Append(CloseAskTime).Append("\n");
+            sb.Append("  CloseAskSize: ").Append(CloseAskSize).Append("\n");
+            sb.Append("  ExerciseStyle: ").Append(ExerciseStyle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -385,6 +455,41 @@ namespace Intrinio.SDK.Model
                     this.Vega == input.Vega ||
                     (this.Vega != null &&
                     this.Vega.Equals(input.Vega))
+                ) && 
+                (
+                    this.CloseTime == input.CloseTime ||
+                    (this.CloseTime != null &&
+                    this.CloseTime.Equals(input.CloseTime))
+                ) && 
+                (
+                    this.CloseSize == input.CloseSize ||
+                    (this.CloseSize != null &&
+                    this.CloseSize.Equals(input.CloseSize))
+                ) && 
+                (
+                    this.CloseBidTime == input.CloseBidTime ||
+                    (this.CloseBidTime != null &&
+                    this.CloseBidTime.Equals(input.CloseBidTime))
+                ) && 
+                (
+                    this.CloseBidSize == input.CloseBidSize ||
+                    (this.CloseBidSize != null &&
+                    this.CloseBidSize.Equals(input.CloseBidSize))
+                ) && 
+                (
+                    this.CloseAskTime == input.CloseAskTime ||
+                    (this.CloseAskTime != null &&
+                    this.CloseAskTime.Equals(input.CloseAskTime))
+                ) && 
+                (
+                    this.CloseAskSize == input.CloseAskSize ||
+                    (this.CloseAskSize != null &&
+                    this.CloseAskSize.Equals(input.CloseAskSize))
+                ) && 
+                (
+                    this.ExerciseStyle == input.ExerciseStyle ||
+                    (this.ExerciseStyle != null &&
+                    this.ExerciseStyle.Equals(input.ExerciseStyle))
                 );
         }
 
@@ -439,6 +544,20 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Theta.GetHashCode();
                 if (this.Vega != null)
                     hashCode = hashCode * 59 + this.Vega.GetHashCode();
+                if (this.CloseTime != null)
+                    hashCode = hashCode * 59 + this.CloseTime.GetHashCode();
+                if (this.CloseSize != null)
+                    hashCode = hashCode * 59 + this.CloseSize.GetHashCode();
+                if (this.CloseBidTime != null)
+                    hashCode = hashCode * 59 + this.CloseBidTime.GetHashCode();
+                if (this.CloseBidSize != null)
+                    hashCode = hashCode * 59 + this.CloseBidSize.GetHashCode();
+                if (this.CloseAskTime != null)
+                    hashCode = hashCode * 59 + this.CloseAskTime.GetHashCode();
+                if (this.CloseAskSize != null)
+                    hashCode = hashCode * 59 + this.CloseAskSize.GetHashCode();
+                if (this.ExerciseStyle != null)
+                    hashCode = hashCode * 59 + this.ExerciseStyle.GetHashCode();
                 return hashCode;
             }
         }

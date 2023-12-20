@@ -28,11 +28,13 @@ namespace Intrinio.SDK.Model
         /// <param name="Option">Option.</param>
         /// <param name="Price">Price.</param>
         /// <param name="Stats">Stats.</param>
-        public OptionChainRealtime(OptionRealtime Option = default(OptionRealtime), OptionPriceRealtime Price = default(OptionPriceRealtime), OptionStatsRealtime Stats = default(OptionStatsRealtime))
+        /// <param name="ExtendedPrice">ExtendedPrice.</param>
+        public OptionChainRealtime(OptionRealtime Option = default(OptionRealtime), OptionPriceRealtime Price = default(OptionPriceRealtime), OptionStatsRealtime Stats = default(OptionStatsRealtime), OptionPriceRealtimeExtended ExtendedPrice = default(OptionPriceRealtimeExtended))
         {
             this.Option = Option;
             this.Price = Price;
             this.Stats = Stats;
+            this.ExtendedPrice = ExtendedPrice;
         }
         
         /// <summary>
@@ -54,6 +56,12 @@ namespace Intrinio.SDK.Model
         public OptionStatsRealtime Stats { get; set; }
 
         /// <summary>
+        /// Gets or Sets ExtendedPrice
+        /// </summary>
+        [DataMember(Name="extended_price", EmitDefaultValue=false)]
+        public OptionPriceRealtimeExtended ExtendedPrice { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -64,6 +72,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Option: ").Append(Option).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  Stats: ").Append(Stats).Append("\n");
+            sb.Append("  ExtendedPrice: ").Append(ExtendedPrice).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -112,6 +121,11 @@ namespace Intrinio.SDK.Model
                     this.Stats == input.Stats ||
                     (this.Stats != null &&
                     this.Stats.Equals(input.Stats))
+                ) && 
+                (
+                    this.ExtendedPrice == input.ExtendedPrice ||
+                    (this.ExtendedPrice != null &&
+                    this.ExtendedPrice.Equals(input.ExtendedPrice))
                 );
         }
 
@@ -130,6 +144,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
                 if (this.Stats != null)
                     hashCode = hashCode * 59 + this.Stats.GetHashCode();
+                if (this.ExtendedPrice != null)
+                    hashCode = hashCode * 59 + this.ExtendedPrice.GetHashCode();
                 return hashCode;
             }
         }

@@ -12,6 +12,7 @@ Name | Type | Description
 **Price** | [**OptionPriceRealtime**](OptionPriceRealtime.md) |  &nbsp;
 **Stats** | [**OptionStatsRealtime**](OptionStatsRealtime.md) |  &nbsp;
 **Option** | [**OptionRealtime**](OptionRealtime.md) |  &nbsp;
+**ExtendedPrice** | [**OptionPriceRealtimeExtended**](OptionPriceRealtimeExtended.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
 
@@ -23,5 +24,8 @@ Name | Type | Description
 
 
 [//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.OptionRealtime)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.OptionPriceRealtimeExtended)
 
 

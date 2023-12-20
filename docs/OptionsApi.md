@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null)
+> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
 
 #### Option Strikes Realtime
 
@@ -272,8 +272,9 @@ namespace Example
       string source = null;
       string stockPriceSource = null;
       string model = null;
+      bool? showExtendedPrice = null;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model, showExtendedPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -294,6 +295,7 @@ Name | Type | Description  | Notes
  **source** | string| Realtime or delayed. | [optional]  &nbsp;
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -744,7 +746,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null)
+> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
 
 #### Options Chain Realtime
 
@@ -791,8 +793,9 @@ namespace Example
       string moneyness = null;
       string stockPriceSource = null;
       string model = null;
+      bool? showExtendedPrice = null;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -822,6 +825,7 @@ Name | Type | Description  | Notes
  **moneyness** | string| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money.  Requires subscription to realtime stock price data. | [optional]  &nbsp;
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1504,7 +1508,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showStats = null, string stockPriceSource = null, string model = null)
+> ApiResponseOptionsPricesBatchRealtime GetOptionsPricesBatchRealtime (OptionContractsList body, string source = null, bool? showExtendedPrice = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice2 = null)
 
 #### Option Prices Batch Realtime
 
@@ -1538,13 +1542,14 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string source = null;
-      bool? showStats = null;
+      bool? showExtendedPrice = null;
       string stockPriceSource = null;
       string model = null;
+      bool? showExtendedPrice2 = "";
       
       var body = new OptionContractsList();
       body.Contracts = new List<string>(new string[] { "A220121P00055000", "A220121P00057500", "A220121P00060000" });
-      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source, showStats, stockPriceSource, model);
+      ApiResponseOptionsPricesBatchRealtime result = optionsApi.GetOptionsPricesBatchRealtime(body, source, showExtendedPrice, stockPriceSource, model, showExtendedPrice2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1562,9 +1567,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
- **showStats** | bool?| Whether to include Greek calculations or not. | [optional]  &nbsp;
+ **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice2** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1695,7 +1701,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPriceRealtime GetOptionsPricesRealtime (string identifier, string source = null, string stockPriceSource = null, string model = null)
+> ApiResponseOptionsPriceRealtime GetOptionsPricesRealtime (string identifier, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
 
 #### Option Prices Realtime
 
@@ -1732,8 +1738,9 @@ namespace Example
       string source = null;
       string stockPriceSource = null;
       string model = null;
+      bool? showExtendedPrice = null;
       
-      ApiResponseOptionsPriceRealtime result = optionsApi.GetOptionsPricesRealtime(identifier, source, stockPriceSource, model);
+      ApiResponseOptionsPriceRealtime result = optionsApi.GetOptionsPricesRealtime(identifier, source, stockPriceSource, model, showExtendedPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1753,6 +1760,7 @@ Name | Type | Description  | Notes
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1879,7 +1887,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsStatsRealtime GetOptionsStatsRealtime (string identifier, string source = null)
+> ApiResponseOptionsStatsRealtime GetOptionsStatsRealtime (string identifier, string source = null, bool? showExtendedPrice = null)
 
 #### Option Stats Realtime
 
@@ -1914,8 +1922,9 @@ namespace Example
       
       string identifier = "AAPL230120C00090000";
       string source = null;
+      bool? showExtendedPrice = null;
       
-      ApiResponseOptionsStatsRealtime result = optionsApi.GetOptionsStatsRealtime(identifier, source);
+      ApiResponseOptionsStatsRealtime result = optionsApi.GetOptionsStatsRealtime(identifier, source, showExtendedPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1933,6 +1942,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

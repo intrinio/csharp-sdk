@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.47.8
-- Package version: 7.4.3
+- API version: 2.48.1
+- Package version: 7.4.4
 
 
 <a name="frameworks-supported"></a>
@@ -550,6 +550,7 @@ Class | Method | HTTP request | Description
  - [Model.OptionPriceBatchRealtime](docs/OptionPriceBatchRealtime.md)
  - [Model.OptionPriceEod](docs/OptionPriceEod.md)
  - [Model.OptionPriceRealtime](docs/OptionPriceRealtime.md)
+ - [Model.OptionPriceRealtimeExtended](docs/OptionPriceRealtimeExtended.md)
  - [Model.OptionRealtime](docs/OptionRealtime.md)
  - [Model.OptionSnapshotGroup](docs/OptionSnapshotGroup.md)
  - [Model.OptionSnapshotsResult](docs/OptionSnapshotsResult.md)

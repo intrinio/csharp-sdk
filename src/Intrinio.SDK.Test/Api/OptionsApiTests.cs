@@ -90,7 +90,8 @@ namespace Intrinio.SDK.Test
             //string source = null;
             //string stockPriceSource = null;
             //string model = null;
-            //var response = instance.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model);
+            //bool? showExtendedPrice = null;
+            //var response = instance.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model, showExtendedPrice);
             //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
         }
         
@@ -194,7 +195,8 @@ namespace Intrinio.SDK.Test
             //string moneyness = null;
             //string stockPriceSource = null;
             //string model = null;
-            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model);
+            //bool? showExtendedPrice = null;
+            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice);
             //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
         }
         
@@ -309,7 +311,8 @@ namespace Intrinio.SDK.Test
             //bool? showStats = null;
             //string stockPriceSource = null;
             //string model = null;
-            //var response = instance.GetOptionsPricesBatchRealtime(body, source, showStats, stockPriceSource, model);
+            //bool? showExtendedPrice = null;
+            //var response = instance.GetOptionsPricesBatchRealtime(body, source, showStats, stockPriceSource, model, showExtendedPrice);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesBatchRealtime> (response, "response is ApiResponseOptionsPricesBatchRealtime");
         }
         
@@ -339,7 +342,8 @@ namespace Intrinio.SDK.Test
             //string source = null;
             //string stockPriceSource = null;
             //string model = null;
-            //var response = instance.GetOptionsPricesRealtime(identifier, source, stockPriceSource, model);
+            //bool? showExtendedPrice = null;
+            //var response = instance.GetOptionsPricesRealtime(identifier, source, stockPriceSource, model, showExtendedPrice);
             //Assert.IsInstanceOf<ApiResponseOptionsPriceRealtime> (response, "response is ApiResponseOptionsPriceRealtime");
         }
         
@@ -365,7 +369,8 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string source = null;
-            //var response = instance.GetOptionsStatsRealtime(identifier, source);
+            //bool? showExtendedPrice = null;
+            //var response = instance.GetOptionsStatsRealtime(identifier, source, showExtendedPrice);
             //Assert.IsInstanceOf<ApiResponseOptionsStatsRealtime> (response, "response is ApiResponseOptionsStatsRealtime");
         }
         

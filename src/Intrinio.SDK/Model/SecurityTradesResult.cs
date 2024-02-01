@@ -37,34 +37,40 @@ namespace Intrinio.SDK.Model
             Iex = 1,
             
             /// <summary>
+            /// Enum Delayedsip for value: delayed_sip
+            /// </summary>
+            [EnumMember(Value = "delayed_sip")]
+            Delayedsip = 2,
+            
+            /// <summary>
             /// Enum Utpdelayed for value: utp_delayed
             /// </summary>
             [EnumMember(Value = "utp_delayed")]
-            Utpdelayed = 2,
+            Utpdelayed = 3,
             
             /// <summary>
             /// Enum Ctaadelayed for value: cta_a_delayed
             /// </summary>
             [EnumMember(Value = "cta_a_delayed")]
-            Ctaadelayed = 3,
+            Ctaadelayed = 4,
             
             /// <summary>
             /// Enum Ctabdelayed for value: cta_b_delayed
             /// </summary>
             [EnumMember(Value = "cta_b_delayed")]
-            Ctabdelayed = 4,
+            Ctabdelayed = 5,
             
             /// <summary>
             /// Enum Otcdelayed for value: otc_delayed
             /// </summary>
             [EnumMember(Value = "otc_delayed")]
-            Otcdelayed = 5,
+            Otcdelayed = 6,
             
             /// <summary>
             /// Enum Nasdaqbasic for value: nasdaq_basic
             /// </summary>
             [EnumMember(Value = "nasdaq_basic")]
-            Nasdaqbasic = 6
+            Nasdaqbasic = 7
         }
 
         /// <summary>

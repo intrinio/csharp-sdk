@@ -5157,7 +5157,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+> SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null)
 
 #### Security Trades By Symbol
 
@@ -5197,10 +5197,11 @@ namespace Example
       DateTime? endDate = null;
       string endTime = null;
       string timezone = "UTC";
+      bool? darkpoolOnly = false;
       int? pageSize = 100;
       string nextPage = null;
       
-      SecurityTradesResult result = securityApi.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+      SecurityTradesResult result = securityApi.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -5217,12 +5218,13 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| The ticker symbol for which trades are being requested. |  &nbsp;
- **source** | string| The specific source of the data being requested. |  &nbsp;
+ **source** | string| The specific source of the data being requested.  Specifying delayed sip will result in the system automatically determining which delayed sip source (cta_delayed, cta_b_delayed, utp_delayed) to use. |  &nbsp;
  **startDate** | DateTime?| The start date for the data being requested. | [optional]  &nbsp;
  **startTime** | string| The start time for the data being requested. | [optional]  &nbsp;
  **endDate** | DateTime?| The end date for the data being requested. | [optional]  &nbsp;
  **endTime** | string| The end time for the data being requested. | [optional]  &nbsp;
  **timezone** | string| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **darkpoolOnly** | bool?| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
  **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

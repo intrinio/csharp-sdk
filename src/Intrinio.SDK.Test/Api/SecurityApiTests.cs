@@ -935,9 +935,10 @@ namespace Intrinio.SDK.Test
             //DateTime? endDate = null;
             //string endTime = null;
             //string timezone = null;
+            //bool? darkpoolOnly = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+            //var response = instance.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, nextPage);
             //Assert.IsInstanceOf<SecurityTradesResult> (response, "response is SecurityTradesResult");
         }
         

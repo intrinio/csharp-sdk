@@ -114,6 +114,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Condition'
         }
+        /// <summary>
+        /// Test the property 'IsDarkpool'
+        /// </summary>
+        [Test]
+        public void IsDarkpoolTest()
+        {
+            // TODO unit test for the property 'IsDarkpool'
+        }
 
     }
 

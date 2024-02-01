@@ -113,6 +113,21 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetCompanyDailyMetrics
+        /// </summary>
+        [Test]
+        public void GetCompanyDailyMetricsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //string nextPage2 = null;
+            //var response = instance.GetCompanyDailyMetrics(identifier, pageSize, nextPage, nextPage2);
+            //Assert.IsInstanceOf<ApiResponseCompanyDailyMetrics> (response, "response is ApiResponseCompanyDailyMetrics");
+        }
+        
+        /// <summary>
         /// Test GetCompanyDataPointNumber
         /// </summary>
         [Test]

@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**GetAllCompanyNews**](CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
 [**GetCompany**](CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
 [**GetCompanyAnswers**](CompanyApi.md#getcompanyanswers) | **GET** /companies/{identifier}/answers | Company Answers
+[**GetCompanyDailyMetrics**](CompanyApi.md#getcompanydailymetrics) | **GET** /companies/{identifier}/daily_metrics | Company metrics by Company
 [**GetCompanyDataPointNumber**](CompanyApi.md#getcompanydatapointnumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 [**GetCompanyDataPointText**](CompanyApi.md#getcompanydatapointtext) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
 [**GetCompanyFilings**](CompanyApi.md#getcompanyfilings) | **GET** /companies/{identifier}/filings | All Filings by Company
@@ -398,6 +399,100 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyAnswers**](ApiResponseCompanyAnswers.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:GetCompanyDailyMetrics)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyDailyMetrics)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyDailyMetrics.md)
+
+[//]: # (OPERATION:GetCompanyDailyMetrics_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/daily_metrics)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getcompanydailymetrics)
+
+<a name="getcompanydailymetrics"></a>
+## **GetCompanyDailyMetrics**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyDailyMetrics_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyDailyMetrics GetCompanyDailyMetrics (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+
+#### Company metrics by Company
+
+Returns the latest company metrics.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetCompanyDailyMetricsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string identifier = "AAPL";
+      int? pageSize = 100;
+      string nextPage = null;
+      string nextPage2 = "";
+      
+      ApiResponseCompanyDailyMetrics result = companyApi.GetCompanyDailyMetrics(identifier, pageSize, nextPage, nextPage2);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyDailyMetrics**](ApiResponseCompanyDailyMetrics.md)
 
 [//]: # (END_OPERATION)
 

@@ -32,7 +32,8 @@ namespace Intrinio.SDK.Model
         /// <param name="TotalVolume">The total volume of the symbol for the day up to the timestamp point in time..</param>
         /// <param name="MarketCenter">The market center for the trade..</param>
         /// <param name="Condition">The condition of the trade..</param>
-        public SecurityTrades(string Symbol = default(string), DateTime? Timestamp = default(DateTime?), decimal? Price = default(decimal?), decimal? Size = default(decimal?), decimal? TotalVolume = default(decimal?), string MarketCenter = default(string), string Condition = default(string))
+        /// <param name="IsDarkpool">If the trade was darkpool or not..</param>
+        public SecurityTrades(string Symbol = default(string), DateTime? Timestamp = default(DateTime?), decimal? Price = default(decimal?), decimal? Size = default(decimal?), decimal? TotalVolume = default(decimal?), string MarketCenter = default(string), string Condition = default(string), bool? IsDarkpool = default(bool?))
         {
             this.Symbol = Symbol;
             this.Timestamp = Timestamp;
@@ -41,6 +42,7 @@ namespace Intrinio.SDK.Model
             this.TotalVolume = TotalVolume;
             this.MarketCenter = MarketCenter;
             this.Condition = Condition;
+            this.IsDarkpool = IsDarkpool;
         }
         
         /// <summary>
@@ -93,6 +95,13 @@ namespace Intrinio.SDK.Model
         public string Condition { get; set; }
 
         /// <summary>
+        /// If the trade was darkpool or not.
+        /// </summary>
+        /// <value>If the trade was darkpool or not.</value>
+        [DataMember(Name="is_darkpool", EmitDefaultValue=false)]
+        public bool? IsDarkpool { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +116,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  TotalVolume: ").Append(TotalVolume).Append("\n");
             sb.Append("  MarketCenter: ").Append(MarketCenter).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  IsDarkpool: ").Append(IsDarkpool).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,6 +185,11 @@ namespace Intrinio.SDK.Model
                     this.Condition == input.Condition ||
                     (this.Condition != null &&
                     this.Condition.Equals(input.Condition))
+                ) && 
+                (
+                    this.IsDarkpool == input.IsDarkpool ||
+                    (this.IsDarkpool != null &&
+                    this.IsDarkpool.Equals(input.IsDarkpool))
                 );
         }
 
@@ -201,6 +216,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.MarketCenter.GetHashCode();
                 if (this.Condition != null)
                     hashCode = hashCode * 59 + this.Condition.GetHashCode();
+                if (this.IsDarkpool != null)
+                    hashCode = hashCode * 59 + this.IsDarkpool.GetHashCode();
                 return hashCode;
             }
         }

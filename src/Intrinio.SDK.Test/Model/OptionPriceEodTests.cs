@@ -226,6 +226,62 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Vega'
         }
+        /// <summary>
+        /// Test the property 'CloseTime'
+        /// </summary>
+        [Test]
+        public void CloseTimeTest()
+        {
+            // TODO unit test for the property 'CloseTime'
+        }
+        /// <summary>
+        /// Test the property 'CloseSize'
+        /// </summary>
+        [Test]
+        public void CloseSizeTest()
+        {
+            // TODO unit test for the property 'CloseSize'
+        }
+        /// <summary>
+        /// Test the property 'CloseBidTime'
+        /// </summary>
+        [Test]
+        public void CloseBidTimeTest()
+        {
+            // TODO unit test for the property 'CloseBidTime'
+        }
+        /// <summary>
+        /// Test the property 'CloseBidSize'
+        /// </summary>
+        [Test]
+        public void CloseBidSizeTest()
+        {
+            // TODO unit test for the property 'CloseBidSize'
+        }
+        /// <summary>
+        /// Test the property 'CloseAskTime'
+        /// </summary>
+        [Test]
+        public void CloseAskTimeTest()
+        {
+            // TODO unit test for the property 'CloseAskTime'
+        }
+        /// <summary>
+        /// Test the property 'CloseAskSize'
+        /// </summary>
+        [Test]
+        public void CloseAskSizeTest()
+        {
+            // TODO unit test for the property 'CloseAskSize'
+        }
+        /// <summary>
+        /// Test the property 'ExerciseStyle'
+        /// </summary>
+        [Test]
+        public void ExerciseStyleTest()
+        {
+            // TODO unit test for the property 'ExerciseStyle'
+        }
 
     }
 

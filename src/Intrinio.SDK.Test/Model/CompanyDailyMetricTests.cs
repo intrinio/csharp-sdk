@@ -186,6 +186,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'EvToFcff'
         }
+        /// <summary>
+        /// Test the property 'Company'
+        /// </summary>
+        [Test]
+        public void CompanyTest()
+        {
+            // TODO unit test for the property 'Company'
+        }
 
     }
 

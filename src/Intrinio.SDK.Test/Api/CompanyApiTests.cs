@@ -75,6 +75,21 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetAllCompaniesDailyMetrics
+        /// </summary>
+        [Test]
+        public void GetAllCompaniesDailyMetricsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DateTime? onDate = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //string nextPage2 = null;
+            //var response = instance.GetAllCompaniesDailyMetrics(onDate, pageSize, nextPage, nextPage2);
+            //Assert.IsInstanceOf<ApiResponseCompanyDailyMetrics> (response, "response is ApiResponseCompanyDailyMetrics");
+        }
+        
+        /// <summary>
         /// Test GetAllCompanyNews
         /// </summary>
         [Test]
@@ -120,10 +135,11 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
+            //DateTime? onDate = null;
             //int? pageSize = null;
             //string nextPage = null;
             //string nextPage2 = null;
-            //var response = instance.GetCompanyDailyMetrics(identifier, pageSize, nextPage, nextPage2);
+            //var response = instance.GetCompanyDailyMetrics(identifier, onDate, pageSize, nextPage, nextPage2);
             //Assert.IsInstanceOf<ApiResponseCompanyDailyMetrics> (response, "response is ApiResponseCompanyDailyMetrics");
         }
         

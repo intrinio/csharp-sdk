@@ -26,12 +26,10 @@ namespace Intrinio.SDK.Model
         /// Initializes a new instance of the <see cref="ApiResponseCompanyDailyMetrics" /> class.
         /// </summary>
         /// <param name="DailyMetrics">DailyMetrics.</param>
-        /// <param name="Company">Company.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
-        public ApiResponseCompanyDailyMetrics(List<CompanyDailyMetric> DailyMetrics = default(List<CompanyDailyMetric>), CompanySummary Company = default(CompanySummary), string NextPage = default(string))
+        public ApiResponseCompanyDailyMetrics(List<CompanyDailyMetric> DailyMetrics = default(List<CompanyDailyMetric>), string NextPage = default(string))
         {
             this.DailyMetrics = DailyMetrics;
-            this.Company = Company;
             this.NextPage = NextPage;
         }
         
@@ -40,12 +38,6 @@ namespace Intrinio.SDK.Model
         /// </summary>
         [DataMember(Name="daily_metrics", EmitDefaultValue=false)]
         public List<CompanyDailyMetric> DailyMetrics { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Company
-        /// </summary>
-        [DataMember(Name="company", EmitDefaultValue=false)]
-        public CompanySummary Company { get; set; }
 
         /// <summary>
         /// The token required to request the next page of the data. If null, no further results are available.
@@ -63,7 +55,6 @@ namespace Intrinio.SDK.Model
             var sb = new StringBuilder();
             sb.Append("class ApiResponseCompanyDailyMetrics {\n");
             sb.Append("  DailyMetrics: ").Append(DailyMetrics).Append("\n");
-            sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("  NextPage: ").Append(NextPage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -105,11 +96,6 @@ namespace Intrinio.SDK.Model
                     this.DailyMetrics.SequenceEqual(input.DailyMetrics)
                 ) && 
                 (
-                    this.Company == input.Company ||
-                    (this.Company != null &&
-                    this.Company.Equals(input.Company))
-                ) && 
-                (
                     this.NextPage == input.NextPage ||
                     (this.NextPage != null &&
                     this.NextPage.Equals(input.NextPage))
@@ -127,8 +113,6 @@ namespace Intrinio.SDK.Model
                 int hashCode = 41;
                 if (this.DailyMetrics != null)
                     hashCode = hashCode * 59 + this.DailyMetrics.GetHashCode();
-                if (this.Company != null)
-                    hashCode = hashCode * 59 + this.Company.GetHashCode();
                 if (this.NextPage != null)
                     hashCode = hashCode * 59 + this.NextPage.GetHashCode();
                 return hashCode;

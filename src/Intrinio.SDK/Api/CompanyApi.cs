@@ -59,6 +59,33 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
         ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// All Companies daily metrics
+        /// </summary>
+        /// <remarks>
+        /// Returns the company metrics for a date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyDailyMetrics</returns>
+        ApiResponseCompanyDailyMetrics GetAllCompaniesDailyMetrics (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+
+        /// <summary>
+        /// All Companies daily metrics
+        /// </summary>
+        /// <remarks>
+        /// Returns the company metrics for a date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyDailyMetrics</returns>
+        ApiResponse<ApiResponseCompanyDailyMetrics> GetAllCompaniesDailyMetricsWithHttpInfo (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+        /// <summary>
         /// All News
         /// </summary>
         /// <remarks>
@@ -133,11 +160,12 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyDailyMetrics</returns>
-        ApiResponseCompanyDailyMetrics GetCompanyDailyMetrics (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+        ApiResponseCompanyDailyMetrics GetCompanyDailyMetrics (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
 
         /// <summary>
         /// Company metrics by Company
@@ -147,11 +175,12 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyDailyMetrics</returns>
-        ApiResponse<ApiResponseCompanyDailyMetrics> GetCompanyDailyMetricsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+        ApiResponse<ApiResponseCompanyDailyMetrics> GetCompanyDailyMetricsWithHttpInfo (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
         /// <summary>
         /// Data Point (Number) for Company
         /// </summary>
@@ -621,6 +650,33 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// All Companies daily metrics
+        /// </summary>
+        /// <remarks>
+        /// Returns the company metrics for a date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyDailyMetrics</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyDailyMetrics> GetAllCompaniesDailyMetricsAsync (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+
+        /// <summary>
+        /// All Companies daily metrics
+        /// </summary>
+        /// <remarks>
+        /// Returns the company metrics for a date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyDailyMetrics)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyDailyMetrics>> GetAllCompaniesDailyMetricsAsyncWithHttpInfo (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+        /// <summary>
         /// All News
         /// </summary>
         /// <remarks>
@@ -695,11 +751,12 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyDailyMetrics</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanyDailyMetrics> GetCompanyDailyMetricsAsync (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+        System.Threading.Tasks.Task<ApiResponseCompanyDailyMetrics> GetCompanyDailyMetricsAsync (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
 
         /// <summary>
         /// Company metrics by Company
@@ -709,11 +766,12 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyDailyMetrics)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyDailyMetrics>> GetCompanyDailyMetricsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyDailyMetrics>> GetCompanyDailyMetricsAsyncWithHttpInfo (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null);
         /// <summary>
         /// Data Point (Number) for Company
         /// </summary>
@@ -1441,6 +1499,165 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// All Companies daily metrics Returns the company metrics for a date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyDailyMetrics</returns>
+        public ApiResponseCompanyDailyMetrics GetAllCompaniesDailyMetrics (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseCompanyDailyMetrics> localVarResponse = GetAllCompaniesDailyMetricsWithHttpInfo(onDate, pageSize, nextPage, nextPage2);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All Companies daily metrics Returns the company metrics for a date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyDailyMetrics</returns>
+        
+        
+        public ApiResponse< ApiResponseCompanyDailyMetrics > GetAllCompaniesDailyMetricsWithHttpInfo (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/companies/daily_metrics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (onDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "on_date", onDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllCompaniesDailyMetrics", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyDailyMetrics>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyDailyMetrics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyDailyMetrics)));
+        }
+
+        /// <summary>
+        /// All Companies daily metrics Returns the company metrics for a date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyDailyMetrics</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyDailyMetrics> GetAllCompaniesDailyMetricsAsync (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseCompanyDailyMetrics> localVarResponse = await GetAllCompaniesDailyMetricsAsyncWithHttpInfo(onDate, pageSize, nextPage, nextPage2);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All Companies daily metrics Returns the company metrics for a date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="onDate">Date of the metric (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyDailyMetrics)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyDailyMetrics>> GetAllCompaniesDailyMetricsAsyncWithHttpInfo (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/companies/daily_metrics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (onDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "on_date", onDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllCompaniesDailyMetrics", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyDailyMetrics>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyDailyMetrics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyDailyMetrics)));
+        }
+
+        /// <summary>
         /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1898,13 +2115,14 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyDailyMetrics</returns>
-        public ApiResponseCompanyDailyMetrics GetCompanyDailyMetrics (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        public ApiResponseCompanyDailyMetrics GetCompanyDailyMetrics (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseCompanyDailyMetrics> localVarResponse = GetCompanyDailyMetricsWithHttpInfo(identifier, pageSize, nextPage, nextPage2);
+             ApiResponse<ApiResponseCompanyDailyMetrics> localVarResponse = GetCompanyDailyMetricsWithHttpInfo(identifier, onDate, pageSize, nextPage, nextPage2);
              return localVarResponse.Data;
         }
 
@@ -1913,13 +2131,14 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyDailyMetrics</returns>
         
         
-        public ApiResponse< ApiResponseCompanyDailyMetrics > GetCompanyDailyMetricsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        public ApiResponse< ApiResponseCompanyDailyMetrics > GetCompanyDailyMetricsWithHttpInfo (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1948,6 +2167,7 @@ namespace Intrinio.SDK.Api
             
             
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (onDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "on_date", onDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
             if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
@@ -1981,13 +2201,14 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyDailyMetrics</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanyDailyMetrics> GetCompanyDailyMetricsAsync (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        public async System.Threading.Tasks.Task<ApiResponseCompanyDailyMetrics> GetCompanyDailyMetricsAsync (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseCompanyDailyMetrics> localVarResponse = await GetCompanyDailyMetricsAsyncWithHttpInfo(identifier, pageSize, nextPage, nextPage2);
+             ApiResponse<ApiResponseCompanyDailyMetrics> localVarResponse = await GetCompanyDailyMetricsAsyncWithHttpInfo(identifier, onDate, pageSize, nextPage, nextPage2);
              return localVarResponse.Data;
 
         }
@@ -1997,11 +2218,12 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="onDate">Date of the metric (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyDailyMetrics)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyDailyMetrics>> GetCompanyDailyMetricsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null, string nextPage2 = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyDailyMetrics>> GetCompanyDailyMetricsAsyncWithHttpInfo (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -2030,6 +2252,7 @@ namespace Intrinio.SDK.Api
               
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (onDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "on_date", onDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
             if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter

@@ -41,7 +41,8 @@ namespace Intrinio.SDK.Model
         /// <param name="EvToNopat">The enterprise value to normalized operating profit after tax ratio..</param>
         /// <param name="EvToOcf">The enterprise value to operating cash flow ratio..</param>
         /// <param name="EvToFcff">The enterprise value to free cash flow to the firm ratio..</param>
-        public CompanyDailyMetric(DateTime? Date = default(DateTime?), decimal? EnterpriseValue = default(decimal?), decimal? EvToEbit = default(decimal?), decimal? EvToEbitda = default(decimal?), decimal? MarketCap = default(decimal?), decimal? PriceToBook = default(decimal?), decimal? PriceToEarnings = default(decimal?), decimal? PriceToRevenue = default(decimal?), decimal? PriceToTangibleBook = default(decimal?), decimal? DividendYield = default(decimal?), decimal? EarningsYield = default(decimal?), decimal? EvToInvestedCapital = default(decimal?), decimal? EvToRevenue = default(decimal?), decimal? EvToNopat = default(decimal?), decimal? EvToOcf = default(decimal?), decimal? EvToFcff = default(decimal?))
+        /// <param name="Company">Company.</param>
+        public CompanyDailyMetric(DateTime? Date = default(DateTime?), decimal? EnterpriseValue = default(decimal?), decimal? EvToEbit = default(decimal?), decimal? EvToEbitda = default(decimal?), decimal? MarketCap = default(decimal?), decimal? PriceToBook = default(decimal?), decimal? PriceToEarnings = default(decimal?), decimal? PriceToRevenue = default(decimal?), decimal? PriceToTangibleBook = default(decimal?), decimal? DividendYield = default(decimal?), decimal? EarningsYield = default(decimal?), decimal? EvToInvestedCapital = default(decimal?), decimal? EvToRevenue = default(decimal?), decimal? EvToNopat = default(decimal?), decimal? EvToOcf = default(decimal?), decimal? EvToFcff = default(decimal?), CompanySummary Company = default(CompanySummary))
         {
             this.Date = Date;
             this.EnterpriseValue = EnterpriseValue;
@@ -59,6 +60,7 @@ namespace Intrinio.SDK.Model
             this.EvToNopat = EvToNopat;
             this.EvToOcf = EvToOcf;
             this.EvToFcff = EvToFcff;
+            this.Company = Company;
         }
         
         /// <summary>
@@ -174,6 +176,12 @@ namespace Intrinio.SDK.Model
         public decimal? EvToFcff { get; set; }
 
         /// <summary>
+        /// Gets or Sets Company
+        /// </summary>
+        [DataMember(Name="company", EmitDefaultValue=false)]
+        public CompanySummary Company { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -197,6 +205,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  EvToNopat: ").Append(EvToNopat).Append("\n");
             sb.Append("  EvToOcf: ").Append(EvToOcf).Append("\n");
             sb.Append("  EvToFcff: ").Append(EvToFcff).Append("\n");
+            sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -310,6 +319,11 @@ namespace Intrinio.SDK.Model
                     this.EvToFcff == input.EvToFcff ||
                     (this.EvToFcff != null &&
                     this.EvToFcff.Equals(input.EvToFcff))
+                ) && 
+                (
+                    this.Company == input.Company ||
+                    (this.Company != null &&
+                    this.Company.Equals(input.Company))
                 );
         }
 
@@ -354,6 +368,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.EvToOcf.GetHashCode();
                 if (this.EvToFcff != null)
                     hashCode = hashCode * 59 + this.EvToFcff.GetHashCode();
+                if (this.Company != null)
+                    hashCode = hashCode * 59 + this.Company.GetHashCode();
                 return hashCode;
             }
         }

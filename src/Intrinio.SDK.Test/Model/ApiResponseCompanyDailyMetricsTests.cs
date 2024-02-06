@@ -67,14 +67,6 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'DailyMetrics'
         }
         /// <summary>
-        /// Test the property 'Company'
-        /// </summary>
-        [Test]
-        public void CompanyTest()
-        {
-            // TODO unit test for the property 'Company'
-        }
-        /// <summary>
         /// Test the property 'NextPage'
         /// </summary>
         [Test]

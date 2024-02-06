@@ -25,7 +25,11 @@ Name | Type | Description
 **EvToNopat** | decimal? | The enterprise value to normalized operating profit after tax ratio. &nbsp;
 **EvToOcf** | decimal? | The enterprise value to operating cash flow ratio. &nbsp;
 **EvToFcff** | decimal? | The enterprise value to free cash flow to the firm ratio. &nbsp;
+**Company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio.SDK.Model.CompanySummary)
 
 

@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.52.0
-- Package version: 7.4.6
+- API version: 2.52.1
+- Package version: 7.4.7
 
 
 <a name="frameworks-supported"></a>
@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BulkDownloadsApi* | [**GetBulkDownloadLinks**](docs/BulkDownloadsApi.md#getbulkdownloadlinks) | **GET** /bulk_downloads/links | All Links
 *CompanyApi* | [**GetAllCompanies**](docs/CompanyApi.md#getallcompanies) | **GET** /companies | All Companies
+*CompanyApi* | [**GetAllCompaniesDailyMetrics**](docs/CompanyApi.md#getallcompaniesdailymetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 *CompanyApi* | [**GetAllCompanyNews**](docs/CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
 *CompanyApi* | [**GetCompany**](docs/CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
 *CompanyApi* | [**GetCompanyAnswers**](docs/CompanyApi.md#getcompanyanswers) | **GET** /companies/{identifier}/answers | Company Answers

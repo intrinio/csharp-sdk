@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**GetZacksInstitutionalHoldingOwners**](ZacksApi.md#getzacksinstitutionalholdingowners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
 [**GetZacksInstitutionalHoldings**](ZacksApi.md#getzacksinstitutionalholdings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
 [**GetZacksLongTermGrowthRates**](ZacksApi.md#getzackslongtermgrowthrates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
+[**GetZacksSalesEstimates**](ZacksApi.md#getzackssalesestimates) | **GET** /zacks/sales_estimates | Zacks Sales Estimates
 [**GetZacksSalesSurprises**](ZacksApi.md#getzackssalessurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
 [**GetZacksTargetPriceConsensuses**](ZacksApi.md#getzackstargetpriceconsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
 
@@ -924,6 +925,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksLongTermGrowthRates**](ApiResponseZacksLongTermGrowthRates.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksSalesEstimates)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksSalesEstimates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksSalesEstimates.md)
+
+[//]: # (OPERATION:GetZacksSalesEstimates_v2)
+
+[//]: # (ENDPOINT:/zacks/sales_estimates)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzackssalesestimates)
+
+<a name="getzackssalesestimates"></a>
+## **GetZacksSalesEstimates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksSalesEstimates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksSalesEstimates GetZacksSalesEstimates (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null)
+
+#### Zacks Sales Estimates
+
+This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetZacksSalesEstimatesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var zacksApi = new ZacksApi();
+      
+      string identifier = "AAPL";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      int? fiscalYear = null;
+      string fiscalPeriod = null;
+      int? calendarYear = null;
+      string calendarPeriod = null;
+      string nextPage = null;
+      int? pageSize = 100;
+      string nextPage2 = "";
+      
+      ApiResponseZacksSalesEstimates result = zacksApi.GetZacksSalesEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, nextPage, pageSize, nextPage2);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **startDate** | DateTime?| Limit Sales estimates to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit Sales estimates to those on or before this date | [optional]  &nbsp;
+ **fiscalYear** | int?| Only for the given fiscal year | [optional]  &nbsp;
+ **fiscalPeriod** | string| The fiscal period | [optional]  &nbsp;
+ **calendarYear** | int?| Only for the given calendar year | [optional]  &nbsp;
+ **calendarPeriod** | string| The calendar period | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksSalesEstimates**](ApiResponseZacksSalesEstimates.md)
 
 [//]: # (END_OPERATION)
 

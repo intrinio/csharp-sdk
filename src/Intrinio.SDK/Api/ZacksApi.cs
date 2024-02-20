@@ -325,6 +325,45 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseZacksLongTermGrowthRates</returns>
         ApiResponse<ApiResponseZacksLongTermGrowthRates> GetZacksLongTermGrowthRatesWithHttpInfo (string identifier = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Zacks Sales Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksSalesEstimates</returns>
+        ApiResponseZacksSalesEstimates GetZacksSalesEstimates (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Zacks Sales Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksSalesEstimates</returns>
+        ApiResponse<ApiResponseZacksSalesEstimates> GetZacksSalesEstimatesWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null);
+        /// <summary>
         /// Zacks Sales Surprises
         /// </summary>
         /// <remarks>
@@ -711,6 +750,45 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseZacksLongTermGrowthRates)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksLongTermGrowthRates>> GetZacksLongTermGrowthRatesAsyncWithHttpInfo (string identifier = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Sales Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksSalesEstimates</returns>
+        System.Threading.Tasks.Task<ApiResponseZacksSalesEstimates> GetZacksSalesEstimatesAsync (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Zacks Sales Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksSalesEstimates)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksSalesEstimates>> GetZacksSalesEstimatesAsyncWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null);
         /// <summary>
         /// Zacks Sales Surprises
         /// </summary>
@@ -2510,6 +2588,201 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseZacksLongTermGrowthRates>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseZacksLongTermGrowthRates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksLongTermGrowthRates)));
+        }
+
+        /// <summary>
+        /// Zacks Sales Estimates This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksSalesEstimates</returns>
+        public ApiResponseZacksSalesEstimates GetZacksSalesEstimates (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseZacksSalesEstimates> localVarResponse = GetZacksSalesEstimatesWithHttpInfo(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, nextPage, pageSize, nextPage2);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Sales Estimates This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksSalesEstimates</returns>
+        
+        
+        public ApiResponse< ApiResponseZacksSalesEstimates > GetZacksSalesEstimatesWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/zacks/sales_estimates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifier", identifier)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (calendarYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "calendar_year", calendarYear)); // query parameter
+            if (calendarPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "calendar_period", calendarPeriod)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksSalesEstimates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksSalesEstimates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseZacksSalesEstimates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksSalesEstimates)));
+        }
+
+        /// <summary>
+        /// Zacks Sales Estimates This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksSalesEstimates</returns>
+        public async System.Threading.Tasks.Task<ApiResponseZacksSalesEstimates> GetZacksSalesEstimatesAsync (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseZacksSalesEstimates> localVarResponse = await GetZacksSalesEstimatesAsyncWithHttpInfo(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, nextPage, pageSize, nextPage2);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Sales Estimates This database offers consensus sales estimates for over 5,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="startDate">Limit Sales estimates to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit Sales estimates to those on or before this date (optional)</param>
+        /// <param name="fiscalYear">Only for the given fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">The fiscal period (optional)</param>
+        /// <param name="calendarYear">Only for the given calendar year (optional)</param>
+        /// <param name="calendarPeriod">The calendar period (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksSalesEstimates)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksSalesEstimates>> GetZacksSalesEstimatesAsyncWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/zacks/sales_estimates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifier", identifier)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (calendarYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "calendar_year", calendarYear)); // query parameter
+            if (calendarPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "calendar_period", calendarPeriod)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksSalesEstimates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksSalesEstimates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseZacksSalesEstimates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksSalesEstimates)));
         }
 
         /// <summary>

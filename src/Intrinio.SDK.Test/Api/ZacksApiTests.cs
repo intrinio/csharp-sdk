@@ -220,6 +220,27 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetZacksSalesEstimates
+        /// </summary>
+        [Test]
+        public void GetZacksSalesEstimatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //int? fiscalYear = null;
+            //string fiscalPeriod = null;
+            //int? calendarYear = null;
+            //string calendarPeriod = null;
+            //string nextPage = null;
+            //int? pageSize = null;
+            //string nextPage2 = null;
+            //var response = instance.GetZacksSalesEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, nextPage, pageSize, nextPage2);
+            //Assert.IsInstanceOf<ApiResponseZacksSalesEstimates> (response, "response is ApiResponseZacksSalesEstimates");
+        }
+        
+        /// <summary>
         /// Test GetZacksSalesSurprises
         /// </summary>
         [Test]

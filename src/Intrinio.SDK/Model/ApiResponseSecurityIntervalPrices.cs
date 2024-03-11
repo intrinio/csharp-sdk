@@ -46,7 +46,13 @@ namespace Intrinio.SDK.Model
             /// Enum Nasdaqbasic for value: nasdaq_basic
             /// </summary>
             [EnumMember(Value = "nasdaq_basic")]
-            Nasdaqbasic = 3
+            Nasdaqbasic = 3,
+            
+            /// <summary>
+            /// Enum Nasdaqbasicfiltered for value: nasdaq_basic_filtered
+            /// </summary>
+            [EnumMember(Value = "nasdaq_basic_filtered")]
+            Nasdaqbasicfiltered = 4
         }
 
         /// <summary>

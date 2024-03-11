@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+> Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null)
 
 #### Filter Fundamental
 
@@ -80,9 +80,11 @@ namespace Example
       string fiscalPeriod = "FY";
       DateTime? startDate = DateTime.Parse("2022-01-01");
       DateTime? endDate = DateTime.Parse("2022-12-01");
+      DateTime? updatedAfter = DateTime.Parse("2022-12-01");
+      DateTime? updatedBefore = DateTime.Parse("2022-12-01");
       string nextPage = null;
       
-      Fundamental result = fundamentalsApi.FilterFundamental(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+      Fundamental result = fundamentalsApi.FilterFundamental(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, updatedAfter, updatedBefore, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -107,6 +109,8 @@ Name | Type | Description  | Notes
  **fiscalPeriod** | string| The fiscal period | [optional]  &nbsp;
  **startDate** | DateTime?| Only include fundamentals where covered period is on or after this date. | [optional]  &nbsp;
  **endDate** | DateTime?| Only include fundamentals where covered period is on or before this date. | [optional]  &nbsp;
+ **updatedAfter** | DateTime?| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
+ **updatedBefore** | DateTime?| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

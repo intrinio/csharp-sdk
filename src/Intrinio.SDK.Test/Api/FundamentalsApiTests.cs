@@ -68,8 +68,10 @@ namespace Intrinio.SDK.Test
             //string fiscalPeriod = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //DateTime? updatedAfter = null;
+            //DateTime? updatedBefore = null;
             //string nextPage = null;
-            //var response = instance.FilterFundamental(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+            //var response = instance.FilterFundamental(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, updatedAfter, updatedBefore, nextPage);
             //Assert.IsInstanceOf<Fundamental> (response, "response is Fundamental");
         }
         

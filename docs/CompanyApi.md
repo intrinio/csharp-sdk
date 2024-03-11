@@ -899,7 +899,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+> ApiResponseCompanyFundamentals GetCompanyFundamentals (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, int? pageSize = null, string nextPage = null)
 
 #### All Fundamentals by Company
 
@@ -941,10 +941,12 @@ namespace Example
       string type = null;
       DateTime? startDate = null;
       DateTime? endDate = null;
+      DateTime? updatedAfter = DateTime.Parse("2022-12-01");
+      DateTime? updatedBefore = DateTime.Parse("2022-12-01");
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, pageSize, nextPage);
+      ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, updatedAfter, updatedBefore, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -969,6 +971,8 @@ Name | Type | Description  | Notes
  **type** | string| Only of the given type | [optional]  &nbsp;
  **startDate** | DateTime?| Only on or after the given date | [optional]  &nbsp;
  **endDate** | DateTime?| Only on or before the given date | [optional]  &nbsp;
+ **updatedAfter** | DateTime?| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
+ **updatedBefore** | DateTime?| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

@@ -33,9 +33,11 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Fundamental</returns>
-        Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null);
 
         /// <summary>
         /// Filter Fundamental
@@ -53,9 +55,11 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of Fundamental</returns>
-        ApiResponse<Fundamental> FilterFundamentalWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        ApiResponse<Fundamental> FilterFundamentalWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null);
         /// <summary>
         /// Fundamental by ID
         /// </summary>
@@ -187,9 +191,11 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of Fundamental</returns>
-        System.Threading.Tasks.Task<Fundamental> FilterFundamentalAsync (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<Fundamental> FilterFundamentalAsync (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null);
 
         /// <summary>
         /// Filter Fundamental
@@ -207,9 +213,11 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (Fundamental)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Fundamental>> FilterFundamentalAsyncWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<Fundamental>> FilterFundamentalAsyncWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null);
         /// <summary>
         /// Fundamental by ID
         /// </summary>
@@ -436,11 +444,13 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Fundamental</returns>
-        public Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public Fundamental FilterFundamental (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null)
         {
-             ApiResponse<Fundamental> localVarResponse = FilterFundamentalWithHttpInfo(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+             ApiResponse<Fundamental> localVarResponse = FilterFundamentalWithHttpInfo(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, updatedAfter, updatedBefore, nextPage);
              return localVarResponse.Data;
         }
 
@@ -457,11 +467,13 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of Fundamental</returns>
         
         
-        public ApiResponse< Fundamental > FilterFundamentalWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public ApiResponse< Fundamental > FilterFundamentalWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null)
         {
 
             var localVarPath = "/fundamentals";
@@ -495,6 +507,8 @@ namespace Intrinio.SDK.Api
             if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (updatedAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "updated_after", updatedAfter)); // query parameter
+            if (updatedBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "updated_before", updatedBefore)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -534,11 +548,13 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of Fundamental</returns>
-        public async System.Threading.Tasks.Task<Fundamental> FilterFundamentalAsync (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<Fundamental> FilterFundamentalAsync (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null)
         {
-             ApiResponse<Fundamental> localVarResponse = await FilterFundamentalAsyncWithHttpInfo(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, nextPage);
+             ApiResponse<Fundamental> localVarResponse = await FilterFundamentalAsyncWithHttpInfo(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, updatedAfter, updatedBefore, nextPage);
              return localVarResponse.Data;
 
         }
@@ -556,9 +572,11 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period (optional)</param>
         /// <param name="startDate">Only include fundamentals where covered period is on or after this date. (optional)</param>
         /// <param name="endDate">Only include fundamentals where covered period is on or before this date. (optional)</param>
+        /// <param name="updatedAfter">Only include fundamentals where it was updated after this date. (optional)</param>
+        /// <param name="updatedBefore">Only include fundamentals where it was updated before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (Fundamental)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Fundamental>> FilterFundamentalAsyncWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Fundamental>> FilterFundamentalAsyncWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string nextPage = null)
         {
 
             var localVarPath = "/fundamentals";
@@ -592,6 +610,8 @@ namespace Intrinio.SDK.Api
             if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (updatedAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "updated_after", updatedAfter)); // query parameter
+            if (updatedBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "updated_before", updatedBefore)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

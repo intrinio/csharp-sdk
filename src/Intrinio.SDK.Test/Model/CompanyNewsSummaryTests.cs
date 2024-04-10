@@ -98,6 +98,78 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Summary'
         }
+        /// <summary>
+        /// Test the property 'Source'
+        /// </summary>
+        [Test]
+        public void SourceTest()
+        {
+            // TODO unit test for the property 'Source'
+        }
+        /// <summary>
+        /// Test the property 'Topics'
+        /// </summary>
+        [Test]
+        public void TopicsTest()
+        {
+            // TODO unit test for the property 'Topics'
+        }
+        /// <summary>
+        /// Test the property 'Copyright'
+        /// </summary>
+        [Test]
+        public void CopyrightTest()
+        {
+            // TODO unit test for the property 'Copyright'
+        }
+        /// <summary>
+        /// Test the property 'Language'
+        /// </summary>
+        [Test]
+        public void LanguageTest()
+        {
+            // TODO unit test for the property 'Language'
+        }
+        /// <summary>
+        /// Test the property 'WordCount'
+        /// </summary>
+        [Test]
+        public void WordCountTest()
+        {
+            // TODO unit test for the property 'WordCount'
+        }
+        /// <summary>
+        /// Test the property 'Spam'
+        /// </summary>
+        [Test]
+        public void SpamTest()
+        {
+            // TODO unit test for the property 'Spam'
+        }
+        /// <summary>
+        /// Test the property 'BusinessRelevance'
+        /// </summary>
+        [Test]
+        public void BusinessRelevanceTest()
+        {
+            // TODO unit test for the property 'BusinessRelevance'
+        }
+        /// <summary>
+        /// Test the property 'ArticleSentiment'
+        /// </summary>
+        [Test]
+        public void ArticleSentimentTest()
+        {
+            // TODO unit test for the property 'ArticleSentiment'
+        }
+        /// <summary>
+        /// Test the property 'ArticleSentimentConfidence'
+        /// </summary>
+        [Test]
+        public void ArticleSentimentConfidenceTest()
+        {
+            // TODO unit test for the property 'ArticleSentimentConfidence'
+        }
 
     }
 

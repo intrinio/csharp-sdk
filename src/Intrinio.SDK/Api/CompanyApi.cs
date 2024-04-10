@@ -92,10 +92,23 @@ namespace Intrinio.SDK.Api
         /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseNews</returns>
-        ApiResponseNews GetAllCompanyNews (int? pageSize = null, string nextPage = null);
+        ApiResponseNews GetAllCompanyNews (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
 
         /// <summary>
         /// All News
@@ -104,10 +117,23 @@ namespace Intrinio.SDK.Api
         /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseNews</returns>
-        ApiResponse<ApiResponseNews> GetAllCompanyNewsWithHttpInfo (int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseNews> GetAllCompanyNewsWithHttpInfo (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
         /// <summary>
         /// Lookup Company
         /// </summary>
@@ -385,10 +411,22 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyNews</returns>
-        ApiResponseCompanyNews GetCompanyNews (string identifier, int? pageSize = null, string nextPage = null);
+        ApiResponseCompanyNews GetCompanyNews (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
 
         /// <summary>
         /// All News by Company
@@ -398,10 +436,22 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
-        ApiResponse<ApiResponseCompanyNews> GetCompanyNewsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseCompanyNews> GetCompanyNewsWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
         /// <summary>
         /// Get Company&#39;s public float
         /// </summary>
@@ -687,10 +737,23 @@ namespace Intrinio.SDK.Api
         /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseNews</returns>
-        System.Threading.Tasks.Task<ApiResponseNews> GetAllCompanyNewsAsync (int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseNews> GetAllCompanyNewsAsync (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
 
         /// <summary>
         /// All News
@@ -699,10 +762,23 @@ namespace Intrinio.SDK.Api
         /// Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseNews)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseNews>> GetAllCompanyNewsAsyncWithHttpInfo (int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseNews>> GetAllCompanyNewsAsyncWithHttpInfo (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
         /// <summary>
         /// Lookup Company
         /// </summary>
@@ -980,10 +1056,22 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyNews</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanyNews> GetCompanyNewsAsync (string identifier, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseCompanyNews> GetCompanyNewsAsync (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
 
         /// <summary>
         /// All News by Company
@@ -993,10 +1081,22 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyNews)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
         /// <summary>
         /// Get Company&#39;s public float
         /// </summary>
@@ -1669,12 +1769,25 @@ namespace Intrinio.SDK.Api
         /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseNews</returns>
-        public ApiResponseNews GetAllCompanyNews (int? pageSize = null, string nextPage = null)
+        public ApiResponseNews GetAllCompanyNews (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseNews> localVarResponse = GetAllCompanyNewsWithHttpInfo(pageSize, nextPage);
+             ApiResponse<ApiResponseNews> localVarResponse = GetAllCompanyNewsWithHttpInfo(specificSource, pageSize, sentiment, topic, company, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1682,12 +1795,25 @@ namespace Intrinio.SDK.Api
         /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseNews</returns>
         
         
-        public ApiResponse< ApiResponseNews > GetAllCompanyNewsWithHttpInfo (int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseNews > GetAllCompanyNewsWithHttpInfo (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
 
             var localVarPath = "/companies/news";
@@ -1712,7 +1838,20 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
             
             
+            if (specificSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "specific_source", specificSource)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (topic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "topic", topic)); // query parameter
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (security != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "security", security)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (language != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "language", language)); // query parameter
+            if (wordCountGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_greater_than", wordCountGreaterThan)); // query parameter
+            if (wordCountLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_less_than", wordCountLessThan)); // query parameter
+            if (isSpam != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "is_spam", isSpam)); // query parameter
+            if (businessRelevanceGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_greater_than", businessRelevanceGreaterThan)); // query parameter
+            if (businessRelevanceLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_less_than", businessRelevanceLessThan)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1743,12 +1882,25 @@ namespace Intrinio.SDK.Api
         /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseNews</returns>
-        public async System.Threading.Tasks.Task<ApiResponseNews> GetAllCompanyNewsAsync (int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseNews> GetAllCompanyNewsAsync (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseNews> localVarResponse = await GetAllCompanyNewsAsyncWithHttpInfo(pageSize, nextPage);
+             ApiResponse<ApiResponseNews> localVarResponse = await GetAllCompanyNewsAsyncWithHttpInfo(specificSource, pageSize, sentiment, topic, company, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1757,10 +1909,23 @@ namespace Intrinio.SDK.Api
         /// All News Returns the latest news article links, headlines and summaries for all US traded companies allowing you to keep a pulse on companies and their business operations.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return. (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseNews)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseNews>> GetAllCompanyNewsAsyncWithHttpInfo (int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseNews>> GetAllCompanyNewsAsyncWithHttpInfo (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
 
             var localVarPath = "/companies/news";
@@ -1785,7 +1950,20 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
               
 
+            if (specificSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "specific_source", specificSource)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (topic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "topic", topic)); // query parameter
+            if (company != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "company", company)); // query parameter
+            if (security != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "security", security)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (language != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "language", language)); // query parameter
+            if (wordCountGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_greater_than", wordCountGreaterThan)); // query parameter
+            if (wordCountLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_less_than", wordCountLessThan)); // query parameter
+            if (isSpam != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "is_spam", isSpam)); // query parameter
+            if (businessRelevanceGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_greater_than", businessRelevanceGreaterThan)); // query parameter
+            if (businessRelevanceLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_less_than", businessRelevanceLessThan)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -3398,12 +3576,24 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyNews</returns>
-        public ApiResponseCompanyNews GetCompanyNews (string identifier, int? pageSize = null, string nextPage = null)
+        public ApiResponseCompanyNews GetCompanyNews (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanyNews> localVarResponse = GetCompanyNewsWithHttpInfo(identifier, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanyNews> localVarResponse = GetCompanyNewsWithHttpInfo(identifier, specificSource, pageSize, sentiment, topic, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
              return localVarResponse.Data;
         }
 
@@ -3412,12 +3602,24 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
         
         
-        public ApiResponse< ApiResponseCompanyNews > GetCompanyNewsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseCompanyNews > GetCompanyNewsWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3446,7 +3648,19 @@ namespace Intrinio.SDK.Api
             
             
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (specificSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "specific_source", specificSource)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (topic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "topic", topic)); // query parameter
+            if (security != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "security", security)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (language != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "language", language)); // query parameter
+            if (wordCountGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_greater_than", wordCountGreaterThan)); // query parameter
+            if (wordCountLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_less_than", wordCountLessThan)); // query parameter
+            if (isSpam != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "is_spam", isSpam)); // query parameter
+            if (businessRelevanceGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_greater_than", businessRelevanceGreaterThan)); // query parameter
+            if (businessRelevanceLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_less_than", businessRelevanceLessThan)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -3478,12 +3692,24 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyNews</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanyNews> GetCompanyNewsAsync (string identifier, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseCompanyNews> GetCompanyNewsAsync (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanyNews> localVarResponse = await GetCompanyNewsAsyncWithHttpInfo(identifier, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanyNews> localVarResponse = await GetCompanyNewsAsyncWithHttpInfo(identifier, specificSource, pageSize, sentiment, topic, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
              return localVarResponse.Data;
 
         }
@@ -3493,10 +3719,22 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="specificSource">Only news from this source (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return (optional, default to 100)</param>
+        /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceGreaterThan">News stories will have a business relevance score more than this value.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyNews)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3525,7 +3763,19 @@ namespace Intrinio.SDK.Api
               
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (specificSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "specific_source", specificSource)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (sentiment != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sentiment", sentiment)); // query parameter
+            if (topic != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "topic", topic)); // query parameter
+            if (security != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "security", security)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (language != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "language", language)); // query parameter
+            if (wordCountGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_greater_than", wordCountGreaterThan)); // query parameter
+            if (wordCountLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "word_count_less_than", wordCountLessThan)); // query parameter
+            if (isSpam != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "is_spam", isSpam)); // query parameter
+            if (businessRelevanceGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_greater_than", businessRelevanceGreaterThan)); // query parameter
+            if (businessRelevanceLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "business_relevance_less_than", businessRelevanceLessThan)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

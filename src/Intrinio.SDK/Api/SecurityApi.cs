@@ -1578,9 +1578,11 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades
@@ -1596,9 +1598,11 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of SecurityTradesResult</returns>
-        ApiResponse<SecurityTradesResult> GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<SecurityTradesResult> GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Security Trades By Symbol
         /// </summary>
@@ -1615,9 +1619,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null);
+        SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades By Symbol
@@ -1635,9 +1640,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of SecurityTradesResult</returns>
-        ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -3381,9 +3387,11 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades
@@ -3399,9 +3407,11 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Security Trades By Symbol
         /// </summary>
@@ -3418,9 +3428,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades By Symbol
@@ -3438,9 +3449,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -12693,11 +12705,13 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        public SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
-             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, darkpoolOnly, minSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -12712,11 +12726,13 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of SecurityTradesResult</returns>
         
         
-        public ApiResponse< SecurityTradesResult > GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< SecurityTradesResult > GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -12751,6 +12767,8 @@ namespace Intrinio.SDK.Api
             if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (darkpoolOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "darkpool_only", darkpoolOnly)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -12788,11 +12806,13 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
-             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesAsyncWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesAsyncWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, darkpoolOnly, minSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -12808,9 +12828,11 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">The end time for the data being requested. (optional)</param>
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -12845,6 +12867,8 @@ namespace Intrinio.SDK.Api
             if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (darkpoolOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "darkpool_only", darkpoolOnly)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -12884,11 +12908,12 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        public SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null)
+        public SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
-             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesBySymbolWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, nextPage);
+             ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesBySymbolWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, minSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -12905,11 +12930,12 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of SecurityTradesResult</returns>
         
         
-        public ApiResponse< SecurityTradesResult > GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< SecurityTradesResult > GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -12949,6 +12975,7 @@ namespace Intrinio.SDK.Api
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (darkpoolOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "darkpool_only", darkpoolOnly)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -12988,11 +13015,12 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
-             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesBySymbolAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, nextPage);
+             ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesBySymbolAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, minSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -13010,9 +13038,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
         /// <param name="darkpoolOnly">Set to true to show only darkpool trades (optional, default to false)</param>
         /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -13052,6 +13081,7 @@ namespace Intrinio.SDK.Api
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (darkpoolOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "darkpool_only", darkpoolOnly)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

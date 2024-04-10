@@ -5055,7 +5055,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+> SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
 
 #### Security Trades
 
@@ -5095,9 +5095,11 @@ namespace Example
       string endTime = null;
       string timezone = "UTC";
       int? pageSize = 100;
+      bool? darkpoolOnly = false;
+      int? minSize = 100;
       string nextPage = null;
       
-      SecurityTradesResult result = securityApi.GetSecurityTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+      SecurityTradesResult result = securityApi.GetSecurityTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, darkpoolOnly, minSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -5120,6 +5122,8 @@ Name | Type | Description  | Notes
  **endTime** | string| The end time for the data being requested. | [optional]  &nbsp;
  **timezone** | string| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
  **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **darkpoolOnly** | bool?| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
+ **minSize** | int?| Trades must be larger or equal to this size. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -5157,7 +5161,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, string nextPage = null)
+> SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
 
 #### Security Trades By Symbol
 
@@ -5199,9 +5203,10 @@ namespace Example
       string timezone = "UTC";
       bool? darkpoolOnly = false;
       int? pageSize = 100;
+      int? minSize = 100;
       string nextPage = null;
       
-      SecurityTradesResult result = securityApi.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, nextPage);
+      SecurityTradesResult result = securityApi.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, minSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -5226,6 +5231,7 @@ Name | Type | Description  | Notes
  **timezone** | string| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
  **darkpoolOnly** | bool?| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
  **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **minSize** | int?| Trades must be larger or equal to this size. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

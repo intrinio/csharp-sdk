@@ -96,9 +96,22 @@ namespace Intrinio.SDK.Test
         public void GetAllCompanyNewsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string specificSource = null;
             //int? pageSize = null;
+            //string sentiment = null;
+            //string topic = null;
+            //string company = null;
+            //string security = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string language = null;
+            //int? wordCountGreaterThan = null;
+            //int? wordCountLessThan = null;
+            //bool? isSpam = null;
+            //decimal? businessRelevanceGreaterThan = null;
+            //decimal? businessRelevanceLessThan = null;
             //string nextPage = null;
-            //var response = instance.GetAllCompanyNews(pageSize, nextPage);
+            //var response = instance.GetAllCompanyNews(specificSource, pageSize, sentiment, topic, company, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
             //Assert.IsInstanceOf<ApiResponseNews> (response, "response is ApiResponseNews");
         }
         
@@ -258,9 +271,21 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
+            //string specificSource = null;
             //int? pageSize = null;
+            //string sentiment = null;
+            //string topic = null;
+            //string security = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string language = null;
+            //int? wordCountGreaterThan = null;
+            //int? wordCountLessThan = null;
+            //bool? isSpam = null;
+            //decimal? businessRelevanceGreaterThan = null;
+            //decimal? businessRelevanceLessThan = null;
             //string nextPage = null;
-            //var response = instance.GetCompanyNews(identifier, pageSize, nextPage);
+            //var response = instance.GetCompanyNews(identifier, specificSource, pageSize, sentiment, topic, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyNews> (response, "response is ApiResponseCompanyNews");
         }
         

@@ -916,8 +916,10 @@ namespace Intrinio.SDK.Test
             //string endTime = null;
             //string timezone = null;
             //int? pageSize = null;
+            //bool? darkpoolOnly = null;
+            //int? minSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+            //var response = instance.GetSecurityTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, darkpoolOnly, minSize, nextPage);
             //Assert.IsInstanceOf<SecurityTradesResult> (response, "response is SecurityTradesResult");
         }
         
@@ -937,8 +939,9 @@ namespace Intrinio.SDK.Test
             //string timezone = null;
             //bool? darkpoolOnly = null;
             //int? pageSize = null;
+            //int? minSize = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, nextPage);
+            //var response = instance.GetSecurityTradesBySymbol(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, minSize, nextPage);
             //Assert.IsInstanceOf<SecurityTradesResult> (response, "response is SecurityTradesResult");
         }
         

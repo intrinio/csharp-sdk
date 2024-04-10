@@ -47,8 +47,9 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsExpirations</returns>
-        ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null);
+        ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Expirations
@@ -61,8 +62,9 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
-        ApiResponse<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeWithHttpInfo (string symbol, string after = null, string before = null, string source = null);
+        ApiResponse<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeWithHttpInfo (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Option Strikes Realtime
         /// </summary>
@@ -76,8 +78,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsChainRealtime</returns>
-        ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Option Strikes Realtime
@@ -92,8 +95,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
-        ApiResponse<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        ApiResponse<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options
         /// </summary>
@@ -149,8 +153,9 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsRealtime</returns>
-        ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
+        ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options by Symbol Realtime
@@ -168,8 +173,9 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsRealtime</returns>
-        ApiResponse<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
+        ApiResponse<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Chain
         /// </summary>
@@ -221,8 +227,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsChainEod</returns>
-        ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
+        ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Chain EOD
@@ -238,8 +245,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainEod</returns>
-        ApiResponse<ApiResponseOptionsChainEod> GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
+        ApiResponse<ApiResponseOptionsChainEod> GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Chain Realtime
         /// </summary>
@@ -262,8 +270,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsChainRealtime</returns>
-        ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Chain Realtime
@@ -287,8 +296,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
-        ApiResponse<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        ApiResponse<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Expirations
         /// </summary>
@@ -324,8 +334,9 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsExpirations</returns>
-        ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null);
+        ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Expirations
@@ -337,8 +348,9 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
-        ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null);
+        ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Intervals By Contract
         /// </summary>
@@ -749,8 +761,9 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsExpirations</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeAsync (string symbol, string after = null, string before = null, string source = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeAsync (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Expirations
@@ -763,8 +776,9 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionExpirationsRealtimeAsyncWithHttpInfo (string symbol, string after = null, string before = null, string source = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionExpirationsRealtimeAsyncWithHttpInfo (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Option Strikes Realtime
         /// </summary>
@@ -778,8 +792,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeAsync (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeAsync (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Option Strikes Realtime
@@ -794,8 +809,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionStrikesRealtimeAsyncWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionStrikesRealtimeAsyncWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options
         /// </summary>
@@ -851,8 +867,9 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options by Symbol Realtime
@@ -870,8 +887,9 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsRealtime>> GetOptionsBySymbolRealtimeAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsRealtime>> GetOptionsBySymbolRealtimeAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Chain
         /// </summary>
@@ -923,8 +941,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainEod</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Chain EOD
@@ -940,8 +959,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainEod)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Chain Realtime
         /// </summary>
@@ -964,8 +984,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Chain Realtime
@@ -989,8 +1010,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Expirations
         /// </summary>
@@ -1026,8 +1048,9 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsExpirations</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionsExpirationsEodAsync (string symbol, string after = null, string before = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionsExpirationsEodAsync (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
 
         /// <summary>
         /// Options Expirations
@@ -1039,8 +1062,9 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
         /// <summary>
         /// Options Intervals By Contract
         /// </summary>
@@ -1662,10 +1686,11 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsExpirations</returns>
-        public ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null)
+        public ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = GetOptionExpirationsRealtimeWithHttpInfo(symbol, after, before, source);
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = GetOptionExpirationsRealtimeWithHttpInfo(symbol, after, before, source, includeRelatedSymbols);
              return localVarResponse.Data;
         }
 
@@ -1677,10 +1702,11 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         
         
-        public ApiResponse< ApiResponseOptionsExpirations > GetOptionExpirationsRealtimeWithHttpInfo (string symbol, string after = null, string before = null, string source = null)
+        public ApiResponse< ApiResponseOptionsExpirations > GetOptionExpirationsRealtimeWithHttpInfo (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -1712,6 +1738,7 @@ namespace Intrinio.SDK.Api
             if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
             if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -1745,10 +1772,11 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsExpirations</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeAsync (string symbol, string after = null, string before = null, string source = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionExpirationsRealtimeAsync (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = await GetOptionExpirationsRealtimeAsyncWithHttpInfo(symbol, after, before, source);
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = await GetOptionExpirationsRealtimeAsyncWithHttpInfo(symbol, after, before, source, includeRelatedSymbols);
              return localVarResponse.Data;
 
         }
@@ -1761,8 +1789,9 @@ namespace Intrinio.SDK.Api
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionExpirationsRealtimeAsyncWithHttpInfo (string symbol, string after = null, string before = null, string source = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionExpirationsRealtimeAsyncWithHttpInfo (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -1794,6 +1823,7 @@ namespace Intrinio.SDK.Api
             if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
             if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -1829,10 +1859,11 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsChainRealtime</returns>
-        public ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = GetOptionStrikesRealtimeWithHttpInfo(symbol, strike, source, stockPriceSource, model, showExtendedPrice);
+             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = GetOptionStrikesRealtimeWithHttpInfo(symbol, strike, source, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
              return localVarResponse.Data;
         }
 
@@ -1846,10 +1877,11 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
         
         
-        public ApiResponse< ApiResponseOptionsChainRealtime > GetOptionStrikesRealtimeWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public ApiResponse< ApiResponseOptionsChainRealtime > GetOptionStrikesRealtimeWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -1886,6 +1918,7 @@ namespace Intrinio.SDK.Api
             if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
             if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -1921,10 +1954,11 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeAsync (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeAsync (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = await GetOptionStrikesRealtimeAsyncWithHttpInfo(symbol, strike, source, stockPriceSource, model, showExtendedPrice);
+             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = await GetOptionStrikesRealtimeAsyncWithHttpInfo(symbol, strike, source, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
              return localVarResponse.Data;
 
         }
@@ -1939,8 +1973,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionStrikesRealtimeAsyncWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionStrikesRealtimeAsyncWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -1977,6 +2012,7 @@ namespace Intrinio.SDK.Api
             if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
             if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2216,10 +2252,11 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsRealtime</returns>
-        public ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        public ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsRealtime> localVarResponse = GetOptionsBySymbolRealtimeWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+             ApiResponse<ApiResponseOptionsRealtime> localVarResponse = GetOptionsBySymbolRealtimeWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source, includeRelatedSymbols);
              return localVarResponse.Data;
         }
 
@@ -2236,10 +2273,11 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsRealtime</returns>
         
         
-        public ApiResponse< ApiResponseOptionsRealtime > GetOptionsBySymbolRealtimeWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        public ApiResponse< ApiResponseOptionsRealtime > GetOptionsBySymbolRealtimeWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -2276,6 +2314,7 @@ namespace Intrinio.SDK.Api
             if (expirationAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_after", expirationAfter)); // query parameter
             if (expirationBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_before", expirationBefore)); // query parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2314,10 +2353,11 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsRealtime> GetOptionsBySymbolRealtimeAsync (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsRealtime> localVarResponse = await GetOptionsBySymbolRealtimeAsyncWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+             ApiResponse<ApiResponseOptionsRealtime> localVarResponse = await GetOptionsBySymbolRealtimeAsyncWithHttpInfo(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source, includeRelatedSymbols);
              return localVarResponse.Data;
 
         }
@@ -2335,8 +2375,9 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationAfter">The expiration date of the option contract. This will return options contracts with expiration dates after this date. (optional)</param>
         /// <param name="expirationBefore">The expiration date of the option contract. This will return options contracts with expiration dates before this date. (optional)</param>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsRealtime>> GetOptionsBySymbolRealtimeAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsRealtime>> GetOptionsBySymbolRealtimeAsyncWithHttpInfo (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -2373,6 +2414,7 @@ namespace Intrinio.SDK.Api
             if (expirationAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_after", expirationAfter)); // query parameter
             if (expirationBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_before", expirationBefore)); // query parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2610,10 +2652,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsChainEod</returns>
-        public ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
+        public ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = GetOptionsChainEodWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date);
+             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = GetOptionsChainEodWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
              return localVarResponse.Data;
         }
 
@@ -2628,10 +2671,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainEod</returns>
         
         
-        public ApiResponse< ApiResponseOptionsChainEod > GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
+        public ApiResponse< ApiResponseOptionsChainEod > GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -2669,6 +2713,7 @@ namespace Intrinio.SDK.Api
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2705,10 +2750,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainEod</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = await GetOptionsChainEodAsyncWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date);
+             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = await GetOptionsChainEodAsyncWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
              return localVarResponse.Data;
 
         }
@@ -2724,8 +2770,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainEod)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -2763,6 +2810,7 @@ namespace Intrinio.SDK.Api
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2807,10 +2855,11 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsChainRealtime</returns>
-        public ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = GetOptionsChainRealtimeWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice);
+             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = GetOptionsChainRealtimeWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
              return localVarResponse.Data;
         }
 
@@ -2833,10 +2882,11 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
         
         
-        public ApiResponse< ApiResponseOptionsChainRealtime > GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public ApiResponse< ApiResponseOptionsChainRealtime > GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -2882,6 +2932,7 @@ namespace Intrinio.SDK.Api
             if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
             if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -2926,10 +2977,11 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = await GetOptionsChainRealtimeAsyncWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice);
+             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = await GetOptionsChainRealtimeAsyncWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
              return localVarResponse.Data;
 
         }
@@ -2953,8 +3005,9 @@ namespace Intrinio.SDK.Api
         /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -3000,6 +3053,7 @@ namespace Intrinio.SDK.Api
             if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
             if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3191,10 +3245,11 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponseOptionsExpirations</returns>
-        public ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null)
+        public ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = GetOptionsExpirationsEodWithHttpInfo(symbol, after, before);
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = GetOptionsExpirationsEodWithHttpInfo(symbol, after, before, includeRelatedSymbols);
              return localVarResponse.Data;
         }
 
@@ -3205,10 +3260,11 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         
         
-        public ApiResponse< ApiResponseOptionsExpirations > GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null)
+        public ApiResponse< ApiResponseOptionsExpirations > GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -3239,6 +3295,7 @@ namespace Intrinio.SDK.Api
             if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
             if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
             if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3271,10 +3328,11 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponseOptionsExpirations</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionsExpirationsEodAsync (string symbol, string after = null, string before = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsExpirations> GetOptionsExpirationsEodAsync (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = await GetOptionsExpirationsEodAsyncWithHttpInfo(symbol, after, before);
+             ApiResponse<ApiResponseOptionsExpirations> localVarResponse = await GetOptionsExpirationsEodAsyncWithHttpInfo(symbol, after, before, includeRelatedSymbols);
              return localVarResponse.Data;
 
         }
@@ -3286,8 +3344,9 @@ namespace Intrinio.SDK.Api
         /// <param name="symbol">The option symbol, corresponding to the underlying security.</param>
         /// <param name="after">Return option contract expiration dates after this date. (optional)</param>
         /// <param name="before">Return option contract expiration dates before this date. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -3318,6 +3377,7 @@ namespace Intrinio.SDK.Api
             if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
             if (after != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "after", after)); // query parameter
             if (before != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "before", before)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

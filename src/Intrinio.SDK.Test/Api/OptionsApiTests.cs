@@ -74,7 +74,8 @@ namespace Intrinio.SDK.Test
             //string after = null;
             //string before = null;
             //string source = null;
-            //var response = instance.GetOptionExpirationsRealtime(symbol, after, before, source);
+            //bool? includeRelatedSymbols = null;
+            //var response = instance.GetOptionExpirationsRealtime(symbol, after, before, source, includeRelatedSymbols);
             //Assert.IsInstanceOf<ApiResponseOptionsExpirations> (response, "response is ApiResponseOptionsExpirations");
         }
         
@@ -91,7 +92,8 @@ namespace Intrinio.SDK.Test
             //string stockPriceSource = null;
             //string model = null;
             //bool? showExtendedPrice = null;
-            //var response = instance.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model, showExtendedPrice);
+            //bool? includeRelatedSymbols = null;
+            //var response = instance.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
             //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
         }
         
@@ -132,7 +134,8 @@ namespace Intrinio.SDK.Test
             //string expirationAfter = null;
             //string expirationBefore = null;
             //string source = null;
-            //var response = instance.GetOptionsBySymbolRealtime(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+            //bool? includeRelatedSymbols = null;
+            //var response = instance.GetOptionsBySymbolRealtime(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source, includeRelatedSymbols);
             //Assert.IsInstanceOf<ApiResponseOptionsRealtime> (response, "response is ApiResponseOptionsRealtime");
         }
         
@@ -170,7 +173,8 @@ namespace Intrinio.SDK.Test
             //decimal? strikeGreaterThan = null;
             //decimal? strikeLessThan = null;
             //DateTime? date = null;
-            //var response = instance.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date);
+            //bool? includeRelatedSymbols = null;
+            //var response = instance.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
             //Assert.IsInstanceOf<ApiResponseOptionsChainEod> (response, "response is ApiResponseOptionsChainEod");
         }
         
@@ -196,7 +200,8 @@ namespace Intrinio.SDK.Test
             //string stockPriceSource = null;
             //string model = null;
             //bool? showExtendedPrice = null;
-            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice);
+            //bool? includeRelatedSymbols = null;
+            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
             //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
         }
         
@@ -224,7 +229,8 @@ namespace Intrinio.SDK.Test
             //string symbol = null;
             //string after = null;
             //string before = null;
-            //var response = instance.GetOptionsExpirationsEod(symbol, after, before);
+            //bool? includeRelatedSymbols = null;
+            //var response = instance.GetOptionsExpirationsEod(symbol, after, before, includeRelatedSymbols);
             //Assert.IsInstanceOf<ApiResponseOptionsExpirations> (response, "response is ApiResponseOptionsExpirations");
         }
         

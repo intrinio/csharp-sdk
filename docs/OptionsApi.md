@@ -140,7 +140,7 @@ This endpoint does not need any parameter.
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null)
+> ApiResponseOptionsExpirations GetOptionExpirationsRealtime (string symbol, string after = null, string before = null, string source = null, bool? includeRelatedSymbols = null)
 
 #### Options Expirations
 
@@ -177,8 +177,9 @@ namespace Example
       string after = "2022-01-01";
       string before = "2023-04-01";
       string source = null;
+      bool? includeRelatedSymbols = false;
       
-      ApiResponseOptionsExpirations result = optionsApi.GetOptionExpirationsRealtime(symbol, after, before, source);
+      ApiResponseOptionsExpirations result = optionsApi.GetOptionExpirationsRealtime(symbol, after, before, source, includeRelatedSymbols);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -198,6 +199,7 @@ Name | Type | Description  | Notes
  **after** | string| Return option contract expiration dates after this date. | [optional]  &nbsp;
  **before** | string| Return option contract expiration dates before this date. | [optional]  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -234,7 +236,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+> ApiResponseOptionsChainRealtime GetOptionStrikesRealtime (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
 
 #### Option Strikes Realtime
 
@@ -273,8 +275,9 @@ namespace Example
       string stockPriceSource = null;
       string model = null;
       bool? showExtendedPrice = null;
+      bool? includeRelatedSymbols = false;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model, showExtendedPrice);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -296,6 +299,7 @@ Name | Type | Description  | Notes
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -438,7 +442,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null)
+> ApiResponseOptionsRealtime GetOptionsBySymbolRealtime (string symbol, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, string expiration = null, string expirationAfter = null, string expirationBefore = null, string source = null, bool? includeRelatedSymbols = null)
 
 #### Options by Symbol Realtime
 
@@ -480,8 +484,9 @@ namespace Example
       string expirationAfter = "2022-01-01";
       string expirationBefore = "2023-12-31";
       string source = null;
+      bool? includeRelatedSymbols = false;
       
-      ApiResponseOptionsRealtime result = optionsApi.GetOptionsBySymbolRealtime(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source);
+      ApiResponseOptionsRealtime result = optionsApi.GetOptionsBySymbolRealtime(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source, includeRelatedSymbols);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -506,6 +511,7 @@ Name | Type | Description  | Notes
  **expirationAfter** | string| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional]  &nbsp;
  **expirationBefore** | string| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional]  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -646,7 +652,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null)
+> ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
 
 #### Options Chain EOD
 
@@ -686,8 +692,9 @@ namespace Example
       decimal? strikeGreaterThan = null;
       decimal? strikeLessThan = null;
       DateTime? date = null;
+      bool? includeRelatedSymbols = false;
       
-      ApiResponseOptionsChainEod result = optionsApi.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date);
+      ApiResponseOptionsChainEod result = optionsApi.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -710,6 +717,7 @@ Name | Type | Description  | Notes
  **strikeGreaterThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strikeLessThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **date** | DateTime?| The date to retrieve prices for | [optional]  &nbsp;
+ **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -746,7 +754,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
 
 #### Options Chain Realtime
 
@@ -794,8 +802,9 @@ namespace Example
       string stockPriceSource = null;
       string model = null;
       bool? showExtendedPrice = null;
+      bool? includeRelatedSymbols = false;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -826,6 +835,7 @@ Name | Type | Description  | Notes
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -954,7 +964,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null)
+> ApiResponseOptionsExpirations GetOptionsExpirationsEod (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null)
 
 #### Options Expirations
 
@@ -990,8 +1000,9 @@ namespace Example
       string symbol = "MSFT";
       string after = "2019-01-01";
       string before = "2019-12-31";
+      bool? includeRelatedSymbols = false;
       
-      ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirationsEod(symbol, after, before);
+      ApiResponseOptionsExpirations result = optionsApi.GetOptionsExpirationsEod(symbol, after, before, includeRelatedSymbols);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1010,6 +1021,7 @@ Name | Type | Description  | Notes
  **symbol** | string| The option symbol, corresponding to the underlying security. |  &nbsp;
  **after** | string| Return option contract expiration dates after this date. | [optional]  &nbsp;
  **before** | string| Return option contract expiration dates before this date. | [optional]  &nbsp;
+ **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

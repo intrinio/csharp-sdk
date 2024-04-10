@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseNews GetAllCompanyNews (int? pageSize = null, string nextPage = null)
+> ApiResponseNews GetAllCompanyNews (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
 
 #### All News
 
@@ -288,10 +288,23 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
+      string specificSource = null;
       int? pageSize = 100;
+      string sentiment = null;
+      string topic = null;
+      string company = "AAPL";
+      string security = "AAPL";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      string language = null;
+      int? wordCountGreaterThan = null;
+      int? wordCountLessThan = null;
+      bool? isSpam = null;
+      decimal? businessRelevanceGreaterThan = null;
+      decimal? businessRelevanceLessThan = null;
       string nextPage = null;
       
-      ApiResponseNews result = companyApi.GetAllCompanyNews(pageSize, nextPage);
+      ApiResponseNews result = companyApi.GetAllCompanyNews(specificSource, pageSize, sentiment, topic, company, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -307,7 +320,20 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **specificSource** | string| Only news from this source. | [optional]  &nbsp;
+ **pageSize** | int?| The maximum number of results to return. | [optional] [default to 100] &nbsp;
+ **sentiment** | string| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **topic** | string| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **company** | string| Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **security** | string| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
+ **startDate** | DateTime?| Limit news stories to those on or after this date. | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit news stories to those on or before this date. | [optional]  &nbsp;
+ **language** | string| Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountGreaterThan** | int?| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountLessThan** | int?| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **isSpam** | bool?| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceGreaterThan** | decimal?| News stories will have a business relevance score more than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceLessThan** | decimal?| News stories will have a business relevance score less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -1217,7 +1243,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanyNews GetCompanyNews (string identifier, int? pageSize = null, string nextPage = null)
+> ApiResponseCompanyNews GetCompanyNews (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
 
 #### All News by Company
 
@@ -1251,10 +1277,22 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
+      string specificSource = null;
       int? pageSize = 100;
+      string sentiment = null;
+      string topic = null;
+      string security = "AAPL";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      string language = null;
+      int? wordCountGreaterThan = null;
+      int? wordCountLessThan = null;
+      bool? isSpam = null;
+      decimal? businessRelevanceGreaterThan = null;
+      decimal? businessRelevanceLessThan = null;
       string nextPage = null;
       
-      ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, pageSize, nextPage);
+      ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, specificSource, pageSize, sentiment, topic, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1271,7 +1309,19 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **specificSource** | string| Only news from this source | [optional]  &nbsp;
+ **pageSize** | int?| The maximum number of results to return | [optional] [default to 100] &nbsp;
+ **sentiment** | string| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **topic** | string| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **security** | string| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
+ **startDate** | DateTime?| Limit news stories to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit news stories to those on or before this date | [optional]  &nbsp;
+ **language** | string| Filter by language.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountGreaterThan** | int?| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountLessThan** | int?| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **isSpam** | bool?| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceGreaterThan** | decimal?| News stories will have a business relevance score more than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceLessThan** | decimal?| News stories will have a business relevance score less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

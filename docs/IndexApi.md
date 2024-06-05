@@ -5,13 +5,18 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllEconomicIndices**](IndexApi.md#getalleconomicindices) | **GET** /indices/economic | All Economic Indices
+[**GetAllEodIndexPrices**](IndexApi.md#getalleodindexprices) | **GET** /indices/prices/eod | All End of Day Index Prices
+[**GetAllIndexSummaries**](IndexApi.md#getallindexsummaries) | **GET** /indices | All Index Summaries
+[**GetAllRealtimeIndexPrices**](IndexApi.md#getallrealtimeindexprices) | **GET** /indices/prices/realtime | All Realtime Index Prices
 [**GetAllSicIndices**](IndexApi.md#getallsicindices) | **GET** /indices/sic | All SIC Indices
 [**GetAllStockMarketIndices**](IndexApi.md#getallstockmarketindices) | **GET** /indices/stock_market | All Stock Market Indices
 [**GetEconomicIndexById**](IndexApi.md#geteconomicindexbyid) | **GET** /indices/economic/{identifier} | Lookup Economic Index
 [**GetEconomicIndexDataPointNumber**](IndexApi.md#geteconomicindexdatapointnumber) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
 [**GetEconomicIndexDataPointText**](IndexApi.md#geteconomicindexdatapointtext) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 [**GetEconomicIndexHistoricalData**](IndexApi.md#geteconomicindexhistoricaldata) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
-[**GetRealtimeIndexPriceById**](IndexApi.md#getrealtimeindexpricebyid) | **GET** /indices/{identifier}/realtime | Realtime Index Price
+[**GetEodIndexPriceById**](IndexApi.md#geteodindexpricebyid) | **GET** /indices/{identifier}/eod | End of Day Index Prices By Identifier
+[**GetIndexSummaryById**](IndexApi.md#getindexsummarybyid) | **GET** /indices/{identifier} | Index Summary By Identifier
+[**GetRealtimeIndexPriceById**](IndexApi.md#getrealtimeindexpricebyid) | **GET** /indices/{identifier}/realtime | Realtime Index Price By Identifier
 [**GetSicIndexById**](IndexApi.md#getsicindexbyid) | **GET** /indices/sic/{identifier} | Lookup SIC Index
 [**GetSicIndexDataPointNumber**](IndexApi.md#getsicindexdatapointnumber) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
 [**GetSicIndexDataPointText**](IndexApi.md#getsicindexdatapointtext) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
@@ -112,6 +117,271 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetAllEodIndexPrices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEodIndexPricesAll)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseEodIndexPricesAll.md)
+
+[//]: # (OPERATION:GetAllEodIndexPrices_v2)
+
+[//]: # (ENDPOINT:/indices/prices/eod)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getalleodindexprices)
+
+<a name="getalleodindexprices"></a>
+## **GetAllEodIndexPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllEodIndexPrices_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseEodIndexPricesAll GetAllEodIndexPrices (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+
+#### All End of Day Index Prices
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetAllEodIndexPricesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var indexApi = new IndexApi();
+      
+      int? pageSize = 100;
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      
+      ApiResponseEodIndexPricesAll result = indexApi.GetAllEodIndexPrices(pageSize, startDate, endDate);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **startDate** | DateTime?| Limit prices to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit prices to those on or before this date | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseEodIndexPricesAll**](ApiResponseEodIndexPricesAll.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetAllIndexSummaries)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseIndices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseIndices.md)
+
+[//]: # (OPERATION:GetAllIndexSummaries_v2)
+
+[//]: # (ENDPOINT:/indices)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getallindexsummaries)
+
+<a name="getallindexsummaries"></a>
+## **GetAllIndexSummaries**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllIndexSummaries_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseIndices GetAllIndexSummaries (int? pageSize = null)
+
+#### All Index Summaries
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetAllIndexSummariesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var indexApi = new IndexApi();
+      
+      int? pageSize = 100;
+      
+      ApiResponseIndices result = indexApi.GetAllIndexSummaries(pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseIndices**](ApiResponseIndices.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetAllRealtimeIndexPrices)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseRealtimeIndexPrices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseRealtimeIndexPrices.md)
+
+[//]: # (OPERATION:GetAllRealtimeIndexPrices_v2)
+
+[//]: # (ENDPOINT:/indices/prices/realtime)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getallrealtimeindexprices)
+
+<a name="getallrealtimeindexprices"></a>
+## **GetAllRealtimeIndexPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetAllRealtimeIndexPrices_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseRealtimeIndexPrices GetAllRealtimeIndexPrices (int? pageSize = null)
+
+#### All Realtime Index Prices
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetAllRealtimeIndexPricesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var indexApi = new IndexApi();
+      
+      int? pageSize = 100;
+      
+      ApiResponseRealtimeIndexPrices result = indexApi.GetAllRealtimeIndexPrices(pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseRealtimeIndexPrices**](ApiResponseRealtimeIndexPrices.md)
 
 [//]: # (END_OPERATION)
 
@@ -668,6 +938,186 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
 
+[//]: # (METHOD:GetEodIndexPriceById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseEodIndexPrices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseEodIndexPrices.md)
+
+[//]: # (OPERATION:GetEodIndexPriceById_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier}/eod)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#geteodindexpricebyid)
+
+<a name="geteodindexpricebyid"></a>
+## **GetEodIndexPriceById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEodIndexPriceById_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseEodIndexPrices GetEodIndexPriceById (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+
+#### End of Day Index Prices By Identifier
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetEodIndexPriceByIdExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var indexApi = new IndexApi();
+      
+      string identifier = "SPX";
+      int? pageSize = 100;
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      
+      ApiResponseEodIndexPrices result = indexApi.GetEodIndexPriceById(identifier, pageSize, startDate, endDate);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The index symbol |  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **startDate** | DateTime?| Limit prices to those on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Limit prices to those on or before this date | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseEodIndexPrices**](ApiResponseEodIndexPrices.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetIndexSummaryById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseIndex)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseIndex.md)
+
+[//]: # (OPERATION:GetIndexSummaryById_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier})
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getindexsummarybyid)
+
+<a name="getindexsummarybyid"></a>
+## **GetIndexSummaryById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetIndexSummaryById_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseIndex GetIndexSummaryById (string identifier)
+
+#### Index Summary By Identifier
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetIndexSummaryByIdExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var indexApi = new IndexApi();
+      
+      string identifier = "SPX";
+      
+      ApiResponseIndex result = indexApi.GetIndexSummaryById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The index symbol |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseIndex**](ApiResponseIndex.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
 [//]: # (METHOD:GetRealtimeIndexPriceById)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.RealtimeIndexPrice)
@@ -691,7 +1141,7 @@ Name | Type | Description  | Notes
 
 > RealtimeIndexPrice GetRealtimeIndexPriceById (string identifier)
 
-#### Realtime Index Price
+#### Realtime Index Price By Identifier
 
 
 [//]: # (END_OVERVIEW)
@@ -739,7 +1189,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| The ticker symbol of the currently trading index |  &nbsp;
+ **identifier** | string| The index symbol |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

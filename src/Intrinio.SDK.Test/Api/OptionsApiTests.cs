@@ -64,6 +64,18 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionAggregates
+        /// </summary>
+        [Test]
+        public void GetOptionAggregatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //Object date = null;
+            //var response = instance.GetOptionAggregates(date);
+            //Assert.IsInstanceOf<ApiResponseOptionsAggregates> (response, "response is ApiResponseOptionsAggregates");
+        }
+        
+        /// <summary>
         /// Test GetOptionExpirationsRealtime
         /// </summary>
         [Test]

@@ -37,6 +37,27 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsTickers</returns>
         ApiResponse<ApiResponseOptionsTickers> GetAllOptionsTickersWithHttpInfo ();
         /// <summary>
+        /// Total open interest and volume aggregated by ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns total open interest and volume by ticker
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>ApiResponseOptionsAggregates</returns>
+        ApiResponseOptionsAggregates GetOptionAggregates (Object date = null);
+
+        /// <summary>
+        /// Total open interest and volume aggregated by ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns total open interest and volume by ticker
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsAggregates</returns>
+        ApiResponse<ApiResponseOptionsAggregates> GetOptionAggregatesWithHttpInfo (Object date = null);
+        /// <summary>
         /// Options Expirations
         /// </summary>
         /// <remarks>
@@ -750,6 +771,27 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ApiResponseOptionsTickers)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo ();
+        /// <summary>
+        /// Total open interest and volume aggregated by ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns total open interest and volume by ticker
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>Task of ApiResponseOptionsAggregates</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsAggregates> GetOptionAggregatesAsync (Object date = null);
+
+        /// <summary>
+        /// Total open interest and volume aggregated by ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns total open interest and volume by ticker
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsAggregates)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsAggregates>> GetOptionAggregatesAsyncWithHttpInfo (Object date = null);
         /// <summary>
         /// Options Expirations
         /// </summary>
@@ -1676,6 +1718,147 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsTickers>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseOptionsTickers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsTickers)));
+        }
+
+        /// <summary>
+        /// Total open interest and volume aggregated by ticker Returns total open interest and volume by ticker
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>ApiResponseOptionsAggregates</returns>
+        public ApiResponseOptionsAggregates GetOptionAggregates (Object date = null)
+        {
+             ApiResponse<ApiResponseOptionsAggregates> localVarResponse = GetOptionAggregatesWithHttpInfo(date);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Total open interest and volume aggregated by ticker Returns total open interest and volume by ticker
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsAggregates</returns>
+        
+        
+        public ApiResponse< ApiResponseOptionsAggregates > GetOptionAggregatesWithHttpInfo (Object date = null)
+        {
+
+            var localVarPath = "/options/aggregates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionAggregates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsAggregates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsAggregates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsAggregates)));
+        }
+
+        /// <summary>
+        /// Total open interest and volume aggregated by ticker Returns total open interest and volume by ticker
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>Task of ApiResponseOptionsAggregates</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsAggregates> GetOptionAggregatesAsync (Object date = null)
+        {
+             ApiResponse<ApiResponseOptionsAggregates> localVarResponse = await GetOptionAggregatesAsyncWithHttpInfo(date);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Total open interest and volume aggregated by ticker Returns total open interest and volume by ticker
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="date">Return aggregated data for this date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsAggregates)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsAggregates>> GetOptionAggregatesAsyncWithHttpInfo (Object date = null)
+        {
+
+            var localVarPath = "/options/aggregates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionAggregates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsAggregates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsAggregates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsAggregates)));
         }
 
         /// <summary>

@@ -320,7 +320,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **specificSource** | string| Only news from this source. | [optional]  &nbsp;
+ **specificSource** | string| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
  **pageSize** | int?| The maximum number of results to return. | [optional] [default to 100] &nbsp;
  **sentiment** | string| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | string| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1309,7 +1309,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **specificSource** | string| Only news from this source | [optional]  &nbsp;
+ **specificSource** | string| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
  **pageSize** | int?| The maximum number of results to return | [optional] [default to 100] &nbsp;
  **sentiment** | string| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | string| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1919,7 +1919,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompaniesSearch SearchCompanies (string query, bool? active = null, int? pageSize = null)
+> ApiResponseCompaniesSearch SearchCompanies (string query, bool? active = null, string mode = null, int? pageSize = null)
 
 #### Search Companies
 
@@ -1954,9 +1954,10 @@ namespace Example
       
       string query = "Apple";
       bool? active = true;
+      string mode = null;
       int? pageSize = 100;
       
-      ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, active, pageSize);
+      ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, active, mode, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1973,7 +1974,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | string| Search parameters |  &nbsp;
- **active** | bool?| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. | [optional]  &nbsp;
+ **active** | bool?| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. Not setting this value returns all. Not used when mode is set. | [optional]  &nbsp;
+ **mode** | string| When set, changes search mode to the specified mode. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
 

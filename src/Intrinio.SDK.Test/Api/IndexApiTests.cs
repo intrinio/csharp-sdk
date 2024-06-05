@@ -66,6 +66,44 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetAllEodIndexPrices
+        /// </summary>
+        [Test]
+        public void GetAllEodIndexPricesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? pageSize = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.GetAllEodIndexPrices(pageSize, startDate, endDate);
+            //Assert.IsInstanceOf<ApiResponseEodIndexPricesAll> (response, "response is ApiResponseEodIndexPricesAll");
+        }
+        
+        /// <summary>
+        /// Test GetAllIndexSummaries
+        /// </summary>
+        [Test]
+        public void GetAllIndexSummariesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? pageSize = null;
+            //var response = instance.GetAllIndexSummaries(pageSize);
+            //Assert.IsInstanceOf<ApiResponseIndices> (response, "response is ApiResponseIndices");
+        }
+        
+        /// <summary>
+        /// Test GetAllRealtimeIndexPrices
+        /// </summary>
+        [Test]
+        public void GetAllRealtimeIndexPricesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? pageSize = null;
+            //var response = instance.GetAllRealtimeIndexPrices(pageSize);
+            //Assert.IsInstanceOf<ApiResponseRealtimeIndexPrices> (response, "response is ApiResponseRealtimeIndexPrices");
+        }
+        
+        /// <summary>
         /// Test GetAllSicIndices
         /// </summary>
         [Test]
@@ -146,6 +184,33 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //var response = instance.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseEconomicIndexHistoricalData> (response, "response is ApiResponseEconomicIndexHistoricalData");
+        }
+        
+        /// <summary>
+        /// Test GetEodIndexPriceById
+        /// </summary>
+        [Test]
+        public void GetEodIndexPriceByIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //int? pageSize = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.GetEodIndexPriceById(identifier, pageSize, startDate, endDate);
+            //Assert.IsInstanceOf<ApiResponseEodIndexPrices> (response, "response is ApiResponseEodIndexPrices");
+        }
+        
+        /// <summary>
+        /// Test GetIndexSummaryById
+        /// </summary>
+        [Test]
+        public void GetIndexSummaryByIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetIndexSummaryById(identifier);
+            //Assert.IsInstanceOf<ApiResponseIndex> (response, "response is ApiResponseIndex");
         }
         
         /// <summary>

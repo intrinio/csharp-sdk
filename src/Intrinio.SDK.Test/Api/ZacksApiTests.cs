@@ -83,6 +83,20 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetZacksEbitdaConsensus
+        /// </summary>
+        [Test]
+        public void GetZacksEbitdaConsensusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string type = null;
+            //string nextPage = null;
+            //var response = instance.GetZacksEbitdaConsensus(identifier, type, nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksEBITDAConsensus> (response, "response is ApiResponseZacksEBITDAConsensus");
+        }
+        
+        /// <summary>
         /// Test GetZacksEpsEstimates
         /// </summary>
         [Test]
@@ -160,6 +174,30 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //var response = instance.GetZacksEtfHoldings(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseZacksETFHoldings> (response, "response is ApiResponseZacksETFHoldings");
+        }
+        
+        /// <summary>
+        /// Test GetZacksForwardPe
+        /// </summary>
+        [Test]
+        public void GetZacksForwardPeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string nextPage = null;
+            //var response = instance.GetZacksForwardPe(nextPage);
+            //Assert.IsInstanceOf<ApiResponseZacksForwardPEs> (response, "response is ApiResponseZacksForwardPEs");
+        }
+        
+        /// <summary>
+        /// Test GetZacksForwardPeByIdentifier
+        /// </summary>
+        [Test]
+        public void GetZacksForwardPeByIdentifierTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetZacksForwardPeByIdentifier(identifier);
+            //Assert.IsInstanceOf<ZacksForwardPE> (response, "response is ZacksForwardPE");
         }
         
         /// <summary>

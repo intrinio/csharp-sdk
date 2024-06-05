@@ -386,8 +386,9 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
             //bool? active = null;
+            //string mode = null;
             //int? pageSize = null;
-            //var response = instance.SearchCompanies(query, active, pageSize);
+            //var response = instance.SearchCompanies(query, active, mode, pageSize);
             //Assert.IsInstanceOf<ApiResponseCompaniesSearch> (response, "response is ApiResponseCompaniesSearch");
         }
         

@@ -124,7 +124,8 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string query = null;
-            //var response = instance.SearchEtfs(query);
+            //string mode = null;
+            //var response = instance.SearchEtfs(query, mode);
             //Assert.IsInstanceOf<ApiResponseETFs> (response, "response is ApiResponseETFs");
         }
         

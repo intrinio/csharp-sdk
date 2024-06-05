@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseETFs SearchEtfs (string query)
+> ApiResponseETFs SearchEtfs (string query, string mode = null)
 
 #### Search ETFs
 
@@ -520,8 +520,9 @@ namespace Example
       var eTFsApi = new ETFsApi();
       
       string query = "iShares";
+      string mode = null;
       
-      ApiResponseETFs result = eTFsApi.SearchEtfs(query);
+      ApiResponseETFs result = eTFsApi.SearchEtfs(query, mode);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -538,6 +539,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | string|  |  &nbsp;
+ **mode** | string| When set, changes search mode to the specified mode. Paging is not available in rank_order. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

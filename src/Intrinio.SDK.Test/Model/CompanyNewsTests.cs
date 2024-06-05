@@ -178,6 +178,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'ArticleSentimentConfidence'
         }
+        /// <summary>
+        /// Test the property 'Body'
+        /// </summary>
+        [Test]
+        public void BodyTest()
+        {
+            // TODO unit test for the property 'Body'
+        }
 
     }
 

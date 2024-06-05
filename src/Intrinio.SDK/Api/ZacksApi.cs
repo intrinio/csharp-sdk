@@ -75,6 +75,31 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseZacksAnalystRatings</returns>
         ApiResponse<ApiResponseZacksAnalystRatings> GetZacksAnalystRatingsWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Zacks EBITDA Consensus
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksEBITDAConsensus</returns>
+        ApiResponseZacksEBITDAConsensus GetZacksEbitdaConsensus (string identifier = null, string type = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks EBITDA Consensus
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksEBITDAConsensus</returns>
+        ApiResponse<ApiResponseZacksEBITDAConsensus> GetZacksEbitdaConsensusWithHttpInfo (string identifier = null, string type = null, string nextPage = null);
+        /// <summary>
         /// Zacks EPS Estimates
         /// </summary>
         /// <remarks>
@@ -222,6 +247,48 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksETFHoldings</returns>
         ApiResponse<ApiResponseZacksETFHoldings> GetZacksEtfHoldingsWithHttpInfo (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Forward PE Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksForwardPEs</returns>
+        ApiResponseZacksForwardPEs GetZacksForwardPe (string nextPage = null);
+
+        /// <summary>
+        /// Zacks Forward PE Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksForwardPEs</returns>
+        ApiResponse<ApiResponseZacksForwardPEs> GetZacksForwardPeWithHttpInfo (string nextPage = null);
+        /// <summary>
+        /// Zacks Forward PE by identifer
+        /// </summary>
+        /// <remarks>
+        /// Returns the forward PE estimates for the identifier
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>ZacksForwardPE</returns>
+        ZacksForwardPE GetZacksForwardPeByIdentifier (string identifier);
+
+        /// <summary>
+        /// Zacks Forward PE by identifer
+        /// </summary>
+        /// <remarks>
+        /// Returns the forward PE estimates for the identifier
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>ApiResponse of ZacksForwardPE</returns>
+        ApiResponse<ZacksForwardPE> GetZacksForwardPeByIdentifierWithHttpInfo (string identifier);
         /// <summary>
         /// Zacks Institutional Holding Companies
         /// </summary>
@@ -501,6 +568,31 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseZacksAnalystRatings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksAnalystRatings>> GetZacksAnalystRatingsAsyncWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Zacks EBITDA Consensus
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksEBITDAConsensus</returns>
+        System.Threading.Tasks.Task<ApiResponseZacksEBITDAConsensus> GetZacksEbitdaConsensusAsync (string identifier = null, string type = null, string nextPage = null);
+
+        /// <summary>
+        /// Zacks EBITDA Consensus
+        /// </summary>
+        /// <remarks>
+        /// This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksEBITDAConsensus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksEBITDAConsensus>> GetZacksEbitdaConsensusAsyncWithHttpInfo (string identifier = null, string type = null, string nextPage = null);
+        /// <summary>
         /// Zacks EPS Estimates
         /// </summary>
         /// <remarks>
@@ -648,6 +740,48 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseZacksETFHoldings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksETFHoldings>> GetZacksEtfHoldingsAsyncWithHttpInfo (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Zacks Forward PE Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksForwardPEs</returns>
+        System.Threading.Tasks.Task<ApiResponseZacksForwardPEs> GetZacksForwardPeAsync (string nextPage = null);
+
+        /// <summary>
+        /// Zacks Forward PE Estimates
+        /// </summary>
+        /// <remarks>
+        /// This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksForwardPEs)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksForwardPEs>> GetZacksForwardPeAsyncWithHttpInfo (string nextPage = null);
+        /// <summary>
+        /// Zacks Forward PE by identifer
+        /// </summary>
+        /// <remarks>
+        /// Returns the forward PE estimates for the identifier
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>Task of ZacksForwardPE</returns>
+        System.Threading.Tasks.Task<ZacksForwardPE> GetZacksForwardPeByIdentifierAsync (string identifier);
+
+        /// <summary>
+        /// Zacks Forward PE by identifer
+        /// </summary>
+        /// <remarks>
+        /// Returns the forward PE estimates for the identifier
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>Task of ApiResponse (ZacksForwardPE)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ZacksForwardPE>> GetZacksForwardPeByIdentifierAsyncWithHttpInfo (string identifier);
         /// <summary>
         /// Zacks Institutional Holding Companies
         /// </summary>
@@ -1214,6 +1348,159 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseZacksAnalystRatings>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseZacksAnalystRatings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksAnalystRatings)));
+        }
+
+        /// <summary>
+        /// Zacks EBITDA Consensus This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksEBITDAConsensus</returns>
+        public ApiResponseZacksEBITDAConsensus GetZacksEbitdaConsensus (string identifier = null, string type = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksEBITDAConsensus> localVarResponse = GetZacksEbitdaConsensusWithHttpInfo(identifier, type, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks EBITDA Consensus This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksEBITDAConsensus</returns>
+        
+        
+        public ApiResponse< ApiResponseZacksEBITDAConsensus > GetZacksEbitdaConsensusWithHttpInfo (string identifier = null, string type = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/ebitda_consensus";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifier", identifier)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksEbitdaConsensus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksEBITDAConsensus>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseZacksEBITDAConsensus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksEBITDAConsensus)));
+        }
+
+        /// <summary>
+        /// Zacks EBITDA Consensus This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksEBITDAConsensus</returns>
+        public async System.Threading.Tasks.Task<ApiResponseZacksEBITDAConsensus> GetZacksEbitdaConsensusAsync (string identifier = null, string type = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksEBITDAConsensus> localVarResponse = await GetZacksEbitdaConsensusAsyncWithHttpInfo(identifier, type, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks EBITDA Consensus This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID) (optional)</param>
+        /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksEBITDAConsensus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksEBITDAConsensus>> GetZacksEbitdaConsensusAsyncWithHttpInfo (string identifier = null, string type = null, string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/ebitda_consensus";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifier", identifier)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksEbitdaConsensus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksEBITDAConsensus>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseZacksEBITDAConsensus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksEBITDAConsensus)));
         }
 
         /// <summary>
@@ -1970,6 +2257,294 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseZacksETFHoldings>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseZacksETFHoldings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksETFHoldings)));
+        }
+
+        /// <summary>
+        /// Zacks Forward PE Estimates This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseZacksForwardPEs</returns>
+        public ApiResponseZacksForwardPEs GetZacksForwardPe (string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksForwardPEs> localVarResponse = GetZacksForwardPeWithHttpInfo(nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Forward PE Estimates This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseZacksForwardPEs</returns>
+        
+        
+        public ApiResponse< ApiResponseZacksForwardPEs > GetZacksForwardPeWithHttpInfo (string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/forward_pe";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksForwardPe", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksForwardPEs>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseZacksForwardPEs) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksForwardPEs)));
+        }
+
+        /// <summary>
+        /// Zacks Forward PE Estimates This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseZacksForwardPEs</returns>
+        public async System.Threading.Tasks.Task<ApiResponseZacksForwardPEs> GetZacksForwardPeAsync (string nextPage = null)
+        {
+             ApiResponse<ApiResponseZacksForwardPEs> localVarResponse = await GetZacksForwardPeAsyncWithHttpInfo(nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Forward PE Estimates This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseZacksForwardPEs)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseZacksForwardPEs>> GetZacksForwardPeAsyncWithHttpInfo (string nextPage = null)
+        {
+
+            var localVarPath = "/zacks/forward_pe";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksForwardPe", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseZacksForwardPEs>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseZacksForwardPEs) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseZacksForwardPEs)));
+        }
+
+        /// <summary>
+        /// Zacks Forward PE by identifer Returns the forward PE estimates for the identifier
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>ZacksForwardPE</returns>
+        public ZacksForwardPE GetZacksForwardPeByIdentifier (string identifier)
+        {
+             ApiResponse<ZacksForwardPE> localVarResponse = GetZacksForwardPeByIdentifierWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Zacks Forward PE by identifer Returns the forward PE estimates for the identifier
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>ApiResponse of ZacksForwardPE</returns>
+        
+        
+        public ApiResponse< ZacksForwardPE > GetZacksForwardPeByIdentifierWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling ZacksApi->GetZacksForwardPeByIdentifier");
+
+            var localVarPath = "/zacks/forward_pe/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksForwardPeByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ZacksForwardPE>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ZacksForwardPE) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ZacksForwardPE)));
+        }
+
+        /// <summary>
+        /// Zacks Forward PE by identifer Returns the forward PE estimates for the identifier
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>Task of ZacksForwardPE</returns>
+        public async System.Threading.Tasks.Task<ZacksForwardPE> GetZacksForwardPeByIdentifierAsync (string identifier)
+        {
+             ApiResponse<ZacksForwardPE> localVarResponse = await GetZacksForwardPeByIdentifierAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Zacks Forward PE by identifer Returns the forward PE estimates for the identifier
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
+        /// <returns>Task of ApiResponse (ZacksForwardPE)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ZacksForwardPE>> GetZacksForwardPeByIdentifierAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling ZacksApi->GetZacksForwardPeByIdentifier");
+
+            var localVarPath = "/zacks/forward_pe/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetZacksForwardPeByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ZacksForwardPE>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ZacksForwardPE) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ZacksForwardPE)));
         }
 
         /// <summary>

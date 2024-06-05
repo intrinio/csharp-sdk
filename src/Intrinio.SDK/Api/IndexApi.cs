@@ -41,6 +41,73 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseEconomicIndices</returns>
         ApiResponse<ApiResponseEconomicIndices> GetAllEconomicIndicesWithHttpInfo (int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// All End of Day Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponseEodIndexPricesAll</returns>
+        ApiResponseEodIndexPricesAll GetAllEodIndexPrices (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+
+        /// <summary>
+        /// All End of Day Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseEodIndexPricesAll</returns>
+        ApiResponse<ApiResponseEodIndexPricesAll> GetAllEodIndexPricesWithHttpInfo (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+        /// <summary>
+        /// All Index Summaries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseIndices</returns>
+        ApiResponseIndices GetAllIndexSummaries (int? pageSize = null);
+
+        /// <summary>
+        /// All Index Summaries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseIndices</returns>
+        ApiResponse<ApiResponseIndices> GetAllIndexSummariesWithHttpInfo (int? pageSize = null);
+        /// <summary>
+        /// All Realtime Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseRealtimeIndexPrices</returns>
+        ApiResponseRealtimeIndexPrices GetAllRealtimeIndexPrices (int? pageSize = null);
+
+        /// <summary>
+        /// All Realtime Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseRealtimeIndexPrices</returns>
+        ApiResponse<ApiResponseRealtimeIndexPrices> GetAllRealtimeIndexPricesWithHttpInfo (int? pageSize = null);
+        /// <summary>
         /// All SIC Indices
         /// </summary>
         /// <remarks>
@@ -189,24 +256,72 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseEconomicIndexHistoricalData</returns>
         ApiResponse<ApiResponseEconomicIndexHistoricalData> GetEconomicIndexHistoricalDataWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Realtime Index Price
+        /// End of Day Index Prices By Identifier
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponseEodIndexPrices</returns>
+        ApiResponseEodIndexPrices GetEodIndexPriceById (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+
+        /// <summary>
+        /// End of Day Index Prices By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseEodIndexPrices</returns>
+        ApiResponse<ApiResponseEodIndexPrices> GetEodIndexPriceByIdWithHttpInfo (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+        /// <summary>
+        /// Index Summary By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponseIndex</returns>
+        ApiResponseIndex GetIndexSummaryById (string identifier);
+
+        /// <summary>
+        /// Index Summary By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponse of ApiResponseIndex</returns>
+        ApiResponse<ApiResponseIndex> GetIndexSummaryByIdWithHttpInfo (string identifier);
+        /// <summary>
+        /// Realtime Index Price By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>RealtimeIndexPrice</returns>
         RealtimeIndexPrice GetRealtimeIndexPriceById (string identifier);
 
         /// <summary>
-        /// Realtime Index Price
+        /// Realtime Index Price By Identifier
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>ApiResponse of RealtimeIndexPrice</returns>
         ApiResponse<RealtimeIndexPrice> GetRealtimeIndexPriceByIdWithHttpInfo (string identifier);
         /// <summary>
@@ -508,6 +623,73 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndices>> GetAllEconomicIndicesAsyncWithHttpInfo (int? pageSize = null, string nextPage = null);
         /// <summary>
+        /// All End of Day Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponseEodIndexPricesAll</returns>
+        System.Threading.Tasks.Task<ApiResponseEodIndexPricesAll> GetAllEodIndexPricesAsync (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+
+        /// <summary>
+        /// All End of Day Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseEodIndexPricesAll)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEodIndexPricesAll>> GetAllEodIndexPricesAsyncWithHttpInfo (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+        /// <summary>
+        /// All Index Summaries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseIndices</returns>
+        System.Threading.Tasks.Task<ApiResponseIndices> GetAllIndexSummariesAsync (int? pageSize = null);
+
+        /// <summary>
+        /// All Index Summaries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseIndices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseIndices>> GetAllIndexSummariesAsyncWithHttpInfo (int? pageSize = null);
+        /// <summary>
+        /// All Realtime Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseRealtimeIndexPrices</returns>
+        System.Threading.Tasks.Task<ApiResponseRealtimeIndexPrices> GetAllRealtimeIndexPricesAsync (int? pageSize = null);
+
+        /// <summary>
+        /// All Realtime Index Prices
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseRealtimeIndexPrices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseRealtimeIndexPrices>> GetAllRealtimeIndexPricesAsyncWithHttpInfo (int? pageSize = null);
+        /// <summary>
         /// All SIC Indices
         /// </summary>
         /// <remarks>
@@ -656,24 +838,72 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseEconomicIndexHistoricalData)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseEconomicIndexHistoricalData>> GetEconomicIndexHistoricalDataAsyncWithHttpInfo (string identifier, string tag, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Realtime Index Price
+        /// End of Day Index Prices By Identifier
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponseEodIndexPrices</returns>
+        System.Threading.Tasks.Task<ApiResponseEodIndexPrices> GetEodIndexPriceByIdAsync (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+
+        /// <summary>
+        /// End of Day Index Prices By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseEodIndexPrices)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseEodIndexPrices>> GetEodIndexPriceByIdAsyncWithHttpInfo (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+        /// <summary>
+        /// Index Summary By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponseIndex</returns>
+        System.Threading.Tasks.Task<ApiResponseIndex> GetIndexSummaryByIdAsync (string identifier);
+
+        /// <summary>
+        /// Index Summary By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponse (ApiResponseIndex)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseIndex>> GetIndexSummaryByIdAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Realtime Index Price By Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>Task of RealtimeIndexPrice</returns>
         System.Threading.Tasks.Task<RealtimeIndexPrice> GetRealtimeIndexPriceByIdAsync (string identifier);
 
         /// <summary>
-        /// Realtime Index Price
+        /// Realtime Index Price By Identifier
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>Task of ApiResponse (RealtimeIndexPrice)</returns>
         System.Threading.Tasks.Task<ApiResponse<RealtimeIndexPrice>> GetRealtimeIndexPriceByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
@@ -1194,6 +1424,441 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseEconomicIndices>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseEconomicIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEconomicIndices)));
+        }
+
+        /// <summary>
+        /// All End of Day Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponseEodIndexPricesAll</returns>
+        public ApiResponseEodIndexPricesAll GetAllEodIndexPrices (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+             ApiResponse<ApiResponseEodIndexPricesAll> localVarResponse = GetAllEodIndexPricesWithHttpInfo(pageSize, startDate, endDate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All End of Day Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseEodIndexPricesAll</returns>
+        
+        
+        public ApiResponse< ApiResponseEodIndexPricesAll > GetAllEodIndexPricesWithHttpInfo (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+
+            var localVarPath = "/indices/prices/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllEodIndexPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseEodIndexPricesAll>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseEodIndexPricesAll) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEodIndexPricesAll)));
+        }
+
+        /// <summary>
+        /// All End of Day Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponseEodIndexPricesAll</returns>
+        public async System.Threading.Tasks.Task<ApiResponseEodIndexPricesAll> GetAllEodIndexPricesAsync (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+             ApiResponse<ApiResponseEodIndexPricesAll> localVarResponse = await GetAllEodIndexPricesAsyncWithHttpInfo(pageSize, startDate, endDate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All End of Day Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseEodIndexPricesAll)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEodIndexPricesAll>> GetAllEodIndexPricesAsyncWithHttpInfo (int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+
+            var localVarPath = "/indices/prices/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllEodIndexPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseEodIndexPricesAll>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseEodIndexPricesAll) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEodIndexPricesAll)));
+        }
+
+        /// <summary>
+        /// All Index Summaries 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseIndices</returns>
+        public ApiResponseIndices GetAllIndexSummaries (int? pageSize = null)
+        {
+             ApiResponse<ApiResponseIndices> localVarResponse = GetAllIndexSummariesWithHttpInfo(pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All Index Summaries 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseIndices</returns>
+        
+        
+        public ApiResponse< ApiResponseIndices > GetAllIndexSummariesWithHttpInfo (int? pageSize = null)
+        {
+
+            var localVarPath = "/indices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllIndexSummaries", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseIndices>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseIndices)));
+        }
+
+        /// <summary>
+        /// All Index Summaries 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseIndices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseIndices> GetAllIndexSummariesAsync (int? pageSize = null)
+        {
+             ApiResponse<ApiResponseIndices> localVarResponse = await GetAllIndexSummariesAsyncWithHttpInfo(pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All Index Summaries 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseIndices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseIndices>> GetAllIndexSummariesAsyncWithHttpInfo (int? pageSize = null)
+        {
+
+            var localVarPath = "/indices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllIndexSummaries", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseIndices>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseIndices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseIndices)));
+        }
+
+        /// <summary>
+        /// All Realtime Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponseRealtimeIndexPrices</returns>
+        public ApiResponseRealtimeIndexPrices GetAllRealtimeIndexPrices (int? pageSize = null)
+        {
+             ApiResponse<ApiResponseRealtimeIndexPrices> localVarResponse = GetAllRealtimeIndexPricesWithHttpInfo(pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All Realtime Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>ApiResponse of ApiResponseRealtimeIndexPrices</returns>
+        
+        
+        public ApiResponse< ApiResponseRealtimeIndexPrices > GetAllRealtimeIndexPricesWithHttpInfo (int? pageSize = null)
+        {
+
+            var localVarPath = "/indices/prices/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllRealtimeIndexPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseRealtimeIndexPrices>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseRealtimeIndexPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseRealtimeIndexPrices)));
+        }
+
+        /// <summary>
+        /// All Realtime Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponseRealtimeIndexPrices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseRealtimeIndexPrices> GetAllRealtimeIndexPricesAsync (int? pageSize = null)
+        {
+             ApiResponse<ApiResponseRealtimeIndexPrices> localVarResponse = await GetAllRealtimeIndexPricesAsyncWithHttpInfo(pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All Realtime Index Prices 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ApiResponseRealtimeIndexPrices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseRealtimeIndexPrices>> GetAllRealtimeIndexPricesAsyncWithHttpInfo (int? pageSize = null)
+        {
+
+            var localVarPath = "/indices/prices/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllRealtimeIndexPrices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseRealtimeIndexPrices>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseRealtimeIndexPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseRealtimeIndexPrices)));
         }
 
         /// <summary>
@@ -2151,10 +2816,322 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Realtime Index Price 
+        /// End of Day Index Prices By Identifier 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponseEodIndexPrices</returns>
+        public ApiResponseEodIndexPrices GetEodIndexPriceById (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+             ApiResponse<ApiResponseEodIndexPrices> localVarResponse = GetEodIndexPriceByIdWithHttpInfo(identifier, pageSize, startDate, endDate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// End of Day Index Prices By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>ApiResponse of ApiResponseEodIndexPrices</returns>
+        
+        
+        public ApiResponse< ApiResponseEodIndexPrices > GetEodIndexPriceByIdWithHttpInfo (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetEodIndexPriceById");
+
+            var localVarPath = "/indices/{identifier}/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEodIndexPriceById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseEodIndexPrices>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseEodIndexPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEodIndexPrices)));
+        }
+
+        /// <summary>
+        /// End of Day Index Prices By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponseEodIndexPrices</returns>
+        public async System.Threading.Tasks.Task<ApiResponseEodIndexPrices> GetEodIndexPriceByIdAsync (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+             ApiResponse<ApiResponseEodIndexPrices> localVarResponse = await GetEodIndexPriceByIdAsyncWithHttpInfo(identifier, pageSize, startDate, endDate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// End of Day Index Prices By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="startDate">Limit prices to those on or after this date (optional)</param>
+        /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseEodIndexPrices)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseEodIndexPrices>> GetEodIndexPriceByIdAsyncWithHttpInfo (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetEodIndexPriceById");
+
+            var localVarPath = "/indices/{identifier}/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEodIndexPriceById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseEodIndexPrices>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseEodIndexPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEodIndexPrices)));
+        }
+
+        /// <summary>
+        /// Index Summary By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponseIndex</returns>
+        public ApiResponseIndex GetIndexSummaryById (string identifier)
+        {
+             ApiResponse<ApiResponseIndex> localVarResponse = GetIndexSummaryByIdWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Index Summary By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponse of ApiResponseIndex</returns>
+        
+        
+        public ApiResponse< ApiResponseIndex > GetIndexSummaryByIdWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetIndexSummaryById");
+
+            var localVarPath = "/indices/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetIndexSummaryById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseIndex>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseIndex)));
+        }
+
+        /// <summary>
+        /// Index Summary By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponseIndex</returns>
+        public async System.Threading.Tasks.Task<ApiResponseIndex> GetIndexSummaryByIdAsync (string identifier)
+        {
+             ApiResponse<ApiResponseIndex> localVarResponse = await GetIndexSummaryByIdAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Index Summary By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponse (ApiResponseIndex)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseIndex>> GetIndexSummaryByIdAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetIndexSummaryById");
+
+            var localVarPath = "/indices/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetIndexSummaryById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseIndex>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseIndex) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseIndex)));
+        }
+
+        /// <summary>
+        /// Realtime Index Price By Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>RealtimeIndexPrice</returns>
         public RealtimeIndexPrice GetRealtimeIndexPriceById (string identifier)
         {
@@ -2163,10 +3140,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Realtime Index Price 
+        /// Realtime Index Price By Identifier 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>ApiResponse of RealtimeIndexPrice</returns>
         
         
@@ -2225,10 +3202,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Realtime Index Price 
+        /// Realtime Index Price By Identifier 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>Task of RealtimeIndexPrice</returns>
         public async System.Threading.Tasks.Task<RealtimeIndexPrice> GetRealtimeIndexPriceByIdAsync (string identifier)
         {
@@ -2238,10 +3215,10 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Realtime Index Price 
+        /// Realtime Index Price By Identifier 
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol of the currently trading index</param>
+        /// <param name="identifier">The index symbol</param>
         /// <returns>Task of ApiResponse (RealtimeIndexPrice)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RealtimeIndexPrice>> GetRealtimeIndexPriceByIdAsyncWithHttpInfo (string identifier)
         {

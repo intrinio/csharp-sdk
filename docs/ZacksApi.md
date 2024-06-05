@@ -5,10 +5,13 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetZacksAnalystRatings**](ZacksApi.md#getzacksanalystratings) | **GET** /zacks/analyst_ratings | Zacks Analyst Ratings
+[**GetZacksEbitdaConsensus**](ZacksApi.md#getzacksebitdaconsensus) | **GET** /zacks/ebitda_consensus | Zacks EBITDA Consensus
 [**GetZacksEpsEstimates**](ZacksApi.md#getzacksepsestimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
 [**GetZacksEpsGrowthRates**](ZacksApi.md#getzacksepsgrowthrates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**GetZacksEpsSurprises**](ZacksApi.md#getzacksepssurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
 [**GetZacksEtfHoldings**](ZacksApi.md#getzacksetfholdings) | **GET** /zacks/etf_holdings | Zacks ETF Holdings
+[**GetZacksForwardPe**](ZacksApi.md#getzacksforwardpe) | **GET** /zacks/forward_pe | Zacks Forward PE Estimates
+[**GetZacksForwardPeByIdentifier**](ZacksApi.md#getzacksforwardpebyidentifier) | **GET** /zacks/forward_pe/{identifier} | Zacks Forward PE by identifer
 [**GetZacksInstitutionalHoldingCompanies**](ZacksApi.md#getzacksinstitutionalholdingcompanies) | **GET** /zacks/institutional_holdings/companies | Zacks Institutional Holding Companies
 [**GetZacksInstitutionalHoldingOwners**](ZacksApi.md#getzacksinstitutionalholdingowners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
 [**GetZacksInstitutionalHoldings**](ZacksApi.md#getzacksinstitutionalholdings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
@@ -139,6 +142,98 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksAnalystRatings**](ApiResponseZacksAnalystRatings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksEbitdaConsensus)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksEBITDAConsensus)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEBITDAConsensus.md)
+
+[//]: # (OPERATION:GetZacksEbitdaConsensus_v2)
+
+[//]: # (ENDPOINT:/zacks/ebitda_consensus)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksebitdaconsensus)
+
+<a name="getzacksebitdaconsensus"></a>
+## **GetZacksEbitdaConsensus**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksEbitdaConsensus_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksEBITDAConsensus GetZacksEbitdaConsensus (string identifier = null, string type = null, string nextPage = null)
+
+#### Zacks EBITDA Consensus
+
+This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetZacksEbitdaConsensusExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var zacksApi = new ZacksApi();
+      
+      string identifier = "AAPL";
+      string type = null;
+      string nextPage = null;
+      
+      ApiResponseZacksEBITDAConsensus result = zacksApi.GetZacksEbitdaConsensus(identifier, type, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **type** | string| Limit EBITDA estimates to this type | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksEBITDAConsensus**](ApiResponseZacksEBITDAConsensus.md)
 
 [//]: # (END_OPERATION)
 
@@ -555,6 +650,182 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksETFHoldings**](ApiResponseZacksETFHoldings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksForwardPe)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseZacksForwardPEs)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksForwardPEs.md)
+
+[//]: # (OPERATION:GetZacksForwardPe_v2)
+
+[//]: # (ENDPOINT:/zacks/forward_pe)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksforwardpe)
+
+<a name="getzacksforwardpe"></a>
+## **GetZacksForwardPe**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksForwardPe_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksForwardPEs GetZacksForwardPe (string nextPage = null)
+
+#### Zacks Forward PE Estimates
+
+This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetZacksForwardPeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var zacksApi = new ZacksApi();
+      
+      string nextPage = null;
+      
+      ApiResponseZacksForwardPEs result = zacksApi.GetZacksForwardPe(nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksForwardPEs**](ApiResponseZacksForwardPEs.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ZacksApi)
+
+[//]: # (METHOD:GetZacksForwardPeByIdentifier)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ZacksForwardPE)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ZacksForwardPE.md)
+
+[//]: # (OPERATION:GetZacksForwardPeByIdentifier_v2)
+
+[//]: # (ENDPOINT:/zacks/forward_pe/{identifier})
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getzacksforwardpebyidentifier)
+
+<a name="getzacksforwardpebyidentifier"></a>
+## **GetZacksForwardPeByIdentifier**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetZacksForwardPeByIdentifier_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ZacksForwardPE GetZacksForwardPeByIdentifier (string identifier)
+
+#### Zacks Forward PE by identifer
+
+Returns the forward PE estimates for the identifier
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetZacksForwardPeByIdentifierExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var zacksApi = new ZacksApi();
+      
+      string identifier = "MSFT";
+      
+      ZacksForwardPE result = zacksApi.GetZacksForwardPeByIdentifier(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| An Intrinio ID or ticker for a Security |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ZacksForwardPE**](ZacksForwardPE.md)
 
 [//]: # (END_OPERATION)
 

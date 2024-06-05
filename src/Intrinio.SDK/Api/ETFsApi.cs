@@ -138,8 +138,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>ApiResponseETFs</returns>
-        ApiResponseETFs SearchEtfs (string query);
+        ApiResponseETFs SearchEtfs (string query, string mode = null);
 
         /// <summary>
         /// Search ETFs
@@ -149,8 +150,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>ApiResponse of ApiResponseETFs</returns>
-        ApiResponse<ApiResponseETFs> SearchEtfsWithHttpInfo (string query);
+        ApiResponse<ApiResponseETFs> SearchEtfsWithHttpInfo (string query, string mode = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -274,8 +276,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>Task of ApiResponseETFs</returns>
-        System.Threading.Tasks.Task<ApiResponseETFs> SearchEtfsAsync (string query);
+        System.Threading.Tasks.Task<ApiResponseETFs> SearchEtfsAsync (string query, string mode = null);
 
         /// <summary>
         /// Search ETFs
@@ -285,8 +288,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseETFs)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseETFs>> SearchEtfsAsyncWithHttpInfo (string query);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseETFs>> SearchEtfsAsyncWithHttpInfo (string query, string mode = null);
         #endregion Asynchronous Operations
     }
 
@@ -1145,10 +1149,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>ApiResponseETFs</returns>
-        public ApiResponseETFs SearchEtfs (string query)
+        public ApiResponseETFs SearchEtfs (string query, string mode = null)
         {
-             ApiResponse<ApiResponseETFs> localVarResponse = SearchEtfsWithHttpInfo(query);
+             ApiResponse<ApiResponseETFs> localVarResponse = SearchEtfsWithHttpInfo(query, mode);
              return localVarResponse.Data;
         }
 
@@ -1157,10 +1162,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>ApiResponse of ApiResponseETFs</returns>
         
         
-        public ApiResponse< ApiResponseETFs > SearchEtfsWithHttpInfo (string query)
+        public ApiResponse< ApiResponseETFs > SearchEtfsWithHttpInfo (string query, string mode = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1189,6 +1195,7 @@ namespace Intrinio.SDK.Api
             
             
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (mode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mode", mode)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -1219,10 +1226,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>Task of ApiResponseETFs</returns>
-        public async System.Threading.Tasks.Task<ApiResponseETFs> SearchEtfsAsync (string query)
+        public async System.Threading.Tasks.Task<ApiResponseETFs> SearchEtfsAsync (string query, string mode = null)
         {
-             ApiResponse<ApiResponseETFs> localVarResponse = await SearchEtfsAsyncWithHttpInfo(query);
+             ApiResponse<ApiResponseETFs> localVarResponse = await SearchEtfsAsyncWithHttpInfo(query, mode);
              return localVarResponse.Data;
 
         }
@@ -1232,8 +1240,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query"></param>
+        /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseETFs)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseETFs>> SearchEtfsAsyncWithHttpInfo (string query)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseETFs>> SearchEtfsAsyncWithHttpInfo (string query, string mode = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -1262,6 +1271,7 @@ namespace Intrinio.SDK.Api
               
 
             if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
+            if (mode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mode", mode)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

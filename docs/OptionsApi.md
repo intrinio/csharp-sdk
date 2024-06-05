@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllOptionsTickers**](OptionsApi.md#getalloptionstickers) | **GET** /options/tickers | Options Tickers
+[**GetOptionAggregates**](OptionsApi.md#getoptionaggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 [**GetOptionExpirationsRealtime**](OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**GetOptionStrikesRealtime**](OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
 [**GetOptions**](OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
@@ -111,6 +112,94 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ApiResponseOptionsTickers**](ApiResponseOptionsTickers.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionAggregates)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsAggregates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsAggregates.md)
+
+[//]: # (OPERATION:GetOptionAggregates_v2)
+
+[//]: # (ENDPOINT:/options/aggregates)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionaggregates)
+
+<a name="getoptionaggregates"></a>
+## **GetOptionAggregates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionAggregates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsAggregates GetOptionAggregates (Object date = null)
+
+#### Total open interest and volume aggregated by ticker
+
+Returns total open interest and volume by ticker
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionAggregatesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      var date = new Object();
+      
+      ApiResponseOptionsAggregates result = optionsApi.GetOptionAggregates(date);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date** | [**Object**](Object.md)| Return aggregated data for this date | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsAggregates**](ApiResponseOptionsAggregates.md)
 
 [//]: # (END_OPERATION)
 

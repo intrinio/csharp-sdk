@@ -130,9 +130,10 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
-        ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null);
+        ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
 
         /// <summary>
         /// Realtime Stock Prices by Exchange
@@ -145,9 +146,10 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
         /// <summary>
         /// Securities by Exchange
         /// </summary>
@@ -288,9 +290,10 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
 
         /// <summary>
         /// Realtime Stock Prices by Exchange
@@ -303,9 +306,10 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
         /// <summary>
         /// Securities by Exchange
         /// </summary>
@@ -1075,11 +1079,12 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
-        public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = GetStockExchangeRealtimePricesWithHttpInfo(identifier, source, activeOnly, pageSize, nextPage);
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = GetStockExchangeRealtimePricesWithHttpInfo(identifier, source, activeOnly, pageSize, tickers, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1091,11 +1096,12 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
         
         
-        public ApiResponse< ApiResponseStockExchangeRealtimeStockPrices > GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseStockExchangeRealtimeStockPrices > GetStockExchangeRealtimePricesWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1127,6 +1133,7 @@ namespace Intrinio.SDK.Api
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -1161,11 +1168,12 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = await GetStockExchangeRealtimePricesAsyncWithHttpInfo(identifier, source, activeOnly, pageSize, nextPage);
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = await GetStockExchangeRealtimePricesAsyncWithHttpInfo(identifier, source, activeOnly, pageSize, tickers, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1178,9 +1186,10 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1212,6 +1221,7 @@ namespace Intrinio.SDK.Api
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

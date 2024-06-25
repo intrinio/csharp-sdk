@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, string nextPage = null)
+> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
 
 #### Realtime Stock Prices by Exchange
 
@@ -445,9 +445,10 @@ namespace Example
       string source = null;
       bool? activeOnly = null;
       int? pageSize = 100;
+      var tickers = new List<string>();
       string nextPage = null;
       
-      ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, nextPage);
+      ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, tickers, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -467,6 +468,7 @@ Name | Type | Description  | Notes
  **source** | string| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **activeOnly** | bool?| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **tickers** | [**List&lt;string&gt;**](string.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

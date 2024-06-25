@@ -328,9 +328,10 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
@@ -348,9 +349,10 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
-        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -2137,9 +2139,10 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
@@ -2157,9 +2160,10 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -5549,11 +5553,12 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
              return localVarResponse.Data;
         }
 
@@ -5570,11 +5575,12 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
         
         
-        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -5614,6 +5620,7 @@ namespace Intrinio.SDK.Api
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (splitAdjusted != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "split_adjusted", splitAdjusted)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -5653,11 +5660,12 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
              return localVarResponse.Data;
 
         }
@@ -5675,9 +5683,10 @@ namespace Intrinio.SDK.Api
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -5717,6 +5726,7 @@ namespace Intrinio.SDK.Api
             if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
             if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (splitAdjusted != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "split_adjusted", splitAdjusted)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

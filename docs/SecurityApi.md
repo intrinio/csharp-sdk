@@ -1123,7 +1123,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, string nextPage = null)
+> ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
 
 #### Interval Stock Prices for Security
 
@@ -1165,9 +1165,10 @@ namespace Example
       string endTime = null;
       string timezone = "UTC";
       int? pageSize = 100;
+      bool? splitAdjusted = false;
       string nextPage = null;
       
-      ApiResponseSecurityIntervalPrices result = securityApi.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+      ApiResponseSecurityIntervalPrices result = securityApi.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1192,6 +1193,7 @@ Name | Type | Description  | Notes
  **endTime** | string| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **timezone** | string| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **splitAdjusted** | bool?| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

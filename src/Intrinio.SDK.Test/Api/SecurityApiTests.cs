@@ -232,8 +232,9 @@ namespace Intrinio.SDK.Test
             //string endTime = null;
             //string timezone = null;
             //int? pageSize = null;
+            //bool? splitAdjusted = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, nextPage);
+            //var response = instance.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityIntervalPrices> (response, "response is ApiResponseSecurityIntervalPrices");
         }
         

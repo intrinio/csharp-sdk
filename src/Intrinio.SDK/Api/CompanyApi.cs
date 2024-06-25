@@ -453,6 +453,33 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
         ApiResponse<ApiResponseCompanyNews> GetCompanyNewsWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
         /// <summary>
+        /// The body of a news article
+        /// </summary>
+        /// <remarks>
+        /// Returns the news article body.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyNewsBody</returns>
+        ApiResponseCompanyNewsBody GetCompanyNewsBody (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null);
+
+        /// <summary>
+        /// The body of a news article
+        /// </summary>
+        /// <remarks>
+        /// Returns the news article body.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyNewsBody</returns>
+        ApiResponse<ApiResponseCompanyNewsBody> GetCompanyNewsBodyWithHttpInfo (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null);
+        /// <summary>
         /// Get Company&#39;s public float
         /// </summary>
         /// <remarks>
@@ -1099,6 +1126,33 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyNews)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
+        /// <summary>
+        /// The body of a news article
+        /// </summary>
+        /// <remarks>
+        /// Returns the news article body.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyNewsBody</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyNewsBody> GetCompanyNewsBodyAsync (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null);
+
+        /// <summary>
+        /// The body of a news article
+        /// </summary>
+        /// <remarks>
+        /// Returns the news article body.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyNewsBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNewsBody>> GetCompanyNewsBodyAsyncWithHttpInfo (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null);
         /// <summary>
         /// Get Company&#39;s public float
         /// </summary>
@@ -3804,6 +3858,177 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseCompanyNews>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseCompanyNews) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyNews)));
+        }
+
+        /// <summary>
+        /// The body of a news article Returns the news article body.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyNewsBody</returns>
+        public ApiResponseCompanyNewsBody GetCompanyNewsBody (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCompanyNewsBody> localVarResponse = GetCompanyNewsBodyWithHttpInfo(newsStoryId, publicationDate, specificSource, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// The body of a news article Returns the news article body.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyNewsBody</returns>
+        
+        
+        public ApiResponse< ApiResponseCompanyNewsBody > GetCompanyNewsBodyWithHttpInfo (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null)
+        {
+            // verify the required parameter 'newsStoryId' is set
+            if (newsStoryId == null)
+                throw new ApiException(400, "Missing required parameter 'newsStoryId' when calling CompanyApi->GetCompanyNewsBody");
+            // verify the required parameter 'publicationDate' is set
+            if (publicationDate == null)
+                throw new ApiException(400, "Missing required parameter 'publicationDate' when calling CompanyApi->GetCompanyNewsBody");
+
+            var localVarPath = "/companies/news/body";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (specificSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "specific_source", specificSource)); // query parameter
+            if (newsStoryId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "news_story_id", newsStoryId)); // query parameter
+            if (publicationDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "publication_date", publicationDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyNewsBody", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyNewsBody>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyNewsBody) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyNewsBody)));
+        }
+
+        /// <summary>
+        /// The body of a news article Returns the news article body.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyNewsBody</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyNewsBody> GetCompanyNewsBodyAsync (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCompanyNewsBody> localVarResponse = await GetCompanyNewsBodyAsyncWithHttpInfo(newsStoryId, publicationDate, specificSource, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// The body of a news article Returns the news article body.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="newsStoryId">The identifier of the news story.</param>
+        /// <param name="publicationDate">The DateTime of the story.</param>
+        /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyNewsBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNewsBody>> GetCompanyNewsBodyAsyncWithHttpInfo (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null)
+        {
+            // verify the required parameter 'newsStoryId' is set
+            if (newsStoryId == null)
+                throw new ApiException(400, "Missing required parameter 'newsStoryId' when calling CompanyApi->GetCompanyNewsBody");
+            // verify the required parameter 'publicationDate' is set
+            if (publicationDate == null)
+                throw new ApiException(400, "Missing required parameter 'publicationDate' when calling CompanyApi->GetCompanyNewsBody");
+
+            var localVarPath = "/companies/news/body";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (specificSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "specific_source", specificSource)); // query parameter
+            if (newsStoryId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "news_story_id", newsStoryId)); // query parameter
+            if (publicationDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "publication_date", publicationDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCompanyNewsBody", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyNewsBody>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyNewsBody) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyNewsBody)));
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace Intrinio.SDK.Model
         /// <param name="StrikePrice">The strike price of the options contract.</param>
         /// <param name="DaysToExpiration">The number of days to expiration.</param>
         /// <param name="RiskFreeInterestRate">The current risk-free interest rate, as measured by the 3-month Treasury Bill rate.</param>
-        /// <param name="DividendYield">The divident yield of the underlying asset (if applicable).</param>
+        /// <param name="DividendYield">The dividend yield of the underlying asset (if applicable).</param>
         public OptionFactorsRealtime(decimal? MarketPrice = default(decimal?), decimal? UnderlyingPrice = default(decimal?), decimal? StrikePrice = default(decimal?), decimal? DaysToExpiration = default(decimal?), decimal? RiskFreeInterestRate = default(decimal?), decimal? DividendYield = default(decimal?))
         {
             this.MarketPrice = MarketPrice;
@@ -77,9 +77,9 @@ namespace Intrinio.SDK.Model
         public decimal? RiskFreeInterestRate { get; set; }
 
         /// <summary>
-        /// The divident yield of the underlying asset (if applicable)
+        /// The dividend yield of the underlying asset (if applicable)
         /// </summary>
-        /// <value>The divident yield of the underlying asset (if applicable)</value>
+        /// <value>The dividend yield of the underlying asset (if applicable)</value>
         [DataMember(Name="dividend_yield", EmitDefaultValue=false)]
         public decimal? DividendYield { get; set; }
 

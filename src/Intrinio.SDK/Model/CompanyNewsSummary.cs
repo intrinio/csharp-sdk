@@ -111,8 +111,7 @@ namespace Intrinio.SDK.Model
         /// <param name="BusinessRelevance">How strongly correlated the news article is to the business.</param>
         /// <param name="ArticleSentiment">The news sentiment..</param>
         /// <param name="ArticleSentimentConfidence">The confidence score of the sentiment rating.</param>
-        /// <param name="Body">The article body. Requires additional access..</param>
-        public CompanyNewsSummary(string Id = default(string), string Title = default(string), DateTime? PublicationDate = default(DateTime?), string Url = default(string), string Summary = default(string), SourceEnum? Source = default(SourceEnum?), List<NewsTopic> Topics = default(List<NewsTopic>), string Copyright = default(string), string Language = default(string), int? WordCount = default(int?), bool? Spam = default(bool?), decimal? BusinessRelevance = default(decimal?), ArticleSentimentEnum? ArticleSentiment = default(ArticleSentimentEnum?), decimal? ArticleSentimentConfidence = default(decimal?), string Body = default(string))
+        public CompanyNewsSummary(string Id = default(string), string Title = default(string), DateTime? PublicationDate = default(DateTime?), string Url = default(string), string Summary = default(string), SourceEnum? Source = default(SourceEnum?), List<NewsTopic> Topics = default(List<NewsTopic>), string Copyright = default(string), string Language = default(string), int? WordCount = default(int?), bool? Spam = default(bool?), decimal? BusinessRelevance = default(decimal?), ArticleSentimentEnum? ArticleSentiment = default(ArticleSentimentEnum?), decimal? ArticleSentimentConfidence = default(decimal?))
         {
             this.Id = Id;
             this.Title = Title;
@@ -128,7 +127,6 @@ namespace Intrinio.SDK.Model
             this.BusinessRelevance = BusinessRelevance;
             this.ArticleSentiment = ArticleSentiment;
             this.ArticleSentimentConfidence = ArticleSentimentConfidence;
-            this.Body = Body;
         }
         
         /// <summary>
@@ -217,13 +215,6 @@ namespace Intrinio.SDK.Model
         public decimal? ArticleSentimentConfidence { get; set; }
 
         /// <summary>
-        /// The article body. Requires additional access.
-        /// </summary>
-        /// <value>The article body. Requires additional access.</value>
-        [DataMember(Name="body", EmitDefaultValue=false)]
-        public string Body { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -245,7 +236,6 @@ namespace Intrinio.SDK.Model
             sb.Append("  BusinessRelevance: ").Append(BusinessRelevance).Append("\n");
             sb.Append("  ArticleSentiment: ").Append(ArticleSentiment).Append("\n");
             sb.Append("  ArticleSentimentConfidence: ").Append(ArticleSentimentConfidence).Append("\n");
-            sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -349,11 +339,6 @@ namespace Intrinio.SDK.Model
                     this.ArticleSentimentConfidence == input.ArticleSentimentConfidence ||
                     (this.ArticleSentimentConfidence != null &&
                     this.ArticleSentimentConfidence.Equals(input.ArticleSentimentConfidence))
-                ) && 
-                (
-                    this.Body == input.Body ||
-                    (this.Body != null &&
-                    this.Body.Equals(input.Body))
                 );
         }
 
@@ -394,8 +379,6 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.ArticleSentiment.GetHashCode();
                 if (this.ArticleSentimentConfidence != null)
                     hashCode = hashCode * 59 + this.ArticleSentimentConfidence.GetHashCode();
-                if (this.Body != null)
-                    hashCode = hashCode * 59 + this.Body.GetHashCode();
                 return hashCode;
             }
         }

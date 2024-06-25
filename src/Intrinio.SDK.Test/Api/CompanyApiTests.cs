@@ -290,6 +290,21 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetCompanyNewsBody
+        /// </summary>
+        [Test]
+        public void GetCompanyNewsBodyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string newsStoryId = null;
+            //DateTime? publicationDate = null;
+            //string specificSource = null;
+            //string nextPage = null;
+            //var response = instance.GetCompanyNewsBody(newsStoryId, publicationDate, specificSource, nextPage);
+            //Assert.IsInstanceOf<ApiResponseCompanyNewsBody> (response, "response is ApiResponseCompanyNewsBody");
+        }
+        
+        /// <summary>
         /// Test GetCompanyPublicFloat
         /// </summary>
         [Test]

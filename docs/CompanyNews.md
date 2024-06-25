@@ -24,7 +24,6 @@ Name | Type | Description
 **BusinessRelevance** | decimal? | How strongly correlated the news article is to the business &nbsp;
 **ArticleSentiment** | string | The news sentiment. &nbsp;
 **ArticleSentimentConfidence** | decimal? | The confidence score of the sentiment rating &nbsp;
-**Body** | string | The article body. Requires additional access. &nbsp;
 
 [//]: # (END_DEFINITION)
 

@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**GetCompanyHistoricalData**](CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 [**GetCompanyIpos**](CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 [**GetCompanyNews**](CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
+[**GetCompanyNewsBody**](CompanyApi.md#getcompanynewsbody) | **GET** /companies/news/body | The body of a news article
 [**GetCompanyPublicFloat**](CompanyApi.md#getcompanypublicfloat) | **GET** /companies/{identifier}/public_float | Get Company&#39;s public float
 [**GetCompanySecurities**](CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**InsiderTransactionFilingsByCompany**](CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
@@ -1330,6 +1331,100 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:GetCompanyNewsBody)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyNewsBody)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyNewsBody.md)
+
+[//]: # (OPERATION:GetCompanyNewsBody_v2)
+
+[//]: # (ENDPOINT:/companies/news/body)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getcompanynewsbody)
+
+<a name="getcompanynewsbody"></a>
+## **GetCompanyNewsBody**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyNewsBody_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyNewsBody GetCompanyNewsBody (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null)
+
+#### The body of a news article
+
+Returns the news article body.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetCompanyNewsBodyExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string newsStoryId = "new_aBcDef";
+      DateTime? publicationDate = null;
+      string specificSource = null;
+      string nextPage = null;
+      
+      ApiResponseCompanyNewsBody result = companyApi.GetCompanyNewsBody(newsStoryId, publicationDate, specificSource, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **newsStoryId** | string| The identifier of the news story. |  &nbsp;
+ **publicationDate** | DateTime?| The DateTime of the story. |  &nbsp;
+ **specificSource** | string| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyNewsBody**](ApiResponseCompanyNewsBody.md)
 
 [//]: # (END_OPERATION)
 

@@ -6,7 +6,7 @@
         <title>Intrinio</title>
 
         <!-- The package version number that is used when resolving dependencies -->
-        <version>7.5.3</version>
+        <version>7.5.4</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
         <authors>Intrinio</authors>

@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.61.1
-- Package version: 7.5.3
+- API version: 2.62.1
+- Package version: 7.5.4
 
 
 <a name="frameworks-supported"></a>
@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetCompanyHistoricalData**](docs/CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 *CompanyApi* | [**GetCompanyIpos**](docs/CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 *CompanyApi* | [**GetCompanyNews**](docs/CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
+*CompanyApi* | [**GetCompanyNewsBody**](docs/CompanyApi.md#getcompanynewsbody) | **GET** /companies/news/body | The body of a news article
 *CompanyApi* | [**GetCompanyPublicFloat**](docs/CompanyApi.md#getcompanypublicfloat) | **GET** /companies/{identifier}/public_float | Get Company's public float
 *CompanyApi* | [**GetCompanySecurities**](docs/CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *CompanyApi* | [**InsiderTransactionFilingsByCompany**](docs/CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
@@ -369,6 +370,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
  - [Model.ApiResponseCompanyInsiderTransactionFilings](docs/ApiResponseCompanyInsiderTransactionFilings.md)
  - [Model.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
+ - [Model.ApiResponseCompanyNewsBody](docs/ApiResponseCompanyNewsBody.md)
  - [Model.ApiResponseCompanyPublicFloatResult](docs/ApiResponseCompanyPublicFloatResult.md)
  - [Model.ApiResponseCompanyRecognize](docs/ApiResponseCompanyRecognize.md)
  - [Model.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)

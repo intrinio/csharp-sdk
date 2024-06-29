@@ -421,7 +421,7 @@ namespace Intrinio.SDK.Client
             String report = "C# SDK (Intrinio.SDK) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 2.62.1\n";
+            report += "    Version of the API: 2.62.3\n";
             report += "    SDK Package Version: 7.5.4\n";
 
             return report;

@@ -840,7 +840,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //string source = null;
+            //List<string> source = null;
             //var response = instance.GetSecurityRealtimePrice(identifier, source);
             //Assert.IsInstanceOf<RealtimeStockPrice> (response, "response is RealtimeStockPrice");
         }

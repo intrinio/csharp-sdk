@@ -98,9 +98,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -123,9 +123,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -416,7 +416,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -441,7 +441,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -772,9 +772,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -797,9 +797,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -1090,7 +1090,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -1115,7 +1115,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -1548,7 +1548,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -1648,7 +1648,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -1728,7 +1728,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -1807,7 +1807,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -1833,9 +1833,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -1859,9 +1859,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -1920,7 +1920,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -1946,9 +1946,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -1973,9 +1973,9 @@ namespace Intrinio.SDK.Api
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="company">Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date. (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date. (optional)</param>
-        /// <param name="language">Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. (optional)</param>
+        /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountLessThan">News stories will have a word count less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="isSpam">Filter whether it is marked as spam or not.  Unsupported for yahoo source. (optional)</param>
@@ -2032,7 +2032,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2106,7 +2106,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2179,7 +2179,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2259,7 +2259,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2338,7 +2338,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2424,7 +2424,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2509,7 +2509,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2589,7 +2589,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2668,7 +2668,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2748,7 +2748,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2827,7 +2827,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2919,7 +2919,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3010,7 +3010,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3120,7 +3120,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3229,7 +3229,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3330,7 +3330,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3430,7 +3430,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3522,7 +3522,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3613,7 +3613,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3639,7 +3639,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -3665,7 +3665,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -3729,7 +3729,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3755,7 +3755,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -3782,7 +3782,7 @@ namespace Intrinio.SDK.Api
         /// <param name="sentiment">Filter by sentiment.  Unsupported for yahoo source. (optional)</param>
         /// <param name="topic">Filter by topic.  Unsupported for yahoo source. (optional)</param>
         /// <param name="security">Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. (optional)</param>
-        /// <param name="startDate">Limit news stories to those on or after this date (optional)</param>
+        /// <param name="startDate">Limit news stories to those on or after this date. Defaults to yesterday if unspecified. (optional)</param>
         /// <param name="endDate">Limit news stories to those on or before this date (optional)</param>
         /// <param name="language">Filter by language.  Unsupported for yahoo source. (optional)</param>
         /// <param name="wordCountGreaterThan">News stories will have a word count greater than this value.  Unsupported for yahoo source. (optional)</param>
@@ -3844,7 +3844,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3930,7 +3930,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4015,7 +4015,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4101,7 +4101,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4186,7 +4186,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4263,7 +4263,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4339,7 +4339,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4434,7 +4434,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4528,7 +4528,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4605,7 +4605,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4681,7 +4681,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4773,7 +4773,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4864,7 +4864,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4938,7 +4938,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -5011,7 +5011,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -5094,7 +5094,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -5176,7 +5176,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -5256,7 +5256,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -5335,7 +5335,7 @@ namespace Intrinio.SDK.Api
 
             // make the HTTP request
             RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

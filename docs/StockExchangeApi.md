@@ -254,9 +254,9 @@ namespace Example
       var stockExchangeApi = new StockExchangeApi();
       
       string identifier = "USCOMP";
-      DateTime? date = DateTime.Parse("2018-08-14");
+      DateTime? date = "2018-08-14";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -348,9 +348,9 @@ namespace Example
       var stockExchangeApi = new StockExchangeApi();
       
       string identifier = "USCOMP";
-      DateTime? date = DateTime.Parse("2018-08-14");
+      DateTime? date = "2018-08-14";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, string source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
+> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
 
 #### Realtime Stock Prices by Exchange
 
@@ -442,11 +442,11 @@ namespace Example
       var stockExchangeApi = new StockExchangeApi();
       
       string identifier = "USCOMP";
-      string source = null;
-      bool? activeOnly = null;
+      List<string> source = "~null";
+      bool? activeOnly = "~null";
       int? pageSize = 100;
       var tickers = new List<string>();
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, tickers, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -465,7 +465,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **source** | string| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
+ **source** | List&lt;string&gt;| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **activeOnly** | bool?| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **tickers** | [**List&lt;string&gt;**](string.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
@@ -541,7 +541,7 @@ namespace Example
       
       string identifier = "USCOMP";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

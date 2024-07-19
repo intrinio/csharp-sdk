@@ -366,6 +366,25 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsPricesRealtimeByTicker
+        /// </summary>
+        [Test]
+        public void GetOptionsPricesRealtimeByTickerTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //string source = null;
+            //string ivMode = null;
+            //string nextPage = null;
+            //int? pageSize = null;
+            //string stockPriceSource = null;
+            //string model = null;
+            //bool? showExtendedPrice = null;
+            //var response = instance.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice);
+            //Assert.IsInstanceOf<ApiResponseOptionsPricesByTickerRealtime> (response, "response is ApiResponseOptionsPricesByTickerRealtime");
+        }
+        
+        /// <summary>
         /// Test GetOptionsSnapshots
         /// </summary>
         [Test]

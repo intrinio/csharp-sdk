@@ -117,7 +117,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
-            //string source = null;
+            //List<string> source = null;
             //bool? activeOnly = null;
             //int? pageSize = null;
             //List<string> tickers = null;

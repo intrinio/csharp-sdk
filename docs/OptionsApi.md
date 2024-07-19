@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**GetOptionsPricesBatchRealtime**](OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**GetOptionsPricesEod**](OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
 [**GetOptionsPricesRealtime**](OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+[**GetOptionsPricesRealtimeByTicker**](OptionsApi.md#getoptionspricesrealtimebyticker) | **GET** /options/prices/by_ticker/{symbol}/realtime | Option Prices Realtime By Ticker
 [**GetOptionsSnapshots**](OptionsApi.md#getoptionssnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
 [**GetOptionsStatsRealtime**](OptionsApi.md#getoptionsstatsrealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 [**GetUnusualActivity**](OptionsApi.md#getunusualactivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
@@ -265,7 +266,7 @@ namespace Example
       string symbol = "MSFT";
       string after = "2022-01-01";
       string before = "2023-04-01";
-      string source = null;
+      string source = "~null";
       bool? includeRelatedSymbols = false;
       
       ApiResponseOptionsExpirations result = optionsApi.GetOptionExpirationsRealtime(symbol, after, before, source, includeRelatedSymbols);
@@ -360,10 +361,10 @@ namespace Example
       
       string symbol = "MSFT";
       decimal? strike = 95;
-      string source = null;
-      string stockPriceSource = null;
-      string model = null;
-      bool? showExtendedPrice = null;
+      string source = "~null";
+      string stockPriceSource = "~null";
+      string model = "~null";
+      bool? showExtendedPrice = "~null";
       bool? includeRelatedSymbols = false;
       
       ApiResponseOptionsChainRealtime result = optionsApi.GetOptionStrikesRealtime(symbol, strike, source, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
@@ -467,7 +468,7 @@ namespace Example
       string expirationAfter = "2019-01-01";
       string expirationBefore = "2019-12-31";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseOptions result = optionsApi.GetOptions(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -572,7 +573,7 @@ namespace Example
       string expiration = "2022-04-16";
       string expirationAfter = "2022-01-01";
       string expirationBefore = "2023-12-31";
-      string source = null;
+      string source = "~null";
       bool? includeRelatedSymbols = false;
       
       ApiResponseOptionsRealtime result = optionsApi.GetOptionsBySymbolRealtime(symbol, type, strike, strikeGreaterThan, strikeLessThan, expiration, expirationAfter, expirationBefore, source, includeRelatedSymbols);
@@ -672,13 +673,13 @@ namespace Example
       
       string symbol = "MSFT";
       string expiration = "2019-04-05";
-      DateTime? date = null;
-      string type = null;
-      decimal? strike = null;
-      decimal? strikeGreaterThan = null;
-      decimal? strikeLessThan = null;
-      string moneyness = null;
-      int? pageSize = null;
+      DateTime? date = "~null";
+      string type = "~null";
+      decimal? strike = "~null";
+      decimal? strikeGreaterThan = "~null";
+      decimal? strikeLessThan = "~null";
+      string moneyness = "~null";
+      int? pageSize = "~null";
       
       ApiResponseOptionsChain result = optionsApi.GetOptionsChain(symbol, expiration, date, type, strike, strikeGreaterThan, strikeLessThan, moneyness, pageSize);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -776,11 +777,11 @@ namespace Example
       
       string symbol = "AAPL";
       string expiration = "2023-01-20";
-      string type = null;
-      decimal? strike = null;
-      decimal? strikeGreaterThan = null;
-      decimal? strikeLessThan = null;
-      DateTime? date = null;
+      string type = "~null";
+      decimal? strike = "~null";
+      decimal? strikeGreaterThan = "~null";
+      decimal? strikeLessThan = "~null";
+      DateTime? date = "~null";
       bool? includeRelatedSymbols = false;
       
       ApiResponseOptionsChainEod result = optionsApi.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
@@ -878,19 +879,19 @@ namespace Example
       
       string symbol = "MSFT";
       string expiration = "2023-01-20";
-      string source = null;
-      string type = null;
-      decimal? strike = null;
-      decimal? strikeGreaterThan = null;
-      decimal? strikeLessThan = null;
-      decimal? volumeGreaterThan = null;
-      decimal? volumeLessThan = null;
-      decimal? openInterestGreaterThan = null;
-      decimal? openInterestLessThan = null;
-      string moneyness = null;
-      string stockPriceSource = null;
-      string model = null;
-      bool? showExtendedPrice = null;
+      string source = "~null";
+      string type = "~null";
+      decimal? strike = "~null";
+      decimal? strikeGreaterThan = "~null";
+      decimal? strikeLessThan = "~null";
+      decimal? volumeGreaterThan = "~null";
+      decimal? volumeLessThan = "~null";
+      decimal? openInterestGreaterThan = "~null";
+      decimal? openInterestLessThan = "~null";
+      string moneyness = "~null";
+      string stockPriceSource = "~null";
+      string model = "~null";
+      bool? showExtendedPrice = "~null";
       bool? includeRelatedSymbols = false;
       
       ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
@@ -1182,9 +1183,9 @@ namespace Example
       
       string identifier = "SPY___230103P00380000";
       string intervalSize = "5m";
-      string source = null;
+      string source = "~null";
       int? pageSize = 100;
-      DateTime? endTime = null;
+      DateTime? endTime = "~null";
       
       OptionIntervalsResult result = optionsApi.GetOptionsIntervalByContract(identifier, intervalSize, source, pageSize, endTime);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1276,8 +1277,8 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string source = null;
-      DateTime? openTime = null;
+      string source = "~null";
+      DateTime? openTime = "~null";
       
       OptionIntervalsMoversResult result = optionsApi.GetOptionsIntervalMovers(source, openTime);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1366,8 +1367,8 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string source = null;
-      DateTime? openTime = null;
+      string source = "~null";
+      DateTime? openTime = "~null";
       
       OptionIntervalsMoversResult result = optionsApi.GetOptionsIntervalMoversChange(source, openTime);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1456,8 +1457,8 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string source = null;
-      DateTime? openTime = null;
+      string source = "~null";
+      DateTime? openTime = "~null";
       
       OptionIntervalsMoversResult result = optionsApi.GetOptionsIntervalMoversVolume(source, openTime);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1550,7 +1551,7 @@ namespace Example
       string startDate = "2019-01-01";
       string endDate = "2019-12-31";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseOptionPrices result = optionsApi.GetOptionsPrices(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1642,11 +1643,11 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string source = null;
-      bool? showStats = null;
-      string stockPriceSource = null;
-      string model = null;
-      bool? showExtendedPrice = null;
+      string source = "~null";
+      bool? showStats = "~null";
+      string stockPriceSource = "~null";
+      string model = "~null";
+      bool? showExtendedPrice = "~null";
       
       var body = new OptionContractsList();
       body.Contracts = new List<string>(new string[] { "A220121P00055000", "A220121P00057500", "A220121P00060000" });
@@ -1742,9 +1743,9 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string identifier = "AAPL230616P00190000";
-      string nextPage = null;
-      DateTime? startDate = null;
-      DateTime? endDate = null;
+      string nextPage = "~null";
+      DateTime? startDate = "~null";
+      DateTime? endDate = "~null";
       
       ApiResponseOptionsPricesEod result = optionsApi.GetOptionsPricesEod(identifier, nextPage, startDate, endDate);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1836,10 +1837,10 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string identifier = "AAPL230120C00090000";
-      string source = null;
-      string stockPriceSource = null;
-      string model = null;
-      bool? showExtendedPrice = null;
+      string source = "~null";
+      string stockPriceSource = "~null";
+      string model = "~null";
+      bool? showExtendedPrice = "~null";
       
       ApiResponseOptionsPriceRealtime result = optionsApi.GetOptionsPricesRealtime(identifier, source, stockPriceSource, model, showExtendedPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1869,6 +1870,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsPriceRealtime**](ApiResponseOptionsPriceRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsPricesRealtimeByTicker)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsPricesByTickerRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPricesByTickerRealtime.md)
+
+[//]: # (OPERATION:GetOptionsPricesRealtimeByTicker_v2)
+
+[//]: # (ENDPOINT:/options/prices/by_ticker/{symbol}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionspricesrealtimebyticker)
+
+<a name="getoptionspricesrealtimebyticker"></a>
+## **GetOptionsPricesRealtimeByTicker**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsPricesRealtimeByTicker_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+
+#### Option Prices Realtime By Ticker
+
+Returns a list of the latest National Best Bid & Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the ticker.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsPricesRealtimeByTickerExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "MSFT";
+      string source = "~null";
+      string ivMode = "~null";
+      string nextPage = "~null";
+      int? pageSize = 250;
+      string stockPriceSource = "~null";
+      string model = "~null";
+      bool? showExtendedPrice = "~null";
+      
+      ApiResponseOptionsPricesByTickerRealtime result = optionsApi.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The equities ticker symbol, corresponding to the underlying security. |  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **ivMode** | string| Change the mode for the implied volatility calculation to out of the money. | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 250] &nbsp;
+ **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsPricesByTickerRealtime**](ApiResponseOptionsPricesByTickerRealtime.md)
 
 [//]: # (END_OPERATION)
 
@@ -1931,8 +2034,8 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string source = null;
-      DateTime? atDatetime = null;
+      string source = "~null";
+      DateTime? atDatetime = "~null";
       
       OptionSnapshotsResult result = optionsApi.GetOptionsSnapshots(source, atDatetime);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2022,8 +2125,8 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string identifier = "AAPL230120C00090000";
-      string source = null;
-      bool? showExtendedPrice = null;
+      string source = "~null";
+      bool? showExtendedPrice = "~null";
       
       ApiResponseOptionsStatsRealtime result = optionsApi.GetOptionsStatsRealtime(identifier, source, showExtendedPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2114,7 +2217,7 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string symbol = "AAPL";
-      string source = null;
+      string source = "~null";
       
       ApiResponseOptionsUnusualActivity result = optionsApi.GetUnusualActivity(symbol, source);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2204,12 +2307,12 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       string symbol = "AAPL";
-      string nextPage = null;
+      string nextPage = "~null";
       int? pageSize = 100;
-      string activityType = null;
-      string sentiment = null;
-      DateTime? startDate = DateTime.Parse("2022-02-01");
-      DateTime? endDate = DateTime.Parse("2022-02-03");
+      string activityType = "~null";
+      string sentiment = "~null";
+      DateTime? startDate = "2022-02-01";
+      DateTime? endDate = "2022-02-03";
       var minimumTotalValue = new Object();
       var maximumTotalValue = new Object();
       
@@ -2307,7 +2410,7 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string source = null;
+      string source = "~null";
       
       ApiResponseOptionsUnusualActivity result = optionsApi.GetUnusualActivityUniversal(source);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2395,12 +2498,12 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string nextPage = null;
+      string nextPage = "~null";
       int? pageSize = 100;
-      string activityType = null;
-      string sentiment = null;
-      DateTime? startDate = DateTime.Parse("2022-02-01");
-      DateTime? endDate = DateTime.Parse("2022-02-03");
+      string activityType = "~null";
+      string sentiment = "~null";
+      DateTime? startDate = "2022-02-01";
+      DateTime? endDate = "2022-02-03";
       var minimumTotalValue = new Object();
       var maximumTotalValue = new Object();
       

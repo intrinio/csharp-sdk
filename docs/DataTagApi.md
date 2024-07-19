@@ -68,13 +68,13 @@ namespace Example
       
       var dataTagApi = new DataTagApi();
       
-      string tag = null;
-      string type = null;
-      string parent = null;
+      string tag = "~null";
+      string type = "~null";
+      string parent = "~null";
       string statementCode = "income_statement";
-      string fsTemplate = null;
+      string fsTemplate = "~null";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseDataTags result = dataTagApi.GetAllDataTags(tag, type, parent, statementCode, fsTemplate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

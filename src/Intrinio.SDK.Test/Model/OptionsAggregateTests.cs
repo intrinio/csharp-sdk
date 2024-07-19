@@ -67,6 +67,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Ticker'
         }
         /// <summary>
+        /// Test the property 'Date'
+        /// </summary>
+        [Test]
+        public void DateTest()
+        {
+            // TODO unit test for the property 'Date'
+        }
+        /// <summary>
         /// Test the property 'TotalOpenInterest'
         /// </summary>
         [Test]
@@ -81,6 +89,38 @@ namespace Intrinio.SDK.Test
         public void TotalVolumeTest()
         {
             // TODO unit test for the property 'TotalVolume'
+        }
+        /// <summary>
+        /// Test the property 'TotalPutVolume'
+        /// </summary>
+        [Test]
+        public void TotalPutVolumeTest()
+        {
+            // TODO unit test for the property 'TotalPutVolume'
+        }
+        /// <summary>
+        /// Test the property 'TotalCallVolume'
+        /// </summary>
+        [Test]
+        public void TotalCallVolumeTest()
+        {
+            // TODO unit test for the property 'TotalCallVolume'
+        }
+        /// <summary>
+        /// Test the property 'PutCallVolumeRatio'
+        /// </summary>
+        [Test]
+        public void PutCallVolumeRatioTest()
+        {
+            // TODO unit test for the property 'PutCallVolumeRatio'
+        }
+        /// <summary>
+        /// Test the property 'ContractCount'
+        /// </summary>
+        [Test]
+        public void ContractCountTest()
+        {
+            // TODO unit test for the property 'ContractCount'
         }
 
     }

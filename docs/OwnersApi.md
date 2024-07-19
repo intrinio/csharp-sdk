@@ -70,9 +70,9 @@ namespace Example
       
       var ownersApi = new OwnersApi();
       
-      bool? institutional = null;
+      bool? institutional = "~null";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseOwners result = ownersApi.GetAllOwners(institutional, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -251,10 +251,10 @@ namespace Example
       var ownersApi = new OwnersApi();
       
       string identifier = "0001494730";
-      DateTime? startDate = DateTime.Parse("2018-01-01");
-      DateTime? endDate = DateTime.Parse("2019-01-01");
+      DateTime? startDate = "2018-01-01";
+      DateTime? endDate = "2019-01-01";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseOwnerInsiderTransactionFilings result = ownersApi.InsiderTransactionFilingsByOwner(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -348,8 +348,8 @@ namespace Example
       
       string identifier = 430692;
       int? pageSize = 100;
-      DateTime? asOfDate = DateTime.Parse("2021-01-05");
-      string nextPage = null;
+      DateTime? asOfDate = "2021-01-05";
+      string nextPage = "~null";
       
       ApiResponseOwnerInstitutionalHoldings result = ownersApi.InstitutionalHoldingsByOwner(identifier, pageSize, asOfDate, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -441,9 +441,9 @@ namespace Example
       var ownersApi = new OwnersApi();
       
       string query = "Cook";
-      bool? institutional = null;
+      bool? institutional = "~null";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseOwners result = ownersApi.SearchOwners(query, institutional, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

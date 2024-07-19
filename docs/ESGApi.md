@@ -73,7 +73,7 @@ namespace Example
       string industry = "Retail";
       string ticker = "SHOP";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseESGCompanies result = eSGApi.GetEsgCompanies(country, industry, ticker, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -166,7 +166,7 @@ namespace Example
       
       string identifier = "AAPL";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseESGCompanyComprehensiveRatingHistory result = eSGApi.GetEsgCompanyComprehensiveRatings(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -257,7 +257,7 @@ namespace Example
       
       string identifier = "AAPL";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseESGCompanyRatingHistory result = eSGApi.GetEsgCompanyRatings(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -348,7 +348,7 @@ namespace Example
       
       string country = "USA";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseESGLatest result = eSGApi.GetEsgLatest(country, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -439,7 +439,7 @@ namespace Example
       
       string country = "USA";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseESGLatestComprehensive result = eSGApi.GetEsgLatestComprehensive(country, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

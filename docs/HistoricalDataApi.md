@@ -69,12 +69,12 @@ namespace Example
       string identifier = "AAPL";
       string tag = "marketcap";
       string frequency = "daily";
-      string type = null;
-      DateTime? startDate = DateTime.Parse("2015-01-01");
-      DateTime? endDate = null;
+      string type = "~null";
+      DateTime? startDate = "2015-01-01";
+      DateTime? endDate = "~null";
       string sortOrder = "desc";
       int? pageSize = 100;
-      string nextPage = null;
+      string nextPage = "~null";
       
       ApiResponseHistoricalData result = historicalDataApi.GetHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

@@ -66,11 +66,11 @@ namespace Example
       
       var insiderTransactionFilingsApi = new InsiderTransactionFilingsApi();
       
-      DateTime? startDate = "2015-01-01";
-      DateTime? endDate = "~null";
+      DateTime? startDate = DateTime.Parse("2015-01-01");
+      DateTime? endDate = null;
       int? pageSize = 100;
       string sortBy = "updated_on";
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseOwnerInsiderTransactionFilings result = insiderTransactionFilingsApi.GetAllInsiderTransactionFilings(startDate, endDate, pageSize, sortBy, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

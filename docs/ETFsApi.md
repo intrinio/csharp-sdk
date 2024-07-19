@@ -73,7 +73,7 @@ namespace Example
       
       string exchange = "XNAS";
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseETFs result = eTFsApi.GetAllEtfs(exchange, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -341,7 +341,7 @@ namespace Example
       
       string identifier = "SPY";
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseETFHoldings result = eTFsApi.GetEtfHoldings(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -520,7 +520,7 @@ namespace Example
       var eTFsApi = new ETFsApi();
       
       string query = "iShares";
-      string mode = "~null";
+      string mode = null;
       
       ApiResponseETFs result = eTFsApi.SearchEtfs(query, mode);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

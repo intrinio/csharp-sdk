@@ -254,9 +254,9 @@ namespace Example
       var stockExchangeApi = new StockExchangeApi();
       
       string identifier = "USCOMP";
-      DateTime? date = "2018-08-14";
+      DateTime? date = DateTime.Parse("2018-08-14");
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustments(identifier, date, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -348,9 +348,9 @@ namespace Example
       var stockExchangeApi = new StockExchangeApi();
       
       string identifier = "USCOMP";
-      DateTime? date = "2018-08-14";
+      DateTime? date = DateTime.Parse("2018-08-14");
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -442,11 +442,11 @@ namespace Example
       var stockExchangeApi = new StockExchangeApi();
       
       string identifier = "USCOMP";
-      List<string> source = "~null";
-      bool? activeOnly = "~null";
+      List<string> source = null;
+      bool? activeOnly = null;
       int? pageSize = 100;
       var tickers = new List<string>();
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, tickers, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -541,7 +541,7 @@ namespace Example
       
       string identifier = "USCOMP";
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseStockExchangeSecurities result = stockExchangeApi.GetStockExchangeSecurities(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

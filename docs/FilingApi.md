@@ -78,13 +78,13 @@ namespace Example
       
       string company = "AAPL";
       string reportType = "10-Q";
-      DateTime? startDate = "2015-01-01";
-      DateTime? endDate = "~null";
-      string industryCategory = "~null";
-      string industryGroup = "~null";
-      bool? theaEnabled = "~null";
+      DateTime? startDate = DateTime.Parse("2015-01-01");
+      DateTime? endDate = null;
+      string industryCategory = null;
+      string industryGroup = null;
+      bool? theaEnabled = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -182,12 +182,12 @@ namespace Example
       
       string company = "AAPL";
       string reportType = "10-Q";
-      DateTime? filingStartDate = "~null";
-      DateTime? filingEndDate = "~null";
-      DateTime? periodEndedStartDate = "~null";
-      DateTime? periodEndedEndDate = "~null";
+      DateTime? filingStartDate = null;
+      DateTime? filingEndDate = null;
+      DateTime? periodEndedStartDate = null;
+      DateTime? periodEndedEndDate = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseFilingNotes result = filingApi.GetAllNotes(company, reportType, filingStartDate, filingEndDate, periodEndedStartDate, periodEndedEndDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -460,13 +460,13 @@ namespace Example
       var filingApi = new FilingApi();
       
       string identifier = "fil_B73xBG";
-      string statementCode = "~null";
-      string type = "~null";
-      int? fiscalYear = "~null";
-      string fiscalPeriod = "~null";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      string nextPage = "~null";
+      string statementCode = null;
+      string type = null;
+      int? fiscalYear = null;
+      string fiscalPeriod = null;
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      string nextPage = null;
       
       ApiResponseFilingFundamentals result = filingApi.GetFilingFundamentals(identifier, statementCode, type, fiscalYear, fiscalPeriod, startDate, endDate, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1001,8 +1001,8 @@ namespace Example
       var filingApi = new FilingApi();
       
       string query = "inflation";
-      DateTime? filingStartDate = "2018-07-15";
-      DateTime? filingEndDate = "2018-11-30";
+      DateTime? filingStartDate = DateTime.Parse("2018-07-15");
+      DateTime? filingEndDate = DateTime.Parse("2018-11-30");
       int? pageSize = 100;
       
       ApiResponseFilingNotesSearch result = filingApi.SearchNotes(query, filingStartDate, filingEndDate, pageSize);

@@ -239,12 +239,12 @@ namespace Example
       string pair = "EURUSD";
       string timeframe = "D1";
       string timezone = "UTC";
-      DateTime? startDate = "2018-01-01";
-      string startTime = "~null";
-      DateTime? endDate = "2019-01-01";
-      string endTime = "~null";
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      string startTime = null;
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+      string endTime = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseForexPrices result = forexApi.GetForexPrices(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

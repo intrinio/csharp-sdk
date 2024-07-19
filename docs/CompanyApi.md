@@ -87,17 +87,17 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      DateTime? latestFilingDate = "~null";
-      string sic = "~null";
-      string template = "~null";
-      string sector = "~null";
-      string industryCategory = "~null";
-      string industryGroup = "~null";
+      DateTime? latestFilingDate = null;
+      string sic = null;
+      string template = null;
+      string sector = null;
+      string industryCategory = null;
+      string industryGroup = null;
       bool? hasFundamentals = true;
       bool? hasStockPrices = true;
-      bool? theaEnabled = "~null";
+      bool? theaEnabled = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -197,8 +197,8 @@ namespace Example
       
       DateTime? onDate = 2013-10-20;
       int? pageSize = 100;
-      string nextPage = "~null";
-      string nextPage2 = "~null";
+      string nextPage = null;
+      string nextPage2 = "";
       
       ApiResponseCompanyDailyMetrics result = companyApi.GetAllCompaniesDailyMetrics(onDate, pageSize, nextPage, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -289,21 +289,21 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string specificSource = "~null";
+      string specificSource = null;
       int? pageSize = 100;
-      string sentiment = "~null";
-      string topic = "~null";
+      string sentiment = null;
+      string topic = null;
       string company = "AAPL";
       string security = "AAPL";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      string language = "~null";
-      int? wordCountGreaterThan = "~null";
-      int? wordCountLessThan = "~null";
-      bool? isSpam = "~null";
-      decimal? businessRelevanceGreaterThan = "~null";
-      decimal? businessRelevanceLessThan = "~null";
-      string nextPage = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      string language = null;
+      int? wordCountGreaterThan = null;
+      int? wordCountLessThan = null;
+      bool? isSpam = null;
+      decimal? businessRelevanceGreaterThan = null;
+      decimal? businessRelevanceLessThan = null;
+      string nextPage = null;
       
       ApiResponseNews result = companyApi.GetAllCompanyNews(specificSource, pageSize, sentiment, topic, company, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -586,8 +586,8 @@ namespace Example
       string identifier = "AAPL";
       DateTime? onDate = 2013-10-20;
       int? pageSize = 100;
-      string nextPage = "~null";
-      string nextPage2 = "~null";
+      string nextPage = null;
+      string nextPage2 = "";
       
       ApiResponseCompanyDailyMetrics result = companyApi.GetCompanyDailyMetrics(identifier, onDate, pageSize, nextPage, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -860,12 +860,12 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      string reportType = "~null";
-      DateTime? startDate = "2015-01-01";
-      DateTime? endDate = "~null";
-      bool? theaEnabled = "~null";
+      string reportType = null;
+      DateTime? startDate = DateTime.Parse("2015-01-01");
+      DateTime? endDate = null;
+      bool? theaEnabled = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, reportType, startDate, endDate, theaEnabled, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -960,18 +960,18 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      DateTime? filedAfter = "~null";
-      DateTime? filedBefore = "~null";
+      DateTime? filedAfter = null;
+      DateTime? filedBefore = null;
       bool? reportedOnly = false;
-      int? fiscalYear = "~null";
-      string statementCode = "~null";
-      string type = "~null";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      DateTime? updatedAfter = "2022-12-01";
-      DateTime? updatedBefore = "2022-12-01";
+      int? fiscalYear = null;
+      string statementCode = null;
+      string type = null;
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      DateTime? updatedAfter = DateTime.Parse("2022-12-01");
+      DateTime? updatedBefore = DateTime.Parse("2022-12-01");
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseCompanyFundamentals result = companyApi.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, updatedAfter, updatedBefore, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1074,12 +1074,12 @@ namespace Example
       string identifier = "AAPL";
       string tag = "marketcap";
       string frequency = "daily";
-      string type = "~null";
-      DateTime? startDate = "2018-01-01";
-      DateTime? endDate = "~null";
-      string sortOrder = "~null";
+      string type = null;
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = null;
+      string sortOrder = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseCompanyHistoricalData result = companyApi.GetCompanyHistoricalData(identifier, tag, frequency, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1176,13 +1176,13 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string ticker = "UBER";
-      string status = "~null";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      int? offerAmountGreaterThan = "~null";
-      int? offerAmountLessThan = "~null";
+      string status = null;
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      int? offerAmountGreaterThan = null;
+      int? offerAmountLessThan = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseInitialPublicOfferings result = companyApi.GetCompanyIpos(ticker, status, startDate, endDate, offerAmountGreaterThan, offerAmountLessThan, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1278,20 +1278,20 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      string specificSource = "~null";
+      string specificSource = null;
       int? pageSize = 100;
-      string sentiment = "~null";
-      string topic = "~null";
+      string sentiment = null;
+      string topic = null;
       string security = "AAPL";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      string language = "~null";
-      int? wordCountGreaterThan = "~null";
-      int? wordCountLessThan = "~null";
-      bool? isSpam = "~null";
-      decimal? businessRelevanceGreaterThan = "~null";
-      decimal? businessRelevanceLessThan = "~null";
-      string nextPage = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      string language = null;
+      int? wordCountGreaterThan = null;
+      int? wordCountLessThan = null;
+      bool? isSpam = null;
+      decimal? businessRelevanceGreaterThan = null;
+      decimal? businessRelevanceLessThan = null;
+      string nextPage = null;
       
       ApiResponseCompanyNews result = companyApi.GetCompanyNews(identifier, specificSource, pageSize, sentiment, topic, security, startDate, endDate, language, wordCountGreaterThan, wordCountLessThan, isSpam, businessRelevanceGreaterThan, businessRelevanceLessThan, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1394,9 +1394,9 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string newsStoryId = "new_aBcDef";
-      DateTime? publicationDate = "~null";
-      string specificSource = "~null";
-      string nextPage = "~null";
+      DateTime? publicationDate = null;
+      string specificSource = null;
+      string nextPage = null;
       
       ApiResponseCompanyNewsBody result = companyApi.GetCompanyNewsBody(newsStoryId, publicationDate, specificSource, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1488,10 +1488,10 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      DateTime? floatDateGreaterThan = "~null";
-      DateTime? floatDateLessThan = "~null";
-      string nextPage = "~null";
-      string nextPage2 = "~null";
+      DateTime? floatDateGreaterThan = null;
+      DateTime? floatDateLessThan = null;
+      string nextPage = null;
+      string nextPage2 = "";
       
       ApiResponseCompanyPublicFloatResult result = companyApi.GetCompanyPublicFloat(identifier, floatDateGreaterThan, floatDateLessThan, nextPage, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1584,7 +1584,7 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseCompanySecurities result = companyApi.GetCompanySecurities(identifier, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1674,13 +1674,13 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      DateTime? startDate = "2018-01-01";
-      DateTime? endDate = "2019-01-01";
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = DateTime.Parse("2019-01-01");
       string ownershipType = "D";
-      string nextPage = "~null";
+      string nextPage = null;
       int? pageSize = 100;
       string sortBy = "updated_on";
-      string nextPage2 = "~null";
+      string nextPage2 = "";
       
       ApiResponseInsiderTransactionFilings result = companyApi.InsiderTransactionFilingsByCompany(identifier, startDate, endDate, ownershipType, nextPage, pageSize, sortBy, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1776,7 +1776,7 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      string nextPage = "~null";
+      string nextPage = null;
       
       InsiderTransactionFiling result = companyApi.LatestInsiderTransactionFilingByCompany(identifier, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -2049,7 +2049,7 @@ namespace Example
       
       string query = "Apple";
       bool? active = true;
-      string mode = "~null";
+      string mode = null;
       int? pageSize = 100;
       
       ApiResponseCompaniesSearch result = companyApi.SearchCompanies(query, active, mode, pageSize);
@@ -2142,8 +2142,8 @@ namespace Example
       var companyApi = new CompanyApi();
       
       string identifier = "AAPL";
-      DateTime? endDateGreaterThan = "~null";
-      DateTime? endDateLessThan = "~null";
+      DateTime? endDateGreaterThan = null;
+      DateTime? endDateLessThan = null;
       
       ApiResponseCompanySharesOutstanding result = companyApi.SharesOutstandingByCompany(identifier, endDateGreaterThan, endDateLessThan);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

@@ -90,7 +90,7 @@ namespace Example
       var indexApi = new IndexApi();
       
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseEconomicIndices result = indexApi.GetAllEconomicIndices(pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -179,8 +179,8 @@ namespace Example
       var indexApi = new IndexApi();
       
       int? pageSize = 100;
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
       
       ApiResponseEodIndexPricesAll result = indexApi.GetAllEodIndexPrices(pageSize, startDate, endDate);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -444,7 +444,7 @@ namespace Example
       var indexApi = new IndexApi();
       
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseSICIndices result = indexApi.GetAllSicIndices(pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -533,7 +533,7 @@ namespace Example
       var indexApi = new IndexApi();
       
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseStockMarketIndices result = indexApi.GetAllStockMarketIndices(pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -892,12 +892,12 @@ namespace Example
       
       string identifier = "$GDP";
       string tag = "level";
-      string type = "~null";
-      DateTime? startDate = "2018-01-01";
-      DateTime? endDate = "~null";
+      string type = null;
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = null;
       string sortOrder = "desc";
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseEconomicIndexHistoricalData result = indexApi.GetEconomicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -993,8 +993,8 @@ namespace Example
       
       string identifier = "SPX";
       int? pageSize = 100;
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
       
       ApiResponseEodIndexPrices result = indexApi.GetEodIndexPriceById(identifier, pageSize, startDate, endDate);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1528,12 +1528,12 @@ namespace Example
       
       string identifier = "$SIC.1";
       string tag = "marketcap";
-      string type = "~null";
-      DateTime? startDate = "2018-01-01";
-      DateTime? endDate = "~null";
+      string type = null;
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = null;
       string sortOrder = "desc";
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseSICIndexHistoricalData result = indexApi.GetSicIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1897,12 +1897,12 @@ namespace Example
       
       string identifier = "$DJI";
       string tag = "level";
-      string type = "~null";
-      DateTime? startDate = "2018-01-01";
-      DateTime? endDate = "~null";
+      string type = null;
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = null;
       string sortOrder = "desc";
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseStockMarketIndexHistoricalData result = indexApi.GetStockMarketIndexHistoricalData(identifier, tag, type, startDate, endDate, sortOrder, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

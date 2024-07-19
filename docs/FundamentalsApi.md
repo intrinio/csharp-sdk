@@ -71,19 +71,19 @@ namespace Example
       
       var fundamentalsApi = new FundamentalsApi();
       
-      DateTime? filedAfter = "2022-01-01";
-      DateTime? filedBefore = "2022-12-01";
+      DateTime? filedAfter = DateTime.Parse("2022-01-01");
+      DateTime? filedBefore = DateTime.Parse("2022-12-01");
       bool? reportedOnly = false;
       int? fiscalYear = 2017;
-      string statementCode = "~null";
+      string statementCode = null;
       string type = false;
       string fiscalPeriod = "FY";
-      DateTime? startDate = "2022-01-01";
-      DateTime? endDate = "2022-12-01";
-      DateTime? updatedAfter = "2022-12-01";
-      DateTime? updatedBefore = "2022-12-01";
+      DateTime? startDate = DateTime.Parse("2022-01-01");
+      DateTime? endDate = DateTime.Parse("2022-12-01");
+      DateTime? updatedAfter = DateTime.Parse("2022-12-01");
+      DateTime? updatedBefore = DateTime.Parse("2022-12-01");
       string template = "indu";
-      string nextPage = "~null";
+      string nextPage = null;
       
       Fundamental result = fundamentalsApi.FilterFundamental(filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fiscalPeriod, startDate, endDate, updatedAfter, updatedBefore, template, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

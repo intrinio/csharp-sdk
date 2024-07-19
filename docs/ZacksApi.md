@@ -81,24 +81,24 @@ namespace Example
       var zacksApi = new ZacksApi();
       
       string identifier = "AAPL";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      decimal? meanGreater = "~null";
-      decimal? meanLess = "~null";
-      int? strongBuysGreater = "~null";
-      int? strongBuysLess = "~null";
-      int? buysGreater = "~null";
-      int? buysLess = "~null";
-      int? holdsGreater = "~null";
-      int? holdsLess = "~null";
-      int? sellsGreater = "~null";
-      int? sellsLess = "~null";
-      int? strongSellsGreater = "~null";
-      int? strongSellsLess = "~null";
-      int? totalGreater = "~null";
-      int? totalLess = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      decimal? meanGreater = null;
+      decimal? meanLess = null;
+      int? strongBuysGreater = null;
+      int? strongBuysLess = null;
+      int? buysGreater = null;
+      int? buysLess = null;
+      int? holdsGreater = null;
+      int? holdsLess = null;
+      int? sellsGreater = null;
+      int? sellsLess = null;
+      int? strongSellsGreater = null;
+      int? strongSellsLess = null;
+      int? totalGreater = null;
+      int? totalLess = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksAnalystRatings result = zacksApi.GetZacksAnalystRatings(identifier, startDate, endDate, meanGreater, meanLess, strongBuysGreater, strongBuysLess, buysGreater, buysLess, holdsGreater, holdsLess, sellsGreater, sellsLess, strongSellsGreater, strongSellsLess, totalGreater, totalLess, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -205,8 +205,8 @@ namespace Example
       var zacksApi = new ZacksApi();
       
       string identifier = "AAPL";
-      string type = "~null";
-      string nextPage = "~null";
+      string type = null;
+      string nextPage = null;
       
       ApiResponseZacksEBITDAConsensus result = zacksApi.GetZacksEbitdaConsensus(identifier, type, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -297,14 +297,14 @@ namespace Example
       var zacksApi = new ZacksApi();
       
       string identifier = "AAPL";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      int? fiscalYear = "~null";
-      string fiscalPeriod = "~null";
-      int? calendarYear = "~null";
-      string calendarPeriod = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      int? fiscalYear = null;
+      string fiscalPeriod = null;
+      int? calendarYear = null;
+      string calendarPeriod = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksEPSEstimates result = zacksApi.GetZacksEpsEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -401,10 +401,10 @@ namespace Example
       var zacksApi = new ZacksApi();
       
       string company = "AAPL";
-      string industryGroupName = "~null";
-      string industryGroupNumber = "~null";
+      string industryGroupName = null;
+      string industryGroupNumber = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksEPSGrowthRates result = zacksApi.GetZacksEpsGrowthRates(company, industryGroupName, industryGroupNumber, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -496,22 +496,22 @@ namespace Example
       
       var zacksApi = new ZacksApi();
       
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      decimal? epsActualGreater = "~null";
-      decimal? epsActualLess = "~null";
-      decimal? epsMeanEstimateGreater = "~null";
-      decimal? epsMeanEstimateLess = "~null";
-      decimal? epsAmountDiffGreater = "~null";
-      decimal? epsAmountDiffLess = "~null";
-      decimal? epsPercentDiffGreater = "~null";
-      decimal? epsPercentDiffLess = "~null";
-      decimal? epsCountEstimateGreater = "~null";
-      decimal? epsCountEstimateLess = "~null";
-      decimal? epsStdDevEstimateGreater = "~null";
-      decimal? epsStdDevEstimateLess = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      decimal? epsActualGreater = null;
+      decimal? epsActualLess = null;
+      decimal? epsMeanEstimateGreater = null;
+      decimal? epsMeanEstimateLess = null;
+      decimal? epsAmountDiffGreater = null;
+      decimal? epsAmountDiffLess = null;
+      decimal? epsPercentDiffGreater = null;
+      decimal? epsPercentDiffLess = null;
+      decimal? epsCountEstimateGreater = null;
+      decimal? epsCountEstimateLess = null;
+      decimal? epsStdDevEstimateGreater = null;
+      decimal? epsStdDevEstimateLess = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksEPSSurprises result = zacksApi.GetZacksEpsSurprises(startDate, endDate, epsActualGreater, epsActualLess, epsMeanEstimateGreater, epsMeanEstimateLess, epsAmountDiffGreater, epsAmountDiffLess, epsPercentDiffGreater, epsPercentDiffLess, epsCountEstimateGreater, epsCountEstimateLess, epsStdDevEstimateGreater, epsStdDevEstimateLess, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -616,10 +616,10 @@ namespace Example
       
       string etfTicker = "SPY";
       string holdingSymbol = "AAPL";
-      decimal? weightGreater = "~null";
-      decimal? weightLess = "~null";
+      decimal? weightGreater = null;
+      decimal? weightLess = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksETFHoldings result = zacksApi.GetZacksEtfHoldings(etfTicker, holdingSymbol, weightGreater, weightLess, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -712,7 +712,7 @@ namespace Example
       
       var zacksApi = new ZacksApi();
       
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksForwardPEs result = zacksApi.GetZacksForwardPe(nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -888,9 +888,9 @@ namespace Example
       
       var zacksApi = new ZacksApi();
       
-      string ticker = "~null";
+      string ticker = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksInstitutionalHoldingCompanies result = zacksApi.GetZacksInstitutionalHoldingCompanies(ticker, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -980,9 +980,9 @@ namespace Example
       
       var zacksApi = new ZacksApi();
       
-      string cik = "~null";
+      string cik = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksInstitutionalHoldingOwners result = zacksApi.GetZacksInstitutionalHoldingOwners(cik, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1072,10 +1072,10 @@ namespace Example
       
       var zacksApi = new ZacksApi();
       
-      string ticker = "~null";
-      string ownerCik = "~null";
+      string ticker = null;
+      string ownerCik = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksInstitutionalHoldings result = zacksApi.GetZacksInstitutionalHoldings(ticker, ownerCik, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1168,7 +1168,7 @@ namespace Example
       
       string identifier = "AAPL";
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksLongTermGrowthRates result = zacksApi.GetZacksLongTermGrowthRates(identifier, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1259,15 +1259,15 @@ namespace Example
       var zacksApi = new ZacksApi();
       
       string identifier = "AAPL";
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      int? fiscalYear = "~null";
-      string fiscalPeriod = "~null";
-      int? calendarYear = "~null";
-      string calendarPeriod = "~null";
-      string nextPage = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      int? fiscalYear = null;
+      string fiscalPeriod = null;
+      int? calendarYear = null;
+      string calendarPeriod = null;
+      string nextPage = null;
       int? pageSize = 100;
-      string nextPage2 = "~null";
+      string nextPage2 = "";
       
       ApiResponseZacksSalesEstimates result = zacksApi.GetZacksSalesEstimates(identifier, startDate, endDate, fiscalYear, fiscalPeriod, calendarYear, calendarPeriod, nextPage, pageSize, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1364,22 +1364,22 @@ namespace Example
       
       var zacksApi = new ZacksApi();
       
-      DateTime? startDate = "~null";
-      DateTime? endDate = "~null";
-      decimal? salesActualGreater = "~null";
-      decimal? salesActualLess = "~null";
-      decimal? salesMeanEstimateGreater = "~null";
-      decimal? salesMeanEstimateLess = "~null";
-      decimal? salesAmountDiffGreater = "~null";
-      decimal? salesAmountDiffLess = "~null";
-      decimal? salesPercentDiffGreater = "~null";
-      decimal? salesPercentDiffLess = "~null";
-      decimal? salesCountEstimateGreater = "~null";
-      decimal? salesCountEstimateLess = "~null";
-      decimal? salesStdDevEstimateGreater = "~null";
-      decimal? salesStdDevEstimateLess = "~null";
+      DateTime? startDate = null;
+      DateTime? endDate = null;
+      decimal? salesActualGreater = null;
+      decimal? salesActualLess = null;
+      decimal? salesMeanEstimateGreater = null;
+      decimal? salesMeanEstimateLess = null;
+      decimal? salesAmountDiffGreater = null;
+      decimal? salesAmountDiffLess = null;
+      decimal? salesPercentDiffGreater = null;
+      decimal? salesPercentDiffLess = null;
+      decimal? salesCountEstimateGreater = null;
+      decimal? salesCountEstimateLess = null;
+      decimal? salesStdDevEstimateGreater = null;
+      decimal? salesStdDevEstimateLess = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksSalesSurprises result = zacksApi.GetZacksSalesSurprises(startDate, endDate, salesActualGreater, salesActualLess, salesMeanEstimateGreater, salesMeanEstimateLess, salesAmountDiffGreater, salesAmountDiffLess, salesPercentDiffGreater, salesPercentDiffLess, salesCountEstimateGreater, salesCountEstimateLess, salesStdDevEstimateGreater, salesStdDevEstimateLess, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1483,9 +1483,9 @@ namespace Example
       var zacksApi = new ZacksApi();
       
       string identifier = "AAPL";
-      string industryGroupNumber = "~null";
+      string industryGroupNumber = null;
       int? pageSize = 100;
-      string nextPage = "~null";
+      string nextPage = null;
       
       ApiResponseZacksTargetPriceConsensuses result = zacksApi.GetZacksTargetPriceConsensuses(identifier, industryGroupNumber, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

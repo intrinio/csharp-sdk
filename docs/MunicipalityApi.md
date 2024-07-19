@@ -68,19 +68,19 @@ namespace Example
       
       var municipalityApi = new MunicipalityApi();
       
-      bool? hasFinancials = "~null";
-      string governmentName = "~null";
-      string governmentType = "~null";
-      string areaName = "~null";
-      string areaType = "~null";
-      string city = "~null";
-      string state = "~null";
-      decimal? zipcode = "~null";
-      decimal? populationGreaterThan = "~null";
-      decimal? populationLessThan = "~null";
-      decimal? enrollmentGreaterThan = "~null";
-      decimal? enrollmentLessThan = "~null";
-      string nextPage = "~null";
+      bool? hasFinancials = null;
+      string governmentName = null;
+      string governmentType = null;
+      string areaName = null;
+      string areaType = null;
+      string city = null;
+      string state = null;
+      decimal? zipcode = null;
+      decimal? populationGreaterThan = null;
+      decimal? populationLessThan = null;
+      decimal? enrollmentGreaterThan = null;
+      decimal? enrollmentLessThan = null;
+      string nextPage = null;
       
       ApiResponseMunicipalities result = municipalityApi.GetAllMunicipalities(hasFinancials, governmentName, governmentType, areaName, areaType, city, state, zipcode, populationGreaterThan, populationLessThan, enrollmentGreaterThan, enrollmentLessThan, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

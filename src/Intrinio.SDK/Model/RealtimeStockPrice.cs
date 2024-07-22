@@ -30,8 +30,10 @@ namespace Intrinio.SDK.Model
         /// <param name="LastSize">The size of the last trade..</param>
         /// <param name="BidPrice">The price of the top bid order..</param>
         /// <param name="BidSize">The size of the top bid order..</param>
+        /// <param name="BidTime">The date and time when the last bid occurred..</param>
         /// <param name="AskPrice">The price of the top ask order..</param>
         /// <param name="AskSize">The size of the top ask order..</param>
+        /// <param name="AskTime">The date and time when the last ask occurred..</param>
         /// <param name="OpenPrice">The price at the open of the trading day..</param>
         /// <param name="ClosePrice">The price at the close of the trading day. (IEX only).</param>
         /// <param name="HighPrice">The high price for the trading day..</param>
@@ -46,15 +48,17 @@ namespace Intrinio.SDK.Model
         /// <param name="MarketCenterCode">The market center character code..</param>
         /// <param name="IsDarkpool">Whether or not the current trade is from a darkpool or not..</param>
         /// <param name="Security">Security.</param>
-        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? LastSize = default(decimal?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), decimal? OpenPrice = default(decimal?), decimal? ClosePrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), string ListingVenue = default(string), string SalesConditions = default(string), string QuoteConditions = default(string), string MarketCenterCode = default(string), bool? IsDarkpool = default(bool?), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
+        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? LastSize = default(decimal?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), DateTime? BidTime = default(DateTime?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), DateTime? AskTime = default(DateTime?), decimal? OpenPrice = default(decimal?), decimal? ClosePrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), string ListingVenue = default(string), string SalesConditions = default(string), string QuoteConditions = default(string), string MarketCenterCode = default(string), bool? IsDarkpool = default(bool?), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
         {
             this.LastPrice = LastPrice;
             this.LastTime = LastTime;
             this.LastSize = LastSize;
             this.BidPrice = BidPrice;
             this.BidSize = BidSize;
+            this.BidTime = BidTime;
             this.AskPrice = AskPrice;
             this.AskSize = AskSize;
+            this.AskTime = AskTime;
             this.OpenPrice = OpenPrice;
             this.ClosePrice = ClosePrice;
             this.HighPrice = HighPrice;
@@ -107,6 +111,13 @@ namespace Intrinio.SDK.Model
         public decimal? BidSize { get; set; }
 
         /// <summary>
+        /// The date and time when the last bid occurred.
+        /// </summary>
+        /// <value>The date and time when the last bid occurred.</value>
+        [DataMember(Name="bid_time", EmitDefaultValue=false)]
+        public DateTime? BidTime { get; set; }
+
+        /// <summary>
         /// The price of the top ask order.
         /// </summary>
         /// <value>The price of the top ask order.</value>
@@ -119,6 +130,13 @@ namespace Intrinio.SDK.Model
         /// <value>The size of the top ask order.</value>
         [DataMember(Name="ask_size", EmitDefaultValue=false)]
         public decimal? AskSize { get; set; }
+
+        /// <summary>
+        /// The date and time when the last ask occurred.
+        /// </summary>
+        /// <value>The date and time when the last ask occurred.</value>
+        [DataMember(Name="ask_time", EmitDefaultValue=false)]
+        public DateTime? AskTime { get; set; }
 
         /// <summary>
         /// The price at the open of the trading day.
@@ -230,8 +248,10 @@ namespace Intrinio.SDK.Model
             sb.Append("  LastSize: ").Append(LastSize).Append("\n");
             sb.Append("  BidPrice: ").Append(BidPrice).Append("\n");
             sb.Append("  BidSize: ").Append(BidSize).Append("\n");
+            sb.Append("  BidTime: ").Append(BidTime).Append("\n");
             sb.Append("  AskPrice: ").Append(AskPrice).Append("\n");
             sb.Append("  AskSize: ").Append(AskSize).Append("\n");
+            sb.Append("  AskTime: ").Append(AskTime).Append("\n");
             sb.Append("  OpenPrice: ").Append(OpenPrice).Append("\n");
             sb.Append("  ClosePrice: ").Append(ClosePrice).Append("\n");
             sb.Append("  HighPrice: ").Append(HighPrice).Append("\n");
@@ -306,6 +326,11 @@ namespace Intrinio.SDK.Model
                     this.BidSize.Equals(input.BidSize))
                 ) && 
                 (
+                    this.BidTime == input.BidTime ||
+                    (this.BidTime != null &&
+                    this.BidTime.Equals(input.BidTime))
+                ) && 
+                (
                     this.AskPrice == input.AskPrice ||
                     (this.AskPrice != null &&
                     this.AskPrice.Equals(input.AskPrice))
@@ -314,6 +339,11 @@ namespace Intrinio.SDK.Model
                     this.AskSize == input.AskSize ||
                     (this.AskSize != null &&
                     this.AskSize.Equals(input.AskSize))
+                ) && 
+                (
+                    this.AskTime == input.AskTime ||
+                    (this.AskTime != null &&
+                    this.AskTime.Equals(input.AskTime))
                 ) && 
                 (
                     this.OpenPrice == input.OpenPrice ||
@@ -406,10 +436,14 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.BidPrice.GetHashCode();
                 if (this.BidSize != null)
                     hashCode = hashCode * 59 + this.BidSize.GetHashCode();
+                if (this.BidTime != null)
+                    hashCode = hashCode * 59 + this.BidTime.GetHashCode();
                 if (this.AskPrice != null)
                     hashCode = hashCode * 59 + this.AskPrice.GetHashCode();
                 if (this.AskSize != null)
                     hashCode = hashCode * 59 + this.AskSize.GetHashCode();
+                if (this.AskTime != null)
+                    hashCode = hashCode * 59 + this.AskTime.GetHashCode();
                 if (this.OpenPrice != null)
                     hashCode = hashCode * 59 + this.OpenPrice.GetHashCode();
                 if (this.ClosePrice != null)

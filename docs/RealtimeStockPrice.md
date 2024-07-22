@@ -14,8 +14,10 @@ Name | Type | Description
 **LastSize** | decimal? | The size of the last trade. &nbsp;
 **BidPrice** | decimal? | The price of the top bid order. &nbsp;
 **BidSize** | decimal? | The size of the top bid order. &nbsp;
+**BidTime** | DateTime? | The date and time when the last bid occurred. &nbsp;
 **AskPrice** | decimal? | The price of the top ask order. &nbsp;
 **AskSize** | decimal? | The size of the top ask order. &nbsp;
+**AskTime** | DateTime? | The date and time when the last ask occurred. &nbsp;
 **OpenPrice** | decimal? | The price at the open of the trading day. &nbsp;
 **ClosePrice** | decimal? | The price at the close of the trading day. (IEX only) &nbsp;
 **HighPrice** | decimal? | The high price for the trading day. &nbsp;

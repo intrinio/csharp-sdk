@@ -99,6 +99,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'BidSize'
         }
         /// <summary>
+        /// Test the property 'BidTime'
+        /// </summary>
+        [Test]
+        public void BidTimeTest()
+        {
+            // TODO unit test for the property 'BidTime'
+        }
+        /// <summary>
         /// Test the property 'AskPrice'
         /// </summary>
         [Test]
@@ -113,6 +121,14 @@ namespace Intrinio.SDK.Test
         public void AskSizeTest()
         {
             // TODO unit test for the property 'AskSize'
+        }
+        /// <summary>
+        /// Test the property 'AskTime'
+        /// </summary>
+        [Test]
+        public void AskTimeTest()
+        {
+            // TODO unit test for the property 'AskTime'
         }
         /// <summary>
         /// Test the property 'OpenPrice'

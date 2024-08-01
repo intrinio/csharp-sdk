@@ -186,6 +186,86 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'ChangePercent'
         }
+        /// <summary>
+        /// Test the property 'AdjClose5DaysAgo'
+        /// </summary>
+        [Test]
+        public void AdjClose5DaysAgoTest()
+        {
+            // TODO unit test for the property 'AdjClose5DaysAgo'
+        }
+        /// <summary>
+        /// Test the property 'AdjClose30DaysAgo'
+        /// </summary>
+        [Test]
+        public void AdjClose30DaysAgoTest()
+        {
+            // TODO unit test for the property 'AdjClose30DaysAgo'
+        }
+        /// <summary>
+        /// Test the property 'AdjClose180DaysAgo'
+        /// </summary>
+        [Test]
+        public void AdjClose180DaysAgoTest()
+        {
+            // TODO unit test for the property 'AdjClose180DaysAgo'
+        }
+        /// <summary>
+        /// Test the property 'AdjClose365DaysAgo'
+        /// </summary>
+        [Test]
+        public void AdjClose365DaysAgoTest()
+        {
+            // TODO unit test for the property 'AdjClose365DaysAgo'
+        }
+        /// <summary>
+        /// Test the property 'AdjClose1825DaysAgo'
+        /// </summary>
+        [Test]
+        public void AdjClose1825DaysAgoTest()
+        {
+            // TODO unit test for the property 'AdjClose1825DaysAgo'
+        }
+        /// <summary>
+        /// Test the property 'ChangePercent5Days'
+        /// </summary>
+        [Test]
+        public void ChangePercent5DaysTest()
+        {
+            // TODO unit test for the property 'ChangePercent5Days'
+        }
+        /// <summary>
+        /// Test the property 'ChangePercent30Days'
+        /// </summary>
+        [Test]
+        public void ChangePercent30DaysTest()
+        {
+            // TODO unit test for the property 'ChangePercent30Days'
+        }
+        /// <summary>
+        /// Test the property 'ChangePercent180Days'
+        /// </summary>
+        [Test]
+        public void ChangePercent180DaysTest()
+        {
+            // TODO unit test for the property 'ChangePercent180Days'
+        }
+        /// <summary>
+        /// Test the property 'ChangePercent365Days'
+        /// </summary>
+        [Test]
+        public void ChangePercent365DaysTest()
+        {
+            // TODO unit test for the property 'ChangePercent365Days'
+        }
+        /// <summary>
+        /// Test the property 'ChangePercent1825Days'
+        /// </summary>
+        [Test]
+        public void ChangePercent1825DaysTest()
+        {
+            // TODO unit test for the property 'ChangePercent1825Days'
+        }
 
     }
 

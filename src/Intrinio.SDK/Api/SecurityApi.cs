@@ -5629,6 +5629,16 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
         
+        private static bool validateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+      		Regex validTimeRegex = new Regex(validTimePattern);
+      		bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+      		  return true;
+        }
         
         public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
@@ -5660,6 +5670,19 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
             
+            if (startTime != null && startDate != null) {
+              if (validateTimeParam(startTime)) {
+                var startTimeSpan = TimeSpan.Parse(startTime);
+                startDate = startDate.Value.Add(startTimeSpan);
+              }
+            }
+              
+            if (endTime != null && endDate != null) {
+              if (validateTimeParam(endTime)) {
+                var endTimeSpan = TimeSpan.Parse(endTime);
+                endDate = endDate.Value.Add(endTimeSpan);
+              }  
+            }
             
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
@@ -5766,6 +5789,19 @@ namespace Intrinio.SDK.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
               
+            if (startTime != null && startDate != null) {
+              if (validateTimeParam(startTime)) {
+                var startTimeSpan = TimeSpan.Parse(startTime);
+                startDate = startDate.Value.Add(startTimeSpan);
+              }
+            }
+              
+            if (endTime != null && endDate != null) {
+              if (validateTimeParam(endTime)) {
+                var endTimeSpan = TimeSpan.Parse(endTime);
+                endDate = endDate.Value.Add(endTimeSpan);
+              }  
+            }
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter

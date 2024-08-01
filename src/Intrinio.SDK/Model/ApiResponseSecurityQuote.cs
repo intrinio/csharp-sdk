@@ -41,7 +41,17 @@ namespace Intrinio.SDK.Model
         /// <param name="PreviousCloseDate">The date of the previous close..</param>
         /// <param name="Change">The difference in last price from the last close price.</param>
         /// <param name="ChangePercent">The percent difference in last price from the last close price.</param>
-        public ApiResponseSecurityQuote(SecuritySummary Security = default(SecuritySummary), decimal? Last = default(decimal?), DateTime? LastTime = default(DateTime?), string Source = default(string), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? EodFiftyTwoWeekHigh = default(decimal?), decimal? EodFiftyTwoWeekLow = default(decimal?), decimal? Marketcap = default(decimal?), decimal? Pricetoearnings = default(decimal?), decimal? PreviousClose = default(decimal?), decimal? PreviousCloseDate = default(decimal?), decimal? Change = default(decimal?), decimal? ChangePercent = default(decimal?))
+        /// <param name="AdjClose5DaysAgo">The adjusted close price 5 days ago..</param>
+        /// <param name="AdjClose30DaysAgo">The adjusted close price 30 days ago..</param>
+        /// <param name="AdjClose180DaysAgo">The adjusted close price 180 days ago..</param>
+        /// <param name="AdjClose365DaysAgo">The adjusted close price 365 days ago..</param>
+        /// <param name="AdjClose1825DaysAgo">The adjusted close price 1825 days ago..</param>
+        /// <param name="ChangePercent5Days">The percent change from the adjusted price 5 days ago to now..</param>
+        /// <param name="ChangePercent30Days">The percent change from the adjusted price 30 days ago to now..</param>
+        /// <param name="ChangePercent180Days">The percent change from the adjusted price 180 days ago to now..</param>
+        /// <param name="ChangePercent365Days">The percent change from the adjusted price 365 days ago to now..</param>
+        /// <param name="ChangePercent1825Days">The percent change from the adjusted price 1825 days ago to now..</param>
+        public ApiResponseSecurityQuote(SecuritySummary Security = default(SecuritySummary), decimal? Last = default(decimal?), DateTime? LastTime = default(DateTime?), string Source = default(string), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? EodFiftyTwoWeekHigh = default(decimal?), decimal? EodFiftyTwoWeekLow = default(decimal?), decimal? Marketcap = default(decimal?), decimal? Pricetoearnings = default(decimal?), decimal? PreviousClose = default(decimal?), decimal? PreviousCloseDate = default(decimal?), decimal? Change = default(decimal?), decimal? ChangePercent = default(decimal?), decimal? AdjClose5DaysAgo = default(decimal?), decimal? AdjClose30DaysAgo = default(decimal?), decimal? AdjClose180DaysAgo = default(decimal?), decimal? AdjClose365DaysAgo = default(decimal?), decimal? AdjClose1825DaysAgo = default(decimal?), decimal? ChangePercent5Days = default(decimal?), decimal? ChangePercent30Days = default(decimal?), decimal? ChangePercent180Days = default(decimal?), decimal? ChangePercent365Days = default(decimal?), decimal? ChangePercent1825Days = default(decimal?))
         {
             this.Security = Security;
             this.Last = Last;
@@ -59,6 +69,16 @@ namespace Intrinio.SDK.Model
             this.PreviousCloseDate = PreviousCloseDate;
             this.Change = Change;
             this.ChangePercent = ChangePercent;
+            this.AdjClose5DaysAgo = AdjClose5DaysAgo;
+            this.AdjClose30DaysAgo = AdjClose30DaysAgo;
+            this.AdjClose180DaysAgo = AdjClose180DaysAgo;
+            this.AdjClose365DaysAgo = AdjClose365DaysAgo;
+            this.AdjClose1825DaysAgo = AdjClose1825DaysAgo;
+            this.ChangePercent5Days = ChangePercent5Days;
+            this.ChangePercent30Days = ChangePercent30Days;
+            this.ChangePercent180Days = ChangePercent180Days;
+            this.ChangePercent365Days = ChangePercent365Days;
+            this.ChangePercent1825Days = ChangePercent1825Days;
         }
         
         /// <summary>
@@ -174,6 +194,76 @@ namespace Intrinio.SDK.Model
         public decimal? ChangePercent { get; set; }
 
         /// <summary>
+        /// The adjusted close price 5 days ago.
+        /// </summary>
+        /// <value>The adjusted close price 5 days ago.</value>
+        [DataMember(Name="adj_close_5_days_ago", EmitDefaultValue=false)]
+        public decimal? AdjClose5DaysAgo { get; set; }
+
+        /// <summary>
+        /// The adjusted close price 30 days ago.
+        /// </summary>
+        /// <value>The adjusted close price 30 days ago.</value>
+        [DataMember(Name="adj_close_30_days_ago", EmitDefaultValue=false)]
+        public decimal? AdjClose30DaysAgo { get; set; }
+
+        /// <summary>
+        /// The adjusted close price 180 days ago.
+        /// </summary>
+        /// <value>The adjusted close price 180 days ago.</value>
+        [DataMember(Name="adj_close_180_days_ago", EmitDefaultValue=false)]
+        public decimal? AdjClose180DaysAgo { get; set; }
+
+        /// <summary>
+        /// The adjusted close price 365 days ago.
+        /// </summary>
+        /// <value>The adjusted close price 365 days ago.</value>
+        [DataMember(Name="adj_close_365_days_ago", EmitDefaultValue=false)]
+        public decimal? AdjClose365DaysAgo { get; set; }
+
+        /// <summary>
+        /// The adjusted close price 1825 days ago.
+        /// </summary>
+        /// <value>The adjusted close price 1825 days ago.</value>
+        [DataMember(Name="adj_close_1825_days_ago", EmitDefaultValue=false)]
+        public decimal? AdjClose1825DaysAgo { get; set; }
+
+        /// <summary>
+        /// The percent change from the adjusted price 5 days ago to now.
+        /// </summary>
+        /// <value>The percent change from the adjusted price 5 days ago to now.</value>
+        [DataMember(Name="change_percent_5_days", EmitDefaultValue=false)]
+        public decimal? ChangePercent5Days { get; set; }
+
+        /// <summary>
+        /// The percent change from the adjusted price 30 days ago to now.
+        /// </summary>
+        /// <value>The percent change from the adjusted price 30 days ago to now.</value>
+        [DataMember(Name="change_percent_30_days", EmitDefaultValue=false)]
+        public decimal? ChangePercent30Days { get; set; }
+
+        /// <summary>
+        /// The percent change from the adjusted price 180 days ago to now.
+        /// </summary>
+        /// <value>The percent change from the adjusted price 180 days ago to now.</value>
+        [DataMember(Name="change_percent_180_days", EmitDefaultValue=false)]
+        public decimal? ChangePercent180Days { get; set; }
+
+        /// <summary>
+        /// The percent change from the adjusted price 365 days ago to now.
+        /// </summary>
+        /// <value>The percent change from the adjusted price 365 days ago to now.</value>
+        [DataMember(Name="change_percent_365_days", EmitDefaultValue=false)]
+        public decimal? ChangePercent365Days { get; set; }
+
+        /// <summary>
+        /// The percent change from the adjusted price 1825 days ago to now.
+        /// </summary>
+        /// <value>The percent change from the adjusted price 1825 days ago to now.</value>
+        [DataMember(Name="change_percent_1825_days", EmitDefaultValue=false)]
+        public decimal? ChangePercent1825Days { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -197,6 +287,16 @@ namespace Intrinio.SDK.Model
             sb.Append("  PreviousCloseDate: ").Append(PreviousCloseDate).Append("\n");
             sb.Append("  Change: ").Append(Change).Append("\n");
             sb.Append("  ChangePercent: ").Append(ChangePercent).Append("\n");
+            sb.Append("  AdjClose5DaysAgo: ").Append(AdjClose5DaysAgo).Append("\n");
+            sb.Append("  AdjClose30DaysAgo: ").Append(AdjClose30DaysAgo).Append("\n");
+            sb.Append("  AdjClose180DaysAgo: ").Append(AdjClose180DaysAgo).Append("\n");
+            sb.Append("  AdjClose365DaysAgo: ").Append(AdjClose365DaysAgo).Append("\n");
+            sb.Append("  AdjClose1825DaysAgo: ").Append(AdjClose1825DaysAgo).Append("\n");
+            sb.Append("  ChangePercent5Days: ").Append(ChangePercent5Days).Append("\n");
+            sb.Append("  ChangePercent30Days: ").Append(ChangePercent30Days).Append("\n");
+            sb.Append("  ChangePercent180Days: ").Append(ChangePercent180Days).Append("\n");
+            sb.Append("  ChangePercent365Days: ").Append(ChangePercent365Days).Append("\n");
+            sb.Append("  ChangePercent1825Days: ").Append(ChangePercent1825Days).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -310,6 +410,56 @@ namespace Intrinio.SDK.Model
                     this.ChangePercent == input.ChangePercent ||
                     (this.ChangePercent != null &&
                     this.ChangePercent.Equals(input.ChangePercent))
+                ) && 
+                (
+                    this.AdjClose5DaysAgo == input.AdjClose5DaysAgo ||
+                    (this.AdjClose5DaysAgo != null &&
+                    this.AdjClose5DaysAgo.Equals(input.AdjClose5DaysAgo))
+                ) && 
+                (
+                    this.AdjClose30DaysAgo == input.AdjClose30DaysAgo ||
+                    (this.AdjClose30DaysAgo != null &&
+                    this.AdjClose30DaysAgo.Equals(input.AdjClose30DaysAgo))
+                ) && 
+                (
+                    this.AdjClose180DaysAgo == input.AdjClose180DaysAgo ||
+                    (this.AdjClose180DaysAgo != null &&
+                    this.AdjClose180DaysAgo.Equals(input.AdjClose180DaysAgo))
+                ) && 
+                (
+                    this.AdjClose365DaysAgo == input.AdjClose365DaysAgo ||
+                    (this.AdjClose365DaysAgo != null &&
+                    this.AdjClose365DaysAgo.Equals(input.AdjClose365DaysAgo))
+                ) && 
+                (
+                    this.AdjClose1825DaysAgo == input.AdjClose1825DaysAgo ||
+                    (this.AdjClose1825DaysAgo != null &&
+                    this.AdjClose1825DaysAgo.Equals(input.AdjClose1825DaysAgo))
+                ) && 
+                (
+                    this.ChangePercent5Days == input.ChangePercent5Days ||
+                    (this.ChangePercent5Days != null &&
+                    this.ChangePercent5Days.Equals(input.ChangePercent5Days))
+                ) && 
+                (
+                    this.ChangePercent30Days == input.ChangePercent30Days ||
+                    (this.ChangePercent30Days != null &&
+                    this.ChangePercent30Days.Equals(input.ChangePercent30Days))
+                ) && 
+                (
+                    this.ChangePercent180Days == input.ChangePercent180Days ||
+                    (this.ChangePercent180Days != null &&
+                    this.ChangePercent180Days.Equals(input.ChangePercent180Days))
+                ) && 
+                (
+                    this.ChangePercent365Days == input.ChangePercent365Days ||
+                    (this.ChangePercent365Days != null &&
+                    this.ChangePercent365Days.Equals(input.ChangePercent365Days))
+                ) && 
+                (
+                    this.ChangePercent1825Days == input.ChangePercent1825Days ||
+                    (this.ChangePercent1825Days != null &&
+                    this.ChangePercent1825Days.Equals(input.ChangePercent1825Days))
                 );
         }
 
@@ -354,6 +504,26 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Change.GetHashCode();
                 if (this.ChangePercent != null)
                     hashCode = hashCode * 59 + this.ChangePercent.GetHashCode();
+                if (this.AdjClose5DaysAgo != null)
+                    hashCode = hashCode * 59 + this.AdjClose5DaysAgo.GetHashCode();
+                if (this.AdjClose30DaysAgo != null)
+                    hashCode = hashCode * 59 + this.AdjClose30DaysAgo.GetHashCode();
+                if (this.AdjClose180DaysAgo != null)
+                    hashCode = hashCode * 59 + this.AdjClose180DaysAgo.GetHashCode();
+                if (this.AdjClose365DaysAgo != null)
+                    hashCode = hashCode * 59 + this.AdjClose365DaysAgo.GetHashCode();
+                if (this.AdjClose1825DaysAgo != null)
+                    hashCode = hashCode * 59 + this.AdjClose1825DaysAgo.GetHashCode();
+                if (this.ChangePercent5Days != null)
+                    hashCode = hashCode * 59 + this.ChangePercent5Days.GetHashCode();
+                if (this.ChangePercent30Days != null)
+                    hashCode = hashCode * 59 + this.ChangePercent30Days.GetHashCode();
+                if (this.ChangePercent180Days != null)
+                    hashCode = hashCode * 59 + this.ChangePercent180Days.GetHashCode();
+                if (this.ChangePercent365Days != null)
+                    hashCode = hashCode * 59 + this.ChangePercent365Days.GetHashCode();
+                if (this.ChangePercent1825Days != null)
+                    hashCode = hashCode * 59 + this.ChangePercent1825Days.GetHashCode();
                 return hashCode;
             }
         }

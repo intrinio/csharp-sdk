@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "7.6.1";
+        public const string Version = "7.7.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -106,7 +106,7 @@ namespace Intrinio.SDK.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "Swagger-Codegen/7.6.1/csharp";
+            UserAgent = "Swagger-Codegen/7.7.0/csharp";
             BasePath = "https://api-v2.intrinio.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -182,7 +182,7 @@ namespace Intrinio.SDK.Client
             string dateTimeFormat = null,
             int timeout = 100000,
             bool allowRetries = true,
-            string userAgent = "Swagger-Codegen/7.6.1/csharp"
+            string userAgent = "Swagger-Codegen/7.7.0/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -422,7 +422,7 @@ namespace Intrinio.SDK.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.63.6\n";
-            report += "    SDK Package Version: 7.6.1\n";
+            report += "    SDK Package Version: 7.7.0\n";
 
             return report;
         }

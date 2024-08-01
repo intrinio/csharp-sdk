@@ -103,9 +103,13 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //DateTime? date = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetStockExchangePrices(identifier, date, pageSize, nextPage);
+            //List<string> tickers = null;
+            //string nextPage2 = null;
+            //var response = instance.GetStockExchangePrices(identifier, date, startDate, endDate, pageSize, nextPage, tickers, nextPage2);
             //Assert.IsInstanceOf<ApiResponseStockExchangeStockPrices> (response, "response is ApiResponseStockExchangeStockPrices");
         }
         

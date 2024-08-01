@@ -50,6 +50,7 @@ Method | HTTP request | Description
 [**GetSecurityPriceTechnicalsVpt**](SecurityApi.md#getsecuritypricetechnicalsvpt) | **GET** /securities/{identifier}/prices/technicals/vpt | Volume-price Trend
 [**GetSecurityPriceTechnicalsVwap**](SecurityApi.md#getsecuritypricetechnicalsvwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 [**GetSecurityPriceTechnicalsWr**](SecurityApi.md#getsecuritypricetechnicalswr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
+[**GetSecurityQuote**](SecurityApi.md#getsecurityquote) | **GET** /securities/{identifier}/quote | Quote for a Security
 [**GetSecurityRealtimePrice**](SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 [**GetSecurityReplayFile**](SecurityApi.md#getsecurityreplayfile) | **GET** /securities/replay | Security Replay File
 [**GetSecuritySnapshots**](SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
@@ -4566,6 +4567,98 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityWilliamsR**](ApiResponseSecurityWilliamsR.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityQuote)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityQuote)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityQuote.md)
+
+[//]: # (OPERATION:GetSecurityQuote_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/quote)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityquote)
+
+<a name="getsecurityquote"></a>
+## **GetSecurityQuote**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityQuote_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string nextPage = null)
+
+#### Quote for a Security
+
+Return a current pricing quote for a security across multiple sources.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityQuoteExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "AAPL";
+      bool? activeOnly = false;
+      string nextPage = null;
+      
+      ApiResponseSecurityQuote result = securityApi.GetSecurityQuote(identifier, activeOnly, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **activeOnly** | bool?| Whether to return only realtime prices from today. | [optional] [default to false] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityQuote**](ApiResponseSecurityQuote.md)
 
 [//]: # (END_OPERATION)
 

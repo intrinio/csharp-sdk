@@ -1440,6 +1440,31 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurityWilliamsR</returns>
         ApiResponse<ApiResponseSecurityWilliamsR> GetSecurityPriceTechnicalsWrWithHttpInfo (string identifier, int? period = null, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null);
         /// <summary>
+        /// Quote for a Security
+        /// </summary>
+        /// <remarks>
+        /// Return a current pricing quote for a security across multiple sources.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityQuote</returns>
+        ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string nextPage = null);
+
+        /// <summary>
+        /// Quote for a Security
+        /// </summary>
+        /// <remarks>
+        /// Return a current pricing quote for a security across multiple sources.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityQuote</returns>
+        ApiResponse<ApiResponseSecurityQuote> GetSecurityQuoteWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null);
+        /// <summary>
         /// Realtime Stock Price for Security
         /// </summary>
         /// <remarks>
@@ -3250,6 +3275,31 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityWilliamsR)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityWilliamsR>> GetSecurityPriceTechnicalsWrAsyncWithHttpInfo (string identifier, int? period = null, string startDate = null, string endDate = null, decimal? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Quote for a Security
+        /// </summary>
+        /// <remarks>
+        /// Return a current pricing quote for a security across multiple sources.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityQuote</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityQuote> GetSecurityQuoteAsync (string identifier, bool? activeOnly = null, string nextPage = null);
+
+        /// <summary>
+        /// Quote for a Security
+        /// </summary>
+        /// <remarks>
+        /// Return a current pricing quote for a security across multiple sources.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityQuote)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityQuote>> GetSecurityQuoteAsyncWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null);
         /// <summary>
         /// Realtime Stock Price for Security
         /// </summary>
@@ -11901,6 +11951,165 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurityWilliamsR>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseSecurityWilliamsR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityWilliamsR)));
+        }
+
+        /// <summary>
+        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityQuote</returns>
+        public ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityQuote> localVarResponse = GetSecurityQuoteWithHttpInfo(identifier, activeOnly, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityQuote</returns>
+        
+        
+        public ApiResponse< ApiResponseSecurityQuote > GetSecurityQuoteWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityQuote");
+
+            var localVarPath = "/securities/{identifier}/quote";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityQuote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityQuote>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityQuote) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityQuote)));
+        }
+
+        /// <summary>
+        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityQuote</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityQuote> GetSecurityQuoteAsync (string identifier, bool? activeOnly = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityQuote> localVarResponse = await GetSecurityQuoteAsyncWithHttpInfo(identifier, activeOnly, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityQuote)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityQuote>> GetSecurityQuoteAsyncWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityQuote");
+
+            var localVarPath = "/securities/{identifier}/quote";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityQuote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityQuote>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityQuote) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityQuote)));
         }
 
         /// <summary>

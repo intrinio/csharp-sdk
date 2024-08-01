@@ -833,6 +833,20 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecurityQuote
+        /// </summary>
+        [Test]
+        public void GetSecurityQuoteTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //bool? activeOnly = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityQuote(identifier, activeOnly, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityQuote> (response, "response is ApiResponseSecurityQuote");
+        }
+        
+        /// <summary>
         /// Test GetSecurityRealtimePrice
         /// </summary>
         [Test]

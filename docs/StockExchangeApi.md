@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null)
+> ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
 
 #### Stock Prices by Exchange
 
@@ -349,10 +349,14 @@ namespace Example
       
       string identifier = "USCOMP";
       DateTime? date = DateTime.Parse("2018-08-14");
+      DateTime? startDate = DateTime.Parse("2020-08-14");
+      DateTime? endDate = DateTime.Parse("2022-08-14");
       int? pageSize = 100;
       string nextPage = null;
+      var tickers = new List<string>();
+      string nextPage2 = "";
       
-      ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, pageSize, nextPage);
+      ApiResponseStockExchangeStockPrices result = stockExchangeApi.GetStockExchangePrices(identifier, date, startDate, endDate, pageSize, nextPage, tickers, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -369,9 +373,13 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **date** | DateTime?| The date for which to return prices | [optional]  &nbsp;
+ **date** | DateTime?| The date for which to return prices. May not be used with the start_date and end_date parameters. | [optional]  &nbsp;
+ **startDate** | DateTime?| The start of the date range you&#39;re querying. May not be used with date parameter. | [optional]  &nbsp;
+ **endDate** | DateTime?| The end of the date range you&#39;re querying. May not be used with date parameter. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **tickers** | [**List&lt;string&gt;**](string.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

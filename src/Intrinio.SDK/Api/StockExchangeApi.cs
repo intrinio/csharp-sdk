@@ -100,11 +100,15 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPrices</returns>
-        ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null);
+        ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
 
         /// <summary>
         /// Stock Prices by Exchange
@@ -114,11 +118,15 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
-        ApiResponse<ApiResponseStockExchangeStockPrices> GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseStockExchangeStockPrices> GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
         /// <summary>
         /// Realtime Stock Prices by Exchange
         /// </summary>
@@ -260,11 +268,15 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
 
         /// <summary>
         /// Stock Prices by Exchange
@@ -274,11 +286,15 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
         /// <summary>
         /// Realtime Stock Prices by Exchange
         /// </summary>
@@ -911,13 +927,17 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPrices</returns>
-        public ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = GetStockExchangePricesWithHttpInfo(identifier, date, pageSize, nextPage);
+             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = GetStockExchangePricesWithHttpInfo(identifier, date, startDate, endDate, pageSize, nextPage, tickers, nextPage2);
              return localVarResponse.Data;
         }
 
@@ -926,13 +946,17 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
         
         
-        public ApiResponse< ApiResponseStockExchangeStockPrices > GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseStockExchangeStockPrices > GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -962,8 +986,12 @@ namespace Intrinio.SDK.Api
             
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -994,13 +1022,17 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = await GetStockExchangePricesAsyncWithHttpInfo(identifier, date, pageSize, nextPage);
+             ApiResponse<ApiResponseStockExchangeStockPrices> localVarResponse = await GetStockExchangePricesAsyncWithHttpInfo(identifier, date, startDate, endDate, pageSize, nextPage, tickers, nextPage2);
              return localVarResponse.Data;
 
         }
@@ -1010,11 +1042,15 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="date">The date for which to return prices (optional)</param>
+        /// <param name="date">The date for which to return prices. May not be used with the start_date and end_date parameters. (optional)</param>
+        /// <param name="startDate">The start of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
+        /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1044,8 +1080,12 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

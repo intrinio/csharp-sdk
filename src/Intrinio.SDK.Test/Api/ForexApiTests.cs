@@ -84,10 +84,10 @@ namespace Intrinio.SDK.Test
             //string pair = null;
             //string timeframe = null;
             //string timezone = null;
-            //DateTime? startDate = null;
-            //string startTime = null;
-            //DateTime? endDate = null;
-            //string endTime = null;
+            //DateOnly? startDate = null;
+            //TimeOnly? startTime = null;
+            //DateOnly? endDate = null;
+            //TimeOnly? endTime = null;
             //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetForexPrices(pair, timeframe, timezone, startDate, startTime, endDate, endTime, pageSize, nextPage);

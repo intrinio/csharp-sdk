@@ -226,10 +226,10 @@ namespace Intrinio.SDK.Test
             //string identifier = null;
             //string intervalSize = null;
             //string source = null;
-            //DateTime? startDate = null;
-            //string startTime = null;
-            //DateTime? endDate = null;
-            //string endTime = null;
+            //DateOnly? startDate = null;
+            //TimeOnly? startTime = null;
+            //DateOnly? endDate = null;
+            //TimeOnly? endTime = null;
             //string timezone = null;
             //int? pageSize = null;
             //bool? splitAdjusted = null;
@@ -247,10 +247,10 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string source = null;
-            //DateTime? startDate = null;
-            //string startTime = null;
-            //DateTime? endDate = null;
-            //string endTime = null;
+            //DateOnly? startDate = null;
+            //TimeOnly? startTime = null;
+            //DateOnly? endDate = null;
+            //TimeOnly? endTime = null;
             //int? pageSize = null;
             //string nextPage = null;
             //var response = instance.GetSecurityIntradayPrices(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
@@ -925,10 +925,10 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string source = null;
-            //DateTime? startDate = null;
-            //string startTime = null;
-            //DateTime? endDate = null;
-            //string endTime = null;
+            //DateOnly? startDate = null;
+            //TimeOnly? startTime = null;
+            //DateOnly? endDate = null;
+            //TimeOnly? endTime = null;
             //string timezone = null;
             //int? pageSize = null;
             //bool? darkpoolOnly = null;
@@ -947,10 +947,10 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //string source = null;
-            //DateTime? startDate = null;
-            //string startTime = null;
-            //DateTime? endDate = null;
-            //string endTime = null;
+            //DateOnly? startDate = null;
+            //TimeOnly? startTime = null;
+            //DateOnly? endDate = null;
+            //TimeOnly? endTime = null;
             //string timezone = null;
             //bool? darkpoolOnly = null;
             //int? pageSize = null;

@@ -331,7 +331,7 @@ namespace Intrinio.SDK.Api
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
@@ -352,7 +352,7 @@ namespace Intrinio.SDK.Api
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
-        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -369,7 +369,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntradayPrices</returns>
-        ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Intraday Stock Prices for Security
@@ -387,7 +387,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntradayPrices</returns>
-        ApiResponse<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Latest Dividend Record for Security
         /// </summary>
@@ -1609,7 +1609,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
+        SecurityTradesResult GetSecurityTrades (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades
@@ -1629,7 +1629,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of SecurityTradesResult</returns>
-        ApiResponse<SecurityTradesResult> GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
+        ApiResponse<SecurityTradesResult> GetSecurityTradesWithHttpInfo (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Security Trades By Symbol
         /// </summary>
@@ -1649,7 +1649,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+        SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades By Symbol
@@ -1670,7 +1670,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of SecurityTradesResult</returns>
-        ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+        ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -2167,7 +2167,7 @@ namespace Intrinio.SDK.Api
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
@@ -2188,7 +2188,7 @@ namespace Intrinio.SDK.Api
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
@@ -2205,7 +2205,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntradayPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Intraday Stock Prices for Security
@@ -2223,7 +2223,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntradayPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Latest Dividend Record for Security
         /// </summary>
@@ -3445,7 +3445,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades
@@ -3465,7 +3465,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Security Trades By Symbol
         /// </summary>
@@ -3485,7 +3485,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
 
         /// <summary>
         /// Security Trades By Symbol
@@ -3506,7 +3506,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -5606,7 +5606,7 @@ namespace Intrinio.SDK.Api
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
              return localVarResponse.Data;
@@ -5630,7 +5630,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
         
         
-        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -5713,7 +5713,7 @@ namespace Intrinio.SDK.Api
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
              return localVarResponse.Data;
@@ -5736,7 +5736,7 @@ namespace Intrinio.SDK.Api
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -5816,7 +5816,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntradayPrices</returns>
-        public ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseSecurityIntradayPrices GetSecurityIntradayPrices (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = GetSecurityIntradayPricesWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
              return localVarResponse.Data;
@@ -5847,7 +5847,7 @@ namespace Intrinio.SDK.Api
       		  return true;
         }
         
-        public ApiResponse< ApiResponseSecurityIntradayPrices > GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityIntradayPrices > GetSecurityIntradayPricesWithHttpInfo (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -5934,7 +5934,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntradayPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntradayPrices> GetSecurityIntradayPricesAsync (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null)
         {
              ApiResponse<ApiResponseSecurityIntradayPrices> localVarResponse = await GetSecurityIntradayPricesAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, pageSize, nextPage);
              return localVarResponse.Data;
@@ -5954,7 +5954,7 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntradayPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntradayPrices>> GetSecurityIntradayPricesAsyncWithHttpInfo (string identifier, string source = null, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -12928,7 +12928,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        public SecurityTradesResult GetSecurityTrades (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
+        public SecurityTradesResult GetSecurityTrades (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
              ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, darkpoolOnly, minSize, nextPage);
              return localVarResponse.Data;
@@ -12951,7 +12951,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of SecurityTradesResult</returns>
         
         
-        public ApiResponse< SecurityTradesResult > GetSecurityTradesWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
+        public ApiResponse< SecurityTradesResult > GetSecurityTradesWithHttpInfo (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -13029,7 +13029,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesAsync (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
              ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesAsyncWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, darkpoolOnly, minSize, nextPage);
              return localVarResponse.Data;
@@ -13051,7 +13051,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesAsyncWithHttpInfo (string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, int? pageSize = null, bool? darkpoolOnly = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -13130,7 +13130,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>SecurityTradesResult</returns>
-        public SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        public SecurityTradesResult GetSecurityTradesBySymbol (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
              ApiResponse<SecurityTradesResult> localVarResponse = GetSecurityTradesBySymbolWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, minSize, nextPage);
              return localVarResponse.Data;
@@ -13154,7 +13154,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of SecurityTradesResult</returns>
         
         
-        public ApiResponse< SecurityTradesResult > GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        public ApiResponse< SecurityTradesResult > GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -13237,7 +13237,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of SecurityTradesResult</returns>
-        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<SecurityTradesResult> GetSecurityTradesBySymbolAsync (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
              ApiResponse<SecurityTradesResult> localVarResponse = await GetSecurityTradesBySymbolAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, darkpoolOnly, pageSize, minSize, nextPage);
              return localVarResponse.Data;
@@ -13260,7 +13260,7 @@ namespace Intrinio.SDK.Api
         /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateOnly? startDate = null, TimeOnly? startTime = null, DateOnly? endDate = null, TimeOnly? endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)

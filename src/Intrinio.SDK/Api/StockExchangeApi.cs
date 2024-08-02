@@ -451,7 +451,6 @@ namespace Intrinio.SDK.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
         
-        
         private static bool ValidateTimeParam(string time) {
           string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
             Regex validTimeRegex = new Regex(validTimePattern);

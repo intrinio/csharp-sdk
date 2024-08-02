@@ -10,7 +10,7 @@ Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a 
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
-- .NET >=6.0
+- .NET >=8.0
 
 <a name="installation"></a>
 ## Installation

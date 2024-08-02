@@ -1462,6 +1462,18 @@ namespace Intrinio.SDK.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+        
+        
+        private static bool ValidateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+            Regex validTimeRegex = new Regex(validTimePattern);
+            bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+              return true;
+        }
 
         /// <summary>
         /// All Companies Returns all Companies. When parameters are specified, returns matching companies.
@@ -1501,16 +1513,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
@@ -1697,16 +1699,6 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyDailyMetrics</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyDailyMetrics > GetAllCompaniesDailyMetricsWithHttpInfo (DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
         {
@@ -1887,16 +1879,6 @@ namespace Intrinio.SDK.Api
         /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseNews</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseNews > GetAllCompanyNewsWithHttpInfo (string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string company = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
@@ -2093,16 +2075,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <returns>ApiResponse of Company</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< Company > GetCompanyWithHttpInfo (string identifier)
         {
@@ -2251,16 +2223,6 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="query">The query to ask the Thea API</param>
         /// <returns>ApiResponse of ApiResponseCompanyAnswers</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyAnswers > GetCompanyAnswersWithHttpInfo (string identifier, string query)
         {
@@ -2425,16 +2387,6 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyDailyMetrics</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyDailyMetrics > GetCompanyDailyMetricsWithHttpInfo (string identifier, DateTime? onDate = null, int? pageSize = null, string nextPage = null, string nextPage2 = null)
         {
@@ -2599,16 +2551,6 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of decimal?</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< decimal? > GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag)
         {
@@ -2767,16 +2709,6 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of string</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< string > GetCompanyDataPointTextWithHttpInfo (string identifier, string tag)
         {
@@ -2945,16 +2877,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyFilings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyFilings > GetCompanyFilingsWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
         {
@@ -3149,16 +3071,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyFundamentals</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyFundamentals > GetCompanyFundamentalsWithHttpInfo (string identifier, DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, int? pageSize = null, string nextPage = null)
         {
@@ -3369,16 +3281,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyHistoricalData</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyHistoricalData > GetCompanyHistoricalDataWithHttpInfo (string identifier, string tag, string frequency = null, string type = null, DateTime? startDate = null, DateTime? endDate = null, string sortOrder = null, int? pageSize = null, string nextPage = null)
         {
@@ -3577,16 +3479,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseInitialPublicOfferings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseInitialPublicOfferings > GetCompanyIposWithHttpInfo (string ticker = null, string status = null, DateTime? startDate = null, DateTime? endDate = null, int? offerAmountGreaterThan = null, int? offerAmountLessThan = null, int? pageSize = null, string nextPage = null)
         {
@@ -3783,16 +3675,6 @@ namespace Intrinio.SDK.Api
         /// <param name="businessRelevanceLessThan">News stories will have a business relevance score less than this value.  Unsupported for yahoo source. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyNews > GetCompanyNewsWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null)
         {
@@ -4001,16 +3883,6 @@ namespace Intrinio.SDK.Api
         /// <param name="specificSource">Only news from this source. Defaults to highest available if not present. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyNewsBody</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyNewsBody > GetCompanyNewsBodyWithHttpInfo (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null)
         {
@@ -4183,16 +4055,6 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyPublicFloatResult</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyPublicFloatResult > GetCompanyPublicFloatWithHttpInfo (string identifier, DateTime? floatDateGreaterThan = null, DateTime? floatDateLessThan = null, string nextPage = null, string nextPage2 = null)
         {
@@ -4357,16 +4219,6 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanySecurities</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanySecurities > GetCompanySecuritiesWithHttpInfo (string identifier, string nextPage = null)
         {
@@ -4531,16 +4383,6 @@ namespace Intrinio.SDK.Api
         /// <param name="sortBy">The field to sort by.  Default is &#39;filing_date&#39;. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseInsiderTransactionFilings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseInsiderTransactionFilings > InsiderTransactionFilingsByCompanyWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, string ownershipType = null, string nextPage = null, int? pageSize = null, string sortBy = null, string nextPage2 = null)
         {
@@ -4717,16 +4559,6 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of InsiderTransactionFiling</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< InsiderTransactionFiling > LatestInsiderTransactionFilingByCompanyWithHttpInfo (string identifier, string nextPage = null)
         {
@@ -4883,16 +4715,6 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <param name="fiscalYear">The fiscal year</param>
         /// <returns>ApiResponse of Fundamental</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< Fundamental > LookupCompanyFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear)
         {
@@ -5069,16 +4891,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">The text sent to the Thea API to analyze</param>
         /// <returns>ApiResponse of ApiResponseCompanyRecognize</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanyRecognize > RecognizeCompanyWithHttpInfo (string text)
         {
@@ -5231,16 +5043,6 @@ namespace Intrinio.SDK.Api
         /// <param name="mode">When set, changes search mode to the specified mode. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ApiResponseCompaniesSearch</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompaniesSearch > SearchCompaniesWithHttpInfo (string query, bool? active = null, string mode = null, int? pageSize = null)
         {
@@ -5403,16 +5205,6 @@ namespace Intrinio.SDK.Api
         /// <param name="endDateGreaterThan">Returns shares outstanding after this date. (optional)</param>
         /// <param name="endDateLessThan">Returns shares outstanding before this date. (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanySharesOutstanding</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseCompanySharesOutstanding > SharesOutstandingByCompanyWithHttpInfo (string identifier, DateTime? endDateGreaterThan = null, DateTime? endDateLessThan = null)
         {

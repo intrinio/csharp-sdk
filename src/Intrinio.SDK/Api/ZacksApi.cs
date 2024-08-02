@@ -1100,6 +1100,18 @@ namespace Intrinio.SDK.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+        
+        
+        private static bool ValidateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+            Regex validTimeRegex = new Regex(validTimePattern);
+            bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+              return true;
+        }
 
         /// <summary>
         /// Zacks Analyst Ratings This database offers consensus analyst recommendations for over 5,000 US and Canadian listed companies.
@@ -1155,16 +1167,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksAnalystRatings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksAnalystRatings > GetZacksAnalystRatingsWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, decimal? meanGreater = null, decimal? meanLess = null, int? strongBuysGreater = null, int? strongBuysLess = null, int? buysGreater = null, int? buysLess = null, int? holdsGreater = null, int? holdsLess = null, int? sellsGreater = null, int? sellsLess = null, int? strongSellsGreater = null, int? strongSellsLess = null, int? totalGreater = null, int? totalLess = null, int? pageSize = null, string nextPage = null)
         {
@@ -1381,16 +1383,6 @@ namespace Intrinio.SDK.Api
         /// <param name="type">Limit EBITDA estimates to this type (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksEBITDAConsensus</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksEBITDAConsensus > GetZacksEbitdaConsensusWithHttpInfo (string identifier = null, string type = null, string nextPage = null)
         {
@@ -1555,16 +1547,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksEPSEstimates</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksEPSEstimates > GetZacksEpsEstimatesWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, int? pageSize = null, string nextPage = null)
         {
@@ -1745,16 +1727,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksEPSGrowthRates</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksEPSGrowthRates > GetZacksEpsGrowthRatesWithHttpInfo (string company = null, string industryGroupName = null, string industryGroupNumber = null, int? pageSize = null, string nextPage = null)
         {
@@ -1941,16 +1913,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksEPSSurprises</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksEPSSurprises > GetZacksEpsSurprisesWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, decimal? epsActualGreater = null, decimal? epsActualLess = null, decimal? epsMeanEstimateGreater = null, decimal? epsMeanEstimateLess = null, decimal? epsAmountDiffGreater = null, decimal? epsAmountDiffLess = null, decimal? epsPercentDiffGreater = null, decimal? epsPercentDiffLess = null, decimal? epsCountEstimateGreater = null, decimal? epsCountEstimateLess = null, decimal? epsStdDevEstimateGreater = null, decimal? epsStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
         {
@@ -2161,16 +2123,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksETFHoldings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksETFHoldings > GetZacksEtfHoldingsWithHttpInfo (string etfTicker = null, string holdingSymbol = null, decimal? weightGreater = null, decimal? weightLess = null, int? pageSize = null, string nextPage = null)
         {
@@ -2331,16 +2283,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksForwardPEs</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksForwardPEs > GetZacksForwardPeWithHttpInfo (string nextPage = null)
         {
@@ -2481,16 +2423,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Intrinio ID or ticker for a Security</param>
         /// <returns>ApiResponse of ZacksForwardPE</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ZacksForwardPE > GetZacksForwardPeByIdentifierWithHttpInfo (string identifier)
         {
@@ -2641,16 +2573,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldingCompanies</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksInstitutionalHoldingCompanies > GetZacksInstitutionalHoldingCompaniesWithHttpInfo (string ticker = null, int? pageSize = null, string nextPage = null)
         {
@@ -2803,16 +2725,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldingOwners</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksInstitutionalHoldingOwners > GetZacksInstitutionalHoldingOwnersWithHttpInfo (string cik = null, int? pageSize = null, string nextPage = null)
         {
@@ -2967,16 +2879,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksInstitutionalHoldings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksInstitutionalHoldings > GetZacksInstitutionalHoldingsWithHttpInfo (string ticker = null, string ownerCik = null, int? pageSize = null, string nextPage = null)
         {
@@ -3133,16 +3035,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksLongTermGrowthRates</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksLongTermGrowthRates > GetZacksLongTermGrowthRatesWithHttpInfo (string identifier = null, int? pageSize = null, string nextPage = null)
         {
@@ -3309,16 +3201,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksSalesEstimates</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksSalesEstimates > GetZacksSalesEstimatesWithHttpInfo (string identifier = null, DateTime? startDate = null, DateTime? endDate = null, int? fiscalYear = null, string fiscalPeriod = null, int? calendarYear = null, string calendarPeriod = null, string nextPage = null, int? pageSize = null, string nextPage2 = null)
         {
@@ -3525,16 +3407,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksSalesSurprises</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksSalesSurprises > GetZacksSalesSurprisesWithHttpInfo (DateTime? startDate = null, DateTime? endDate = null, decimal? salesActualGreater = null, decimal? salesActualLess = null, decimal? salesMeanEstimateGreater = null, decimal? salesMeanEstimateLess = null, decimal? salesAmountDiffGreater = null, decimal? salesAmountDiffLess = null, decimal? salesPercentDiffGreater = null, decimal? salesPercentDiffLess = null, decimal? salesCountEstimateGreater = null, decimal? salesCountEstimateLess = null, decimal? salesStdDevEstimateGreater = null, decimal? salesStdDevEstimateLess = null, int? pageSize = null, string nextPage = null)
         {
@@ -3741,16 +3613,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseZacksTargetPriceConsensuses</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseZacksTargetPriceConsensuses > GetZacksTargetPriceConsensusesWithHttpInfo (string identifier = null, string industryGroupNumber = null, int? pageSize = null, string nextPage = null)
         {

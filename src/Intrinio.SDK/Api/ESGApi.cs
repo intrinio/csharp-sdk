@@ -376,6 +376,18 @@ namespace Intrinio.SDK.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+        
+        
+        private static bool ValidateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+            Regex validTimeRegex = new Regex(validTimePattern);
+            bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+              return true;
+        }
 
         /// <summary>
         /// ESG Companies 
@@ -403,16 +415,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGCompanies</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseESGCompanies > GetEsgCompaniesWithHttpInfo (string country = null, string industry = null, string ticker = null, int? pageSize = null, string nextPage = null)
         {
@@ -573,16 +575,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGCompanyComprehensiveRatingHistory</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseESGCompanyComprehensiveRatingHistory > GetEsgCompanyComprehensiveRatingsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
         {
@@ -741,16 +733,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGCompanyRatingHistory</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseESGCompanyRatingHistory > GetEsgCompanyRatingsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
         {
@@ -909,16 +891,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGLatest</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseESGLatest > GetEsgLatestWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
         {
@@ -1071,16 +1043,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseESGLatestComprehensive</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseESGLatestComprehensive > GetEsgLatestComprehensiveWithHttpInfo (string country = null, int? pageSize = null, string nextPage = null)
         {

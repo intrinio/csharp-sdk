@@ -376,6 +376,18 @@ namespace Intrinio.SDK.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+        
+        
+        private static bool ValidateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+            Regex validTimeRegex = new Regex(validTimePattern);
+            bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+              return true;
+        }
 
         /// <summary>
         /// All Owners Returns all owners and information for all insider and institutional owners of securities covered by Intrinio.
@@ -399,16 +411,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOwners</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseOwners > GetAllOwnersWithHttpInfo (bool? institutional = null, int? pageSize = null, string nextPage = null)
         {
@@ -557,16 +559,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An Intrinio ID or CIK of an Owner</param>
         /// <returns>ApiResponse of Owner</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< Owner > GetOwnerByIdWithHttpInfo (string identifier)
         {
@@ -721,16 +713,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOwnerInsiderTransactionFilings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseOwnerInsiderTransactionFilings > InsiderTransactionFilingsByOwnerWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
@@ -899,16 +881,6 @@ namespace Intrinio.SDK.Api
         /// <param name="asOfDate">Return only holdings filed before this date. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOwnerInstitutionalHoldings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseOwnerInstitutionalHoldings > InstitutionalHoldingsByOwnerWithHttpInfo (string identifier, int? pageSize = null, DateTime? asOfDate = null, string nextPage = null)
         {
@@ -1073,16 +1045,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOwners</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseOwners > SearchOwnersWithHttpInfo (string query, bool? institutional = null, int? pageSize = null, string nextPage = null)
         {

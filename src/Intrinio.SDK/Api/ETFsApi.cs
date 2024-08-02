@@ -390,6 +390,18 @@ namespace Intrinio.SDK.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+        
+        
+        private static bool ValidateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+            Regex validTimeRegex = new Regex(validTimePattern);
+            bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+              return true;
+        }
 
         /// <summary>
         /// All ETFs Returns a list of all currently listed ETFs, with relevant identification information including the ETF Name, Ticker, FIGI Ticker, and Exchange MIC for further usage with our ETF Metadata, Holdings, Stats, and Analytics offerings.
@@ -413,16 +425,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseETFs</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseETFs > GetAllEtfsWithHttpInfo (string exchange = null, int? pageSize = null, string nextPage = null)
         {
@@ -571,16 +573,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
         /// <returns>ApiResponse of ETF</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ETF > GetEtfWithHttpInfo (string identifier)
         {
@@ -727,16 +719,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
         /// <returns>ApiResponse of ETFAnalytics</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ETFAnalytics > GetEtfAnalyticsWithHttpInfo (string identifier)
         {
@@ -887,16 +869,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseETFHoldings</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseETFHoldings > GetEtfHoldingsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null)
         {
@@ -1051,16 +1023,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
         /// <returns>ApiResponse of ETFStats</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ETFStats > GetEtfStatsWithHttpInfo (string identifier)
         {
@@ -1209,16 +1171,6 @@ namespace Intrinio.SDK.Api
         /// <param name="query"></param>
         /// <param name="mode">When set, changes search mode to the specified mode. Paging is not available in rank_order. (optional)</param>
         /// <returns>ApiResponse of ApiResponseETFs</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseETFs > SearchEtfsWithHttpInfo (string query, string mode = null)
         {

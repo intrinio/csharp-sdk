@@ -434,6 +434,18 @@ namespace Intrinio.SDK.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+        
+        
+        private static bool ValidateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+            Regex validTimeRegex = new Regex(validTimePattern);
+            bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+              return true;
+        }
 
         /// <summary>
         /// Filter Fundamental Returns fundamentals that meet the set of filters specified in parameters.
@@ -477,16 +489,6 @@ namespace Intrinio.SDK.Api
         /// <param name="template">The financial statement template used by Intrinio to standardize the as reported data (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of Fundamental</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< Fundamental > FilterFundamentalWithHttpInfo (DateTime? filedAfter = null, DateTime? filedBefore = null, bool? reportedOnly = null, int? fiscalYear = null, string statementCode = null, string type = null, string fiscalPeriod = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? updatedAfter = null, DateTime? updatedBefore = null, string template = null, string nextPage = null)
         {
@@ -675,16 +677,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID for the Fundamental</param>
         /// <returns>ApiResponse of Fundamental</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< Fundamental > GetFundamentalByIdWithHttpInfo (string id)
         {
@@ -831,16 +823,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
         /// <returns>ApiResponse of ApiResponseReportedFinancials</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseReportedFinancials > GetFundamentalReportedFinancialsWithHttpInfo (string id)
         {
@@ -987,16 +969,6 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
         /// <returns>ApiResponse of ApiResponseStandardizedFinancials</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseStandardizedFinancials > GetFundamentalStandardizedFinancialsWithHttpInfo (string id)
         {
@@ -1145,16 +1117,6 @@ namespace Intrinio.SDK.Api
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
         /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of ApiResponseStandardizedFinancialsDimensions</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseStandardizedFinancialsDimensions > GetFundamentalStandardizedFinancialsDimensionsWithHttpInfo (string id, string tag)
         {
@@ -1317,16 +1279,6 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalYear">The fiscal year</param>
         /// <param name="fiscalPeriod">The fiscal period</param>
         /// <returns>ApiResponse of Fundamental</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< Fundamental > LookupFundamentalWithHttpInfo (string identifier, string statementCode, int? fiscalYear, string fiscalPeriod)
         {

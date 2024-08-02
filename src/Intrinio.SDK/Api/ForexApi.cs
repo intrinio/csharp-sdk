@@ -268,6 +268,18 @@ namespace Intrinio.SDK.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+        
+        
+        private static bool ValidateTimeParam(string time) {
+          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+            Regex validTimeRegex = new Regex(validTimePattern);
+            bool invalidTime = !(validTimeRegex.IsMatch(time));
+          
+          if (invalidTime)
+            throw new ArgumentException("Time must be in the format 'hh:mm'");
+          else
+              return true;
+        }
 
         /// <summary>
         /// Forex Currencies Returns a list of forex currencies for which prices are available.
@@ -285,16 +297,6 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseForexCurrencies</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseForexCurrencies > GetForexCurrenciesWithHttpInfo ()
         {
@@ -429,16 +431,6 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseForexPairs</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseForexPairs > GetForexPairsWithHttpInfo ()
         {
@@ -591,16 +583,6 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseForexPrices</returns>
-        private static bool validateTimeParam(string time) {
-          string validTimePattern = @"^(?:0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
-      		Regex validTimeRegex = new Regex(validTimePattern);
-      		bool invalidTime = !(validTimeRegex.IsMatch(time));
-          
-          if (invalidTime)
-            throw new ArgumentException("Time must be in the format 'hh:mm'");
-          else
-      		  return true;
-        }
         
         public ApiResponse< ApiResponseForexPrices > GetForexPricesWithHttpInfo (string pair, string timeframe, string timezone = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, int? pageSize = null, string nextPage = null)
         {
@@ -633,14 +615,14 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
             
             if (startTime != null && startDate != null) {
-              if (validateTimeParam(startTime)) {
+              if (ValidateTimeParam(startTime)) {
                 var startTimeSpan = TimeSpan.Parse(startTime);
                 startDate = startDate.Value.Add(startTimeSpan);
               }
             }
               
             if (endTime != null && endDate != null) {
-              if (validateTimeParam(endTime)) {
+              if (ValidateTimeParam(endTime)) {
                 var endTimeSpan = TimeSpan.Parse(endTime);
                 endDate = endDate.Value.Add(endTimeSpan);
               }  
@@ -746,14 +728,14 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
               
             if (startTime != null && startDate != null) {
-              if (validateTimeParam(startTime)) {
+              if (ValidateTimeParam(startTime)) {
                 var startTimeSpan = TimeSpan.Parse(startTime);
                 startDate = startDate.Value.Add(startTimeSpan);
               }
             }
               
             if (endTime != null && endDate != null) {
-              if (validateTimeParam(endTime)) {
+              if (ValidateTimeParam(endTime)) {
                 var endTimeSpan = TimeSpan.Parse(endTime);
                 endDate = endDate.Value.Add(endTimeSpan);
               }  

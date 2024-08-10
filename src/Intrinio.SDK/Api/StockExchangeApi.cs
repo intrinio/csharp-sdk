@@ -105,7 +105,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPrices</returns>
         ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
@@ -123,7 +123,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
         ApiResponse<ApiResponseStockExchangeStockPrices> GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
@@ -135,10 +135,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
         ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
@@ -151,10 +151,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
         ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
@@ -273,7 +273,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPrices</returns>
         System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
@@ -291,7 +291,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
@@ -303,10 +303,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
         System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
@@ -319,10 +319,10 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
@@ -940,7 +940,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeStockPrices</returns>
         public ApiResponseStockExchangeStockPrices GetStockExchangePrices (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
@@ -959,7 +959,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
         
@@ -1034,7 +1034,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeStockPrices</returns>
         public async System.Threading.Tasks.Task<ApiResponseStockExchangeStockPrices> GetStockExchangePricesAsync (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
@@ -1054,7 +1054,7 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end of the date range you&#39;re querying. May not be used with date parameter. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null)
@@ -1123,10 +1123,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
         public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
@@ -1140,10 +1140,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
         
@@ -1211,10 +1211,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
         public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
@@ -1229,10 +1229,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
-        /// <param name="source">Return realtime prices from the specified data source. If no source is specified, all sources are used. (optional)</param>
+        /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
-        /// <param name="tickers">The list of ticker symbols to filter to. (optional)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)

@@ -123,6 +123,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'ExchangeVolume'
         }
         /// <summary>
+        /// Test the property 'MarketVolume'
+        /// </summary>
+        [Test]
+        public void MarketVolumeTest()
+        {
+            // TODO unit test for the property 'MarketVolume'
+        }
+        /// <summary>
         /// Test the property 'EodFiftyTwoWeekHigh'
         /// </summary>
         [Test]

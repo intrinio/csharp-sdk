@@ -25,16 +25,16 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiResponseCompanyNewsBody" /> class.
         /// </summary>
-        /// <param name="Body">The article body. Requires additional access..</param>
+        /// <param name="Body">The article body..</param>
         public ApiResponseCompanyNewsBody(string Body = default(string))
         {
             this.Body = Body;
         }
         
         /// <summary>
-        /// The article body. Requires additional access.
+        /// The article body.
         /// </summary>
-        /// <value>The article body. Requires additional access.</value>
+        /// <value>The article body.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
 

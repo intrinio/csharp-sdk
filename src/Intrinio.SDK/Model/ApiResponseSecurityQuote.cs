@@ -33,6 +33,7 @@ namespace Intrinio.SDK.Model
         /// <param name="High">The highest price from the latest day of trading..</param>
         /// <param name="Low">The lowest price from the latest day of trading..</param>
         /// <param name="ExchangeVolume">The volume of the security from the source..</param>
+        /// <param name="MarketVolume">The volume of the security for the entire market..</param>
         /// <param name="EodFiftyTwoWeekHigh">The 52 week high price..</param>
         /// <param name="EodFiftyTwoWeekLow">The 52 week low price..</param>
         /// <param name="Marketcap">The current market cap..</param>
@@ -51,7 +52,7 @@ namespace Intrinio.SDK.Model
         /// <param name="ChangePercent180Days">The percent change from the adjusted price 180 days ago to now..</param>
         /// <param name="ChangePercent365Days">The percent change from the adjusted price 365 days ago to now..</param>
         /// <param name="ChangePercent1825Days">The percent change from the adjusted price 1825 days ago to now..</param>
-        public ApiResponseSecurityQuote(SecuritySummary Security = default(SecuritySummary), decimal? Last = default(decimal?), DateTime? LastTime = default(DateTime?), string Source = default(string), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? EodFiftyTwoWeekHigh = default(decimal?), decimal? EodFiftyTwoWeekLow = default(decimal?), decimal? Marketcap = default(decimal?), decimal? Pricetoearnings = default(decimal?), decimal? PreviousClose = default(decimal?), decimal? PreviousCloseDate = default(decimal?), decimal? Change = default(decimal?), decimal? ChangePercent = default(decimal?), decimal? AdjClose5DaysAgo = default(decimal?), decimal? AdjClose30DaysAgo = default(decimal?), decimal? AdjClose180DaysAgo = default(decimal?), decimal? AdjClose365DaysAgo = default(decimal?), decimal? AdjClose1825DaysAgo = default(decimal?), decimal? ChangePercent5Days = default(decimal?), decimal? ChangePercent30Days = default(decimal?), decimal? ChangePercent180Days = default(decimal?), decimal? ChangePercent365Days = default(decimal?), decimal? ChangePercent1825Days = default(decimal?))
+        public ApiResponseSecurityQuote(SecuritySummary Security = default(SecuritySummary), decimal? Last = default(decimal?), DateTime? LastTime = default(DateTime?), string Source = default(string), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), decimal? EodFiftyTwoWeekHigh = default(decimal?), decimal? EodFiftyTwoWeekLow = default(decimal?), decimal? Marketcap = default(decimal?), decimal? Pricetoearnings = default(decimal?), decimal? PreviousClose = default(decimal?), decimal? PreviousCloseDate = default(decimal?), decimal? Change = default(decimal?), decimal? ChangePercent = default(decimal?), decimal? AdjClose5DaysAgo = default(decimal?), decimal? AdjClose30DaysAgo = default(decimal?), decimal? AdjClose180DaysAgo = default(decimal?), decimal? AdjClose365DaysAgo = default(decimal?), decimal? AdjClose1825DaysAgo = default(decimal?), decimal? ChangePercent5Days = default(decimal?), decimal? ChangePercent30Days = default(decimal?), decimal? ChangePercent180Days = default(decimal?), decimal? ChangePercent365Days = default(decimal?), decimal? ChangePercent1825Days = default(decimal?))
         {
             this.Security = Security;
             this.Last = Last;
@@ -61,6 +62,7 @@ namespace Intrinio.SDK.Model
             this.High = High;
             this.Low = Low;
             this.ExchangeVolume = ExchangeVolume;
+            this.MarketVolume = MarketVolume;
             this.EodFiftyTwoWeekHigh = EodFiftyTwoWeekHigh;
             this.EodFiftyTwoWeekLow = EodFiftyTwoWeekLow;
             this.Marketcap = Marketcap;
@@ -136,6 +138,13 @@ namespace Intrinio.SDK.Model
         /// <value>The volume of the security from the source.</value>
         [DataMember(Name="exchange_volume", EmitDefaultValue=false)]
         public decimal? ExchangeVolume { get; set; }
+
+        /// <summary>
+        /// The volume of the security for the entire market.
+        /// </summary>
+        /// <value>The volume of the security for the entire market.</value>
+        [DataMember(Name="market_volume", EmitDefaultValue=false)]
+        public decimal? MarketVolume { get; set; }
 
         /// <summary>
         /// The 52 week high price.
@@ -279,6 +288,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  High: ").Append(High).Append("\n");
             sb.Append("  Low: ").Append(Low).Append("\n");
             sb.Append("  ExchangeVolume: ").Append(ExchangeVolume).Append("\n");
+            sb.Append("  MarketVolume: ").Append(MarketVolume).Append("\n");
             sb.Append("  EodFiftyTwoWeekHigh: ").Append(EodFiftyTwoWeekHigh).Append("\n");
             sb.Append("  EodFiftyTwoWeekLow: ").Append(EodFiftyTwoWeekLow).Append("\n");
             sb.Append("  Marketcap: ").Append(Marketcap).Append("\n");
@@ -370,6 +380,11 @@ namespace Intrinio.SDK.Model
                     this.ExchangeVolume == input.ExchangeVolume ||
                     (this.ExchangeVolume != null &&
                     this.ExchangeVolume.Equals(input.ExchangeVolume))
+                ) && 
+                (
+                    this.MarketVolume == input.MarketVolume ||
+                    (this.MarketVolume != null &&
+                    this.MarketVolume.Equals(input.MarketVolume))
                 ) && 
                 (
                     this.EodFiftyTwoWeekHigh == input.EodFiftyTwoWeekHigh ||
@@ -488,6 +503,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Low.GetHashCode();
                 if (this.ExchangeVolume != null)
                     hashCode = hashCode * 59 + this.ExchangeVolume.GetHashCode();
+                if (this.MarketVolume != null)
+                    hashCode = hashCode * 59 + this.MarketVolume.GetHashCode();
                 if (this.EodFiftyTwoWeekHigh != null)
                     hashCode = hashCode * 59 + this.EodFiftyTwoWeekHigh.GetHashCode();
                 if (this.EodFiftyTwoWeekLow != null)

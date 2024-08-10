@@ -1472,7 +1472,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>RealtimeStockPrice</returns>
         RealtimeStockPrice GetSecurityRealtimePrice (string identifier, List<string> source = null);
 
@@ -1484,7 +1484,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>ApiResponse of RealtimeStockPrice</returns>
         ApiResponse<RealtimeStockPrice> GetSecurityRealtimePriceWithHttpInfo (string identifier, List<string> source = null);
         /// <summary>
@@ -3308,7 +3308,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of RealtimeStockPrice</returns>
         System.Threading.Tasks.Task<RealtimeStockPrice> GetSecurityRealtimePriceAsync (string identifier, List<string> source = null);
 
@@ -3320,7 +3320,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of ApiResponse (RealtimeStockPrice)</returns>
         System.Threading.Tasks.Task<ApiResponse<RealtimeStockPrice>> GetSecurityRealtimePriceAsyncWithHttpInfo (string identifier, List<string> source = null);
         /// <summary>
@@ -12097,7 +12097,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>RealtimeStockPrice</returns>
         public RealtimeStockPrice GetSecurityRealtimePrice (string identifier, List<string> source = null)
         {
@@ -12110,7 +12110,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>ApiResponse of RealtimeStockPrice</returns>
         
         public ApiResponse< RealtimeStockPrice > GetSecurityRealtimePriceWithHttpInfo (string identifier, List<string> source = null)
@@ -12173,7 +12173,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of RealtimeStockPrice</returns>
         public async System.Threading.Tasks.Task<RealtimeStockPrice> GetSecurityRealtimePriceAsync (string identifier, List<string> source = null)
         {
@@ -12187,7 +12187,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
-        /// <param name="source">Return the realtime price from the specified data source. If no source is specified, the best source available is used. (optional)</param>
+        /// <param name="source">Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. (optional)</param>
         /// <returns>Task of ApiResponse (RealtimeStockPrice)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RealtimeStockPrice>> GetSecurityRealtimePriceAsyncWithHttpInfo (string identifier, List<string> source = null)
         {

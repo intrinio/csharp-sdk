@@ -4722,7 +4722,7 @@ namespace Example
       var securityApi = new SecurityApi();
       
       string identifier = "AAPL";
-      List<string> source = "iex";
+      List<string> source = "iex,delayed_sip";
       
       RealtimeStockPrice result = securityApi.GetSecurityRealtimePrice(identifier, source);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -4741,7 +4741,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **source** | List&lt;string&gt;| Return the realtime price from the specified data source. If no source is specified, the best source available is used. | [optional]  &nbsp;
+ **source** | List&lt;string&gt;| Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

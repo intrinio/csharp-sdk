@@ -453,7 +453,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseCompanyNews</returns>
         ApiResponse<ApiResponseCompanyNews> GetCompanyNewsWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
         /// <summary>
-        /// The body of a news article
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
         /// </summary>
         /// <remarks>
         /// Returns the news article body.
@@ -467,7 +467,7 @@ namespace Intrinio.SDK.Api
         ApiResponseCompanyNewsBody GetCompanyNewsBody (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null);
 
         /// <summary>
-        /// The body of a news article
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
         /// </summary>
         /// <remarks>
         /// Returns the news article body.
@@ -1127,7 +1127,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseCompanyNews)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyNews>> GetCompanyNewsAsyncWithHttpInfo (string identifier, string specificSource = null, int? pageSize = null, string sentiment = null, string topic = null, string security = null, DateTime? startDate = null, DateTime? endDate = null, string language = null, int? wordCountGreaterThan = null, int? wordCountLessThan = null, bool? isSpam = null, decimal? businessRelevanceGreaterThan = null, decimal? businessRelevanceLessThan = null, string nextPage = null);
         /// <summary>
-        /// The body of a news article
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
         /// </summary>
         /// <remarks>
         /// Returns the news article body.
@@ -1141,7 +1141,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseCompanyNewsBody> GetCompanyNewsBodyAsync (string newsStoryId, DateTime? publicationDate, string specificSource = null, string nextPage = null);
 
         /// <summary>
-        /// The body of a news article
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
         /// </summary>
         /// <remarks>
         /// Returns the news article body.
@@ -3859,7 +3859,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// The body of a news article Returns the news article body.
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details. Returns the news article body.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -3874,7 +3874,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// The body of a news article Returns the news article body.
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details. Returns the news article body.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -3944,7 +3944,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// The body of a news article Returns the news article body.
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details. Returns the news article body.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -3960,7 +3960,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// The body of a news article Returns the news article body.
+        /// The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details. Returns the news article body.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>

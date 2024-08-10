@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
  **endDate** | DateTime?| The end of the date range you&#39;re querying. May not be used with date parameter. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
- **tickers** | [**List&lt;string&gt;**](string.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
+ **tickers** | [**List&lt;string&gt;**](string.md)| The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. | [optional]  &nbsp;
  **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -450,7 +450,7 @@ namespace Example
       var stockExchangeApi = new StockExchangeApi();
       
       string identifier = "USCOMP";
-      List<string> source = null;
+      List<string> source = "iex,delayed_sip";
       bool? activeOnly = null;
       int? pageSize = 100;
       var tickers = new List<string>();
@@ -473,10 +473,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **source** | List&lt;string&gt;| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
+ **source** | List&lt;string&gt;| Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. | [optional]  &nbsp;
  **activeOnly** | bool?| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
- **tickers** | [**List&lt;string&gt;**](string.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
+ **tickers** | [**List&lt;string&gt;**](string.md)| The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

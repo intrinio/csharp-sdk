@@ -17,6 +17,7 @@ Name | Type | Description
 **High** | decimal? | The highest price from the latest day of trading. &nbsp;
 **Low** | decimal? | The lowest price from the latest day of trading. &nbsp;
 **ExchangeVolume** | decimal? | The volume of the security from the source. &nbsp;
+**MarketVolume** | decimal? | The volume of the security for the entire market. &nbsp;
 **EodFiftyTwoWeekHigh** | decimal? | The 52 week high price. &nbsp;
 **EodFiftyTwoWeekLow** | decimal? | The 52 week low price. &nbsp;
 **Marketcap** | decimal? | The current market cap. &nbsp;

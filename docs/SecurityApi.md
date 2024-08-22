@@ -1124,7 +1124,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+> ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null)
 
 #### Interval Stock Prices for Security
 
@@ -1161,15 +1161,16 @@ namespace Example
       string intervalSize = "15m";
       string source = null;
       DateTime? startDate = DateTime.Parse("2023-01-01");
-      string startTime = null;
+      string startTime = 33300;
       DateTime? endDate = DateTime.Parse("2023-02-01");
-      string endTime = null;
+      string endTime = 33300;
       string timezone = "UTC";
       int? pageSize = 100;
       bool? splitAdjusted = false;
+      bool? includeQuoteOnlyBars = false;
       string nextPage = null;
       
-      ApiResponseSecurityIntervalPrices result = securityApi.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
+      ApiResponseSecurityIntervalPrices result = securityApi.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, includeQuoteOnlyBars, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1195,6 +1196,7 @@ Name | Type | Description  | Notes
  **timezone** | string| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **splitAdjusted** | bool?| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
+ **includeQuoteOnlyBars** | bool?| If true, also include bars where no trades occurred but quotes did. | [optional] [default to false] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -1236,7 +1238,7 @@ Name | Type | Description  | Notes
 
 #### Intraday Stock Prices for Security
 
-Return intraday stock prices for the Security with the given `identifier`
+Deprecated.  Return intraday stock prices for the Security with the given `identifier`
 
 [//]: # (END_OVERVIEW)
 
@@ -4596,7 +4598,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string nextPage = null)
+> ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string source = null, string nextPage = null)
 
 #### Quote for a Security
 
@@ -4631,9 +4633,10 @@ namespace Example
       
       string identifier = "AAPL";
       bool? activeOnly = false;
+      string source = "delayed_sip";
       string nextPage = null;
       
-      ApiResponseSecurityQuote result = securityApi.GetSecurityQuote(identifier, activeOnly, nextPage);
+      ApiResponseSecurityQuote result = securityApi.GetSecurityQuote(identifier, activeOnly, source, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -4651,6 +4654,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
  **activeOnly** | bool?| Whether to return only realtime prices from today. | [optional] [default to false] &nbsp;
+ **source** | string| Return the realtime price from the specified source instead of the most recent. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

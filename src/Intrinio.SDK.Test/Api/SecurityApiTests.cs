@@ -233,8 +233,9 @@ namespace Intrinio.SDK.Test
             //string timezone = null;
             //int? pageSize = null;
             //bool? splitAdjusted = null;
+            //bool? includeQuoteOnlyBars = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
+            //var response = instance.GetSecurityIntervalPrices(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, includeQuoteOnlyBars, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityIntervalPrices> (response, "response is ApiResponseSecurityIntervalPrices");
         }
         
@@ -841,8 +842,9 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string identifier = null;
             //bool? activeOnly = null;
+            //string source = null;
             //string nextPage = null;
-            //var response = instance.GetSecurityQuote(identifier, activeOnly, nextPage);
+            //var response = instance.GetSecurityQuote(identifier, activeOnly, source, nextPage);
             //Assert.IsInstanceOf<ApiResponseSecurityQuote> (response, "response is ApiResponseSecurityQuote");
         }
         

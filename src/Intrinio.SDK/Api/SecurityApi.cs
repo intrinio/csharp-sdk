@@ -329,9 +329,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
@@ -350,14 +351,15 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
-        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -375,7 +377,7 @@ namespace Intrinio.SDK.Api
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1448,9 +1450,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityQuote</returns>
-        ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string nextPage = null);
+        ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string source = null, string nextPage = null);
 
         /// <summary>
         /// Quote for a Security
@@ -1461,9 +1464,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityQuote</returns>
-        ApiResponse<ApiResponseSecurityQuote> GetSecurityQuoteWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null);
+        ApiResponse<ApiResponseSecurityQuote> GetSecurityQuoteWithHttpInfo (string identifier, bool? activeOnly = null, string source = null, string nextPage = null);
         /// <summary>
         /// Realtime Stock Price for Security
         /// </summary>
@@ -2165,9 +2169,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null);
 
         /// <summary>
         /// Interval Stock Prices for Security
@@ -2186,14 +2191,15 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null);
         /// <summary>
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2211,7 +2217,7 @@ namespace Intrinio.SDK.Api
         /// Intraday Stock Prices for Security
         /// </summary>
         /// <remarks>
-        /// Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3284,9 +3290,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityQuote</returns>
-        System.Threading.Tasks.Task<ApiResponseSecurityQuote> GetSecurityQuoteAsync (string identifier, bool? activeOnly = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseSecurityQuote> GetSecurityQuoteAsync (string identifier, bool? activeOnly = null, string source = null, string nextPage = null);
 
         /// <summary>
         /// Quote for a Security
@@ -3297,9 +3304,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityQuote)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityQuote>> GetSecurityQuoteAsyncWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityQuote>> GetSecurityQuoteAsyncWithHttpInfo (string identifier, bool? activeOnly = null, string source = null, string nextPage = null);
         /// <summary>
         /// Realtime Stock Price for Security
         /// </summary>
@@ -5604,11 +5612,12 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityIntervalPrices</returns>
-        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public ApiResponseSecurityIntervalPrices GetSecurityIntervalPrices (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = GetSecurityIntervalPricesWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, includeQuoteOnlyBars, nextPage);
              return localVarResponse.Data;
         }
 
@@ -5626,10 +5635,11 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityIntervalPrices</returns>
         
-        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityIntervalPrices > GetSecurityIntervalPricesWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -5683,6 +5693,7 @@ namespace Intrinio.SDK.Api
             if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (splitAdjusted != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "split_adjusted", splitAdjusted)); // query parameter
+            if (includeQuoteOnlyBars != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_quote_only_bars", includeQuoteOnlyBars)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -5723,11 +5734,12 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityIntervalPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityIntervalPrices> GetSecurityIntervalPricesAsync (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, nextPage);
+             ApiResponse<ApiResponseSecurityIntervalPrices> localVarResponse = await GetSecurityIntervalPricesAsyncWithHttpInfo(identifier, intervalSize, source, startDate, startTime, endDate, endTime, timezone, pageSize, splitAdjusted, includeQuoteOnlyBars, nextPage);
              return localVarResponse.Data;
 
         }
@@ -5746,9 +5758,10 @@ namespace Intrinio.SDK.Api
         /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
+        /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityIntervalPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityIntervalPrices>> GetSecurityIntervalPricesAsyncWithHttpInfo (string identifier, string intervalSize, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, bool? splitAdjusted = null, bool? includeQuoteOnlyBars = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -5802,6 +5815,7 @@ namespace Intrinio.SDK.Api
             if (intervalSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "interval_size", intervalSize)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (splitAdjusted != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "split_adjusted", splitAdjusted)); // query parameter
+            if (includeQuoteOnlyBars != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_quote_only_bars", includeQuoteOnlyBars)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -5829,7 +5843,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Intraday Stock Prices for Security Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5848,7 +5862,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Intraday Stock Prices for Security Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5936,7 +5950,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Intraday Stock Prices for Security Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5956,7 +5970,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Intraday Stock Prices for Security Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+        /// Intraday Stock Prices for Security Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11940,11 +11954,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseSecurityQuote</returns>
-        public ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string nextPage = null)
+        public ApiResponseSecurityQuote GetSecurityQuote (string identifier, bool? activeOnly = null, string source = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityQuote> localVarResponse = GetSecurityQuoteWithHttpInfo(identifier, activeOnly, nextPage);
+             ApiResponse<ApiResponseSecurityQuote> localVarResponse = GetSecurityQuoteWithHttpInfo(identifier, activeOnly, source, nextPage);
              return localVarResponse.Data;
         }
 
@@ -11954,10 +11969,11 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseSecurityQuote</returns>
         
-        public ApiResponse< ApiResponseSecurityQuote > GetSecurityQuoteWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null)
+        public ApiResponse< ApiResponseSecurityQuote > GetSecurityQuoteWithHttpInfo (string identifier, bool? activeOnly = null, string source = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -11987,6 +12003,7 @@ namespace Intrinio.SDK.Api
             
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -12019,11 +12036,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseSecurityQuote</returns>
-        public async System.Threading.Tasks.Task<ApiResponseSecurityQuote> GetSecurityQuoteAsync (string identifier, bool? activeOnly = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseSecurityQuote> GetSecurityQuoteAsync (string identifier, bool? activeOnly = null, string source = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseSecurityQuote> localVarResponse = await GetSecurityQuoteAsyncWithHttpInfo(identifier, activeOnly, nextPage);
+             ApiResponse<ApiResponseSecurityQuote> localVarResponse = await GetSecurityQuoteAsyncWithHttpInfo(identifier, activeOnly, source, nextPage);
              return localVarResponse.Data;
 
         }
@@ -12034,9 +12052,10 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
         /// <param name="activeOnly">Whether to return only realtime prices from today. (optional, default to false)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurityQuote)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityQuote>> GetSecurityQuoteAsyncWithHttpInfo (string identifier, bool? activeOnly = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityQuote>> GetSecurityQuoteAsyncWithHttpInfo (string identifier, bool? activeOnly = null, string source = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -12066,6 +12085,7 @@ namespace Intrinio.SDK.Api
 
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

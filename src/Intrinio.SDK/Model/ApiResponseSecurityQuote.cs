@@ -52,7 +52,7 @@ namespace Intrinio.SDK.Model
         /// <param name="ChangePercent180Days">The percent change from the adjusted price 180 days ago to now..</param>
         /// <param name="ChangePercent365Days">The percent change from the adjusted price 365 days ago to now..</param>
         /// <param name="ChangePercent1825Days">The percent change from the adjusted price 1825 days ago to now..</param>
-        public ApiResponseSecurityQuote(SecuritySummary Security = default(SecuritySummary), decimal? Last = default(decimal?), DateTime? LastTime = default(DateTime?), string Source = default(string), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), decimal? EodFiftyTwoWeekHigh = default(decimal?), decimal? EodFiftyTwoWeekLow = default(decimal?), decimal? Marketcap = default(decimal?), decimal? Pricetoearnings = default(decimal?), decimal? PreviousClose = default(decimal?), decimal? PreviousCloseDate = default(decimal?), decimal? Change = default(decimal?), decimal? ChangePercent = default(decimal?), decimal? AdjClose5DaysAgo = default(decimal?), decimal? AdjClose30DaysAgo = default(decimal?), decimal? AdjClose180DaysAgo = default(decimal?), decimal? AdjClose365DaysAgo = default(decimal?), decimal? AdjClose1825DaysAgo = default(decimal?), decimal? ChangePercent5Days = default(decimal?), decimal? ChangePercent30Days = default(decimal?), decimal? ChangePercent180Days = default(decimal?), decimal? ChangePercent365Days = default(decimal?), decimal? ChangePercent1825Days = default(decimal?))
+        public ApiResponseSecurityQuote(SecuritySummary Security = default(SecuritySummary), decimal? Last = default(decimal?), DateTime? LastTime = default(DateTime?), string Source = default(string), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), decimal? EodFiftyTwoWeekHigh = default(decimal?), decimal? EodFiftyTwoWeekLow = default(decimal?), decimal? Marketcap = default(decimal?), decimal? Pricetoearnings = default(decimal?), decimal? PreviousClose = default(decimal?), DateTime? PreviousCloseDate = default(DateTime?), decimal? Change = default(decimal?), decimal? ChangePercent = default(decimal?), decimal? AdjClose5DaysAgo = default(decimal?), decimal? AdjClose30DaysAgo = default(decimal?), decimal? AdjClose180DaysAgo = default(decimal?), decimal? AdjClose365DaysAgo = default(decimal?), decimal? AdjClose1825DaysAgo = default(decimal?), decimal? ChangePercent5Days = default(decimal?), decimal? ChangePercent30Days = default(decimal?), decimal? ChangePercent180Days = default(decimal?), decimal? ChangePercent365Days = default(decimal?), decimal? ChangePercent1825Days = default(decimal?))
         {
             this.Security = Security;
             this.Last = Last;
@@ -186,7 +186,8 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The date of the previous close.</value>
         [DataMember(Name="previous_close_date", EmitDefaultValue=false)]
-        public decimal? PreviousCloseDate { get; set; }
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? PreviousCloseDate { get; set; }
 
         /// <summary>
         /// The difference in last price from the last close price

@@ -23,7 +23,7 @@ Name | Type | Description
 **Marketcap** | decimal? | The current market cap. &nbsp;
 **Pricetoearnings** | decimal? | The current price to earnings. &nbsp;
 **PreviousClose** | decimal? | The previous close price. &nbsp;
-**PreviousCloseDate** | decimal? | The date of the previous close. &nbsp;
+**PreviousCloseDate** | DateTime? | The date of the previous close. &nbsp;
 **Change** | decimal? | The difference in last price from the last close price &nbsp;
 **ChangePercent** | decimal? | The percent difference in last price from the last close price &nbsp;
 **AdjClose5DaysAgo** | decimal? | The adjusted close price 5 days ago. &nbsp;

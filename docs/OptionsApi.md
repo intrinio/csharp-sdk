@@ -142,7 +142,7 @@ This endpoint does not need any parameter.
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsAggregates GetOptionAggregates (Object date = null)
+> ApiResponseOptionsAggregates GetOptionAggregates (Object date = null, int? pageSize = null, string nextPage = null)
 
 #### Total open interest and volume aggregated by ticker
 
@@ -176,8 +176,10 @@ namespace Example
       var optionsApi = new OptionsApi();
       
       var date = new Object();
+      int? pageSize = 100;
+      string nextPage = null;
       
-      ApiResponseOptionsAggregates result = optionsApi.GetOptionAggregates(date);
+      ApiResponseOptionsAggregates result = optionsApi.GetOptionAggregates(date, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -194,6 +196,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | [**Object**](Object.md)| Return aggregated data for this date | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1899,7 +1903,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null)
+> ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null)
 
 #### Option Prices Realtime By Ticker
 
@@ -1940,8 +1944,10 @@ namespace Example
       string stockPriceSource = null;
       string model = null;
       bool? showExtendedPrice = null;
+      var expirationStartDate = new Object();
+      var expirationEndDate = new Object();
       
-      ApiResponseOptionsPricesByTickerRealtime result = optionsApi.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice);
+      ApiResponseOptionsPricesByTickerRealtime result = optionsApi.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1965,6 +1971,8 @@ Name | Type | Description  | Notes
  **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **expirationStartDate** | [**Object**](Object.md)| Filter out contracts that expire before this date. | [optional]  &nbsp;
+ **expirationEndDate** | [**Object**](Object.md)| Filter out contracts that expire after this date. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

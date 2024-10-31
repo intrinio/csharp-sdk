@@ -41,6 +41,14 @@ namespace Intrinio.SDK.Model
         /// <param name="ExchangeVolume">The number of shares exchanged during the trading day on the exchange..</param>
         /// <param name="MarketVolume">The number of shares exchanged during the trading day for the whole market..</param>
         /// <param name="UpdatedOn">The date and time when the data was last updated..</param>
+        /// <param name="EodClosePrice">The previous trading session&#39;s closing price..</param>
+        /// <param name="EodCloseDate">The date of the previous trading session&#39;s closing price..</param>
+        /// <param name="NormalMarketHoursLastTime">The date and time of the last trade that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions..</param>
+        /// <param name="NormalMarketHoursLastPrice">The price of the last that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions..</param>
+        /// <param name="NormalMarketHoursLastSize">The size of the last trade that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions..</param>
+        /// <param name="QualifiedLastPrice">The price of the last trade that qualifies for last price consideration according to exchange rules on trade conditions..</param>
+        /// <param name="QualifiedLastTime">The date and time of the last trade that qualifies for last price consideration according to exchange rules on trade conditions..</param>
+        /// <param name="QualifiedLastSize">The size of the last trade that qualifies for last price consideration according to exchange rules on trade conditions..</param>
         /// <param name="Source">The source of the data..</param>
         /// <param name="ListingVenue">The listing venue where the trade took place. Available only where source is SIP. Listing Venue Modifiers include: Q – Nasdaq | N – NYSE | A – NYSE American | P – NYSE Arca | u – Other OTC Markets | V – Investors Exchange LLC .</param>
         /// <param name="SalesConditions">When applicable, indicates any sales condition modifiers associated with the trade. Sales Condition Modifers include: @ – Regular Sale | A – Acquisition | B – Bunched Trade | C – Cash Sale | D – Distribution | E – Placeholder | F – Intermarket Sweep | G – Bunched Sold Trade  | H – Priced Variation Trade | I – Odd Lot Trade | K – Rule 155 Trade (AMEX) | L – Sold Last | M – Market Center Official Close | N – Next Day | O – Opening Prints  | P – Prior Reference Price | Q – Market Center Official Open | R – Seller | S – Split Trade | T – Form T | U – Extended Trading Hours (Sold Out of Sequence)  | V – Contingent Trade | W – Average Price Trade | X – Cross/Periodic Auction Trade | Y – Yellow Flag Regular Trade | Z – Sold (Out of Sequence)  | 1 – Stopped Stock (Regular Trade) | 4 – Derivatively Priced | 5 – Re-Opening Prints | 6 – Closing Prints | 7 – Qualified Contingent Trade (QCT)  | 8 – Placeholder for 611 Exempt | 9 – Corrected Consolidated Close (Per Listing Market) .</param>
@@ -48,7 +56,7 @@ namespace Intrinio.SDK.Model
         /// <param name="MarketCenterCode">The market center character code..</param>
         /// <param name="IsDarkpool">Whether or not the current trade is from a darkpool or not..</param>
         /// <param name="Security">Security.</param>
-        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? LastSize = default(decimal?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), DateTime? BidTime = default(DateTime?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), DateTime? AskTime = default(DateTime?), decimal? OpenPrice = default(decimal?), decimal? ClosePrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), string Source = default(string), string ListingVenue = default(string), string SalesConditions = default(string), string QuoteConditions = default(string), string MarketCenterCode = default(string), bool? IsDarkpool = default(bool?), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
+        public RealtimeStockPrice(decimal? LastPrice = default(decimal?), DateTime? LastTime = default(DateTime?), decimal? LastSize = default(decimal?), decimal? BidPrice = default(decimal?), decimal? BidSize = default(decimal?), DateTime? BidTime = default(DateTime?), decimal? AskPrice = default(decimal?), decimal? AskSize = default(decimal?), DateTime? AskTime = default(DateTime?), decimal? OpenPrice = default(decimal?), decimal? ClosePrice = default(decimal?), decimal? HighPrice = default(decimal?), decimal? LowPrice = default(decimal?), decimal? ExchangeVolume = default(decimal?), decimal? MarketVolume = default(decimal?), DateTime? UpdatedOn = default(DateTime?), decimal? EodClosePrice = default(decimal?), DateTime? EodCloseDate = default(DateTime?), DateTime? NormalMarketHoursLastTime = default(DateTime?), decimal? NormalMarketHoursLastPrice = default(decimal?), decimal? NormalMarketHoursLastSize = default(decimal?), decimal? QualifiedLastPrice = default(decimal?), DateTime? QualifiedLastTime = default(DateTime?), decimal? QualifiedLastSize = default(decimal?), string Source = default(string), string ListingVenue = default(string), string SalesConditions = default(string), string QuoteConditions = default(string), string MarketCenterCode = default(string), bool? IsDarkpool = default(bool?), RealtimeStockPriceSecurity Security = default(RealtimeStockPriceSecurity))
         {
             this.LastPrice = LastPrice;
             this.LastTime = LastTime;
@@ -66,6 +74,14 @@ namespace Intrinio.SDK.Model
             this.ExchangeVolume = ExchangeVolume;
             this.MarketVolume = MarketVolume;
             this.UpdatedOn = UpdatedOn;
+            this.EodClosePrice = EodClosePrice;
+            this.EodCloseDate = EodCloseDate;
+            this.NormalMarketHoursLastTime = NormalMarketHoursLastTime;
+            this.NormalMarketHoursLastPrice = NormalMarketHoursLastPrice;
+            this.NormalMarketHoursLastSize = NormalMarketHoursLastSize;
+            this.QualifiedLastPrice = QualifiedLastPrice;
+            this.QualifiedLastTime = QualifiedLastTime;
+            this.QualifiedLastSize = QualifiedLastSize;
             this.Source = Source;
             this.ListingVenue = ListingVenue;
             this.SalesConditions = SalesConditions;
@@ -188,6 +204,63 @@ namespace Intrinio.SDK.Model
         public DateTime? UpdatedOn { get; set; }
 
         /// <summary>
+        /// The previous trading session&#39;s closing price.
+        /// </summary>
+        /// <value>The previous trading session&#39;s closing price.</value>
+        [DataMember(Name="eod_close_price", EmitDefaultValue=false)]
+        public decimal? EodClosePrice { get; set; }
+
+        /// <summary>
+        /// The date of the previous trading session&#39;s closing price.
+        /// </summary>
+        /// <value>The date of the previous trading session&#39;s closing price.</value>
+        [DataMember(Name="eod_close_date", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? EodCloseDate { get; set; }
+
+        /// <summary>
+        /// The date and time of the last trade that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions.
+        /// </summary>
+        /// <value>The date and time of the last trade that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions.</value>
+        [DataMember(Name="normal_market_hours_last_time", EmitDefaultValue=false)]
+        public DateTime? NormalMarketHoursLastTime { get; set; }
+
+        /// <summary>
+        /// The price of the last that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions.
+        /// </summary>
+        /// <value>The price of the last that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions.</value>
+        [DataMember(Name="normal_market_hours_last_price", EmitDefaultValue=false)]
+        public decimal? NormalMarketHoursLastPrice { get; set; }
+
+        /// <summary>
+        /// The size of the last trade that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions.
+        /// </summary>
+        /// <value>The size of the last trade that qualifies for last price consideration during normal market hours according to exchange rules on trade conditions.</value>
+        [DataMember(Name="normal_market_hours_last_size", EmitDefaultValue=false)]
+        public decimal? NormalMarketHoursLastSize { get; set; }
+
+        /// <summary>
+        /// The price of the last trade that qualifies for last price consideration according to exchange rules on trade conditions.
+        /// </summary>
+        /// <value>The price of the last trade that qualifies for last price consideration according to exchange rules on trade conditions.</value>
+        [DataMember(Name="qualified_last_price", EmitDefaultValue=false)]
+        public decimal? QualifiedLastPrice { get; set; }
+
+        /// <summary>
+        /// The date and time of the last trade that qualifies for last price consideration according to exchange rules on trade conditions.
+        /// </summary>
+        /// <value>The date and time of the last trade that qualifies for last price consideration according to exchange rules on trade conditions.</value>
+        [DataMember(Name="qualified_last_time", EmitDefaultValue=false)]
+        public DateTime? QualifiedLastTime { get; set; }
+
+        /// <summary>
+        /// The size of the last trade that qualifies for last price consideration according to exchange rules on trade conditions.
+        /// </summary>
+        /// <value>The size of the last trade that qualifies for last price consideration according to exchange rules on trade conditions.</value>
+        [DataMember(Name="qualified_last_size", EmitDefaultValue=false)]
+        public decimal? QualifiedLastSize { get; set; }
+
+        /// <summary>
         /// The source of the data.
         /// </summary>
         /// <value>The source of the data.</value>
@@ -259,6 +332,14 @@ namespace Intrinio.SDK.Model
             sb.Append("  ExchangeVolume: ").Append(ExchangeVolume).Append("\n");
             sb.Append("  MarketVolume: ").Append(MarketVolume).Append("\n");
             sb.Append("  UpdatedOn: ").Append(UpdatedOn).Append("\n");
+            sb.Append("  EodClosePrice: ").Append(EodClosePrice).Append("\n");
+            sb.Append("  EodCloseDate: ").Append(EodCloseDate).Append("\n");
+            sb.Append("  NormalMarketHoursLastTime: ").Append(NormalMarketHoursLastTime).Append("\n");
+            sb.Append("  NormalMarketHoursLastPrice: ").Append(NormalMarketHoursLastPrice).Append("\n");
+            sb.Append("  NormalMarketHoursLastSize: ").Append(NormalMarketHoursLastSize).Append("\n");
+            sb.Append("  QualifiedLastPrice: ").Append(QualifiedLastPrice).Append("\n");
+            sb.Append("  QualifiedLastTime: ").Append(QualifiedLastTime).Append("\n");
+            sb.Append("  QualifiedLastSize: ").Append(QualifiedLastSize).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  ListingVenue: ").Append(ListingVenue).Append("\n");
             sb.Append("  SalesConditions: ").Append(SalesConditions).Append("\n");
@@ -381,6 +462,46 @@ namespace Intrinio.SDK.Model
                     this.UpdatedOn.Equals(input.UpdatedOn))
                 ) && 
                 (
+                    this.EodClosePrice == input.EodClosePrice ||
+                    (this.EodClosePrice != null &&
+                    this.EodClosePrice.Equals(input.EodClosePrice))
+                ) && 
+                (
+                    this.EodCloseDate == input.EodCloseDate ||
+                    (this.EodCloseDate != null &&
+                    this.EodCloseDate.Equals(input.EodCloseDate))
+                ) && 
+                (
+                    this.NormalMarketHoursLastTime == input.NormalMarketHoursLastTime ||
+                    (this.NormalMarketHoursLastTime != null &&
+                    this.NormalMarketHoursLastTime.Equals(input.NormalMarketHoursLastTime))
+                ) && 
+                (
+                    this.NormalMarketHoursLastPrice == input.NormalMarketHoursLastPrice ||
+                    (this.NormalMarketHoursLastPrice != null &&
+                    this.NormalMarketHoursLastPrice.Equals(input.NormalMarketHoursLastPrice))
+                ) && 
+                (
+                    this.NormalMarketHoursLastSize == input.NormalMarketHoursLastSize ||
+                    (this.NormalMarketHoursLastSize != null &&
+                    this.NormalMarketHoursLastSize.Equals(input.NormalMarketHoursLastSize))
+                ) && 
+                (
+                    this.QualifiedLastPrice == input.QualifiedLastPrice ||
+                    (this.QualifiedLastPrice != null &&
+                    this.QualifiedLastPrice.Equals(input.QualifiedLastPrice))
+                ) && 
+                (
+                    this.QualifiedLastTime == input.QualifiedLastTime ||
+                    (this.QualifiedLastTime != null &&
+                    this.QualifiedLastTime.Equals(input.QualifiedLastTime))
+                ) && 
+                (
+                    this.QualifiedLastSize == input.QualifiedLastSize ||
+                    (this.QualifiedLastSize != null &&
+                    this.QualifiedLastSize.Equals(input.QualifiedLastSize))
+                ) && 
+                (
                     this.Source == input.Source ||
                     (this.Source != null &&
                     this.Source.Equals(input.Source))
@@ -458,6 +579,22 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.MarketVolume.GetHashCode();
                 if (this.UpdatedOn != null)
                     hashCode = hashCode * 59 + this.UpdatedOn.GetHashCode();
+                if (this.EodClosePrice != null)
+                    hashCode = hashCode * 59 + this.EodClosePrice.GetHashCode();
+                if (this.EodCloseDate != null)
+                    hashCode = hashCode * 59 + this.EodCloseDate.GetHashCode();
+                if (this.NormalMarketHoursLastTime != null)
+                    hashCode = hashCode * 59 + this.NormalMarketHoursLastTime.GetHashCode();
+                if (this.NormalMarketHoursLastPrice != null)
+                    hashCode = hashCode * 59 + this.NormalMarketHoursLastPrice.GetHashCode();
+                if (this.NormalMarketHoursLastSize != null)
+                    hashCode = hashCode * 59 + this.NormalMarketHoursLastSize.GetHashCode();
+                if (this.QualifiedLastPrice != null)
+                    hashCode = hashCode * 59 + this.QualifiedLastPrice.GetHashCode();
+                if (this.QualifiedLastTime != null)
+                    hashCode = hashCode * 59 + this.QualifiedLastTime.GetHashCode();
+                if (this.QualifiedLastSize != null)
+                    hashCode = hashCode * 59 + this.QualifiedLastSize.GetHashCode();
                 if (this.Source != null)
                     hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.ListingVenue != null)

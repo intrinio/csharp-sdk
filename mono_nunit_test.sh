@@ -15,8 +15,8 @@ mozroots --import --sync
 mono nuget.exe install src/Intrinio.SDK.Test/packages.config -o packages
 
 echo "[INFO] Install NUnit runners via NuGet"
-mono nuget.exe install NUnit.Runners -Version 2.6.4 -OutputDirectory packages 
+mono nuget.exe install NUnit.Runners -Version 4.2.2 -OutputDirectory packages
 
 echo "[INFO] Build the solution and run the unit test"
 xbuild Intrinio.SDK.sln && \
-    mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe src/Intrinio.SDK.Test/bin/Debug/Intrinio.SDK.Test.dll
+    mono ./packages/NUnit.Runners.4.2.2/tools/nunit-console.exe src/Intrinio.SDK.Test/bin/Debug/Intrinio.SDK.Test.dll

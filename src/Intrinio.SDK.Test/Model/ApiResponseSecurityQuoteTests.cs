@@ -211,6 +211,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'AdjClose30DaysAgo'
         }
         /// <summary>
+        /// Test the property 'AdjClose90DaysAgo'
+        /// </summary>
+        [Test]
+        public void AdjClose90DaysAgoTest()
+        {
+            // TODO unit test for the property 'AdjClose90DaysAgo'
+        }
+        /// <summary>
         /// Test the property 'AdjClose180DaysAgo'
         /// </summary>
         [Test]
@@ -227,12 +235,28 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'AdjClose365DaysAgo'
         }
         /// <summary>
+        /// Test the property 'AdjClose730DaysAgo'
+        /// </summary>
+        [Test]
+        public void AdjClose730DaysAgoTest()
+        {
+            // TODO unit test for the property 'AdjClose730DaysAgo'
+        }
+        /// <summary>
         /// Test the property 'AdjClose1825DaysAgo'
         /// </summary>
         [Test]
         public void AdjClose1825DaysAgoTest()
         {
             // TODO unit test for the property 'AdjClose1825DaysAgo'
+        }
+        /// <summary>
+        /// Test the property 'AdjCloseYearToDate'
+        /// </summary>
+        [Test]
+        public void AdjCloseYearToDateTest()
+        {
+            // TODO unit test for the property 'AdjCloseYearToDate'
         }
         /// <summary>
         /// Test the property 'ChangePercent5Days'
@@ -251,6 +275,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'ChangePercent30Days'
         }
         /// <summary>
+        /// Test the property 'ChangePercent90Days'
+        /// </summary>
+        [Test]
+        public void ChangePercent90DaysTest()
+        {
+            // TODO unit test for the property 'ChangePercent90Days'
+        }
+        /// <summary>
         /// Test the property 'ChangePercent180Days'
         /// </summary>
         [Test]
@@ -267,12 +299,52 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'ChangePercent365Days'
         }
         /// <summary>
+        /// Test the property 'ChangePercent730DaysAgo'
+        /// </summary>
+        [Test]
+        public void ChangePercent730DaysAgoTest()
+        {
+            // TODO unit test for the property 'ChangePercent730DaysAgo'
+        }
+        /// <summary>
         /// Test the property 'ChangePercent1825Days'
         /// </summary>
         [Test]
         public void ChangePercent1825DaysTest()
         {
             // TODO unit test for the property 'ChangePercent1825Days'
+        }
+        /// <summary>
+        /// Test the property 'ChangePercentYearToDate'
+        /// </summary>
+        [Test]
+        public void ChangePercentYearToDateTest()
+        {
+            // TODO unit test for the property 'ChangePercentYearToDate'
+        }
+        /// <summary>
+        /// Test the property 'ExtendedHoursLast'
+        /// </summary>
+        [Test]
+        public void ExtendedHoursLastTest()
+        {
+            // TODO unit test for the property 'ExtendedHoursLast'
+        }
+        /// <summary>
+        /// Test the property 'ExtendedHoursChange'
+        /// </summary>
+        [Test]
+        public void ExtendedHoursChangeTest()
+        {
+            // TODO unit test for the property 'ExtendedHoursChange'
+        }
+        /// <summary>
+        /// Test the property 'ExtendedHoursChangePercent'
+        /// </summary>
+        [Test]
+        public void ExtendedHoursChangePercentTest()
+        {
+            // TODO unit test for the property 'ExtendedHoursChangePercent'
         }
 
     }

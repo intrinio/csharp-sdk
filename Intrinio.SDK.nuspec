@@ -6,7 +6,7 @@
         <title>Intrinio</title>
 
         <!-- The package version number that is used when resolving dependencies -->
-        <version>7.8.0</version>
+        <version>7.10.0</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
         <authors>Intrinio</authors>
@@ -26,10 +26,10 @@
         <!-- Dependencies are automatically installed when the package is installed -->
         <dependencies>
 
-            <dependency id="NewtonSoft.Json" version="13.0.2" />
-            <dependency id="JsonSubTypes" version="1.9.0" />
-            <dependency id="RestSharp" version="108.0.1" />
-            <dependency id="Polly" version="7.2.3" />
+            <dependency id="NewtonSoft.Json" version="13.0.3" />
+            <dependency id="JsonSubTypes" version="2.0.1" />
+            <dependency id="RestSharp" version="112.0.0" />
+            <dependency id="Polly" version="8.4.1" />
 
         </dependencies>
     </metadata>

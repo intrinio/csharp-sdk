@@ -326,7 +326,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -348,7 +348,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -1445,7 +1445,7 @@ namespace Intrinio.SDK.Api
         /// Quote for a Security
         /// </summary>
         /// <remarks>
-        /// Return a current pricing quote for a security across multiple sources.
+        /// Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -1459,7 +1459,7 @@ namespace Intrinio.SDK.Api
         /// Quote for a Security
         /// </summary>
         /// <remarks>
-        /// Return a current pricing quote for a security across multiple sources.
+        /// Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -2166,7 +2166,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -2188,7 +2188,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -3285,7 +3285,7 @@ namespace Intrinio.SDK.Api
         /// Quote for a Security
         /// </summary>
         /// <remarks>
-        /// Return a current pricing quote for a security across multiple sources.
+        /// Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -3299,7 +3299,7 @@ namespace Intrinio.SDK.Api
         /// Quote for a Security
         /// </summary>
         /// <remarks>
-        /// Return a current pricing quote for a security across multiple sources.
+        /// Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -5609,7 +5609,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -5632,7 +5632,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -5731,7 +5731,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -5755,7 +5755,7 @@ namespace Intrinio.SDK.Api
         /// <param name="startTime">Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
         /// <param name="endDate">Return intervals stopping at the specified date (optional)</param>
         /// <param name="endTime">Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) (optional)</param>
-        /// <param name="timezone">Returns trading times in this timezone (optional, default to UTC)</param>
+        /// <param name="timezone">Interprets the input times in this time zone, as well as returns times in this timezone. (optional, default to UTC)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="splitAdjusted">Whether to return the values adjusted for splits or not. Default is false. (optional, default to false)</param>
         /// <param name="includeQuoteOnlyBars">If true, also include bars where no trades occurred but quotes did. (optional, default to false)</param>
@@ -11949,7 +11949,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// Quote for a Security Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -11964,7 +11964,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// Quote for a Security Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -12031,7 +12031,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// Quote for a Security Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
@@ -12047,7 +12047,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Quote for a Security Return a current pricing quote for a security across multiple sources.
+        /// Quote for a Security Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>

@@ -46,10 +46,9 @@ namespace Intrinio.SDK.Client
         /// Initializes a new instance of the <see cref="ApiClient" /> class
         /// with default configuration.
         /// </summary>
-        public ApiClient()
+        public ApiClient() : this(Intrinio.SDK.Client.Configuration.Default)
         {
-            Configuration = Intrinio.SDK.Client.Configuration.Default;
-            RestClient = new RestClient("https://api-v2.intrinio.com");
+
         }
 
         /// <summary>
@@ -61,29 +60,15 @@ namespace Intrinio.SDK.Client
         {
             Configuration = config ?? Intrinio.SDK.Client.Configuration.Default;
 
-            RestClient = new RestClient(Configuration.BasePath);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default configuration.
-        /// </summary>
-        /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://api-v2.intrinio.com")
-        {
-           if (String.IsNullOrEmpty(basePath))
+            if (String.IsNullOrWhiteSpace(Configuration.BasePath))
                 throw new ArgumentException("basePath cannot be empty");
 
-            RestClient = new RestClient(basePath);
-            Configuration = Client.Configuration.Default;
+            RestClientOptions options = new RestClientOptions();
+            options.BaseUrl = new Uri(Configuration.BasePath);
+            options.Timeout = TimeSpan.FromMilliseconds(Configuration.Timeout > 0 ? Configuration.Timeout : 100_000);
+            options.UserAgent = Configuration.UserAgent;
+            RestClient = new RestClient(options);
         }
-
-        /// <summary>
-        /// Gets or sets the default API client for making HTTP calls.
-        /// </summary>
-        /// <value>The default API client.</value>
-        [Obsolete("ApiClient.Default is deprecated, please use 'Configuration.Default.ApiClient' instead.")]
-        public static ApiClient Default;
 
         /// <summary>
         /// Gets or sets an instance of the IReadableConfiguration.
@@ -163,12 +148,6 @@ namespace Intrinio.SDK.Client
             var request = PrepareRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, contentType);
-
-            // set timeout
-            
-            RestClient.Options.MaxTimeout = Configuration.Timeout;
-            // set user agent
-            RestClient.Options.UserAgent = Configuration.UserAgent;
 
             var allowRetries = Intrinio.SDK.Client.Configuration.Default.AllowRetries;
             var retryCount = 0;

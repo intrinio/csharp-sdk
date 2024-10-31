@@ -99,6 +99,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'UpdateFrequency'
         }
         /// <summary>
+        /// Test the property 'LastUpdated'
+        /// </summary>
+        [Test]
+        public void LastUpdatedTest()
+        {
+            // TODO unit test for the property 'LastUpdated'
+        }
+        /// <summary>
         /// Test the property 'Links'
         /// </summary>
         [Test]

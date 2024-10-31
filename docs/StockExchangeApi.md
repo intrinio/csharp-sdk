@@ -6,8 +6,11 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllStockExchanges**](StockExchangeApi.md#getallstockexchanges) | **GET** /stock_exchanges | All Stock Exchanges
 [**GetStockExchangeById**](StockExchangeApi.md#getstockexchangebyid) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
+[**GetStockExchangeGainers**](StockExchangeApi.md#getstockexchangegainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
+[**GetStockExchangeLosers**](StockExchangeApi.md#getstockexchangelosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
 [**GetStockExchangePriceAdjustments**](StockExchangeApi.md#getstockexchangepriceadjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
 [**GetStockExchangePrices**](StockExchangeApi.md#getstockexchangeprices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
+[**GetStockExchangeQuote**](StockExchangeApi.md#getstockexchangequote) | **GET** /stock_exchanges/{identifier}/quote | Realtime Quote Prices by Exchange
 [**GetStockExchangeRealtimePrices**](StockExchangeApi.md#getstockexchangerealtimeprices) | **GET** /stock_exchanges/{identifier}/prices/realtime | Realtime Stock Prices by Exchange
 [**GetStockExchangeSecurities**](StockExchangeApi.md#getstockexchangesecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 
@@ -191,6 +194,194 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StockExchange**](StockExchange.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.StockExchangeApi)
+
+[//]: # (METHOD:GetStockExchangeGainers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeMovers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeMovers.md)
+
+[//]: # (OPERATION:GetStockExchangeGainers_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/gainers)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getstockexchangegainers)
+
+<a name="getstockexchangegainers"></a>
+## **GetStockExchangeGainers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangeGainers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeMovers GetStockExchangeGainers (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+
+#### Top Gainers by Exchange
+
+Returns securities with the highest gain percent change traded on the chosen stock exchange.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetStockExchangeGainersExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var stockExchangeApi = new StockExchangeApi();
+      
+      string identifier = "USCOMP";
+      decimal? minPrice = 8.14;
+      int? pageSize = 100;
+      string source = "delayed_sip";
+      
+      ApiResponseStockExchangeMovers result = stockExchangeApi.GetStockExchangeGainers(identifier, minPrice, pageSize, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **minPrice** | decimal?| The minimum price filter | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **source** | string| Return the realtime price from the specified source instead of the most recent. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeMovers**](ApiResponseStockExchangeMovers.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.StockExchangeApi)
+
+[//]: # (METHOD:GetStockExchangeLosers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeMovers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeMovers.md)
+
+[//]: # (OPERATION:GetStockExchangeLosers_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/losers)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getstockexchangelosers)
+
+<a name="getstockexchangelosers"></a>
+## **GetStockExchangeLosers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangeLosers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeMovers GetStockExchangeLosers (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+
+#### Top Losers by Exchange
+
+Returns securities with the highest loss percent change traded on the chosen stock exchange.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetStockExchangeLosersExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var stockExchangeApi = new StockExchangeApi();
+      
+      string identifier = "USCOMP";
+      decimal? minPrice = 8.14;
+      int? pageSize = 100;
+      string source = "delayed_sip";
+      
+      ApiResponseStockExchangeMovers result = stockExchangeApi.GetStockExchangeLosers(identifier, minPrice, pageSize, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **minPrice** | decimal?| The minimum price filter | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **source** | string| Return the realtime price from the specified source instead of the most recent. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeMovers**](ApiResponseStockExchangeMovers.md)
 
 [//]: # (END_OPERATION)
 
@@ -395,6 +586,100 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.StockExchangeApi)
 
+[//]: # (METHOD:GetStockExchangeQuote)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeQuote)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeQuote.md)
+
+[//]: # (OPERATION:GetStockExchangeQuote_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/quote)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getstockexchangequote)
+
+<a name="getstockexchangequote"></a>
+## **GetStockExchangeQuote**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangeQuote_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeQuote GetStockExchangeQuote (string identifier, List<string> tickers, string source = null, bool? activeOnly = null)
+
+#### Realtime Quote Prices by Exchange
+
+Returns many popular metrics for securities from a given exchange 'identifier' from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetStockExchangeQuoteExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var stockExchangeApi = new StockExchangeApi();
+      
+      string identifier = "USCOMP";
+      var tickers = new List<string>();
+      string source = "delayed_sip";
+      bool? activeOnly = null;
+      
+      ApiResponseStockExchangeQuote result = stockExchangeApi.GetStockExchangeQuote(identifier, tickers, source, activeOnly);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **tickers** | [**List&lt;string&gt;**](string.md)| The comma-delimited list of ticker symbols to return quotes for. |  &nbsp;
+ **source** | string| Return the realtime price from the specified source instead of the most recent. | [optional]  &nbsp;
+ **activeOnly** | bool?| Returns prices only from the most recent trading day. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeQuote**](ApiResponseStockExchangeQuote.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.StockExchangeApi)
+
 [//]: # (METHOD:GetStockExchangeRealtimePrices)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeRealtimeStockPrices)
@@ -416,7 +701,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
+> ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
 
 #### Realtime Stock Prices by Exchange
 
@@ -452,11 +737,12 @@ namespace Example
       string identifier = "USCOMP";
       List<string> source = "iex,delayed_sip";
       bool? activeOnly = null;
+      bool? tradedToday = null;
       int? pageSize = 100;
       var tickers = new List<string>();
       string nextPage = null;
       
-      ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, tickers, nextPage);
+      ApiResponseStockExchangeRealtimeStockPrices result = stockExchangeApi.GetStockExchangeRealtimePrices(identifier, source, activeOnly, tradedToday, pageSize, tickers, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -475,6 +761,7 @@ Name | Type | Description  | Notes
  **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
  **source** | List&lt;string&gt;| Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. | [optional]  &nbsp;
  **activeOnly** | bool?| Returns prices only from the most recent trading day. | [optional]  &nbsp;
+ **tradedToday** | bool?| Returns prices only from securities which have traded on the most recent trading day. | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **tickers** | [**List&lt;string&gt;**](string.md)| The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;

@@ -4,7 +4,7 @@
 
         Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-        OpenAPI spec version: 2.66.2
+        OpenAPI spec version: 2.72.2
         
     -->
 
@@ -16,11 +16,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="JsonSubTypes" Version="1.9.0" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+        <PackageReference Include="JsonSubTypes" Version="2.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="NUnit" Version="3.13.3" />
-        <PackageReference Include="Polly" Version="7.2.3" />
-        <PackageReference Include="RestSharp" Version="108.0.1" />
+        <PackageReference Include="Polly" Version="8.4.1" />
+        <PackageReference Include="RestSharp" Version="112.0.0" />
     </ItemGroup>
 
     <ItemGroup>

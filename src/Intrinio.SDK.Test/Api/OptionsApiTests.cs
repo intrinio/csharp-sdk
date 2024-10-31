@@ -71,7 +71,9 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //Object date = null;
-            //var response = instance.GetOptionAggregates(date);
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetOptionAggregates(date, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseOptionsAggregates> (response, "response is ApiResponseOptionsAggregates");
         }
         
@@ -380,7 +382,9 @@ namespace Intrinio.SDK.Test
             //string stockPriceSource = null;
             //string model = null;
             //bool? showExtendedPrice = null;
-            //var response = instance.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice);
+            //Object expirationStartDate = null;
+            //Object expirationEndDate = null;
+            //var response = instance.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesByTickerRealtime> (response, "response is ApiResponseOptionsPricesByTickerRealtime");
         }
         

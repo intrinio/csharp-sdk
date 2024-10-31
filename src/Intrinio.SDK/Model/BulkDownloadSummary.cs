@@ -30,14 +30,16 @@ namespace Intrinio.SDK.Model
         /// <param name="Format">The file format of the bulk download.</param>
         /// <param name="DataLengthBytes">The total length of the bulk download data in bytes.</param>
         /// <param name="UpdateFrequency">The update frequency for the bulk download.</param>
+        /// <param name="LastUpdated">The date on which the bulk download was last updated.</param>
         /// <param name="Links">Links to all of the files comprising the bulk download. Links expire in 24 hours..</param>
-        public BulkDownloadSummary(string Id = default(string), string Name = default(string), string Format = default(string), string DataLengthBytes = default(string), string UpdateFrequency = default(string), List<BulkDownloadLinks> Links = default(List<BulkDownloadLinks>))
+        public BulkDownloadSummary(string Id = default(string), string Name = default(string), string Format = default(string), string DataLengthBytes = default(string), string UpdateFrequency = default(string), DateTime? LastUpdated = default(DateTime?), List<BulkDownloadLinks> Links = default(List<BulkDownloadLinks>))
         {
             this.Id = Id;
             this.Name = Name;
             this.Format = Format;
             this.DataLengthBytes = DataLengthBytes;
             this.UpdateFrequency = UpdateFrequency;
+            this.LastUpdated = LastUpdated;
             this.Links = Links;
         }
         
@@ -77,6 +79,14 @@ namespace Intrinio.SDK.Model
         public string UpdateFrequency { get; set; }
 
         /// <summary>
+        /// The date on which the bulk download was last updated
+        /// </summary>
+        /// <value>The date on which the bulk download was last updated</value>
+        [DataMember(Name="last_updated", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
+        public DateTime? LastUpdated { get; set; }
+
+        /// <summary>
         /// Links to all of the files comprising the bulk download. Links expire in 24 hours.
         /// </summary>
         /// <value>Links to all of the files comprising the bulk download. Links expire in 24 hours.</value>
@@ -96,6 +106,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  DataLengthBytes: ").Append(DataLengthBytes).Append("\n");
             sb.Append("  UpdateFrequency: ").Append(UpdateFrequency).Append("\n");
+            sb.Append("  LastUpdated: ").Append(LastUpdated).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -157,6 +168,11 @@ namespace Intrinio.SDK.Model
                     this.UpdateFrequency.Equals(input.UpdateFrequency))
                 ) && 
                 (
+                    this.LastUpdated == input.LastUpdated ||
+                    (this.LastUpdated != null &&
+                    this.LastUpdated.Equals(input.LastUpdated))
+                ) && 
+                (
                     this.Links == input.Links ||
                     this.Links != null &&
                     this.Links.SequenceEqual(input.Links)
@@ -182,6 +198,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.DataLengthBytes.GetHashCode();
                 if (this.UpdateFrequency != null)
                     hashCode = hashCode * 59 + this.UpdateFrequency.GetHashCode();
+                if (this.LastUpdated != null)
+                    hashCode = hashCode * 59 + this.LastUpdated.GetHashCode();
                 if (this.Links != null)
                     hashCode = hashCode * 59 + this.Links.GetHashCode();
                 return hashCode;

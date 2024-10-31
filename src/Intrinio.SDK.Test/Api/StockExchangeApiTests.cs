@@ -80,6 +80,36 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetStockExchangeGainers
+        /// </summary>
+        [Test]
+        public void GetStockExchangeGainersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //decimal? minPrice = null;
+            //int? pageSize = null;
+            //string source = null;
+            //var response = instance.GetStockExchangeGainers(identifier, minPrice, pageSize, source);
+            //Assert.IsInstanceOf<ApiResponseStockExchangeMovers> (response, "response is ApiResponseStockExchangeMovers");
+        }
+        
+        /// <summary>
+        /// Test GetStockExchangeLosers
+        /// </summary>
+        [Test]
+        public void GetStockExchangeLosersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //decimal? minPrice = null;
+            //int? pageSize = null;
+            //string source = null;
+            //var response = instance.GetStockExchangeLosers(identifier, minPrice, pageSize, source);
+            //Assert.IsInstanceOf<ApiResponseStockExchangeMovers> (response, "response is ApiResponseStockExchangeMovers");
+        }
+        
+        /// <summary>
         /// Test GetStockExchangePriceAdjustments
         /// </summary>
         [Test]
@@ -114,6 +144,21 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetStockExchangeQuote
+        /// </summary>
+        [Test]
+        public void GetStockExchangeQuoteTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //List<string> tickers = null;
+            //string source = null;
+            //bool? activeOnly = null;
+            //var response = instance.GetStockExchangeQuote(identifier, tickers, source, activeOnly);
+            //Assert.IsInstanceOf<ApiResponseStockExchangeQuote> (response, "response is ApiResponseStockExchangeQuote");
+        }
+        
+        /// <summary>
         /// Test GetStockExchangeRealtimePrices
         /// </summary>
         [Test]
@@ -123,10 +168,11 @@ namespace Intrinio.SDK.Test
             //string identifier = null;
             //List<string> source = null;
             //bool? activeOnly = null;
+            //bool? tradedToday = null;
             //int? pageSize = null;
             //List<string> tickers = null;
             //string nextPage = null;
-            //var response = instance.GetStockExchangeRealtimePrices(identifier, source, activeOnly, pageSize, tickers, nextPage);
+            //var response = instance.GetStockExchangeRealtimePrices(identifier, source, activeOnly, tradedToday, pageSize, tickers, nextPage);
             //Assert.IsInstanceOf<ApiResponseStockExchangeRealtimeStockPrices> (response, "response is ApiResponseStockExchangeRealtimeStockPrices");
         }
         

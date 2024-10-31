@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.66.2
-- Package version: 7.8.0
+- API version: 2.72.2
+- Package version: 7.10.0
 
 
 <a name="frameworks-supported"></a>
@@ -24,10 +24,10 @@ Alternatively, you can download the required DLLs from the [Releases page](https
 
 <a name="dependencies"></a>
 ## Dependencies
-- [RestSharp](https://www.nuget.org/packages/RestSharp) - 108.0.1 or later
+- [RestSharp](https://www.nuget.org/packages/RestSharp) - 112.0.0 or later
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
-- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.9.0 or later
-- [Polly](https://www.nuget.org/packages/Polly) - 7.2.3 or later
+- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 2.0.1 or later
+- [Polly](https://www.nuget.org/packages/Polly) - 8.4.1 or later
 
 The DLLs included in the package may not be the latest version. We recommend using [NuGet] (https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
@@ -138,7 +138,7 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetCompanyHistoricalData**](docs/CompanyApi.md#getcompanyhistoricaldata) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 *CompanyApi* | [**GetCompanyIpos**](docs/CompanyApi.md#getcompanyipos) | **GET** /companies/ipos | IPOs
 *CompanyApi* | [**GetCompanyNews**](docs/CompanyApi.md#getcompanynews) | **GET** /companies/{identifier}/news | All News by Company
-*CompanyApi* | [**GetCompanyNewsBody**](docs/CompanyApi.md#getcompanynewsbody) | **GET** /companies/news/body | The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+*CompanyApi* | [**GetCompanyNewsBody**](docs/CompanyApi.md#getcompanynewsbody) | **GET** /companies/news/body | News Article Body
 *CompanyApi* | [**GetCompanyPublicFloat**](docs/CompanyApi.md#getcompanypublicfloat) | **GET** /companies/{identifier}/public_float | Get Company's public float
 *CompanyApi* | [**GetCompanySecurities**](docs/CompanyApi.md#getcompanysecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *CompanyApi* | [**InsiderTransactionFilingsByCompany**](docs/CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
@@ -306,8 +306,11 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**SearchSecurities**](docs/SecurityApi.md#searchsecurities) | **GET** /securities/search | Search Securities
 *StockExchangeApi* | [**GetAllStockExchanges**](docs/StockExchangeApi.md#getallstockexchanges) | **GET** /stock_exchanges | All Stock Exchanges
 *StockExchangeApi* | [**GetStockExchangeById**](docs/StockExchangeApi.md#getstockexchangebyid) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
+*StockExchangeApi* | [**GetStockExchangeGainers**](docs/StockExchangeApi.md#getstockexchangegainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
+*StockExchangeApi* | [**GetStockExchangeLosers**](docs/StockExchangeApi.md#getstockexchangelosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
 *StockExchangeApi* | [**GetStockExchangePriceAdjustments**](docs/StockExchangeApi.md#getstockexchangepriceadjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
 *StockExchangeApi* | [**GetStockExchangePrices**](docs/StockExchangeApi.md#getstockexchangeprices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
+*StockExchangeApi* | [**GetStockExchangeQuote**](docs/StockExchangeApi.md#getstockexchangequote) | **GET** /stock_exchanges/{identifier}/quote | Realtime Quote Prices by Exchange
 *StockExchangeApi* | [**GetStockExchangeRealtimePrices**](docs/StockExchangeApi.md#getstockexchangerealtimeprices) | **GET** /stock_exchanges/{identifier}/prices/realtime | Realtime Stock Prices by Exchange
 *StockExchangeApi* | [**GetStockExchangeSecurities**](docs/StockExchangeApi.md#getstockexchangesecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 *TechnicalApi* | [**GetSecurityPriceTechnicalsAdi**](docs/TechnicalApi.md#getsecuritypricetechnicalsadi) | **GET** /securities/{identifier}/prices/technicals/adi | Accumulation/Distribution Index
@@ -476,6 +479,8 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSecurityZacksSalesSurprises](docs/ApiResponseSecurityZacksSalesSurprises.md)
  - [Model.ApiResponseStandardizedFinancials](docs/ApiResponseStandardizedFinancials.md)
  - [Model.ApiResponseStandardizedFinancialsDimensions](docs/ApiResponseStandardizedFinancialsDimensions.md)
+ - [Model.ApiResponseStockExchangeMovers](docs/ApiResponseStockExchangeMovers.md)
+ - [Model.ApiResponseStockExchangeQuote](docs/ApiResponseStockExchangeQuote.md)
  - [Model.ApiResponseStockExchangeRealtimeStockPrices](docs/ApiResponseStockExchangeRealtimeStockPrices.md)
  - [Model.ApiResponseStockExchangeSecurities](docs/ApiResponseStockExchangeSecurities.md)
  - [Model.ApiResponseStockExchangeStockPriceAdjustments](docs/ApiResponseStockExchangeStockPriceAdjustments.md)
@@ -620,6 +625,7 @@ Class | Method | HTTP request | Description
  - [Model.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)
  - [Model.StochasticOscillatorTechnicalValue](docs/StochasticOscillatorTechnicalValue.md)
  - [Model.StockExchange](docs/StockExchange.md)
+ - [Model.StockExchangeMover](docs/StockExchangeMover.md)
  - [Model.StockMarketIndex](docs/StockMarketIndex.md)
  - [Model.StockMarketIndexSummary](docs/StockMarketIndexSummary.md)
  - [Model.StockPrice](docs/StockPrice.md)

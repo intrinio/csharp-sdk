@@ -66,6 +66,60 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of StockExchange</returns>
         ApiResponse<StockExchange> GetStockExchangeByIdWithHttpInfo (string identifier);
         /// <summary>
+        /// Top Gainers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponseStockExchangeMovers</returns>
+        ApiResponseStockExchangeMovers GetStockExchangeGainers (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+
+        /// <summary>
+        /// Top Gainers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeMovers</returns>
+        ApiResponse<ApiResponseStockExchangeMovers> GetStockExchangeGainersWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+        /// <summary>
+        /// Top Losers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponseStockExchangeMovers</returns>
+        ApiResponseStockExchangeMovers GetStockExchangeLosers (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+
+        /// <summary>
+        /// Top Losers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeMovers</returns>
+        ApiResponse<ApiResponseStockExchangeMovers> GetStockExchangeLosersWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+        /// <summary>
         /// Stock Price Adjustments by Exchange
         /// </summary>
         /// <remarks>
@@ -128,6 +182,33 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStockExchangeStockPrices</returns>
         ApiResponse<ApiResponseStockExchangeStockPrices> GetStockExchangePricesWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
         /// <summary>
+        /// Realtime Quote Prices by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>ApiResponseStockExchangeQuote</returns>
+        ApiResponseStockExchangeQuote GetStockExchangeQuote (string identifier, List<string> tickers, string source = null, bool? activeOnly = null);
+
+        /// <summary>
+        /// Realtime Quote Prices by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeQuote</returns>
+        ApiResponse<ApiResponseStockExchangeQuote> GetStockExchangeQuoteWithHttpInfo (string identifier, List<string> tickers, string source = null, bool? activeOnly = null);
+        /// <summary>
         /// Realtime Stock Prices by Exchange
         /// </summary>
         /// <remarks>
@@ -137,11 +218,12 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
-        ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
+        ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
 
         /// <summary>
         /// Realtime Stock Prices by Exchange
@@ -153,11 +235,12 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
+        ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
         /// <summary>
         /// Securities by Exchange
         /// </summary>
@@ -234,6 +317,60 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (StockExchange)</returns>
         System.Threading.Tasks.Task<ApiResponse<StockExchange>> GetStockExchangeByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
+        /// Top Gainers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeMovers</returns>
+        System.Threading.Tasks.Task<ApiResponseStockExchangeMovers> GetStockExchangeGainersAsync (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+
+        /// <summary>
+        /// Top Gainers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeMovers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeMovers>> GetStockExchangeGainersAsyncWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+        /// <summary>
+        /// Top Losers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeMovers</returns>
+        System.Threading.Tasks.Task<ApiResponseStockExchangeMovers> GetStockExchangeLosersAsync (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+
+        /// <summary>
+        /// Top Losers by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeMovers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeMovers>> GetStockExchangeLosersAsyncWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null);
+        /// <summary>
         /// Stock Price Adjustments by Exchange
         /// </summary>
         /// <remarks>
@@ -296,6 +433,33 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeStockPrices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeStockPrices>> GetStockExchangePricesAsyncWithHttpInfo (string identifier, DateTime? date = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null, List<string> tickers = null, string nextPage2 = null);
         /// <summary>
+        /// Realtime Quote Prices by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeQuote</returns>
+        System.Threading.Tasks.Task<ApiResponseStockExchangeQuote> GetStockExchangeQuoteAsync (string identifier, List<string> tickers, string source = null, bool? activeOnly = null);
+
+        /// <summary>
+        /// Realtime Quote Prices by Exchange
+        /// </summary>
+        /// <remarks>
+        /// Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeQuote)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeQuote>> GetStockExchangeQuoteAsyncWithHttpInfo (string identifier, List<string> tickers, string source = null, bool? activeOnly = null);
+        /// <summary>
         /// Realtime Stock Prices by Exchange
         /// </summary>
         /// <remarks>
@@ -305,11 +469,12 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
 
         /// <summary>
         /// Realtime Stock Prices by Exchange
@@ -321,11 +486,12 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null);
         /// <summary>
         /// Securities by Exchange
         /// </summary>
@@ -767,6 +933,334 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// Top Gainers by Exchange Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponseStockExchangeMovers</returns>
+        public ApiResponseStockExchangeMovers GetStockExchangeGainers (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+             ApiResponse<ApiResponseStockExchangeMovers> localVarResponse = GetStockExchangeGainersWithHttpInfo(identifier, minPrice, pageSize, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Top Gainers by Exchange Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeMovers</returns>
+        
+        public ApiResponse< ApiResponseStockExchangeMovers > GetStockExchangeGainersWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeGainers");
+
+            var localVarPath = "/stock_exchanges/{identifier}/gainers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (minPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_price", minPrice)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeGainers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeMovers)));
+        }
+
+        /// <summary>
+        /// Top Gainers by Exchange Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeMovers</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeMovers> GetStockExchangeGainersAsync (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+             ApiResponse<ApiResponseStockExchangeMovers> localVarResponse = await GetStockExchangeGainersAsyncWithHttpInfo(identifier, minPrice, pageSize, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Top Gainers by Exchange Returns securities with the highest gain percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeMovers)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeMovers>> GetStockExchangeGainersAsyncWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeGainers");
+
+            var localVarPath = "/stock_exchanges/{identifier}/gainers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (minPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_price", minPrice)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeGainers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeMovers)));
+        }
+
+        /// <summary>
+        /// Top Losers by Exchange Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponseStockExchangeMovers</returns>
+        public ApiResponseStockExchangeMovers GetStockExchangeLosers (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+             ApiResponse<ApiResponseStockExchangeMovers> localVarResponse = GetStockExchangeLosersWithHttpInfo(identifier, minPrice, pageSize, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Top Losers by Exchange Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeMovers</returns>
+        
+        public ApiResponse< ApiResponseStockExchangeMovers > GetStockExchangeLosersWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeLosers");
+
+            var localVarPath = "/stock_exchanges/{identifier}/losers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (minPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_price", minPrice)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeLosers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeMovers)));
+        }
+
+        /// <summary>
+        /// Top Losers by Exchange Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeMovers</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeMovers> GetStockExchangeLosersAsync (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+             ApiResponse<ApiResponseStockExchangeMovers> localVarResponse = await GetStockExchangeLosersAsyncWithHttpInfo(identifier, minPrice, pageSize, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Top Losers by Exchange Returns securities with the highest loss percent change traded on the chosen stock exchange.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="minPrice">The minimum price filter (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeMovers)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeMovers>> GetStockExchangeLosersAsyncWithHttpInfo (string identifier, decimal? minPrice = null, int? pageSize = null, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeLosers");
+
+            var localVarPath = "/stock_exchanges/{identifier}/losers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (minPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_price", minPrice)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeLosers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeMovers)));
+        }
+
+        /// <summary>
         /// Stock Price Adjustments by Exchange Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1119,19 +1613,190 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// Realtime Quote Prices by Exchange Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>ApiResponseStockExchangeQuote</returns>
+        public ApiResponseStockExchangeQuote GetStockExchangeQuote (string identifier, List<string> tickers, string source = null, bool? activeOnly = null)
+        {
+             ApiResponse<ApiResponseStockExchangeQuote> localVarResponse = GetStockExchangeQuoteWithHttpInfo(identifier, tickers, source, activeOnly);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realtime Quote Prices by Exchange Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeQuote</returns>
+        
+        public ApiResponse< ApiResponseStockExchangeQuote > GetStockExchangeQuoteWithHttpInfo (string identifier, List<string> tickers, string source = null, bool? activeOnly = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeQuote");
+            // verify the required parameter 'tickers' is set
+            if (tickers == null)
+                throw new ApiException(400, "Missing required parameter 'tickers' when calling StockExchangeApi->GetStockExchangeQuote");
+
+            var localVarPath = "/stock_exchanges/{identifier}/quote";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeQuote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeQuote>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeQuote) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeQuote)));
+        }
+
+        /// <summary>
+        /// Realtime Quote Prices by Exchange Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeQuote</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeQuote> GetStockExchangeQuoteAsync (string identifier, List<string> tickers, string source = null, bool? activeOnly = null)
+        {
+             ApiResponse<ApiResponseStockExchangeQuote> localVarResponse = await GetStockExchangeQuoteAsyncWithHttpInfo(identifier, tickers, source, activeOnly);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realtime Quote Prices by Exchange Returns many popular metrics for securities from a given exchange &#39;identifier&#39; from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="tickers">The comma-delimited list of ticker symbols to return quotes for.</param>
+        /// <param name="source">Return the realtime price from the specified source instead of the most recent. (optional)</param>
+        /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeQuote)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeQuote>> GetStockExchangeQuoteAsyncWithHttpInfo (string identifier, List<string> tickers, string source = null, bool? activeOnly = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeQuote");
+            // verify the required parameter 'tickers' is set
+            if (tickers == null)
+                throw new ApiException(400, "Missing required parameter 'tickers' when calling StockExchangeApi->GetStockExchangeQuote");
+
+            var localVarPath = "/stock_exchanges/{identifier}/quote";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeQuote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeQuote>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeQuote) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeQuote)));
+        }
+
+        /// <summary>
         /// Realtime Stock Prices by Exchange Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseStockExchangeRealtimeStockPrices</returns>
-        public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
+        public ApiResponseStockExchangeRealtimeStockPrices GetStockExchangeRealtimePrices (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = GetStockExchangeRealtimePricesWithHttpInfo(identifier, source, activeOnly, pageSize, tickers, nextPage);
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = GetStockExchangeRealtimePricesWithHttpInfo(identifier, source, activeOnly, tradedToday, pageSize, tickers, nextPage);
              return localVarResponse.Data;
         }
 
@@ -1142,12 +1807,13 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseStockExchangeRealtimeStockPrices</returns>
         
-        public ApiResponse< ApiResponseStockExchangeRealtimeStockPrices > GetStockExchangeRealtimePricesWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
+        public ApiResponse< ApiResponseStockExchangeRealtimeStockPrices > GetStockExchangeRealtimePricesWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1178,6 +1844,7 @@ namespace Intrinio.SDK.Api
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "source", source)); // query parameter
             if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (tradedToday != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "traded_today", tradedToday)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
@@ -1213,13 +1880,14 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseStockExchangeRealtimeStockPrices</returns>
-        public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeRealtimeStockPrices> GetStockExchangeRealtimePricesAsync (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = await GetStockExchangeRealtimePricesAsyncWithHttpInfo(identifier, source, activeOnly, pageSize, tickers, nextPage);
+             ApiResponse<ApiResponseStockExchangeRealtimeStockPrices> localVarResponse = await GetStockExchangeRealtimePricesAsyncWithHttpInfo(identifier, source, activeOnly, tradedToday, pageSize, tickers, nextPage);
              return localVarResponse.Data;
 
         }
@@ -1231,11 +1899,12 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
         /// <param name="source">Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. (optional)</param>
         /// <param name="activeOnly">Returns prices only from the most recent trading day. (optional)</param>
+        /// <param name="tradedToday">Returns prices only from securities which have traded on the most recent trading day. (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="tickers">The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchangeRealtimeStockPrices)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeRealtimeStockPrices>> GetStockExchangeRealtimePricesAsyncWithHttpInfo (string identifier, List<string> source = null, bool? activeOnly = null, bool? tradedToday = null, int? pageSize = null, List<string> tickers = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -1266,6 +1935,7 @@ namespace Intrinio.SDK.Api
             if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "source", source)); // query parameter
             if (activeOnly != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "active_only", activeOnly)); // query parameter
+            if (tradedToday != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "traded_today", tradedToday)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter

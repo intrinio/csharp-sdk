@@ -187,6 +187,70 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'UpdatedOn'
         }
         /// <summary>
+        /// Test the property 'EodClosePrice'
+        /// </summary>
+        [Test]
+        public void EodClosePriceTest()
+        {
+            // TODO unit test for the property 'EodClosePrice'
+        }
+        /// <summary>
+        /// Test the property 'EodCloseDate'
+        /// </summary>
+        [Test]
+        public void EodCloseDateTest()
+        {
+            // TODO unit test for the property 'EodCloseDate'
+        }
+        /// <summary>
+        /// Test the property 'NormalMarketHoursLastTime'
+        /// </summary>
+        [Test]
+        public void NormalMarketHoursLastTimeTest()
+        {
+            // TODO unit test for the property 'NormalMarketHoursLastTime'
+        }
+        /// <summary>
+        /// Test the property 'NormalMarketHoursLastPrice'
+        /// </summary>
+        [Test]
+        public void NormalMarketHoursLastPriceTest()
+        {
+            // TODO unit test for the property 'NormalMarketHoursLastPrice'
+        }
+        /// <summary>
+        /// Test the property 'NormalMarketHoursLastSize'
+        /// </summary>
+        [Test]
+        public void NormalMarketHoursLastSizeTest()
+        {
+            // TODO unit test for the property 'NormalMarketHoursLastSize'
+        }
+        /// <summary>
+        /// Test the property 'QualifiedLastPrice'
+        /// </summary>
+        [Test]
+        public void QualifiedLastPriceTest()
+        {
+            // TODO unit test for the property 'QualifiedLastPrice'
+        }
+        /// <summary>
+        /// Test the property 'QualifiedLastTime'
+        /// </summary>
+        [Test]
+        public void QualifiedLastTimeTest()
+        {
+            // TODO unit test for the property 'QualifiedLastTime'
+        }
+        /// <summary>
+        /// Test the property 'QualifiedLastSize'
+        /// </summary>
+        [Test]
+        public void QualifiedLastSizeTest()
+        {
+            // TODO unit test for the property 'QualifiedLastSize'
+        }
+        /// <summary>
         /// Test the property 'Source'
         /// </summary>
         [Test]

@@ -21,7 +21,7 @@ namespace Intrinio.SDK.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "7.8.0";
+        public const string Version = "7.10.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -106,14 +106,12 @@ namespace Intrinio.SDK.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "Swagger-Codegen/7.8.0/csharp";
+            UserAgent = "Swagger-Codegen/7.10.0/csharp";
             BasePath = "https://api-v2.intrinio.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
             AllowRetries = true;
-
-            // Setting Timeout has side effects (forces ApiClient creation).
             Timeout = 100000;
         }
 
@@ -153,53 +151,6 @@ namespace Intrinio.SDK.Client
             }
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class with different settings
-        /// </summary>
-        /// <param name="apiClient">Api client</param>
-        /// <param name="defaultHeader">Dictionary of default HTTP header</param>
-        /// <param name="username">Username</param>
-        /// <param name="password">Password</param>
-        /// <param name="accessToken">accessToken</param>
-        /// <param name="apiKey">Dictionary of API key</param>
-        /// <param name="apiKeyPrefix">Dictionary of API key prefix</param>
-        /// <param name="tempFolderPath">Temp folder path</param>
-        /// <param name="dateTimeFormat">DateTime format string</param>
-        /// <param name="timeout">HTTP connection timeout (in milliseconds)</param>
-        /// <param name="userAgent">HTTP user agent</param>
-        /// <param name="allowRetries">Allow API call retries</param>
-        [Obsolete("Use explicit object construction and setting of properties.", true)]
-        public Configuration(
-            // ReSharper disable UnusedParameter.Local
-            ApiClient apiClient = null,
-            IDictionary<string, string> defaultHeader = null,
-            string username = null,
-            string password = null,
-            string accessToken = null,
-            IDictionary<string, string> apiKey = null,
-            IDictionary<string, string> apiKeyPrefix = null,
-            string tempFolderPath = null,
-            string dateTimeFormat = null,
-            int timeout = 100000,
-            bool allowRetries = true,
-            string userAgent = "Swagger-Codegen/7.8.0/csharp"
-            // ReSharper restore UnusedParameter.Local
-            )
-        {
-
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Configuration class.
-        /// </summary>
-        /// <param name="apiClient">Api client.</param>
-        [Obsolete("This constructor caused unexpected sharing of static data. It is no longer supported.", true)]
-        // ReSharper disable once UnusedParameter.Local
-        public Configuration(ApiClient apiClient)
-        {
-
-        }
-
         #endregion Constructors
 
 
@@ -224,13 +175,7 @@ namespace Intrinio.SDK.Client
         /// </summary>
         public virtual string BasePath {
             get { return _basePath; }
-            set {
-                _basePath = value;
-                // pass-through to ApiClient if it's set.
-                if(_apiClient != null) {
-                    _apiClient.RestClient.Options.BaseUrl = new Uri(_basePath);
-                }
-            }
+            set { _basePath = value; }
         }
 
         /// <summary>
@@ -238,14 +183,14 @@ namespace Intrinio.SDK.Client
         /// </summary>
         public virtual IDictionary<string, string> DefaultHeader { get; set; }
 
+        private int _timeout = 100_000;
         /// <summary>
         /// Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
         /// </summary>
         public virtual int Timeout
         {
-            
-            get { return ApiClient.RestClient.Options.MaxTimeout; }
-            set { ApiClient.RestClient.Options.MaxTimeout = value; }
+            get { return _timeout; }
+            set { _timeout = value; }
         }
         
         /// <summary>
@@ -409,7 +354,7 @@ namespace Intrinio.SDK.Client
         /// <returns></returns>
         public ApiClient CreateApiClient()
         {
-            return new ApiClient(BasePath) { Configuration = this };
+            return new ApiClient(this);
         }
 
 
@@ -421,8 +366,8 @@ namespace Intrinio.SDK.Client
             String report = "C# SDK (Intrinio.SDK) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 2.66.2\n";
-            report += "    SDK Package Version: 7.8.0\n";
+            report += "    Version of the API: 2.72.2\n";
+            report += "    SDK Package Version: 7.10.0\n";
 
             return report;
         }

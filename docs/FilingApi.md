@@ -43,7 +43,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+> ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null)
 
 #### All Filings
 
@@ -83,10 +83,11 @@ namespace Example
       string industryCategory = null;
       string industryGroup = null;
       bool? theaEnabled = null;
+      bool? earningsRelease = null;
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
+      ApiResponseFilings result = filingApi.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, earningsRelease, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -109,6 +110,7 @@ Name | Type | Description  | Notes
  **industryCategory** | string| Return companies in the given industry category | [optional]  &nbsp;
  **industryGroup** | string| Return companies in the given industry group | [optional]  &nbsp;
  **theaEnabled** | bool?| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
+ **earningsRelease** | bool?| Return filings that have been tagged as having Results of Operations and Financial Conditions | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

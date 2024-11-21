@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**GetOptionAggregates**](OptionsApi.md#getoptionaggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 [**GetOptionExpirationsRealtime**](OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**GetOptionStrikesRealtime**](OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+[**GetOptionTrades**](OptionsApi.md#getoptiontrades) | **GET** /options/trades | Option Trades
+[**GetOptionTradesByContract**](OptionsApi.md#getoptiontradesbycontract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 [**GetOptions**](OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
 [**GetOptionsBySymbolRealtime**](OptionsApi.md#getoptionsbysymbolrealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 [**GetOptionsChain**](OptionsApi.md#getoptionschain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
@@ -22,6 +24,7 @@ Method | HTTP request | Description
 [**GetOptionsPrices**](OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 [**GetOptionsPricesBatchRealtime**](OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**GetOptionsPricesEod**](OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
+[**GetOptionsPricesEodByTicker**](OptionsApi.md#getoptionspriceseodbyticker) | **GET** /options/prices/by_ticker/{symbol}/eod | Option Prices End of Day By Ticker
 [**GetOptionsPricesRealtime**](OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**GetOptionsPricesRealtimeByTicker**](OptionsApi.md#getoptionspricesrealtimebyticker) | **GET** /options/prices/by_ticker/{symbol}/realtime | Option Prices Realtime By Ticker
 [**GetOptionsSnapshots**](OptionsApi.md#getoptionssnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
@@ -401,6 +404,218 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsChainRealtime**](ApiResponseOptionsChainRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionTrades)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionTradesResult.md)
+
+[//]: # (OPERATION:GetOptionTrades_v2)
+
+[//]: # (ENDPOINT:/options/trades)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptiontrades)
+
+<a name="getoptiontrades"></a>
+## **GetOptionTrades**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionTrades_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionTradesResult GetOptionTrades (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null)
+
+#### Option Trades
+
+Returns all trades between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionTradesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string source = null;
+      DateTime? startDate = null;
+      string startTime = null;
+      DateTime? endDate = null;
+      string endTime = null;
+      string timezone = "UTC";
+      int? pageSize = 100;
+      int? minSize = 100;
+      string security = "AAPL";
+      string nextPage = null;
+      
+      OptionTradesResult result = optionsApi.GetOptionTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, security, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| The specific source of the data being requested. | [optional]  &nbsp;
+ **startDate** | DateTime?| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | string| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | string| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | string| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **minSize** | int?| Trades must be larger or equal to this size. | [optional]  &nbsp;
+ **security** | string| The ticker symbol for which trades are being requested. | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionTradesResult**](OptionTradesResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionTradesByContract)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionTradesResult.md)
+
+[//]: # (OPERATION:GetOptionTradesByContract_v2)
+
+[//]: # (ENDPOINT:/options/{identifier}/trades)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptiontradesbycontract)
+
+<a name="getoptiontradesbycontract"></a>
+## **GetOptionTradesByContract**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionTradesByContract_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionTradesResult GetOptionTradesByContract (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+
+#### Option Trades By Contract
+
+Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionTradesByContractExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string identifier = "AAPL__261218C00230000";
+      string source = null;
+      DateTime? startDate = null;
+      string startTime = null;
+      DateTime? endDate = null;
+      string endTime = null;
+      string timezone = "UTC";
+      int? pageSize = 100;
+      int? minSize = 100;
+      string nextPage = null;
+      
+      OptionTradesResult result = optionsApi.GetOptionTradesByContract(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The option contract for which trades are being requested. |  &nbsp;
+ **source** | string| The specific source of the data being requested. | [optional]  &nbsp;
+ **startDate** | DateTime?| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | string| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | string| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | string| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **minSize** | int?| Trades must be larger or equal to this size. | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionTradesResult**](OptionTradesResult.md)
 
 [//]: # (END_OPERATION)
 
@@ -1786,6 +2001,110 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
 
+[//]: # (METHOD:GetOptionsPricesEodByTicker)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsPricesByTickerEod)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPricesByTickerEod.md)
+
+[//]: # (OPERATION:GetOptionsPricesEodByTicker_v2)
+
+[//]: # (ENDPOINT:/options/prices/by_ticker/{symbol}/eod)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionspriceseodbyticker)
+
+<a name="getoptionspriceseodbyticker"></a>
+## **GetOptionsPricesEodByTicker**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsPricesEodByTicker_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+
+#### Option Prices End of Day By Ticker
+
+Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsPricesEodByTickerExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "MSFT";
+      int? pageSize = 250;
+      var date = new Object();
+      string type = null;
+      decimal? strike = null;
+      decimal? strikeGreaterThan = null;
+      decimal? strikeLessThan = null;
+      bool? includeRelatedSymbols = false;
+      string nextPage = null;
+      
+      ApiResponseOptionsPricesByTickerEod result = optionsApi.GetOptionsPricesEodByTicker(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The equities ticker symbol, corresponding to the underlying security. |  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 250] &nbsp;
+ **date** | [**Object**](Object.md)| The date to get pricing data for. Defaults to today in Eastern time zone. | [optional]  &nbsp;
+ **type** | string| The option contract type. | [optional]  &nbsp;
+ **strike** | decimal?| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strikeGreaterThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strikeLessThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsPricesByTickerEod**](ApiResponseOptionsPricesByTickerEod.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
 [//]: # (METHOD:GetOptionsPricesRealtime)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsPriceRealtime)
@@ -1840,7 +2159,7 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
-      string identifier = "AAPL230120C00090000";
+      string identifier = "AAPL__261218C00230000";
       string source = null;
       string stockPriceSource = null;
       string model = null;

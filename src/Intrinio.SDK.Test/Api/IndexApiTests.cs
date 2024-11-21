@@ -202,6 +202,18 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetIndexConstituentsById
+        /// </summary>
+        [Test]
+        public void GetIndexConstituentsByIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //var response = instance.GetIndexConstituentsById(identifier);
+            //Assert.IsInstanceOf<ApiResponseIndexConstituents> (response, "response is ApiResponseIndexConstituents");
+        }
+        
+        /// <summary>
         /// Test GetIndexSummaryById
         /// </summary>
         [Test]

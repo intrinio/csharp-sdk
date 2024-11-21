@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.72.2
-- Package version: 7.10.0
+- API version: 2.75.0
+- Package version: 7.11.0
 
 
 <a name="frameworks-supported"></a>
@@ -195,6 +195,7 @@ Class | Method | HTTP request | Description
 *IndexApi* | [**GetEconomicIndexDataPointText**](docs/IndexApi.md#geteconomicindexdatapointtext) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 *IndexApi* | [**GetEconomicIndexHistoricalData**](docs/IndexApi.md#geteconomicindexhistoricaldata) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
 *IndexApi* | [**GetEodIndexPriceById**](docs/IndexApi.md#geteodindexpricebyid) | **GET** /indices/{identifier}/eod | End of Day Index Prices By Identifier
+*IndexApi* | [**GetIndexConstituentsById**](docs/IndexApi.md#getindexconstituentsbyid) | **GET** /indices/{identifier}/constituents | Index Constituents By Index Identifier
 *IndexApi* | [**GetIndexSummaryById**](docs/IndexApi.md#getindexsummarybyid) | **GET** /indices/{identifier} | Index Summary By Identifier
 *IndexApi* | [**GetRealtimeIndexPriceById**](docs/IndexApi.md#getrealtimeindexpricebyid) | **GET** /indices/{identifier}/realtime | Realtime Index Price By Identifier
 *IndexApi* | [**GetSicIndexById**](docs/IndexApi.md#getsicindexbyid) | **GET** /indices/sic/{identifier} | Lookup SIC Index
@@ -217,6 +218,8 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionAggregates**](docs/OptionsApi.md#getoptionaggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 *OptionsApi* | [**GetOptionExpirationsRealtime**](docs/OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 *OptionsApi* | [**GetOptionStrikesRealtime**](docs/OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+*OptionsApi* | [**GetOptionTrades**](docs/OptionsApi.md#getoptiontrades) | **GET** /options/trades | Option Trades
+*OptionsApi* | [**GetOptionTradesByContract**](docs/OptionsApi.md#getoptiontradesbycontract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 *OptionsApi* | [**GetOptions**](docs/OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
 *OptionsApi* | [**GetOptionsBySymbolRealtime**](docs/OptionsApi.md#getoptionsbysymbolrealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 *OptionsApi* | [**GetOptionsChain**](docs/OptionsApi.md#getoptionschain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
@@ -231,6 +234,7 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsPrices**](docs/OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 *OptionsApi* | [**GetOptionsPricesBatchRealtime**](docs/OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 *OptionsApi* | [**GetOptionsPricesEod**](docs/OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
+*OptionsApi* | [**GetOptionsPricesEodByTicker**](docs/OptionsApi.md#getoptionspriceseodbyticker) | **GET** /options/prices/by_ticker/{symbol}/eod | Option Prices End of Day By Ticker
 *OptionsApi* | [**GetOptionsPricesRealtime**](docs/OptionsApi.md#getoptionspricesrealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 *OptionsApi* | [**GetOptionsPricesRealtimeByTicker**](docs/OptionsApi.md#getoptionspricesrealtimebyticker) | **GET** /options/prices/by_ticker/{symbol}/realtime | Option Prices Realtime By Ticker
 *OptionsApi* | [**GetOptionsSnapshots**](docs/OptionsApi.md#getoptionssnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
@@ -404,6 +408,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseForexPrices](docs/ApiResponseForexPrices.md)
  - [Model.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
  - [Model.ApiResponseIndex](docs/ApiResponseIndex.md)
+ - [Model.ApiResponseIndexConstituents](docs/ApiResponseIndexConstituents.md)
  - [Model.ApiResponseIndices](docs/ApiResponseIndices.md)
  - [Model.ApiResponseInitialPublicOfferings](docs/ApiResponseInitialPublicOfferings.md)
  - [Model.ApiResponseInsiderTransactionFilings](docs/ApiResponseInsiderTransactionFilings.md)
@@ -419,6 +424,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
  - [Model.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
  - [Model.ApiResponseOptionsPricesBatchRealtime](docs/ApiResponseOptionsPricesBatchRealtime.md)
+ - [Model.ApiResponseOptionsPricesByTickerEod](docs/ApiResponseOptionsPricesByTickerEod.md)
  - [Model.ApiResponseOptionsPricesByTickerRealtime](docs/ApiResponseOptionsPricesByTickerRealtime.md)
  - [Model.ApiResponseOptionsPricesEod](docs/ApiResponseOptionsPricesEod.md)
  - [Model.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
@@ -555,6 +561,7 @@ Class | Method | HTTP request | Description
  - [Model.FundamentalSummary](docs/FundamentalSummary.md)
  - [Model.HistoricalData](docs/HistoricalData.md)
  - [Model.IchimokuKinkoHyoTechnicalValue](docs/IchimokuKinkoHyoTechnicalValue.md)
+ - [Model.IndexConstituents](docs/IndexConstituents.md)
  - [Model.InsiderTransaction](docs/InsiderTransaction.md)
  - [Model.InsiderTransactionFiling](docs/InsiderTransactionFiling.md)
  - [Model.InstitutionalHolding](docs/InstitutionalHolding.md)
@@ -592,8 +599,11 @@ Class | Method | HTTP request | Description
  - [Model.OptionSnapshotGroup](docs/OptionSnapshotGroup.md)
  - [Model.OptionSnapshotsResult](docs/OptionSnapshotsResult.md)
  - [Model.OptionStatsRealtime](docs/OptionStatsRealtime.md)
+ - [Model.OptionTrades](docs/OptionTrades.md)
+ - [Model.OptionTradesResult](docs/OptionTradesResult.md)
  - [Model.OptionUnusualTrade](docs/OptionUnusualTrade.md)
  - [Model.OptionsAggregate](docs/OptionsAggregate.md)
+ - [Model.OptionsPriceEod](docs/OptionsPriceEod.md)
  - [Model.Owner](docs/Owner.md)
  - [Model.OwnerSummary](docs/OwnerSummary.md)
  - [Model.RealtimeIndexPrice](docs/RealtimeIndexPrice.md)

@@ -124,6 +124,84 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
         ApiResponse<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
         /// <summary>
+        /// Option Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>OptionTradesResult</returns>
+        OptionTradesResult GetOptionTrades (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null);
+
+        /// <summary>
+        /// Option Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of OptionTradesResult</returns>
+        ApiResponse<OptionTradesResult> GetOptionTradesWithHttpInfo (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null);
+        /// <summary>
+        /// Option Trades By Contract
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>OptionTradesResult</returns>
+        OptionTradesResult GetOptionTradesByContract (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Option Trades By Contract
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of OptionTradesResult</returns>
+        ApiResponse<OptionTradesResult> GetOptionTradesByContractWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+        /// <summary>
         /// Options
         /// </summary>
         /// <remarks>
@@ -562,6 +640,43 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsPricesEod</returns>
         ApiResponse<ApiResponseOptionsPricesEod> GetOptionsPricesEodWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null);
         /// <summary>
+        /// Option Prices End of Day By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseOptionsPricesByTickerEod</returns>
+        ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
+
+        /// <summary>
+        /// Option Prices End of Day By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsPricesByTickerEod</returns>
+        ApiResponse<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
+        /// <summary>
         /// Option Prices Realtime
         /// </summary>
         /// <remarks>
@@ -901,6 +1016,84 @@ namespace Intrinio.SDK.Api
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionStrikesRealtimeAsyncWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
+        /// <summary>
+        /// Option Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of OptionTradesResult</returns>
+        System.Threading.Tasks.Task<OptionTradesResult> GetOptionTradesAsync (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null);
+
+        /// <summary>
+        /// Option Trades
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (OptionTradesResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OptionTradesResult>> GetOptionTradesAsyncWithHttpInfo (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null);
+        /// <summary>
+        /// Option Trades By Contract
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of OptionTradesResult</returns>
+        System.Threading.Tasks.Task<OptionTradesResult> GetOptionTradesByContractAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Option Trades By Contract
+        /// </summary>
+        /// <remarks>
+        /// Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (OptionTradesResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OptionTradesResult>> GetOptionTradesByContractAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null);
         /// <summary>
         /// Options
         /// </summary>
@@ -1339,6 +1532,43 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesEod)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesEod>> GetOptionsPricesEodAsyncWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null);
+        /// <summary>
+        /// Option Prices End of Day By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseOptionsPricesByTickerEod</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerAsync (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
+
+        /// <summary>
+        /// Option Prices End of Day By Ticker
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsPricesByTickerEod)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerEod>> GetOptionsPricesEodByTickerAsyncWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
         /// <summary>
         /// Option Prices Realtime
         /// </summary>
@@ -2324,6 +2554,400 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsChainRealtime>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseOptionsChainRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsChainRealtime)));
+        }
+
+        /// <summary>
+        /// Option Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>OptionTradesResult</returns>
+        public OptionTradesResult GetOptionTrades (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null)
+        {
+             ApiResponse<OptionTradesResult> localVarResponse = GetOptionTradesWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, security, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of OptionTradesResult</returns>
+        
+        public ApiResponse< OptionTradesResult > GetOptionTradesWithHttpInfo (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null)
+        {
+
+            var localVarPath = "/options/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
+            if (security != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "security", security)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionTrades", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionTradesResult)));
+        }
+
+        /// <summary>
+        /// Option Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of OptionTradesResult</returns>
+        public async System.Threading.Tasks.Task<OptionTradesResult> GetOptionTradesAsync (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null)
+        {
+             ApiResponse<OptionTradesResult> localVarResponse = await GetOptionTradesAsyncWithHttpInfo(source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, security, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Trades Returns all trades between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="security">The ticker symbol for which trades are being requested. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (OptionTradesResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OptionTradesResult>> GetOptionTradesAsyncWithHttpInfo (string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string security = null, string nextPage = null)
+        {
+
+            var localVarPath = "/options/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
+            if (security != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "security", security)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionTrades", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionTradesResult)));
+        }
+
+        /// <summary>
+        /// Option Trades By Contract Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>OptionTradesResult</returns>
+        public OptionTradesResult GetOptionTradesByContract (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        {
+             ApiResponse<OptionTradesResult> localVarResponse = GetOptionTradesByContractWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Trades By Contract Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of OptionTradesResult</returns>
+        
+        public ApiResponse< OptionTradesResult > GetOptionTradesByContractWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionTradesByContract");
+
+            var localVarPath = "/options/{identifier}/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionTradesByContract", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionTradesResult)));
+        }
+
+        /// <summary>
+        /// Option Trades By Contract Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of OptionTradesResult</returns>
+        public async System.Threading.Tasks.Task<OptionTradesResult> GetOptionTradesByContractAsync (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        {
+             ApiResponse<OptionTradesResult> localVarResponse = await GetOptionTradesByContractAsyncWithHttpInfo(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Trades By Contract Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The option contract for which trades are being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="startDate">The start date for the data being requested. (optional)</param>
+        /// <param name="startTime">The start time for the data being requested. (optional)</param>
+        /// <param name="endDate">The end date for the data being requested. (optional)</param>
+        /// <param name="endTime">The end time for the data being requested. (optional)</param>
+        /// <param name="timezone">The timezone the start and end date/times use. (optional, default to UTC)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="minSize">Trades must be larger or equal to this size. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (OptionTradesResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OptionTradesResult>> GetOptionTradesByContractAsyncWithHttpInfo (string identifier, string source = null, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, int? pageSize = null, int? minSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionTradesByContract");
+
+            var localVarPath = "/options/{identifier}/trades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (startTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_time", startTime)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (endTime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_time", endTime)); // query parameter
+            if (timezone != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "timezone", timezone)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (minSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "min_size", minSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionTradesByContract", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OptionTradesResult>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (OptionTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionTradesResult)));
         }
 
         /// <summary>
@@ -4822,6 +5446,200 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsPricesEod>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseOptionsPricesEod) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsPricesEod)));
+        }
+
+        /// <summary>
+        /// Option Prices End of Day By Ticker Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseOptionsPricesByTickerEod</returns>
+        public ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseOptionsPricesByTickerEod> localVarResponse = GetOptionsPricesEodByTickerWithHttpInfo(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Prices End of Day By Ticker Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsPricesByTickerEod</returns>
+        
+        public ApiResponse< ApiResponseOptionsPricesByTickerEod > GetOptionsPricesEodByTickerWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsPricesEodByTicker");
+
+            var localVarPath = "/options/prices/by_ticker/{symbol}/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
+            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsPricesEodByTicker", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsPricesByTickerEod>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsPricesByTickerEod) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsPricesByTickerEod)));
+        }
+
+        /// <summary>
+        /// Option Prices End of Day By Ticker Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseOptionsPricesByTickerEod</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerAsync (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseOptionsPricesByTickerEod> localVarResponse = await GetOptionsPricesEodByTickerAsyncWithHttpInfo(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Prices End of Day By Ticker Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The equities ticker symbol, corresponding to the underlying security.</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 250)</param>
+        /// <param name="date">The date to get pricing data for. Defaults to today in Eastern time zone. (optional)</param>
+        /// <param name="type">The option contract type. (optional)</param>
+        /// <param name="strike">The strike price of the option contract. This will return options contracts with strike price equal to this price. (optional)</param>
+        /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
+        /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
+        /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsPricesByTickerEod)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerEod>> GetOptionsPricesEodByTickerAsyncWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsPricesEodByTicker");
+
+            var localVarPath = "/options/prices/by_ticker/{symbol}/eod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
+            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsPricesEodByTicker", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsPricesByTickerEod>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsPricesByTickerEod) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsPricesByTickerEod)));
         }
 
         /// <summary>

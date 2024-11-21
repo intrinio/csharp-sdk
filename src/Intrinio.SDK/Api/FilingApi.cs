@@ -31,10 +31,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilings</returns>
-        ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Filings
@@ -50,10 +51,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilings</returns>
-        ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseFilings> GetAllFilingsWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Filing Notes
         /// </summary>
@@ -318,10 +320,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilings</returns>
-        System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Filings
@@ -337,10 +340,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Filing Notes
         /// </summary>
@@ -711,12 +715,13 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseFilings</returns>
-        public ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseFilings GetAllFilings (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseFilings> localVarResponse = GetAllFilingsWithHttpInfo(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
+             ApiResponse<ApiResponseFilings> localVarResponse = GetAllFilingsWithHttpInfo(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, earningsRelease, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -731,11 +736,12 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseFilings</returns>
         
-        public ApiResponse< ApiResponseFilings > GetAllFilingsWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseFilings > GetAllFilingsWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/filings";
@@ -767,6 +773,7 @@ namespace Intrinio.SDK.Api
             if (industryCategory != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_category", industryCategory)); // query parameter
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
             if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
+            if (earningsRelease != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "earnings_release", earningsRelease)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -805,12 +812,13 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseFilings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseFilings> GetAllFilingsAsync (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseFilings> localVarResponse = await GetAllFilingsAsyncWithHttpInfo(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
+             ApiResponse<ApiResponseFilings> localVarResponse = await GetAllFilingsAsyncWithHttpInfo(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, earningsRelease, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -826,10 +834,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryCategory">Return companies in the given industry category (optional)</param>
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
+        /// <param name="earningsRelease">Return filings that have been tagged as having Results of Operations and Financial Conditions (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseFilings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFilings>> GetAllFilingsAsyncWithHttpInfo (string company = null, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, string industryCategory = null, string industryGroup = null, bool? theaEnabled = null, bool? earningsRelease = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/filings";
@@ -861,6 +870,7 @@ namespace Intrinio.SDK.Api
             if (industryCategory != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_category", industryCategory)); // query parameter
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
             if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
+            if (earningsRelease != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "earnings_release", earningsRelease)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 

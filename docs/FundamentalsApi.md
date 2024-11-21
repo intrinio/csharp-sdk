@@ -448,7 +448,7 @@ namespace Example
       var fundamentalsApi = new FundamentalsApi();
       
       string id = "AAPL-income_statement-2020-FY";
-      string tag = "ceo";
+      string tag = "$$v2_data_point_item_text_default$$";
       
       ApiResponseStandardizedFinancialsDimensions result = fundamentalsApi.GetFundamentalStandardizedFinancialsDimensions(id, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -467,7 +467,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | string| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **tag** | string| $$v2_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

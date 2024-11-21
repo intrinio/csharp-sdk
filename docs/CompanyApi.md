@@ -679,8 +679,8 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string identifier = "AAPL";
-      string tag = "marketcap";
+      string identifier = "$$v2_company_data_point_identifier_default$$";
+      string tag = "$$v2_company_data_point_item_number_default$$";
       
       decimal? result = companyApi.GetCompanyDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -698,8 +698,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_company_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -769,8 +769,8 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string identifier = "AAPL";
-      string tag = "ceo";
+      string identifier = "$$v2_company_data_point_identifier_default$$";
+      string tag = "$$v2_company_data_point_item_text_default$$";
       
       string result = companyApi.GetCompanyDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -788,8 +788,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_company_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1042,7 +1042,7 @@ Name | Type | Description  | Notes
 
 #### Historical Data for Company
 
-Returns historical values for the given `tag` and the Company with the given `identifier`
+$$v2_company_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -1071,8 +1071,8 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string identifier = "AAPL";
-      string tag = "marketcap";
+      string identifier = "$$v2_company_historical_data_identifier_default$$";
+      string tag = "$$v2_company_historical_data_item_default$$";
       string frequency = "daily";
       string type = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
@@ -1097,8 +1097,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_company_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_company_historical_data_item_description$$ |  &nbsp;
  **frequency** | string| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | string| Return historical data for given fiscal period type | [optional]  &nbsp;
  **startDate** | DateTime?| Return historical data on or after this date | [optional]  &nbsp;

@@ -133,7 +133,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>ApiResponseStandardizedFinancialsDimensions</returns>
         ApiResponseStandardizedFinancialsDimensions GetFundamentalStandardizedFinancialsDimensions (string id, string tag);
 
@@ -145,7 +145,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>ApiResponse of ApiResponseStandardizedFinancialsDimensions</returns>
         ApiResponse<ApiResponseStandardizedFinancialsDimensions> GetFundamentalStandardizedFinancialsDimensionsWithHttpInfo (string id, string tag);
         /// <summary>
@@ -293,7 +293,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>Task of ApiResponseStandardizedFinancialsDimensions</returns>
         System.Threading.Tasks.Task<ApiResponseStandardizedFinancialsDimensions> GetFundamentalStandardizedFinancialsDimensionsAsync (string id, string tag);
 
@@ -305,7 +305,7 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancialsDimensions)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancialsDimensions>> GetFundamentalStandardizedFinancialsDimensionsAsyncWithHttpInfo (string id, string tag);
         /// <summary>
@@ -1101,7 +1101,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>ApiResponseStandardizedFinancialsDimensions</returns>
         public ApiResponseStandardizedFinancialsDimensions GetFundamentalStandardizedFinancialsDimensions (string id, string tag)
         {
@@ -1114,7 +1114,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>ApiResponse of ApiResponseStandardizedFinancialsDimensions</returns>
         
         public ApiResponse< ApiResponseStandardizedFinancialsDimensions > GetFundamentalStandardizedFinancialsDimensionsWithHttpInfo (string id, string tag)
@@ -1180,7 +1180,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>Task of ApiResponseStandardizedFinancialsDimensions</returns>
         public async System.Threading.Tasks.Task<ApiResponseStandardizedFinancialsDimensions> GetFundamentalStandardizedFinancialsDimensionsAsync (string id, string tag)
         {
@@ -1194,7 +1194,7 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="tag">$$v2_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (ApiResponseStandardizedFinancialsDimensions)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStandardizedFinancialsDimensions>> GetFundamentalStandardizedFinancialsDimensionsAsyncWithHttpInfo (string id, string tag)
         {

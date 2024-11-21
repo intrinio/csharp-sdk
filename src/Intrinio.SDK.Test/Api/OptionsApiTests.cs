@@ -112,6 +112,48 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionTrades
+        /// </summary>
+        [Test]
+        public void GetOptionTradesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //DateTime? startDate = null;
+            //string startTime = null;
+            //DateTime? endDate = null;
+            //string endTime = null;
+            //string timezone = null;
+            //int? pageSize = null;
+            //int? minSize = null;
+            //string security = null;
+            //string nextPage = null;
+            //var response = instance.GetOptionTrades(source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, security, nextPage);
+            //Assert.IsInstanceOf<OptionTradesResult> (response, "response is OptionTradesResult");
+        }
+        
+        /// <summary>
+        /// Test GetOptionTradesByContract
+        /// </summary>
+        [Test]
+        public void GetOptionTradesByContractTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //DateTime? startDate = null;
+            //string startTime = null;
+            //DateTime? endDate = null;
+            //string endTime = null;
+            //string timezone = null;
+            //int? pageSize = null;
+            //int? minSize = null;
+            //string nextPage = null;
+            //var response = instance.GetOptionTradesByContract(identifier, source, startDate, startTime, endDate, endTime, timezone, pageSize, minSize, nextPage);
+            //Assert.IsInstanceOf<OptionTradesResult> (response, "response is OptionTradesResult");
+        }
+        
+        /// <summary>
         /// Test GetOptions
         /// </summary>
         [Test]
@@ -349,6 +391,26 @@ namespace Intrinio.SDK.Test
             //DateTime? endDate = null;
             //var response = instance.GetOptionsPricesEod(identifier, nextPage, startDate, endDate);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesEod> (response, "response is ApiResponseOptionsPricesEod");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsPricesEodByTicker
+        /// </summary>
+        [Test]
+        public void GetOptionsPricesEodByTickerTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //int? pageSize = null;
+            //Object date = null;
+            //string type = null;
+            //decimal? strike = null;
+            //decimal? strikeGreaterThan = null;
+            //decimal? strikeLessThan = null;
+            //bool? includeRelatedSymbols = null;
+            //string nextPage = null;
+            //var response = instance.GetOptionsPricesEodByTicker(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+            //Assert.IsInstanceOf<ApiResponseOptionsPricesByTickerEod> (response, "response is ApiResponseOptionsPricesByTickerEod");
         }
         
         /// <summary>

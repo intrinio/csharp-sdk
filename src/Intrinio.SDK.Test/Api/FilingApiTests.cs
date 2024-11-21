@@ -66,9 +66,10 @@ namespace Intrinio.SDK.Test
             //string industryCategory = null;
             //string industryGroup = null;
             //bool? theaEnabled = null;
+            //bool? earningsRelease = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, pageSize, nextPage);
+            //var response = instance.GetAllFilings(company, reportType, startDate, endDate, industryCategory, industryGroup, theaEnabled, earningsRelease, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseFilings> (response, "response is ApiResponseFilings");
         }
         

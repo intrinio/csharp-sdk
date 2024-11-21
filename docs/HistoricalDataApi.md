@@ -37,7 +37,7 @@ Method | HTTP request | Description
 
 #### Historical Data
 
-Returns historical values for the given `tag` and the entity represented by the given `identifier`
+$$v2_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -66,8 +66,8 @@ namespace Example
       
       var historicalDataApi = new HistoricalDataApi();
       
-      string identifier = "AAPL";
-      string tag = "marketcap";
+      string identifier = "$$v2_historical_data_identifier_default$$";
+      string tag = "$$v2_historical_data_item_default$$";
       string frequency = "daily";
       string type = null;
       DateTime? startDate = DateTime.Parse("2015-01-01");
@@ -92,8 +92,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_historical_data_item_description$$ |  &nbsp;
  **frequency** | string| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | string| Filter by type, when applicable | [optional]  &nbsp;
  **startDate** | DateTime?| Get historical data on or after this date | [optional]  &nbsp;

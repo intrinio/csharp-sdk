@@ -283,6 +283,27 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseEodIndexPrices</returns>
         ApiResponse<ApiResponseEodIndexPrices> GetEodIndexPriceByIdWithHttpInfo (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
         /// <summary>
+        /// Index Constituents By Index Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponseIndexConstituents</returns>
+        ApiResponseIndexConstituents GetIndexConstituentsById (string identifier);
+
+        /// <summary>
+        /// Index Constituents By Index Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponse of ApiResponseIndexConstituents</returns>
+        ApiResponse<ApiResponseIndexConstituents> GetIndexConstituentsByIdWithHttpInfo (string identifier);
+        /// <summary>
         /// Index Summary By Identifier
         /// </summary>
         /// <remarks>
@@ -864,6 +885,27 @@ namespace Intrinio.SDK.Api
         /// <param name="endDate">Limit prices to those on or before this date (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseEodIndexPrices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseEodIndexPrices>> GetEodIndexPriceByIdAsyncWithHttpInfo (string identifier, int? pageSize = null, DateTime? startDate = null, DateTime? endDate = null);
+        /// <summary>
+        /// Index Constituents By Index Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponseIndexConstituents</returns>
+        System.Threading.Tasks.Task<ApiResponseIndexConstituents> GetIndexConstituentsByIdAsync (string identifier);
+
+        /// <summary>
+        /// Index Constituents By Index Identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponse (ApiResponseIndexConstituents)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseIndexConstituents>> GetIndexConstituentsByIdAsyncWithHttpInfo (string identifier);
         /// <summary>
         /// Index Summary By Identifier
         /// </summary>
@@ -2978,6 +3020,152 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseEodIndexPrices>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseEodIndexPrices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseEodIndexPrices)));
+        }
+
+        /// <summary>
+        /// Index Constituents By Index Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponseIndexConstituents</returns>
+        public ApiResponseIndexConstituents GetIndexConstituentsById (string identifier)
+        {
+             ApiResponse<ApiResponseIndexConstituents> localVarResponse = GetIndexConstituentsByIdWithHttpInfo(identifier);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Index Constituents By Index Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>ApiResponse of ApiResponseIndexConstituents</returns>
+        
+        public ApiResponse< ApiResponseIndexConstituents > GetIndexConstituentsByIdWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetIndexConstituentsById");
+
+            var localVarPath = "/indices/{identifier}/constituents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetIndexConstituentsById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseIndexConstituents>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseIndexConstituents) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseIndexConstituents)));
+        }
+
+        /// <summary>
+        /// Index Constituents By Index Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponseIndexConstituents</returns>
+        public async System.Threading.Tasks.Task<ApiResponseIndexConstituents> GetIndexConstituentsByIdAsync (string identifier)
+        {
+             ApiResponse<ApiResponseIndexConstituents> localVarResponse = await GetIndexConstituentsByIdAsyncWithHttpInfo(identifier);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Index Constituents By Index Identifier 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The index symbol</param>
+        /// <returns>Task of ApiResponse (ApiResponseIndexConstituents)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseIndexConstituents>> GetIndexConstituentsByIdAsyncWithHttpInfo (string identifier)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling IndexApi->GetIndexConstituentsById");
+
+            var localVarPath = "/indices/{identifier}/constituents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetIndexConstituentsById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseIndexConstituents>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseIndexConstituents) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseIndexConstituents)));
         }
 
         /// <summary>

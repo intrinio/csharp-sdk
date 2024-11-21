@@ -249,7 +249,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       
       Security result = securityApi.GetSecurityById(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 #### Data Point (Number) for Security
 
-Returns a numeric value for the given `tag` for the Security with the given `identifier`
+$$v2_security_data_point_number_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -337,8 +337,8 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
-      string tag = "close_price";
+      string identifier = "$$v2_security_data_point_identifier_default$$";
+      string tag = "$$v2_security_data_point_item_number_default$$";
       
       decimal? result = securityApi.GetSecurityDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -356,8 +356,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_security_data_point_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_security_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 #### Data Point (Text) for Security
 
-Returns a text value for the given `tag` for the Security with the given `identifier`
+$$v2_security_data_point_text_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -427,8 +427,8 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
-      string tag = "figi";
+      string identifier = "$$v2_security_data_point_identifier_default$$";
+      string tag = "$$v2_security_data_point_item_text_default$$";
       
       string result = securityApi.GetSecurityDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -446,7 +446,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **identifier** | string| $$v2_security_data_point_identifier_description$$ |  &nbsp;
  **tag** | string| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
 
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 
 #### Historical Data for Security
 
-Returns historical values for the given `tag` and the Security with the given `identifier`
+$$v2_security_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -517,8 +517,8 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
-      string tag = "adj_close_price";
+      string identifier = "$$v2_security_historical_data_identifier_default$$";
+      string tag = "$$v2_security_historical_data_item_default$$";
       string frequency = "daily";
       string type = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
@@ -543,8 +543,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_security_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_security_data_point_item_description$$ |  &nbsp;
  **frequency** | string| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | string| Filter by type, when applicable | [optional]  &nbsp;
  **startDate** | DateTime?| Get historical data on or after this date | [optional]  &nbsp;
@@ -797,7 +797,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string nextPage = null;
       
       ApiResponseSecurityInstitutionalOwnership result = securityApi.GetSecurityInsiderOwnership(identifier, nextPage);
@@ -1157,7 +1157,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string intervalSize = "15m";
       string source = null;
       DateTime? startDate = DateTime.Parse("2023-01-01");
@@ -1238,7 +1238,7 @@ Name | Type | Description  | Notes
 
 #### Intraday Stock Prices for Security
 
-Deprecated.  Return intraday stock prices for the Security with the given `identifier`
+Deprecated.  $$v2_security_intraday_prices_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -1267,7 +1267,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string source = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
       string startTime = null;
@@ -1369,7 +1369,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       
       DividendRecord result = securityApi.GetSecurityLatestDividendRecord(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1457,7 +1457,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       
       EarningsRecord result = securityApi.GetSecurityLatestEarningsRecord(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1545,7 +1545,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -1641,7 +1641,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 22;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -1739,7 +1739,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -1837,7 +1837,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? shortPeriod = 5;
       int? longPeriod = 34;
       string startDate = "2018-01-01";
@@ -1937,7 +1937,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -2035,7 +2035,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       float? standardDeviations = 2.0f;
       string priceKey = "close";
@@ -2137,7 +2137,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       float? constant = 0.015f;
       string startDate = "2018-01-01";
@@ -2237,7 +2237,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -2335,7 +2335,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -2435,7 +2435,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -2535,7 +2535,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -2633,7 +2633,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -2729,7 +2729,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? lowPeriod = 9;
       int? mediumPeriod = 26;
       int? highPeriod = 52;
@@ -2831,7 +2831,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 10;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -2929,7 +2929,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? roc1 = 10;
       int? roc2 = 15;
       int? roc3 = 20;
@@ -3043,7 +3043,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? fastPeriod = 12;
       int? slowPeriod = 26;
       int? signalPeriod = 9;
@@ -3147,7 +3147,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -3245,7 +3245,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? emaPeriod = 9;
       int? sumPeriod = 25;
       string startDate = "2018-01-01";
@@ -3345,7 +3345,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -3441,7 +3441,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -3537,7 +3537,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 10;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -3635,7 +3635,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -3735,7 +3735,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -3835,7 +3835,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       int? signalPeriod = 3;
       string startDate = "2018-01-01";
@@ -3935,7 +3935,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 15;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -4033,7 +4033,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? lowPeriod = 13;
       int? highPeriod = 25;
       string priceKey = "close";
@@ -4135,7 +4135,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? shortPeriod = 7;
       int? mediumPeriod = 14;
       int? longPeriod = 28;
@@ -4243,7 +4243,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -4341,7 +4341,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -4437,7 +4437,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -4533,7 +4533,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -4631,7 +4631,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       bool? activeOnly = false;
       string source = "delayed_sip";
       string nextPage = null;
@@ -4725,7 +4725,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       List<string> source = "iex,delayed_sip";
       
       RealtimeStockPrice result = securityApi.GetSecurityRealtimePrice(identifier, source);
@@ -4993,7 +4993,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       DateTime? startDate = DateTime.Parse("2018-01-01");
       DateTime? endDate = DateTime.Parse("2019-01-01");
       int? pageSize = 100;
@@ -5089,7 +5089,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       DateTime? startDate = DateTime.Parse("2018-01-01");
       DateTime? endDate = DateTime.Parse("2019-01-01");
       string frequency = "daily";
@@ -5401,7 +5401,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = null;
       string endDate = null;
       decimal? meanGreater = null;
@@ -5523,7 +5523,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string date = null;
       
       ApiResponseSecurityZacksAnalystRatingsSnapshot result = securityApi.GetSecurityZacksAnalystRatingsSnapshot(identifier, date);
@@ -5613,7 +5613,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? pageSize = 100;
       string nextPage = null;
       
@@ -5705,7 +5705,7 @@ namespace Example
       
       var securityApi = new SecurityApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? pageSize = 100;
       string nextPage = null;
       

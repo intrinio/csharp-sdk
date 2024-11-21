@@ -17,68 +17,65 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// ApiResponseSecurityIntradayPrices
+    /// An option trades result contains all trades corresponding to the provided query.
     /// </summary>
     [DataContract]
-    public partial class ApiResponseSecurityIntradayPrices :  IEquatable<ApiResponseSecurityIntradayPrices>, IValidatableObject
+    public partial class OptionTradesResult :  IEquatable<OptionTradesResult>, IValidatableObject
     {
         /// <summary>
-        /// The source of the data
+        /// The source of the trades.
         /// </summary>
-        /// <value>The source of the data</value>
+        /// <value>The source of the trades.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SourceEnum
         {
             
             /// <summary>
-            /// Enum V2stockpriceintradaysourcesenum for value: $$v2_stock_price_intraday_sources_enum$$
+            /// Enum Realtime for value: realtime
             /// </summary>
-            [EnumMember(Value = "$$v2_stock_price_intraday_sources_enum$$")]
-            V2stockpriceintradaysourcesenum = 1
+            [EnumMember(Value = "realtime")]
+            Realtime = 1,
+            
+            /// <summary>
+            /// Enum Delayed for value: delayed
+            /// </summary>
+            [EnumMember(Value = "delayed")]
+            Delayed = 2
         }
 
         /// <summary>
-        /// The source of the data
+        /// The source of the trades.
         /// </summary>
-        /// <value>The source of the data</value>
+        /// <value>The source of the trades.</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public SourceEnum? Source { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponseSecurityIntradayPrices" /> class.
+        /// Initializes a new instance of the <see cref="OptionTradesResult" /> class.
         /// </summary>
-        /// <param name="IntradayPrices">The intraday stock prices for the Security.</param>
-        /// <param name="Security">The Security resolved from the given identifier.</param>
-        /// <param name="Source">The source of the data.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
-        public ApiResponseSecurityIntradayPrices(List<IntradayStockPrice> IntradayPrices = default(List<IntradayStockPrice>), SecuritySummary Security = default(SecuritySummary), SourceEnum? Source = default(SourceEnum?), string NextPage = default(string))
+        /// <param name="Source">The source of the trades..</param>
+        /// <param name="Trades">Array of all the trades in this page of the result..</param>
+        public OptionTradesResult(string NextPage = default(string), SourceEnum? Source = default(SourceEnum?), List<OptionTrades> Trades = default(List<OptionTrades>))
         {
-            this.IntradayPrices = IntradayPrices;
-            this.Security = Security;
-            this.Source = Source;
             this.NextPage = NextPage;
+            this.Source = Source;
+            this.Trades = Trades;
         }
         
-        /// <summary>
-        /// The intraday stock prices for the Security
-        /// </summary>
-        /// <value>The intraday stock prices for the Security</value>
-        [DataMember(Name="intraday_prices", EmitDefaultValue=false)]
-        public List<IntradayStockPrice> IntradayPrices { get; set; }
-
-        /// <summary>
-        /// The Security resolved from the given identifier
-        /// </summary>
-        /// <value>The Security resolved from the given identifier</value>
-        [DataMember(Name="security", EmitDefaultValue=false)]
-        public SecuritySummary Security { get; set; }
-
-
         /// <summary>
         /// The token required to request the next page of the data. If null, no further results are available.
         /// </summary>
         /// <value>The token required to request the next page of the data. If null, no further results are available.</value>
         [DataMember(Name="next_page", EmitDefaultValue=false)]
         public string NextPage { get; set; }
+
+
+        /// <summary>
+        /// Array of all the trades in this page of the result.
+        /// </summary>
+        /// <value>Array of all the trades in this page of the result.</value>
+        [DataMember(Name="trades", EmitDefaultValue=false)]
+        public List<OptionTrades> Trades { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,11 +84,10 @@ namespace Intrinio.SDK.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiResponseSecurityIntradayPrices {\n");
-            sb.Append("  IntradayPrices: ").Append(IntradayPrices).Append("\n");
-            sb.Append("  Security: ").Append(Security).Append("\n");
-            sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("class OptionTradesResult {\n");
             sb.Append("  NextPage: ").Append(NextPage).Append("\n");
+            sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  Trades: ").Append(Trades).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -112,29 +108,24 @@ namespace Intrinio.SDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiResponseSecurityIntradayPrices);
+            return this.Equals(input as OptionTradesResult);
         }
 
         /// <summary>
-        /// Returns true if ApiResponseSecurityIntradayPrices instances are equal
+        /// Returns true if OptionTradesResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiResponseSecurityIntradayPrices to be compared</param>
+        /// <param name="input">Instance of OptionTradesResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiResponseSecurityIntradayPrices input)
+        public bool Equals(OptionTradesResult input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.IntradayPrices == input.IntradayPrices ||
-                    this.IntradayPrices != null &&
-                    this.IntradayPrices.SequenceEqual(input.IntradayPrices)
-                ) && 
-                (
-                    this.Security == input.Security ||
-                    (this.Security != null &&
-                    this.Security.Equals(input.Security))
+                    this.NextPage == input.NextPage ||
+                    (this.NextPage != null &&
+                    this.NextPage.Equals(input.NextPage))
                 ) && 
                 (
                     this.Source == input.Source ||
@@ -142,9 +133,9 @@ namespace Intrinio.SDK.Model
                     this.Source.Equals(input.Source))
                 ) && 
                 (
-                    this.NextPage == input.NextPage ||
-                    (this.NextPage != null &&
-                    this.NextPage.Equals(input.NextPage))
+                    this.Trades == input.Trades ||
+                    this.Trades != null &&
+                    this.Trades.SequenceEqual(input.Trades)
                 );
         }
 
@@ -157,14 +148,12 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.IntradayPrices != null)
-                    hashCode = hashCode * 59 + this.IntradayPrices.GetHashCode();
-                if (this.Security != null)
-                    hashCode = hashCode * 59 + this.Security.GetHashCode();
-                if (this.Source != null)
-                    hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.NextPage != null)
                     hashCode = hashCode * 59 + this.NextPage.GetHashCode();
+                if (this.Source != null)
+                    hashCode = hashCode * 59 + this.Source.GetHashCode();
+                if (this.Trades != null)
+                    hashCode = hashCode * 59 + this.Trades.GetHashCode();
                 return hashCode;
             }
         }

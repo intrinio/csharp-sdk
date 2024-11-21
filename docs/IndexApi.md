@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**GetEconomicIndexDataPointText**](IndexApi.md#geteconomicindexdatapointtext) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 [**GetEconomicIndexHistoricalData**](IndexApi.md#geteconomicindexhistoricaldata) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
 [**GetEodIndexPriceById**](IndexApi.md#geteodindexpricebyid) | **GET** /indices/{identifier}/eod | End of Day Index Prices By Identifier
+[**GetIndexConstituentsById**](IndexApi.md#getindexconstituentsbyid) | **GET** /indices/{identifier}/constituents | Index Constituents By Index Identifier
 [**GetIndexSummaryById**](IndexApi.md#getindexsummarybyid) | **GET** /indices/{identifier} | Index Summary By Identifier
 [**GetRealtimeIndexPriceById**](IndexApi.md#getrealtimeindexpricebyid) | **GET** /indices/{identifier}/realtime | Realtime Index Price By Identifier
 [**GetSicIndexById**](IndexApi.md#getsicindexbyid) | **GET** /indices/sic/{identifier} | Lookup SIC Index
@@ -1023,6 +1024,93 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseEodIndexPrices**](ApiResponseEodIndexPrices.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.IndexApi)
+
+[//]: # (METHOD:GetIndexConstituentsById)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseIndexConstituents)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseIndexConstituents.md)
+
+[//]: # (OPERATION:GetIndexConstituentsById_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier}/constituents)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getindexconstituentsbyid)
+
+<a name="getindexconstituentsbyid"></a>
+## **GetIndexConstituentsById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetIndexConstituentsById_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseIndexConstituents GetIndexConstituentsById (string identifier)
+
+#### Index Constituents By Index Identifier
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetIndexConstituentsByIdExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var indexApi = new IndexApi();
+      
+      string identifier = "DJI";
+      
+      ApiResponseIndexConstituents result = indexApi.GetIndexConstituentsById(identifier);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The index symbol |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseIndexConstituents**](ApiResponseIndexConstituents.md)
 
 [//]: # (END_OPERATION)
 

@@ -250,6 +250,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'AskChangePercent'
         }
+        /// <summary>
+        /// Test the property 'TradeCount'
+        /// </summary>
+        [Test]
+        public void TradeCountTest()
+        {
+            // TODO unit test for the property 'TradeCount'
+        }
 
     }
 

@@ -15,9 +15,10 @@ Name | Type | Description
 **High** | decimal? | The highest traded contract price in this interval. &nbsp;
 **Low** | decimal? | The lowest traded contract price in this interval. &nbsp;
 **Close** | decimal? | The last traded contract price in this interval. &nbsp;
-**Volume** | decimal? | The volume of contract trades in this interval. &nbsp;
+**Volume** | decimal? | The volume of contracts traded in this interval. &nbsp;
 **Average** | decimal? | The volume weighted average price of contract trades in this interval. &nbsp;
 **Change** | decimal? | The ratio of Close minus Open to Open. &nbsp;
+**TradeCount** | decimal? | The number of qualified trades executed during the period &nbsp;
 
 [//]: # (END_DEFINITION)
 

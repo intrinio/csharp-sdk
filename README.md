@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.75.0
-- Package version: 7.11.0
+- API version: 2.76.3
+- Package version: 7.12.0
 
 
 <a name="frameworks-supported"></a>
@@ -309,6 +309,7 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**ScreenSecurities**](docs/SecurityApi.md#screensecurities) | **POST** /securities/screen | Screen Securities
 *SecurityApi* | [**SearchSecurities**](docs/SecurityApi.md#searchsecurities) | **GET** /securities/search | Search Securities
 *StockExchangeApi* | [**GetAllStockExchanges**](docs/StockExchangeApi.md#getallstockexchanges) | **GET** /stock_exchanges | All Stock Exchanges
+*StockExchangeApi* | [**GetStockExchangeBetas**](docs/StockExchangeApi.md#getstockexchangebetas) | **GET** /stock_exchanges/{identifier}/betas | Security Betas
 *StockExchangeApi* | [**GetStockExchangeById**](docs/StockExchangeApi.md#getstockexchangebyid) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 *StockExchangeApi* | [**GetStockExchangeGainers**](docs/StockExchangeApi.md#getstockexchangegainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
 *StockExchangeApi* | [**GetStockExchangeLosers**](docs/StockExchangeApi.md#getstockexchangelosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
@@ -485,6 +486,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSecurityZacksSalesSurprises](docs/ApiResponseSecurityZacksSalesSurprises.md)
  - [Model.ApiResponseStandardizedFinancials](docs/ApiResponseStandardizedFinancials.md)
  - [Model.ApiResponseStandardizedFinancialsDimensions](docs/ApiResponseStandardizedFinancialsDimensions.md)
+ - [Model.ApiResponseStockExchangeBetas](docs/ApiResponseStockExchangeBetas.md)
  - [Model.ApiResponseStockExchangeMovers](docs/ApiResponseStockExchangeMovers.md)
  - [Model.ApiResponseStockExchangeQuote](docs/ApiResponseStockExchangeQuote.md)
  - [Model.ApiResponseStockExchangeRealtimeStockPrices](docs/ApiResponseStockExchangeRealtimeStockPrices.md)
@@ -513,6 +515,7 @@ Class | Method | HTTP request | Description
  - [Model.AverageDirectionalIndexTechnicalValue](docs/AverageDirectionalIndexTechnicalValue.md)
  - [Model.AverageTrueRangeTechnicalValue](docs/AverageTrueRangeTechnicalValue.md)
  - [Model.AwesomeOscillatorTechnicalValue](docs/AwesomeOscillatorTechnicalValue.md)
+ - [Model.Beta](docs/Beta.md)
  - [Model.BollingerBandsTechnicalValue](docs/BollingerBandsTechnicalValue.md)
  - [Model.BulkDownloadLinks](docs/BulkDownloadLinks.md)
  - [Model.BulkDownloadSummary](docs/BulkDownloadSummary.md)

@@ -45,6 +45,35 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseStockExchanges</returns>
         ApiResponse<ApiResponseStockExchanges> GetAllStockExchangesWithHttpInfo (string city = null, string country = null, string countryCode = null, int? pageSize = null);
         /// <summary>
+        /// Security Betas
+        /// </summary>
+        /// <remarks>
+        /// Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseStockExchangeBetas</returns>
+        ApiResponseStockExchangeBetas GetStockExchangeBetas (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Betas
+        /// </summary>
+        /// <remarks>
+        /// Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeBetas</returns>
+        ApiResponse<ApiResponseStockExchangeBetas> GetStockExchangeBetasWithHttpInfo (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
         /// Lookup Stock Exchange
         /// </summary>
         /// <remarks>
@@ -295,6 +324,35 @@ namespace Intrinio.SDK.Api
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ApiResponseStockExchanges)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchanges>> GetAllStockExchangesAsyncWithHttpInfo (string city = null, string country = null, string countryCode = null, int? pageSize = null);
+        /// <summary>
+        /// Security Betas
+        /// </summary>
+        /// <remarks>
+        /// Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeBetas</returns>
+        System.Threading.Tasks.Task<ApiResponseStockExchangeBetas> GetStockExchangeBetasAsync (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Betas
+        /// </summary>
+        /// <remarks>
+        /// Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeBetas)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeBetas>> GetStockExchangeBetasAsyncWithHttpInfo (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Lookup Stock Exchange
         /// </summary>
@@ -784,6 +842,176 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseStockExchanges>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseStockExchanges) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchanges)));
+        }
+
+        /// <summary>
+        /// Security Betas Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseStockExchangeBetas</returns>
+        public ApiResponseStockExchangeBetas GetStockExchangeBetas (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseStockExchangeBetas> localVarResponse = GetStockExchangeBetasWithHttpInfo(identifier, type, date, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Betas Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseStockExchangeBetas</returns>
+        
+        public ApiResponse< ApiResponseStockExchangeBetas > GetStockExchangeBetasWithHttpInfo (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeBetas");
+
+            var localVarPath = "/stock_exchanges/{identifier}/betas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeBetas", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeBetas>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeBetas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeBetas)));
+        }
+
+        /// <summary>
+        /// Security Betas Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseStockExchangeBetas</returns>
+        public async System.Threading.Tasks.Task<ApiResponseStockExchangeBetas> GetStockExchangeBetasAsync (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseStockExchangeBetas> localVarResponse = await GetStockExchangeBetasAsyncWithHttpInfo(identifier, type, date, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Betas Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Stock Exchange identifier (MIC or Intrinio ID)</param>
+        /// <param name="type">Only of the given type (optional, default to weekly)</param>
+        /// <param name="date">Return data for this period end date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseStockExchangeBetas)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseStockExchangeBetas>> GetStockExchangeBetasAsyncWithHttpInfo (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling StockExchangeApi->GetStockExchangeBetas");
+
+            var localVarPath = "/stock_exchanges/{identifier}/betas";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStockExchangeBetas", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseStockExchangeBetas>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseStockExchangeBetas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseStockExchangeBetas)));
         }
 
         /// <summary>

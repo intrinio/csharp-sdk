@@ -61,7 +61,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsTickers GetAllOptionsTickers ()
+> ApiResponseOptionsTickers GetAllOptionsTickers (bool? useUnderlyingSymbols = null)
 
 #### Options Tickers
 
@@ -94,8 +94,9 @@ namespace Example
       
       var optionsApi = new OptionsApi();
       
+      bool? useUnderlyingSymbols = false;
       
-      ApiResponseOptionsTickers result = optionsApi.GetAllOptionsTickers();
+      ApiResponseOptionsTickers result = optionsApi.GetAllOptionsTickers(useUnderlyingSymbols);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -108,7 +109,10 @@ namespace Example
 
 [//]: # (START_PARAMETERS)
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **useUnderlyingSymbols** | bool?| Use underlying symbol vs contract symbol | [optional] [default to false] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

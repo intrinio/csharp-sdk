@@ -100,7 +100,8 @@ namespace Intrinio.SDK.Model
         /// <param name="AskFirstTime">The timestamp that represents the first ask time from the interval span..</param>
         /// <param name="AskLastTime">The timestamp that represents the last ask time from the interval span..</param>
         /// <param name="AskChangePercent">The ratio of the close to open ask difference, in percent..</param>
-        public StockPriceInterval(DateTime? Time = default(DateTime?), decimal? Open = default(decimal?), decimal? Close = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Volume = default(decimal?), DateTime? CloseTime = default(DateTime?), IntervalEnum? Interval = default(IntervalEnum?), decimal? Average = default(decimal?), decimal? Change = default(decimal?), decimal? BidHigh = default(decimal?), decimal? BidLow = default(decimal?), decimal? BidClose = default(decimal?), decimal? BidOpen = default(decimal?), DateTime? BidFirstTime = default(DateTime?), DateTime? BidLastTime = default(DateTime?), decimal? BidChangePercent = default(decimal?), decimal? AskHigh = default(decimal?), decimal? AskLow = default(decimal?), decimal? AskClose = default(decimal?), decimal? AskOpen = default(decimal?), DateTime? AskFirstTime = default(DateTime?), DateTime? AskLastTime = default(DateTime?), decimal? AskChangePercent = default(decimal?))
+        /// <param name="TradeCount">The number of qualified trades executed during the period.</param>
+        public StockPriceInterval(DateTime? Time = default(DateTime?), decimal? Open = default(decimal?), decimal? Close = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Volume = default(decimal?), DateTime? CloseTime = default(DateTime?), IntervalEnum? Interval = default(IntervalEnum?), decimal? Average = default(decimal?), decimal? Change = default(decimal?), decimal? BidHigh = default(decimal?), decimal? BidLow = default(decimal?), decimal? BidClose = default(decimal?), decimal? BidOpen = default(decimal?), DateTime? BidFirstTime = default(DateTime?), DateTime? BidLastTime = default(DateTime?), decimal? BidChangePercent = default(decimal?), decimal? AskHigh = default(decimal?), decimal? AskLow = default(decimal?), decimal? AskClose = default(decimal?), decimal? AskOpen = default(decimal?), DateTime? AskFirstTime = default(DateTime?), DateTime? AskLastTime = default(DateTime?), decimal? AskChangePercent = default(decimal?), decimal? TradeCount = default(decimal?))
         {
             this.Time = Time;
             this.Open = Open;
@@ -126,6 +127,7 @@ namespace Intrinio.SDK.Model
             this.AskFirstTime = AskFirstTime;
             this.AskLastTime = AskLastTime;
             this.AskChangePercent = AskChangePercent;
+            this.TradeCount = TradeCount;
         }
         
         /// <summary>
@@ -291,6 +293,13 @@ namespace Intrinio.SDK.Model
         public decimal? AskChangePercent { get; set; }
 
         /// <summary>
+        /// The number of qualified trades executed during the period
+        /// </summary>
+        /// <value>The number of qualified trades executed during the period</value>
+        [DataMember(Name="trade_count", EmitDefaultValue=false)]
+        public decimal? TradeCount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -322,6 +331,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  AskFirstTime: ").Append(AskFirstTime).Append("\n");
             sb.Append("  AskLastTime: ").Append(AskLastTime).Append("\n");
             sb.Append("  AskChangePercent: ").Append(AskChangePercent).Append("\n");
+            sb.Append("  TradeCount: ").Append(TradeCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -475,6 +485,11 @@ namespace Intrinio.SDK.Model
                     this.AskChangePercent == input.AskChangePercent ||
                     (this.AskChangePercent != null &&
                     this.AskChangePercent.Equals(input.AskChangePercent))
+                ) && 
+                (
+                    this.TradeCount == input.TradeCount ||
+                    (this.TradeCount != null &&
+                    this.TradeCount.Equals(input.TradeCount))
                 );
         }
 
@@ -535,6 +550,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.AskLastTime.GetHashCode();
                 if (this.AskChangePercent != null)
                     hashCode = hashCode * 59 + this.AskChangePercent.GetHashCode();
+                if (this.TradeCount != null)
+                    hashCode = hashCode * 59 + this.TradeCount.GetHashCode();
                 return hashCode;
             }
         }

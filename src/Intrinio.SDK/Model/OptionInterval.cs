@@ -31,10 +31,11 @@ namespace Intrinio.SDK.Model
         /// <param name="High">The highest traded contract price in this interval..</param>
         /// <param name="Low">The lowest traded contract price in this interval..</param>
         /// <param name="Close">The last traded contract price in this interval..</param>
-        /// <param name="Volume">The volume of contract trades in this interval..</param>
+        /// <param name="Volume">The volume of contracts traded in this interval..</param>
         /// <param name="Average">The volume weighted average price of contract trades in this interval..</param>
         /// <param name="Change">The ratio of Close minus Open to Open..</param>
-        public OptionInterval(DateTime? OpenTime = default(DateTime?), DateTime? CloseTime = default(DateTime?), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Close = default(decimal?), decimal? Volume = default(decimal?), decimal? Average = default(decimal?), decimal? Change = default(decimal?))
+        /// <param name="TradeCount">The number of qualified trades executed during the period.</param>
+        public OptionInterval(DateTime? OpenTime = default(DateTime?), DateTime? CloseTime = default(DateTime?), decimal? Open = default(decimal?), decimal? High = default(decimal?), decimal? Low = default(decimal?), decimal? Close = default(decimal?), decimal? Volume = default(decimal?), decimal? Average = default(decimal?), decimal? Change = default(decimal?), decimal? TradeCount = default(decimal?))
         {
             this.OpenTime = OpenTime;
             this.CloseTime = CloseTime;
@@ -45,6 +46,7 @@ namespace Intrinio.SDK.Model
             this.Volume = Volume;
             this.Average = Average;
             this.Change = Change;
+            this.TradeCount = TradeCount;
         }
         
         /// <summary>
@@ -90,9 +92,9 @@ namespace Intrinio.SDK.Model
         public decimal? Close { get; set; }
 
         /// <summary>
-        /// The volume of contract trades in this interval.
+        /// The volume of contracts traded in this interval.
         /// </summary>
-        /// <value>The volume of contract trades in this interval.</value>
+        /// <value>The volume of contracts traded in this interval.</value>
         [DataMember(Name="volume", EmitDefaultValue=false)]
         public decimal? Volume { get; set; }
 
@@ -111,6 +113,13 @@ namespace Intrinio.SDK.Model
         public decimal? Change { get; set; }
 
         /// <summary>
+        /// The number of qualified trades executed during the period
+        /// </summary>
+        /// <value>The number of qualified trades executed during the period</value>
+        [DataMember(Name="trade_count", EmitDefaultValue=false)]
+        public decimal? TradeCount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -127,6 +136,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Volume: ").Append(Volume).Append("\n");
             sb.Append("  Average: ").Append(Average).Append("\n");
             sb.Append("  Change: ").Append(Change).Append("\n");
+            sb.Append("  TradeCount: ").Append(TradeCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -205,6 +215,11 @@ namespace Intrinio.SDK.Model
                     this.Change == input.Change ||
                     (this.Change != null &&
                     this.Change.Equals(input.Change))
+                ) && 
+                (
+                    this.TradeCount == input.TradeCount ||
+                    (this.TradeCount != null &&
+                    this.TradeCount.Equals(input.TradeCount))
                 );
         }
 
@@ -235,6 +250,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Average.GetHashCode();
                 if (this.Change != null)
                     hashCode = hashCode * 59 + this.Change.GetHashCode();
+                if (this.TradeCount != null)
+                    hashCode = hashCode * 59 + this.TradeCount.GetHashCode();
                 return hashCode;
             }
         }

@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllStockExchanges**](StockExchangeApi.md#getallstockexchanges) | **GET** /stock_exchanges | All Stock Exchanges
+[**GetStockExchangeBetas**](StockExchangeApi.md#getstockexchangebetas) | **GET** /stock_exchanges/{identifier}/betas | Security Betas
 [**GetStockExchangeById**](StockExchangeApi.md#getstockexchangebyid) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 [**GetStockExchangeGainers**](StockExchangeApi.md#getstockexchangegainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
 [**GetStockExchangeLosers**](StockExchangeApi.md#getstockexchangelosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
@@ -106,6 +107,102 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.StockExchangeApi)
+
+[//]: # (METHOD:GetStockExchangeBetas)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeBetas)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeBetas.md)
+
+[//]: # (OPERATION:GetStockExchangeBetas_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/betas)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getstockexchangebetas)
+
+<a name="getstockexchangebetas"></a>
+## **GetStockExchangeBetas**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangeBetas_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeBetas GetStockExchangeBetas (string identifier, string type = null, Object date = null, int? pageSize = null, string nextPage = null)
+
+#### Security Betas
+
+Returns security beta data in the Stock Exchange with the given `identifier`
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetStockExchangeBetasExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var stockExchangeApi = new StockExchangeApi();
+      
+      string identifier = "USCOMP";
+      string type = null;
+      var date = new Object();
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseStockExchangeBetas result = stockExchangeApi.GetStockExchangeBetas(identifier, type, date, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **type** | string| Only of the given type | [optional] [default to weekly] &nbsp;
+ **date** | [**Object**](Object.md)| Return data for this period end date. | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeBetas**](ApiResponseStockExchangeBetas.md)
 
 [//]: # (END_OPERATION)
 

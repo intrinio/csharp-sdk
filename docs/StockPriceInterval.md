@@ -33,6 +33,7 @@ Name | Type | Description
 **AskFirstTime** | DateTime? | The timestamp that represents the first ask time from the interval span. &nbsp;
 **AskLastTime** | DateTime? | The timestamp that represents the last ask time from the interval span. &nbsp;
 **AskChangePercent** | decimal? | The ratio of the close to open ask difference, in percent. &nbsp;
+**TradeCount** | decimal? | The number of qualified trades executed during the period &nbsp;
 
 [//]: # (END_DEFINITION)
 

@@ -122,6 +122,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'Average'
         }
+        /// <summary>
+        /// Test the property 'TradeCount'
+        /// </summary>
+        [Test]
+        public void TradeCountTest()
+        {
+            // TODO unit test for the property 'TradeCount'
+        }
 
     }
 

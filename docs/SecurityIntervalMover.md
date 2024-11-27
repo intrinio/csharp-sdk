@@ -15,8 +15,9 @@ Name | Type | Description
 **High** | decimal? | The highest traded price in this interval. &nbsp;
 **Low** | decimal? | The lowest traded price in this interval. &nbsp;
 **Close** | decimal? | The last traded price in this interval. &nbsp;
-**Volume** | decimal? | The volume of trades in this interval. &nbsp;
+**Volume** | decimal? | The volume of shares in this interval. &nbsp;
 **Average** | decimal? | The volume weighted average price of trades in this interval. &nbsp;
+**TradeCount** | decimal? | The of trades in this interval. &nbsp;
 
 [//]: # (END_DEFINITION)
 

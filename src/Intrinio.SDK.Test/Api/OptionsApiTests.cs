@@ -59,7 +59,8 @@ namespace Intrinio.SDK.Test
         public void GetAllOptionsTickersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetAllOptionsTickers();
+            //bool? useUnderlyingSymbols = null;
+            //var response = instance.GetAllOptionsTickers(useUnderlyingSymbols);
             //Assert.IsInstanceOf<ApiResponseOptionsTickers> (response, "response is ApiResponseOptionsTickers");
         }
         

@@ -68,6 +68,22 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetStockExchangeBetas
+        /// </summary>
+        [Test]
+        public void GetStockExchangeBetasTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string type = null;
+            //Object date = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetStockExchangeBetas(identifier, type, date, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseStockExchangeBetas> (response, "response is ApiResponseStockExchangeBetas");
+        }
+        
+        /// <summary>
         /// Test GetStockExchangeById
         /// </summary>
         [Test]

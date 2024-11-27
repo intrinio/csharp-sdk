@@ -24,8 +24,9 @@ namespace Intrinio.SDK.Api
         /// Returns all tickers that have existing options contracts.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>ApiResponseOptionsTickers</returns>
-        ApiResponseOptionsTickers GetAllOptionsTickers ();
+        ApiResponseOptionsTickers GetAllOptionsTickers (bool? useUnderlyingSymbols = null);
 
         /// <summary>
         /// Options Tickers
@@ -34,8 +35,9 @@ namespace Intrinio.SDK.Api
         /// Returns all tickers that have existing options contracts.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>ApiResponse of ApiResponseOptionsTickers</returns>
-        ApiResponse<ApiResponseOptionsTickers> GetAllOptionsTickersWithHttpInfo ();
+        ApiResponse<ApiResponseOptionsTickers> GetAllOptionsTickersWithHttpInfo (bool? useUnderlyingSymbols = null);
         /// <summary>
         /// Total open interest and volume aggregated by ticker
         /// </summary>
@@ -917,8 +919,9 @@ namespace Intrinio.SDK.Api
         /// Returns all tickers that have existing options contracts.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>Task of ApiResponseOptionsTickers</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsTickers> GetAllOptionsTickersAsync ();
+        System.Threading.Tasks.Task<ApiResponseOptionsTickers> GetAllOptionsTickersAsync (bool? useUnderlyingSymbols = null);
 
         /// <summary>
         /// Options Tickers
@@ -927,8 +930,9 @@ namespace Intrinio.SDK.Api
         /// Returns all tickers that have existing options contracts.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsTickers)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo (bool? useUnderlyingSymbols = null);
         /// <summary>
         /// Total open interest and volume aggregated by ticker
         /// </summary>
@@ -1916,10 +1920,11 @@ namespace Intrinio.SDK.Api
         /// Options Tickers Returns all tickers that have existing options contracts.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>ApiResponseOptionsTickers</returns>
-        public ApiResponseOptionsTickers GetAllOptionsTickers ()
+        public ApiResponseOptionsTickers GetAllOptionsTickers (bool? useUnderlyingSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsTickers> localVarResponse = GetAllOptionsTickersWithHttpInfo();
+             ApiResponse<ApiResponseOptionsTickers> localVarResponse = GetAllOptionsTickersWithHttpInfo(useUnderlyingSymbols);
              return localVarResponse.Data;
         }
 
@@ -1927,9 +1932,10 @@ namespace Intrinio.SDK.Api
         /// Options Tickers Returns all tickers that have existing options contracts.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>ApiResponse of ApiResponseOptionsTickers</returns>
         
-        public ApiResponse< ApiResponseOptionsTickers > GetAllOptionsTickersWithHttpInfo ()
+        public ApiResponse< ApiResponseOptionsTickers > GetAllOptionsTickersWithHttpInfo (bool? useUnderlyingSymbols = null)
         {
 
             var localVarPath = "/options/tickers";
@@ -1954,6 +1960,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
             
             
+            if (useUnderlyingSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "use_underlying_symbols", useUnderlyingSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -1983,10 +1990,11 @@ namespace Intrinio.SDK.Api
         /// Options Tickers Returns all tickers that have existing options contracts.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>Task of ApiResponseOptionsTickers</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsTickers> GetAllOptionsTickersAsync ()
+        public async System.Threading.Tasks.Task<ApiResponseOptionsTickers> GetAllOptionsTickersAsync (bool? useUnderlyingSymbols = null)
         {
-             ApiResponse<ApiResponseOptionsTickers> localVarResponse = await GetAllOptionsTickersAsyncWithHttpInfo();
+             ApiResponse<ApiResponseOptionsTickers> localVarResponse = await GetAllOptionsTickersAsyncWithHttpInfo(useUnderlyingSymbols);
              return localVarResponse.Data;
 
         }
@@ -1995,8 +2003,9 @@ namespace Intrinio.SDK.Api
         /// Options Tickers Returns all tickers that have existing options contracts.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="useUnderlyingSymbols">Use underlying symbol vs contract symbol (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsTickers)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsTickers>> GetAllOptionsTickersAsyncWithHttpInfo (bool? useUnderlyingSymbols = null)
         {
 
             var localVarPath = "/options/tickers";
@@ -2021,6 +2030,7 @@ namespace Intrinio.SDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
               
 
+            if (useUnderlyingSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "use_underlying_symbols", useUnderlyingSymbols)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

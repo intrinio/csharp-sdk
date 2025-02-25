@@ -755,8 +755,11 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>OptionSnapshotsResult</returns>
-        OptionSnapshotsResult GetOptionsSnapshots (string source = null, DateTime? atDatetime = null);
+        OptionSnapshotsResult GetOptionsSnapshots (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null);
 
         /// <summary>
         /// Option Prices Realtime Snapshot
@@ -767,8 +770,11 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>ApiResponse of OptionSnapshotsResult</returns>
-        ApiResponse<OptionSnapshotsResult> GetOptionsSnapshotsWithHttpInfo (string source = null, DateTime? atDatetime = null);
+        ApiResponse<OptionSnapshotsResult> GetOptionsSnapshotsWithHttpInfo (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null);
         /// <summary>
         /// Option Stats Realtime
         /// </summary>
@@ -1650,8 +1656,11 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>Task of OptionSnapshotsResult</returns>
-        System.Threading.Tasks.Task<OptionSnapshotsResult> GetOptionsSnapshotsAsync (string source = null, DateTime? atDatetime = null);
+        System.Threading.Tasks.Task<OptionSnapshotsResult> GetOptionsSnapshotsAsync (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null);
 
         /// <summary>
         /// Option Prices Realtime Snapshot
@@ -1662,8 +1671,11 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>Task of ApiResponse (OptionSnapshotsResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OptionSnapshotsResult>> GetOptionsSnapshotsAsyncWithHttpInfo (string source = null, DateTime? atDatetime = null);
+        System.Threading.Tasks.Task<ApiResponse<OptionSnapshotsResult>> GetOptionsSnapshotsAsyncWithHttpInfo (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null);
         /// <summary>
         /// Option Stats Realtime
         /// </summary>
@@ -6028,10 +6040,13 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>OptionSnapshotsResult</returns>
-        public OptionSnapshotsResult GetOptionsSnapshots (string source = null, DateTime? atDatetime = null)
+        public OptionSnapshotsResult GetOptionsSnapshots (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null)
         {
-             ApiResponse<OptionSnapshotsResult> localVarResponse = GetOptionsSnapshotsWithHttpInfo(source, atDatetime);
+             ApiResponse<OptionSnapshotsResult> localVarResponse = GetOptionsSnapshotsWithHttpInfo(source, atDatetime, withGreeks, stockPriceSource, withUnderlyingPrice);
              return localVarResponse.Data;
         }
 
@@ -6041,9 +6056,12 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>ApiResponse of OptionSnapshotsResult</returns>
         
-        public ApiResponse< OptionSnapshotsResult > GetOptionsSnapshotsWithHttpInfo (string source = null, DateTime? atDatetime = null)
+        public ApiResponse< OptionSnapshotsResult > GetOptionsSnapshotsWithHttpInfo (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null)
         {
 
             var localVarPath = "/options/snapshots";
@@ -6070,6 +6088,9 @@ namespace Intrinio.SDK.Api
             
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (atDatetime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "at_datetime", atDatetime)); // query parameter
+            if (withGreeks != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "with_greeks", withGreeks)); // query parameter
+            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
+            if (withUnderlyingPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "with_underlying_price", withUnderlyingPrice)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -6101,10 +6122,13 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>Task of OptionSnapshotsResult</returns>
-        public async System.Threading.Tasks.Task<OptionSnapshotsResult> GetOptionsSnapshotsAsync (string source = null, DateTime? atDatetime = null)
+        public async System.Threading.Tasks.Task<OptionSnapshotsResult> GetOptionsSnapshotsAsync (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null)
         {
-             ApiResponse<OptionSnapshotsResult> localVarResponse = await GetOptionsSnapshotsAsyncWithHttpInfo(source, atDatetime);
+             ApiResponse<OptionSnapshotsResult> localVarResponse = await GetOptionsSnapshotsAsyncWithHttpInfo(source, atDatetime, withGreeks, stockPriceSource, withUnderlyingPrice);
              return localVarResponse.Data;
 
         }
@@ -6115,8 +6139,11 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="withGreeks">Whether to include Greek calculations fields when available. (optional)</param>
+        /// <param name="stockPriceSource">Source for underlying price for calculating Greeks. (optional)</param>
+        /// <param name="withUnderlyingPrice">Whether to include the underlying price of the security in the file. (optional)</param>
         /// <returns>Task of ApiResponse (OptionSnapshotsResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OptionSnapshotsResult>> GetOptionsSnapshotsAsyncWithHttpInfo (string source = null, DateTime? atDatetime = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OptionSnapshotsResult>> GetOptionsSnapshotsAsyncWithHttpInfo (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null)
         {
 
             var localVarPath = "/options/snapshots";
@@ -6143,6 +6170,9 @@ namespace Intrinio.SDK.Api
 
             if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
             if (atDatetime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "at_datetime", atDatetime)); // query parameter
+            if (withGreeks != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "with_greeks", withGreeks)); // query parameter
+            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
+            if (withUnderlyingPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "with_underlying_price", withUnderlyingPrice)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

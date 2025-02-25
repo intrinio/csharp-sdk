@@ -2332,7 +2332,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> OptionSnapshotsResult GetOptionsSnapshots (string source = null, DateTime? atDatetime = null)
+> OptionSnapshotsResult GetOptionsSnapshots (string source = null, DateTime? atDatetime = null, bool? withGreeks = null, string stockPriceSource = null, bool? withUnderlyingPrice = null)
 
 #### Option Prices Realtime Snapshot
 
@@ -2367,8 +2367,11 @@ namespace Example
       
       string source = null;
       DateTime? atDatetime = null;
+      bool? withGreeks = null;
+      string stockPriceSource = null;
+      bool? withUnderlyingPrice = null;
       
-      OptionSnapshotsResult result = optionsApi.GetOptionsSnapshots(source, atDatetime);
+      OptionSnapshotsResult result = optionsApi.GetOptionsSnapshots(source, atDatetime, withGreeks, stockPriceSource, withUnderlyingPrice);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -2386,6 +2389,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
  **atDatetime** | DateTime?| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+ **withGreeks** | bool?| Whether to include Greek calculations fields when available. | [optional]  &nbsp;
+ **stockPriceSource** | string| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **withUnderlyingPrice** | bool?| Whether to include the underlying price of the security in the file. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

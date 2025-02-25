@@ -460,7 +460,10 @@ namespace Intrinio.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string source = null;
             //DateTime? atDatetime = null;
-            //var response = instance.GetOptionsSnapshots(source, atDatetime);
+            //bool? withGreeks = null;
+            //string stockPriceSource = null;
+            //bool? withUnderlyingPrice = null;
+            //var response = instance.GetOptionsSnapshots(source, atDatetime, withGreeks, stockPriceSource, withUnderlyingPrice);
             //Assert.IsInstanceOf<OptionSnapshotsResult> (response, "response is OptionSnapshotsResult");
         }
         

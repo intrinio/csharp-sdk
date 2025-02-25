@@ -27,6 +27,9 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <param name="Id">The Intrinio ID for Security.</param>
         /// <param name="CompanyId">The Intrinio ID for the Company for which the Security is issued.</param>
+        /// <param name="Exchange">The exchange&#39;s MIC.</param>
+        /// <param name="ExchangeMic">The security&#39;s exchange MIC.</param>
+        /// <param name="StockExchangeId">The exchange&#39;s Intrinio ID.</param>
         /// <param name="Name">The name of the Security.</param>
         /// <param name="Code">A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;).</param>
         /// <param name="Currency">The currency in which the Security is traded on the exchange.</param>
@@ -36,10 +39,13 @@ namespace Intrinio.SDK.Model
         /// <param name="CompositeFigi">The country-composite OpenFIGI identifier.</param>
         /// <param name="ShareClassFigi">The global-composite OpenFIGI identifier.</param>
         /// <param name="PrimaryListing">If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange.</param>
-        public SecuritySummary(string Id = default(string), string CompanyId = default(string), string Name = default(string), string Code = default(string), string Currency = default(string), string Ticker = default(string), string CompositeTicker = default(string), string Figi = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), bool? PrimaryListing = default(bool?))
+        public SecuritySummary(string Id = default(string), string CompanyId = default(string), string Exchange = default(string), string ExchangeMic = default(string), string StockExchangeId = default(string), string Name = default(string), string Code = default(string), string Currency = default(string), string Ticker = default(string), string CompositeTicker = default(string), string Figi = default(string), string CompositeFigi = default(string), string ShareClassFigi = default(string), bool? PrimaryListing = default(bool?))
         {
             this.Id = Id;
             this.CompanyId = CompanyId;
+            this.Exchange = Exchange;
+            this.ExchangeMic = ExchangeMic;
+            this.StockExchangeId = StockExchangeId;
             this.Name = Name;
             this.Code = Code;
             this.Currency = Currency;
@@ -64,6 +70,27 @@ namespace Intrinio.SDK.Model
         /// <value>The Intrinio ID for the Company for which the Security is issued</value>
         [DataMember(Name="company_id", EmitDefaultValue=false)]
         public string CompanyId { get; set; }
+
+        /// <summary>
+        /// The exchange&#39;s MIC
+        /// </summary>
+        /// <value>The exchange&#39;s MIC</value>
+        [DataMember(Name="exchange", EmitDefaultValue=false)]
+        public string Exchange { get; set; }
+
+        /// <summary>
+        /// The security&#39;s exchange MIC
+        /// </summary>
+        /// <value>The security&#39;s exchange MIC</value>
+        [DataMember(Name="exchange_mic", EmitDefaultValue=false)]
+        public string ExchangeMic { get; set; }
+
+        /// <summary>
+        /// The exchange&#39;s Intrinio ID
+        /// </summary>
+        /// <value>The exchange&#39;s Intrinio ID</value>
+        [DataMember(Name="stock_exchange_id", EmitDefaultValue=false)]
+        public string StockExchangeId { get; set; }
 
         /// <summary>
         /// The name of the Security
@@ -138,6 +165,9 @@ namespace Intrinio.SDK.Model
             sb.Append("class SecuritySummary {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  CompanyId: ").Append(CompanyId).Append("\n");
+            sb.Append("  Exchange: ").Append(Exchange).Append("\n");
+            sb.Append("  ExchangeMic: ").Append(ExchangeMic).Append("\n");
+            sb.Append("  StockExchangeId: ").Append(StockExchangeId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
@@ -190,6 +220,21 @@ namespace Intrinio.SDK.Model
                     this.CompanyId == input.CompanyId ||
                     (this.CompanyId != null &&
                     this.CompanyId.Equals(input.CompanyId))
+                ) && 
+                (
+                    this.Exchange == input.Exchange ||
+                    (this.Exchange != null &&
+                    this.Exchange.Equals(input.Exchange))
+                ) && 
+                (
+                    this.ExchangeMic == input.ExchangeMic ||
+                    (this.ExchangeMic != null &&
+                    this.ExchangeMic.Equals(input.ExchangeMic))
+                ) && 
+                (
+                    this.StockExchangeId == input.StockExchangeId ||
+                    (this.StockExchangeId != null &&
+                    this.StockExchangeId.Equals(input.StockExchangeId))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -251,6 +296,12 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.CompanyId != null)
                     hashCode = hashCode * 59 + this.CompanyId.GetHashCode();
+                if (this.Exchange != null)
+                    hashCode = hashCode * 59 + this.Exchange.GetHashCode();
+                if (this.ExchangeMic != null)
+                    hashCode = hashCode * 59 + this.ExchangeMic.GetHashCode();
+                if (this.StockExchangeId != null)
+                    hashCode = hashCode * 59 + this.StockExchangeId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Code != null)

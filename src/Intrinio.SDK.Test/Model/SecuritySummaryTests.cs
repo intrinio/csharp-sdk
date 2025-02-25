@@ -75,6 +75,30 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'CompanyId'
         }
         /// <summary>
+        /// Test the property 'Exchange'
+        /// </summary>
+        [Test]
+        public void ExchangeTest()
+        {
+            // TODO unit test for the property 'Exchange'
+        }
+        /// <summary>
+        /// Test the property 'ExchangeMic'
+        /// </summary>
+        [Test]
+        public void ExchangeMicTest()
+        {
+            // TODO unit test for the property 'ExchangeMic'
+        }
+        /// <summary>
+        /// Test the property 'StockExchangeId'
+        /// </summary>
+        [Test]
+        public void StockExchangeIdTest()
+        {
+            // TODO unit test for the property 'StockExchangeId'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

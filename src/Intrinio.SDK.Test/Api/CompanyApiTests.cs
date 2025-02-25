@@ -214,13 +214,15 @@ namespace Intrinio.SDK.Test
             //int? fiscalYear = null;
             //string statementCode = null;
             //string type = null;
+            //string fundamentalType = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //DateTime? updatedAfter = null;
+            //bool? latestOnly = null;
             //DateTime? updatedBefore = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, startDate, endDate, updatedAfter, updatedBefore, pageSize, nextPage);
+            //var response = instance.GetCompanyFundamentals(identifier, filedAfter, filedBefore, reportedOnly, fiscalYear, statementCode, type, fundamentalType, startDate, endDate, updatedAfter, latestOnly, updatedBefore, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyFundamentals> (response, "response is ApiResponseCompanyFundamentals");
         }
         

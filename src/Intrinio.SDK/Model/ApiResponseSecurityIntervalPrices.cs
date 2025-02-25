@@ -52,7 +52,13 @@ namespace Intrinio.SDK.Model
             /// Enum Nasdaqbasicfiltered for value: nasdaq_basic_filtered
             /// </summary>
             [EnumMember(Value = "nasdaq_basic_filtered")]
-            Nasdaqbasicfiltered = 4
+            Nasdaqbasicfiltered = 4,
+            
+            /// <summary>
+            /// Enum Nasdaqbasiclastsale for value: nasdaq_basic_last_sale
+            /// </summary>
+            [EnumMember(Value = "nasdaq_basic_last_sale")]
+            Nasdaqbasiclastsale = 5
         }
 
         /// <summary>

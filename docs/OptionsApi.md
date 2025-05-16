@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**GetOptionsChainRealtime**](OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**GetOptionsExpirationsEod**](OptionsApi.md#getoptionsexpirationseod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
+[**GetOptionsImpliedMoveBySymbol**](OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
 [**GetOptionsIntervalByContract**](OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**GetOptionsIntervalMovers**](OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 [**GetOptionsIntervalMoversChange**](OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -33,6 +34,8 @@ Method | HTTP request | Description
 [**GetUnusualActivityIntraday**](OptionsApi.md#getunusualactivityintraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 [**GetUnusualActivityUniversal**](OptionsApi.md#getunusualactivityuniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
 [**GetUnusualActivityUniversalIntraday**](OptionsApi.md#getunusualactivityuniversalintraday) | **GET** /options/unusual_activity/intraday | Options Unusual Activity Universal Intraday
+[**OptionsGreeksByTickerIdentifierRealtimeGet**](OptionsApi.md#optionsgreeksbytickeridentifierrealtimeget) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Get realtime options greeks by ticker
+[**OptionsGreeksContractRealtimeGet**](OptionsApi.md#optionsgreekscontractrealtimeget) | **GET** /options/greeks/{contract}/realtime | Get realtime options greeks for a specific contract
 
 
 
@@ -1350,6 +1353,100 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
 
+[//]: # (METHOD:GetOptionsImpliedMoveBySymbol)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsImpliedMove)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsImpliedMove.md)
+
+[//]: # (OPERATION:GetOptionsImpliedMoveBySymbol_v2)
+
+[//]: # (ENDPOINT:/options/implied_move/{symbol}/{expiration_date})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsimpliedmovebysymbol)
+
+<a name="getoptionsimpliedmovebysymbol"></a>
+## **GetOptionsImpliedMoveBySymbol**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsImpliedMoveBySymbol_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsImpliedMove GetOptionsImpliedMoveBySymbol (string symbol, DateTime? expirationDate, Object percentage = null, string source = null)
+
+#### Options Implied Move By Symbol
+
+Returns the implied move data points for a ticker symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsImpliedMoveBySymbolExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "TSLA";
+      DateTime? expirationDate = DateTime.Parse("2025-05-30");
+      var percentage = new Object();
+      string source = null;
+      
+      ApiResponseOptionsImpliedMove result = optionsApi.GetOptionsImpliedMoveBySymbol(symbol, expirationDate, percentage, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The ticker symbol for the contracts. |  &nbsp;
+ **expirationDate** | DateTime?| The expiration date for the contracts to consider. |  &nbsp;
+ **percentage** | [**Object**](Object.md)| Percentage to multiply the straddle by. Defaults to 0.85. | [optional]  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsImpliedMove**](ApiResponseOptionsImpliedMove.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
 [//]: # (METHOD:GetOptionsIntervalByContract)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.OptionIntervalsResult)
@@ -2226,7 +2323,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null)
+> ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null)
 
 #### Option Prices Realtime By Ticker
 
@@ -2269,8 +2366,9 @@ namespace Example
       bool? showExtendedPrice = null;
       var expirationStartDate = new Object();
       var expirationEndDate = new Object();
+      decimal? strike = 100.0;
       
-      ApiResponseOptionsPricesByTickerRealtime result = optionsApi.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate);
+      ApiResponseOptionsPricesByTickerRealtime result = optionsApi.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -2296,6 +2394,7 @@ Name | Type | Description  | Notes
  **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
  **expirationStartDate** | [**Object**](Object.md)| Filter out contracts that expire before this date. | [optional]  &nbsp;
  **expirationEndDate** | [**Object**](Object.md)| Filter out contracts that expire after this date. | [optional]  &nbsp;
+ **strike** | decimal?| Filter out contracts that have this strike price. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -2675,7 +2774,7 @@ Name | Type | Description  | Notes
  **activityType** | string| The unusual activity type to query for. | [optional]  &nbsp;
  **sentiment** | string| The sentiment type to query for. | [optional]  &nbsp;
  **startDate** | DateTime?| Return unusual activity on or after this date. | [optional]  &nbsp;
- **endDate** | DateTime?| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **endDate** | DateTime?| Return unusual activity before this date. | [optional]  &nbsp;
  **minimumTotalValue** | [**Object**](Object.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
  **maximumTotalValue** | [**Object**](Object.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
 <br/>
@@ -2865,7 +2964,7 @@ Name | Type | Description  | Notes
  **activityType** | string| The unusual activity type to query for. | [optional]  &nbsp;
  **sentiment** | string| The sentiment type to query for. | [optional]  &nbsp;
  **startDate** | DateTime?| Return unusual activity on or after this date. | [optional]  &nbsp;
- **endDate** | DateTime?| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **endDate** | DateTime?| Return unusual activity before this date. | [optional]  &nbsp;
  **minimumTotalValue** | [**Object**](Object.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
  **maximumTotalValue** | [**Object**](Object.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
 <br/>
@@ -2875,6 +2974,210 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:OptionsGreeksByTickerIdentifierRealtimeGet)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsGreeksByTickerRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsGreeksByTickerRealtime.md)
+
+[//]: # (OPERATION:OptionsGreeksByTickerIdentifierRealtimeGet_v2)
+
+[//]: # (ENDPOINT:/options/greeks/by_ticker/{identifier}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#optionsgreeksbytickeridentifierrealtimeget)
+
+<a name="optionsgreeksbytickeridentifierrealtimeget"></a>
+## **OptionsGreeksByTickerIdentifierRealtimeGet**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/OptionsGreeksByTickerIdentifierRealtimeGet_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsGreeksByTickerRealtime OptionsGreeksByTickerIdentifierRealtimeGet (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+
+#### Get realtime options greeks by ticker
+
+Retrieves realtime options greeks data for all contracts of a given ticker symbol
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class OptionsGreeksByTickerIdentifierRealtimeGetExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string identifier = identifier_example;
+      string source = source_example;
+      string model = model_example;
+      string ivMode = ivMode_example;
+      string stockPriceSource = stockPriceSource_example;
+      DateTime? expirationStartDate = 2013-10-20;
+      DateTime? expirationEndDate = 2013-10-20;
+      float? strike = 3.4f;
+      float? strikeGreaterThan = 3.4f;
+      float? strikeLessThan = 3.4f;
+      int? pageSize = 56;
+      
+      ApiResponseOptionsGreeksByTickerRealtime result = optionsApi.OptionsGreeksByTickerIdentifierRealtimeGet(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The ticker symbol to get options greeks for |  &nbsp;
+ **source** | string| The data source to use for options data | [optional]  &nbsp;
+ **model** | string| The options pricing model to use for greeks calculations | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | string| The implied volatility calculation mode | [optional]  &nbsp;
+ **stockPriceSource** | string| The data source to use for underlying stock prices | [optional]  &nbsp;
+ **expirationStartDate** | DateTime?| Filter options by expiration date (start) | [optional]  &nbsp;
+ **expirationEndDate** | DateTime?| Filter options by expiration date (end) | [optional]  &nbsp;
+ **strike** | float?| Filter options by strike price | [optional]  &nbsp;
+ **strikeGreaterThan** | float?| Filter options by minimum strike price | [optional]  &nbsp;
+ **strikeLessThan** | float?| Filter options by maximum strike price | [optional]  &nbsp;
+ **pageSize** | int?| Number of results to return per page | [optional] [default to 250] &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsGreeksByTickerRealtime**](ApiResponseOptionsGreeksByTickerRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:OptionsGreeksContractRealtimeGet)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsGreekContractRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsGreekContractRealtime.md)
+
+[//]: # (OPERATION:OptionsGreeksContractRealtimeGet_v2)
+
+[//]: # (ENDPOINT:/options/greeks/{contract}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#optionsgreekscontractrealtimeget)
+
+<a name="optionsgreekscontractrealtimeget"></a>
+## **OptionsGreeksContractRealtimeGet**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/OptionsGreeksContractRealtimeGet_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsGreekContractRealtime OptionsGreeksContractRealtimeGet (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
+
+#### Get realtime options greeks for a specific contract
+
+Retrieves realtime options greeks data for a specific options contract
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class OptionsGreeksContractRealtimeGetExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string contract = contract_example;
+      string source = source_example;
+      string model = model_example;
+      string ivMode = ivMode_example;
+      string stockPriceSource = stockPriceSource_example;
+      
+      ApiResponseOptionsGreekContractRealtime result = optionsApi.OptionsGreeksContractRealtimeGet(contract, source, model, ivMode, stockPriceSource);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contract** | string| The options contract identifier |  &nbsp;
+ **source** | string| The data source to use for options data | [optional]  &nbsp;
+ **model** | string| The options pricing model to use for greeks calculations | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | string| The implied volatility calculation mode | [optional]  &nbsp;
+ **stockPriceSource** | string| The data source to use for underlying stock prices | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsGreekContractRealtime**](ApiResponseOptionsGreekContractRealtime.md)
 
 [//]: # (END_OPERATION)
 

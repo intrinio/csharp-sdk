@@ -21,11 +21,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -40,11 +40,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -60,11 +60,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -79,11 +79,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// $$v2_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -205,11 +205,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -225,11 +225,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -305,11 +305,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>
@@ -326,11 +326,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+        /// Historical Data $$v2_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Filter by type, when applicable (optional)</param>
         /// <param name="startDate">Get historical data on or after this date (optional)</param>

@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.91.1
-- Package version: 7.13.0
+- API version: 2.99.0
+- Package version: 7.14.0
 
 
 <a name="frameworks-supported"></a>
@@ -227,6 +227,7 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsChainRealtime**](docs/OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *OptionsApi* | [**GetOptionsExpirations**](docs/OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 *OptionsApi* | [**GetOptionsExpirationsEod**](docs/OptionsApi.md#getoptionsexpirationseod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
+*OptionsApi* | [**GetOptionsImpliedMoveBySymbol**](docs/OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
 *OptionsApi* | [**GetOptionsIntervalByContract**](docs/OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 *OptionsApi* | [**GetOptionsIntervalMovers**](docs/OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 *OptionsApi* | [**GetOptionsIntervalMoversChange**](docs/OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -243,6 +244,8 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetUnusualActivityIntraday**](docs/OptionsApi.md#getunusualactivityintraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 *OptionsApi* | [**GetUnusualActivityUniversal**](docs/OptionsApi.md#getunusualactivityuniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
 *OptionsApi* | [**GetUnusualActivityUniversalIntraday**](docs/OptionsApi.md#getunusualactivityuniversalintraday) | **GET** /options/unusual_activity/intraday | Options Unusual Activity Universal Intraday
+*OptionsApi* | [**OptionsGreeksByTickerIdentifierRealtimeGet**](docs/OptionsApi.md#optionsgreeksbytickeridentifierrealtimeget) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Get realtime options greeks by ticker
+*OptionsApi* | [**OptionsGreeksContractRealtimeGet**](docs/OptionsApi.md#optionsgreekscontractrealtimeget) | **GET** /options/greeks/{contract}/realtime | Get realtime options greeks for a specific contract
 *OwnersApi* | [**GetAllOwners**](docs/OwnersApi.md#getallowners) | **GET** /owners | All Owners
 *OwnersApi* | [**GetOwnerById**](docs/OwnersApi.md#getownerbyid) | **GET** /owners/{identifier} | Owner by ID
 *OwnersApi* | [**InsiderTransactionFilingsByOwner**](docs/OwnersApi.md#insidertransactionfilingsbyowner) | **GET** /owners/{identifier}/insider_transaction_filings | Insider Transaction Filings by Owner
@@ -410,6 +413,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
  - [Model.ApiResponseIndex](docs/ApiResponseIndex.md)
  - [Model.ApiResponseIndexConstituents](docs/ApiResponseIndexConstituents.md)
+ - [Model.ApiResponseIndexIntervals](docs/ApiResponseIndexIntervals.md)
  - [Model.ApiResponseIndices](docs/ApiResponseIndices.md)
  - [Model.ApiResponseInitialPublicOfferings](docs/ApiResponseInitialPublicOfferings.md)
  - [Model.ApiResponseInsiderTransactionFilings](docs/ApiResponseInsiderTransactionFilings.md)
@@ -423,6 +427,9 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseOptionsChainEod](docs/ApiResponseOptionsChainEod.md)
  - [Model.ApiResponseOptionsChainRealtime](docs/ApiResponseOptionsChainRealtime.md)
  - [Model.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
+ - [Model.ApiResponseOptionsGreekContractRealtime](docs/ApiResponseOptionsGreekContractRealtime.md)
+ - [Model.ApiResponseOptionsGreeksByTickerRealtime](docs/ApiResponseOptionsGreeksByTickerRealtime.md)
+ - [Model.ApiResponseOptionsImpliedMove](docs/ApiResponseOptionsImpliedMove.md)
  - [Model.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
  - [Model.ApiResponseOptionsPricesBatchRealtime](docs/ApiResponseOptionsPricesBatchRealtime.md)
  - [Model.ApiResponseOptionsPricesByTickerEod](docs/ApiResponseOptionsPricesByTickerEod.md)
@@ -564,6 +571,7 @@ Class | Method | HTTP request | Description
  - [Model.FundamentalSummary](docs/FundamentalSummary.md)
  - [Model.HistoricalData](docs/HistoricalData.md)
  - [Model.IchimokuKinkoHyoTechnicalValue](docs/IchimokuKinkoHyoTechnicalValue.md)
+ - [Model.IndexInterval](docs/IndexInterval.md)
  - [Model.InsiderTransaction](docs/InsiderTransaction.md)
  - [Model.InsiderTransactionFiling](docs/InsiderTransactionFiling.md)
  - [Model.InstitutionalHolding](docs/InstitutionalHolding.md)
@@ -588,6 +596,7 @@ Class | Method | HTTP request | Description
  - [Model.OptionContractsList](docs/OptionContractsList.md)
  - [Model.OptionEod](docs/OptionEod.md)
  - [Model.OptionFactorsRealtime](docs/OptionFactorsRealtime.md)
+ - [Model.OptionImpliedMoveData](docs/OptionImpliedMoveData.md)
  - [Model.OptionInterval](docs/OptionInterval.md)
  - [Model.OptionIntervalMover](docs/OptionIntervalMover.md)
  - [Model.OptionIntervalsMoversResult](docs/OptionIntervalsMoversResult.md)
@@ -601,6 +610,7 @@ Class | Method | HTTP request | Description
  - [Model.OptionSnapshotGroup](docs/OptionSnapshotGroup.md)
  - [Model.OptionSnapshotsResult](docs/OptionSnapshotsResult.md)
  - [Model.OptionStatsRealtime](docs/OptionStatsRealtime.md)
+ - [Model.OptionSyntheticGreeksRealtime](docs/OptionSyntheticGreeksRealtime.md)
  - [Model.OptionTrades](docs/OptionTrades.md)
  - [Model.OptionTradesResult](docs/OptionTradesResult.md)
  - [Model.OptionUnusualTrade](docs/OptionUnusualTrade.md)

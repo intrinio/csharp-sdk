@@ -80,7 +80,7 @@ namespace Example
       
       var zacksApi = new ZacksApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       DateTime? startDate = null;
       DateTime? endDate = null;
       decimal? meanGreater = null;

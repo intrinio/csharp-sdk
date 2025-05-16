@@ -292,6 +292,21 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsImpliedMoveBySymbol
+        /// </summary>
+        [Test]
+        public void GetOptionsImpliedMoveBySymbolTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //DateTime? expirationDate = null;
+            //Object percentage = null;
+            //string source = null;
+            //var response = instance.GetOptionsImpliedMoveBySymbol(symbol, expirationDate, percentage, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsImpliedMove> (response, "response is ApiResponseOptionsImpliedMove");
+        }
+        
+        /// <summary>
         /// Test GetOptionsIntervalByContract
         /// </summary>
         [Test]
@@ -447,7 +462,8 @@ namespace Intrinio.SDK.Test
             //bool? showExtendedPrice = null;
             //Object expirationStartDate = null;
             //Object expirationEndDate = null;
-            //var response = instance.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate);
+            //decimal? strike = null;
+            //var response = instance.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesByTickerRealtime> (response, "response is ApiResponseOptionsPricesByTickerRealtime");
         }
         
@@ -543,6 +559,44 @@ namespace Intrinio.SDK.Test
             //Object maximumTotalValue = null;
             //var response = instance.GetUnusualActivityUniversalIntraday(nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
             //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
+        }
+        
+        /// <summary>
+        /// Test OptionsGreeksByTickerIdentifierRealtimeGet
+        /// </summary>
+        [Test]
+        public void OptionsGreeksByTickerIdentifierRealtimeGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //string model = null;
+            //string ivMode = null;
+            //string stockPriceSource = null;
+            //DateTime? expirationStartDate = null;
+            //DateTime? expirationEndDate = null;
+            //float? strike = null;
+            //float? strikeGreaterThan = null;
+            //float? strikeLessThan = null;
+            //int? pageSize = null;
+            //var response = instance.OptionsGreeksByTickerIdentifierRealtimeGet(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+            //Assert.IsInstanceOf<ApiResponseOptionsGreeksByTickerRealtime> (response, "response is ApiResponseOptionsGreeksByTickerRealtime");
+        }
+        
+        /// <summary>
+        /// Test OptionsGreeksContractRealtimeGet
+        /// </summary>
+        [Test]
+        public void OptionsGreeksContractRealtimeGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string contract = null;
+            //string source = null;
+            //string model = null;
+            //string ivMode = null;
+            //string stockPriceSource = null;
+            //var response = instance.OptionsGreeksContractRealtimeGet(contract, source, model, ivMode, stockPriceSource);
+            //Assert.IsInstanceOf<ApiResponseOptionsGreekContractRealtime> (response, "response is ApiResponseOptionsGreekContractRealtime");
         }
         
     }

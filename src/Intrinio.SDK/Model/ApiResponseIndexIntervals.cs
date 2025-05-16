@@ -17,61 +17,28 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// ApiResponseSecurityIntervalPrices
+    /// ApiResponseIndexIntervals
     /// </summary>
     [DataContract]
-    public partial class ApiResponseSecurityIntervalPrices :  IEquatable<ApiResponseSecurityIntervalPrices>, IValidatableObject
+    public partial class ApiResponseIndexIntervals :  IEquatable<ApiResponseIndexIntervals>, IValidatableObject
     {
         /// <summary>
-        /// The source of the data
+        /// Initializes a new instance of the <see cref="ApiResponseIndexIntervals" /> class.
         /// </summary>
-        /// <value>The source of the data</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum SourceEnum
-        {
-            
-            /// <summary>
-            /// Enum V2stockpriceintervalsourcesenum for value: $$v2_stock_price_interval_sources_enum$$
-            /// </summary>
-            [EnumMember(Value = "$$v2_stock_price_interval_sources_enum$$")]
-            V2stockpriceintervalsourcesenum = 1
-        }
-
-        /// <summary>
-        /// The source of the data
-        /// </summary>
-        /// <value>The source of the data</value>
-        [DataMember(Name="source", EmitDefaultValue=false)]
-        public SourceEnum? Source { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponseSecurityIntervalPrices" /> class.
-        /// </summary>
-        /// <param name="Intervals">Open, close, high, low, volume, average price, and change ratio for a particular interval.</param>
-        /// <param name="Security">The Security resolved from the given identifier.</param>
-        /// <param name="Source">The source of the data.</param>
+        /// <param name="Intervals">Array of index intervals.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
-        public ApiResponseSecurityIntervalPrices(List<StockPriceInterval> Intervals = default(List<StockPriceInterval>), SecuritySummary Security = default(SecuritySummary), SourceEnum? Source = default(SourceEnum?), string NextPage = default(string))
+        public ApiResponseIndexIntervals(List<IndexInterval> Intervals = default(List<IndexInterval>), string NextPage = default(string))
         {
             this.Intervals = Intervals;
-            this.Security = Security;
-            this.Source = Source;
             this.NextPage = NextPage;
         }
         
         /// <summary>
-        /// Open, close, high, low, volume, average price, and change ratio for a particular interval
+        /// Array of index intervals
         /// </summary>
-        /// <value>Open, close, high, low, volume, average price, and change ratio for a particular interval</value>
+        /// <value>Array of index intervals</value>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
-        public List<StockPriceInterval> Intervals { get; set; }
-
-        /// <summary>
-        /// The Security resolved from the given identifier
-        /// </summary>
-        /// <value>The Security resolved from the given identifier</value>
-        [DataMember(Name="security", EmitDefaultValue=false)]
-        public SecuritySummary Security { get; set; }
-
+        public List<IndexInterval> Intervals { get; set; }
 
         /// <summary>
         /// The token required to request the next page of the data. If null, no further results are available.
@@ -87,10 +54,8 @@ namespace Intrinio.SDK.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiResponseSecurityIntervalPrices {\n");
+            sb.Append("class ApiResponseIndexIntervals {\n");
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
-            sb.Append("  Security: ").Append(Security).Append("\n");
-            sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  NextPage: ").Append(NextPage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,15 +77,15 @@ namespace Intrinio.SDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiResponseSecurityIntervalPrices);
+            return this.Equals(input as ApiResponseIndexIntervals);
         }
 
         /// <summary>
-        /// Returns true if ApiResponseSecurityIntervalPrices instances are equal
+        /// Returns true if ApiResponseIndexIntervals instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiResponseSecurityIntervalPrices to be compared</param>
+        /// <param name="input">Instance of ApiResponseIndexIntervals to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiResponseSecurityIntervalPrices input)
+        public bool Equals(ApiResponseIndexIntervals input)
         {
             if (input == null)
                 return false;
@@ -130,16 +95,6 @@ namespace Intrinio.SDK.Model
                     this.Intervals == input.Intervals ||
                     this.Intervals != null &&
                     this.Intervals.SequenceEqual(input.Intervals)
-                ) && 
-                (
-                    this.Security == input.Security ||
-                    (this.Security != null &&
-                    this.Security.Equals(input.Security))
-                ) && 
-                (
-                    this.Source == input.Source ||
-                    (this.Source != null &&
-                    this.Source.Equals(input.Source))
                 ) && 
                 (
                     this.NextPage == input.NextPage ||
@@ -159,10 +114,6 @@ namespace Intrinio.SDK.Model
                 int hashCode = 41;
                 if (this.Intervals != null)
                     hashCode = hashCode * 59 + this.Intervals.GetHashCode();
-                if (this.Security != null)
-                    hashCode = hashCode * 59 + this.Security.GetHashCode();
-                if (this.Source != null)
-                    hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.NextPage != null)
                     hashCode = hashCode * 59 + this.NextPage.GetHashCode();
                 return hashCode;

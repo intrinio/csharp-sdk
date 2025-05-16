@@ -209,6 +209,7 @@ Class | Method | HTTP request | Description
 *IndexApi* | [**SearchEconomicIndices**](docs/IndexApi.md#searcheconomicindices) | **GET** /indices/economic/search | Search Economic Indices
 *IndexApi* | [**SearchSicIndices**](docs/IndexApi.md#searchsicindices) | **GET** /indices/sic/search | Search SIC Indices
 *IndexApi* | [**SearchStockMarketsIndices**](docs/IndexApi.md#searchstockmarketsindices) | **GET** /indices/stock_market/search | Search Stock Market Indices
+*IndicesApi* | [**GetIndexIntervals**](docs/IndicesApi.md#getindexintervals) | **GET** /indices/{identifier}/intervals | Index Intervals
 *InsiderTransactionFilingsApi* | [**GetAllInsiderTransactionFilings**](docs/InsiderTransactionFilingsApi.md#getallinsidertransactionfilings) | **GET** /insider_transaction_filings | All Insider Transactions Filings
 *MarketApi* | [**GetMarketStatus**](docs/MarketApi.md#getmarketstatus) | **GET** /market/status | Market Status
 *MunicipalityApi* | [**GetAllMunicipalities**](docs/MunicipalityApi.md#getallmunicipalities) | **GET** /municipalities | All Municipalities

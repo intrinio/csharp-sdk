@@ -67,8 +67,9 @@ namespace Intrinio.SDK.Model
         /// <param name="EndDate">The period start date.</param>
         /// <param name="FilingDate">The date and time when the Fundamental was filed with the SEC.</param>
         /// <param name="IsLatest">Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;).</param>
+        /// <param name="UpdatedDate">The date and time when the fundamental was last updated.</param>
         /// <param name="Company">The Company that the Fundamental was belongs to.</param>
-        public Fundamental(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?), bool? IsLatest = default(bool?), CompanySummary Company = default(CompanySummary))
+        public Fundamental(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?), bool? IsLatest = default(bool?), DateTime? UpdatedDate = default(DateTime?), CompanySummary Company = default(CompanySummary))
         {
             this.Id = Id;
             this.StatementCode = StatementCode;
@@ -79,6 +80,7 @@ namespace Intrinio.SDK.Model
             this.EndDate = EndDate;
             this.FilingDate = FilingDate;
             this.IsLatest = IsLatest;
+            this.UpdatedDate = UpdatedDate;
             this.Company = Company;
         }
         
@@ -142,6 +144,13 @@ namespace Intrinio.SDK.Model
         public bool? IsLatest { get; set; }
 
         /// <summary>
+        /// The date and time when the fundamental was last updated
+        /// </summary>
+        /// <value>The date and time when the fundamental was last updated</value>
+        [DataMember(Name="updated_date", EmitDefaultValue=false)]
+        public DateTime? UpdatedDate { get; set; }
+
+        /// <summary>
         /// The Company that the Fundamental was belongs to
         /// </summary>
         /// <value>The Company that the Fundamental was belongs to</value>
@@ -165,6 +174,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  FilingDate: ").Append(FilingDate).Append("\n");
             sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
+            sb.Append("  UpdatedDate: ").Append(UpdatedDate).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -246,6 +256,11 @@ namespace Intrinio.SDK.Model
                     this.IsLatest.Equals(input.IsLatest))
                 ) && 
                 (
+                    this.UpdatedDate == input.UpdatedDate ||
+                    (this.UpdatedDate != null &&
+                    this.UpdatedDate.Equals(input.UpdatedDate))
+                ) && 
+                (
                     this.Company == input.Company ||
                     (this.Company != null &&
                     this.Company.Equals(input.Company))
@@ -279,6 +294,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.FilingDate.GetHashCode();
                 if (this.IsLatest != null)
                     hashCode = hashCode * 59 + this.IsLatest.GetHashCode();
+                if (this.UpdatedDate != null)
+                    hashCode = hashCode * 59 + this.UpdatedDate.GetHashCode();
                 if (this.Company != null)
                     hashCode = hashCode * 59 + this.Company.GetHashCode();
                 return hashCode;

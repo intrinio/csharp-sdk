@@ -131,6 +131,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'IsLatest'
         }
         /// <summary>
+        /// Test the property 'UpdatedDate'
+        /// </summary>
+        [Test]
+        public void UpdatedDateTest()
+        {
+            // TODO unit test for the property 'UpdatedDate'
+        }
+        /// <summary>
         /// Test the property 'Company'
         /// </summary>
         [Test]

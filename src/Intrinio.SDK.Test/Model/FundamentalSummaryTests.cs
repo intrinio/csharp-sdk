@@ -122,6 +122,22 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'FilingDate'
         }
+        /// <summary>
+        /// Test the property 'IsLatest'
+        /// </summary>
+        [Test]
+        public void IsLatestTest()
+        {
+            // TODO unit test for the property 'IsLatest'
+        }
+        /// <summary>
+        /// Test the property 'UpdatedDate'
+        /// </summary>
+        [Test]
+        public void UpdatedDateTest()
+        {
+            // TODO unit test for the property 'UpdatedDate'
+        }
 
     }
 

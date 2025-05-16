@@ -66,7 +66,9 @@ namespace Intrinio.SDK.Model
         /// <param name="StartDate">The period start date.</param>
         /// <param name="EndDate">The period start date.</param>
         /// <param name="FilingDate">The date and time when the Fundamental was filed with the SEC.</param>
-        public FundamentalSummary(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?))
+        /// <param name="IsLatest">Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;).</param>
+        /// <param name="UpdatedDate">The date and time when the data related to the fundamental was last updated.</param>
+        public FundamentalSummary(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?), bool? IsLatest = default(bool?), DateTime? UpdatedDate = default(DateTime?))
         {
             this.Id = Id;
             this.StatementCode = StatementCode;
@@ -76,6 +78,8 @@ namespace Intrinio.SDK.Model
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.FilingDate = FilingDate;
+            this.IsLatest = IsLatest;
+            this.UpdatedDate = UpdatedDate;
         }
         
         /// <summary>
@@ -131,6 +135,20 @@ namespace Intrinio.SDK.Model
         public DateTime? FilingDate { get; set; }
 
         /// <summary>
+        /// Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)
+        /// </summary>
+        /// <value>Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;)</value>
+        [DataMember(Name="is_latest", EmitDefaultValue=false)]
+        public bool? IsLatest { get; set; }
+
+        /// <summary>
+        /// The date and time when the data related to the fundamental was last updated
+        /// </summary>
+        /// <value>The date and time when the data related to the fundamental was last updated</value>
+        [DataMember(Name="updated_date", EmitDefaultValue=false)]
+        public DateTime? UpdatedDate { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -146,6 +164,8 @@ namespace Intrinio.SDK.Model
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  FilingDate: ").Append(FilingDate).Append("\n");
+            sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
+            sb.Append("  UpdatedDate: ").Append(UpdatedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -219,6 +239,16 @@ namespace Intrinio.SDK.Model
                     this.FilingDate == input.FilingDate ||
                     (this.FilingDate != null &&
                     this.FilingDate.Equals(input.FilingDate))
+                ) && 
+                (
+                    this.IsLatest == input.IsLatest ||
+                    (this.IsLatest != null &&
+                    this.IsLatest.Equals(input.IsLatest))
+                ) && 
+                (
+                    this.UpdatedDate == input.UpdatedDate ||
+                    (this.UpdatedDate != null &&
+                    this.UpdatedDate.Equals(input.UpdatedDate))
                 );
         }
 
@@ -247,6 +277,10 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.FilingDate != null)
                     hashCode = hashCode * 59 + this.FilingDate.GetHashCode();
+                if (this.IsLatest != null)
+                    hashCode = hashCode * 59 + this.IsLatest.GetHashCode();
+                if (this.UpdatedDate != null)
+                    hashCode = hashCode * 59 + this.UpdatedDate.GetHashCode();
                 return hashCode;
             }
         }

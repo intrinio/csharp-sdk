@@ -216,7 +216,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Average Daily Trading Volume | [optional] [default to 22] &nbsp;
+ **period** | int?| The number of observations to calculate Average Daily Trading Volume | [optional] [default to 22] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -314,7 +314,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Average Directional Index | [optional] [default to 14] &nbsp;
+ **period** | int?| The number of observations to calculate Average Directional Index | [optional] [default to 14] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -413,8 +413,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | int?| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5] &nbsp;
- **longPeriod** | int?| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34] &nbsp;
+ **shortPeriod** | int?| The number of observations to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5] &nbsp;
+ **longPeriod** | int?| The number of observations to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -512,7 +512,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Average True Range | [optional] [default to 14] &nbsp;
+ **period** | int?| The number of observations to calculate Average True Range | [optional] [default to 14] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -612,7 +612,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Bollinger Bands | [optional] [default to 20] &nbsp;
+ **period** | int?| The number of observations to calculate Bollinger Bands | [optional] [default to 20] &nbsp;
  **standardDeviations** | float?| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands | [optional] [default to 2.0] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating Bollinger Bands | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
@@ -713,8 +713,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 20] &nbsp;
- **constant** | float?| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 0.015] &nbsp;
+ **period** | int?| The number of observations to calculate Commodity Channel Index | [optional] [default to 20] &nbsp;
+ **constant** | float?| The number of observations to calculate Commodity Channel Index | [optional] [default to 0.015] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -812,7 +812,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Chaikin Money Flow | [optional] [default to 20] &nbsp;
+ **period** | int?| The number of observations to calculate Chaikin Money Flow | [optional] [default to 20] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -911,7 +911,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Donchian Channel | [optional] [default to 20] &nbsp;
+ **period** | int?| The number of observations to calculate Donchian Channel | [optional] [default to 20] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating Donchian Channel | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -1011,7 +1011,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Detrended Price Oscillator | [optional] [default to 20] &nbsp;
+ **period** | int?| The number of observations to calculate Detrended Price Oscillator | [optional] [default to 20] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating Detrended Price Oscillator | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -1110,7 +1110,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Ease of Movement | [optional] [default to 20] &nbsp;
+ **period** | int?| The number of observations to calculate Ease of Movement | [optional] [default to 20] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1306,9 +1306,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | int?| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9] &nbsp;
- **mediumPeriod** | int?| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26] &nbsp;
- **highPeriod** | int?| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52] &nbsp;
+ **lowPeriod** | int?| The number of observations to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9] &nbsp;
+ **mediumPeriod** | int?| The number of observations to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26] &nbsp;
+ **highPeriod** | int?| The number of observations to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1406,7 +1406,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Kelter Channel | [optional] [default to 10] &nbsp;
+ **period** | int?| The number of observations to calculate Kelter Channel | [optional] [default to 10] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1512,14 +1512,14 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **roc1** | int?| The number of observations, per period, to calculate the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **roc2** | int?| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15] &nbsp;
- **roc3** | int?| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20] &nbsp;
- **roc4** | int?| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30] &nbsp;
- **sma1** | int?| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **sma2** | int?| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10] &nbsp;
- **sma3** | int?| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10] &nbsp;
- **sma4** | int?| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15] &nbsp;
+ **roc1** | int?| The number of observations to calculate the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
+ **roc2** | int?| The number of observations to calculate the rate-of-change for RCMA2 | [optional] [default to 15] &nbsp;
+ **roc3** | int?| The number of observations to calculate the rate-of-change for RCMA3 | [optional] [default to 20] &nbsp;
+ **roc4** | int?| The number of observations to calculate the rate-of-change for RCMA4 | [optional] [default to 30] &nbsp;
+ **sma1** | int?| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
+ **sma2** | int?| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10] &nbsp;
+ **sma3** | int?| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10] &nbsp;
+ **sma4** | int?| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating Know Sure Thing | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -1621,9 +1621,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **fastPeriod** | int?| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12] &nbsp;
- **slowPeriod** | int?| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26] &nbsp;
- **signalPeriod** | int?| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9] &nbsp;
+ **fastPeriod** | int?| The number of observations to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12] &nbsp;
+ **slowPeriod** | int?| The number of observations to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26] &nbsp;
+ **signalPeriod** | int?| The number of observations to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating Moving Average Convergence Divergence | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -1722,7 +1722,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Money Flow Index | [optional] [default to 14] &nbsp;
+ **period** | int?| The number of observations to calculate Money Flow Index | [optional] [default to 14] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1821,8 +1821,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **emaPeriod** | int?| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9] &nbsp;
- **sumPeriod** | int?| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25] &nbsp;
+ **emaPeriod** | int?| The number of observations to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9] &nbsp;
+ **sumPeriod** | int?| The number of observations to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2112,7 +2112,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate On-balance Volume Mean | [optional] [default to 10] &nbsp;
+ **period** | int?| The number of observations to calculate On-balance Volume Mean | [optional] [default to 10] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2211,7 +2211,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Relative Strength Index | [optional] [default to 14] &nbsp;
+ **period** | int?| The number of observations to calculate Relative Strength Index | [optional] [default to 14] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating Relative Strength Index | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -2311,7 +2311,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Simple Moving Average | [optional] [default to 20] &nbsp;
+ **period** | int?| The number of observations to calculate Simple Moving Average | [optional] [default to 20] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating Simple Moving Average | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -2411,8 +2411,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate %K of Stochastic Oscillator | [optional] [default to 14] &nbsp;
- **signalPeriod** | int?| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3] &nbsp;
+ **period** | int?| The number of observations to calculate %K of Stochastic Oscillator | [optional] [default to 14] &nbsp;
+ **signalPeriod** | int?| The number of observations to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2510,7 +2510,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15] &nbsp;
+ **period** | int?| The number of observations to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2610,8 +2610,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | int?| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13] &nbsp;
- **highPeriod** | int?| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25] &nbsp;
+ **lowPeriod** | int?| The number of observations to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13] &nbsp;
+ **highPeriod** | int?| The number of observations to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25] &nbsp;
  **priceKey** | string| The Stock Price field to use when calculating True Strength Index | [optional] [default to close] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -2715,9 +2715,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | int?| The number of observations, per period, to calculate the short period for Ultimate Oscillator | [optional] [default to 7] &nbsp;
- **mediumPeriod** | int?| The number of observations, per period, to calculate the medium period for Ultimate Oscillator | [optional] [default to 14] &nbsp;
- **longPeriod** | int?| The number of observations, per period, to calculate the long period for Ultimate Oscillator | [optional] [default to 28] &nbsp;
+ **shortPeriod** | int?| The number of observations to calculate the short period for Ultimate Oscillator | [optional] [default to 7] &nbsp;
+ **mediumPeriod** | int?| The number of observations to calculate the medium period for Ultimate Oscillator | [optional] [default to 14] &nbsp;
+ **longPeriod** | int?| The number of observations to calculate the long period for Ultimate Oscillator | [optional] [default to 28] &nbsp;
  **shortWeight** | float?| The weight of short Buying Pressure average for Ultimate Oscillator | [optional] [default to 4.0] &nbsp;
  **mediumWeight** | float?| The weight of medium Buying Pressure average for Ultimate Oscillator | [optional] [default to 2.0] &nbsp;
  **longWeight** | float?| The weight of long Buying Pressure average for Ultimate Oscillator | [optional] [default to 1.0] &nbsp;
@@ -2818,7 +2818,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to calculate Vortex Indicator | [optional] [default to 14] &nbsp;
+ **period** | int?| The number of observations to calculate Vortex Indicator | [optional] [default to 14] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
@@ -3108,7 +3108,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | int?| The number of observations, per period, to look-back when calculating Williams %R | [optional] [default to 14] &nbsp;
+ **period** | int?| The number of observations to look-back when calculating Williams %R | [optional] [default to 14] &nbsp;
  **startDate** | string| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | string| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | decimal?| The number of results to return | [optional] [default to 100] &nbsp;

@@ -214,6 +214,25 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetIndexIntervals
+        /// </summary>
+        [Test]
+        public void GetIndexIntervalsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string intervalSize = null;
+            //DateTime? startDate = null;
+            //string startTime = null;
+            //DateTime? endDate = null;
+            //string endTime = null;
+            //string timezone = null;
+            //int? pageSize = null;
+            //var response = instance.GetIndexIntervals(identifier, intervalSize, startDate, startTime, endDate, endTime, timezone, pageSize);
+            //Assert.IsInstanceOf<ApiResponseIndexIntervals> (response, "response is ApiResponseIndexIntervals");
+        }
+        
+        /// <summary>
         /// Test GetIndexSummaryById
         /// </summary>
         [Test]

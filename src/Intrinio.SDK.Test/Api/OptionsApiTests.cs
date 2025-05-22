@@ -292,6 +292,44 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsGreeksByContract
+        /// </summary>
+        [Test]
+        public void GetOptionsGreeksByContractTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string contract = null;
+            //string source = null;
+            //string model = null;
+            //string ivMode = null;
+            //string stockPriceSource = null;
+            //var response = instance.GetOptionsGreeksByContract(contract, source, model, ivMode, stockPriceSource);
+            //Assert.IsInstanceOf<ApiResponseOptionsGreekContractRealtime> (response, "response is ApiResponseOptionsGreekContractRealtime");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsGreeksByTicker
+        /// </summary>
+        [Test]
+        public void GetOptionsGreeksByTickerTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //string model = null;
+            //string ivMode = null;
+            //string stockPriceSource = null;
+            //DateTime? expirationStartDate = null;
+            //DateTime? expirationEndDate = null;
+            //float? strike = null;
+            //float? strikeGreaterThan = null;
+            //float? strikeLessThan = null;
+            //int? pageSize = null;
+            //var response = instance.GetOptionsGreeksByTicker(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+            //Assert.IsInstanceOf<ApiResponseOptionsGreeksByTickerRealtime> (response, "response is ApiResponseOptionsGreeksByTickerRealtime");
+        }
+        
+        /// <summary>
         /// Test GetOptionsImpliedMoveBySymbol
         /// </summary>
         [Test]
@@ -559,44 +597,6 @@ namespace Intrinio.SDK.Test
             //Object maximumTotalValue = null;
             //var response = instance.GetUnusualActivityUniversalIntraday(nextPage, pageSize, activityType, sentiment, startDate, endDate, minimumTotalValue, maximumTotalValue);
             //Assert.IsInstanceOf<ApiResponseOptionsUnusualActivity> (response, "response is ApiResponseOptionsUnusualActivity");
-        }
-        
-        /// <summary>
-        /// Test OptionsGreeksByTickerIdentifierRealtimeGet
-        /// </summary>
-        [Test]
-        public void OptionsGreeksByTickerIdentifierRealtimeGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string identifier = null;
-            //string source = null;
-            //string model = null;
-            //string ivMode = null;
-            //string stockPriceSource = null;
-            //DateTime? expirationStartDate = null;
-            //DateTime? expirationEndDate = null;
-            //float? strike = null;
-            //float? strikeGreaterThan = null;
-            //float? strikeLessThan = null;
-            //int? pageSize = null;
-            //var response = instance.OptionsGreeksByTickerIdentifierRealtimeGet(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
-            //Assert.IsInstanceOf<ApiResponseOptionsGreeksByTickerRealtime> (response, "response is ApiResponseOptionsGreeksByTickerRealtime");
-        }
-        
-        /// <summary>
-        /// Test OptionsGreeksContractRealtimeGet
-        /// </summary>
-        [Test]
-        public void OptionsGreeksContractRealtimeGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string contract = null;
-            //string source = null;
-            //string model = null;
-            //string ivMode = null;
-            //string stockPriceSource = null;
-            //var response = instance.OptionsGreeksContractRealtimeGet(contract, source, model, ivMode, stockPriceSource);
-            //Assert.IsInstanceOf<ApiResponseOptionsGreekContractRealtime> (response, "response is ApiResponseOptionsGreekContractRealtime");
         }
         
     }

@@ -457,6 +457,76 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
         /// <summary>
+        /// Get realtime options greeks for a specific contract
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for a specific options contract
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>ApiResponseOptionsGreekContractRealtime</returns>
+        ApiResponseOptionsGreekContractRealtime GetOptionsGreeksByContract (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
+
+        /// <summary>
+        /// Get realtime options greeks for a specific contract
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for a specific options contract
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsGreekContractRealtime</returns>
+        ApiResponse<ApiResponseOptionsGreekContractRealtime> GetOptionsGreeksByContractWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
+        /// <summary>
+        /// Get realtime options greeks by ticker
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>ApiResponseOptionsGreeksByTickerRealtime</returns>
+        ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get realtime options greeks by ticker
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsGreeksByTickerRealtime</returns>
+        ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
+        /// <summary>
         /// Options Implied Move By Symbol
         /// </summary>
         /// <remarks>
@@ -945,76 +1015,6 @@ namespace Intrinio.SDK.Api
         /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsUnusualActivity</returns>
         ApiResponse<ApiResponseOptionsUnusualActivity> GetUnusualActivityUniversalIntradayWithHttpInfo (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
-        /// <summary>
-        /// Get realtime options greeks by ticker
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>ApiResponseOptionsGreeksByTickerRealtime</returns>
-        ApiResponseOptionsGreeksByTickerRealtime OptionsGreeksByTickerIdentifierRealtimeGet (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get realtime options greeks by ticker
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>ApiResponse of ApiResponseOptionsGreeksByTickerRealtime</returns>
-        ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> OptionsGreeksByTickerIdentifierRealtimeGetWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
-        /// <summary>
-        /// Get realtime options greeks for a specific contract
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for a specific options contract
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>ApiResponseOptionsGreekContractRealtime</returns>
-        ApiResponseOptionsGreekContractRealtime OptionsGreeksContractRealtimeGet (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
-
-        /// <summary>
-        /// Get realtime options greeks for a specific contract
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for a specific options contract
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>ApiResponse of ApiResponseOptionsGreekContractRealtime</returns>
-        ApiResponse<ApiResponseOptionsGreekContractRealtime> OptionsGreeksContractRealtimeGetWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -1456,6 +1456,76 @@ namespace Intrinio.SDK.Api
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
+        /// <summary>
+        /// Get realtime options greeks for a specific contract
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for a specific options contract
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>Task of ApiResponseOptionsGreekContractRealtime</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsGreekContractRealtime> GetOptionsGreeksByContractAsync (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
+
+        /// <summary>
+        /// Get realtime options greeks for a specific contract
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for a specific options contract
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsGreekContractRealtime)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreekContractRealtime>> GetOptionsGreeksByContractAsyncWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
+        /// <summary>
+        /// Get realtime options greeks by ticker
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>Task of ApiResponseOptionsGreeksByTickerRealtime</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get realtime options greeks by ticker
+        /// </summary>
+        /// <remarks>
+        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsGreeksByTickerRealtime)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> GetOptionsGreeksByTickerAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
         /// <summary>
         /// Options Implied Move By Symbol
         /// </summary>
@@ -1945,76 +2015,6 @@ namespace Intrinio.SDK.Api
         /// <param name="maximumTotalValue">The inclusive maximum total value for the unusual activity. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsUnusualActivity)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsUnusualActivity>> GetUnusualActivityUniversalIntradayAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string activityType = null, string sentiment = null, DateTime? startDate = null, DateTime? endDate = null, Object minimumTotalValue = null, Object maximumTotalValue = null);
-        /// <summary>
-        /// Get realtime options greeks by ticker
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>Task of ApiResponseOptionsGreeksByTickerRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> OptionsGreeksByTickerIdentifierRealtimeGetAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get realtime options greeks by ticker
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>Task of ApiResponse (ApiResponseOptionsGreeksByTickerRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> OptionsGreeksByTickerIdentifierRealtimeGetAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
-        /// <summary>
-        /// Get realtime options greeks for a specific contract
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for a specific options contract
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>Task of ApiResponseOptionsGreekContractRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsGreekContractRealtime> OptionsGreeksContractRealtimeGetAsync (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
-
-        /// <summary>
-        /// Get realtime options greeks for a specific contract
-        /// </summary>
-        /// <remarks>
-        /// Retrieves realtime options greeks data for a specific options contract
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseOptionsGreekContractRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreekContractRealtime>> OptionsGreeksContractRealtimeGetAsyncWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
         #endregion Asynchronous Operations
     }
 
@@ -4526,6 +4526,382 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsExpirations>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseOptionsExpirations) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsExpirations)));
+        }
+
+        /// <summary>
+        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>ApiResponseOptionsGreekContractRealtime</returns>
+        public ApiResponseOptionsGreekContractRealtime GetOptionsGreeksByContract (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
+        {
+             ApiResponse<ApiResponseOptionsGreekContractRealtime> localVarResponse = GetOptionsGreeksByContractWithHttpInfo(contract, source, model, ivMode, stockPriceSource);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsGreekContractRealtime</returns>
+        
+        public ApiResponse< ApiResponseOptionsGreekContractRealtime > GetOptionsGreeksByContractWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
+        {
+            // verify the required parameter 'contract' is set
+            if (contract == null)
+                throw new ApiException(400, "Missing required parameter 'contract' when calling OptionsApi->GetOptionsGreeksByContract");
+
+            var localVarPath = "/options/greeks/{contract}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (contract != null) localVarPathParams.Add("contract", Configuration.ApiClient.ParameterToString(contract)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
+            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsGreeksByContract", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsGreekContractRealtime>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsGreekContractRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreekContractRealtime)));
+        }
+
+        /// <summary>
+        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>Task of ApiResponseOptionsGreekContractRealtime</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsGreekContractRealtime> GetOptionsGreeksByContractAsync (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
+        {
+             ApiResponse<ApiResponseOptionsGreekContractRealtime> localVarResponse = await GetOptionsGreeksByContractAsyncWithHttpInfo(contract, source, model, ivMode, stockPriceSource);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contract">The options contract identifier</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsGreekContractRealtime)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreekContractRealtime>> GetOptionsGreeksByContractAsyncWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
+        {
+            // verify the required parameter 'contract' is set
+            if (contract == null)
+                throw new ApiException(400, "Missing required parameter 'contract' when calling OptionsApi->GetOptionsGreeksByContract");
+
+            var localVarPath = "/options/greeks/{contract}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (contract != null) localVarPathParams.Add("contract", Configuration.ApiClient.ParameterToString(contract)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
+            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsGreeksByContract", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsGreekContractRealtime>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsGreekContractRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreekContractRealtime)));
+        }
+
+        /// <summary>
+        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>ApiResponseOptionsGreeksByTickerRealtime</returns>
+        public ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        {
+             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = GetOptionsGreeksByTickerWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsGreeksByTickerRealtime</returns>
+        
+        public ApiResponse< ApiResponseOptionsGreeksByTickerRealtime > GetOptionsGreeksByTickerWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionsGreeksByTicker");
+
+            var localVarPath = "/options/greeks/by_ticker/{identifier}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
+            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
+            if (expirationStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_start_date", expirationStartDate)); // query parameter
+            if (expirationEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_end_date", expirationEndDate)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
+            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsGreeksByTicker", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsGreeksByTickerRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreeksByTickerRealtime)));
+        }
+
+        /// <summary>
+        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>Task of ApiResponseOptionsGreeksByTickerRealtime</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        {
+             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = await GetOptionsGreeksByTickerAsyncWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol to get options greeks for</param>
+        /// <param name="source">The data source to use for options data (optional)</param>
+        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
+        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
+        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
+        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
+        /// <param name="strike">Filter options by strike price (optional)</param>
+        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
+        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
+        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsGreeksByTickerRealtime)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> GetOptionsGreeksByTickerAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionsGreeksByTicker");
+
+            var localVarPath = "/options/greeks/by_ticker/{identifier}/realtime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
+            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
+            if (expirationStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_start_date", expirationStartDate)); // query parameter
+            if (expirationEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_end_date", expirationEndDate)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
+            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsGreeksByTicker", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsGreeksByTickerRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreeksByTickerRealtime)));
         }
 
         /// <summary>
@@ -7396,378 +7772,6 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsUnusualActivity>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseOptionsUnusualActivity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsUnusualActivity)));
-        }
-
-        /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>ApiResponseOptionsGreeksByTickerRealtime</returns>
-        public ApiResponseOptionsGreeksByTickerRealtime OptionsGreeksByTickerIdentifierRealtimeGet (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
-        {
-             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = OptionsGreeksByTickerIdentifierRealtimeGetWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>ApiResponse of ApiResponseOptionsGreeksByTickerRealtime</returns>
-        
-        public ApiResponse< ApiResponseOptionsGreeksByTickerRealtime > OptionsGreeksByTickerIdentifierRealtimeGetWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
-        {
-            // verify the required parameter 'identifier' is set
-            if (identifier == null)
-                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->OptionsGreeksByTickerIdentifierRealtimeGet");
-
-            var localVarPath = "/options/greeks/by_ticker/{identifier}/realtime";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-            
-            
-            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
-            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
-            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
-            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
-            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
-            if (expirationStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_start_date", expirationStartDate)); // query parameter
-            if (expirationEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_end_date", expirationEndDate)); // query parameter
-            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
-            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
-            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
-            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("OptionsGreeksByTickerIdentifierRealtimeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseOptionsGreeksByTickerRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreeksByTickerRealtime)));
-        }
-
-        /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>Task of ApiResponseOptionsGreeksByTickerRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> OptionsGreeksByTickerIdentifierRealtimeGetAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
-        {
-             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = await OptionsGreeksByTickerIdentifierRealtimeGetAsyncWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">The ticker symbol to get options greeks for</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <param name="expirationStartDate">Filter options by expiration date (start) (optional)</param>
-        /// <param name="expirationEndDate">Filter options by expiration date (end) (optional)</param>
-        /// <param name="strike">Filter options by strike price (optional)</param>
-        /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
-        /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
-        /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
-        /// <returns>Task of ApiResponse (ApiResponseOptionsGreeksByTickerRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> OptionsGreeksByTickerIdentifierRealtimeGetAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
-        {
-            // verify the required parameter 'identifier' is set
-            if (identifier == null)
-                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->OptionsGreeksByTickerIdentifierRealtimeGet");
-
-            var localVarPath = "/options/greeks/by_ticker/{identifier}/realtime";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-              
-
-            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
-            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
-            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
-            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
-            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
-            if (expirationStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_start_date", expirationStartDate)); // query parameter
-            if (expirationEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_end_date", expirationEndDate)); // query parameter
-            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
-            if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
-            if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
-            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("OptionsGreeksByTickerIdentifierRealtimeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseOptionsGreeksByTickerRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreeksByTickerRealtime)));
-        }
-
-        /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>ApiResponseOptionsGreekContractRealtime</returns>
-        public ApiResponseOptionsGreekContractRealtime OptionsGreeksContractRealtimeGet (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
-        {
-             ApiResponse<ApiResponseOptionsGreekContractRealtime> localVarResponse = OptionsGreeksContractRealtimeGetWithHttpInfo(contract, source, model, ivMode, stockPriceSource);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>ApiResponse of ApiResponseOptionsGreekContractRealtime</returns>
-        
-        public ApiResponse< ApiResponseOptionsGreekContractRealtime > OptionsGreeksContractRealtimeGetWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
-        {
-            // verify the required parameter 'contract' is set
-            if (contract == null)
-                throw new ApiException(400, "Missing required parameter 'contract' when calling OptionsApi->OptionsGreeksContractRealtimeGet");
-
-            var localVarPath = "/options/greeks/{contract}/realtime";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-            
-            
-            if (contract != null) localVarPathParams.Add("contract", Configuration.ApiClient.ParameterToString(contract)); // path parameter
-            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
-            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
-            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
-            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("OptionsGreeksContractRealtimeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseOptionsGreekContractRealtime>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseOptionsGreekContractRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreekContractRealtime)));
-        }
-
-        /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>Task of ApiResponseOptionsGreekContractRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsGreekContractRealtime> OptionsGreeksContractRealtimeGetAsync (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
-        {
-             ApiResponse<ApiResponseOptionsGreekContractRealtime> localVarResponse = await OptionsGreeksContractRealtimeGetAsyncWithHttpInfo(contract, source, model, ivMode, stockPriceSource);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contract">The options contract identifier</param>
-        /// <param name="source">The data source to use for options data (optional)</param>
-        /// <param name="model">The options pricing model to use for greeks calculations (optional, default to black_scholes)</param>
-        /// <param name="ivMode">The implied volatility calculation mode (optional)</param>
-        /// <param name="stockPriceSource">The data source to use for underlying stock prices (optional)</param>
-        /// <returns>Task of ApiResponse (ApiResponseOptionsGreekContractRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreekContractRealtime>> OptionsGreeksContractRealtimeGetAsyncWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
-        {
-            // verify the required parameter 'contract' is set
-            if (contract == null)
-                throw new ApiException(400, "Missing required parameter 'contract' when calling OptionsApi->OptionsGreeksContractRealtimeGet");
-
-            var localVarPath = "/options/greeks/{contract}/realtime";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-              
-
-            if (contract != null) localVarPathParams.Add("contract", Configuration.ApiClient.ParameterToString(contract)); // path parameter
-            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
-            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
-            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
-            if (stockPriceSource != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "stock_price_source", stockPriceSource)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("OptionsGreeksContractRealtimeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseOptionsGreekContractRealtime>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseOptionsGreekContractRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsGreekContractRealtime)));
         }
 
     }

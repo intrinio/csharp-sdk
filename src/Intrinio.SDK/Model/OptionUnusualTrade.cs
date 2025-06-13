@@ -96,7 +96,6 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The UTC timestamp of order placement</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
-        [JsonConverter(typeof(SwaggerDateConverter))]
         public DateTime? Timestamp { get; set; }
 
         /// <summary>

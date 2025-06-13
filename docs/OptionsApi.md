@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**GetOptionsChainRealtime**](OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**GetOptionsExpirationsEod**](OptionsApi.md#getoptionsexpirationseod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
-[**GetOptionsGreeksByContract**](OptionsApi.md#getoptionsgreeksbycontract) | **GET** /options/greeks/{contract}/realtime | Get realtime options greeks for a specific contract
-[**GetOptionsGreeksByTicker**](OptionsApi.md#getoptionsgreeksbyticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Get realtime options greeks by ticker
+[**GetOptionsGreeksByContract**](OptionsApi.md#getoptionsgreeksbycontract) | **GET** /options/greeks/{contract}/realtime | Option Greeks &amp; Derived Price by Contract
+[**GetOptionsGreeksByTicker**](OptionsApi.md#getoptionsgreeksbyticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks &amp; Derived Price by Ticker
 [**GetOptionsImpliedMoveBySymbol**](OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
 [**GetOptionsIntervalByContract**](OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**GetOptionsIntervalMovers**](OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
@@ -1376,7 +1376,7 @@ Name | Type | Description  | Notes
 
 > ApiResponseOptionsGreekContractRealtime GetOptionsGreeksByContract (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null)
 
-#### Get realtime options greeks for a specific contract
+#### Option Greeks & Derived Price by Contract
 
 Retrieves realtime options greeks data for a specific options contract
 
@@ -1472,7 +1472,7 @@ Name | Type | Description  | Notes
 
 > ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
 
-#### Get realtime options greeks by ticker
+#### Options Realtime Greeks & Derived Price by Ticker
 
 Retrieves realtime options greeks data for all contracts of a given ticker symbol
 

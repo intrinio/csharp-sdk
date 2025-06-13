@@ -457,7 +457,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
         /// <summary>
-        /// Get realtime options greeks for a specific contract
+        /// Option Greeks &amp; Derived Price by Contract
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for a specific options contract
@@ -472,7 +472,7 @@ namespace Intrinio.SDK.Api
         ApiResponseOptionsGreekContractRealtime GetOptionsGreeksByContract (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
 
         /// <summary>
-        /// Get realtime options greeks for a specific contract
+        /// Option Greeks &amp; Derived Price by Contract
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for a specific options contract
@@ -486,7 +486,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsGreekContractRealtime</returns>
         ApiResponse<ApiResponseOptionsGreekContractRealtime> GetOptionsGreeksByContractWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
         /// <summary>
-        /// Get realtime options greeks by ticker
+        /// Options Realtime Greeks &amp; Derived Price by Ticker
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
@@ -507,7 +507,7 @@ namespace Intrinio.SDK.Api
         ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
 
         /// <summary>
-        /// Get realtime options greeks by ticker
+        /// Options Realtime Greeks &amp; Derived Price by Ticker
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
@@ -1457,7 +1457,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
         /// <summary>
-        /// Get realtime options greeks for a specific contract
+        /// Option Greeks &amp; Derived Price by Contract
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for a specific options contract
@@ -1472,7 +1472,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseOptionsGreekContractRealtime> GetOptionsGreeksByContractAsync (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
 
         /// <summary>
-        /// Get realtime options greeks for a specific contract
+        /// Option Greeks &amp; Derived Price by Contract
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for a specific options contract
@@ -1486,7 +1486,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsGreekContractRealtime)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreekContractRealtime>> GetOptionsGreeksByContractAsyncWithHttpInfo (string contract, string source = null, string model = null, string ivMode = null, string stockPriceSource = null);
         /// <summary>
-        /// Get realtime options greeks by ticker
+        /// Options Realtime Greeks &amp; Derived Price by Ticker
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
@@ -1507,7 +1507,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
 
         /// <summary>
-        /// Get realtime options greeks by ticker
+        /// Options Realtime Greeks &amp; Derived Price by Ticker
         /// </summary>
         /// <remarks>
         /// Retrieves realtime options greeks data for all contracts of a given ticker symbol
@@ -4529,7 +4529,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// Option Greeks &amp; Derived Price by Contract Retrieves realtime options greeks data for a specific options contract
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contract">The options contract identifier</param>
@@ -4545,7 +4545,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// Option Greeks &amp; Derived Price by Contract Retrieves realtime options greeks data for a specific options contract
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contract">The options contract identifier</param>
@@ -4614,7 +4614,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// Option Greeks &amp; Derived Price by Contract Retrieves realtime options greeks data for a specific options contract
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contract">The options contract identifier</param>
@@ -4631,7 +4631,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks for a specific contract Retrieves realtime options greeks data for a specific options contract
+        /// Option Greeks &amp; Derived Price by Contract Retrieves realtime options greeks data for a specific options contract
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contract">The options contract identifier</param>
@@ -4699,7 +4699,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// Options Realtime Greeks &amp; Derived Price by Ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The ticker symbol to get options greeks for</param>
@@ -4721,7 +4721,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// Options Realtime Greeks &amp; Derived Price by Ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The ticker symbol to get options greeks for</param>
@@ -4802,7 +4802,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// Options Realtime Greeks &amp; Derived Price by Ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The ticker symbol to get options greeks for</param>
@@ -4825,7 +4825,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Get realtime options greeks by ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
+        /// Options Realtime Greeks &amp; Derived Price by Ticker Retrieves realtime options greeks data for all contracts of a given ticker symbol
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">The ticker symbol to get options greeks for</param>

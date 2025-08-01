@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.103.0
-- Package version: 7.17.0
+- API version: 2.107.0
+- Package version: 7.18.0
 
 
 <a name="frameworks-supported"></a>
@@ -160,6 +160,7 @@ Class | Method | HTTP request | Description
 *ETFsApi* | [**GetAllEtfs**](docs/ETFsApi.md#getalletfs) | **GET** /etfs | All ETFs
 *ETFsApi* | [**GetEtf**](docs/ETFsApi.md#getetf) | **GET** /etfs/{identifier} | Lookup ETF
 *ETFsApi* | [**GetEtfAnalytics**](docs/ETFsApi.md#getetfanalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
+*ETFsApi* | [**GetEtfHistoricalStats**](docs/ETFsApi.md#getetfhistoricalstats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) stats
 *ETFsApi* | [**GetEtfHoldings**](docs/ETFsApi.md#getetfholdings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
 *ETFsApi* | [**GetEtfStats**](docs/ETFsApi.md#getetfstats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) stats
 *ETFsApi* | [**SearchEtfs**](docs/ETFsApi.md#searchetfs) | **GET** /etfs/search | Search ETFs
@@ -302,6 +303,8 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**GetSecurityReplayFile**](docs/SecurityApi.md#getsecurityreplayfile) | **GET** /securities/replay | Security Replay File
 *SecurityApi* | [**GetSecuritySnapshots**](docs/SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 *SecurityApi* | [**GetSecurityStockPriceAdjustments**](docs/SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
+*SecurityApi* | [**GetSecurityStockPriceAdjustmentsDividends**](docs/SecurityApi.md#getsecuritystockpriceadjustmentsdividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
+*SecurityApi* | [**GetSecurityStockPriceAdjustmentsSplits**](docs/SecurityApi.md#getsecuritystockpriceadjustmentssplits) | **GET** /securities/{identifier}/prices/adjustments/splits | Splits by Security
 *SecurityApi* | [**GetSecurityStockPrices**](docs/SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 *SecurityApi* | [**GetSecurityTrades**](docs/SecurityApi.md#getsecuritytrades) | **GET** /securities/trades | Security Trades
 *SecurityApi* | [**GetSecurityTradesBySymbol**](docs/SecurityApi.md#getsecuritytradesbysymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
@@ -317,6 +320,8 @@ Class | Method | HTTP request | Description
 *StockExchangeApi* | [**GetStockExchangeGainers**](docs/StockExchangeApi.md#getstockexchangegainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
 *StockExchangeApi* | [**GetStockExchangeLosers**](docs/StockExchangeApi.md#getstockexchangelosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
 *StockExchangeApi* | [**GetStockExchangePriceAdjustments**](docs/StockExchangeApi.md#getstockexchangepriceadjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
+*StockExchangeApi* | [**GetStockExchangePriceAdjustmentsDividends**](docs/StockExchangeApi.md#getstockexchangepriceadjustmentsdividends) | **GET** /stock_exchanges/{identifier}/prices/adjustments/dividends | Dividends by date for exchange
+*StockExchangeApi* | [**GetStockExchangePriceAdjustmentsSplits**](docs/StockExchangeApi.md#getstockexchangepriceadjustmentssplits) | **GET** /stock_exchanges/{identifier}/prices/adjustments/splits | Splits by date for exchange
 *StockExchangeApi* | [**GetStockExchangePrices**](docs/StockExchangeApi.md#getstockexchangeprices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
 *StockExchangeApi* | [**GetStockExchangeQuote**](docs/StockExchangeApi.md#getstockexchangequote) | **GET** /stock_exchanges/{identifier}/quote | Realtime Quote Prices by Exchange
 *StockExchangeApi* | [**GetStockExchangeRealtimePrices**](docs/StockExchangeApi.md#getstockexchangerealtimeprices) | **GET** /stock_exchanges/{identifier}/prices/realtime | Realtime Stock Prices by Exchange
@@ -548,6 +553,7 @@ Class | Method | HTTP request | Description
  - [Model.ESGRatingWithCompany](docs/ESGRatingWithCompany.md)
  - [Model.ETF](docs/ETF.md)
  - [Model.ETFAnalytics](docs/ETFAnalytics.md)
+ - [Model.ETFHistoricalStats](docs/ETFHistoricalStats.md)
  - [Model.ETFHolding](docs/ETFHolding.md)
  - [Model.ETFStats](docs/ETFStats.md)
  - [Model.ETFSummary](docs/ETFSummary.md)

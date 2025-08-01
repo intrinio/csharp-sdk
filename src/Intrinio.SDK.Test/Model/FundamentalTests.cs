@@ -139,6 +139,22 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'UpdatedDate'
         }
         /// <summary>
+        /// Test the property 'FirstCalculable'
+        /// </summary>
+        [Test]
+        public void FirstCalculableTest()
+        {
+            // TODO unit test for the property 'FirstCalculable'
+        }
+        /// <summary>
+        /// Test the property 'EarningsDisclosedAt'
+        /// </summary>
+        [Test]
+        public void EarningsDisclosedAtTest()
+        {
+            // TODO unit test for the property 'EarningsDisclosedAt'
+        }
+        /// <summary>
         /// Test the property 'Company'
         /// </summary>
         [Test]

@@ -85,6 +85,33 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ETFAnalytics</returns>
         ApiResponse<ETFAnalytics> GetEtfAnalyticsWithHttpInfo (string identifier);
         /// <summary>
+        /// Exchange Traded Fund (ETF) stats
+        /// </summary>
+        /// <remarks>
+        /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>ETFHistoricalStats</returns>
+        ETFHistoricalStats GetEtfHistoricalStats (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null);
+
+        /// <summary>
+        /// Exchange Traded Fund (ETF) stats
+        /// </summary>
+        /// <remarks>
+        /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>ApiResponse of ETFHistoricalStats</returns>
+        ApiResponse<ETFHistoricalStats> GetEtfHistoricalStatsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null);
+        /// <summary>
         /// ETF Holdings
         /// </summary>
         /// <remarks>
@@ -222,6 +249,33 @@ namespace Intrinio.SDK.Api
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
         /// <returns>Task of ApiResponse (ETFAnalytics)</returns>
         System.Threading.Tasks.Task<ApiResponse<ETFAnalytics>> GetEtfAnalyticsAsyncWithHttpInfo (string identifier);
+        /// <summary>
+        /// Exchange Traded Fund (ETF) stats
+        /// </summary>
+        /// <remarks>
+        /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>Task of ETFHistoricalStats</returns>
+        System.Threading.Tasks.Task<ETFHistoricalStats> GetEtfHistoricalStatsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null);
+
+        /// <summary>
+        /// Exchange Traded Fund (ETF) stats
+        /// </summary>
+        /// <remarks>
+        /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ETFHistoricalStats)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ETFHistoricalStats>> GetEtfHistoricalStatsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null);
         /// <summary>
         /// ETF Holdings
         /// </summary>
@@ -844,6 +898,170 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ETFAnalytics>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ETFAnalytics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ETFAnalytics)));
+        }
+
+        /// <summary>
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>ETFHistoricalStats</returns>
+        public ETFHistoricalStats GetEtfHistoricalStats (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null)
+        {
+             ApiResponse<ETFHistoricalStats> localVarResponse = GetEtfHistoricalStatsWithHttpInfo(identifier, startDate, endDate, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>ApiResponse of ETFHistoricalStats</returns>
+        
+        public ApiResponse< ETFHistoricalStats > GetEtfHistoricalStatsWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling ETFsApi->GetEtfHistoricalStats");
+
+            var localVarPath = "/etfs/{identifier}/historical_stats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEtfHistoricalStats", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ETFHistoricalStats>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ETFHistoricalStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ETFHistoricalStats)));
+        }
+
+        /// <summary>
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>Task of ETFHistoricalStats</returns>
+        public async System.Threading.Tasks.Task<ETFHistoricalStats> GetEtfHistoricalStatsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null)
+        {
+             ApiResponse<ETFHistoricalStats> localVarResponse = await GetEtfHistoricalStatsAsyncWithHttpInfo(identifier, startDate, endDate, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
+        /// <param name="startDate">The start date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="endDate">The end date for the historical stats data in YYYY-MM-DD format. (optional)</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (ETFHistoricalStats)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ETFHistoricalStats>> GetEtfHistoricalStatsAsyncWithHttpInfo (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling ETFsApi->GetEtfHistoricalStats");
+
+            var localVarPath = "/etfs/{identifier}/historical_stats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetEtfHistoricalStats", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ETFHistoricalStats>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ETFHistoricalStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ETFHistoricalStats)));
         }
 
         /// <summary>

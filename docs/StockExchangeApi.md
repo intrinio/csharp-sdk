@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**GetStockExchangeGainers**](StockExchangeApi.md#getstockexchangegainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
 [**GetStockExchangeLosers**](StockExchangeApi.md#getstockexchangelosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
 [**GetStockExchangePriceAdjustments**](StockExchangeApi.md#getstockexchangepriceadjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
+[**GetStockExchangePriceAdjustmentsDividends**](StockExchangeApi.md#getstockexchangepriceadjustmentsdividends) | **GET** /stock_exchanges/{identifier}/prices/adjustments/dividends | Dividends by date for exchange
+[**GetStockExchangePriceAdjustmentsSplits**](StockExchangeApi.md#getstockexchangepriceadjustmentssplits) | **GET** /stock_exchanges/{identifier}/prices/adjustments/splits | Splits by date for exchange
 [**GetStockExchangePrices**](StockExchangeApi.md#getstockexchangeprices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
 [**GetStockExchangeQuote**](StockExchangeApi.md#getstockexchangequote) | **GET** /stock_exchanges/{identifier}/quote | Realtime Quote Prices by Exchange
 [**GetStockExchangeRealtimePrices**](StockExchangeApi.md#getstockexchangerealtimeprices) | **GET** /stock_exchanges/{identifier}/prices/realtime | Realtime Stock Prices by Exchange
@@ -564,6 +566,194 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
  **date** | DateTime?| The date for which to return price adjustments | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeStockPriceAdjustments**](ApiResponseStockExchangeStockPriceAdjustments.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.StockExchangeApi)
+
+[//]: # (METHOD:GetStockExchangePriceAdjustmentsDividends)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeStockPriceAdjustments)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeStockPriceAdjustments.md)
+
+[//]: # (OPERATION:GetStockExchangePriceAdjustmentsDividends_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/prices/adjustments/dividends)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getstockexchangepriceadjustmentsdividends)
+
+<a name="getstockexchangepriceadjustmentsdividends"></a>
+## **GetStockExchangePriceAdjustmentsDividends**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangePriceAdjustmentsDividends_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustmentsDividends (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null)
+
+#### Dividends by date for exchange
+
+Returns dividend adjustments for the Stock Exchange with the given `identifier`
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetStockExchangePriceAdjustmentsDividendsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var stockExchangeApi = new StockExchangeApi();
+      
+      string identifier = "USCOMP";
+      DateTime? date = DateTime.Parse("2025-06-01");
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustmentsDividends(identifier, date, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **date** | DateTime?| The date for which to return dividends | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeStockPriceAdjustments**](ApiResponseStockExchangeStockPriceAdjustments.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.StockExchangeApi)
+
+[//]: # (METHOD:GetStockExchangePriceAdjustmentsSplits)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseStockExchangeStockPriceAdjustments)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeStockPriceAdjustments.md)
+
+[//]: # (OPERATION:GetStockExchangePriceAdjustmentsSplits_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/prices/adjustments/splits)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getstockexchangepriceadjustmentssplits)
+
+<a name="getstockexchangepriceadjustmentssplits"></a>
+## **GetStockExchangePriceAdjustmentsSplits**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetStockExchangePriceAdjustmentsSplits_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeStockPriceAdjustments GetStockExchangePriceAdjustmentsSplits (string identifier, DateTime? date = null, int? pageSize = null, string nextPage = null)
+
+#### Splits by date for exchange
+
+Returns split adjustments for the Stock Exchange with the given `identifier`
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetStockExchangePriceAdjustmentsSplitsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var stockExchangeApi = new StockExchangeApi();
+      
+      string identifier = "USCOMP";
+      DateTime? date = DateTime.Parse("2025-06-01");
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseStockExchangeStockPriceAdjustments result = stockExchangeApi.GetStockExchangePriceAdjustmentsSplits(identifier, date, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **date** | DateTime?| The date for which to return splits | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

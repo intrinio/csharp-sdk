@@ -258,7 +258,8 @@ namespace Intrinio.SDK.Test
             //string model = null;
             //bool? showExtendedPrice = null;
             //bool? includeRelatedSymbols = null;
-            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
+            //bool? showStats = null;
+            //var response = instance.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols, showStats);
             //Assert.IsInstanceOf<ApiResponseOptionsChainRealtime> (response, "response is ApiResponseOptionsChainRealtime");
         }
         
@@ -325,7 +326,8 @@ namespace Intrinio.SDK.Test
             //float? strikeGreaterThan = null;
             //float? strikeLessThan = null;
             //int? pageSize = null;
-            //var response = instance.GetOptionsGreeksByTicker(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+            //string nextPage = null;
+            //var response = instance.GetOptionsGreeksByTicker(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseOptionsGreeksByTickerRealtime> (response, "response is ApiResponseOptionsGreeksByTickerRealtime");
         }
         
@@ -501,7 +503,9 @@ namespace Intrinio.SDK.Test
             //Object expirationStartDate = null;
             //Object expirationEndDate = null;
             //decimal? strike = null;
-            //var response = instance.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike);
+            //bool? showStats = null;
+            //string nextPage2 = null;
+            //var response = instance.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike, showStats, nextPage2);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesByTickerRealtime> (response, "response is ApiResponseOptionsPricesByTickerRealtime");
         }
         

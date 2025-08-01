@@ -37,8 +37,11 @@ namespace Intrinio.SDK.Model
         /// <param name="IndustryCategory">The company&#39;s operating industry category.</param>
         /// <param name="IndustryGroup">The company&#39;s operating industry group.</param>
         /// <param name="WordCount">The number of words in the filing.</param>
+        /// <param name="EarningsDisclosedAt">The date and time when the earnings information was first disclosed via 8-K filing.</param>
+        /// <param name="EarningsDisclosed8kId">The Intrinio ID of the 8-K filing where earnings were first disclosed.</param>
+        /// <param name="Earnings8kUrl">The URL to the 8-K filing page on the SEC site where earnings were first disclosed.</param>
         /// <param name="Company">Company.</param>
-        public Filing(string Id = default(string), DateTime? FilingDate = default(DateTime?), DateTime? AcceptedDate = default(DateTime?), DateTime? PeriodEndDate = default(DateTime?), string ReportType = default(string), string SecUniqueId = default(string), string FilingUrl = default(string), string ReportUrl = default(string), string InstanceUrl = default(string), string IndustryCategory = default(string), string IndustryGroup = default(string), int? WordCount = default(int?), CompanySummary Company = default(CompanySummary))
+        public Filing(string Id = default(string), DateTime? FilingDate = default(DateTime?), DateTime? AcceptedDate = default(DateTime?), DateTime? PeriodEndDate = default(DateTime?), string ReportType = default(string), string SecUniqueId = default(string), string FilingUrl = default(string), string ReportUrl = default(string), string InstanceUrl = default(string), string IndustryCategory = default(string), string IndustryGroup = default(string), int? WordCount = default(int?), DateTime? EarningsDisclosedAt = default(DateTime?), string EarningsDisclosed8kId = default(string), string Earnings8kUrl = default(string), CompanySummary Company = default(CompanySummary))
         {
             this.Id = Id;
             this.FilingDate = FilingDate;
@@ -52,6 +55,9 @@ namespace Intrinio.SDK.Model
             this.IndustryCategory = IndustryCategory;
             this.IndustryGroup = IndustryGroup;
             this.WordCount = WordCount;
+            this.EarningsDisclosedAt = EarningsDisclosedAt;
+            this.EarningsDisclosed8kId = EarningsDisclosed8kId;
+            this.Earnings8kUrl = Earnings8kUrl;
             this.Company = Company;
         }
         
@@ -142,6 +148,27 @@ namespace Intrinio.SDK.Model
         public int? WordCount { get; set; }
 
         /// <summary>
+        /// The date and time when the earnings information was first disclosed via 8-K filing
+        /// </summary>
+        /// <value>The date and time when the earnings information was first disclosed via 8-K filing</value>
+        [DataMember(Name="earnings_disclosed_at", EmitDefaultValue=false)]
+        public DateTime? EarningsDisclosedAt { get; set; }
+
+        /// <summary>
+        /// The Intrinio ID of the 8-K filing where earnings were first disclosed
+        /// </summary>
+        /// <value>The Intrinio ID of the 8-K filing where earnings were first disclosed</value>
+        [DataMember(Name="earnings_disclosed_8k_id", EmitDefaultValue=false)]
+        public string EarningsDisclosed8kId { get; set; }
+
+        /// <summary>
+        /// The URL to the 8-K filing page on the SEC site where earnings were first disclosed
+        /// </summary>
+        /// <value>The URL to the 8-K filing page on the SEC site where earnings were first disclosed</value>
+        [DataMember(Name="earnings_8k_url", EmitDefaultValue=false)]
+        public string Earnings8kUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets Company
         /// </summary>
         [DataMember(Name="company", EmitDefaultValue=false)]
@@ -167,6 +194,9 @@ namespace Intrinio.SDK.Model
             sb.Append("  IndustryCategory: ").Append(IndustryCategory).Append("\n");
             sb.Append("  IndustryGroup: ").Append(IndustryGroup).Append("\n");
             sb.Append("  WordCount: ").Append(WordCount).Append("\n");
+            sb.Append("  EarningsDisclosedAt: ").Append(EarningsDisclosedAt).Append("\n");
+            sb.Append("  EarningsDisclosed8kId: ").Append(EarningsDisclosed8kId).Append("\n");
+            sb.Append("  Earnings8kUrl: ").Append(Earnings8kUrl).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -263,6 +293,21 @@ namespace Intrinio.SDK.Model
                     this.WordCount.Equals(input.WordCount))
                 ) && 
                 (
+                    this.EarningsDisclosedAt == input.EarningsDisclosedAt ||
+                    (this.EarningsDisclosedAt != null &&
+                    this.EarningsDisclosedAt.Equals(input.EarningsDisclosedAt))
+                ) && 
+                (
+                    this.EarningsDisclosed8kId == input.EarningsDisclosed8kId ||
+                    (this.EarningsDisclosed8kId != null &&
+                    this.EarningsDisclosed8kId.Equals(input.EarningsDisclosed8kId))
+                ) && 
+                (
+                    this.Earnings8kUrl == input.Earnings8kUrl ||
+                    (this.Earnings8kUrl != null &&
+                    this.Earnings8kUrl.Equals(input.Earnings8kUrl))
+                ) && 
+                (
                     this.Company == input.Company ||
                     (this.Company != null &&
                     this.Company.Equals(input.Company))
@@ -302,6 +347,12 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.IndustryGroup.GetHashCode();
                 if (this.WordCount != null)
                     hashCode = hashCode * 59 + this.WordCount.GetHashCode();
+                if (this.EarningsDisclosedAt != null)
+                    hashCode = hashCode * 59 + this.EarningsDisclosedAt.GetHashCode();
+                if (this.EarningsDisclosed8kId != null)
+                    hashCode = hashCode * 59 + this.EarningsDisclosed8kId.GetHashCode();
+                if (this.Earnings8kUrl != null)
+                    hashCode = hashCode * 59 + this.Earnings8kUrl.GetHashCode();
                 if (this.Company != null)
                     hashCode = hashCode * 59 + this.Company.GetHashCode();
                 return hashCode;

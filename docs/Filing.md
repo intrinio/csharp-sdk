@@ -21,6 +21,9 @@ Name | Type | Description
 **IndustryCategory** | string | The company&#39;s operating industry category &nbsp;
 **IndustryGroup** | string | The company&#39;s operating industry group &nbsp;
 **WordCount** | int? | The number of words in the filing &nbsp;
+**EarningsDisclosedAt** | DateTime? | The date and time when the earnings information was first disclosed via 8-K filing &nbsp;
+**EarningsDisclosed8kId** | string | The Intrinio ID of the 8-K filing where earnings were first disclosed &nbsp;
+**Earnings8kUrl** | string | The URL to the 8-K filing page on the SEC site where earnings were first disclosed &nbsp;
 **Company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)

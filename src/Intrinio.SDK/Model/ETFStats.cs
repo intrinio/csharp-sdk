@@ -55,7 +55,7 @@ namespace Intrinio.SDK.Model
         /// <param name="CalendarYear1ReturnSplitOnly">One year ago calendar year return excluding dividends.</param>
         /// <param name="CalendarYearToDateReturnSplitAndDividend">Calendar year to date (YTD) return including dividends.</param>
         /// <param name="CalendarYearToDateReturnSplitOnly">Calendar year to date (YTD) return excluding dividends.</param>
-        /// <param name="Etf">Etf.</param>
+        /// <param name="Etf">A brief summary of the ETF to which these stats refer.  Not included when part of historical stats..</param>
         public ETFStats(DateTime? Date = default(DateTime?), decimal? NetAssetValue = default(decimal?), decimal? BetaVsSpy = default(decimal?), decimal? TrailingOneMonthReturnSplitAndDividend = default(decimal?), decimal? TrailingOneMonthReturnSplitOnly = default(decimal?), decimal? TrailingOneYearReturnSplitAndDividend = default(decimal?), decimal? TrailingOneYearReturnSplitOnly = default(decimal?), decimal? TrailingOneYearVolatilityAnnualized = default(decimal?), decimal? TrailingThreeYearAnnualizedReturnSplitAndDividend = default(decimal?), decimal? TrailingThreeYearAnnualizedReturnSplitOnly = default(decimal?), decimal? TrailingThreeYearVolatilityAnnualized = default(decimal?), decimal? TrailingFiveYearAnnualizedReturnSplitAndDividend = default(decimal?), decimal? TrailingFiveYearAnnualizedReturnSplitOnly = default(decimal?), decimal? TrailingFiveYearVolatilityAnnualized = default(decimal?), decimal? TrailingTenYearAnnualizedReturnSplitAndDividend = default(decimal?), decimal? TrailingTenYearAnnualizedReturnSplitOnly = default(decimal?), decimal? InceptionAnnualizedReturnSplitAndDividend = default(decimal?), decimal? InceptionAnnualizedReturnSplitOnly = default(decimal?), decimal? CalendarYear5ReturnSplitAndDividend = default(decimal?), decimal? CalendarYear5ReturnSplitOnly = default(decimal?), decimal? CalendarYear4ReturnSplitAndDividend = default(decimal?), decimal? CalendarYear4ReturnSplitOnly = default(decimal?), decimal? CalendarYear3ReturnSplitAndDividend = default(decimal?), decimal? CalendarYear3ReturnSplitOnly = default(decimal?), decimal? CalendarYear2ReturnSplitAndDividend = default(decimal?), decimal? CalendarYear2ReturnSplitOnly = default(decimal?), decimal? CalendarYear1ReturnSplitAndDividend = default(decimal?), decimal? CalendarYear1ReturnSplitOnly = default(decimal?), decimal? CalendarYearToDateReturnSplitAndDividend = default(decimal?), decimal? CalendarYearToDateReturnSplitOnly = default(decimal?), ETFSummary Etf = default(ETFSummary))
         {
             this.Date = Date;
@@ -302,8 +302,9 @@ namespace Intrinio.SDK.Model
         public decimal? CalendarYearToDateReturnSplitOnly { get; set; }
 
         /// <summary>
-        /// Gets or Sets Etf
+        /// A brief summary of the ETF to which these stats refer.  Not included when part of historical stats.
         /// </summary>
+        /// <value>A brief summary of the ETF to which these stats refer.  Not included when part of historical stats.</value>
         [DataMember(Name="etf", EmitDefaultValue=false)]
         public ETFSummary Etf { get; set; }
 

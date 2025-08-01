@@ -91,6 +91,21 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetEtfHistoricalStats
+        /// </summary>
+        [Test]
+        public void GetEtfHistoricalStatsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //int? pageSize = null;
+            //var response = instance.GetEtfHistoricalStats(identifier, startDate, endDate, pageSize);
+            //Assert.IsInstanceOf<ETFHistoricalStats> (response, "response is ETFHistoricalStats");
+        }
+        
+        /// <summary>
         /// Test GetEtfHoldings
         /// </summary>
         [Test]

@@ -19,6 +19,8 @@ Name | Type | Description
 **FilingDate** | DateTime? | The date and time when the Fundamental was filed with the SEC &nbsp;
 **IsLatest** | bool? | Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
 **UpdatedDate** | DateTime? | The date and time when the fundamental was last updated &nbsp;
+**FirstCalculable** | DateTime? | The date and time when the fundamental was first calculable &nbsp;
+**EarningsDisclosedAt** | DateTime? | The date and time when the earnings information was first disclosed via 8-K filing &nbsp;
 **Company** | [**CompanySummary**](CompanySummary.md) | The Company that the Fundamental was belongs to &nbsp;
 
 [//]: # (END_DEFINITION)

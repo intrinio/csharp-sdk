@@ -376,8 +376,9 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>ApiResponseOptionsChainRealtime</returns>
-        ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
+        ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null);
 
         /// <summary>
         /// Options Chain Realtime
@@ -402,8 +403,9 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
-        ApiResponse<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
+        ApiResponse<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null);
         /// <summary>
         /// Options Expirations
         /// </summary>
@@ -503,8 +505,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionsGreeksByTickerRealtime</returns>
-        ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
+        ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Options Realtime Greeks &amp; Derived Price by Ticker
@@ -524,8 +527,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsGreeksByTickerRealtime</returns>
-        ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
+        ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Options Implied Move By Symbol
         /// </summary>
@@ -822,8 +826,10 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionsPricesByTickerRealtime</returns>
-        ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null);
+        ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null);
 
         /// <summary>
         /// Option Prices Realtime By Ticker
@@ -843,8 +849,10 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesByTickerRealtime</returns>
-        ApiResponse<ApiResponseOptionsPricesByTickerRealtime> GetOptionsPricesRealtimeByTickerWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null);
+        ApiResponse<ApiResponseOptionsPricesByTickerRealtime> GetOptionsPricesRealtimeByTickerWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null);
         /// <summary>
         /// Option Prices Realtime Snapshot
         /// </summary>
@@ -1376,8 +1384,9 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null);
 
         /// <summary>
         /// Options Chain Realtime
@@ -1402,8 +1411,9 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null);
         /// <summary>
         /// Options Expirations
         /// </summary>
@@ -1503,8 +1513,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionsGreeksByTickerRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// Options Realtime Greeks &amp; Derived Price by Ticker
@@ -1524,8 +1535,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsGreeksByTickerRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> GetOptionsGreeksByTickerAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> GetOptionsGreeksByTickerAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Options Implied Move By Symbol
         /// </summary>
@@ -1822,8 +1834,10 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesByTickerRealtime</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerRealtime> GetOptionsPricesRealtimeByTickerAsync (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerRealtime> GetOptionsPricesRealtimeByTickerAsync (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null);
 
         /// <summary>
         /// Option Prices Realtime By Ticker
@@ -1843,8 +1857,10 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesByTickerRealtime)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerRealtime>> GetOptionsPricesRealtimeByTickerAsyncWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerRealtime>> GetOptionsPricesRealtimeByTickerAsyncWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null);
         /// <summary>
         /// Option Prices Realtime Snapshot
         /// </summary>
@@ -3984,10 +4000,11 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>ApiResponseOptionsChainRealtime</returns>
-        public ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
+        public ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null)
         {
-             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = GetOptionsChainRealtimeWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
+             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = GetOptionsChainRealtimeWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols, showStats);
              return localVarResponse.Data;
         }
 
@@ -4011,9 +4028,10 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
         
-        public ApiResponse< ApiResponseOptionsChainRealtime > GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
+        public ApiResponse< ApiResponseOptionsChainRealtime > GetOptionsChainRealtimeWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -4060,6 +4078,7 @@ namespace Intrinio.SDK.Api
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
             if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
             if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (showStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_stats", showStats)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -4105,10 +4124,11 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsChainRealtime> GetOptionsChainRealtimeAsync (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null)
         {
-             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = await GetOptionsChainRealtimeAsyncWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
+             ApiResponse<ApiResponseOptionsChainRealtime> localVarResponse = await GetOptionsChainRealtimeAsyncWithHttpInfo(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols, showStats);
              return localVarResponse.Data;
 
         }
@@ -4133,8 +4153,9 @@ namespace Intrinio.SDK.Api
         /// <param name="model">Model for calculating Greek values. Default is black_scholes. (optional)</param>
         /// <param name="showExtendedPrice">Whether to include open close high low type fields. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionsChainRealtimeAsyncWithHttpInfo (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -4181,6 +4202,7 @@ namespace Intrinio.SDK.Api
             if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
             if (showExtendedPrice != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_extended_price", showExtendedPrice)); // query parameter
             if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (showStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_stats", showStats)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -4713,10 +4735,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionsGreeksByTickerRealtime</returns>
-        public ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        public ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = GetOptionsGreeksByTickerWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = GetOptionsGreeksByTickerWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -4735,9 +4758,10 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsGreeksByTickerRealtime</returns>
         
-        public ApiResponse< ApiResponseOptionsGreeksByTickerRealtime > GetOptionsGreeksByTickerWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        public ApiResponse< ApiResponseOptionsGreeksByTickerRealtime > GetOptionsGreeksByTickerWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4776,6 +4800,7 @@ namespace Intrinio.SDK.Api
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -4816,10 +4841,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionsGreeksByTickerRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerAsync (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = await GetOptionsGreeksByTickerAsyncWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+             ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> localVarResponse = await GetOptionsGreeksByTickerAsyncWithHttpInfo(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -4839,8 +4865,9 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">Filter options by minimum strike price (optional)</param>
         /// <param name="strikeLessThan">Filter options by maximum strike price (optional)</param>
         /// <param name="pageSize">Number of results to return per page (optional, default to 250)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsGreeksByTickerRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> GetOptionsGreeksByTickerAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> GetOptionsGreeksByTickerAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -4879,6 +4906,7 @@ namespace Intrinio.SDK.Api
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -6593,10 +6621,12 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionsPricesByTickerRealtime</returns>
-        public ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null)
+        public ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseOptionsPricesByTickerRealtime> localVarResponse = GetOptionsPricesRealtimeByTickerWithHttpInfo(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike);
+             ApiResponse<ApiResponseOptionsPricesByTickerRealtime> localVarResponse = GetOptionsPricesRealtimeByTickerWithHttpInfo(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike, showStats, nextPage2);
              return localVarResponse.Data;
         }
 
@@ -6615,9 +6645,11 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesByTickerRealtime</returns>
         
-        public ApiResponse< ApiResponseOptionsPricesByTickerRealtime > GetOptionsPricesRealtimeByTickerWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null)
+        public ApiResponse< ApiResponseOptionsPricesByTickerRealtime > GetOptionsPricesRealtimeByTickerWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -6656,6 +6688,8 @@ namespace Intrinio.SDK.Api
             if (expirationStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_start_date", expirationStartDate)); // query parameter
             if (expirationEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_end_date", expirationEndDate)); // query parameter
             if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (showStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_stats", showStats)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -6696,10 +6730,12 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesByTickerRealtime</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerRealtime> GetOptionsPricesRealtimeByTickerAsync (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerRealtime> GetOptionsPricesRealtimeByTickerAsync (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null)
         {
-             ApiResponse<ApiResponseOptionsPricesByTickerRealtime> localVarResponse = await GetOptionsPricesRealtimeByTickerAsyncWithHttpInfo(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike);
+             ApiResponse<ApiResponseOptionsPricesByTickerRealtime> localVarResponse = await GetOptionsPricesRealtimeByTickerAsyncWithHttpInfo(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike, showStats, nextPage2);
              return localVarResponse.Data;
 
         }
@@ -6719,8 +6755,10 @@ namespace Intrinio.SDK.Api
         /// <param name="expirationStartDate">Filter out contracts that expire before this date. (optional)</param>
         /// <param name="expirationEndDate">Filter out contracts that expire after this date. (optional)</param>
         /// <param name="strike">Filter out contracts that have this strike price. (optional)</param>
+        /// <param name="showStats">Whether to include Greek calculations or not. (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesByTickerRealtime)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerRealtime>> GetOptionsPricesRealtimeByTickerAsyncWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerRealtime>> GetOptionsPricesRealtimeByTickerAsyncWithHttpInfo (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -6759,6 +6797,8 @@ namespace Intrinio.SDK.Api
             if (expirationStartDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_start_date", expirationStartDate)); // query parameter
             if (expirationEndDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration_end_date", expirationEndDate)); // query parameter
             if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+            if (showStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "show_stats", showStats)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

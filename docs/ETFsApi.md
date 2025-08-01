@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**GetAllEtfs**](ETFsApi.md#getalletfs) | **GET** /etfs | All ETFs
 [**GetEtf**](ETFsApi.md#getetf) | **GET** /etfs/{identifier} | Lookup ETF
 [**GetEtfAnalytics**](ETFsApi.md#getetfanalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
+[**GetEtfHistoricalStats**](ETFsApi.md#getetfhistoricalstats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) stats
 [**GetEtfHoldings**](ETFsApi.md#getetfholdings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
 [**GetEtfStats**](ETFsApi.md#getetfstats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) stats
 [**SearchEtfs**](ETFsApi.md#searchetfs) | **GET** /etfs/search | Search ETFs
@@ -277,6 +278,100 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ETFAnalytics**](ETFAnalytics.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ETFsApi)
+
+[//]: # (METHOD:GetEtfHistoricalStats)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ETFHistoricalStats)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFHistoricalStats.md)
+
+[//]: # (OPERATION:GetEtfHistoricalStats_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/historical_stats)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#getetfhistoricalstats)
+
+<a name="getetfhistoricalstats"></a>
+## **GetEtfHistoricalStats**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEtfHistoricalStats_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFHistoricalStats GetEtfHistoricalStats (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null)
+
+#### Exchange Traded Fund (ETF) stats
+
+Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetEtfHistoricalStatsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var eTFsApi = new ETFsApi();
+      
+      string identifier = "SPY";
+      DateTime? startDate = DateTime.Parse("2020-01-01");
+      DateTime? endDate = DateTime.Parse("2020-12-31");
+      int? pageSize = 100;
+      
+      ETFHistoricalStats result = eTFsApi.GetEtfHistoricalStats(identifier, startDate, endDate, pageSize);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **startDate** | DateTime?| The start date for the historical stats data in YYYY-MM-DD format. | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date for the historical stats data in YYYY-MM-DD format. | [optional]  &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFHistoricalStats**](ETFHistoricalStats.md)
 
 [//]: # (END_OPERATION)
 

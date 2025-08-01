@@ -70,7 +70,19 @@ namespace Intrinio.SDK.Model
             /// Enum Nasdaqbasic for value: nasdaq_basic
             /// </summary>
             [EnumMember(Value = "nasdaq_basic")]
-            Nasdaqbasic = 7
+            Nasdaqbasic = 7,
+            
+            /// <summary>
+            /// Enum Cboeonedelayed for value: cboe_one_delayed
+            /// </summary>
+            [EnumMember(Value = "cboe_one_delayed")]
+            Cboeonedelayed = 8,
+            
+            /// <summary>
+            /// Enum Iexdelayed for value: iex_delayed
+            /// </summary>
+            [EnumMember(Value = "iex_delayed")]
+            Iexdelayed = 9
         }
 
         /// <summary>

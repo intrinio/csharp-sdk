@@ -141,6 +141,36 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetStockExchangePriceAdjustmentsDividends
+        /// </summary>
+        [Test]
+        public void GetStockExchangePriceAdjustmentsDividendsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? date = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetStockExchangePriceAdjustmentsDividends(identifier, date, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseStockExchangeStockPriceAdjustments> (response, "response is ApiResponseStockExchangeStockPriceAdjustments");
+        }
+        
+        /// <summary>
+        /// Test GetStockExchangePriceAdjustmentsSplits
+        /// </summary>
+        [Test]
+        public void GetStockExchangePriceAdjustmentsSplitsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? date = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetStockExchangePriceAdjustmentsSplits(identifier, date, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseStockExchangeStockPriceAdjustments> (response, "response is ApiResponseStockExchangeStockPriceAdjustments");
+        }
+        
+        /// <summary>
         /// Test GetStockExchangePrices
         /// </summary>
         [Test]

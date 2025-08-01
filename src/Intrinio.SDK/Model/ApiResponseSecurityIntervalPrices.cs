@@ -58,7 +58,13 @@ namespace Intrinio.SDK.Model
             /// Enum Nasdaqbasiclastsale for value: nasdaq_basic_last_sale
             /// </summary>
             [EnumMember(Value = "nasdaq_basic_last_sale")]
-            Nasdaqbasiclastsale = 5
+            Nasdaqbasiclastsale = 5,
+            
+            /// <summary>
+            /// Enum Cboeone for value: cboe_one
+            /// </summary>
+            [EnumMember(Value = "cboe_one")]
+            Cboeone = 6
         }
 
         /// <summary>

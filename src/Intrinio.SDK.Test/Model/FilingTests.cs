@@ -155,6 +155,30 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'WordCount'
         }
         /// <summary>
+        /// Test the property 'EarningsDisclosedAt'
+        /// </summary>
+        [Test]
+        public void EarningsDisclosedAtTest()
+        {
+            // TODO unit test for the property 'EarningsDisclosedAt'
+        }
+        /// <summary>
+        /// Test the property 'EarningsDisclosed8kId'
+        /// </summary>
+        [Test]
+        public void EarningsDisclosed8kIdTest()
+        {
+            // TODO unit test for the property 'EarningsDisclosed8kId'
+        }
+        /// <summary>
+        /// Test the property 'Earnings8kUrl'
+        /// </summary>
+        [Test]
+        public void Earnings8kUrlTest()
+        {
+            // TODO unit test for the property 'Earnings8kUrl'
+        }
+        /// <summary>
         /// Test the property 'Company'
         /// </summary>
         [Test]

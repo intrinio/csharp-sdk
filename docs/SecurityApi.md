@@ -54,6 +54,8 @@ Method | HTTP request | Description
 [**GetSecurityReplayFile**](SecurityApi.md#getsecurityreplayfile) | **GET** /securities/replay | Security Replay File
 [**GetSecuritySnapshots**](SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**GetSecurityStockPriceAdjustments**](SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
+[**GetSecurityStockPriceAdjustmentsDividends**](SecurityApi.md#getsecuritystockpriceadjustmentsdividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
+[**GetSecurityStockPriceAdjustmentsSplits**](SecurityApi.md#getsecuritystockpriceadjustmentssplits) | **GET** /securities/{identifier}/prices/adjustments/splits | Splits by Security
 [**GetSecurityStockPrices**](SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**GetSecurityTrades**](SecurityApi.md#getsecuritytrades) | **GET** /securities/trades | Security Trades
 [**GetSecurityTradesBySymbol**](SecurityApi.md#getsecuritytradesbysymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
@@ -4897,6 +4899,198 @@ namespace Example
       string nextPage = null;
       
       ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustments(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **startDate** | DateTime?| Return price adjustments on or after the date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return price adjustments on or before the date | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityStockPriceAdjustmentsDividends)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityStockPriceAdjustments)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (OPERATION:GetSecurityStockPriceAdjustmentsDividends_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments/dividends)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritystockpriceadjustmentsdividends)
+
+<a name="getsecuritystockpriceadjustmentsdividends"></a>
+## **GetSecurityStockPriceAdjustmentsDividends**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityStockPriceAdjustmentsDividends_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustmentsDividends (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+
+#### Dividends by Security
+
+Returns dividend price adjustments for the Security with the given `identifier`. A filtered api of /securities/{identifier}/prices/adjustments.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityStockPriceAdjustmentsDividendsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "AAPL";
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustmentsDividends(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **startDate** | DateTime?| Return price adjustments on or after the date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return price adjustments on or before the date | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityStockPriceAdjustmentsSplits)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityStockPriceAdjustments)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (OPERATION:GetSecurityStockPriceAdjustmentsSplits_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments/splits)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritystockpriceadjustmentssplits)
+
+<a name="getsecuritystockpriceadjustmentssplits"></a>
+## **GetSecurityStockPriceAdjustmentsSplits**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityStockPriceAdjustmentsSplits_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityStockPriceAdjustments GetSecurityStockPriceAdjustmentsSplits (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+
+#### Splits by Security
+
+Returns stock price split adjustments for the Security with the given `identifier`.  A filtered api of /securities/{identifier}/prices/adjustments.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityStockPriceAdjustmentsSplitsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "AAPL";
+      DateTime? startDate = DateTime.Parse("2018-01-01");
+      DateTime? endDate = DateTime.Parse("2019-01-01");
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseSecurityStockPriceAdjustments result = securityApi.GetSecurityStockPriceAdjustmentsSplits(identifier, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }

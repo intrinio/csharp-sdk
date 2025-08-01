@@ -1070,7 +1070,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null)
+> ApiResponseOptionsChainRealtime GetOptionsChainRealtime (string symbol, string expiration, string source = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, decimal? volumeGreaterThan = null, decimal? volumeLessThan = null, decimal? openInterestGreaterThan = null, decimal? openInterestLessThan = null, string moneyness = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null, bool? showStats = null)
 
 #### Options Chain Realtime
 
@@ -1119,8 +1119,9 @@ namespace Example
       string model = null;
       bool? showExtendedPrice = null;
       bool? includeRelatedSymbols = false;
+      bool? showStats = null;
       
-      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols);
+      ApiResponseOptionsChainRealtime result = optionsApi.GetOptionsChainRealtime(symbol, expiration, source, type, strike, strikeGreaterThan, strikeLessThan, volumeGreaterThan, volumeLessThan, openInterestGreaterThan, openInterestLessThan, moneyness, stockPriceSource, model, showExtendedPrice, includeRelatedSymbols, showStats);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1152,6 +1153,7 @@ Name | Type | Description  | Notes
  **model** | string| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **showExtendedPrice** | bool?| Whether to include open close high low type fields. | [optional]  &nbsp;
  **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **showStats** | bool?| Whether to include Greek calculations or not. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1470,7 +1472,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null)
+> ApiResponseOptionsGreeksByTickerRealtime GetOptionsGreeksByTicker (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null)
 
 #### Options Realtime Greeks & Derived Price by Ticker
 
@@ -1514,8 +1516,9 @@ namespace Example
       float? strikeGreaterThan = 3.4f;
       float? strikeLessThan = 3.4f;
       int? pageSize = 56;
+      string nextPage = null;
       
-      ApiResponseOptionsGreeksByTickerRealtime result = optionsApi.GetOptionsGreeksByTicker(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize);
+      ApiResponseOptionsGreeksByTickerRealtime result = optionsApi.GetOptionsGreeksByTicker(identifier, source, model, ivMode, stockPriceSource, expirationStartDate, expirationEndDate, strike, strikeGreaterThan, strikeLessThan, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1542,6 +1545,7 @@ Name | Type | Description  | Notes
  **strikeGreaterThan** | float?| Filter options by minimum strike price | [optional]  &nbsp;
  **strikeLessThan** | float?| Filter options by maximum strike price | [optional]  &nbsp;
  **pageSize** | int?| Number of results to return per page | [optional] [default to 250] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -2527,7 +2531,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null)
+> ApiResponseOptionsPricesByTickerRealtime GetOptionsPricesRealtimeByTicker (string symbol, string source = null, string ivMode = null, string nextPage = null, int? pageSize = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, Object expirationStartDate = null, Object expirationEndDate = null, decimal? strike = null, bool? showStats = null, string nextPage2 = null)
 
 #### Option Prices Realtime By Ticker
 
@@ -2571,8 +2575,10 @@ namespace Example
       var expirationStartDate = new Object();
       var expirationEndDate = new Object();
       decimal? strike = 100.0;
+      bool? showStats = null;
+      string nextPage2 = "";
       
-      ApiResponseOptionsPricesByTickerRealtime result = optionsApi.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike);
+      ApiResponseOptionsPricesByTickerRealtime result = optionsApi.GetOptionsPricesRealtimeByTicker(symbol, source, ivMode, nextPage, pageSize, stockPriceSource, model, showExtendedPrice, expirationStartDate, expirationEndDate, strike, showStats, nextPage2);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -2599,6 +2605,8 @@ Name | Type | Description  | Notes
  **expirationStartDate** | [**Object**](Object.md)| Filter out contracts that expire before this date. | [optional]  &nbsp;
  **expirationEndDate** | [**Object**](Object.md)| Filter out contracts that expire after this date. | [optional]  &nbsp;
  **strike** | decimal?| Filter out contracts that have this strike price. | [optional]  &nbsp;
+ **showStats** | bool?| Whether to include Greek calculations or not. | [optional]  &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

@@ -460,7 +460,7 @@ namespace Intrinio.SDK.Api
         /// News Article Body
         /// </summary>
         /// <remarks>
-        /// Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -474,7 +474,7 @@ namespace Intrinio.SDK.Api
         /// News Article Body
         /// </summary>
         /// <remarks>
-        /// Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -1138,7 +1138,7 @@ namespace Intrinio.SDK.Api
         /// News Article Body
         /// </summary>
         /// <remarks>
-        /// Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -1152,7 +1152,7 @@ namespace Intrinio.SDK.Api
         /// News Article Body
         /// </summary>
         /// <remarks>
-        /// Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -3879,7 +3879,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// News Article Body Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// News Article Body Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -3894,7 +3894,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// News Article Body Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// News Article Body Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -3964,7 +3964,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// News Article Body Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// News Article Body Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>
@@ -3980,7 +3980,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// News Article Body Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+        /// News Article Body Returns the body of a news article for moody sources.  This endpoint requires additional authorization beyond basic news access and is for your internal use only - no display. Please see a representative for details.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="newsStoryId">The identifier of the news story.</param>

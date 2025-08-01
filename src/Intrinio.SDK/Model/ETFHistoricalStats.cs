@@ -29,7 +29,7 @@ namespace Intrinio.SDK.Model
         /// <param name="Etf">A brief summary of the ETF it which these stats refer.  Not included when returning historical stats..</param>
         /// <param name="Stats">The historical stats for the ETF.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further results are available..</param>
-        public ETFHistoricalStats(List<> Messages = default(List<>), ETFSummary Etf = default(ETFSummary), List<ETFStats> Stats = default(List<ETFStats>), string NextPage = default(string))
+        public ETFHistoricalStats(List<string> Messages = default(List<string>), ETFSummary Etf = default(ETFSummary), List<ETFStats> Stats = default(List<ETFStats>), string NextPage = default(string))
         {
             this.Messages = Messages;
             this.Etf = Etf;
@@ -42,7 +42,7 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>A list of messages related to the request, such as warnings or errors.</value>
         [DataMember(Name="messages", EmitDefaultValue=false)]
-        public List<> Messages { get; set; }
+        public List<string> Messages { get; set; }
 
         /// <summary>
         /// A brief summary of the ETF it which these stats refer.  Not included when returning historical stats.

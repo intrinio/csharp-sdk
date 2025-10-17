@@ -103,7 +103,9 @@ namespace Intrinio.SDK.Model
         /// <param name="Url">The url of the news article.</param>
         /// <param name="Summary">A summary of the news article.</param>
         /// <param name="Source">The news source..</param>
-        /// <param name="Company">The Company to which the new article pertains.</param>
+        /// <param name="Company">The Company to which the new article pertains..</param>
+        /// <param name="Companies">The Companies to which the new article pertains.</param>
+        /// <param name="Securities">The Securities to which the new article pertains.</param>
         /// <param name="Topics">Topics.</param>
         /// <param name="Copyright">The copyright of the news article.</param>
         /// <param name="Language">The language code of the news article.</param>
@@ -112,7 +114,11 @@ namespace Intrinio.SDK.Model
         /// <param name="BusinessRelevance">How strongly correlated the news article is to the business.</param>
         /// <param name="ArticleSentiment">The news sentiment..</param>
         /// <param name="ArticleSentimentConfidence">The confidence score of the sentiment rating.</param>
-        public CompanyNews(string Id = default(string), string Title = default(string), DateTime? PublicationDate = default(DateTime?), string Url = default(string), string Summary = default(string), SourceEnum? Source = default(SourceEnum?), CompanySummary Company = default(CompanySummary), List<NewsTopic> Topics = default(List<NewsTopic>), string Copyright = default(string), string Language = default(string), int? WordCount = default(int?), bool? Spam = default(bool?), decimal? BusinessRelevance = default(decimal?), ArticleSentimentEnum? ArticleSentiment = default(ArticleSentimentEnum?), decimal? ArticleSentimentConfidence = default(decimal?))
+        /// <param name="Issuer">The issuer of the story..</param>
+        /// <param name="IssuerName">The issuer of the story..</param>
+        /// <param name="IssuerCompany">The company that issued the story..</param>
+        /// <param name="IssuerSecurity">The security that issued the story..</param>
+        public CompanyNews(string Id = default(string), string Title = default(string), DateTime? PublicationDate = default(DateTime?), string Url = default(string), string Summary = default(string), SourceEnum? Source = default(SourceEnum?), CompanySummary Company = default(CompanySummary), List<CompanySummary> Companies = default(List<CompanySummary>), List<SecuritySummary> Securities = default(List<SecuritySummary>), List<NewsTopic> Topics = default(List<NewsTopic>), string Copyright = default(string), string Language = default(string), int? WordCount = default(int?), bool? Spam = default(bool?), decimal? BusinessRelevance = default(decimal?), ArticleSentimentEnum? ArticleSentiment = default(ArticleSentimentEnum?), decimal? ArticleSentimentConfidence = default(decimal?), string Issuer = default(string), string IssuerName = default(string), CompanySummary IssuerCompany = default(CompanySummary), SecuritySummary IssuerSecurity = default(SecuritySummary))
         {
             this.Id = Id;
             this.Title = Title;
@@ -121,6 +127,8 @@ namespace Intrinio.SDK.Model
             this.Summary = Summary;
             this.Source = Source;
             this.Company = Company;
+            this.Companies = Companies;
+            this.Securities = Securities;
             this.Topics = Topics;
             this.Copyright = Copyright;
             this.Language = Language;
@@ -129,6 +137,10 @@ namespace Intrinio.SDK.Model
             this.BusinessRelevance = BusinessRelevance;
             this.ArticleSentiment = ArticleSentiment;
             this.ArticleSentimentConfidence = ArticleSentimentConfidence;
+            this.Issuer = Issuer;
+            this.IssuerName = IssuerName;
+            this.IssuerCompany = IssuerCompany;
+            this.IssuerSecurity = IssuerSecurity;
         }
         
         /// <summary>
@@ -168,11 +180,25 @@ namespace Intrinio.SDK.Model
 
 
         /// <summary>
-        /// The Company to which the new article pertains
+        /// The Company to which the new article pertains.
         /// </summary>
-        /// <value>The Company to which the new article pertains</value>
+        /// <value>The Company to which the new article pertains.</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public CompanySummary Company { get; set; }
+
+        /// <summary>
+        /// The Companies to which the new article pertains
+        /// </summary>
+        /// <value>The Companies to which the new article pertains</value>
+        [DataMember(Name="companies", EmitDefaultValue=false)]
+        public List<CompanySummary> Companies { get; set; }
+
+        /// <summary>
+        /// The Securities to which the new article pertains
+        /// </summary>
+        /// <value>The Securities to which the new article pertains</value>
+        [DataMember(Name="securities", EmitDefaultValue=false)]
+        public List<SecuritySummary> Securities { get; set; }
 
         /// <summary>
         /// Gets or Sets Topics
@@ -224,6 +250,34 @@ namespace Intrinio.SDK.Model
         public decimal? ArticleSentimentConfidence { get; set; }
 
         /// <summary>
+        /// The issuer of the story.
+        /// </summary>
+        /// <value>The issuer of the story.</value>
+        [DataMember(Name="issuer", EmitDefaultValue=false)]
+        public string Issuer { get; set; }
+
+        /// <summary>
+        /// The issuer of the story.
+        /// </summary>
+        /// <value>The issuer of the story.</value>
+        [DataMember(Name="issuer_name", EmitDefaultValue=false)]
+        public string IssuerName { get; set; }
+
+        /// <summary>
+        /// The company that issued the story.
+        /// </summary>
+        /// <value>The company that issued the story.</value>
+        [DataMember(Name="issuer_company", EmitDefaultValue=false)]
+        public CompanySummary IssuerCompany { get; set; }
+
+        /// <summary>
+        /// The security that issued the story.
+        /// </summary>
+        /// <value>The security that issued the story.</value>
+        [DataMember(Name="issuer_security", EmitDefaultValue=false)]
+        public SecuritySummary IssuerSecurity { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -238,6 +292,8 @@ namespace Intrinio.SDK.Model
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
+            sb.Append("  Companies: ").Append(Companies).Append("\n");
+            sb.Append("  Securities: ").Append(Securities).Append("\n");
             sb.Append("  Topics: ").Append(Topics).Append("\n");
             sb.Append("  Copyright: ").Append(Copyright).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
@@ -246,6 +302,10 @@ namespace Intrinio.SDK.Model
             sb.Append("  BusinessRelevance: ").Append(BusinessRelevance).Append("\n");
             sb.Append("  ArticleSentiment: ").Append(ArticleSentiment).Append("\n");
             sb.Append("  ArticleSentimentConfidence: ").Append(ArticleSentimentConfidence).Append("\n");
+            sb.Append("  Issuer: ").Append(Issuer).Append("\n");
+            sb.Append("  IssuerName: ").Append(IssuerName).Append("\n");
+            sb.Append("  IssuerCompany: ").Append(IssuerCompany).Append("\n");
+            sb.Append("  IssuerSecurity: ").Append(IssuerSecurity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -316,6 +376,16 @@ namespace Intrinio.SDK.Model
                     this.Company.Equals(input.Company))
                 ) && 
                 (
+                    this.Companies == input.Companies ||
+                    this.Companies != null &&
+                    this.Companies.SequenceEqual(input.Companies)
+                ) && 
+                (
+                    this.Securities == input.Securities ||
+                    this.Securities != null &&
+                    this.Securities.SequenceEqual(input.Securities)
+                ) && 
+                (
                     this.Topics == input.Topics ||
                     this.Topics != null &&
                     this.Topics.SequenceEqual(input.Topics)
@@ -354,6 +424,26 @@ namespace Intrinio.SDK.Model
                     this.ArticleSentimentConfidence == input.ArticleSentimentConfidence ||
                     (this.ArticleSentimentConfidence != null &&
                     this.ArticleSentimentConfidence.Equals(input.ArticleSentimentConfidence))
+                ) && 
+                (
+                    this.Issuer == input.Issuer ||
+                    (this.Issuer != null &&
+                    this.Issuer.Equals(input.Issuer))
+                ) && 
+                (
+                    this.IssuerName == input.IssuerName ||
+                    (this.IssuerName != null &&
+                    this.IssuerName.Equals(input.IssuerName))
+                ) && 
+                (
+                    this.IssuerCompany == input.IssuerCompany ||
+                    (this.IssuerCompany != null &&
+                    this.IssuerCompany.Equals(input.IssuerCompany))
+                ) && 
+                (
+                    this.IssuerSecurity == input.IssuerSecurity ||
+                    (this.IssuerSecurity != null &&
+                    this.IssuerSecurity.Equals(input.IssuerSecurity))
                 );
         }
 
@@ -380,6 +470,10 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.Company != null)
                     hashCode = hashCode * 59 + this.Company.GetHashCode();
+                if (this.Companies != null)
+                    hashCode = hashCode * 59 + this.Companies.GetHashCode();
+                if (this.Securities != null)
+                    hashCode = hashCode * 59 + this.Securities.GetHashCode();
                 if (this.Topics != null)
                     hashCode = hashCode * 59 + this.Topics.GetHashCode();
                 if (this.Copyright != null)
@@ -396,6 +490,14 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.ArticleSentiment.GetHashCode();
                 if (this.ArticleSentimentConfidence != null)
                     hashCode = hashCode * 59 + this.ArticleSentimentConfidence.GetHashCode();
+                if (this.Issuer != null)
+                    hashCode = hashCode * 59 + this.Issuer.GetHashCode();
+                if (this.IssuerName != null)
+                    hashCode = hashCode * 59 + this.IssuerName.GetHashCode();
+                if (this.IssuerCompany != null)
+                    hashCode = hashCode * 59 + this.IssuerCompany.GetHashCode();
+                if (this.IssuerSecurity != null)
+                    hashCode = hashCode * 59 + this.IssuerSecurity.GetHashCode();
                 return hashCode;
             }
         }

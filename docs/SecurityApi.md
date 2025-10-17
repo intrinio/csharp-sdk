@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllSecurities**](SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
+[**GetSecuritiesShortInterest**](SecurityApi.md#getsecuritiesshortinterest) | **GET** /securities/short_interest | Latest Short Interest
 [**GetSecurityById**](SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Lookup Security
 [**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**GetSecurityDataPointText**](SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
@@ -52,6 +53,7 @@ Method | HTTP request | Description
 [**GetSecurityQuote**](SecurityApi.md#getsecurityquote) | **GET** /securities/{identifier}/quote | Quote for a Security
 [**GetSecurityRealtimePrice**](SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 [**GetSecurityReplayFile**](SecurityApi.md#getsecurityreplayfile) | **GET** /securities/replay | Security Replay File
+[**GetSecurityShortInterest**](SecurityApi.md#getsecurityshortinterest) | **GET** /securities/{identifier}/short_interest | Short Interest by Security
 [**GetSecuritySnapshots**](SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**GetSecurityStockPriceAdjustments**](SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**GetSecurityStockPriceAdjustmentsDividends**](SecurityApi.md#getsecuritystockpriceadjustmentsdividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
@@ -188,6 +190,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecuritiesShortInterest)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritiesShortInterest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesShortInterest.md)
+
+[//]: # (OPERATION:GetSecuritiesShortInterest_v2)
+
+[//]: # (ENDPOINT:/securities/short_interest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritiesshortinterest)
+
+<a name="getsecuritiesshortinterest"></a>
+## **GetSecuritiesShortInterest**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecuritiesShortInterest_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesShortInterest GetSecuritiesShortInterest (string nextPage = null)
+
+#### Latest Short Interest
+
+Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecuritiesShortInterestExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string nextPage = null;
+      
+      ApiResponseSecuritiesShortInterest result = securityApi.GetSecuritiesShortInterest(nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesShortInterest**](ApiResponseSecuritiesShortInterest.md)
 
 [//]: # (END_OPERATION)
 
@@ -4742,6 +4832,96 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityReplayFileResult**](SecurityReplayFileResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityShortInterest)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityShortInterest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityShortInterest.md)
+
+[//]: # (OPERATION:GetSecurityShortInterest_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/short_interest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecurityshortinterest)
+
+<a name="getsecurityshortinterest"></a>
+## **GetSecurityShortInterest**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityShortInterest_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityShortInterest GetSecurityShortInterest (string identifier, string nextPage = null)
+
+#### Short Interest by Security
+
+Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityShortInterestExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "AAPL";
+      string nextPage = null;
+      
+      ApiResponseSecurityShortInterest result = securityApi.GetSecurityShortInterest(identifier, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityShortInterest**](ApiResponseSecurityShortInterest.md)
 
 [//]: # (END_OPERATION)
 

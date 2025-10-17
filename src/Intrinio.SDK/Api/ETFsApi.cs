@@ -85,7 +85,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ETFAnalytics</returns>
         ApiResponse<ETFAnalytics> GetEtfAnalyticsWithHttpInfo (string identifier);
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Historical Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -99,7 +99,7 @@ namespace Intrinio.SDK.Api
         ETFHistoricalStats GetEtfHistoricalStats (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null);
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Historical Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -137,7 +137,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseETFHoldings</returns>
         ApiResponse<ApiResponseETFHoldings> GetEtfHoldingsWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -148,7 +148,7 @@ namespace Intrinio.SDK.Api
         ETFStats GetEtfStats (string identifier);
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -250,7 +250,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ETFAnalytics)</returns>
         System.Threading.Tasks.Task<ApiResponse<ETFAnalytics>> GetEtfAnalyticsAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Historical Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -264,7 +264,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ETFHistoricalStats> GetEtfHistoricalStatsAsync (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null);
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Historical Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -302,7 +302,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseETFHoldings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseETFHoldings>> GetEtfHoldingsAsyncWithHttpInfo (string identifier, int? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -313,7 +313,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ETFStats> GetEtfStatsAsync (string identifier);
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats
+        /// Exchange Traded Fund (ETF) Stats
         /// </summary>
         /// <remarks>
         /// Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
@@ -901,7 +901,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Historical Stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -916,7 +916,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Historical Stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -983,7 +983,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Historical Stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -999,7 +999,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Historical Stats Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1223,7 +1223,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1235,7 +1235,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1296,7 +1296,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>
@@ -1309,7 +1309,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Exchange Traded Fund (ETF) stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+        /// Exchange Traded Fund (ETF) Stats Returns comprehensive key US ETF performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier">An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)</param>

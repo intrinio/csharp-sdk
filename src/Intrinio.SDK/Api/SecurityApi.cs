@@ -75,6 +75,27 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
         ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
         /// <summary>
+        /// Latest Short Interest
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesShortInterest</returns>
+        ApiResponseSecuritiesShortInterest GetSecuritiesShortInterest (string nextPage = null);
+
+        /// <summary>
+        /// Latest Short Interest
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesShortInterest</returns>
+        ApiResponse<ApiResponseSecuritiesShortInterest> GetSecuritiesShortInterestWithHttpInfo (string nextPage = null);
+        /// <summary>
         /// Lookup Security
         /// </summary>
         /// <remarks>
@@ -1480,6 +1501,29 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of SecurityReplayFileResult</returns>
         ApiResponse<SecurityReplayFileResult> GetSecurityReplayFileWithHttpInfo (string subsource, DateTime? date);
         /// <summary>
+        /// Short Interest by Security
+        /// </summary>
+        /// <remarks>
+        /// Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityShortInterest</returns>
+        ApiResponseSecurityShortInterest GetSecurityShortInterest (string identifier, string nextPage = null);
+
+        /// <summary>
+        /// Short Interest by Security
+        /// </summary>
+        /// <remarks>
+        /// Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityShortInterest</returns>
+        ApiResponse<ApiResponseSecurityShortInterest> GetSecurityShortInterestWithHttpInfo (string identifier, string nextPage = null);
+        /// <summary>
         /// Realtime Stock Prices Snapshot
         /// </summary>
         /// <remarks>
@@ -1937,6 +1981,27 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
+        /// <summary>
+        /// Latest Short Interest
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesShortInterest</returns>
+        System.Threading.Tasks.Task<ApiResponseSecuritiesShortInterest> GetSecuritiesShortInterestAsync (string nextPage = null);
+
+        /// <summary>
+        /// Latest Short Interest
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesShortInterest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesShortInterest>> GetSecuritiesShortInterestAsyncWithHttpInfo (string nextPage = null);
         /// <summary>
         /// Lookup Security
         /// </summary>
@@ -3343,6 +3408,29 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (SecurityReplayFileResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SecurityReplayFileResult>> GetSecurityReplayFileAsyncWithHttpInfo (string subsource, DateTime? date);
         /// <summary>
+        /// Short Interest by Security
+        /// </summary>
+        /// <remarks>
+        /// Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityShortInterest</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityShortInterest> GetSecurityShortInterestAsync (string identifier, string nextPage = null);
+
+        /// <summary>
+        /// Short Interest by Security
+        /// </summary>
+        /// <remarks>
+        /// Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityShortInterest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityShortInterest>> GetSecurityShortInterestAsyncWithHttpInfo (string identifier, string nextPage = null);
+        /// <summary>
         /// Realtime Stock Prices Snapshot
         /// </summary>
         /// <remarks>
@@ -4098,6 +4186,146 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
+        }
+
+        /// <summary>
+        /// Latest Short Interest Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesShortInterest</returns>
+        public ApiResponseSecuritiesShortInterest GetSecuritiesShortInterest (string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecuritiesShortInterest> localVarResponse = GetSecuritiesShortInterestWithHttpInfo(nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Latest Short Interest Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesShortInterest</returns>
+        
+        public ApiResponse< ApiResponseSecuritiesShortInterest > GetSecuritiesShortInterestWithHttpInfo (string nextPage = null)
+        {
+
+            var localVarPath = "/securities/short_interest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesShortInterest", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesShortInterest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesShortInterest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesShortInterest)));
+        }
+
+        /// <summary>
+        /// Latest Short Interest Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesShortInterest</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecuritiesShortInterest> GetSecuritiesShortInterestAsync (string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecuritiesShortInterest> localVarResponse = await GetSecuritiesShortInterestAsyncWithHttpInfo(nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Latest Short Interest Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesShortInterest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesShortInterest>> GetSecuritiesShortInterestAsyncWithHttpInfo (string nextPage = null)
+        {
+
+            var localVarPath = "/securities/short_interest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesShortInterest", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesShortInterest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesShortInterest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesShortInterest)));
         }
 
         /// <summary>
@@ -12252,6 +12480,158 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<SecurityReplayFileResult>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (SecurityReplayFileResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityReplayFileResult)));
+        }
+
+        /// <summary>
+        /// Short Interest by Security Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityShortInterest</returns>
+        public ApiResponseSecurityShortInterest GetSecurityShortInterest (string identifier, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityShortInterest> localVarResponse = GetSecurityShortInterestWithHttpInfo(identifier, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Short Interest by Security Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityShortInterest</returns>
+        
+        public ApiResponse< ApiResponseSecurityShortInterest > GetSecurityShortInterestWithHttpInfo (string identifier, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityShortInterest");
+
+            var localVarPath = "/securities/{identifier}/short_interest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityShortInterest", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityShortInterest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityShortInterest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityShortInterest)));
+        }
+
+        /// <summary>
+        /// Short Interest by Security Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityShortInterest</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityShortInterest> GetSecurityShortInterestAsync (string identifier, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityShortInterest> localVarResponse = await GetSecurityShortInterestAsyncWithHttpInfo(identifier, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Short Interest by Security Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityShortInterest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityShortInterest>> GetSecurityShortInterestAsyncWithHttpInfo (string identifier, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityShortInterest");
+
+            var localVarPath = "/securities/{identifier}/short_interest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityShortInterest", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityShortInterest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityShortInterest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityShortInterest)));
         }
 
         /// <summary>

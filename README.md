@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.107.0
-- Package version: 7.18.0
+- API version: 2.108.0
+- Package version: 7.19.0
 
 
 <a name="frameworks-supported"></a>
@@ -160,9 +160,9 @@ Class | Method | HTTP request | Description
 *ETFsApi* | [**GetAllEtfs**](docs/ETFsApi.md#getalletfs) | **GET** /etfs | All ETFs
 *ETFsApi* | [**GetEtf**](docs/ETFsApi.md#getetf) | **GET** /etfs/{identifier} | Lookup ETF
 *ETFsApi* | [**GetEtfAnalytics**](docs/ETFsApi.md#getetfanalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
-*ETFsApi* | [**GetEtfHistoricalStats**](docs/ETFsApi.md#getetfhistoricalstats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) stats
+*ETFsApi* | [**GetEtfHistoricalStats**](docs/ETFsApi.md#getetfhistoricalstats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) Historical Stats
 *ETFsApi* | [**GetEtfHoldings**](docs/ETFsApi.md#getetfholdings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
-*ETFsApi* | [**GetEtfStats**](docs/ETFsApi.md#getetfstats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) stats
+*ETFsApi* | [**GetEtfStats**](docs/ETFsApi.md#getetfstats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) Stats
 *ETFsApi* | [**SearchEtfs**](docs/ETFsApi.md#searchetfs) | **GET** /etfs/search | Search ETFs
 *FilingApi* | [**GetAllFilings**](docs/FilingApi.md#getallfilings) | **GET** /filings | All Filings
 *FilingApi* | [**GetAllNotes**](docs/FilingApi.md#getallnotes) | **GET** /filings/notes | All Filing Notes
@@ -254,6 +254,7 @@ Class | Method | HTTP request | Description
 *OwnersApi* | [**InstitutionalHoldingsByOwner**](docs/OwnersApi.md#institutionalholdingsbyowner) | **GET** /owners/{identifier}/institutional_holdings | Institutional Holdings by Owner
 *OwnersApi* | [**SearchOwners**](docs/OwnersApi.md#searchowners) | **GET** /owners/search | Search Owners
 *SecurityApi* | [**GetAllSecurities**](docs/SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
+*SecurityApi* | [**GetSecuritiesShortInterest**](docs/SecurityApi.md#getsecuritiesshortinterest) | **GET** /securities/short_interest | Latest Short Interest
 *SecurityApi* | [**GetSecurityById**](docs/SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Lookup Security
 *SecurityApi* | [**GetSecurityDataPointNumber**](docs/SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 *SecurityApi* | [**GetSecurityDataPointText**](docs/SecurityApi.md#getsecuritydatapointtext) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
@@ -301,6 +302,7 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**GetSecurityQuote**](docs/SecurityApi.md#getsecurityquote) | **GET** /securities/{identifier}/quote | Quote for a Security
 *SecurityApi* | [**GetSecurityRealtimePrice**](docs/SecurityApi.md#getsecurityrealtimeprice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 *SecurityApi* | [**GetSecurityReplayFile**](docs/SecurityApi.md#getsecurityreplayfile) | **GET** /securities/replay | Security Replay File
+*SecurityApi* | [**GetSecurityShortInterest**](docs/SecurityApi.md#getsecurityshortinterest) | **GET** /securities/{identifier}/short_interest | Short Interest by Security
 *SecurityApi* | [**GetSecuritySnapshots**](docs/SecurityApi.md#getsecuritysnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 *SecurityApi* | [**GetSecurityStockPriceAdjustments**](docs/SecurityApi.md#getsecuritystockpriceadjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 *SecurityApi* | [**GetSecurityStockPriceAdjustmentsDividends**](docs/SecurityApi.md#getsecuritystockpriceadjustmentsdividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
@@ -454,6 +456,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSICIndicesSearch](docs/ApiResponseSICIndicesSearch.md)
  - [Model.ApiResponseSecurities](docs/ApiResponseSecurities.md)
  - [Model.ApiResponseSecuritiesSearch](docs/ApiResponseSecuritiesSearch.md)
+ - [Model.ApiResponseSecuritiesShortInterest](docs/ApiResponseSecuritiesShortInterest.md)
  - [Model.ApiResponseSecurityAccumulationDistributionIndex](docs/ApiResponseSecurityAccumulationDistributionIndex.md)
  - [Model.ApiResponseSecurityAverageDailyTradingVolume](docs/ApiResponseSecurityAverageDailyTradingVolume.md)
  - [Model.ApiResponseSecurityAverageDirectionalIndex](docs/ApiResponseSecurityAverageDirectionalIndex.md)
@@ -480,6 +483,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSecurityOnBalanceVolumeMean](docs/ApiResponseSecurityOnBalanceVolumeMean.md)
  - [Model.ApiResponseSecurityQuote](docs/ApiResponseSecurityQuote.md)
  - [Model.ApiResponseSecurityRelativeStrengthIndex](docs/ApiResponseSecurityRelativeStrengthIndex.md)
+ - [Model.ApiResponseSecurityShortInterest](docs/ApiResponseSecurityShortInterest.md)
  - [Model.ApiResponseSecuritySimpleMovingAverage](docs/ApiResponseSecuritySimpleMovingAverage.md)
  - [Model.ApiResponseSecurityStochasticOscillator](docs/ApiResponseSecurityStochasticOscillator.md)
  - [Model.ApiResponseSecurityStockPriceAdjustments](docs/ApiResponseSecurityStockPriceAdjustments.md)
@@ -646,6 +650,8 @@ Class | Method | HTTP request | Description
  - [Model.SecuritySummary](docs/SecuritySummary.md)
  - [Model.SecurityTrades](docs/SecurityTrades.md)
  - [Model.SecurityTradesResult](docs/SecurityTradesResult.md)
+ - [Model.ShortInterest](docs/ShortInterest.md)
+ - [Model.ShortInterestWithSecurity](docs/ShortInterestWithSecurity.md)
  - [Model.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)
  - [Model.StandardizedFinancial](docs/StandardizedFinancial.md)
  - [Model.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)

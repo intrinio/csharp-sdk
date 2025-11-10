@@ -115,6 +115,22 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Company'
         }
         /// <summary>
+        /// Test the property 'Companies'
+        /// </summary>
+        [Test]
+        public void CompaniesTest()
+        {
+            // TODO unit test for the property 'Companies'
+        }
+        /// <summary>
+        /// Test the property 'Securities'
+        /// </summary>
+        [Test]
+        public void SecuritiesTest()
+        {
+            // TODO unit test for the property 'Securities'
+        }
+        /// <summary>
         /// Test the property 'Topics'
         /// </summary>
         [Test]
@@ -177,6 +193,38 @@ namespace Intrinio.SDK.Test
         public void ArticleSentimentConfidenceTest()
         {
             // TODO unit test for the property 'ArticleSentimentConfidence'
+        }
+        /// <summary>
+        /// Test the property 'Issuer'
+        /// </summary>
+        [Test]
+        public void IssuerTest()
+        {
+            // TODO unit test for the property 'Issuer'
+        }
+        /// <summary>
+        /// Test the property 'IssuerName'
+        /// </summary>
+        [Test]
+        public void IssuerNameTest()
+        {
+            // TODO unit test for the property 'IssuerName'
+        }
+        /// <summary>
+        /// Test the property 'IssuerCompany'
+        /// </summary>
+        [Test]
+        public void IssuerCompanyTest()
+        {
+            // TODO unit test for the property 'IssuerCompany'
+        }
+        /// <summary>
+        /// Test the property 'IssuerSecurity'
+        /// </summary>
+        [Test]
+        public void IssuerSecurityTest()
+        {
+            // TODO unit test for the property 'IssuerSecurity'
         }
 
     }

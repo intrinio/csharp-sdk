@@ -75,6 +75,64 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
         ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
         /// <summary>
+        /// Latest Dividend Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesDividendLatest</returns>
+        ApiResponseSecuritiesDividendLatest GetSecuritiesLatestDividendRecords (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Latest Dividend Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesDividendLatest</returns>
+        ApiResponse<ApiResponseSecuritiesDividendLatest> GetSecuritiesLatestDividendRecordsWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
+        /// <summary>
+        /// Latest Earnings Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesEarningsLatest</returns>
+        ApiResponseSecuritiesEarningsLatest GetSecuritiesLatestEarningsRecords (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Latest Earnings Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesEarningsLatest</returns>
+        ApiResponse<ApiResponseSecuritiesEarningsLatest> GetSecuritiesLatestEarningsRecordsWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
+        /// <summary>
         /// Latest Short Interest
         /// </summary>
         /// <remarks>
@@ -1981,6 +2039,64 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
+        /// <summary>
+        /// Latest Dividend Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesDividendLatest</returns>
+        System.Threading.Tasks.Task<ApiResponseSecuritiesDividendLatest> GetSecuritiesLatestDividendRecordsAsync (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Latest Dividend Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesDividendLatest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesDividendLatest>> GetSecuritiesLatestDividendRecordsAsyncWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
+        /// <summary>
+        /// Latest Earnings Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesEarningsLatest</returns>
+        System.Threading.Tasks.Task<ApiResponseSecuritiesEarningsLatest> GetSecuritiesLatestEarningsRecordsAsync (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
+
+        /// <summary>
+        /// Latest Earnings Records for All Securities
+        /// </summary>
+        /// <remarks>
+        /// Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesEarningsLatest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesEarningsLatest>> GetSecuritiesLatestEarningsRecordsAsyncWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null);
         /// <summary>
         /// Latest Short Interest
         /// </summary>
@@ -4186,6 +4302,334 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
+        }
+
+        /// <summary>
+        /// Latest Dividend Records for All Securities Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesDividendLatest</returns>
+        public ApiResponseSecuritiesDividendLatest GetSecuritiesLatestDividendRecords (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseSecuritiesDividendLatest> localVarResponse = GetSecuritiesLatestDividendRecordsWithHttpInfo(pageSize, nextPage, date, identifiers, nextPage2);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Latest Dividend Records for All Securities Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesDividendLatest</returns>
+        
+        public ApiResponse< ApiResponseSecuritiesDividendLatest > GetSecuritiesLatestDividendRecordsWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/securities/dividends/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (identifiers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifiers", identifiers)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesLatestDividendRecords", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesDividendLatest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesDividendLatest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesDividendLatest)));
+        }
+
+        /// <summary>
+        /// Latest Dividend Records for All Securities Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesDividendLatest</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecuritiesDividendLatest> GetSecuritiesLatestDividendRecordsAsync (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseSecuritiesDividendLatest> localVarResponse = await GetSecuritiesLatestDividendRecordsAsyncWithHttpInfo(pageSize, nextPage, date, identifiers, nextPage2);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Latest Dividend Records for All Securities Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return dividend records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesDividendLatest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesDividendLatest>> GetSecuritiesLatestDividendRecordsAsyncWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/securities/dividends/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (identifiers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifiers", identifiers)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesLatestDividendRecords", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesDividendLatest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesDividendLatest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesDividendLatest)));
+        }
+
+        /// <summary>
+        /// Latest Earnings Records for All Securities Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesEarningsLatest</returns>
+        public ApiResponseSecuritiesEarningsLatest GetSecuritiesLatestEarningsRecords (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseSecuritiesEarningsLatest> localVarResponse = GetSecuritiesLatestEarningsRecordsWithHttpInfo(pageSize, nextPage, date, identifiers, nextPage2);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Latest Earnings Records for All Securities Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesEarningsLatest</returns>
+        
+        public ApiResponse< ApiResponseSecuritiesEarningsLatest > GetSecuritiesLatestEarningsRecordsWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/securities/earnings/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (identifiers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifiers", identifiers)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesLatestEarningsRecords", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesEarningsLatest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesEarningsLatest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesEarningsLatest)));
+        }
+
+        /// <summary>
+        /// Latest Earnings Records for All Securities Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesEarningsLatest</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecuritiesEarningsLatest> GetSecuritiesLatestEarningsRecordsAsync (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+             ApiResponse<ApiResponseSecuritiesEarningsLatest> localVarResponse = await GetSecuritiesLatestEarningsRecordsAsyncWithHttpInfo(pageSize, nextPage, date, identifiers, nextPage2);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Latest Earnings Records for All Securities Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <param name="date">Return earnings records on or before this date. Format YYYY-MM-DD (optional)</param>
+        /// <param name="identifiers">A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) (optional)</param>
+        /// <param name="nextPage2">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesEarningsLatest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesEarningsLatest>> GetSecuritiesLatestEarningsRecordsAsyncWithHttpInfo (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+        {
+
+            var localVarPath = "/securities/earnings/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+            if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (identifiers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "identifiers", identifiers)); // query parameter
+            if (nextPage2 != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage2)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesLatestEarningsRecords", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesEarningsLatest>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesEarningsLatest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesEarningsLatest)));
         }
 
         /// <summary>

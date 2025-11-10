@@ -83,6 +83,50 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecuritiesLatestDividendRecords
+        /// </summary>
+        [Test]
+        public void GetSecuritiesLatestDividendRecordsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? pageSize = null;
+            //string nextPage = null;
+            //DateTime? date = null;
+            //string identifiers = null;
+            //string nextPage2 = null;
+            //var response = instance.GetSecuritiesLatestDividendRecords(pageSize, nextPage, date, identifiers, nextPage2);
+            //Assert.IsInstanceOf<ApiResponseSecuritiesDividendLatest> (response, "response is ApiResponseSecuritiesDividendLatest");
+        }
+        
+        /// <summary>
+        /// Test GetSecuritiesLatestEarningsRecords
+        /// </summary>
+        [Test]
+        public void GetSecuritiesLatestEarningsRecordsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? pageSize = null;
+            //string nextPage = null;
+            //DateTime? date = null;
+            //string identifiers = null;
+            //string nextPage2 = null;
+            //var response = instance.GetSecuritiesLatestEarningsRecords(pageSize, nextPage, date, identifiers, nextPage2);
+            //Assert.IsInstanceOf<ApiResponseSecuritiesEarningsLatest> (response, "response is ApiResponseSecuritiesEarningsLatest");
+        }
+        
+        /// <summary>
+        /// Test GetSecuritiesShortInterest
+        /// </summary>
+        [Test]
+        public void GetSecuritiesShortInterestTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string nextPage = null;
+            //var response = instance.GetSecuritiesShortInterest(nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecuritiesShortInterest> (response, "response is ApiResponseSecuritiesShortInterest");
+        }
+        
+        /// <summary>
         /// Test GetSecurityById
         /// </summary>
         [Test]
@@ -853,6 +897,19 @@ namespace Intrinio.SDK.Test
             //DateTime? date = null;
             //var response = instance.GetSecurityReplayFile(subsource, date);
             //Assert.IsInstanceOf<SecurityReplayFileResult> (response, "response is SecurityReplayFileResult");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityShortInterest
+        /// </summary>
+        [Test]
+        public void GetSecurityShortInterestTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityShortInterest(identifier, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityShortInterest> (response, "response is ApiResponseSecurityShortInterest");
         }
         
         /// <summary>

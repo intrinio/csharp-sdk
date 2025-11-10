@@ -5,6 +5,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllSecurities**](SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
+[**GetSecuritiesLatestDividendRecords**](SecurityApi.md#getsecuritieslatestdividendrecords) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
+[**GetSecuritiesLatestEarningsRecords**](SecurityApi.md#getsecuritieslatestearningsrecords) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 [**GetSecuritiesShortInterest**](SecurityApi.md#getsecuritiesshortinterest) | **GET** /securities/short_interest | Latest Short Interest
 [**GetSecurityById**](SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Lookup Security
 [**GetSecurityDataPointNumber**](SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
@@ -190,6 +192,198 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecuritiesLatestDividendRecords)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritiesDividendLatest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesDividendLatest.md)
+
+[//]: # (OPERATION:GetSecuritiesLatestDividendRecords_v2)
+
+[//]: # (ENDPOINT:/securities/dividends/latest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritieslatestdividendrecords)
+
+<a name="getsecuritieslatestdividendrecords"></a>
+## **GetSecuritiesLatestDividendRecords**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecuritiesLatestDividendRecords_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesDividendLatest GetSecuritiesLatestDividendRecords (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+
+#### Latest Dividend Records for All Securities
+
+Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecuritiesLatestDividendRecordsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      int? pageSize = 100;
+      string nextPage = null;
+      DateTime? date = 2013-10-20;
+      string identifiers = "AAPL,MSFT";
+      string nextPage2 = "";
+      
+      ApiResponseSecuritiesDividendLatest result = securityApi.GetSecuritiesLatestDividendRecords(pageSize, nextPage, date, identifiers, nextPage2);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **date** | DateTime?| Return dividend records on or before this date. Format YYYY-MM-DD | [optional]  &nbsp;
+ **identifiers** | string| A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) | [optional]  &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesDividendLatest**](ApiResponseSecuritiesDividendLatest.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecuritiesLatestEarningsRecords)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritiesEarningsLatest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesEarningsLatest.md)
+
+[//]: # (OPERATION:GetSecuritiesLatestEarningsRecords_v2)
+
+[//]: # (ENDPOINT:/securities/earnings/latest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritieslatestearningsrecords)
+
+<a name="getsecuritieslatestearningsrecords"></a>
+## **GetSecuritiesLatestEarningsRecords**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecuritiesLatestEarningsRecords_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesEarningsLatest GetSecuritiesLatestEarningsRecords (int? pageSize = null, string nextPage = null, DateTime? date = null, string identifiers = null, string nextPage2 = null)
+
+#### Latest Earnings Records for All Securities
+
+Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecuritiesLatestEarningsRecordsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      int? pageSize = 100;
+      string nextPage = null;
+      DateTime? date = 2013-10-20;
+      string identifiers = "AAPL,MSFT";
+      string nextPage2 = "";
+      
+      ApiResponseSecuritiesEarningsLatest result = securityApi.GetSecuritiesLatestEarningsRecords(pageSize, nextPage, date, identifiers, nextPage2);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **date** | DateTime?| Return earnings records on or before this date. Format YYYY-MM-DD | [optional]  &nbsp;
+ **identifiers** | string| A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) | [optional]  &nbsp;
+ **nextPage2** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesEarningsLatest**](ApiResponseSecuritiesEarningsLatest.md)
 
 [//]: # (END_OPERATION)
 

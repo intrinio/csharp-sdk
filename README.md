@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.108.0
-- Package version: 7.19.0
+- API version: 2.112.0
+- Package version: 7.20.0
 
 
 <a name="frameworks-supported"></a>
@@ -254,6 +254,8 @@ Class | Method | HTTP request | Description
 *OwnersApi* | [**InstitutionalHoldingsByOwner**](docs/OwnersApi.md#institutionalholdingsbyowner) | **GET** /owners/{identifier}/institutional_holdings | Institutional Holdings by Owner
 *OwnersApi* | [**SearchOwners**](docs/OwnersApi.md#searchowners) | **GET** /owners/search | Search Owners
 *SecurityApi* | [**GetAllSecurities**](docs/SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
+*SecurityApi* | [**GetSecuritiesLatestDividendRecords**](docs/SecurityApi.md#getsecuritieslatestdividendrecords) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
+*SecurityApi* | [**GetSecuritiesLatestEarningsRecords**](docs/SecurityApi.md#getsecuritieslatestearningsrecords) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 *SecurityApi* | [**GetSecuritiesShortInterest**](docs/SecurityApi.md#getsecuritiesshortinterest) | **GET** /securities/short_interest | Latest Short Interest
 *SecurityApi* | [**GetSecurityById**](docs/SecurityApi.md#getsecuritybyid) | **GET** /securities/{identifier} | Lookup Security
 *SecurityApi* | [**GetSecurityDataPointNumber**](docs/SecurityApi.md#getsecuritydatapointnumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
@@ -455,6 +457,8 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
  - [Model.ApiResponseSICIndicesSearch](docs/ApiResponseSICIndicesSearch.md)
  - [Model.ApiResponseSecurities](docs/ApiResponseSecurities.md)
+ - [Model.ApiResponseSecuritiesDividendLatest](docs/ApiResponseSecuritiesDividendLatest.md)
+ - [Model.ApiResponseSecuritiesEarningsLatest](docs/ApiResponseSecuritiesEarningsLatest.md)
  - [Model.ApiResponseSecuritiesSearch](docs/ApiResponseSecuritiesSearch.md)
  - [Model.ApiResponseSecuritiesShortInterest](docs/ApiResponseSecuritiesShortInterest.md)
  - [Model.ApiResponseSecurityAccumulationDistributionIndex](docs/ApiResponseSecurityAccumulationDistributionIndex.md)

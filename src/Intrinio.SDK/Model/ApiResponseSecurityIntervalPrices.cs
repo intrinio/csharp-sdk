@@ -64,7 +64,13 @@ namespace Intrinio.SDK.Model
             /// Enum Cboeone for value: cboe_one
             /// </summary>
             [EnumMember(Value = "cboe_one")]
-            Cboeone = 6
+            Cboeone = 6,
+            
+            /// <summary>
+            /// Enum Equitiesedge for value: equities_edge
+            /// </summary>
+            [EnumMember(Value = "equities_edge")]
+            Equitiesedge = 7
         }
 
         /// <summary>

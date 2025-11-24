@@ -91,6 +91,22 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetEtfHistoricalNavFlows
+        /// </summary>
+        [Test]
+        public void GetEtfHistoricalNavFlowsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetEtfHistoricalNavFlows(identifier, startDate, endDate, pageSize, nextPage);
+            //Assert.IsInstanceOf<ETFNavFlowsHistorical> (response, "response is ETFNavFlowsHistorical");
+        }
+        
+        /// <summary>
         /// Test GetEtfHistoricalStats
         /// </summary>
         [Test]
@@ -120,6 +136,22 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetEtfNavFlows
+        /// </summary>
+        [Test]
+        public void GetEtfNavFlowsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetEtfNavFlows(identifier, startDate, endDate, pageSize, nextPage);
+            //Assert.IsInstanceOf<ETFNavFlows> (response, "response is ETFNavFlows");
+        }
+        
+        /// <summary>
         /// Test GetEtfStats
         /// </summary>
         [Test]
@@ -129,6 +161,20 @@ namespace Intrinio.SDK.Test
             //string identifier = null;
             //var response = instance.GetEtfStats(identifier);
             //Assert.IsInstanceOf<ETFStats> (response, "response is ETFStats");
+        }
+        
+        /// <summary>
+        /// Test GetEtfsNavFlows
+        /// </summary>
+        [Test]
+        public void GetEtfsNavFlowsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string countryCode = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetEtfsNavFlows(countryCode, pageSize, nextPage);
+            //Assert.IsInstanceOf<ETFNavFlowsAll> (response, "response is ETFNavFlowsAll");
         }
         
         /// <summary>

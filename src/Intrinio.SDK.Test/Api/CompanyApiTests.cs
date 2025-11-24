@@ -53,6 +53,42 @@ namespace Intrinio.SDK.Test
 
         
         /// <summary>
+        /// Test AllExpectedEarningsDates
+        /// </summary>
+        [Test]
+        public void AllExpectedEarningsDatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string tickers = null;
+            //int? fiscalYear = null;
+            //string fiscalPeriod = null;
+            //DateTime? expectedDateAfter = null;
+            //DateTime? expectedDateBefore = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.AllExpectedEarningsDates(tickers, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseAllExpectedEarningsDates> (response, "response is ApiResponseAllExpectedEarningsDates");
+        }
+        
+        /// <summary>
+        /// Test ExpectedEarningsDatesByCompany
+        /// </summary>
+        [Test]
+        public void ExpectedEarningsDatesByCompanyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //int? fiscalYear = null;
+            //string fiscalPeriod = null;
+            //DateTime? expectedDateAfter = null;
+            //DateTime? expectedDateBefore = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.ExpectedEarningsDatesByCompany(identifier, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseCompanyExpectedEarningsDates> (response, "response is ApiResponseCompanyExpectedEarningsDates");
+        }
+        
+        /// <summary>
         /// Test GetAllCompanies
         /// </summary>
         [Test]

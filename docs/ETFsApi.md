@@ -7,9 +7,12 @@ Method | HTTP request | Description
 [**GetAllEtfs**](ETFsApi.md#getalletfs) | **GET** /etfs | All ETFs
 [**GetEtf**](ETFsApi.md#getetf) | **GET** /etfs/{identifier} | Lookup ETF
 [**GetEtfAnalytics**](ETFsApi.md#getetfanalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
+[**GetEtfHistoricalNavFlows**](ETFsApi.md#getetfhistoricalnavflows) | **GET** /etfs/{identifier}/nav_flows/historical | Exchange Traded Fund (ETF) Historical NAV Flows
 [**GetEtfHistoricalStats**](ETFsApi.md#getetfhistoricalstats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) Historical Stats
 [**GetEtfHoldings**](ETFsApi.md#getetfholdings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
+[**GetEtfNavFlows**](ETFsApi.md#getetfnavflows) | **GET** /etfs/{identifier}/nav_flows | Exchange Traded Fund (ETF) NAV Flows
 [**GetEtfStats**](ETFsApi.md#getetfstats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) Stats
+[**GetEtfsNavFlows**](ETFsApi.md#getetfsnavflows) | **GET** /etfs/nav_flows | Exchange Traded Funds (ETFs) Latest NAV Flows
 [**SearchEtfs**](ETFsApi.md#searchetfs) | **GET** /etfs/search | Search ETFs
 
 
@@ -286,6 +289,102 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.ETFsApi)
 
+[//]: # (METHOD:GetEtfHistoricalNavFlows)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ETFNavFlowsHistorical)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlowsHistorical.md)
+
+[//]: # (OPERATION:GetEtfHistoricalNavFlows_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/nav_flows/historical)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#getetfhistoricalnavflows)
+
+<a name="getetfhistoricalnavflows"></a>
+## **GetEtfHistoricalNavFlows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEtfHistoricalNavFlows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlowsHistorical GetEtfHistoricalNavFlows (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+
+#### Exchange Traded Fund (ETF) Historical NAV Flows
+
+Returns a list of historical NAV (Net Asset Value) and flows data for Exchange Traded Funds. Includes NAV returns, NAV values, net flows data, share outstanding counts, and total net assets across multiple dates with pagination support.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetEtfHistoricalNavFlowsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var eTFsApi = new ETFsApi();
+      
+      string identifier = "SPY";
+      DateTime? startDate = 2013-10-20;
+      DateTime? endDate = 2013-10-20;
+      int? pageSize = 56;
+      string nextPage = nextPage_example;
+      
+      ETFNavFlowsHistorical result = eTFsApi.GetEtfHistoricalNavFlows(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **startDate** | DateTime?| Return NAV flows on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return NAV flows on or before this date | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlowsHistorical**](ETFNavFlowsHistorical.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ETFsApi)
+
 [//]: # (METHOD:GetEtfHistoricalStats)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ETFHistoricalStats)
@@ -472,6 +571,102 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.ETFsApi)
 
+[//]: # (METHOD:GetEtfNavFlows)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ETFNavFlows)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlows.md)
+
+[//]: # (OPERATION:GetEtfNavFlows_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/nav_flows)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#getetfnavflows)
+
+<a name="getetfnavflows"></a>
+## **GetEtfNavFlows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEtfNavFlows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlows GetEtfNavFlows (string identifier, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
+
+#### Exchange Traded Fund (ETF) NAV Flows
+
+Returns NAV (Net Asset Value) and flows data for Exchange Traded Funds. Includes NAV returns (daily, monthly, quarterly, yearly, annualized), NAV values (unadjusted and adjusted for splits/dividends), net flows data, share outstanding counts, and total net assets.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetEtfNavFlowsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var eTFsApi = new ETFsApi();
+      
+      string identifier = "SPY";
+      DateTime? startDate = 2013-10-20;
+      DateTime? endDate = 2013-10-20;
+      int? pageSize = 56;
+      string nextPage = nextPage_example;
+      
+      ETFNavFlows result = eTFsApi.GetEtfNavFlows(identifier, startDate, endDate, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **startDate** | DateTime?| Return NAV flows on or after this date | [optional]  &nbsp;
+ **endDate** | DateTime?| Return NAV flows on or before this date | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlows**](ETFNavFlows.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ETFsApi)
+
 [//]: # (METHOD:GetEtfStats)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ETFStats)
@@ -552,6 +747,98 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ETFStats**](ETFStats.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.ETFsApi)
+
+[//]: # (METHOD:GetEtfsNavFlows)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ETFNavFlowsAll)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlowsAll.md)
+
+[//]: # (OPERATION:GetEtfsNavFlows_v2)
+
+[//]: # (ENDPOINT:/etfs/nav_flows)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#getetfsnavflows)
+
+<a name="getetfsnavflows"></a>
+## **GetEtfsNavFlows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetEtfsNavFlows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlowsAll GetEtfsNavFlows (string countryCode = null, int? pageSize = null, string nextPage = null)
+
+#### Exchange Traded Funds (ETFs) Latest NAV Flows
+
+Returns the latest NAV (Net Asset Value) and flows data for all Exchange Traded Funds in the specified country, sorted by month-end assets in descending order. Each ETF appears only once with its most recent NAV flows data.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetEtfsNavFlowsExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var eTFsApi = new ETFsApi();
+      
+      string countryCode = countryCode_example;
+      int? pageSize = 56;
+      string nextPage = nextPage_example;
+      
+      ETFNavFlowsAll result = eTFsApi.GetEtfsNavFlows(countryCode, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **countryCode** | string| The ISO country code to filter ETFs by (e.g., US, CA, GB). Defaults to US. | [optional] [default to US] &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlowsAll**](ETFNavFlowsAll.md)
 
 [//]: # (END_OPERATION)
 

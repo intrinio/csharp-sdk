@@ -31,46 +31,10 @@ namespace Intrinio.SDK.Model
         {
             
             /// <summary>
-            /// Enum Realtime for value: realtime
+            /// Enum V2stockpriceintervalsourcesenum for value: $$v2_stock_price_interval_sources_enum$$
             /// </summary>
-            [EnumMember(Value = "realtime")]
-            Realtime = 1,
-            
-            /// <summary>
-            /// Enum Delayed for value: delayed
-            /// </summary>
-            [EnumMember(Value = "delayed")]
-            Delayed = 2,
-            
-            /// <summary>
-            /// Enum Nasdaqbasic for value: nasdaq_basic
-            /// </summary>
-            [EnumMember(Value = "nasdaq_basic")]
-            Nasdaqbasic = 3,
-            
-            /// <summary>
-            /// Enum Nasdaqbasicfiltered for value: nasdaq_basic_filtered
-            /// </summary>
-            [EnumMember(Value = "nasdaq_basic_filtered")]
-            Nasdaqbasicfiltered = 4,
-            
-            /// <summary>
-            /// Enum Nasdaqbasiclastsale for value: nasdaq_basic_last_sale
-            /// </summary>
-            [EnumMember(Value = "nasdaq_basic_last_sale")]
-            Nasdaqbasiclastsale = 5,
-            
-            /// <summary>
-            /// Enum Cboeone for value: cboe_one
-            /// </summary>
-            [EnumMember(Value = "cboe_one")]
-            Cboeone = 6,
-            
-            /// <summary>
-            /// Enum Equitiesedge for value: equities_edge
-            /// </summary>
-            [EnumMember(Value = "equities_edge")]
-            Equitiesedge = 7
+            [EnumMember(Value = "$$v2_stock_price_interval_sources_enum$$")]
+            V2stockpriceintervalsourcesenum = 1
         }
 
         /// <summary>

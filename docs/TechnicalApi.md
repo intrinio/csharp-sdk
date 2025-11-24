@@ -96,7 +96,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -192,7 +192,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 22;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -290,7 +290,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -388,7 +388,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? shortPeriod = 5;
       int? longPeriod = 34;
       string startDate = "2018-01-01";
@@ -488,7 +488,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -586,7 +586,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       float? standardDeviations = 2.0f;
       string priceKey = "close";
@@ -688,7 +688,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       float? constant = 0.015f;
       string startDate = "2018-01-01";
@@ -788,7 +788,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -886,7 +886,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -986,7 +986,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -1086,7 +1086,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -1184,7 +1184,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -1280,7 +1280,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? lowPeriod = 9;
       int? mediumPeriod = 26;
       int? highPeriod = 52;
@@ -1382,7 +1382,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 10;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -1480,7 +1480,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? roc1 = 10;
       int? roc2 = 15;
       int? roc3 = 20;
@@ -1594,7 +1594,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? fastPeriod = 12;
       int? slowPeriod = 26;
       int? signalPeriod = 9;
@@ -1698,7 +1698,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -1796,7 +1796,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? emaPeriod = 9;
       int? sumPeriod = 25;
       string startDate = "2018-01-01";
@@ -1896,7 +1896,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -1992,7 +1992,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -2088,7 +2088,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 10;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -2186,7 +2186,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -2286,7 +2286,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 20;
       string priceKey = "close";
       string startDate = "2018-01-01";
@@ -2386,7 +2386,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       int? signalPeriod = 3;
       string startDate = "2018-01-01";
@@ -2486,7 +2486,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 15;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -2584,7 +2584,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? lowPeriod = 13;
       int? highPeriod = 25;
       string priceKey = "close";
@@ -2686,7 +2686,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? shortPeriod = 7;
       int? mediumPeriod = 14;
       int? longPeriod = 28;
@@ -2794,7 +2794,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
@@ -2892,7 +2892,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -2988,7 +2988,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";
       int? pageSize = 100;
@@ -3084,7 +3084,7 @@ namespace Example
       
       var technicalApi = new TechnicalApi();
       
-      string identifier = "AAPL";
+      string identifier = "$$v2_ticker_default$$";
       int? period = 14;
       string startDate = "2018-01-01";
       string endDate = "2019-01-01";

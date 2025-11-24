@@ -4,6 +4,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AllExpectedEarningsDates**](CompanyApi.md#allexpectedearningsdates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
+[**ExpectedEarningsDatesByCompany**](CompanyApi.md#expectedearningsdatesbycompany) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
 [**GetAllCompanies**](CompanyApi.md#getallcompanies) | **GET** /companies | All Companies
 [**GetAllCompaniesDailyMetrics**](CompanyApi.md#getallcompaniesdailymetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 [**GetAllCompanyNews**](CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
@@ -27,6 +29,206 @@ Method | HTTP request | Description
 [**SearchCompanies**](CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 [**SharesOutstandingByCompany**](CompanyApi.md#sharesoutstandingbycompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:AllExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseAllExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseAllExpectedEarningsDates.md)
+
+[//]: # (OPERATION:AllExpectedEarningsDates_v2)
+
+[//]: # (ENDPOINT:/companies/upcoming_earnings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#allexpectedearningsdates)
+
+<a name="allexpectedearningsdates"></a>
+## **AllExpectedEarningsDates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/AllExpectedEarningsDates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseAllExpectedEarningsDates AllExpectedEarningsDates (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+
+#### All Expected Earnings Dates
+
+Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class AllExpectedEarningsDatesExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string tickers = null;
+      int? fiscalYear = null;
+      string fiscalPeriod = null;
+      DateTime? expectedDateAfter = null;
+      DateTime? expectedDateBefore = null;
+      int? pageSize = null;
+      string nextPage = null;
+      
+      ApiResponseAllExpectedEarningsDates result = companyApi.AllExpectedEarningsDates(tickers, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tickers** | string| Comma-delimited list of tickers to filter results | [optional]  &nbsp;
+ **fiscalYear** | int?| Filter by fiscal year | [optional]  &nbsp;
+ **fiscalPeriod** | string| Filter by fiscal period (Q1, Q2, Q3, FY) | [optional]  &nbsp;
+ **expectedDateAfter** | DateTime?| Returns expected dates on or after this date. Defaults to today if not provided. | [optional] [default to today] &nbsp;
+ **expectedDateBefore** | DateTime?| Returns expected dates before this date. | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseAllExpectedEarningsDates**](ApiResponseAllExpectedEarningsDates.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
+
+[//]: # (METHOD:ExpectedEarningsDatesByCompany)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyExpectedEarningsDates.md)
+
+[//]: # (OPERATION:ExpectedEarningsDatesByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/upcoming_earnings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#expectedearningsdatesbycompany)
+
+<a name="expectedearningsdatesbycompany"></a>
+## **ExpectedEarningsDatesByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/ExpectedEarningsDatesByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyExpectedEarningsDates ExpectedEarningsDatesByCompany (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+
+#### Expected Earnings Dates by Company
+
+Returns expected earnings announcement dates for a company's fiscal periods with confidence intervals and historical filing date ranges.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class ExpectedEarningsDatesByCompanyExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var companyApi = new CompanyApi();
+      
+      string identifier = "AAPL";
+      int? fiscalYear = null;
+      string fiscalPeriod = null;
+      DateTime? expectedDateAfter = null;
+      DateTime? expectedDateBefore = null;
+      int? pageSize = null;
+      string nextPage = null;
+      
+      ApiResponseCompanyExpectedEarningsDates result = companyApi.ExpectedEarningsDatesByCompany(identifier, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **fiscalYear** | int?| Filter by fiscal year | [optional]  &nbsp;
+ **fiscalPeriod** | string| Filter by fiscal period (Q1, Q2, Q3, FY) | [optional]  &nbsp;
+ **expectedDateAfter** | DateTime?| Returns expected dates on or after this date. Defaults to today if not provided. | [optional] [default to today] &nbsp;
+ **expectedDateBefore** | DateTime?| Returns expected dates before this date. | [optional]  &nbsp;
+ **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyExpectedEarningsDates**](ApiResponseCompanyExpectedEarningsDates.md)
+
+[//]: # (END_OPERATION)
 
 
 [//]: # (START_OPERATION)
@@ -679,8 +881,8 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string identifier = "AAPL";
-      string tag = "marketcap";
+      string identifier = "$$v2_company_data_point_identifier_default$$";
+      string tag = "$$v2_company_data_point_item_number_default$$";
       
       decimal? result = companyApi.GetCompanyDataPointNumber(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -698,8 +900,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_company_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -769,8 +971,8 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string identifier = "AAPL";
-      string tag = "ceo";
+      string identifier = "$$v2_company_data_point_identifier_default$$";
+      string tag = "$$v2_company_data_point_item_text_default$$";
       
       string result = companyApi.GetCompanyDataPointText(identifier, tag);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -788,8 +990,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_company_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1046,7 +1248,7 @@ Name | Type | Description  | Notes
 
 #### Historical Data for Company
 
-Returns historical values for the given `tag` and the Company with the given `identifier`
+$$v2_company_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -1075,8 +1277,8 @@ namespace Example
       
       var companyApi = new CompanyApi();
       
-      string identifier = "AAPL";
-      string tag = "marketcap";
+      string identifier = "$$v2_company_historical_data_identifier_default$$";
+      string tag = "$$v2_company_historical_data_item_default$$";
       string frequency = "daily";
       string type = null;
       DateTime? startDate = DateTime.Parse("2018-01-01");
@@ -1101,8 +1303,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | string| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | string| $$v2_company_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | string| $$v2_company_historical_data_item_description$$ |  &nbsp;
  **frequency** | string| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | string| Return historical data for given fiscal period type | [optional]  &nbsp;
  **startDate** | DateTime?| Return historical data on or after this date | [optional]  &nbsp;

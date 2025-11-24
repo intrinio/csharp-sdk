@@ -18,6 +18,72 @@ namespace Intrinio.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// All Expected Earnings Dates
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseAllExpectedEarningsDates</returns>
+        ApiResponseAllExpectedEarningsDates AllExpectedEarningsDates (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// All Expected Earnings Dates
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseAllExpectedEarningsDates</returns>
+        ApiResponse<ApiResponseAllExpectedEarningsDates> AllExpectedEarningsDatesWithHttpInfo (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Expected Earnings Dates by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyExpectedEarningsDates</returns>
+        ApiResponseCompanyExpectedEarningsDates ExpectedEarningsDatesByCompany (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Expected Earnings Dates by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyExpectedEarningsDates</returns>
+        ApiResponse<ApiResponseCompanyExpectedEarningsDates> ExpectedEarningsDatesByCompanyWithHttpInfo (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
         /// All Companies
         /// </summary>
         /// <remarks>
@@ -214,8 +280,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>decimal?</returns>
         decimal? GetCompanyDataPointNumber (string identifier, string tag);
 
@@ -226,8 +292,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
@@ -237,8 +303,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>string</returns>
         string GetCompanyDataPointText (string identifier, string tag);
 
@@ -249,8 +315,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetCompanyDataPointTextWithHttpInfo (string identifier, string tag);
         /// <summary>
@@ -339,11 +405,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -358,11 +424,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -696,6 +762,72 @@ namespace Intrinio.SDK.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// All Expected Earnings Dates
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseAllExpectedEarningsDates</returns>
+        System.Threading.Tasks.Task<ApiResponseAllExpectedEarningsDates> AllExpectedEarningsDatesAsync (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// All Expected Earnings Dates
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseAllExpectedEarningsDates)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseAllExpectedEarningsDates>> AllExpectedEarningsDatesAsyncWithHttpInfo (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Expected Earnings Dates by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyExpectedEarningsDates</returns>
+        System.Threading.Tasks.Task<ApiResponseCompanyExpectedEarningsDates> ExpectedEarningsDatesByCompanyAsync (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Expected Earnings Dates by Company
+        /// </summary>
+        /// <remarks>
+        /// Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyExpectedEarningsDates)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyExpectedEarningsDates>> ExpectedEarningsDatesByCompanyAsyncWithHttpInfo (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null);
+        /// <summary>
         /// All Companies
         /// </summary>
         /// <remarks>
@@ -892,8 +1024,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of decimal?</returns>
         System.Threading.Tasks.Task<decimal?> GetCompanyDataPointNumberAsync (string identifier, string tag);
 
@@ -904,8 +1036,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for calculations, metrics, and financial data points for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
@@ -915,8 +1047,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> GetCompanyDataPointTextAsync (string identifier, string tag);
 
@@ -927,8 +1059,8 @@ namespace Intrinio.SDK.Api
         /// Returns latest value for metadata items for a company.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
@@ -1017,11 +1149,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -1036,11 +1168,11 @@ namespace Intrinio.SDK.Api
         /// Historical Data for Company
         /// </summary>
         /// <remarks>
-        /// Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// $$v2_company_historical_data_description$$
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -1480,6 +1612,364 @@ namespace Intrinio.SDK.Api
             throw new ArgumentException("Time must be in the format 'hh:mm'");
           else
               return true;
+        }
+
+        /// <summary>
+        /// All Expected Earnings Dates Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseAllExpectedEarningsDates</returns>
+        public ApiResponseAllExpectedEarningsDates AllExpectedEarningsDates (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseAllExpectedEarningsDates> localVarResponse = AllExpectedEarningsDatesWithHttpInfo(tickers, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// All Expected Earnings Dates Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseAllExpectedEarningsDates</returns>
+        
+        public ApiResponse< ApiResponseAllExpectedEarningsDates > AllExpectedEarningsDatesWithHttpInfo (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/companies/upcoming_earnings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tickers", tickers)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (expectedDateAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_after", expectedDateAfter)); // query parameter
+            if (expectedDateBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_before", expectedDateBefore)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AllExpectedEarningsDates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseAllExpectedEarningsDates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseAllExpectedEarningsDates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseAllExpectedEarningsDates)));
+        }
+
+        /// <summary>
+        /// All Expected Earnings Dates Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseAllExpectedEarningsDates</returns>
+        public async System.Threading.Tasks.Task<ApiResponseAllExpectedEarningsDates> AllExpectedEarningsDatesAsync (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseAllExpectedEarningsDates> localVarResponse = await AllExpectedEarningsDatesAsyncWithHttpInfo(tickers, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// All Expected Earnings Dates Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">Comma-delimited list of tickers to filter results (optional)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseAllExpectedEarningsDates)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseAllExpectedEarningsDates>> AllExpectedEarningsDatesAsyncWithHttpInfo (string tickers = null, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+
+            var localVarPath = "/companies/upcoming_earnings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tickers", tickers)); // query parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (expectedDateAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_after", expectedDateAfter)); // query parameter
+            if (expectedDateBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_before", expectedDateBefore)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AllExpectedEarningsDates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseAllExpectedEarningsDates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseAllExpectedEarningsDates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseAllExpectedEarningsDates)));
+        }
+
+        /// <summary>
+        /// Expected Earnings Dates by Company Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseCompanyExpectedEarningsDates</returns>
+        public ApiResponseCompanyExpectedEarningsDates ExpectedEarningsDatesByCompany (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCompanyExpectedEarningsDates> localVarResponse = ExpectedEarningsDatesByCompanyWithHttpInfo(identifier, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Expected Earnings Dates by Company Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseCompanyExpectedEarningsDates</returns>
+        
+        public ApiResponse< ApiResponseCompanyExpectedEarningsDates > ExpectedEarningsDatesByCompanyWithHttpInfo (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->ExpectedEarningsDatesByCompany");
+
+            var localVarPath = "/companies/{identifier}/upcoming_earnings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (expectedDateAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_after", expectedDateAfter)); // query parameter
+            if (expectedDateBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_before", expectedDateBefore)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ExpectedEarningsDatesByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyExpectedEarningsDates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyExpectedEarningsDates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyExpectedEarningsDates)));
+        }
+
+        /// <summary>
+        /// Expected Earnings Dates by Company Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseCompanyExpectedEarningsDates</returns>
+        public async System.Threading.Tasks.Task<ApiResponseCompanyExpectedEarningsDates> ExpectedEarningsDatesByCompanyAsync (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseCompanyExpectedEarningsDates> localVarResponse = await ExpectedEarningsDatesByCompanyAsyncWithHttpInfo(identifier, fiscalYear, fiscalPeriod, expectedDateAfter, expectedDateBefore, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Expected Earnings Dates by Company Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
+        /// <param name="fiscalYear">Filter by fiscal year (optional)</param>
+        /// <param name="fiscalPeriod">Filter by fiscal period (Q1, Q2, Q3, FY) (optional)</param>
+        /// <param name="expectedDateAfter">Returns expected dates on or after this date. Defaults to today if not provided. (optional, default to today)</param>
+        /// <param name="expectedDateBefore">Returns expected dates before this date. (optional)</param>
+        /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseCompanyExpectedEarningsDates)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyExpectedEarningsDates>> ExpectedEarningsDatesByCompanyAsyncWithHttpInfo (string identifier, int? fiscalYear = null, string fiscalPeriod = null, DateTime? expectedDateAfter = null, DateTime? expectedDateBefore = null, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->ExpectedEarningsDatesByCompany");
+
+            var localVarPath = "/companies/{identifier}/upcoming_earnings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (fiscalYear != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_year", fiscalYear)); // query parameter
+            if (fiscalPeriod != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "fiscal_period", fiscalPeriod)); // query parameter
+            if (expectedDateAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_after", expectedDateAfter)); // query parameter
+            if (expectedDateBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expected_date_before", expectedDateBefore)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ExpectedEarningsDatesByCompany", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseCompanyExpectedEarningsDates>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseCompanyExpectedEarningsDates) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyExpectedEarningsDates)));
         }
 
         /// <summary>
@@ -2542,8 +3032,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>decimal?</returns>
         public decimal? GetCompanyDataPointNumber (string identifier, string tag)
         {
@@ -2555,8 +3045,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of decimal?</returns>
         
         public ApiResponse< decimal? > GetCompanyDataPointNumberWithHttpInfo (string identifier, string tag)
@@ -2621,8 +3111,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of decimal?</returns>
         public async System.Threading.Tasks.Task<decimal?> GetCompanyDataPointNumberAsync (string identifier, string tag)
         {
@@ -2635,8 +3125,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number) for Company Returns latest value for calculations, metrics, and financial data points for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetCompanyDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
@@ -2700,8 +3190,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>string</returns>
         public string GetCompanyDataPointText (string identifier, string tag)
         {
@@ -2713,8 +3203,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>ApiResponse of string</returns>
         
         public ApiResponse< string > GetCompanyDataPointTextWithHttpInfo (string identifier, string tag)
@@ -2779,8 +3269,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> GetCompanyDataPointTextAsync (string identifier, string tag)
         {
@@ -2793,8 +3283,8 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text) for Company Returns latest value for metadata items for a company.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_data_point_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_data_point_item_description$$</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetCompanyDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {
@@ -3267,11 +3757,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -3287,11 +3777,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -3367,11 +3857,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>
@@ -3388,11 +3878,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Historical Data for Company Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+        /// Historical Data for Company $$v2_company_historical_data_description$$
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
+        /// <param name="identifier">$$v2_company_historical_data_identifier_description$$</param>
+        /// <param name="tag">$$v2_company_historical_data_item_description$$</param>
         /// <param name="frequency">Return historical data in the given frequency (optional, default to daily)</param>
         /// <param name="type">Return historical data for given fiscal period type (optional)</param>
         /// <param name="startDate">Return historical data on or after this date (optional)</param>

@@ -171,7 +171,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       string type = null;
       var date = new Object();
       int? pageSize = 100;
@@ -267,7 +267,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       
       StockExchange result = stockExchangeApi.GetStockExchangeById(identifier);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -355,7 +355,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       decimal? minPrice = 8.14;
       int? pageSize = 100;
       string source = "delayed_sip";
@@ -449,7 +449,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       decimal? minPrice = 8.14;
       int? pageSize = 100;
       string source = "delayed_sip";
@@ -543,7 +543,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       DateTime? date = DateTime.Parse("2018-08-14");
       int? pageSize = 100;
       string nextPage = null;
@@ -637,7 +637,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       DateTime? date = DateTime.Parse("2025-06-01");
       int? pageSize = 100;
       string nextPage = null;
@@ -731,7 +731,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       DateTime? date = DateTime.Parse("2025-06-01");
       int? pageSize = 100;
       string nextPage = null;
@@ -825,7 +825,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       DateTime? date = DateTime.Parse("2018-08-14");
       DateTime? startDate = DateTime.Parse("2020-08-14");
       DateTime? endDate = DateTime.Parse("2022-08-14");
@@ -927,7 +927,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       var tickers = new List<string>();
       string source = "delayed_sip";
       bool? activeOnly = null;
@@ -1021,7 +1021,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       List<string> source = "iex,delayed_sip";
       bool? activeOnly = null;
       bool? tradedToday = null;
@@ -1121,7 +1121,7 @@ namespace Example
       
       var stockExchangeApi = new StockExchangeApi();
       
-      string identifier = "USCOMP";
+      string identifier = "$$v2_mic_default$$";
       int? pageSize = 100;
       string nextPage = null;
       

@@ -25,7 +25,7 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiResponseCompanyExpectedEarningsDates" /> class.
         /// </summary>
-        /// <param name="ExpectedEarningsDates">ExpectedEarningsDates.</param>
+        /// <param name="ExpectedEarningsDates">Expected earnings dates..</param>
         /// <param name="Company">Company.</param>
         /// <param name="NextPage">The token required to request the next page of the data. If null, no further data is available..</param>
         public ApiResponseCompanyExpectedEarningsDates(List<EarningsDateEstimate> ExpectedEarningsDates = default(List<EarningsDateEstimate>), CompanySummary Company = default(CompanySummary), string NextPage = default(string))
@@ -36,8 +36,9 @@ namespace Intrinio.SDK.Model
         }
         
         /// <summary>
-        /// Gets or Sets ExpectedEarningsDates
+        /// Expected earnings dates.
         /// </summary>
+        /// <value>Expected earnings dates.</value>
         [DataMember(Name="expected_earnings_dates", EmitDefaultValue=false)]
         public List<EarningsDateEstimate> ExpectedEarningsDates { get; set; }
 

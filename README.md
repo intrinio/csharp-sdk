@@ -581,6 +581,7 @@ Class | Method | HTTP request | Description
  - [Model.ETFSummary](docs/ETFSummary.md)
  - [Model.EarningsDateEstimate](docs/EarningsDateEstimate.md)
  - [Model.EarningsDateEstimateConfidenceIntervals](docs/EarningsDateEstimateConfidenceIntervals.md)
+ - [Model.EarningsDateEstimateWithCompany](docs/EarningsDateEstimateWithCompany.md)
  - [Model.EarningsRecord](docs/EarningsRecord.md)
  - [Model.EaseOfMovementTechnicalValue](docs/EaseOfMovementTechnicalValue.md)
  - [Model.EconomicIndex](docs/EconomicIndex.md)
@@ -717,5 +718,4 @@ Class | Method | HTTP request | Description
  - [Model.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
  - [Model.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
  - [Model.ETFNavFlows](docs/ETFNavFlows.md)
- - [Model.EarningsDateEstimateWithCompany](docs/EarningsDateEstimateWithCompany.md)
 

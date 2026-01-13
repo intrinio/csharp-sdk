@@ -17,7 +17,7 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// An estimated earnings announcement date for a company&#39;s fiscal period
+    /// EarningsDateEstimateWithCompany
     /// </summary>
     [DataContract]
     public partial class EarningsDateEstimateWithCompany :  IEquatable<EarningsDateEstimateWithCompany>, IValidatableObject
@@ -25,8 +25,6 @@ namespace Intrinio.SDK.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EarningsDateEstimateWithCompany" /> class.
         /// </summary>
-        /// <param name="CompanyId">The Intrinio ID for the company.</param>
-        /// <param name="Ticker">The ticker symbol of the company.</param>
         /// <param name="FiscalYear">The fiscal year for the earnings report.</param>
         /// <param name="FiscalPeriod">The fiscal period for the earnings report (Q1, Q2, Q3, Q4, or FY).</param>
         /// <param name="ExpectedDate">The expected date of the earnings announcement.</param>
@@ -34,10 +32,10 @@ namespace Intrinio.SDK.Model
         /// <param name="HistoricallyEarliest">The earliest date (MM-DD format) this company has historically announced earnings for this fiscal period.</param>
         /// <param name="HistoricallyLatest">The latest date (MM-DD format) this company has historically announced earnings for this fiscal period.</param>
         /// <param name="ConfidenceIntervals">Confidence intervals for the expected date, sorted by confidence level (descending).</param>
-        public EarningsDateEstimateWithCompany(string CompanyId = default(string), string Ticker = default(string), int? FiscalYear = default(int?), string FiscalPeriod = default(string), DateTime? ExpectedDate = default(DateTime?), DateTime? Expected8kAt = default(DateTime?), string HistoricallyEarliest = default(string), string HistoricallyLatest = default(string), Dictionary<string, EarningsDateEstimateConfidenceIntervals> ConfidenceIntervals = default(Dictionary<string, EarningsDateEstimateConfidenceIntervals>))
+        /// <param name="CompanyId">The Intrinio ID for the company.</param>
+        /// <param name="Ticker">The ticker symbol of the company.</param>
+        public EarningsDateEstimateWithCompany(int? FiscalYear = default(int?), string FiscalPeriod = default(string), DateTime? ExpectedDate = default(DateTime?), DateTime? Expected8kAt = default(DateTime?), string HistoricallyEarliest = default(string), string HistoricallyLatest = default(string), Dictionary<string, EarningsDateEstimateConfidenceIntervals> ConfidenceIntervals = default(Dictionary<string, EarningsDateEstimateConfidenceIntervals>), string CompanyId = default(string), string Ticker = default(string))
         {
-            this.CompanyId = CompanyId;
-            this.Ticker = Ticker;
             this.FiscalYear = FiscalYear;
             this.FiscalPeriod = FiscalPeriod;
             this.ExpectedDate = ExpectedDate;
@@ -45,22 +43,10 @@ namespace Intrinio.SDK.Model
             this.HistoricallyEarliest = HistoricallyEarliest;
             this.HistoricallyLatest = HistoricallyLatest;
             this.ConfidenceIntervals = ConfidenceIntervals;
+            this.CompanyId = CompanyId;
+            this.Ticker = Ticker;
         }
         
-        /// <summary>
-        /// The Intrinio ID for the company
-        /// </summary>
-        /// <value>The Intrinio ID for the company</value>
-        [DataMember(Name="company_id", EmitDefaultValue=false)]
-        public string CompanyId { get; set; }
-
-        /// <summary>
-        /// The ticker symbol of the company
-        /// </summary>
-        /// <value>The ticker symbol of the company</value>
-        [DataMember(Name="ticker", EmitDefaultValue=false)]
-        public string Ticker { get; set; }
-
         /// <summary>
         /// The fiscal year for the earnings report
         /// </summary>
@@ -112,6 +98,20 @@ namespace Intrinio.SDK.Model
         public Dictionary<string, EarningsDateEstimateConfidenceIntervals> ConfidenceIntervals { get; set; }
 
         /// <summary>
+        /// The Intrinio ID for the company
+        /// </summary>
+        /// <value>The Intrinio ID for the company</value>
+        [DataMember(Name="company_id", EmitDefaultValue=false)]
+        public string CompanyId { get; set; }
+
+        /// <summary>
+        /// The ticker symbol of the company
+        /// </summary>
+        /// <value>The ticker symbol of the company</value>
+        [DataMember(Name="ticker", EmitDefaultValue=false)]
+        public string Ticker { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -119,8 +119,6 @@ namespace Intrinio.SDK.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EarningsDateEstimateWithCompany {\n");
-            sb.Append("  CompanyId: ").Append(CompanyId).Append("\n");
-            sb.Append("  Ticker: ").Append(Ticker).Append("\n");
             sb.Append("  FiscalYear: ").Append(FiscalYear).Append("\n");
             sb.Append("  FiscalPeriod: ").Append(FiscalPeriod).Append("\n");
             sb.Append("  ExpectedDate: ").Append(ExpectedDate).Append("\n");
@@ -128,6 +126,8 @@ namespace Intrinio.SDK.Model
             sb.Append("  HistoricallyEarliest: ").Append(HistoricallyEarliest).Append("\n");
             sb.Append("  HistoricallyLatest: ").Append(HistoricallyLatest).Append("\n");
             sb.Append("  ConfidenceIntervals: ").Append(ConfidenceIntervals).Append("\n");
+            sb.Append("  CompanyId: ").Append(CompanyId).Append("\n");
+            sb.Append("  Ticker: ").Append(Ticker).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -163,16 +163,6 @@ namespace Intrinio.SDK.Model
 
             return 
                 (
-                    this.CompanyId == input.CompanyId ||
-                    (this.CompanyId != null &&
-                    this.CompanyId.Equals(input.CompanyId))
-                ) && 
-                (
-                    this.Ticker == input.Ticker ||
-                    (this.Ticker != null &&
-                    this.Ticker.Equals(input.Ticker))
-                ) && 
-                (
                     this.FiscalYear == input.FiscalYear ||
                     (this.FiscalYear != null &&
                     this.FiscalYear.Equals(input.FiscalYear))
@@ -206,6 +196,16 @@ namespace Intrinio.SDK.Model
                     this.ConfidenceIntervals == input.ConfidenceIntervals ||
                     this.ConfidenceIntervals != null &&
                     this.ConfidenceIntervals.SequenceEqual(input.ConfidenceIntervals)
+                ) && 
+                (
+                    this.CompanyId == input.CompanyId ||
+                    (this.CompanyId != null &&
+                    this.CompanyId.Equals(input.CompanyId))
+                ) && 
+                (
+                    this.Ticker == input.Ticker ||
+                    (this.Ticker != null &&
+                    this.Ticker.Equals(input.Ticker))
                 );
         }
 
@@ -218,10 +218,6 @@ namespace Intrinio.SDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CompanyId != null)
-                    hashCode = hashCode * 59 + this.CompanyId.GetHashCode();
-                if (this.Ticker != null)
-                    hashCode = hashCode * 59 + this.Ticker.GetHashCode();
                 if (this.FiscalYear != null)
                     hashCode = hashCode * 59 + this.FiscalYear.GetHashCode();
                 if (this.FiscalPeriod != null)
@@ -236,6 +232,10 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.HistoricallyLatest.GetHashCode();
                 if (this.ConfidenceIntervals != null)
                     hashCode = hashCode * 59 + this.ConfidenceIntervals.GetHashCode();
+                if (this.CompanyId != null)
+                    hashCode = hashCode * 59 + this.CompanyId.GetHashCode();
+                if (this.Ticker != null)
+                    hashCode = hashCode * 59 + this.Ticker.GetHashCode();
                 return hashCode;
             }
         }

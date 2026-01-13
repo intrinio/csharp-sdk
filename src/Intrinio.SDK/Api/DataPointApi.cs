@@ -20,11 +20,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>decimal?</returns>
         decimal? GetDataPointNumber (string identifier, string tag);
 
@@ -32,22 +32,22 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of decimal?</returns>
         ApiResponse<decimal?> GetDataPointNumberWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Data Point (Text)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>string</returns>
         string GetDataPointText (string identifier, string tag);
 
@@ -55,11 +55,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetDataPointTextWithHttpInfo (string identifier, string tag);
         #endregion Synchronous Operations
@@ -68,11 +68,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of decimal?</returns>
         System.Threading.Tasks.Task<decimal?> GetDataPointNumberAsync (string identifier, string tag);
 
@@ -80,22 +80,22 @@ namespace Intrinio.SDK.Api
         /// Data Point (Number)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_number_description$$
+        /// Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         System.Threading.Tasks.Task<ApiResponse<decimal?>> GetDataPointNumberAsyncWithHttpInfo (string identifier, string tag);
         /// <summary>
         /// Data Point (Text)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> GetDataPointTextAsync (string identifier, string tag);
 
@@ -103,11 +103,11 @@ namespace Intrinio.SDK.Api
         /// Data Point (Text)
         /// </summary>
         /// <remarks>
-        /// $$v2_data_point_text_description$$
+        /// Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetDataPointTextAsyncWithHttpInfo (string identifier, string tag);
         #endregion Asynchronous Operations
@@ -222,11 +222,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) $$v2_data_point_number_description$$
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>decimal?</returns>
         public decimal? GetDataPointNumber (string identifier, string tag)
         {
@@ -235,11 +235,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) $$v2_data_point_number_description$$
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of decimal?</returns>
         
         public ApiResponse< decimal? > GetDataPointNumberWithHttpInfo (string identifier, string tag)
@@ -301,11 +301,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) $$v2_data_point_number_description$$
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of decimal?</returns>
         public async System.Threading.Tasks.Task<decimal?> GetDataPointNumberAsync (string identifier, string tag)
         {
@@ -315,11 +315,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Number) $$v2_data_point_number_description$$
+        /// Data Point (Number) Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of ApiResponse (decimal?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<decimal?>> GetDataPointNumberAsyncWithHttpInfo (string identifier, string tag)
         {
@@ -380,11 +380,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) $$v2_data_point_text_description$$
+        /// Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>string</returns>
         public string GetDataPointText (string identifier, string tag)
         {
@@ -393,11 +393,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) $$v2_data_point_text_description$$
+        /// Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>ApiResponse of string</returns>
         
         public ApiResponse< string > GetDataPointTextWithHttpInfo (string identifier, string tag)
@@ -459,11 +459,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) $$v2_data_point_text_description$$
+        /// Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> GetDataPointTextAsync (string identifier, string tag)
         {
@@ -473,11 +473,11 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Data Point (Text) $$v2_data_point_text_description$$
+        /// Data Point (Text) Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">$$v2_data_point_identifier_description$$</param>
-        /// <param name="tag">$$v2_data_point_item_description$$</param>
+        /// <param name="identifier">An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)</param>
+        /// <param name="tag">An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetDataPointTextAsyncWithHttpInfo (string identifier, string tag)
         {

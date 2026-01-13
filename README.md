@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.115.0
-- Package version: 7.21.0
+- API version: 2.122.0
+- Package version: 7.22.0
 
 
 <a name="frameworks-supported"></a>
@@ -124,6 +124,7 @@ A listing of classes and methods is also provided below:
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountApi* | [**GetAccountCurrentUsage**](docs/AccountApi.md#getaccountcurrentusage) | **GET** /account | Account Current Usage
 *BulkDownloadsApi* | [**GetBulkDownloadLinks**](docs/BulkDownloadsApi.md#getbulkdownloadlinks) | **GET** /bulk_downloads/links | All Links
 *CompanyApi* | [**AllExpectedEarningsDates**](docs/CompanyApi.md#allexpectedearningsdates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
 *CompanyApi* | [**ExpectedEarningsDatesByCompany**](docs/CompanyApi.md#expectedearningsdatesbycompany) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
@@ -386,7 +387,10 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.AccountCurrentUsage](docs/AccountCurrentUsage.md)
  - [Model.AccumulationDistributionIndexTechnicalValue](docs/AccumulationDistributionIndexTechnicalValue.md)
+ - [Model.ApiResponseAccountCurrentUsages](docs/ApiResponseAccountCurrentUsages.md)
+ - [Model.ApiResponseAccountCurrentUsagesAccount](docs/ApiResponseAccountCurrentUsagesAccount.md)
  - [Model.ApiResponseAllExpectedEarningsDates](docs/ApiResponseAllExpectedEarningsDates.md)
  - [Model.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [Model.ApiResponseCompanies](docs/ApiResponseCompanies.md)

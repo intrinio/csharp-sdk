@@ -1,8 +1,8 @@
-[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseAccountCurrentUsagesAccount)
+[//]: # (CLASS:Intrinio.SDK.Model.ApiResponseAccountUsagesAccount)
 
 [//]: # (KIND:object)
 
-### Intrinio.SDK.Model.ApiResponseAccountCurrentUsagesAccount
+### Intrinio.SDK.Model.ApiResponseAccountUsagesAccount
 #### Properties
 
 [//]: # (START_DEFINITION)

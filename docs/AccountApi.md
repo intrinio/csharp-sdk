@@ -14,11 +14,11 @@ Method | HTTP request | Description
 
 [//]: # (METHOD:GetAccountCurrentUsage)
 
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseAccountCurrentUsages)
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseAccountUsages)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
-[//]: # (RETURN_TYPE_DOC:ApiResponseAccountCurrentUsages.md)
+[//]: # (RETURN_TYPE_DOC:ApiResponseAccountUsages.md)
 
 [//]: # (OPERATION:GetAccountCurrentUsage_v2)
 
@@ -33,7 +33,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseAccountCurrentUsages GetAccountCurrentUsage ()
+> ApiResponseAccountUsages GetAccountCurrentUsage ()
 
 #### Account Current Usage
 
@@ -67,7 +67,7 @@ namespace Example
       var accountApi = new AccountApi();
       
       
-      ApiResponseAccountCurrentUsages result = accountApi.GetAccountCurrentUsage();
+      ApiResponseAccountUsages result = accountApi.GetAccountCurrentUsage();
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -87,7 +87,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ApiResponseAccountCurrentUsages**](ApiResponseAccountCurrentUsages.md)
+[**ApiResponseAccountUsages**](ApiResponseAccountUsages.md)
 
 [//]: # (END_OPERATION)
 

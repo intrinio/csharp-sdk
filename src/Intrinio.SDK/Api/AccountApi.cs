@@ -24,8 +24,8 @@ namespace Intrinio.SDK.Api
         /// Returns a list of all access codes available with their current usage.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponseAccountCurrentUsages</returns>
-        ApiResponseAccountCurrentUsages GetAccountCurrentUsage ();
+        /// <returns>ApiResponseAccountUsages</returns>
+        ApiResponseAccountUsages GetAccountCurrentUsage ();
 
         /// <summary>
         /// Account Current Usage
@@ -34,8 +34,8 @@ namespace Intrinio.SDK.Api
         /// Returns a list of all access codes available with their current usage.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ApiResponseAccountCurrentUsages</returns>
-        ApiResponse<ApiResponseAccountCurrentUsages> GetAccountCurrentUsageWithHttpInfo ();
+        /// <returns>ApiResponse of ApiResponseAccountUsages</returns>
+        ApiResponse<ApiResponseAccountUsages> GetAccountCurrentUsageWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -45,8 +45,8 @@ namespace Intrinio.SDK.Api
         /// Returns a list of all access codes available with their current usage.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponseAccountCurrentUsages</returns>
-        System.Threading.Tasks.Task<ApiResponseAccountCurrentUsages> GetAccountCurrentUsageAsync ();
+        /// <returns>Task of ApiResponseAccountUsages</returns>
+        System.Threading.Tasks.Task<ApiResponseAccountUsages> GetAccountCurrentUsageAsync ();
 
         /// <summary>
         /// Account Current Usage
@@ -55,8 +55,8 @@ namespace Intrinio.SDK.Api
         /// Returns a list of all access codes available with their current usage.
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ApiResponseAccountCurrentUsages)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseAccountCurrentUsages>> GetAccountCurrentUsageAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (ApiResponseAccountUsages)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseAccountUsages>> GetAccountCurrentUsageAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -172,10 +172,10 @@ namespace Intrinio.SDK.Api
         /// Account Current Usage Returns a list of all access codes available with their current usage.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponseAccountCurrentUsages</returns>
-        public ApiResponseAccountCurrentUsages GetAccountCurrentUsage ()
+        /// <returns>ApiResponseAccountUsages</returns>
+        public ApiResponseAccountUsages GetAccountCurrentUsage ()
         {
-             ApiResponse<ApiResponseAccountCurrentUsages> localVarResponse = GetAccountCurrentUsageWithHttpInfo();
+             ApiResponse<ApiResponseAccountUsages> localVarResponse = GetAccountCurrentUsageWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -183,9 +183,9 @@ namespace Intrinio.SDK.Api
         /// Account Current Usage Returns a list of all access codes available with their current usage.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ApiResponseAccountCurrentUsages</returns>
+        /// <returns>ApiResponse of ApiResponseAccountUsages</returns>
         
-        public ApiResponse< ApiResponseAccountCurrentUsages > GetAccountCurrentUsageWithHttpInfo ()
+        public ApiResponse< ApiResponseAccountUsages > GetAccountCurrentUsageWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -230,19 +230,19 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseAccountCurrentUsages>(localVarStatusCode,
+            return new ApiResponse<ApiResponseAccountUsages>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseAccountCurrentUsages) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseAccountCurrentUsages)));
+                (ApiResponseAccountUsages) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseAccountUsages)));
         }
 
         /// <summary>
         /// Account Current Usage Returns a list of all access codes available with their current usage.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponseAccountCurrentUsages</returns>
-        public async System.Threading.Tasks.Task<ApiResponseAccountCurrentUsages> GetAccountCurrentUsageAsync ()
+        /// <returns>Task of ApiResponseAccountUsages</returns>
+        public async System.Threading.Tasks.Task<ApiResponseAccountUsages> GetAccountCurrentUsageAsync ()
         {
-             ApiResponse<ApiResponseAccountCurrentUsages> localVarResponse = await GetAccountCurrentUsageAsyncWithHttpInfo();
+             ApiResponse<ApiResponseAccountUsages> localVarResponse = await GetAccountCurrentUsageAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -251,8 +251,8 @@ namespace Intrinio.SDK.Api
         /// Account Current Usage Returns a list of all access codes available with their current usage.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ApiResponseAccountCurrentUsages)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseAccountCurrentUsages>> GetAccountCurrentUsageAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (ApiResponseAccountUsages)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseAccountUsages>> GetAccountCurrentUsageAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -297,9 +297,9 @@ namespace Intrinio.SDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ApiResponseAccountCurrentUsages>(localVarStatusCode,
+            return new ApiResponse<ApiResponseAccountUsages>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseAccountCurrentUsages) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseAccountCurrentUsages)));
+                (ApiResponseAccountUsages) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseAccountUsages)));
         }
 
     }

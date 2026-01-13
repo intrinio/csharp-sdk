@@ -60,7 +60,7 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetAccountCurrentUsage();
-            //Assert.IsInstanceOf<ApiResponseAccountCurrentUsages> (response, "response is ApiResponseAccountCurrentUsages");
+            //Assert.IsInstanceOf<ApiResponseAccountUsages> (response, "response is ApiResponseAccountUsages");
         }
         
     }

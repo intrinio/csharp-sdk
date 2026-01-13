@@ -20,13 +20,13 @@ namespace Intrinio.SDK.Model
     /// The account.
     /// </summary>
     [DataContract]
-    public partial class ApiResponseAccountCurrentUsagesAccount :  IEquatable<ApiResponseAccountCurrentUsagesAccount>, IValidatableObject
+    public partial class ApiResponseAccountUsagesAccount :  IEquatable<ApiResponseAccountUsagesAccount>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponseAccountCurrentUsagesAccount" /> class.
+        /// Initializes a new instance of the <see cref="ApiResponseAccountUsagesAccount" /> class.
         /// </summary>
         /// <param name="Email">The email address for the account..</param>
-        public ApiResponseAccountCurrentUsagesAccount(string Email = default(string))
+        public ApiResponseAccountUsagesAccount(string Email = default(string))
         {
             this.Email = Email;
         }
@@ -45,7 +45,7 @@ namespace Intrinio.SDK.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiResponseAccountCurrentUsagesAccount {\n");
+            sb.Append("class ApiResponseAccountUsagesAccount {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -67,15 +67,15 @@ namespace Intrinio.SDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiResponseAccountCurrentUsagesAccount);
+            return this.Equals(input as ApiResponseAccountUsagesAccount);
         }
 
         /// <summary>
-        /// Returns true if ApiResponseAccountCurrentUsagesAccount instances are equal
+        /// Returns true if ApiResponseAccountUsagesAccount instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiResponseAccountCurrentUsagesAccount to be compared</param>
+        /// <param name="input">Instance of ApiResponseAccountUsagesAccount to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiResponseAccountCurrentUsagesAccount input)
+        public bool Equals(ApiResponseAccountUsagesAccount input)
         {
             if (input == null)
                 return false;

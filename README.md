@@ -389,8 +389,8 @@ Class | Method | HTTP request | Description
 
  - [Model.AccountCurrentUsage](docs/AccountCurrentUsage.md)
  - [Model.AccumulationDistributionIndexTechnicalValue](docs/AccumulationDistributionIndexTechnicalValue.md)
- - [Model.ApiResponseAccountCurrentUsages](docs/ApiResponseAccountCurrentUsages.md)
- - [Model.ApiResponseAccountCurrentUsagesAccount](docs/ApiResponseAccountCurrentUsagesAccount.md)
+ - [Model.ApiResponseAccountUsages](docs/ApiResponseAccountUsages.md)
+ - [Model.ApiResponseAccountUsagesAccount](docs/ApiResponseAccountUsagesAccount.md)
  - [Model.ApiResponseAllExpectedEarningsDates](docs/ApiResponseAllExpectedEarningsDates.md)
  - [Model.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [Model.ApiResponseCompanies](docs/ApiResponseCompanies.md)

@@ -17,25 +17,26 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// ApiResponseAccountCurrentUsages
+    /// The current usages on an account.
     /// </summary>
     [DataContract]
-    public partial class ApiResponseAccountCurrentUsages :  IEquatable<ApiResponseAccountCurrentUsages>, IValidatableObject
+    public partial class ApiResponseAccountUsages :  IEquatable<ApiResponseAccountUsages>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponseAccountCurrentUsages" /> class.
+        /// Initializes a new instance of the <see cref="ApiResponseAccountUsages" /> class.
         /// </summary>
-        /// <param name="Usage">Usage.</param>
+        /// <param name="Usage">The usages on the account..</param>
         /// <param name="Account">Account.</param>
-        public ApiResponseAccountCurrentUsages(List<AccountCurrentUsage> Usage = default(List<AccountCurrentUsage>), ApiResponseAccountCurrentUsagesAccount Account = default(ApiResponseAccountCurrentUsagesAccount))
+        public ApiResponseAccountUsages(List<AccountCurrentUsage> Usage = default(List<AccountCurrentUsage>), ApiResponseAccountUsagesAccount Account = default(ApiResponseAccountUsagesAccount))
         {
             this.Usage = Usage;
             this.Account = Account;
         }
         
         /// <summary>
-        /// Gets or Sets Usage
+        /// The usages on the account.
         /// </summary>
+        /// <value>The usages on the account.</value>
         [DataMember(Name="usage", EmitDefaultValue=false)]
         public List<AccountCurrentUsage> Usage { get; set; }
 
@@ -43,7 +44,7 @@ namespace Intrinio.SDK.Model
         /// Gets or Sets Account
         /// </summary>
         [DataMember(Name="account", EmitDefaultValue=false)]
-        public ApiResponseAccountCurrentUsagesAccount Account { get; set; }
+        public ApiResponseAccountUsagesAccount Account { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +53,7 @@ namespace Intrinio.SDK.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiResponseAccountCurrentUsages {\n");
+            sb.Append("class ApiResponseAccountUsages {\n");
             sb.Append("  Usage: ").Append(Usage).Append("\n");
             sb.Append("  Account: ").Append(Account).Append("\n");
             sb.Append("}\n");
@@ -75,15 +76,15 @@ namespace Intrinio.SDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiResponseAccountCurrentUsages);
+            return this.Equals(input as ApiResponseAccountUsages);
         }
 
         /// <summary>
-        /// Returns true if ApiResponseAccountCurrentUsages instances are equal
+        /// Returns true if ApiResponseAccountUsages instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiResponseAccountCurrentUsages to be compared</param>
+        /// <param name="input">Instance of ApiResponseAccountUsages to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiResponseAccountCurrentUsages input)
+        public bool Equals(ApiResponseAccountUsages input)
         {
             if (input == null)
                 return false;

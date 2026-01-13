@@ -17,7 +17,7 @@ using SwaggerDateConverter = Intrinio.SDK.Client.SwaggerDateConverter;
 namespace Intrinio.SDK.Model
 {
     /// <summary>
-    /// ApiResponseAccountCurrentUsagesAccount
+    /// The account.
     /// </summary>
     [DataContract]
     public partial class ApiResponseAccountCurrentUsagesAccount :  IEquatable<ApiResponseAccountCurrentUsagesAccount>, IValidatableObject

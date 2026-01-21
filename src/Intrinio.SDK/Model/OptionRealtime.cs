@@ -85,7 +85,6 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised.</value>
         [DataMember(Name="expiration", EmitDefaultValue=false)]
-        [JsonConverter(typeof(SwaggerDateConverter))]
         public DateTime? Expiration { get; set; }
 
         /// <summary>

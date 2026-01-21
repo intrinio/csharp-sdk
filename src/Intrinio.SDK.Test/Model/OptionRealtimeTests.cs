@@ -83,6 +83,14 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'Expiration'
         }
         /// <summary>
+        /// Test the property 'ExpirationTime'
+        /// </summary>
+        [Test]
+        public void ExpirationTimeTest()
+        {
+            // TODO unit test for the property 'ExpirationTime'
+        }
+        /// <summary>
         /// Test the property 'Strike'
         /// </summary>
         [Test]

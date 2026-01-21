@@ -55,13 +55,15 @@ namespace Intrinio.SDK.Model
         /// <param name="Code">The Intrinio Code for the Option..</param>
         /// <param name="Ticker">The ticker symbol of the Security for the Option..</param>
         /// <param name="Expiration">The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised..</param>
+        /// <param name="ExpirationTime">The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised..</param>
         /// <param name="Strike">The strike price is the fixed price at which a derivative can be exercised, and refers to the price of the derivative’s underlying asset.  In a call option, the strike price is the price at which the option holder can purchase the underlying security.  For a put option, the strike price is the price at which the option holder can sell the underlying security..</param>
         /// <param name="Type">The type of Option (put or call)..</param>
-        public OptionRealtime(string Code = default(string), string Ticker = default(string), DateTime? Expiration = default(DateTime?), decimal? Strike = default(decimal?), TypeEnum? Type = default(TypeEnum?))
+        public OptionRealtime(string Code = default(string), string Ticker = default(string), DateTime? Expiration = default(DateTime?), DateTime? ExpirationTime = default(DateTime?), decimal? Strike = default(decimal?), TypeEnum? Type = default(TypeEnum?))
         {
             this.Code = Code;
             this.Ticker = Ticker;
             this.Expiration = Expiration;
+            this.ExpirationTime = ExpirationTime;
             this.Strike = Strike;
             this.Type = Type;
         }
@@ -85,7 +87,15 @@ namespace Intrinio.SDK.Model
         /// </summary>
         /// <value>The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised.</value>
         [DataMember(Name="expiration", EmitDefaultValue=false)]
+        [JsonConverter(typeof(SwaggerDateConverter))]
         public DateTime? Expiration { get; set; }
+
+        /// <summary>
+        /// The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised.
+        /// </summary>
+        /// <value>The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised.</value>
+        [DataMember(Name="expiration_time", EmitDefaultValue=false)]
+        public DateTime? ExpirationTime { get; set; }
 
         /// <summary>
         /// The strike price is the fixed price at which a derivative can be exercised, and refers to the price of the derivative’s underlying asset.  In a call option, the strike price is the price at which the option holder can purchase the underlying security.  For a put option, the strike price is the price at which the option holder can sell the underlying security.
@@ -106,6 +116,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Ticker: ").Append(Ticker).Append("\n");
             sb.Append("  Expiration: ").Append(Expiration).Append("\n");
+            sb.Append("  ExpirationTime: ").Append(ExpirationTime).Append("\n");
             sb.Append("  Strike: ").Append(Strike).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -158,6 +169,11 @@ namespace Intrinio.SDK.Model
                     this.Expiration.Equals(input.Expiration))
                 ) && 
                 (
+                    this.ExpirationTime == input.ExpirationTime ||
+                    (this.ExpirationTime != null &&
+                    this.ExpirationTime.Equals(input.ExpirationTime))
+                ) && 
+                (
                     this.Strike == input.Strike ||
                     (this.Strike != null &&
                     this.Strike.Equals(input.Strike))
@@ -184,6 +200,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.Ticker.GetHashCode();
                 if (this.Expiration != null)
                     hashCode = hashCode * 59 + this.Expiration.GetHashCode();
+                if (this.ExpirationTime != null)
+                    hashCode = hashCode * 59 + this.ExpirationTime.GetHashCode();
                 if (this.Strike != null)
                     hashCode = hashCode * 59 + this.Strike.GetHashCode();
                 if (this.Type != null)

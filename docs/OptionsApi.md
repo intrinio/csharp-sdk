@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**GetOptionsChainRealtime**](OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**GetOptionsExpirations**](OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**GetOptionsExpirationsEod**](OptionsApi.md#getoptionsexpirationseod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
+[**GetOptionsGainers**](OptionsApi.md#getoptionsgainers) | **GET** /options/gainers | Options Top Gainers
 [**GetOptionsGreeksByContract**](OptionsApi.md#getoptionsgreeksbycontract) | **GET** /options/greeks/{contract}/realtime | Option Greeks &amp; Derived Price by Contract
 [**GetOptionsGreeksByTicker**](OptionsApi.md#getoptionsgreeksbyticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks &amp; Derived Price by Ticker
 [**GetOptionsImpliedMoveBySymbol**](OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
@@ -24,6 +25,7 @@ Method | HTTP request | Description
 [**GetOptionsIntervalMovers**](OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 [**GetOptionsIntervalMoversChange**](OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
 [**GetOptionsIntervalMoversVolume**](OptionsApi.md#getoptionsintervalmoversvolume) | **GET** /options/interval/movers/volume | Options Intervals Movers By Volume
+[**GetOptionsLosers**](OptionsApi.md#getoptionslosers) | **GET** /options/losers | Options Top Losers
 [**GetOptionsPrices**](OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 [**GetOptionsPricesBatchRealtime**](OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**GetOptionsPricesEod**](OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
@@ -1355,6 +1357,96 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
 
+[//]: # (METHOD:GetOptionsGainers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionMovers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionMovers.md)
+
+[//]: # (OPERATION:GetOptionsGainers_v2)
+
+[//]: # (ENDPOINT:/options/gainers)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsgainers)
+
+<a name="getoptionsgainers"></a>
+## **GetOptionsGainers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsGainers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionMovers GetOptionsGainers (string mode, string nextPage = null)
+
+#### Options Top Gainers
+
+Returns a list of top gainers since last close.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsGainersExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string mode = null;
+      string nextPage = null;
+      
+      ApiResponseOptionMovers result = optionsApi.GetOptionsGainers(mode, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mode** | string| Which metric to sort by - change, percent change, or volume. |  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionMovers**](ApiResponseOptionMovers.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
 [//]: # (METHOD:GetOptionsGreeksByContract)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsGreekContractRealtime)
@@ -2013,6 +2105,96 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OptionIntervalsMoversResult**](OptionIntervalsMoversResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsLosers)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionMovers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionMovers.md)
+
+[//]: # (OPERATION:GetOptionsLosers_v2)
+
+[//]: # (ENDPOINT:/options/losers)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionslosers)
+
+<a name="getoptionslosers"></a>
+## **GetOptionsLosers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsLosers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionMovers GetOptionsLosers (string mode, string nextPage = null)
+
+#### Options Top Losers
+
+Returns a list of top losers since last close.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsLosersExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string mode = null;
+      string nextPage = null;
+      
+      ApiResponseOptionMovers result = optionsApi.GetOptionsLosers(mode, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mode** | string| Which metric to sort by - change, percent change, or volume. |  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionMovers**](ApiResponseOptionMovers.md)
 
 [//]: # (END_OPERATION)
 

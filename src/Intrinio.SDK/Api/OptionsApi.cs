@@ -459,6 +459,29 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsExpirations</returns>
         ApiResponse<ApiResponseOptionsExpirations> GetOptionsExpirationsEodWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
         /// <summary>
+        /// Options Top Gainers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top gainers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseOptionMovers</returns>
+        ApiResponseOptionMovers GetOptionsGainers (string mode, string nextPage = null);
+
+        /// <summary>
+        /// Options Top Gainers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top gainers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionMovers</returns>
+        ApiResponse<ApiResponseOptionMovers> GetOptionsGainersWithHttpInfo (string mode, string nextPage = null);
+        /// <summary>
         /// Option Greeks &amp; Derived Price by Contract
         /// </summary>
         /// <remarks>
@@ -655,6 +678,29 @@ namespace Intrinio.SDK.Api
         /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
         /// <returns>ApiResponse of OptionIntervalsMoversResult</returns>
         ApiResponse<OptionIntervalsMoversResult> GetOptionsIntervalMoversVolumeWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Options Top Losers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top losers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseOptionMovers</returns>
+        ApiResponseOptionMovers GetOptionsLosers (string mode, string nextPage = null);
+
+        /// <summary>
+        /// Options Top Losers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top losers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionMovers</returns>
+        ApiResponse<ApiResponseOptionMovers> GetOptionsLosersWithHttpInfo (string mode, string nextPage = null);
         /// <summary>
         /// Option Prices
         /// </summary>
@@ -1467,6 +1513,29 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsExpirations)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsExpirations>> GetOptionsExpirationsEodAsyncWithHttpInfo (string symbol, string after = null, string before = null, bool? includeRelatedSymbols = null);
         /// <summary>
+        /// Options Top Gainers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top gainers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseOptionMovers</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionMovers> GetOptionsGainersAsync (string mode, string nextPage = null);
+
+        /// <summary>
+        /// Options Top Gainers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top gainers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionMovers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionMovers>> GetOptionsGainersAsyncWithHttpInfo (string mode, string nextPage = null);
+        /// <summary>
         /// Option Greeks &amp; Derived Price by Contract
         /// </summary>
         /// <remarks>
@@ -1663,6 +1732,29 @@ namespace Intrinio.SDK.Api
         /// <param name="openTime">The inclusive UTC date and time the interval opens at. (optional)</param>
         /// <returns>Task of ApiResponse (OptionIntervalsMoversResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<OptionIntervalsMoversResult>> GetOptionsIntervalMoversVolumeAsyncWithHttpInfo (string source = null, DateTime? openTime = null);
+        /// <summary>
+        /// Options Top Losers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top losers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseOptionMovers</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionMovers> GetOptionsLosersAsync (string mode, string nextPage = null);
+
+        /// <summary>
+        /// Options Top Losers
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of top losers since last close.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionMovers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionMovers>> GetOptionsLosersAsyncWithHttpInfo (string mode, string nextPage = null);
         /// <summary>
         /// Option Prices
         /// </summary>
@@ -4551,6 +4643,158 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
+        /// Options Top Gainers Returns a list of top gainers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseOptionMovers</returns>
+        public ApiResponseOptionMovers GetOptionsGainers (string mode, string nextPage = null)
+        {
+             ApiResponse<ApiResponseOptionMovers> localVarResponse = GetOptionsGainersWithHttpInfo(mode, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Top Gainers Returns a list of top gainers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionMovers</returns>
+        
+        public ApiResponse< ApiResponseOptionMovers > GetOptionsGainersWithHttpInfo (string mode, string nextPage = null)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling OptionsApi->GetOptionsGainers");
+
+            var localVarPath = "/options/gainers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (mode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mode", mode)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsGainers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionMovers)));
+        }
+
+        /// <summary>
+        /// Options Top Gainers Returns a list of top gainers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseOptionMovers</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionMovers> GetOptionsGainersAsync (string mode, string nextPage = null)
+        {
+             ApiResponse<ApiResponseOptionMovers> localVarResponse = await GetOptionsGainersAsyncWithHttpInfo(mode, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Top Gainers Returns a list of top gainers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionMovers)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionMovers>> GetOptionsGainersAsyncWithHttpInfo (string mode, string nextPage = null)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling OptionsApi->GetOptionsGainers");
+
+            var localVarPath = "/options/gainers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (mode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mode", mode)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsGainers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionMovers)));
+        }
+
+        /// <summary>
         /// Option Greeks &amp; Derived Price by Contract Retrieves realtime options greeks data for a specific options contract
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5714,6 +5958,158 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<OptionIntervalsMoversResult>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (OptionIntervalsMoversResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OptionIntervalsMoversResult)));
+        }
+
+        /// <summary>
+        /// Options Top Losers Returns a list of top losers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseOptionMovers</returns>
+        public ApiResponseOptionMovers GetOptionsLosers (string mode, string nextPage = null)
+        {
+             ApiResponse<ApiResponseOptionMovers> localVarResponse = GetOptionsLosersWithHttpInfo(mode, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Top Losers Returns a list of top losers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionMovers</returns>
+        
+        public ApiResponse< ApiResponseOptionMovers > GetOptionsLosersWithHttpInfo (string mode, string nextPage = null)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling OptionsApi->GetOptionsLosers");
+
+            var localVarPath = "/options/losers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (mode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mode", mode)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsLosers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionMovers)));
+        }
+
+        /// <summary>
+        /// Options Top Losers Returns a list of top losers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseOptionMovers</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionMovers> GetOptionsLosersAsync (string mode, string nextPage = null)
+        {
+             ApiResponse<ApiResponseOptionMovers> localVarResponse = await GetOptionsLosersAsyncWithHttpInfo(mode, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Top Losers Returns a list of top losers since last close.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Which metric to sort by - change, percent change, or volume.</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionMovers)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionMovers>> GetOptionsLosersAsyncWithHttpInfo (string mode, string nextPage = null)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling OptionsApi->GetOptionsLosers");
+
+            var localVarPath = "/options/losers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (mode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "mode", mode)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsLosers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionMovers>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionMovers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionMovers)));
         }
 
         /// <summary>

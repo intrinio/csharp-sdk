@@ -293,6 +293,19 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionsGainers
+        /// </summary>
+        [Test]
+        public void GetOptionsGainersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string mode = null;
+            //string nextPage = null;
+            //var response = instance.GetOptionsGainers(mode, nextPage);
+            //Assert.IsInstanceOf<ApiResponseOptionMovers> (response, "response is ApiResponseOptionMovers");
+        }
+        
+        /// <summary>
         /// Test GetOptionsGreeksByContract
         /// </summary>
         [Test]
@@ -399,6 +412,19 @@ namespace Intrinio.SDK.Test
             //DateTime? openTime = null;
             //var response = instance.GetOptionsIntervalMoversVolume(source, openTime);
             //Assert.IsInstanceOf<OptionIntervalsMoversResult> (response, "response is OptionIntervalsMoversResult");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsLosers
+        /// </summary>
+        [Test]
+        public void GetOptionsLosersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string mode = null;
+            //string nextPage = null;
+            //var response = instance.GetOptionsLosers(mode, nextPage);
+            //Assert.IsInstanceOf<ApiResponseOptionMovers> (response, "response is ApiResponseOptionMovers");
         }
         
         /// <summary>

@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.123.0
-- Package version: 7.23.0
+- API version: 2.124.0
+- Package version: 7.24.0
 
 
 <a name="frameworks-supported"></a>
@@ -235,6 +235,7 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsChainRealtime**](docs/OptionsApi.md#getoptionschainrealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *OptionsApi* | [**GetOptionsExpirations**](docs/OptionsApi.md#getoptionsexpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 *OptionsApi* | [**GetOptionsExpirationsEod**](docs/OptionsApi.md#getoptionsexpirationseod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
+*OptionsApi* | [**GetOptionsGainers**](docs/OptionsApi.md#getoptionsgainers) | **GET** /options/gainers | Options Top Gainers
 *OptionsApi* | [**GetOptionsGreeksByContract**](docs/OptionsApi.md#getoptionsgreeksbycontract) | **GET** /options/greeks/{contract}/realtime | Option Greeks & Derived Price by Contract
 *OptionsApi* | [**GetOptionsGreeksByTicker**](docs/OptionsApi.md#getoptionsgreeksbyticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks & Derived Price by Ticker
 *OptionsApi* | [**GetOptionsImpliedMoveBySymbol**](docs/OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
@@ -242,6 +243,7 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsIntervalMovers**](docs/OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 *OptionsApi* | [**GetOptionsIntervalMoversChange**](docs/OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
 *OptionsApi* | [**GetOptionsIntervalMoversVolume**](docs/OptionsApi.md#getoptionsintervalmoversvolume) | **GET** /options/interval/movers/volume | Options Intervals Movers By Volume
+*OptionsApi* | [**GetOptionsLosers**](docs/OptionsApi.md#getoptionslosers) | **GET** /options/losers | Options Top Losers
 *OptionsApi* | [**GetOptionsPrices**](docs/OptionsApi.md#getoptionsprices) | **GET** /options/prices/{identifier} | Option Prices
 *OptionsApi* | [**GetOptionsPricesBatchRealtime**](docs/OptionsApi.md#getoptionspricesbatchrealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 *OptionsApi* | [**GetOptionsPricesEod**](docs/OptionsApi.md#getoptionspriceseod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
@@ -440,6 +442,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
  - [Model.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [Model.ApiResponseNews](docs/ApiResponseNews.md)
+ - [Model.ApiResponseOptionMovers](docs/ApiResponseOptionMovers.md)
  - [Model.ApiResponseOptionPrices](docs/ApiResponseOptionPrices.md)
  - [Model.ApiResponseOptions](docs/ApiResponseOptions.md)
  - [Model.ApiResponseOptionsAggregates](docs/ApiResponseOptionsAggregates.md)
@@ -629,6 +632,7 @@ Class | Method | HTTP request | Description
  - [Model.OptionIntervalMover](docs/OptionIntervalMover.md)
  - [Model.OptionIntervalsMoversResult](docs/OptionIntervalsMoversResult.md)
  - [Model.OptionIntervalsResult](docs/OptionIntervalsResult.md)
+ - [Model.OptionMover](docs/OptionMover.md)
  - [Model.OptionPrice](docs/OptionPrice.md)
  - [Model.OptionPriceBatchRealtime](docs/OptionPriceBatchRealtime.md)
  - [Model.OptionPriceEod](docs/OptionPriceEod.md)

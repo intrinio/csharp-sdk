@@ -70,8 +70,10 @@ namespace Intrinio.SDK.Model
         /// <param name="UpdatedDate">The date and time when the fundamental was last updated.</param>
         /// <param name="FirstCalculable">The date and time when the fundamental was first calculable.</param>
         /// <param name="EarningsDisclosedAt">The date and time when the earnings information was first disclosed via 8-K filing.</param>
+        /// <param name="StandardizedSignature">A hash signature for standardized financials. This value is used to identify when standardized financials have changed between updates..</param>
+        /// <param name="ReportedSignature">A hash signature for reported financials. This value is used to identify when reported financials have changed between updates..</param>
         /// <param name="Company">The Company that the Fundamental was belongs to.</param>
-        public Fundamental(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?), bool? IsLatest = default(bool?), DateTime? UpdatedDate = default(DateTime?), DateTime? FirstCalculable = default(DateTime?), DateTime? EarningsDisclosedAt = default(DateTime?), CompanySummary Company = default(CompanySummary))
+        public Fundamental(string Id = default(string), string StatementCode = default(string), decimal? FiscalYear = default(decimal?), string FiscalPeriod = default(string), TypeEnum? Type = default(TypeEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? FilingDate = default(DateTime?), bool? IsLatest = default(bool?), DateTime? UpdatedDate = default(DateTime?), DateTime? FirstCalculable = default(DateTime?), DateTime? EarningsDisclosedAt = default(DateTime?), string StandardizedSignature = default(string), string ReportedSignature = default(string), CompanySummary Company = default(CompanySummary))
         {
             this.Id = Id;
             this.StatementCode = StatementCode;
@@ -85,6 +87,8 @@ namespace Intrinio.SDK.Model
             this.UpdatedDate = UpdatedDate;
             this.FirstCalculable = FirstCalculable;
             this.EarningsDisclosedAt = EarningsDisclosedAt;
+            this.StandardizedSignature = StandardizedSignature;
+            this.ReportedSignature = ReportedSignature;
             this.Company = Company;
         }
         
@@ -169,6 +173,20 @@ namespace Intrinio.SDK.Model
         public DateTime? EarningsDisclosedAt { get; set; }
 
         /// <summary>
+        /// A hash signature for standardized financials. This value is used to identify when standardized financials have changed between updates.
+        /// </summary>
+        /// <value>A hash signature for standardized financials. This value is used to identify when standardized financials have changed between updates.</value>
+        [DataMember(Name="standardized_signature", EmitDefaultValue=false)]
+        public string StandardizedSignature { get; set; }
+
+        /// <summary>
+        /// A hash signature for reported financials. This value is used to identify when reported financials have changed between updates.
+        /// </summary>
+        /// <value>A hash signature for reported financials. This value is used to identify when reported financials have changed between updates.</value>
+        [DataMember(Name="reported_signature", EmitDefaultValue=false)]
+        public string ReportedSignature { get; set; }
+
+        /// <summary>
         /// The Company that the Fundamental was belongs to
         /// </summary>
         /// <value>The Company that the Fundamental was belongs to</value>
@@ -195,6 +213,8 @@ namespace Intrinio.SDK.Model
             sb.Append("  UpdatedDate: ").Append(UpdatedDate).Append("\n");
             sb.Append("  FirstCalculable: ").Append(FirstCalculable).Append("\n");
             sb.Append("  EarningsDisclosedAt: ").Append(EarningsDisclosedAt).Append("\n");
+            sb.Append("  StandardizedSignature: ").Append(StandardizedSignature).Append("\n");
+            sb.Append("  ReportedSignature: ").Append(ReportedSignature).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -291,6 +311,16 @@ namespace Intrinio.SDK.Model
                     this.EarningsDisclosedAt.Equals(input.EarningsDisclosedAt))
                 ) && 
                 (
+                    this.StandardizedSignature == input.StandardizedSignature ||
+                    (this.StandardizedSignature != null &&
+                    this.StandardizedSignature.Equals(input.StandardizedSignature))
+                ) && 
+                (
+                    this.ReportedSignature == input.ReportedSignature ||
+                    (this.ReportedSignature != null &&
+                    this.ReportedSignature.Equals(input.ReportedSignature))
+                ) && 
+                (
                     this.Company == input.Company ||
                     (this.Company != null &&
                     this.Company.Equals(input.Company))
@@ -330,6 +360,10 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.FirstCalculable.GetHashCode();
                 if (this.EarningsDisclosedAt != null)
                     hashCode = hashCode * 59 + this.EarningsDisclosedAt.GetHashCode();
+                if (this.StandardizedSignature != null)
+                    hashCode = hashCode * 59 + this.StandardizedSignature.GetHashCode();
+                if (this.ReportedSignature != null)
+                    hashCode = hashCode * 59 + this.ReportedSignature.GetHashCode();
                 if (this.Company != null)
                     hashCode = hashCode * 59 + this.Company.GetHashCode();
                 return hashCode;

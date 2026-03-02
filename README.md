@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.124.0
-- Package version: 7.24.0
+- API version: 2.127.0
+- Package version: 8.0.0
 
 
 <a name="frameworks-supported"></a>
@@ -132,7 +132,6 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**GetAllCompaniesDailyMetrics**](docs/CompanyApi.md#getallcompaniesdailymetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 *CompanyApi* | [**GetAllCompanyNews**](docs/CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
 *CompanyApi* | [**GetCompany**](docs/CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
-*CompanyApi* | [**GetCompanyAnswers**](docs/CompanyApi.md#getcompanyanswers) | **GET** /companies/{identifier}/answers | Company Answers
 *CompanyApi* | [**GetCompanyDailyMetrics**](docs/CompanyApi.md#getcompanydailymetrics) | **GET** /companies/{identifier}/daily_metrics | Company metrics by Company
 *CompanyApi* | [**GetCompanyDataPointNumber**](docs/CompanyApi.md#getcompanydatapointnumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 *CompanyApi* | [**GetCompanyDataPointText**](docs/CompanyApi.md#getcompanydatapointtext) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
@@ -147,7 +146,6 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**InsiderTransactionFilingsByCompany**](docs/CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 *CompanyApi* | [**LatestInsiderTransactionFilingByCompany**](docs/CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 *CompanyApi* | [**LookupCompanyFundamental**](docs/CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
-*CompanyApi* | [**RecognizeCompany**](docs/CompanyApi.md#recognizecompany) | **GET** /companies/recognize | Recognize Company
 *CompanyApi* | [**SearchCompanies**](docs/CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 *CompanyApi* | [**SharesOutstandingByCompany**](docs/CompanyApi.md#sharesoutstandingbycompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 *DataPointApi* | [**GetDataPointNumber**](docs/DataPointApi.md#getdatapointnumber) | **GET** /data_point/{identifier}/{tag}/number | Data Point (Number)
@@ -172,7 +170,6 @@ Class | Method | HTTP request | Description
 *ETFsApi* | [**SearchEtfs**](docs/ETFsApi.md#searchetfs) | **GET** /etfs/search | Search ETFs
 *FilingApi* | [**GetAllFilings**](docs/FilingApi.md#getallfilings) | **GET** /filings | All Filings
 *FilingApi* | [**GetAllNotes**](docs/FilingApi.md#getallnotes) | **GET** /filings/notes | All Filing Notes
-*FilingApi* | [**GetFilingAnswers**](docs/FilingApi.md#getfilinganswers) | **GET** /filings/{identifier}/answers | Filing Answers
 *FilingApi* | [**GetFilingById**](docs/FilingApi.md#getfilingbyid) | **GET** /filings/{id} | Lookup Filing
 *FilingApi* | [**GetFilingFundamentals**](docs/FilingApi.md#getfilingfundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 *FilingApi* | [**GetFilingHtml**](docs/FilingApi.md#getfilinghtml) | **GET** /filings/{identifier}/html | Filing Html
@@ -320,6 +317,10 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**GetSecurityStockPrices**](docs/SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 *SecurityApi* | [**GetSecurityTrades**](docs/SecurityApi.md#getsecuritytrades) | **GET** /securities/trades | Security Trades
 *SecurityApi* | [**GetSecurityTradesBySymbol**](docs/SecurityApi.md#getsecuritytradesbysymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
+*SecurityApi* | [**GetSecurityTradingStatus**](docs/SecurityApi.md#getsecuritytradingstatus) | **GET** /securities/{identifier}/trading_status | Security Trading Status By Security
+*SecurityApi* | [**GetSecurityTradingStatusQuotesOnly**](docs/SecurityApi.md#getsecuritytradingstatusquotesonly) | **GET** /securities/trading_status/quotes_only | Security Trading Status Quotes Only
+*SecurityApi* | [**GetSecurityTradingStatusStopped**](docs/SecurityApi.md#getsecuritytradingstatusstopped) | **GET** /securities/trading_status/stopped | Security Trading Status Stopped
+*SecurityApi* | [**GetSecurityTradingStatusTrading**](docs/SecurityApi.md#getsecuritytradingstatustrading) | **GET** /securities/trading_status/trading | Security Trading Status Trading
 *SecurityApi* | [**GetSecurityZacksAnalystRatings**](docs/SecurityApi.md#getsecurityzacksanalystratings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 *SecurityApi* | [**GetSecurityZacksAnalystRatingsSnapshot**](docs/SecurityApi.md#getsecurityzacksanalystratingssnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 *SecurityApi* | [**GetSecurityZacksEpsSurprises**](docs/SecurityApi.md#getsecurityzacksepssurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -397,7 +398,6 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [Model.ApiResponseCompanies](docs/ApiResponseCompanies.md)
  - [Model.ApiResponseCompaniesSearch](docs/ApiResponseCompaniesSearch.md)
- - [Model.ApiResponseCompanyAnswers](docs/ApiResponseCompanyAnswers.md)
  - [Model.ApiResponseCompanyDailyMetrics](docs/ApiResponseCompanyDailyMetrics.md)
  - [Model.ApiResponseCompanyExpectedEarningsDates](docs/ApiResponseCompanyExpectedEarningsDates.md)
  - [Model.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
@@ -424,7 +424,6 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseEconomicIndicesSearch](docs/ApiResponseEconomicIndicesSearch.md)
  - [Model.ApiResponseEodIndexPrices](docs/ApiResponseEodIndexPrices.md)
  - [Model.ApiResponseEodIndexPricesAll](docs/ApiResponseEodIndexPricesAll.md)
- - [Model.ApiResponseFilingAnswers](docs/ApiResponseFilingAnswers.md)
  - [Model.ApiResponseFilingFundamentals](docs/ApiResponseFilingFundamentals.md)
  - [Model.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [Model.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
@@ -506,6 +505,8 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSecurityStochasticOscillator](docs/ApiResponseSecurityStochasticOscillator.md)
  - [Model.ApiResponseSecurityStockPriceAdjustments](docs/ApiResponseSecurityStockPriceAdjustments.md)
  - [Model.ApiResponseSecurityStockPrices](docs/ApiResponseSecurityStockPrices.md)
+ - [Model.ApiResponseSecurityTradingStatus](docs/ApiResponseSecurityTradingStatus.md)
+ - [Model.ApiResponseSecurityTradingStatuses](docs/ApiResponseSecurityTradingStatuses.md)
  - [Model.ApiResponseSecurityTripleExponentialAverage](docs/ApiResponseSecurityTripleExponentialAverage.md)
  - [Model.ApiResponseSecurityTrueStrengthIndex](docs/ApiResponseSecurityTrueStrengthIndex.md)
  - [Model.ApiResponseSecurityUltimateOscillator](docs/ApiResponseSecurityUltimateOscillator.md)
@@ -674,6 +675,7 @@ Class | Method | HTTP request | Description
  - [Model.SecuritySummary](docs/SecuritySummary.md)
  - [Model.SecurityTrades](docs/SecurityTrades.md)
  - [Model.SecurityTradesResult](docs/SecurityTradesResult.md)
+ - [Model.SecurityTradingStatusSummary](docs/SecurityTradingStatusSummary.md)
  - [Model.ShortInterest](docs/ShortInterest.md)
  - [Model.ShortInterestWithSecurity](docs/ShortInterestWithSecurity.md)
  - [Model.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)

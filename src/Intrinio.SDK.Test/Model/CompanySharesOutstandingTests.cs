@@ -114,6 +114,14 @@ namespace Intrinio.SDK.Test
         {
             // TODO unit test for the property 'SharesOutstanding'
         }
+        /// <summary>
+        /// Test the property 'AdjSharesOutstanding'
+        /// </summary>
+        [Test]
+        public void AdjSharesOutstandingTest()
+        {
+            // TODO unit test for the property 'AdjSharesOutstanding'
+        }
 
     }
 

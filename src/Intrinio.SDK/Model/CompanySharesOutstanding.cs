@@ -32,7 +32,8 @@ namespace Intrinio.SDK.Model
         /// <param name="TradingSymbol">The symbol under which the security is traded in the exchange.</param>
         /// <param name="SecurityExchangeName">The name of the secuirty exchange.</param>
         /// <param name="SharesOutstanding">The amount of stock currently held by all shareholders.</param>
-        public CompanySharesOutstanding(string XbrlAxis = default(string), string XbrlMember = default(string), DateTime? EndDate = default(DateTime?), string TitleOfSecurity = default(string), string TradingSymbol = default(string), string SecurityExchangeName = default(string), decimal? SharesOutstanding = default(decimal?))
+        /// <param name="AdjSharesOutstanding">Adjusted Shares Outstanding - The shares outstanding adjusted for stock splits that have occurred since the filing was reported, making it comparable to current share counts.</param>
+        public CompanySharesOutstanding(string XbrlAxis = default(string), string XbrlMember = default(string), DateTime? EndDate = default(DateTime?), string TitleOfSecurity = default(string), string TradingSymbol = default(string), string SecurityExchangeName = default(string), decimal? SharesOutstanding = default(decimal?), decimal? AdjSharesOutstanding = default(decimal?))
         {
             this.XbrlAxis = XbrlAxis;
             this.XbrlMember = XbrlMember;
@@ -41,6 +42,7 @@ namespace Intrinio.SDK.Model
             this.TradingSymbol = TradingSymbol;
             this.SecurityExchangeName = SecurityExchangeName;
             this.SharesOutstanding = SharesOutstanding;
+            this.AdjSharesOutstanding = AdjSharesOutstanding;
         }
         
         /// <summary>
@@ -94,6 +96,13 @@ namespace Intrinio.SDK.Model
         public decimal? SharesOutstanding { get; set; }
 
         /// <summary>
+        /// Adjusted Shares Outstanding - The shares outstanding adjusted for stock splits that have occurred since the filing was reported, making it comparable to current share counts
+        /// </summary>
+        /// <value>Adjusted Shares Outstanding - The shares outstanding adjusted for stock splits that have occurred since the filing was reported, making it comparable to current share counts</value>
+        [DataMember(Name="adj_shares_outstanding", EmitDefaultValue=false)]
+        public decimal? AdjSharesOutstanding { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -108,6 +117,7 @@ namespace Intrinio.SDK.Model
             sb.Append("  TradingSymbol: ").Append(TradingSymbol).Append("\n");
             sb.Append("  SecurityExchangeName: ").Append(SecurityExchangeName).Append("\n");
             sb.Append("  SharesOutstanding: ").Append(SharesOutstanding).Append("\n");
+            sb.Append("  AdjSharesOutstanding: ").Append(AdjSharesOutstanding).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,6 +186,11 @@ namespace Intrinio.SDK.Model
                     this.SharesOutstanding == input.SharesOutstanding ||
                     (this.SharesOutstanding != null &&
                     this.SharesOutstanding.Equals(input.SharesOutstanding))
+                ) && 
+                (
+                    this.AdjSharesOutstanding == input.AdjSharesOutstanding ||
+                    (this.AdjSharesOutstanding != null &&
+                    this.AdjSharesOutstanding.Equals(input.AdjSharesOutstanding))
                 );
         }
 
@@ -202,6 +217,8 @@ namespace Intrinio.SDK.Model
                     hashCode = hashCode * 59 + this.SecurityExchangeName.GetHashCode();
                 if (this.SharesOutstanding != null)
                     hashCode = hashCode * 59 + this.SharesOutstanding.GetHashCode();
+                if (this.AdjSharesOutstanding != null)
+                    hashCode = hashCode * 59 + this.AdjSharesOutstanding.GetHashCode();
                 return hashCode;
             }
         }

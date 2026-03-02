@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**GetAllCompaniesDailyMetrics**](CompanyApi.md#getallcompaniesdailymetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 [**GetAllCompanyNews**](CompanyApi.md#getallcompanynews) | **GET** /companies/news | All News
 [**GetCompany**](CompanyApi.md#getcompany) | **GET** /companies/{identifier} | Lookup Company
-[**GetCompanyAnswers**](CompanyApi.md#getcompanyanswers) | **GET** /companies/{identifier}/answers | Company Answers
 [**GetCompanyDailyMetrics**](CompanyApi.md#getcompanydailymetrics) | **GET** /companies/{identifier}/daily_metrics | Company metrics by Company
 [**GetCompanyDataPointNumber**](CompanyApi.md#getcompanydatapointnumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 [**GetCompanyDataPointText**](CompanyApi.md#getcompanydatapointtext) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
@@ -25,7 +24,6 @@ Method | HTTP request | Description
 [**InsiderTransactionFilingsByCompany**](CompanyApi.md#insidertransactionfilingsbycompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 [**LatestInsiderTransactionFilingByCompany**](CompanyApi.md#latestinsidertransactionfilingbycompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 [**LookupCompanyFundamental**](CompanyApi.md#lookupcompanyfundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
-[**RecognizeCompany**](CompanyApi.md#recognizecompany) | **GET** /companies/recognize | Recognize Company
 [**SearchCompanies**](CompanyApi.md#searchcompanies) | **GET** /companies/search | Search Companies
 [**SharesOutstandingByCompany**](CompanyApi.md#sharesoutstandingbycompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
@@ -256,7 +254,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+> ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
 
 #### All Companies
 
@@ -297,11 +295,10 @@ namespace Example
       string industryGroup = null;
       bool? hasFundamentals = true;
       bool? hasStockPrices = true;
-      bool? theaEnabled = null;
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
+      ApiResponseCompanies result = companyApi.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -325,7 +322,6 @@ Name | Type | Description  | Notes
  **industryGroup** | string| Return companies in the given industry group | [optional]  &nbsp;
  **hasFundamentals** | bool?| Return only companies that have fundamentals when true | [optional]  &nbsp;
  **hasStockPrices** | bool?| Return only companies that have stock prices when true | [optional]  &nbsp;
- **theaEnabled** | bool?| Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -641,96 +637,6 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
 
-[//]: # (METHOD:GetCompanyAnswers)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyAnswers)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyAnswers.md)
-
-[//]: # (OPERATION:GetCompanyAnswers_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/answers)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getcompanyanswers)
-
-<a name="getcompanyanswers"></a>
-## **GetCompanyAnswers**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetCompanyAnswers_v2)
-
-[//]: # (START_OVERVIEW)
-
-> ApiResponseCompanyAnswers GetCompanyAnswers (string identifier, string query)
-
-#### Company Answers
-
-Returns answers for a question about the Company with the given `identifier`
-
-[//]: # (END_OVERVIEW)
-
-### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
-```csharp
-using System;
-using System.Diagnostics;
-using System.Collections;
-using System.Collections.Generic;
-using Intrinio.SDK.Api;
-using Intrinio.SDK.Client;
-using Intrinio.SDK.Model;
-using Newtonsoft.Json;
-
-namespace Example
-{
-  public class GetCompanyAnswersExample
-  {
-    public static void Main()
-    {
-      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-      Configuration.Default.AllowRetries = true;
-      
-      var companyApi = new CompanyApi();
-      
-      string identifier = "AAPL";
-      string query = "What do they believe in?";
-      
-      ApiResponseCompanyAnswers result = companyApi.GetCompanyAnswers(identifier, query);
-      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
-    }
-  }
-}
-```
-
-[//]: # (END_CODE_EXAMPLE)
-
-### Parameters
-
-[//]: # (START_PARAMETERS)
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **identifier** | string| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **query** | string| The query to ask the Thea API |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
-
-### Return type
-
-[**ApiResponseCompanyAnswers**](ApiResponseCompanyAnswers.md)
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
-
 [//]: # (METHOD:GetCompanyDailyMetrics)
 
 [//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyDailyMetrics)
@@ -1028,7 +934,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanyFilings GetCompanyFilings (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+> ApiResponseCompanyFilings GetCompanyFilings (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
 
 #### All Filings by Company
 
@@ -1065,11 +971,10 @@ namespace Example
       string reportType = null;
       DateTime? startDate = DateTime.Parse("2015-01-01");
       DateTime? endDate = null;
-      bool? theaEnabled = null;
       int? pageSize = 100;
       string nextPage = null;
       
-      ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, reportType, startDate, endDate, theaEnabled, pageSize, nextPage);
+      ApiResponseCompanyFilings result = companyApi.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1089,7 +994,6 @@ Name | Type | Description  | Notes
  **reportType** | string| Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
  **startDate** | DateTime?| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | DateTime?| Filed before or after the given date | [optional]  &nbsp;
- **theaEnabled** | bool?| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
  **pageSize** | int?| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -2103,94 +2007,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Fundamental**](Fundamental.md)
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio.SDK.Api.CompanyApi)
-
-[//]: # (METHOD:RecognizeCompany)
-
-[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseCompanyRecognize)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyRecognize.md)
-
-[//]: # (OPERATION:RecognizeCompany_v2)
-
-[//]: # (ENDPOINT:/companies/recognize)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#recognizecompany)
-
-<a name="recognizecompany"></a>
-## **RecognizeCompany**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/RecognizeCompany_v2)
-
-[//]: # (START_OVERVIEW)
-
-> ApiResponseCompanyRecognize RecognizeCompany (string text)
-
-#### Recognize Company
-
-Returns a list of companies recognized by the Thea API in the given `text` query string parameter.
-
-[//]: # (END_OVERVIEW)
-
-### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
-```csharp
-using System;
-using System.Diagnostics;
-using System.Collections;
-using System.Collections.Generic;
-using Intrinio.SDK.Api;
-using Intrinio.SDK.Client;
-using Intrinio.SDK.Model;
-using Newtonsoft.Json;
-
-namespace Example
-{
-  public class RecognizeCompanyExample
-  {
-    public static void Main()
-    {
-      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
-      Configuration.Default.AllowRetries = true;
-      
-      var companyApi = new CompanyApi();
-      
-      string text = "Apple";
-      
-      ApiResponseCompanyRecognize result = companyApi.RecognizeCompany(text);
-      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
-    }
-  }
-}
-```
-
-[//]: # (END_CODE_EXAMPLE)
-
-### Parameters
-
-[//]: # (START_PARAMETERS)
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **text** | string| The text sent to the Thea API to analyze |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
-
-### Return type
-
-[**ApiResponseCompanyRecognize**](ApiResponseCompanyRecognize.md)
 
 [//]: # (END_OPERATION)
 

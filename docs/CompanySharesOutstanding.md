@@ -16,6 +16,7 @@ Name | Type | Description
 **TradingSymbol** | string | The symbol under which the security is traded in the exchange &nbsp;
 **SecurityExchangeName** | string | The name of the secuirty exchange &nbsp;
 **SharesOutstanding** | decimal? | The amount of stock currently held by all shareholders &nbsp;
+**AdjSharesOutstanding** | decimal? | Adjusted Shares Outstanding - The shares outstanding adjusted for stock splits that have occurred since the filing was reported, making it comparable to current share counts &nbsp;
 
 [//]: # (END_DEFINITION)
 

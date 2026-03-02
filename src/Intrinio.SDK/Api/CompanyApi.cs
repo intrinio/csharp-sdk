@@ -98,11 +98,10 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanies</returns>
-        ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Companies
@@ -119,11 +118,10 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
-        ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseCompanies> GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Companies daily metrics
         /// </summary>
@@ -222,29 +220,6 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of Company</returns>
         ApiResponse<Company> GetCompanyWithHttpInfo (string identifier);
         /// <summary>
-        /// Company Answers
-        /// </summary>
-        /// <remarks>
-        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>ApiResponseCompanyAnswers</returns>
-        ApiResponseCompanyAnswers GetCompanyAnswers (string identifier, string query);
-
-        /// <summary>
-        /// Company Answers
-        /// </summary>
-        /// <remarks>
-        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>ApiResponse of ApiResponseCompanyAnswers</returns>
-        ApiResponse<ApiResponseCompanyAnswers> GetCompanyAnswersWithHttpInfo (string identifier, string query);
-        /// <summary>
         /// Company metrics by Company
         /// </summary>
         /// <remarks>
@@ -330,11 +305,10 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyFilings</returns>
-        ApiResponseCompanyFilings GetCompanyFilings (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponseCompanyFilings GetCompanyFilings (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Filings by Company
@@ -347,11 +321,10 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyFilings</returns>
-        ApiResponse<ApiResponseCompanyFilings> GetCompanyFilingsWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        ApiResponse<ApiResponseCompanyFilings> GetCompanyFilingsWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Fundamentals by Company
         /// </summary>
@@ -687,27 +660,6 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of Fundamental</returns>
         ApiResponse<Fundamental> LookupCompanyFundamentalWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
         /// <summary>
-        /// Recognize Company
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>ApiResponseCompanyRecognize</returns>
-        ApiResponseCompanyRecognize RecognizeCompany (string text);
-
-        /// <summary>
-        /// Recognize Company
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>ApiResponse of ApiResponseCompanyRecognize</returns>
-        ApiResponse<ApiResponseCompanyRecognize> RecognizeCompanyWithHttpInfo (string text);
-        /// <summary>
         /// Search Companies
         /// </summary>
         /// <remarks>
@@ -842,11 +794,10 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanies</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Companies
@@ -863,11 +814,10 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Companies daily metrics
         /// </summary>
@@ -966,29 +916,6 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (Company)</returns>
         System.Threading.Tasks.Task<ApiResponse<Company>> GetCompanyAsyncWithHttpInfo (string identifier);
         /// <summary>
-        /// Company Answers
-        /// </summary>
-        /// <remarks>
-        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>Task of ApiResponseCompanyAnswers</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanyAnswers> GetCompanyAnswersAsync (string identifier, string query);
-
-        /// <summary>
-        /// Company Answers
-        /// </summary>
-        /// <remarks>
-        /// Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>Task of ApiResponse (ApiResponseCompanyAnswers)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyAnswers>> GetCompanyAnswersAsyncWithHttpInfo (string identifier, string query);
-        /// <summary>
         /// Company metrics by Company
         /// </summary>
         /// <remarks>
@@ -1074,11 +1001,10 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyFilings</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanyFilings> GetCompanyFilingsAsync (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseCompanyFilings> GetCompanyFilingsAsync (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
 
         /// <summary>
         /// All Filings by Company
@@ -1091,11 +1017,10 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyFilings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFilings>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFilings>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// All Fundamentals by Company
         /// </summary>
@@ -1430,27 +1355,6 @@ namespace Intrinio.SDK.Api
         /// <param name="fiscalYear">The fiscal year</param>
         /// <returns>Task of ApiResponse (Fundamental)</returns>
         System.Threading.Tasks.Task<ApiResponse<Fundamental>> LookupCompanyFundamentalAsyncWithHttpInfo (string identifier, string statementCode, string fiscalPeriod, int? fiscalYear);
-        /// <summary>
-        /// Recognize Company
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>Task of ApiResponseCompanyRecognize</returns>
-        System.Threading.Tasks.Task<ApiResponseCompanyRecognize> RecognizeCompanyAsync (string text);
-
-        /// <summary>
-        /// Recognize Company
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </remarks>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>Task of ApiResponse (ApiResponseCompanyRecognize)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyRecognize>> RecognizeCompanyAsyncWithHttpInfo (string text);
         /// <summary>
         /// Search Companies
         /// </summary>
@@ -1984,13 +1888,12 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanies</returns>
-        public ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseCompanies GetAllCompanies (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanies> localVarResponse = GetAllCompaniesWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = GetAllCompaniesWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -2006,12 +1909,11 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanies</returns>
         
-        public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseCompanies > GetAllCompaniesWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -2044,7 +1946,6 @@ namespace Intrinio.SDK.Api
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
             if (hasFundamentals != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_fundamentals", hasFundamentals)); // query parameter
             if (hasStockPrices != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_stock_prices", hasStockPrices)); // query parameter
-            if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -2084,13 +1985,12 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanies</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseCompanies> GetAllCompaniesAsync (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanies> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanies> localVarResponse = await GetAllCompaniesAsyncWithHttpInfo(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -2107,11 +2007,10 @@ namespace Intrinio.SDK.Api
         /// <param name="industryGroup">Return companies in the given industry group (optional)</param>
         /// <param name="hasFundamentals">Return only companies that have fundamentals when true (optional)</param>
         /// <param name="hasStockPrices">Return only companies that have stock prices when true (optional)</param>
-        /// <param name="theaEnabled">Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanies)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanies>> GetAllCompaniesAsyncWithHttpInfo (DateTime? latestFilingDate = null, string sic = null, string template = null, string sector = null, string industryCategory = null, string industryGroup = null, bool? hasFundamentals = null, bool? hasStockPrices = null, int? pageSize = null, string nextPage = null)
         {
 
             var localVarPath = "/companies";
@@ -2144,7 +2043,6 @@ namespace Intrinio.SDK.Api
             if (industryGroup != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "industry_group", industryGroup)); // query parameter
             if (hasFundamentals != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_fundamentals", hasFundamentals)); // query parameter
             if (hasStockPrices != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "has_stock_prices", hasStockPrices)); // query parameter
-            if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -2701,164 +2599,6 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>ApiResponseCompanyAnswers</returns>
-        public ApiResponseCompanyAnswers GetCompanyAnswers (string identifier, string query)
-        {
-             ApiResponse<ApiResponseCompanyAnswers> localVarResponse = GetCompanyAnswersWithHttpInfo(identifier, query);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>ApiResponse of ApiResponseCompanyAnswers</returns>
-        
-        public ApiResponse< ApiResponseCompanyAnswers > GetCompanyAnswersWithHttpInfo (string identifier, string query)
-        {
-            // verify the required parameter 'identifier' is set
-            if (identifier == null)
-                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->GetCompanyAnswers");
-            // verify the required parameter 'query' is set
-            if (query == null)
-                throw new ApiException(400, "Missing required parameter 'query' when calling CompanyApi->GetCompanyAnswers");
-
-            var localVarPath = "/companies/{identifier}/answers";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-            
-            
-            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
-            if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetCompanyAnswers", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseCompanyAnswers>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseCompanyAnswers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyAnswers)));
-        }
-
-        /// <summary>
-        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>Task of ApiResponseCompanyAnswers</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanyAnswers> GetCompanyAnswersAsync (string identifier, string query)
-        {
-             ApiResponse<ApiResponseCompanyAnswers> localVarResponse = await GetCompanyAnswersAsyncWithHttpInfo(identifier, query);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Company Answers Returns answers for a question about the Company with the given &#x60;identifier&#x60;
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="identifier">A Company identifier (Ticker, CIK, LEI, Intrinio ID)</param>
-        /// <param name="query">The query to ask the Thea API</param>
-        /// <returns>Task of ApiResponse (ApiResponseCompanyAnswers)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyAnswers>> GetCompanyAnswersAsyncWithHttpInfo (string identifier, string query)
-        {
-            // verify the required parameter 'identifier' is set
-            if (identifier == null)
-                throw new ApiException(400, "Missing required parameter 'identifier' when calling CompanyApi->GetCompanyAnswers");
-            // verify the required parameter 'query' is set
-            if (query == null)
-                throw new ApiException(400, "Missing required parameter 'query' when calling CompanyApi->GetCompanyAnswers");
-
-            var localVarPath = "/companies/{identifier}/answers";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-              
-
-            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
-            if (query != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "query", query)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetCompanyAnswers", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseCompanyAnswers>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseCompanyAnswers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyAnswers)));
-        }
-
-        /// <summary>
         /// Company metrics by Company Returns the latest company metrics.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3352,13 +3092,12 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseCompanyFilings</returns>
-        public ApiResponseCompanyFilings GetCompanyFilings (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponseCompanyFilings GetCompanyFilings (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanyFilings> localVarResponse = GetCompanyFilingsWithHttpInfo(identifier, reportType, startDate, endDate, theaEnabled, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanyFilings> localVarResponse = GetCompanyFilingsWithHttpInfo(identifier, reportType, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
         }
 
@@ -3370,12 +3109,11 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseCompanyFilings</returns>
         
-        public ApiResponse< ApiResponseCompanyFilings > GetCompanyFilingsWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public ApiResponse< ApiResponseCompanyFilings > GetCompanyFilingsWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3407,7 +3145,6 @@ namespace Intrinio.SDK.Api
             if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
-            if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -3443,13 +3180,12 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseCompanyFilings</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanyFilings> GetCompanyFilingsAsync (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseCompanyFilings> GetCompanyFilingsAsync (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseCompanyFilings> localVarResponse = await GetCompanyFilingsAsyncWithHttpInfo(identifier, reportType, startDate, endDate, theaEnabled, pageSize, nextPage);
+             ApiResponse<ApiResponseCompanyFilings> localVarResponse = await GetCompanyFilingsAsyncWithHttpInfo(identifier, reportType, startDate, endDate, pageSize, nextPage);
              return localVarResponse.Data;
 
         }
@@ -3462,11 +3198,10 @@ namespace Intrinio.SDK.Api
         /// <param name="reportType">Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. (optional)</param>
         /// <param name="startDate">Filed on or after the given date (optional)</param>
         /// <param name="endDate">Filed before or after the given date (optional)</param>
-        /// <param name="theaEnabled">Return filings that have been read by our Thea NLP and are ready for our answers endpoint (optional)</param>
         /// <param name="pageSize">The number of results to return (optional, default to 100)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseCompanyFilings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFilings>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, bool? theaEnabled = null, int? pageSize = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyFilings>> GetCompanyFilingsAsyncWithHttpInfo (string identifier, string reportType = null, DateTime? startDate = null, DateTime? endDate = null, int? pageSize = null, string nextPage = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -3498,7 +3233,6 @@ namespace Intrinio.SDK.Api
             if (reportType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "report_type", reportType)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
-            if (theaEnabled != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "thea_enabled", theaEnabled)); // query parameter
             if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
@@ -5380,152 +5114,6 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<Fundamental>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (Fundamental) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fundamental)));
-        }
-
-        /// <summary>
-        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>ApiResponseCompanyRecognize</returns>
-        public ApiResponseCompanyRecognize RecognizeCompany (string text)
-        {
-             ApiResponse<ApiResponseCompanyRecognize> localVarResponse = RecognizeCompanyWithHttpInfo(text);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>ApiResponse of ApiResponseCompanyRecognize</returns>
-        
-        public ApiResponse< ApiResponseCompanyRecognize > RecognizeCompanyWithHttpInfo (string text)
-        {
-            // verify the required parameter 'text' is set
-            if (text == null)
-                throw new ApiException(400, "Missing required parameter 'text' when calling CompanyApi->RecognizeCompany");
-
-            var localVarPath = "/companies/recognize";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-            
-            
-            if (text != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "text", text)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("RecognizeCompany", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseCompanyRecognize>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseCompanyRecognize) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyRecognize)));
-        }
-
-        /// <summary>
-        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>Task of ApiResponseCompanyRecognize</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCompanyRecognize> RecognizeCompanyAsync (string text)
-        {
-             ApiResponse<ApiResponseCompanyRecognize> localVarResponse = await RecognizeCompanyAsyncWithHttpInfo(text);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Recognize Company Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
-        /// </summary>
-        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="text">The text sent to the Thea API to analyze</param>
-        /// <returns>Task of ApiResponse (ApiResponseCompanyRecognize)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCompanyRecognize>> RecognizeCompanyAsyncWithHttpInfo (string text)
-        {
-            // verify the required parameter 'text' is set
-            if (text == null)
-                throw new ApiException(400, "Missing required parameter 'text' when calling CompanyApi->RecognizeCompany");
-
-            var localVarPath = "/companies/recognize";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-              
-
-            if (text != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "text", text)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("RecognizeCompany", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ApiResponseCompanyRecognize>(localVarStatusCode,
-                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
-                (ApiResponseCompanyRecognize) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseCompanyRecognize)));
         }
 
         /// <summary>

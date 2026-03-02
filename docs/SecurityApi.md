@@ -63,6 +63,10 @@ Method | HTTP request | Description
 [**GetSecurityStockPrices**](SecurityApi.md#getsecuritystockprices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**GetSecurityTrades**](SecurityApi.md#getsecuritytrades) | **GET** /securities/trades | Security Trades
 [**GetSecurityTradesBySymbol**](SecurityApi.md#getsecuritytradesbysymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
+[**GetSecurityTradingStatus**](SecurityApi.md#getsecuritytradingstatus) | **GET** /securities/{identifier}/trading_status | Security Trading Status By Security
+[**GetSecurityTradingStatusQuotesOnly**](SecurityApi.md#getsecuritytradingstatusquotesonly) | **GET** /securities/trading_status/quotes_only | Security Trading Status Quotes Only
+[**GetSecurityTradingStatusStopped**](SecurityApi.md#getsecuritytradingstatusstopped) | **GET** /securities/trading_status/stopped | Security Trading Status Stopped
+[**GetSecurityTradingStatusTrading**](SecurityApi.md#getsecuritytradingstatustrading) | **GET** /securities/trading_status/trading | Security Trading Status Trading
 [**GetSecurityZacksAnalystRatings**](SecurityApi.md#getsecurityzacksanalystratings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 [**GetSecurityZacksAnalystRatingsSnapshot**](SecurityApi.md#getsecurityzacksanalystratingssnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 [**GetSecurityZacksEpsSurprises**](SecurityApi.md#getsecurityzacksepssurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -5804,6 +5808,372 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityTradesResult**](SecurityTradesResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityTradingStatus)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTradingStatus)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatus.md)
+
+[//]: # (OPERATION:GetSecurityTradingStatus_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/trading_status)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritytradingstatus)
+
+<a name="getsecuritytradingstatus"></a>
+## **GetSecurityTradingStatus**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityTradingStatus_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatus GetSecurityTradingStatus (string identifier, string source)
+
+#### Security Trading Status By Security
+
+Returns trading status for the specified security.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityTradingStatusExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string identifier = "AAPL";
+      string source = null;
+      
+      ApiResponseSecurityTradingStatus result = securityApi.GetSecurityTradingStatus(identifier, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **source** | string| The specific source of the data being requested. |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatus**](ApiResponseSecurityTradingStatus.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityTradingStatusQuotesOnly)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTradingStatuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (OPERATION:GetSecurityTradingStatusQuotesOnly_v2)
+
+[//]: # (ENDPOINT:/securities/trading_status/quotes_only)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritytradingstatusquotesonly)
+
+<a name="getsecuritytradingstatusquotesonly"></a>
+## **GetSecurityTradingStatusQuotesOnly**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityTradingStatusQuotesOnly_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatuses GetSecurityTradingStatusQuotesOnly (string source, int? pageSize = null, string nextPage = null)
+
+#### Security Trading Status Quotes Only
+
+Returns all securities where the current trading status is quotes_only for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityTradingStatusQuotesOnlyExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseSecurityTradingStatuses result = securityApi.GetSecurityTradingStatusQuotesOnly(source, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| The specific source of the data being requested. |  &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatuses**](ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityTradingStatusStopped)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTradingStatuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (OPERATION:GetSecurityTradingStatusStopped_v2)
+
+[//]: # (ENDPOINT:/securities/trading_status/stopped)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritytradingstatusstopped)
+
+<a name="getsecuritytradingstatusstopped"></a>
+## **GetSecurityTradingStatusStopped**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityTradingStatusStopped_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatuses GetSecurityTradingStatusStopped (string source, int? pageSize = null, string nextPage = null)
+
+#### Security Trading Status Stopped
+
+Returns all securities where the current trading status is stopped for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityTradingStatusStoppedExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseSecurityTradingStatuses result = securityApi.GetSecurityTradingStatusStopped(source, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| The specific source of the data being requested. |  &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatuses**](ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecurityTradingStatusTrading)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecurityTradingStatuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (OPERATION:GetSecurityTradingStatusTrading_v2)
+
+[//]: # (ENDPOINT:/securities/trading_status/trading)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritytradingstatustrading)
+
+<a name="getsecuritytradingstatustrading"></a>
+## **GetSecurityTradingStatusTrading**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecurityTradingStatusTrading_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatuses GetSecurityTradingStatusTrading (string source, int? pageSize = null, string nextPage = null)
+
+#### Security Trading Status Trading
+
+Returns all securities where the current trading status is trading for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecurityTradingStatusTradingExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      string source = null;
+      int? pageSize = 100;
+      string nextPage = null;
+      
+      ApiResponseSecurityTradingStatuses result = securityApi.GetSecurityTradingStatusTrading(source, pageSize, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | string| The specific source of the data being requested. |  &nbsp;
+ **pageSize** | int?| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatuses**](ApiResponseSecurityTradingStatuses.md)
 
 [//]: # (END_OPERATION)
 

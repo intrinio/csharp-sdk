@@ -103,10 +103,9 @@ namespace Intrinio.SDK.Test
             //string industryGroup = null;
             //bool? hasFundamentals = null;
             //bool? hasStockPrices = null;
-            //bool? theaEnabled = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, theaEnabled, pageSize, nextPage);
+            //var response = instance.GetAllCompanies(latestFilingDate, sic, template, sector, industryCategory, industryGroup, hasFundamentals, hasStockPrices, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanies> (response, "response is ApiResponseCompanies");
         }
         
@@ -164,19 +163,6 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
-        /// Test GetCompanyAnswers
-        /// </summary>
-        [Test]
-        public void GetCompanyAnswersTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string identifier = null;
-            //string query = null;
-            //var response = instance.GetCompanyAnswers(identifier, query);
-            //Assert.IsInstanceOf<ApiResponseCompanyAnswers> (response, "response is ApiResponseCompanyAnswers");
-        }
-        
-        /// <summary>
         /// Test GetCompanyDailyMetrics
         /// </summary>
         [Test]
@@ -229,10 +215,9 @@ namespace Intrinio.SDK.Test
             //string reportType = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //bool? theaEnabled = null;
             //int? pageSize = null;
             //string nextPage = null;
-            //var response = instance.GetCompanyFilings(identifier, reportType, startDate, endDate, theaEnabled, pageSize, nextPage);
+            //var response = instance.GetCompanyFilings(identifier, reportType, startDate, endDate, pageSize, nextPage);
             //Assert.IsInstanceOf<ApiResponseCompanyFilings> (response, "response is ApiResponseCompanyFilings");
         }
         
@@ -416,18 +401,6 @@ namespace Intrinio.SDK.Test
             //int? fiscalYear = null;
             //var response = instance.LookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear);
             //Assert.IsInstanceOf<Fundamental> (response, "response is Fundamental");
-        }
-        
-        /// <summary>
-        /// Test RecognizeCompany
-        /// </summary>
-        [Test]
-        public void RecognizeCompanyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string text = null;
-            //var response = instance.RecognizeCompany(text);
-            //Assert.IsInstanceOf<ApiResponseCompanyRecognize> (response, "response is ApiResponseCompanyRecognize");
         }
         
         /// <summary>

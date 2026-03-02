@@ -1033,6 +1033,61 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecurityTradingStatus
+        /// </summary>
+        [Test]
+        public void GetSecurityTradingStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string source = null;
+            //var response = instance.GetSecurityTradingStatus(identifier, source);
+            //Assert.IsInstanceOf<ApiResponseSecurityTradingStatus> (response, "response is ApiResponseSecurityTradingStatus");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityTradingStatusQuotesOnly
+        /// </summary>
+        [Test]
+        public void GetSecurityTradingStatusQuotesOnlyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityTradingStatusQuotesOnly(source, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityTradingStatuses> (response, "response is ApiResponseSecurityTradingStatuses");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityTradingStatusStopped
+        /// </summary>
+        [Test]
+        public void GetSecurityTradingStatusStoppedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityTradingStatusStopped(source, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityTradingStatuses> (response, "response is ApiResponseSecurityTradingStatuses");
+        }
+        
+        /// <summary>
+        /// Test GetSecurityTradingStatusTrading
+        /// </summary>
+        [Test]
+        public void GetSecurityTradingStatusTradingTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string source = null;
+            //int? pageSize = null;
+            //string nextPage = null;
+            //var response = instance.GetSecurityTradingStatusTrading(source, pageSize, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecurityTradingStatuses> (response, "response is ApiResponseSecurityTradingStatuses");
+        }
+        
+        /// <summary>
         /// Test GetSecurityZacksAnalystRatings
         /// </summary>
         [Test]

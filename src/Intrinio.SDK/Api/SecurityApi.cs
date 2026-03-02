@@ -1801,6 +1801,104 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of SecurityTradesResult</returns>
         ApiResponse<SecurityTradesResult> GetSecurityTradesBySymbolWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
         /// <summary>
+        /// Security Trading Status By Security
+        /// </summary>
+        /// <remarks>
+        /// Returns trading status for the specified security.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>ApiResponseSecurityTradingStatus</returns>
+        ApiResponseSecurityTradingStatus GetSecurityTradingStatus (string identifier, string source);
+
+        /// <summary>
+        /// Security Trading Status By Security
+        /// </summary>
+        /// <remarks>
+        /// Returns trading status for the specified security.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatus</returns>
+        ApiResponse<ApiResponseSecurityTradingStatus> GetSecurityTradingStatusWithHttpInfo (string identifier, string source);
+        /// <summary>
+        /// Security Trading Status Quotes Only
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityTradingStatuses</returns>
+        ApiResponseSecurityTradingStatuses GetSecurityTradingStatusQuotesOnly (string source, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trading Status Quotes Only
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatuses</returns>
+        ApiResponse<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusQuotesOnlyWithHttpInfo (string source, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trading Status Stopped
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is stopped for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityTradingStatuses</returns>
+        ApiResponseSecurityTradingStatuses GetSecurityTradingStatusStopped (string source, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trading Status Stopped
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is stopped for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatuses</returns>
+        ApiResponse<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusStoppedWithHttpInfo (string source, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trading Status Trading
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is trading for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityTradingStatuses</returns>
+        ApiResponseSecurityTradingStatuses GetSecurityTradingStatusTrading (string source, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trading Status Trading
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is trading for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatuses</returns>
+        ApiResponse<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusTradingWithHttpInfo (string source, int? pageSize = null, string nextPage = null);
+        /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
         /// <remarks>
@@ -3765,6 +3863,104 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (SecurityTradesResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SecurityTradesResult>> GetSecurityTradesBySymbolAsyncWithHttpInfo (string identifier, string source, DateTime? startDate = null, string startTime = null, DateTime? endDate = null, string endTime = null, string timezone = null, bool? darkpoolOnly = null, int? pageSize = null, int? minSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trading Status By Security
+        /// </summary>
+        /// <remarks>
+        /// Returns trading status for the specified security.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatus</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityTradingStatus> GetSecurityTradingStatusAsync (string identifier, string source);
+
+        /// <summary>
+        /// Security Trading Status By Security
+        /// </summary>
+        /// <remarks>
+        /// Returns trading status for the specified security.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatus>> GetSecurityTradingStatusAsyncWithHttpInfo (string identifier, string source);
+        /// <summary>
+        /// Security Trading Status Quotes Only
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatuses</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusQuotesOnlyAsync (string source, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trading Status Quotes Only
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatuses)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatuses>> GetSecurityTradingStatusQuotesOnlyAsyncWithHttpInfo (string source, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trading Status Stopped
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is stopped for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatuses</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusStoppedAsync (string source, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trading Status Stopped
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is stopped for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatuses)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatuses>> GetSecurityTradingStatusStoppedAsyncWithHttpInfo (string source, int? pageSize = null, string nextPage = null);
+        /// <summary>
+        /// Security Trading Status Trading
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is trading for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatuses</returns>
+        System.Threading.Tasks.Task<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusTradingAsync (string source, int? pageSize = null, string nextPage = null);
+
+        /// <summary>
+        /// Security Trading Status Trading
+        /// </summary>
+        /// <remarks>
+        /// Returns all securities where the current trading status is trading for the specified source.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatuses)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatuses>> GetSecurityTradingStatusTradingAsyncWithHttpInfo (string source, int? pageSize = null, string nextPage = null);
         /// <summary>
         /// Zacks Analyst Ratings for Security
         /// </summary>
@@ -14314,6 +14510,638 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<SecurityTradesResult>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (SecurityTradesResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityTradesResult)));
+        }
+
+        /// <summary>
+        /// Security Trading Status By Security Returns trading status for the specified security.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>ApiResponseSecurityTradingStatus</returns>
+        public ApiResponseSecurityTradingStatus GetSecurityTradingStatus (string identifier, string source)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatus> localVarResponse = GetSecurityTradingStatusWithHttpInfo(identifier, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Trading Status By Security Returns trading status for the specified security.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatus</returns>
+        
+        public ApiResponse< ApiResponseSecurityTradingStatus > GetSecurityTradingStatusWithHttpInfo (string identifier, string source)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityTradingStatus");
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatus");
+
+            var localVarPath = "/securities/{identifier}/trading_status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatus>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatus)));
+        }
+
+        /// <summary>
+        /// Security Trading Status By Security Returns trading status for the specified security.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatus</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityTradingStatus> GetSecurityTradingStatusAsync (string identifier, string source)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatus> localVarResponse = await GetSecurityTradingStatusAsyncWithHttpInfo(identifier, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Trading Status By Security Returns trading status for the specified security.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)</param>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatus>> GetSecurityTradingStatusAsyncWithHttpInfo (string identifier, string source)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling SecurityApi->GetSecurityTradingStatus");
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatus");
+
+            var localVarPath = "/securities/{identifier}/trading_status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatus>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatus)));
+        }
+
+        /// <summary>
+        /// Security Trading Status Quotes Only Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityTradingStatuses</returns>
+        public ApiResponseSecurityTradingStatuses GetSecurityTradingStatusQuotesOnly (string source, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatuses> localVarResponse = GetSecurityTradingStatusQuotesOnlyWithHttpInfo(source, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Trading Status Quotes Only Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatuses</returns>
+        
+        public ApiResponse< ApiResponseSecurityTradingStatuses > GetSecurityTradingStatusQuotesOnlyWithHttpInfo (string source, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatusQuotesOnly");
+
+            var localVarPath = "/securities/trading_status/quotes_only";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatusQuotesOnly", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatuses)));
+        }
+
+        /// <summary>
+        /// Security Trading Status Quotes Only Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatuses</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusQuotesOnlyAsync (string source, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatuses> localVarResponse = await GetSecurityTradingStatusQuotesOnlyAsyncWithHttpInfo(source, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Trading Status Quotes Only Returns all securities where the current trading status is quotes_only for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatuses)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatuses>> GetSecurityTradingStatusQuotesOnlyAsyncWithHttpInfo (string source, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatusQuotesOnly");
+
+            var localVarPath = "/securities/trading_status/quotes_only";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatusQuotesOnly", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatuses)));
+        }
+
+        /// <summary>
+        /// Security Trading Status Stopped Returns all securities where the current trading status is stopped for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityTradingStatuses</returns>
+        public ApiResponseSecurityTradingStatuses GetSecurityTradingStatusStopped (string source, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatuses> localVarResponse = GetSecurityTradingStatusStoppedWithHttpInfo(source, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Trading Status Stopped Returns all securities where the current trading status is stopped for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatuses</returns>
+        
+        public ApiResponse< ApiResponseSecurityTradingStatuses > GetSecurityTradingStatusStoppedWithHttpInfo (string source, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatusStopped");
+
+            var localVarPath = "/securities/trading_status/stopped";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatusStopped", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatuses)));
+        }
+
+        /// <summary>
+        /// Security Trading Status Stopped Returns all securities where the current trading status is stopped for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatuses</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusStoppedAsync (string source, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatuses> localVarResponse = await GetSecurityTradingStatusStoppedAsyncWithHttpInfo(source, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Trading Status Stopped Returns all securities where the current trading status is stopped for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatuses)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatuses>> GetSecurityTradingStatusStoppedAsyncWithHttpInfo (string source, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatusStopped");
+
+            var localVarPath = "/securities/trading_status/stopped";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatusStopped", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatuses)));
+        }
+
+        /// <summary>
+        /// Security Trading Status Trading Returns all securities where the current trading status is trading for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecurityTradingStatuses</returns>
+        public ApiResponseSecurityTradingStatuses GetSecurityTradingStatusTrading (string source, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatuses> localVarResponse = GetSecurityTradingStatusTradingWithHttpInfo(source, pageSize, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Security Trading Status Trading Returns all securities where the current trading status is trading for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecurityTradingStatuses</returns>
+        
+        public ApiResponse< ApiResponseSecurityTradingStatuses > GetSecurityTradingStatusTradingWithHttpInfo (string source, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatusTrading");
+
+            var localVarPath = "/securities/trading_status/trading";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatusTrading", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatuses)));
+        }
+
+        /// <summary>
+        /// Security Trading Status Trading Returns all securities where the current trading status is trading for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecurityTradingStatuses</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecurityTradingStatuses> GetSecurityTradingStatusTradingAsync (string source, int? pageSize = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecurityTradingStatuses> localVarResponse = await GetSecurityTradingStatusTradingAsyncWithHttpInfo(source, pageSize, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Security Trading Status Trading Returns all securities where the current trading status is trading for the specified source.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="source">The specific source of the data being requested.</param>
+        /// <param name="pageSize">The maximum number of results to return per page. (optional, default to 100)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecurityTradingStatuses)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurityTradingStatuses>> GetSecurityTradingStatusTradingAsyncWithHttpInfo (string source, int? pageSize = null, string nextPage = null)
+        {
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling SecurityApi->GetSecurityTradingStatusTrading");
+
+            var localVarPath = "/securities/trading_status/trading";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page_size", pageSize)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecurityTradingStatusTrading", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecurityTradingStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecurityTradingStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurityTradingStatuses)));
         }
 
         /// <summary>

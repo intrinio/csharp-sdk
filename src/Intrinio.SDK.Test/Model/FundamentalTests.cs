@@ -155,6 +155,22 @@ namespace Intrinio.SDK.Test
             // TODO unit test for the property 'EarningsDisclosedAt'
         }
         /// <summary>
+        /// Test the property 'StandardizedSignature'
+        /// </summary>
+        [Test]
+        public void StandardizedSignatureTest()
+        {
+            // TODO unit test for the property 'StandardizedSignature'
+        }
+        /// <summary>
+        /// Test the property 'ReportedSignature'
+        /// </summary>
+        [Test]
+        public void ReportedSignatureTest()
+        {
+            // TODO unit test for the property 'ReportedSignature'
+        }
+        /// <summary>
         /// Test the property 'Company'
         /// </summary>
         [Test]

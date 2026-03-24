@@ -970,7 +970,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
+> ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null)
 
 #### Options Chain EOD
 
@@ -1011,8 +1011,11 @@ namespace Example
       decimal? strikeLessThan = null;
       DateTime? date = null;
       bool? includeRelatedSymbols = false;
+      bool? recalculateStats = true;
+      string model = model_example;
+      string ivMode = ivMode_example;
       
-      ApiResponseOptionsChainEod result = optionsApi.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
+      ApiResponseOptionsChainEod result = optionsApi.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols, recalculateStats, model, ivMode);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -1036,6 +1039,9 @@ Name | Type | Description  | Notes
  **strikeLessThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **date** | DateTime?| The date to retrieve prices for | [optional]  &nbsp;
  **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **recalculateStats** | bool?| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | string| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | string| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -2419,7 +2425,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null)
+> ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null)
 
 #### Option Prices EOD
 
@@ -2456,8 +2462,11 @@ namespace Example
       string nextPage = null;
       DateTime? startDate = null;
       DateTime? endDate = null;
+      bool? recalculateStats = true;
+      string model = model_example;
+      string ivMode = ivMode_example;
       
-      ApiResponseOptionsPricesEod result = optionsApi.GetOptionsPricesEod(identifier, nextPage, startDate, endDate);
+      ApiResponseOptionsPricesEod result = optionsApi.GetOptionsPricesEod(identifier, nextPage, startDate, endDate, recalculateStats, model, ivMode);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -2477,6 +2486,9 @@ Name | Type | Description  | Notes
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
  **startDate** | DateTime?| The start date to retrieve prices for | [optional]  &nbsp;
  **endDate** | DateTime?| The end date to retrieve prices for | [optional]  &nbsp;
+ **recalculateStats** | bool?| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | string| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | string| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -2513,7 +2525,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+> ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null)
 
 #### Option Prices End of Day By Ticker
 
@@ -2554,9 +2566,12 @@ namespace Example
       decimal? strikeGreaterThan = null;
       decimal? strikeLessThan = null;
       bool? includeRelatedSymbols = false;
+      bool? recalculateStats = true;
+      string model = model_example;
+      string ivMode = ivMode_example;
       string nextPage = null;
       
-      ApiResponseOptionsPricesByTickerEod result = optionsApi.GetOptionsPricesEodByTicker(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+      ApiResponseOptionsPricesByTickerEod result = optionsApi.GetOptionsPricesEodByTicker(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, recalculateStats, model, ivMode, nextPage);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -2580,6 +2595,9 @@ Name | Type | Description  | Notes
  **strikeGreaterThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strikeLessThan** | decimal?| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **includeRelatedSymbols** | bool?| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **recalculateStats** | bool?| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | string| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | string| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
  **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

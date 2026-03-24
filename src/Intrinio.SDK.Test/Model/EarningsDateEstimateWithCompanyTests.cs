@@ -59,6 +59,22 @@ namespace Intrinio.SDK.Test
 
 
         /// <summary>
+        /// Test the property 'CompanyId'
+        /// </summary>
+        [Test]
+        public void CompanyIdTest()
+        {
+            // TODO unit test for the property 'CompanyId'
+        }
+        /// <summary>
+        /// Test the property 'Ticker'
+        /// </summary>
+        [Test]
+        public void TickerTest()
+        {
+            // TODO unit test for the property 'Ticker'
+        }
+        /// <summary>
         /// Test the property 'FiscalYear'
         /// </summary>
         [Test]
@@ -105,30 +121,6 @@ namespace Intrinio.SDK.Test
         public void HistoricallyLatestTest()
         {
             // TODO unit test for the property 'HistoricallyLatest'
-        }
-        /// <summary>
-        /// Test the property 'ConfidenceIntervals'
-        /// </summary>
-        [Test]
-        public void ConfidenceIntervalsTest()
-        {
-            // TODO unit test for the property 'ConfidenceIntervals'
-        }
-        /// <summary>
-        /// Test the property 'CompanyId'
-        /// </summary>
-        [Test]
-        public void CompanyIdTest()
-        {
-            // TODO unit test for the property 'CompanyId'
-        }
-        /// <summary>
-        /// Test the property 'Ticker'
-        /// </summary>
-        [Test]
-        public void TickerTest()
-        {
-            // TODO unit test for the property 'Ticker'
         }
 
     }

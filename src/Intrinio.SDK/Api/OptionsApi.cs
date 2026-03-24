@@ -333,8 +333,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponseOptionsChainEod</returns>
-        ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
+        ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null);
 
         /// <summary>
         /// Options Chain EOD
@@ -351,8 +354,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainEod</returns>
-        ApiResponse<ApiResponseOptionsChainEod> GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
+        ApiResponse<ApiResponseOptionsChainEod> GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null);
         /// <summary>
         /// Options Chain Realtime
         /// </summary>
@@ -772,8 +778,11 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponseOptionsPricesEod</returns>
-        ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null);
+        ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null);
 
         /// <summary>
         /// Option Prices EOD
@@ -786,8 +795,11 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesEod</returns>
-        ApiResponse<ApiResponseOptionsPricesEod> GetOptionsPricesEodWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null);
+        ApiResponse<ApiResponseOptionsPricesEod> GetOptionsPricesEodWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null);
         /// <summary>
         /// Option Prices End of Day By Ticker
         /// </summary>
@@ -803,9 +815,12 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionsPricesByTickerEod</returns>
-        ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
+        ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null);
 
         /// <summary>
         /// Option Prices End of Day By Ticker
@@ -822,9 +837,12 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesByTickerEod</returns>
-        ApiResponse<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
+        ApiResponse<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null);
         /// <summary>
         /// Option Prices Realtime
         /// </summary>
@@ -1387,8 +1405,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainEod</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null);
 
         /// <summary>
         /// Options Chain EOD
@@ -1405,8 +1426,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainEod)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null);
         /// <summary>
         /// Options Chain Realtime
         /// </summary>
@@ -1826,8 +1850,11 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesEod</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsPricesEod> GetOptionsPricesEodAsync (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsPricesEod> GetOptionsPricesEodAsync (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null);
 
         /// <summary>
         /// Option Prices EOD
@@ -1840,8 +1867,11 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesEod)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesEod>> GetOptionsPricesEodAsyncWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesEod>> GetOptionsPricesEodAsyncWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null);
         /// <summary>
         /// Option Prices End of Day By Ticker
         /// </summary>
@@ -1857,9 +1887,12 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesByTickerEod</returns>
-        System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerAsync (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerAsync (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null);
 
         /// <summary>
         /// Option Prices End of Day By Ticker
@@ -1876,9 +1909,12 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesByTickerEod)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerEod>> GetOptionsPricesEodByTickerAsyncWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerEod>> GetOptionsPricesEodByTickerAsyncWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null);
         /// <summary>
         /// Option Prices Realtime
         /// </summary>
@@ -3890,10 +3926,13 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponseOptionsChainEod</returns>
-        public ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
+        public ApiResponseOptionsChainEod GetOptionsChainEod (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
-             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = GetOptionsChainEodWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
+             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = GetOptionsChainEodWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols, recalculateStats, model, ivMode);
              return localVarResponse.Data;
         }
 
@@ -3909,9 +3948,12 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsChainEod</returns>
         
-        public ApiResponse< ApiResponseOptionsChainEod > GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
+        public ApiResponse< ApiResponseOptionsChainEod > GetOptionsChainEodWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -3950,6 +3992,9 @@ namespace Intrinio.SDK.Api
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
             if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (recalculateStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "recalculate_stats", recalculateStats)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -3987,10 +4032,13 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponseOptionsChainEod</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsChainEod> GetOptionsChainEodAsync (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
-             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = await GetOptionsChainEodAsyncWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
+             ApiResponse<ApiResponseOptionsChainEod> localVarResponse = await GetOptionsChainEodAsyncWithHttpInfo(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols, recalculateStats, model, ivMode);
              return localVarResponse.Data;
 
         }
@@ -4007,8 +4055,11 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="date">The date to retrieve prices for (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainEod)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainEod>> GetOptionsChainEodAsyncWithHttpInfo (string symbol, string expiration, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, DateTime? date = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -4047,6 +4098,9 @@ namespace Intrinio.SDK.Api
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (date != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
             if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (recalculateStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "recalculate_stats", recalculateStats)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -6482,10 +6536,13 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponseOptionsPricesEod</returns>
-        public ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null)
+        public ApiResponseOptionsPricesEod GetOptionsPricesEod (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
-             ApiResponse<ApiResponseOptionsPricesEod> localVarResponse = GetOptionsPricesEodWithHttpInfo(identifier, nextPage, startDate, endDate);
+             ApiResponse<ApiResponseOptionsPricesEod> localVarResponse = GetOptionsPricesEodWithHttpInfo(identifier, nextPage, startDate, endDate, recalculateStats, model, ivMode);
              return localVarResponse.Data;
         }
 
@@ -6497,9 +6554,12 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesEod</returns>
         
-        public ApiResponse< ApiResponseOptionsPricesEod > GetOptionsPricesEodWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null)
+        public ApiResponse< ApiResponseOptionsPricesEod > GetOptionsPricesEodWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -6531,6 +6591,9 @@ namespace Intrinio.SDK.Api
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (recalculateStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "recalculate_stats", recalculateStats)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -6564,10 +6627,13 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesEod</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesEod> GetOptionsPricesEodAsync (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesEod> GetOptionsPricesEodAsync (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
-             ApiResponse<ApiResponseOptionsPricesEod> localVarResponse = await GetOptionsPricesEodAsyncWithHttpInfo(identifier, nextPage, startDate, endDate);
+             ApiResponse<ApiResponseOptionsPricesEod> localVarResponse = await GetOptionsPricesEodAsyncWithHttpInfo(identifier, nextPage, startDate, endDate, recalculateStats, model, ivMode);
              return localVarResponse.Data;
 
         }
@@ -6580,8 +6646,11 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <param name="startDate">The start date to retrieve prices for (optional)</param>
         /// <param name="endDate">The end date to retrieve prices for (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesEod)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesEod>> GetOptionsPricesEodAsyncWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesEod>> GetOptionsPricesEodAsyncWithHttpInfo (string identifier, string nextPage = null, DateTime? startDate = null, DateTime? endDate = null, bool? recalculateStats = null, string model = null, string ivMode = null)
         {
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -6613,6 +6682,9 @@ namespace Intrinio.SDK.Api
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (recalculateStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "recalculate_stats", recalculateStats)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -6650,11 +6722,14 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponseOptionsPricesByTickerEod</returns>
-        public ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        public ApiResponseOptionsPricesByTickerEod GetOptionsPricesEodByTicker (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseOptionsPricesByTickerEod> localVarResponse = GetOptionsPricesEodByTickerWithHttpInfo(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+             ApiResponse<ApiResponseOptionsPricesByTickerEod> localVarResponse = GetOptionsPricesEodByTickerWithHttpInfo(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, recalculateStats, model, ivMode, nextPage);
              return localVarResponse.Data;
         }
 
@@ -6670,10 +6745,13 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsPricesByTickerEod</returns>
         
-        public ApiResponse< ApiResponseOptionsPricesByTickerEod > GetOptionsPricesEodByTickerWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        public ApiResponse< ApiResponseOptionsPricesByTickerEod > GetOptionsPricesEodByTickerWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -6709,6 +6787,9 @@ namespace Intrinio.SDK.Api
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (recalculateStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "recalculate_stats", recalculateStats)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required
@@ -6747,11 +6828,14 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponseOptionsPricesByTickerEod</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerAsync (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponseOptionsPricesByTickerEod> GetOptionsPricesEodByTickerAsync (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null)
         {
-             ApiResponse<ApiResponseOptionsPricesByTickerEod> localVarResponse = await GetOptionsPricesEodByTickerAsyncWithHttpInfo(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+             ApiResponse<ApiResponseOptionsPricesByTickerEod> localVarResponse = await GetOptionsPricesEodByTickerAsyncWithHttpInfo(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, recalculateStats, model, ivMode, nextPage);
              return localVarResponse.Data;
 
         }
@@ -6768,9 +6852,12 @@ namespace Intrinio.SDK.Api
         /// <param name="strikeGreaterThan">The strike price of the option contract. This will return options contracts with strike prices greater than this price. (optional)</param>
         /// <param name="strikeLessThan">The strike price of the option contract. This will return options contracts with strike prices less than this price. (optional)</param>
         /// <param name="includeRelatedSymbols">Include related symbols that end in a 1 or 2 because of a corporate action. (optional)</param>
+        /// <param name="recalculateStats">Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. (optional, default to false)</param>
+        /// <param name="model">The options pricing model to use when recalculating stats. (optional, default to black_scholes)</param>
+        /// <param name="ivMode">The implied volatility calculation mode to use when recalculating stats. (optional)</param>
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsPricesByTickerEod)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerEod>> GetOptionsPricesEodByTickerAsyncWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, string nextPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsPricesByTickerEod>> GetOptionsPricesEodByTickerAsyncWithHttpInfo (string symbol, int? pageSize = null, Object date = null, string type = null, decimal? strike = null, decimal? strikeGreaterThan = null, decimal? strikeLessThan = null, bool? includeRelatedSymbols = null, bool? recalculateStats = null, string model = null, string ivMode = null, string nextPage = null)
         {
             // verify the required parameter 'symbol' is set
             if (symbol == null)
@@ -6806,6 +6893,9 @@ namespace Intrinio.SDK.Api
             if (strikeGreaterThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_greater_than", strikeGreaterThan)); // query parameter
             if (strikeLessThan != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike_less_than", strikeLessThan)); // query parameter
             if (includeRelatedSymbols != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "include_related_symbols", includeRelatedSymbols)); // query parameter
+            if (recalculateStats != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "recalculate_stats", recalculateStats)); // query parameter
+            if (model != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "model", model)); // query parameter
+            if (ivMode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "iv_mode", ivMode)); // query parameter
             if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
 
             // authentication (ApiKeyAuth) required

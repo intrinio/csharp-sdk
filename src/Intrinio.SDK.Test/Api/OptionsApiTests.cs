@@ -231,7 +231,10 @@ namespace Intrinio.SDK.Test
             //decimal? strikeLessThan = null;
             //DateTime? date = null;
             //bool? includeRelatedSymbols = null;
-            //var response = instance.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols);
+            //bool? recalculateStats = null;
+            //string model = null;
+            //string ivMode = null;
+            //var response = instance.GetOptionsChainEod(symbol, expiration, type, strike, strikeGreaterThan, strikeLessThan, date, includeRelatedSymbols, recalculateStats, model, ivMode);
             //Assert.IsInstanceOf<ApiResponseOptionsChainEod> (response, "response is ApiResponseOptionsChainEod");
         }
         
@@ -471,7 +474,10 @@ namespace Intrinio.SDK.Test
             //string nextPage = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //var response = instance.GetOptionsPricesEod(identifier, nextPage, startDate, endDate);
+            //bool? recalculateStats = null;
+            //string model = null;
+            //string ivMode = null;
+            //var response = instance.GetOptionsPricesEod(identifier, nextPage, startDate, endDate, recalculateStats, model, ivMode);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesEod> (response, "response is ApiResponseOptionsPricesEod");
         }
         
@@ -490,8 +496,11 @@ namespace Intrinio.SDK.Test
             //decimal? strikeGreaterThan = null;
             //decimal? strikeLessThan = null;
             //bool? includeRelatedSymbols = null;
+            //bool? recalculateStats = null;
+            //string model = null;
+            //string ivMode = null;
             //string nextPage = null;
-            //var response = instance.GetOptionsPricesEodByTicker(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, nextPage);
+            //var response = instance.GetOptionsPricesEodByTicker(symbol, pageSize, date, type, strike, strikeGreaterThan, strikeLessThan, includeRelatedSymbols, recalculateStats, model, ivMode, nextPage);
             //Assert.IsInstanceOf<ApiResponseOptionsPricesByTickerEod> (response, "response is ApiResponseOptionsPricesByTickerEod");
         }
         

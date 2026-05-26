@@ -75,6 +75,62 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseSecurities</returns>
         ApiResponse<ApiResponseSecurities> GetAllSecuritiesWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
         /// <summary>
+        /// Daily Short Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesDailyShortVolume</returns>
+        ApiResponseSecuritiesDailyShortVolume GetSecuritiesDailyShortVolume (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null);
+
+        /// <summary>
+        /// Daily Short Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesDailyShortVolume</returns>
+        ApiResponse<ApiResponseSecuritiesDailyShortVolume> GetSecuritiesDailyShortVolumeWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null);
+        /// <summary>
+        /// Daily Short Volume Consolidated
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesDailyShortVolumeConsolidated</returns>
+        ApiResponseSecuritiesDailyShortVolumeConsolidated GetSecuritiesDailyShortVolumeConsolidated (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+
+        /// <summary>
+        /// Daily Short Volume Consolidated
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesDailyShortVolumeConsolidated</returns>
+        ApiResponse<ApiResponseSecuritiesDailyShortVolumeConsolidated> GetSecuritiesDailyShortVolumeConsolidatedWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+        /// <summary>
         /// Latest Dividend Records for All Securities
         /// </summary>
         /// <remarks>
@@ -1589,8 +1645,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>SecuritySnapshotsResult</returns>
-        SecuritySnapshotsResult GetSecuritySnapshots (DateTime? atDatetime = null);
+        SecuritySnapshotsResult GetSecuritySnapshots (DateTime? atDatetime = null, string source = null);
 
         /// <summary>
         /// Realtime Stock Prices Snapshot
@@ -1600,8 +1657,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>ApiResponse of SecuritySnapshotsResult</returns>
-        ApiResponse<SecuritySnapshotsResult> GetSecuritySnapshotsWithHttpInfo (DateTime? atDatetime = null);
+        ApiResponse<SecuritySnapshotsResult> GetSecuritySnapshotsWithHttpInfo (DateTime? atDatetime = null, string source = null);
         /// <summary>
         /// Stock Price Adjustments by Security
         /// </summary>
@@ -2137,6 +2195,62 @@ namespace Intrinio.SDK.Api
         /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseSecurities)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseSecurities>> GetAllSecuritiesAsyncWithHttpInfo (bool? active = null, bool? delisted = null, string code = null, string currency = null, string ticker = null, string name = null, string compositeMic = null, string exchangeMic = null, DateTime? stockPricesAfter = null, DateTime? stockPricesBefore = null, string cik = null, string figi = null, string compositeFigi = null, string shareClassFigi = null, string figiUniqueId = null, bool? includeNonFigi = null, int? pageSize = null, bool? primaryListing = null, string nextPage = null);
+        /// <summary>
+        /// Daily Short Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesDailyShortVolume</returns>
+        System.Threading.Tasks.Task<ApiResponseSecuritiesDailyShortVolume> GetSecuritiesDailyShortVolumeAsync (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null);
+
+        /// <summary>
+        /// Daily Short Volume
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesDailyShortVolume)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesDailyShortVolume>> GetSecuritiesDailyShortVolumeAsyncWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null);
+        /// <summary>
+        /// Daily Short Volume Consolidated
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesDailyShortVolumeConsolidated</returns>
+        System.Threading.Tasks.Task<ApiResponseSecuritiesDailyShortVolumeConsolidated> GetSecuritiesDailyShortVolumeConsolidatedAsync (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
+
+        /// <summary>
+        /// Daily Short Volume Consolidated
+        /// </summary>
+        /// <remarks>
+        /// Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesDailyShortVolumeConsolidated)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesDailyShortVolumeConsolidated>> GetSecuritiesDailyShortVolumeConsolidatedAsyncWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null);
         /// <summary>
         /// Latest Dividend Records for All Securities
         /// </summary>
@@ -3652,8 +3766,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>Task of SecuritySnapshotsResult</returns>
-        System.Threading.Tasks.Task<SecuritySnapshotsResult> GetSecuritySnapshotsAsync (DateTime? atDatetime = null);
+        System.Threading.Tasks.Task<SecuritySnapshotsResult> GetSecuritySnapshotsAsync (DateTime? atDatetime = null, string source = null);
 
         /// <summary>
         /// Realtime Stock Prices Snapshot
@@ -3663,8 +3778,9 @@ namespace Intrinio.SDK.Api
         /// </remarks>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>Task of ApiResponse (SecuritySnapshotsResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecuritySnapshotsResult>> GetSecuritySnapshotsAsyncWithHttpInfo (DateTime? atDatetime = null);
+        System.Threading.Tasks.Task<ApiResponse<SecuritySnapshotsResult>> GetSecuritySnapshotsAsyncWithHttpInfo (DateTime? atDatetime = null, string source = null);
         /// <summary>
         /// Stock Price Adjustments by Security
         /// </summary>
@@ -4498,6 +4614,328 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseSecurities>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseSecurities) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecurities)));
+        }
+
+        /// <summary>
+        /// Daily Short Volume Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesDailyShortVolume</returns>
+        public ApiResponseSecuritiesDailyShortVolume GetSecuritiesDailyShortVolume (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecuritiesDailyShortVolume> localVarResponse = GetSecuritiesDailyShortVolumeWithHttpInfo(tickers, startDate, endDate, sortBy, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Daily Short Volume Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesDailyShortVolume</returns>
+        
+        public ApiResponse< ApiResponseSecuritiesDailyShortVolume > GetSecuritiesDailyShortVolumeWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null)
+        {
+
+            var localVarPath = "/securities/daily_short_volume";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (sortBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_by", sortBy)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesDailyShortVolume", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesDailyShortVolume>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesDailyShortVolume) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesDailyShortVolume)));
+        }
+
+        /// <summary>
+        /// Daily Short Volume Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesDailyShortVolume</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecuritiesDailyShortVolume> GetSecuritiesDailyShortVolumeAsync (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecuritiesDailyShortVolume> localVarResponse = await GetSecuritiesDailyShortVolumeAsyncWithHttpInfo(tickers, startDate, endDate, sortBy, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Daily Short Volume Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA&#39;s Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn&#39;t determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the &#x60;/securities/daily_short_volume/consolidated&#x60; endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day&#39;s accumulated short volume 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="sortBy">Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesDailyShortVolume)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesDailyShortVolume>> GetSecuritiesDailyShortVolumeAsyncWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null)
+        {
+
+            var localVarPath = "/securities/daily_short_volume";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (sortBy != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "sort_by", sortBy)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesDailyShortVolume", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesDailyShortVolume>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesDailyShortVolume) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesDailyShortVolume)));
+        }
+
+        /// <summary>
+        /// Daily Short Volume Consolidated Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponseSecuritiesDailyShortVolumeConsolidated</returns>
+        public ApiResponseSecuritiesDailyShortVolumeConsolidated GetSecuritiesDailyShortVolumeConsolidated (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecuritiesDailyShortVolumeConsolidated> localVarResponse = GetSecuritiesDailyShortVolumeConsolidatedWithHttpInfo(tickers, startDate, endDate, nextPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Daily Short Volume Consolidated Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>ApiResponse of ApiResponseSecuritiesDailyShortVolumeConsolidated</returns>
+        
+        public ApiResponse< ApiResponseSecuritiesDailyShortVolumeConsolidated > GetSecuritiesDailyShortVolumeConsolidatedWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+
+            var localVarPath = "/securities/daily_short_volume/consolidated";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesDailyShortVolumeConsolidated", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesDailyShortVolumeConsolidated>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesDailyShortVolumeConsolidated) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesDailyShortVolumeConsolidated)));
+        }
+
+        /// <summary>
+        /// Daily Short Volume Consolidated Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponseSecuritiesDailyShortVolumeConsolidated</returns>
+        public async System.Threading.Tasks.Task<ApiResponseSecuritiesDailyShortVolumeConsolidated> GetSecuritiesDailyShortVolumeConsolidatedAsync (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+             ApiResponse<ApiResponseSecuritiesDailyShortVolumeConsolidated> localVarResponse = await GetSecuritiesDailyShortVolumeConsolidatedAsyncWithHttpInfo(tickers, startDate, endDate, nextPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Daily Short Volume Consolidated Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included &#x60;sources&#x60; field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tickers">A list of one or more security tickers to filter results (optional)</param>
+        /// <param name="startDate">The start date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="endDate">The end date for the data (inclusive) in YYYY-MM-DD format (optional)</param>
+        /// <param name="nextPage">Gets the next page of data from a previous API call (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseSecuritiesDailyShortVolumeConsolidated)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseSecuritiesDailyShortVolumeConsolidated>> GetSecuritiesDailyShortVolumeConsolidatedAsyncWithHttpInfo (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+        {
+
+            var localVarPath = "/securities/daily_short_volume/consolidated";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (tickers != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("csv", "tickers", tickers)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "start_date", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "end_date", endDate)); // query parameter
+            if (nextPage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "next_page", nextPage)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSecuritiesDailyShortVolumeConsolidated", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseSecuritiesDailyShortVolumeConsolidated>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseSecuritiesDailyShortVolumeConsolidated) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseSecuritiesDailyShortVolumeConsolidated)));
         }
 
         /// <summary>
@@ -13279,10 +13717,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>SecuritySnapshotsResult</returns>
-        public SecuritySnapshotsResult GetSecuritySnapshots (DateTime? atDatetime = null)
+        public SecuritySnapshotsResult GetSecuritySnapshots (DateTime? atDatetime = null, string source = null)
         {
-             ApiResponse<SecuritySnapshotsResult> localVarResponse = GetSecuritySnapshotsWithHttpInfo(atDatetime);
+             ApiResponse<SecuritySnapshotsResult> localVarResponse = GetSecuritySnapshotsWithHttpInfo(atDatetime, source);
              return localVarResponse.Data;
         }
 
@@ -13291,9 +13730,10 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>ApiResponse of SecuritySnapshotsResult</returns>
         
-        public ApiResponse< SecuritySnapshotsResult > GetSecuritySnapshotsWithHttpInfo (DateTime? atDatetime = null)
+        public ApiResponse< SecuritySnapshotsResult > GetSecuritySnapshotsWithHttpInfo (DateTime? atDatetime = null, string source = null)
         {
 
             var localVarPath = "/securities/snapshots";
@@ -13319,6 +13759,7 @@ namespace Intrinio.SDK.Api
             
             
             if (atDatetime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "at_datetime", atDatetime)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
@@ -13349,10 +13790,11 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>Task of SecuritySnapshotsResult</returns>
-        public async System.Threading.Tasks.Task<SecuritySnapshotsResult> GetSecuritySnapshotsAsync (DateTime? atDatetime = null)
+        public async System.Threading.Tasks.Task<SecuritySnapshotsResult> GetSecuritySnapshotsAsync (DateTime? atDatetime = null, string source = null)
         {
-             ApiResponse<SecuritySnapshotsResult> localVarResponse = await GetSecuritySnapshotsAsyncWithHttpInfo(atDatetime);
+             ApiResponse<SecuritySnapshotsResult> localVarResponse = await GetSecuritySnapshotsAsyncWithHttpInfo(atDatetime, source);
              return localVarResponse.Data;
 
         }
@@ -13362,8 +13804,9 @@ namespace Intrinio.SDK.Api
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="atDatetime">The UTC date and time (with url-encoded spaces) the snapshot will cover. (optional)</param>
+        /// <param name="source">Return the snapshot from the specified source. (optional)</param>
         /// <returns>Task of ApiResponse (SecuritySnapshotsResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecuritySnapshotsResult>> GetSecuritySnapshotsAsyncWithHttpInfo (DateTime? atDatetime = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecuritySnapshotsResult>> GetSecuritySnapshotsAsyncWithHttpInfo (DateTime? atDatetime = null, string source = null)
         {
 
             var localVarPath = "/securities/snapshots";
@@ -13389,6 +13832,7 @@ namespace Intrinio.SDK.Api
               
 
             if (atDatetime != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "at_datetime", atDatetime)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))

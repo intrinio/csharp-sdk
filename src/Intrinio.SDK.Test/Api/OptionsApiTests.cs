@@ -113,6 +113,36 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetOptionSurface
+        /// </summary>
+        [Test]
+        public void GetOptionSurfaceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //string surfaceType = null;
+            //string source = null;
+            //var response = instance.GetOptionSurface(identifier, surfaceType, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsSurface> (response, "response is ApiResponseOptionsSurface");
+        }
+        
+        /// <summary>
+        /// Test GetOptionSurface_0
+        /// </summary>
+        [Test]
+        public void GetOptionSurface_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string identifier = null;
+            //DateTime? expiration = null;
+            //decimal? strike = null;
+            //string source = null;
+            //DateTime? asOf = null;
+            //var response = instance.GetOptionSurface_0(identifier, expiration, strike, source, asOf);
+            //Assert.IsInstanceOf<ApiResponseOptionsSurfaceInterpolatedIv> (response, "response is ApiResponseOptionsSurfaceInterpolatedIv");
+        }
+        
+        /// <summary>
         /// Test GetOptionTrades
         /// </summary>
         [Test]
@@ -359,6 +389,22 @@ namespace Intrinio.SDK.Test
             //Object percentage = null;
             //string source = null;
             //var response = instance.GetOptionsImpliedMoveBySymbol(symbol, expirationDate, percentage, source);
+            //Assert.IsInstanceOf<ApiResponseOptionsImpliedMove> (response, "response is ApiResponseOptionsImpliedMove");
+        }
+        
+        /// <summary>
+        /// Test GetOptionsImpliedMoveHistoricalBySymbol
+        /// </summary>
+        [Test]
+        public void GetOptionsImpliedMoveHistoricalBySymbolTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string symbol = null;
+            //DateTime? expirationDate = null;
+            //DateTime? asOfDate = null;
+            //Object percentage = null;
+            //string source = null;
+            //var response = instance.GetOptionsImpliedMoveHistoricalBySymbol(symbol, expirationDate, asOfDate, percentage, source);
             //Assert.IsInstanceOf<ApiResponseOptionsImpliedMove> (response, "response is ApiResponseOptionsImpliedMove");
         }
         

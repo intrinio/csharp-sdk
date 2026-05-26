@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.129.0
-- Package version: 8.1.0 
+- API version: 2.135.4
+- Package version: 8.2.0
 
 
 <a name="frameworks-supported"></a>
@@ -124,7 +124,8 @@ A listing of classes and methods is also provided below:
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountApi* | [**GetAccountCurrentUsage**](docs/AccountApi.md#getaccountcurrentusage) | **GET** /account | Account Current Usage
+*AccountApi* | [**GetAccountCurrentUsage**](docs/AccountApi.md#getaccountcurrentusage) | **GET** /account/current_usage | Account Current Usage
+*AccountApi* | [**GetAccountWebsocketStatuses**](docs/AccountApi.md#getaccountwebsocketstatuses) | **GET** /account/websocket_statuses | Account Websocket Statuses
 *BulkDownloadsApi* | [**GetBulkDownloadLinks**](docs/BulkDownloadsApi.md#getbulkdownloadlinks) | **GET** /bulk_downloads/links | All Links
 *CompanyApi* | [**AllExpectedEarningsDates**](docs/CompanyApi.md#allexpectedearningsdates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
 *CompanyApi* | [**ExpectedEarningsDatesByCompany**](docs/CompanyApi.md#expectedearningsdatesbycompany) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
@@ -223,6 +224,8 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionAggregates**](docs/OptionsApi.md#getoptionaggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 *OptionsApi* | [**GetOptionExpirationsRealtime**](docs/OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 *OptionsApi* | [**GetOptionStrikesRealtime**](docs/OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+*OptionsApi* | [**GetOptionSurface**](docs/OptionsApi.md#getoptionsurface) | **GET** /options/surface/{identifier} | Option Surface
+*OptionsApi* | [**GetOptionSurface_0**](docs/OptionsApi.md#getoptionsurface_0) | **GET** /options/surface/{identifier}/interpolate_iv | Option Surface
 *OptionsApi* | [**GetOptionTrades**](docs/OptionsApi.md#getoptiontrades) | **GET** /options/trades | Option Trades
 *OptionsApi* | [**GetOptionTradesByContract**](docs/OptionsApi.md#getoptiontradesbycontract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 *OptionsApi* | [**GetOptions**](docs/OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
@@ -235,7 +238,8 @@ Class | Method | HTTP request | Description
 *OptionsApi* | [**GetOptionsGainers**](docs/OptionsApi.md#getoptionsgainers) | **GET** /options/gainers | Options Top Gainers
 *OptionsApi* | [**GetOptionsGreeksByContract**](docs/OptionsApi.md#getoptionsgreeksbycontract) | **GET** /options/greeks/{contract}/realtime | Option Greeks & Derived Price by Contract
 *OptionsApi* | [**GetOptionsGreeksByTicker**](docs/OptionsApi.md#getoptionsgreeksbyticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks & Derived Price by Ticker
-*OptionsApi* | [**GetOptionsImpliedMoveBySymbol**](docs/OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
+*OptionsApi* | [**GetOptionsImpliedMoveBySymbol**](docs/OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move (Expected) Realtime
+*OptionsApi* | [**GetOptionsImpliedMoveHistoricalBySymbol**](docs/OptionsApi.md#getoptionsimpliedmovehistoricalbysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date} | Options Implied Move (Expected) Historical
 *OptionsApi* | [**GetOptionsIntervalByContract**](docs/OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 *OptionsApi* | [**GetOptionsIntervalMovers**](docs/OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 *OptionsApi* | [**GetOptionsIntervalMoversChange**](docs/OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -259,6 +263,8 @@ Class | Method | HTTP request | Description
 *OwnersApi* | [**InstitutionalHoldingsByOwner**](docs/OwnersApi.md#institutionalholdingsbyowner) | **GET** /owners/{identifier}/institutional_holdings | Institutional Holdings by Owner
 *OwnersApi* | [**SearchOwners**](docs/OwnersApi.md#searchowners) | **GET** /owners/search | Search Owners
 *SecurityApi* | [**GetAllSecurities**](docs/SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
+*SecurityApi* | [**GetSecuritiesDailyShortVolume**](docs/SecurityApi.md#getsecuritiesdailyshortvolume) | **GET** /securities/daily_short_volume | Daily Short Volume
+*SecurityApi* | [**GetSecuritiesDailyShortVolumeConsolidated**](docs/SecurityApi.md#getsecuritiesdailyshortvolumeconsolidated) | **GET** /securities/daily_short_volume/consolidated | Daily Short Volume Consolidated
 *SecurityApi* | [**GetSecuritiesLatestDividendRecords**](docs/SecurityApi.md#getsecuritieslatestdividendrecords) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
 *SecurityApi* | [**GetSecuritiesLatestEarningsRecords**](docs/SecurityApi.md#getsecuritieslatestearningsrecords) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 *SecurityApi* | [**GetSecuritiesShortInterest**](docs/SecurityApi.md#getsecuritiesshortinterest) | **GET** /securities/short_interest | Latest Short Interest
@@ -391,6 +397,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AccountCurrentUsage](docs/AccountCurrentUsage.md)
+ - [Model.AccountWebsocketStatus](docs/AccountWebsocketStatus.md)
  - [Model.AccumulationDistributionIndexTechnicalValue](docs/AccumulationDistributionIndexTechnicalValue.md)
  - [Model.ApiResponseAccountUsages](docs/ApiResponseAccountUsages.md)
  - [Model.ApiResponseAccountUsagesAccount](docs/ApiResponseAccountUsagesAccount.md)
@@ -459,6 +466,8 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseOptionsPricesEod](docs/ApiResponseOptionsPricesEod.md)
  - [Model.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
  - [Model.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
+ - [Model.ApiResponseOptionsSurface](docs/ApiResponseOptionsSurface.md)
+ - [Model.ApiResponseOptionsSurfaceInterpolatedIv](docs/ApiResponseOptionsSurfaceInterpolatedIv.md)
  - [Model.ApiResponseOptionsTickers](docs/ApiResponseOptionsTickers.md)
  - [Model.ApiResponseOptionsUnusualActivity](docs/ApiResponseOptionsUnusualActivity.md)
  - [Model.ApiResponseOwnerInsiderTransactionFilings](docs/ApiResponseOwnerInsiderTransactionFilings.md)
@@ -470,6 +479,8 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
  - [Model.ApiResponseSICIndicesSearch](docs/ApiResponseSICIndicesSearch.md)
  - [Model.ApiResponseSecurities](docs/ApiResponseSecurities.md)
+ - [Model.ApiResponseSecuritiesDailyShortVolume](docs/ApiResponseSecuritiesDailyShortVolume.md)
+ - [Model.ApiResponseSecuritiesDailyShortVolumeConsolidated](docs/ApiResponseSecuritiesDailyShortVolumeConsolidated.md)
  - [Model.ApiResponseSecuritiesDividendLatest](docs/ApiResponseSecuritiesDividendLatest.md)
  - [Model.ApiResponseSecuritiesEarningsLatest](docs/ApiResponseSecuritiesEarningsLatest.md)
  - [Model.ApiResponseSecuritiesSearch](docs/ApiResponseSecuritiesSearch.md)
@@ -531,6 +542,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiResponseStockMarketIndexHistoricalData](docs/ApiResponseStockMarketIndexHistoricalData.md)
  - [Model.ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
  - [Model.ApiResponseStockMarketIndicesSearch](docs/ApiResponseStockMarketIndicesSearch.md)
+ - [Model.ApiResponseWebsocketStatuses](docs/ApiResponseWebsocketStatuses.md)
  - [Model.ApiResponseZacksAnalystRatings](docs/ApiResponseZacksAnalystRatings.md)
  - [Model.ApiResponseZacksEBITDAConsensus](docs/ApiResponseZacksEBITDAConsensus.md)
  - [Model.ApiResponseZacksEPSEstimates](docs/ApiResponseZacksEPSEstimates.md)
@@ -564,6 +576,8 @@ Class | Method | HTTP request | Description
  - [Model.CompanyPublicFloat](docs/CompanyPublicFloat.md)
  - [Model.CompanySharesOutstanding](docs/CompanySharesOutstanding.md)
  - [Model.CompanySummary](docs/CompanySummary.md)
+ - [Model.DailyShortVolume](docs/DailyShortVolume.md)
+ - [Model.DailyShortVolumeConsolidated](docs/DailyShortVolumeConsolidated.md)
  - [Model.DataTag](docs/DataTag.md)
  - [Model.DataTagSummary](docs/DataTagSummary.md)
  - [Model.DetrendedPriceOscillatorTechnicalValue](docs/DetrendedPriceOscillatorTechnicalValue.md)
@@ -644,6 +658,8 @@ Class | Method | HTTP request | Description
  - [Model.OptionSnapshotGroup](docs/OptionSnapshotGroup.md)
  - [Model.OptionSnapshotsResult](docs/OptionSnapshotsResult.md)
  - [Model.OptionStatsRealtime](docs/OptionStatsRealtime.md)
+ - [Model.OptionSurfaceDatum](docs/OptionSurfaceDatum.md)
+ - [Model.OptionSurfaceFace](docs/OptionSurfaceFace.md)
  - [Model.OptionSyntheticGreeksRealtime](docs/OptionSyntheticGreeksRealtime.md)
  - [Model.OptionTrades](docs/OptionTrades.md)
  - [Model.OptionTradesResult](docs/OptionTradesResult.md)

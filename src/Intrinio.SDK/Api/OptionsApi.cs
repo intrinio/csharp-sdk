@@ -126,6 +126,60 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsChainRealtime</returns>
         ApiResponse<ApiResponseOptionsChainRealtime> GetOptionStrikesRealtimeWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
         /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// Returns the implied volatility surface for a ticker symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>ApiResponseOptionsSurface</returns>
+        ApiResponseOptionsSurface GetOptionSurface (string identifier, string surfaceType, string source = null);
+
+        /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// Returns the implied volatility surface for a ticker symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsSurface</returns>
+        ApiResponse<ApiResponseOptionsSurface> GetOptionSurfaceWithHttpInfo (string identifier, string surfaceType, string source = null);
+        /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>ApiResponseOptionsSurfaceInterpolatedIv</returns>
+        ApiResponseOptionsSurfaceInterpolatedIv GetOptionSurface_0 (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null);
+
+        /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsSurfaceInterpolatedIv</returns>
+        ApiResponse<ApiResponseOptionsSurfaceInterpolatedIv> GetOptionSurface_0WithHttpInfo (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null);
+        /// <summary>
         /// Option Trades
         /// </summary>
         /// <remarks>
@@ -560,7 +614,7 @@ namespace Intrinio.SDK.Api
         /// <returns>ApiResponse of ApiResponseOptionsGreeksByTickerRealtime</returns>
         ApiResponse<ApiResponseOptionsGreeksByTickerRealtime> GetOptionsGreeksByTickerWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Options Implied Move By Symbol
+        /// Options Implied Move (Expected) Realtime
         /// </summary>
         /// <remarks>
         /// Returns the implied move data points for a ticker symbol.
@@ -574,7 +628,7 @@ namespace Intrinio.SDK.Api
         ApiResponseOptionsImpliedMove GetOptionsImpliedMoveBySymbol (string symbol, DateTime? expirationDate, Object percentage = null, string source = null);
 
         /// <summary>
-        /// Options Implied Move By Symbol
+        /// Options Implied Move (Expected) Realtime
         /// </summary>
         /// <remarks>
         /// Returns the implied move data points for a ticker symbol.
@@ -586,6 +640,35 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <returns>ApiResponse of ApiResponseOptionsImpliedMove</returns>
         ApiResponse<ApiResponseOptionsImpliedMove> GetOptionsImpliedMoveBySymbolWithHttpInfo (string symbol, DateTime? expirationDate, Object percentage = null, string source = null);
+        /// <summary>
+        /// Options Implied Move (Expected) Historical
+        /// </summary>
+        /// <remarks>
+        /// Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>ApiResponseOptionsImpliedMove</returns>
+        ApiResponseOptionsImpliedMove GetOptionsImpliedMoveHistoricalBySymbol (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null);
+
+        /// <summary>
+        /// Options Implied Move (Expected) Historical
+        /// </summary>
+        /// <remarks>
+        /// Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsImpliedMove</returns>
+        ApiResponse<ApiResponseOptionsImpliedMove> GetOptionsImpliedMoveHistoricalBySymbolWithHttpInfo (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null);
         /// <summary>
         /// Options Intervals By Contract
         /// </summary>
@@ -1198,6 +1281,60 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsChainRealtime)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsChainRealtime>> GetOptionStrikesRealtimeAsyncWithHttpInfo (string symbol, decimal? strike, string source = null, string stockPriceSource = null, string model = null, bool? showExtendedPrice = null, bool? includeRelatedSymbols = null);
         /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// Returns the implied volatility surface for a ticker symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsSurface</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsSurface> GetOptionSurfaceAsync (string identifier, string surfaceType, string source = null);
+
+        /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// Returns the implied volatility surface for a ticker symbol.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsSurface)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsSurface>> GetOptionSurfaceAsyncWithHttpInfo (string identifier, string surfaceType, string source = null);
+        /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsSurfaceInterpolatedIv</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsSurfaceInterpolatedIv> GetOptionSurface_0Async (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null);
+
+        /// <summary>
+        /// Option Surface
+        /// </summary>
+        /// <remarks>
+        /// The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsSurfaceInterpolatedIv)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsSurfaceInterpolatedIv>> GetOptionSurface_0AsyncWithHttpInfo (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null);
+        /// <summary>
         /// Option Trades
         /// </summary>
         /// <remarks>
@@ -1632,7 +1769,7 @@ namespace Intrinio.SDK.Api
         /// <returns>Task of ApiResponse (ApiResponseOptionsGreeksByTickerRealtime)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsGreeksByTickerRealtime>> GetOptionsGreeksByTickerAsyncWithHttpInfo (string identifier, string source = null, string model = null, string ivMode = null, string stockPriceSource = null, DateTime? expirationStartDate = null, DateTime? expirationEndDate = null, float? strike = null, float? strikeGreaterThan = null, float? strikeLessThan = null, int? pageSize = null, string nextPage = null);
         /// <summary>
-        /// Options Implied Move By Symbol
+        /// Options Implied Move (Expected) Realtime
         /// </summary>
         /// <remarks>
         /// Returns the implied move data points for a ticker symbol.
@@ -1646,7 +1783,7 @@ namespace Intrinio.SDK.Api
         System.Threading.Tasks.Task<ApiResponseOptionsImpliedMove> GetOptionsImpliedMoveBySymbolAsync (string symbol, DateTime? expirationDate, Object percentage = null, string source = null);
 
         /// <summary>
-        /// Options Implied Move By Symbol
+        /// Options Implied Move (Expected) Realtime
         /// </summary>
         /// <remarks>
         /// Returns the implied move data points for a ticker symbol.
@@ -1658,6 +1795,35 @@ namespace Intrinio.SDK.Api
         /// <param name="source">Realtime or 15-minute delayed contracts. (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseOptionsImpliedMove)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsImpliedMove>> GetOptionsImpliedMoveBySymbolAsyncWithHttpInfo (string symbol, DateTime? expirationDate, Object percentage = null, string source = null);
+        /// <summary>
+        /// Options Implied Move (Expected) Historical
+        /// </summary>
+        /// <remarks>
+        /// Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsImpliedMove</returns>
+        System.Threading.Tasks.Task<ApiResponseOptionsImpliedMove> GetOptionsImpliedMoveHistoricalBySymbolAsync (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null);
+
+        /// <summary>
+        /// Options Implied Move (Expected) Historical
+        /// </summary>
+        /// <remarks>
+        /// Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsImpliedMove)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsImpliedMove>> GetOptionsImpliedMoveHistoricalBySymbolAsyncWithHttpInfo (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null);
         /// <summary>
         /// Options Intervals By Contract
         /// </summary>
@@ -2918,6 +3084,352 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseOptionsChainRealtime>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseOptionsChainRealtime) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsChainRealtime)));
+        }
+
+        /// <summary>
+        /// Option Surface Returns the implied volatility surface for a ticker symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>ApiResponseOptionsSurface</returns>
+        public ApiResponseOptionsSurface GetOptionSurface (string identifier, string surfaceType, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsSurface> localVarResponse = GetOptionSurfaceWithHttpInfo(identifier, surfaceType, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Surface Returns the implied volatility surface for a ticker symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsSurface</returns>
+        
+        public ApiResponse< ApiResponseOptionsSurface > GetOptionSurfaceWithHttpInfo (string identifier, string surfaceType, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionSurface");
+            // verify the required parameter 'surfaceType' is set
+            if (surfaceType == null)
+                throw new ApiException(400, "Missing required parameter 'surfaceType' when calling OptionsApi->GetOptionSurface");
+
+            var localVarPath = "/options/surface/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (surfaceType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "surface_type", surfaceType)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionSurface", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsSurface>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsSurface) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsSurface)));
+        }
+
+        /// <summary>
+        /// Option Surface Returns the implied volatility surface for a ticker symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsSurface</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsSurface> GetOptionSurfaceAsync (string identifier, string surfaceType, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsSurface> localVarResponse = await GetOptionSurfaceAsyncWithHttpInfo(identifier, surfaceType, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Surface Returns the implied volatility surface for a ticker symbol.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="surfaceType">The form of the surface being requested.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsSurface)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsSurface>> GetOptionSurfaceAsyncWithHttpInfo (string identifier, string surfaceType, string source = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionSurface");
+            // verify the required parameter 'surfaceType' is set
+            if (surfaceType == null)
+                throw new ApiException(400, "Missing required parameter 'surfaceType' when calling OptionsApi->GetOptionSurface");
+
+            var localVarPath = "/options/surface/{identifier}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (surfaceType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "surface_type", surfaceType)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionSurface", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsSurface>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsSurface) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsSurface)));
+        }
+
+        /// <summary>
+        /// Option Surface The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>ApiResponseOptionsSurfaceInterpolatedIv</returns>
+        public ApiResponseOptionsSurfaceInterpolatedIv GetOptionSurface_0 (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null)
+        {
+             ApiResponse<ApiResponseOptionsSurfaceInterpolatedIv> localVarResponse = GetOptionSurface_0WithHttpInfo(identifier, expiration, strike, source, asOf);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Option Surface The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsSurfaceInterpolatedIv</returns>
+        
+        public ApiResponse< ApiResponseOptionsSurfaceInterpolatedIv > GetOptionSurface_0WithHttpInfo (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionSurface_0");
+            // verify the required parameter 'expiration' is set
+            if (expiration == null)
+                throw new ApiException(400, "Missing required parameter 'expiration' when calling OptionsApi->GetOptionSurface_0");
+            // verify the required parameter 'strike' is set
+            if (strike == null)
+                throw new ApiException(400, "Missing required parameter 'strike' when calling OptionsApi->GetOptionSurface_0");
+
+            var localVarPath = "/options/surface/{identifier}/interpolate_iv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (expiration != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration", expiration)); // query parameter
+            if (asOf != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "as_of", asOf)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionSurface_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsSurfaceInterpolatedIv>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsSurfaceInterpolatedIv) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsSurfaceInterpolatedIv)));
+        }
+
+        /// <summary>
+        /// Option Surface The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsSurfaceInterpolatedIv</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsSurfaceInterpolatedIv> GetOptionSurface_0Async (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null)
+        {
+             ApiResponse<ApiResponseOptionsSurfaceInterpolatedIv> localVarResponse = await GetOptionSurface_0AsyncWithHttpInfo(identifier, expiration, strike, source, asOf);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Option Surface The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="identifier">The ticker symbol for the surface data being requested.</param>
+        /// <param name="expiration">The DateTime of the expiration for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="strike">The strike for the contract to calculate implied volatility from the surface.</param>
+        /// <param name="source">The specific source of the data being requested. (optional)</param>
+        /// <param name="asOf">The time to use in calculating time until expiration.  Defaults to the current time. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsSurfaceInterpolatedIv)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsSurfaceInterpolatedIv>> GetOptionSurface_0AsyncWithHttpInfo (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null)
+        {
+            // verify the required parameter 'identifier' is set
+            if (identifier == null)
+                throw new ApiException(400, "Missing required parameter 'identifier' when calling OptionsApi->GetOptionSurface_0");
+            // verify the required parameter 'expiration' is set
+            if (expiration == null)
+                throw new ApiException(400, "Missing required parameter 'expiration' when calling OptionsApi->GetOptionSurface_0");
+            // verify the required parameter 'strike' is set
+            if (strike == null)
+                throw new ApiException(400, "Missing required parameter 'strike' when calling OptionsApi->GetOptionSurface_0");
+
+            var localVarPath = "/options/surface/{identifier}/interpolate_iv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (identifier != null) localVarPathParams.Add("identifier", Configuration.ApiClient.ParameterToString(identifier)); // path parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+            if (expiration != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration", expiration)); // query parameter
+            if (asOf != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "as_of", asOf)); // query parameter
+            if (strike != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "strike", strike)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionSurface_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsSurfaceInterpolatedIv>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsSurfaceInterpolatedIv) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsSurfaceInterpolatedIv)));
         }
 
         /// <summary>
@@ -5231,7 +5743,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Implied Move By Symbol Returns the implied move data points for a ticker symbol.
+        /// Options Implied Move (Expected) Realtime Returns the implied move data points for a ticker symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The ticker symbol for the contracts.</param>
@@ -5246,7 +5758,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Implied Move By Symbol Returns the implied move data points for a ticker symbol.
+        /// Options Implied Move (Expected) Realtime Returns the implied move data points for a ticker symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The ticker symbol for the contracts.</param>
@@ -5316,7 +5828,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Implied Move By Symbol Returns the implied move data points for a ticker symbol.
+        /// Options Implied Move (Expected) Realtime Returns the implied move data points for a ticker symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The ticker symbol for the contracts.</param>
@@ -5332,7 +5844,7 @@ namespace Intrinio.SDK.Api
         }
 
         /// <summary>
-        /// Options Implied Move By Symbol Returns the implied move data points for a ticker symbol.
+        /// Options Implied Move (Expected) Realtime Returns the implied move data points for a ticker symbol.
         /// </summary>
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The ticker symbol for the contracts.</param>
@@ -5392,6 +5904,188 @@ namespace Intrinio.SDK.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetOptionsImpliedMoveBySymbol", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsImpliedMove>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsImpliedMove) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsImpliedMove)));
+        }
+
+        /// <summary>
+        /// Options Implied Move (Expected) Historical Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>ApiResponseOptionsImpliedMove</returns>
+        public ApiResponseOptionsImpliedMove GetOptionsImpliedMoveHistoricalBySymbol (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsImpliedMove> localVarResponse = GetOptionsImpliedMoveHistoricalBySymbolWithHttpInfo(symbol, expirationDate, asOfDate, percentage, source);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Options Implied Move (Expected) Historical Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>ApiResponse of ApiResponseOptionsImpliedMove</returns>
+        
+        public ApiResponse< ApiResponseOptionsImpliedMove > GetOptionsImpliedMoveHistoricalBySymbolWithHttpInfo (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsImpliedMoveHistoricalBySymbol");
+            // verify the required parameter 'expirationDate' is set
+            if (expirationDate == null)
+                throw new ApiException(400, "Missing required parameter 'expirationDate' when calling OptionsApi->GetOptionsImpliedMoveHistoricalBySymbol");
+            // verify the required parameter 'asOfDate' is set
+            if (asOfDate == null)
+                throw new ApiException(400, "Missing required parameter 'asOfDate' when calling OptionsApi->GetOptionsImpliedMoveHistoricalBySymbol");
+
+            var localVarPath = "/options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (expirationDate != null) localVarPathParams.Add("expiration_date", Configuration.ApiClient.ParameterToString(expirationDate)); // path parameter
+            if (asOfDate != null) localVarPathParams.Add("as_of_date", Configuration.ApiClient.ParameterToString(asOfDate)); // path parameter
+            if (percentage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "percentage", percentage)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsImpliedMoveHistoricalBySymbol", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseOptionsImpliedMove>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseOptionsImpliedMove) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseOptionsImpliedMove)));
+        }
+
+        /// <summary>
+        /// Options Implied Move (Expected) Historical Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>Task of ApiResponseOptionsImpliedMove</returns>
+        public async System.Threading.Tasks.Task<ApiResponseOptionsImpliedMove> GetOptionsImpliedMoveHistoricalBySymbolAsync (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null)
+        {
+             ApiResponse<ApiResponseOptionsImpliedMove> localVarResponse = await GetOptionsImpliedMoveHistoricalBySymbolAsyncWithHttpInfo(symbol, expirationDate, asOfDate, percentage, source);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Options Implied Move (Expected) Historical Returns historical implied move data points for a ticker symbol on a specific date.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="symbol">The ticker symbol for the contracts.</param>
+        /// <param name="expirationDate">The expiration date for the contracts to consider.</param>
+        /// <param name="asOfDate">The historical date to evaluate implied move on.</param>
+        /// <param name="percentage">Percentage to multiply the straddle by. Defaults to 0.85. (optional)</param>
+        /// <param name="source">Realtime or 15-minute delayed contracts used for underlying mapping. (optional)</param>
+        /// <returns>Task of ApiResponse (ApiResponseOptionsImpliedMove)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOptionsImpliedMove>> GetOptionsImpliedMoveHistoricalBySymbolAsyncWithHttpInfo (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null)
+        {
+            // verify the required parameter 'symbol' is set
+            if (symbol == null)
+                throw new ApiException(400, "Missing required parameter 'symbol' when calling OptionsApi->GetOptionsImpliedMoveHistoricalBySymbol");
+            // verify the required parameter 'expirationDate' is set
+            if (expirationDate == null)
+                throw new ApiException(400, "Missing required parameter 'expirationDate' when calling OptionsApi->GetOptionsImpliedMoveHistoricalBySymbol");
+            // verify the required parameter 'asOfDate' is set
+            if (asOfDate == null)
+                throw new ApiException(400, "Missing required parameter 'asOfDate' when calling OptionsApi->GetOptionsImpliedMoveHistoricalBySymbol");
+
+            var localVarPath = "/options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+            if (symbol != null) localVarPathParams.Add("symbol", Configuration.ApiClient.ParameterToString(symbol)); // path parameter
+            if (expirationDate != null) localVarPathParams.Add("expiration_date", Configuration.ApiClient.ParameterToString(expirationDate)); // path parameter
+            if (asOfDate != null) localVarPathParams.Add("as_of_date", Configuration.ApiClient.ParameterToString(asOfDate)); // path parameter
+            if (percentage != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "percentage", percentage)); // query parameter
+            if (source != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "source", source)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOptionsImpliedMoveHistoricalBySymbol", localVarResponse);
                 if (exception != null) throw exception;
             }
 

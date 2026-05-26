@@ -83,6 +83,37 @@ namespace Intrinio.SDK.Test
         }
         
         /// <summary>
+        /// Test GetSecuritiesDailyShortVolume
+        /// </summary>
+        [Test]
+        public void GetSecuritiesDailyShortVolumeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //List<string> tickers = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string sortBy = null;
+            //string nextPage = null;
+            //var response = instance.GetSecuritiesDailyShortVolume(tickers, startDate, endDate, sortBy, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecuritiesDailyShortVolume> (response, "response is ApiResponseSecuritiesDailyShortVolume");
+        }
+        
+        /// <summary>
+        /// Test GetSecuritiesDailyShortVolumeConsolidated
+        /// </summary>
+        [Test]
+        public void GetSecuritiesDailyShortVolumeConsolidatedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //List<string> tickers = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string nextPage = null;
+            //var response = instance.GetSecuritiesDailyShortVolumeConsolidated(tickers, startDate, endDate, nextPage);
+            //Assert.IsInstanceOf<ApiResponseSecuritiesDailyShortVolumeConsolidated> (response, "response is ApiResponseSecuritiesDailyShortVolumeConsolidated");
+        }
+        
+        /// <summary>
         /// Test GetSecuritiesLatestDividendRecords
         /// </summary>
         [Test]
@@ -920,7 +951,8 @@ namespace Intrinio.SDK.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? atDatetime = null;
-            //var response = instance.GetSecuritySnapshots(atDatetime);
+            //string source = null;
+            //var response = instance.GetSecuritySnapshots(atDatetime, source);
             //Assert.IsInstanceOf<SecuritySnapshotsResult> (response, "response is SecuritySnapshotsResult");
         }
         

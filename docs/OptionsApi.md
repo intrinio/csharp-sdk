@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**GetOptionAggregates**](OptionsApi.md#getoptionaggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 [**GetOptionExpirationsRealtime**](OptionsApi.md#getoptionexpirationsrealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**GetOptionStrikesRealtime**](OptionsApi.md#getoptionstrikesrealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+[**GetOptionSurface**](OptionsApi.md#getoptionsurface) | **GET** /options/surface/{identifier} | Option Surface
+[**GetOptionSurface_0**](OptionsApi.md#getoptionsurface_0) | **GET** /options/surface/{identifier}/interpolate_iv | Option Surface
 [**GetOptionTrades**](OptionsApi.md#getoptiontrades) | **GET** /options/trades | Option Trades
 [**GetOptionTradesByContract**](OptionsApi.md#getoptiontradesbycontract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 [**GetOptions**](OptionsApi.md#getoptions) | **GET** /options/{symbol} | Options
@@ -20,7 +22,8 @@ Method | HTTP request | Description
 [**GetOptionsGainers**](OptionsApi.md#getoptionsgainers) | **GET** /options/gainers | Options Top Gainers
 [**GetOptionsGreeksByContract**](OptionsApi.md#getoptionsgreeksbycontract) | **GET** /options/greeks/{contract}/realtime | Option Greeks &amp; Derived Price by Contract
 [**GetOptionsGreeksByTicker**](OptionsApi.md#getoptionsgreeksbyticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks &amp; Derived Price by Ticker
-[**GetOptionsImpliedMoveBySymbol**](OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
+[**GetOptionsImpliedMoveBySymbol**](OptionsApi.md#getoptionsimpliedmovebysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move (Expected) Realtime
+[**GetOptionsImpliedMoveHistoricalBySymbol**](OptionsApi.md#getoptionsimpliedmovehistoricalbysymbol) | **GET** /options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date} | Options Implied Move (Expected) Historical
 [**GetOptionsIntervalByContract**](OptionsApi.md#getoptionsintervalbycontract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**GetOptionsIntervalMovers**](OptionsApi.md#getoptionsintervalmovers) | **GET** /options/interval/movers | Options Intervals Movers
 [**GetOptionsIntervalMoversChange**](OptionsApi.md#getoptionsintervalmoverschange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -413,6 +416,194 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsChainRealtime**](ApiResponseOptionsChainRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionSurface)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsSurface)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsSurface.md)
+
+[//]: # (OPERATION:GetOptionSurface_v2)
+
+[//]: # (ENDPOINT:/options/surface/{identifier})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsurface)
+
+<a name="getoptionsurface"></a>
+## **GetOptionSurface**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionSurface_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsSurface GetOptionSurface (string identifier, string surfaceType, string source = null)
+
+#### Option Surface
+
+Returns the implied volatility surface for a ticker symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionSurfaceExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string identifier = "AAPL";
+      string surfaceType = null;
+      string source = null;
+      
+      ApiResponseOptionsSurface result = optionsApi.GetOptionSurface(identifier, surfaceType, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The ticker symbol for the surface data being requested. |  &nbsp;
+ **surfaceType** | string| The form of the surface being requested. |  &nbsp;
+ **source** | string| The specific source of the data being requested. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsSurface**](ApiResponseOptionsSurface.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionSurface_0)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsSurfaceInterpolatedIv)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsSurfaceInterpolatedIv.md)
+
+[//]: # (OPERATION:GetOptionSurface_0_v2)
+
+[//]: # (ENDPOINT:/options/surface/{identifier}/interpolate_iv)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsurface_0)
+
+<a name="getoptionsurface_0"></a>
+## **GetOptionSurface_0**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionSurface_0_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsSurfaceInterpolatedIv GetOptionSurface_0 (string identifier, DateTime? expiration, decimal? strike, string source = null, DateTime? asOf = null)
+
+#### Option Surface
+
+The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionSurface_0Example
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string identifier = "SPY";
+      DateTime? expiration = null;
+      decimal? strike = 715;
+      string source = null;
+      DateTime? asOf = null;
+      
+      ApiResponseOptionsSurfaceInterpolatedIv result = optionsApi.GetOptionSurface_0(identifier, expiration, strike, source, asOf);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | string| The ticker symbol for the surface data being requested. |  &nbsp;
+ **expiration** | DateTime?| The DateTime of the expiration for the contract to calculate implied volatility from the surface. |  &nbsp;
+ **strike** | decimal?| The strike for the contract to calculate implied volatility from the surface. |  &nbsp;
+ **source** | string| The specific source of the data being requested. | [optional]  &nbsp;
+ **asOf** | DateTime?| The time to use in calculating time until expiration.  Defaults to the current time. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsSurfaceInterpolatedIv**](ApiResponseOptionsSurfaceInterpolatedIv.md)
 
 [//]: # (END_OPERATION)
 
@@ -1682,7 +1873,7 @@ Name | Type | Description  | Notes
 
 > ApiResponseOptionsImpliedMove GetOptionsImpliedMoveBySymbol (string symbol, DateTime? expirationDate, Object percentage = null, string source = null)
 
-#### Options Implied Move By Symbol
+#### Options Implied Move (Expected) Realtime
 
 Returns the implied move data points for a ticker symbol.
 
@@ -1738,6 +1929,102 @@ Name | Type | Description  | Notes
  **expirationDate** | DateTime?| The expiration date for the contracts to consider. |  &nbsp;
  **percentage** | [**Object**](Object.md)| Percentage to multiply the straddle by. Defaults to 0.85. | [optional]  &nbsp;
  **source** | string| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsImpliedMove**](ApiResponseOptionsImpliedMove.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.OptionsApi)
+
+[//]: # (METHOD:GetOptionsImpliedMoveHistoricalBySymbol)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseOptionsImpliedMove)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsImpliedMove.md)
+
+[//]: # (OPERATION:GetOptionsImpliedMoveHistoricalBySymbol_v2)
+
+[//]: # (ENDPOINT:/options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getoptionsimpliedmovehistoricalbysymbol)
+
+<a name="getoptionsimpliedmovehistoricalbysymbol"></a>
+## **GetOptionsImpliedMoveHistoricalBySymbol**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetOptionsImpliedMoveHistoricalBySymbol_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsImpliedMove GetOptionsImpliedMoveHistoricalBySymbol (string symbol, DateTime? expirationDate, DateTime? asOfDate, Object percentage = null, string source = null)
+
+#### Options Implied Move (Expected) Historical
+
+Returns historical implied move data points for a ticker symbol on a specific date.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetOptionsImpliedMoveHistoricalBySymbolExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var optionsApi = new OptionsApi();
+      
+      string symbol = "TSLA";
+      DateTime? expirationDate = DateTime.Parse("2025-05-30");
+      DateTime? asOfDate = DateTime.Parse("2025-05-15");
+      var percentage = new Object();
+      string source = null;
+      
+      ApiResponseOptionsImpliedMove result = optionsApi.GetOptionsImpliedMoveHistoricalBySymbol(symbol, expirationDate, asOfDate, percentage, source);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | string| The ticker symbol for the contracts. |  &nbsp;
+ **expirationDate** | DateTime?| The expiration date for the contracts to consider. |  &nbsp;
+ **asOfDate** | DateTime?| The historical date to evaluate implied move on. |  &nbsp;
+ **percentage** | [**Object**](Object.md)| Percentage to multiply the straddle by. Defaults to 0.85. | [optional]  &nbsp;
+ **source** | string| Realtime or 15-minute delayed contracts used for underlying mapping. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

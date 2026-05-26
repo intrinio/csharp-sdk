@@ -63,6 +63,17 @@ namespace Intrinio.SDK.Test
             //Assert.IsInstanceOf<ApiResponseAccountUsages> (response, "response is ApiResponseAccountUsages");
         }
         
+        /// <summary>
+        /// Test GetAccountWebsocketStatuses
+        /// </summary>
+        [Test]
+        public void GetAccountWebsocketStatusesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.GetAccountWebsocketStatuses();
+            //Assert.IsInstanceOf<ApiResponseWebsocketStatuses> (response, "response is ApiResponseWebsocketStatuses");
+        }
+        
     }
 
 }

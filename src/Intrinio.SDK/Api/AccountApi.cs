@@ -36,6 +36,25 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ApiResponseAccountUsages</returns>
         ApiResponse<ApiResponseAccountUsages> GetAccountCurrentUsageWithHttpInfo ();
+        /// <summary>
+        /// Account Websocket Statuses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all websocket statuses for the account.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponseWebsocketStatuses</returns>
+        ApiResponseWebsocketStatuses GetAccountWebsocketStatuses ();
+
+        /// <summary>
+        /// Account Websocket Statuses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all websocket statuses for the account.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ApiResponseWebsocketStatuses</returns>
+        ApiResponse<ApiResponseWebsocketStatuses> GetAccountWebsocketStatusesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -57,6 +76,25 @@ namespace Intrinio.SDK.Api
         /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ApiResponseAccountUsages)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseAccountUsages>> GetAccountCurrentUsageAsyncWithHttpInfo ();
+        /// <summary>
+        /// Account Websocket Statuses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all websocket statuses for the account.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponseWebsocketStatuses</returns>
+        System.Threading.Tasks.Task<ApiResponseWebsocketStatuses> GetAccountWebsocketStatusesAsync ();
+
+        /// <summary>
+        /// Account Websocket Statuses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all websocket statuses for the account.
+        /// </remarks>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ApiResponseWebsocketStatuses)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseWebsocketStatuses>> GetAccountWebsocketStatusesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -188,7 +226,7 @@ namespace Intrinio.SDK.Api
         public ApiResponse< ApiResponseAccountUsages > GetAccountCurrentUsageWithHttpInfo ()
         {
 
-            var localVarPath = "/account";
+            var localVarPath = "/account/current_usage";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -255,7 +293,7 @@ namespace Intrinio.SDK.Api
         public async System.Threading.Tasks.Task<ApiResponse<ApiResponseAccountUsages>> GetAccountCurrentUsageAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/account";
+            var localVarPath = "/account/current_usage";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -300,6 +338,140 @@ namespace Intrinio.SDK.Api
             return new ApiResponse<ApiResponseAccountUsages>(localVarStatusCode,
                 localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
                 (ApiResponseAccountUsages) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseAccountUsages)));
+        }
+
+        /// <summary>
+        /// Account Websocket Statuses Returns a list of all websocket statuses for the account.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponseWebsocketStatuses</returns>
+        public ApiResponseWebsocketStatuses GetAccountWebsocketStatuses ()
+        {
+             ApiResponse<ApiResponseWebsocketStatuses> localVarResponse = GetAccountWebsocketStatusesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Account Websocket Statuses Returns a list of all websocket statuses for the account.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ApiResponseWebsocketStatuses</returns>
+        
+        public ApiResponse< ApiResponseWebsocketStatuses > GetAccountWebsocketStatusesWithHttpInfo ()
+        {
+
+            var localVarPath = "/account/websocket_statuses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+            
+            
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAccountWebsocketStatuses", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseWebsocketStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseWebsocketStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseWebsocketStatuses)));
+        }
+
+        /// <summary>
+        /// Account Websocket Statuses Returns a list of all websocket statuses for the account.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponseWebsocketStatuses</returns>
+        public async System.Threading.Tasks.Task<ApiResponseWebsocketStatuses> GetAccountWebsocketStatusesAsync ()
+        {
+             ApiResponse<ApiResponseWebsocketStatuses> localVarResponse = await GetAccountWebsocketStatusesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Account Websocket Statuses Returns a list of all websocket statuses for the account.
+        /// </summary>
+        /// <exception cref="Intrinio.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ApiResponseWebsocketStatuses)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseWebsocketStatuses>> GetAccountWebsocketStatusesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/account/websocket_statuses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+              
+
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                RestSharp.Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAccountWebsocketStatuses", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseWebsocketStatuses>(localVarStatusCode,
+                localVarResponse.Headers.Select(x => new KeyValuePair<string, string>(x.Name, x.Value.ToString())).ToList(),
+                (ApiResponseWebsocketStatuses) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseWebsocketStatuses)));
         }
 
     }

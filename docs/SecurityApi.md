@@ -5,6 +5,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAllSecurities**](SecurityApi.md#getallsecurities) | **GET** /securities | All Securities
+[**GetSecuritiesDailyShortVolume**](SecurityApi.md#getsecuritiesdailyshortvolume) | **GET** /securities/daily_short_volume | Daily Short Volume
+[**GetSecuritiesDailyShortVolumeConsolidated**](SecurityApi.md#getsecuritiesdailyshortvolumeconsolidated) | **GET** /securities/daily_short_volume/consolidated | Daily Short Volume Consolidated
 [**GetSecuritiesLatestDividendRecords**](SecurityApi.md#getsecuritieslatestdividendrecords) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
 [**GetSecuritiesLatestEarningsRecords**](SecurityApi.md#getsecuritieslatestearningsrecords) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 [**GetSecuritiesShortInterest**](SecurityApi.md#getsecuritiesshortinterest) | **GET** /securities/short_interest | Latest Short Interest
@@ -196,6 +198,196 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecuritiesDailyShortVolume)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritiesDailyShortVolume)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesDailyShortVolume.md)
+
+[//]: # (OPERATION:GetSecuritiesDailyShortVolume_v2)
+
+[//]: # (ENDPOINT:/securities/daily_short_volume)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritiesdailyshortvolume)
+
+<a name="getsecuritiesdailyshortvolume"></a>
+## **GetSecuritiesDailyShortVolume**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecuritiesDailyShortVolume_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesDailyShortVolume GetSecuritiesDailyShortVolume (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string sortBy = null, string nextPage = null)
+
+#### Daily Short Volume
+
+Returns FINRA daily short volume data for securities, reported by individual market centers and reporting facilities.  ## Data Coverage This endpoint provides **off-exchange activity** data aggregated from FINRA's Short Sale Volume files. The data represents short selling activity reported by market centers and third-party reporting facilities, including both exchange and off-exchange venues.  ## Use as Market Proxy Short volume data can serve as a meaningful proxy for overall market sentiment and activity: - **Market Structure Insight**: Tracks short selling intensity across different trading venues and market centers - **Liquidity Indicator**: Higher short volume often correlates with increased market activity and liquidity - **Sentiment Analysis**: Can indicate bearish positioning, though short volume alone doesn't determine market direction - **Cross-Venue Analysis**: Compare short volume patterns across different reporting facilities to understand how activity varies by venue type  ## Data Characteristics - Data is reported at the facility level for granular analysis - Use the `/securities/daily_short_volume/consolidated` endpoint for a single aggregated view across all facilities - Short exempt volume reflects pre-borrow arrangements and other regulated short selling exemptions - Each data point represents a full trading day's accumulated short volume 
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecuritiesDailyShortVolumeExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      var tickers = new List<string>();
+      DateTime? startDate = DateTime.Parse("2024-01-01");
+      DateTime? endDate = DateTime.Parse("2024-12-31");
+      string sortBy = "date";
+      string nextPage = null;
+      
+      ApiResponseSecuritiesDailyShortVolume result = securityApi.GetSecuritiesDailyShortVolume(tickers, startDate, endDate, sortBy, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tickers** | [**List&lt;string&gt;**](string.md)| A list of one or more security tickers to filter results | [optional]  &nbsp;
+ **startDate** | DateTime?| The start date for the data (inclusive) in YYYY-MM-DD format | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date for the data (inclusive) in YYYY-MM-DD format | [optional]  &nbsp;
+ **sortBy** | string| Specifies how to sort the data. Valid values are \&quot;date\&quot; (default, descending) or \&quot;ticker\&quot; (ascending) | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesDailyShortVolume**](ApiResponseSecuritiesDailyShortVolume.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio.SDK.Api.SecurityApi)
+
+[//]: # (METHOD:GetSecuritiesDailyShortVolumeConsolidated)
+
+[//]: # (RETURN_TYPE:Intrinio.SDK.Model.ApiResponseSecuritiesDailyShortVolumeConsolidated)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesDailyShortVolumeConsolidated.md)
+
+[//]: # (OPERATION:GetSecuritiesDailyShortVolumeConsolidated_v2)
+
+[//]: # (ENDPOINT:/securities/daily_short_volume/consolidated)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getsecuritiesdailyshortvolumeconsolidated)
+
+<a name="getsecuritiesdailyshortvolumeconsolidated"></a>
+## **GetSecuritiesDailyShortVolumeConsolidated**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/csharp/GetSecuritiesDailyShortVolumeConsolidated_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesDailyShortVolumeConsolidated GetSecuritiesDailyShortVolumeConsolidated (List<string> tickers = null, DateTime? startDate = null, DateTime? endDate = null, string nextPage = null)
+
+#### Daily Short Volume Consolidated
+
+Returns FINRA daily short volume data aggregated across all reporting facilities for each security and date.  ## Data Aggregation This endpoint consolidates all short volume activity reported across different market centers and reporting facilities into a single daily view per security: - **Volume Summation**: Total, short, and short exempt volumes are summed across all facilities - **Ratio Recalculation**: The short volume ratio is recalculated on the aggregated totals for accurate market-wide percentages - **Facility Tracking**: Included `sources` field lists all reporting facilities that contributed to each daily aggregate  ## Market-Wide Perspective Consolidated short volume serves as an excellent proxy for off-exchange market activity: - **Complete Market View**: Aggregates activity from all FINRA-reporting venues into a single metric - **Comparable Across Securities**: Normalized short volume ratios allow fair comparison between different stocks regardless of absolute trading volume - **Trend Analysis**: Daily consolidated data enables tracking of short selling trends and patterns across the entire market - **Venue-Agnostic**: Eliminates the need to aggregate across multiple facilities manually  ## Use Cases - Monitor overall short selling sentiment across your portfolio or watchlist - Identify unusual short volume spikes that may precede price moves - Compare short volume ratios between securities to identify relative short interest positioning - Analyze temporal patterns in short selling behavior across trading days 
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```csharp
+using System;
+using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
+using Intrinio.SDK.Api;
+using Intrinio.SDK.Client;
+using Intrinio.SDK.Model;
+using Newtonsoft.Json;
+
+namespace Example
+{
+  public class GetSecuritiesDailyShortVolumeConsolidatedExample
+  {
+    public static void Main()
+    {
+      Configuration.Default.AddApiKey("api_key", "YOUR_API_KEY");
+      Configuration.Default.AllowRetries = true;
+      
+      var securityApi = new SecurityApi();
+      
+      var tickers = new List<string>();
+      DateTime? startDate = DateTime.Parse("2024-01-01");
+      DateTime? endDate = DateTime.Parse("2024-12-31");
+      string nextPage = null;
+      
+      ApiResponseSecuritiesDailyShortVolumeConsolidated result = securityApi.GetSecuritiesDailyShortVolumeConsolidated(tickers, startDate, endDate, nextPage);
+      Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+    }
+  }
+}
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tickers** | [**List&lt;string&gt;**](string.md)| A list of one or more security tickers to filter results | [optional]  &nbsp;
+ **startDate** | DateTime?| The start date for the data (inclusive) in YYYY-MM-DD format | [optional]  &nbsp;
+ **endDate** | DateTime?| The end date for the data (inclusive) in YYYY-MM-DD format | [optional]  &nbsp;
+ **nextPage** | string| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesDailyShortVolumeConsolidated**](ApiResponseSecuritiesDailyShortVolumeConsolidated.md)
 
 [//]: # (END_OPERATION)
 
@@ -5149,7 +5341,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> SecuritySnapshotsResult GetSecuritySnapshots (DateTime? atDatetime = null)
+> SecuritySnapshotsResult GetSecuritySnapshots (DateTime? atDatetime = null, string source = null)
 
 #### Realtime Stock Prices Snapshot
 
@@ -5183,8 +5375,9 @@ namespace Example
       var securityApi = new SecurityApi();
       
       DateTime? atDatetime = null;
+      string source = "iex_delayed";
       
-      SecuritySnapshotsResult result = securityApi.GetSecuritySnapshots(atDatetime);
+      SecuritySnapshotsResult result = securityApi.GetSecuritySnapshots(atDatetime, source);
       Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
     }
   }
@@ -5201,6 +5394,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **atDatetime** | DateTime?| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+ **source** | string| Return the snapshot from the specified source. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

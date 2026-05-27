@@ -1,4 +1,4 @@
-# Intrinio C# SDK
+# Intrinio C# SDK 
 
 To get an API key, [sign up here](https://intrinio.com/).
 

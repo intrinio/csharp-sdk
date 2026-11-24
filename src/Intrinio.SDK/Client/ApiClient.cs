@@ -158,7 +158,7 @@ namespace Intrinio.SDK.Client
               .HandleResult<RestResponse>((result) =>
               {
                   bool shouldRetry = false;
-                  List<HeaderParameter> responseHeaders = result.Headers.ToList();
+                  List<HeaderParameter> responseHeaders = result.Headers?.ToList() ?? new List<HeaderParameter>();
                   
                   // Retry if server error or rate limit error
                   if ((int)result.StatusCode >= 500)
@@ -226,7 +226,7 @@ namespace Intrinio.SDK.Client
               {
 
                   bool shouldRetry = false;
-                  List<HeaderParameter> responseHeaders = result.Headers.ToList();
+                  List<HeaderParameter> responseHeaders = result.Headers?.ToList() ?? new List<HeaderParameter>();
                   
                   // Retry if server error or rate limit error
                   if ((int)result.StatusCode >= 500)
